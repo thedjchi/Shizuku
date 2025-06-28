@@ -72,7 +72,7 @@ class AdbStartService : Service() {
                     }
                     if (Settings.Global.getInt(cr, "adb_wifi_enabled", 0) == 1) {
                         adbMdns.start()
-                        latch.await(3, TimeUnit.SECONDS)
+                        latch.await(5, TimeUnit.SECONDS)
                         adbMdns.stop()
                     }
                 }
