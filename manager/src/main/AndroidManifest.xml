@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission
         android:name="android.permission.WRITE_SECURE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
@@ -143,6 +144,8 @@
             android:exported="false"
             android:foregroundServiceType="shortService" />
 
+        <service android:name=".service.AdbStartService" />
+
         <receiver
             android:name=".receiver.BootCompleteReceiver"
             android:directBootAware="true"
@@ -150,8 +153,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-            </intent-filter>
-            <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
