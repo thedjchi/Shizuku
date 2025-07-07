@@ -14,6 +14,8 @@
     <string name="toast_copied_to_clipboard_with_text"><b>%s</b> a bien été copié dans le presse papier.</string>
     <string name="toast_copied_to_clipboard">%s
 \na bien été copié dans le presse papier.</string>
+    <string name="wadb_notification_content">En attente d\'une connection Wi-Fi avant de procéder</string>
+    <string name="wadb_notification_channel">Service de démarrage automatique par ADB</string>
     <string name="dialog_cannot_open_browser_title">Impossible de lancer le navigateur</string>
     <string name="start_with_root_failed">Impossible de lancer le service parce que la permission root n\'est pas accordée ou que cet appareil n\'est pas rooté.</string>
     <string name="starter">Démarreur</string>
@@ -128,4 +130,5 @@
     <string name="home_adb_is_limited_title">Une étape supplémentaire est nécessaire</string>
     <string name="home_app_management_empty">Les applications qui ont demandé ou déclaré l\'accès à Shizuku apparaîtront ici.</string>
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Merci d\'essayer de désactiver et de réactiver le \"Débogage sans-fil\" si ça continue à chercher.</string>
+    <string name="wadb_notification_title">Shizuku est en cours de démarrage...</string>
 </resources>
