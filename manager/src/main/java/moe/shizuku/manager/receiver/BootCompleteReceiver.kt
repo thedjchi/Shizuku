@@ -33,7 +33,7 @@ class BootCompleteReceiver : BroadcastReceiver() {
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU // https://r.android.com/2128832
             && context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
-            context.startService(Intent(context, AdbStartService::class.java))
+            context.startForegroundService(Intent(context, AdbStartService::class.java))
         } else {
             Log.w(AppConstants.TAG, "No support start on boot")
         }

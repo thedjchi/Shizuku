@@ -154,6 +154,11 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
     <string name="starting_root_shell" translatable="false">Starting root shell…</string>
     <string name="start_with_root_failed">Can\'t start service because root permission is not granted or this device is not rooted.</string>
 
+    <!-- WADB Starter -->
+    <string name="wadb_notification_title">Starting Shizuku…</string>
+    <string name="wadb_notification_content">Awaiting Wi-Fi connection before proceeding</string>
+    <string name="wadb_notification_channel">ADB auto-start service</string>
+
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Can\'t start browser</string>
     <string name="toast_copied_to_clipboard">%s\nhas been copied to clipboard.</string>
