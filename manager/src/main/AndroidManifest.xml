@@ -151,7 +151,7 @@
             android:name=".service.AdbStartService"
             android:foregroundServiceType="specialUse">
             <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-                android:value="Starting Shizuku"/>
+                android:value="Required for starting the service at startup"/>
         </service>
 
         <receiver
