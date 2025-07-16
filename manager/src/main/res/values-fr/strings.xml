@@ -43,7 +43,7 @@
     <string name="action_stop">Arrêter Shizuku</string>
     <string name="about_view_source_code">Voir le code source sur %s</string>
     <string name="action_about">À propos</string>
-    <string name="settings_start_on_boot_summary">Pour les appareils rootés, Shizuku peut se lancer automatiquement au démarrage</string>
+    <string name="settings_start_on_boot_summary">Pour les appareils rootés ou sous Android 11+ ou plus, Shizuku peut se lancer automatiquement au démarrage</string>
     <string name="settings_start_on_boot">Lancer au démarrage de l\'appareil (root)</string>
     <string name="settings_translation_summary">Aidez-nous à traduire %s dans votre langue</string>
     <string name="settings_translation">Participer à la traduction</string>
