@@ -60,8 +60,11 @@ class AdbStartService : Service() {
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         super.onStartCommand(intent, flags, startId)
-        if (intent?.action == CANCEL_ACTION) { stopSelf(); return START_NOT_STICKY }
-        if (intent?.action == RESTORE_ACTION) startForeground()
+        when (intent?.action) {
+            CANCEL_ACTION -> { stopSelf(); return START_NOT_STICKY }
+            RESTORE_ACTION -> startForeground()
+            ATTEMPT_ACTION -> startShizuku(this)
+        }
         return START_STICKY
     }
 
@@ -79,6 +82,10 @@ class AdbStartService : Service() {
         Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
         Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
         Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
+
+        // can only call this from main thread
+        val toast = Toast.makeText(context, R.string.notification_service_start_failed, Toast.LENGTH_SHORT)
+
         CoroutineScope(Dispatchers.IO).launch {
             val latch = CountDownLatch(1)
             val adbMdns = AdbMdns(context, AdbMdns.TLS_CONNECT) { port ->
@@ -107,8 +114,11 @@ class AdbStartService : Service() {
             }
             if (Settings.Global.getInt(cr, "adb_wifi_enabled", 0) == 1) {
                 adbMdns.start()
-                latch.await(5, TimeUnit.SECONDS)
+                latch.await(15, TimeUnit.SECONDS)
                 adbMdns.stop()
+
+
+                toast.show()
             }
         }
     }
@@ -144,6 +154,11 @@ class AdbStartService : Service() {
             this, 0, cancelIntent, PendingIntent.FLAG_IMMUTABLE
         )
 
+        val attemptNowIntent = Intent(this, AdbStartService::class.java).setAction(ATTEMPT_ACTION)
+        val attemptNowPendingIntent = PendingIntent.getForegroundService(
+            this, 0, attemptNowIntent, PendingIntent.FLAG_IMMUTABLE
+        )
+
         val restoreIntent = Intent(this, AdbStartService::class.java).setAction(RESTORE_ACTION)
         val restorePendingIntent = PendingIntent.getForegroundService(
             this, 0, restoreIntent, PendingIntent.FLAG_IMMUTABLE
@@ -160,6 +175,7 @@ class AdbStartService : Service() {
             .setContentText(getString(R.string.wadb_notification_content))
             .setOngoing(true)
             .setSilent(true)
+            .addAction(R.drawable.ic_server_restart, getString(R.string.wadb_notification_attempt_now), attemptNowPendingIntent)
             .addAction(R.drawable.ic_close_24, getString(android.R.string.cancel), cancelPendingIntent)
             .setDeleteIntent(restorePendingIntent)
             .setContentIntent(wifiPendingIntent)
@@ -173,6 +189,7 @@ class AdbStartService : Service() {
         const val SERVICE_ID = 1447
 
         const val CANCEL_ACTION = "cancel_action"
+        const val ATTEMPT_ACTION = "attempt_action"
         const val RESTORE_ACTION = "restore_action"
     }
 }

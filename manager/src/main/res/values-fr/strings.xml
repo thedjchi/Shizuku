@@ -131,4 +131,5 @@
     <string name="home_app_management_empty">Les applications qui ont demandé ou déclaré l\'accès à Shizuku apparaîtront ici.</string>
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Merci d\'essayer de désactiver et de réactiver le \"Débogage sans-fil\" si ça continue à chercher.</string>
     <string name="wadb_notification_title">Shizuku est en cours de démarrage...</string>
+    <string name="wadb_notification_attempt_now">Tenter maintenant</string>
 </resources>
