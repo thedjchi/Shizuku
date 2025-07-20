@@ -114,11 +114,8 @@ class AdbStartService : Service() {
             }
             if (Settings.Global.getInt(cr, "adb_wifi_enabled", 0) == 1) {
                 adbMdns.start()
-                latch.await(15, TimeUnit.SECONDS)
+                if (!latch.await(15, TimeUnit.SECONDS)) toast.show()
                 adbMdns.stop()
-
-
-                toast.show()
             }
         }
     }
