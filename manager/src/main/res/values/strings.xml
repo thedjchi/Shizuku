@@ -156,7 +156,8 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
 
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Starting Shizuku…</string>
-    <string name="wadb_notification_content">Awaiting Wi-Fi connection before proceeding</string>
+    <string name="wadb_notification_content_awaiting_wifi">Awaiting Wi-Fi connection before proceeding</string>
+    <string name="wadb_notification_content_wifi_found">Wi-Fi found. Continuing startup</string>
     <string name="wadb_notification_channel">ADB auto-start service</string>
 
     <!-- Misc -->
