@@ -36,15 +36,10 @@ import java.util.concurrent.TimeUnit
 
 class AdbStartService : Service() {
 
-    private lateinit var nm: NotificationManager
     lateinit var notification: Notification
     val networkCallback = object : ConnectivityManager.NetworkCallback() {
         @RequiresApi(Build.VERSION_CODES.R)
-        override fun onAvailable(network: Network) {
-            notification = showNotification(getString(R.string.wadb_notification_content_wifi_found))
-            nm.notify(SERVICE_ID, notification)
-            startShizuku(this@AdbStartService)
-        }
+        override fun onAvailable(network: Network) { startShizuku(this@AdbStartService) }
     }
 
     override fun onBind(intent: Intent?): IBinder? { return null }
@@ -127,8 +122,6 @@ class AdbStartService : Service() {
                         retries--
                         if (retries == 0) {
                             toast.show()
-                            notification = showNotification(getString(R.string.wadb_notification_content_wifi_found))
-                            nm.notify(SERVICE_ID, notification)
                         }
                     } 
                     adbMdns.stop()
@@ -154,14 +147,14 @@ class AdbStartService : Service() {
     }
 
     @RequiresApi(Build.VERSION_CODES.R)
-    private fun showNotification(contentText: String = getString(R.string.wadb_notification_content_awaiting_wifi)) : Notification {
+    private fun showNotification() : Notification {
 
         val channel = NotificationChannel(
             CHANNEL_ID,
             getString(R.string.wadb_notification_title),
             NotificationManager.IMPORTANCE_LOW
         )
-        nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         nm.createNotificationChannel(channel)
 
         val cancelIntent = Intent(this, AdbStartService::class.java).setAction(CANCEL_ACTION)
@@ -187,7 +180,7 @@ class AdbStartService : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_system_icon)
             .setContentTitle(getString(R.string.wadb_notification_title))
-            .setContentText(contentText)
+            .setContentText(getString(R.string.wadb_notification_content))
             .setOngoing(true)
             .setSilent(true)
             .addAction(R.drawable.ic_server_restart, getString(R.string.wadb_notification_attempt_now), attemptNowPendingIntent)
@@ -195,6 +188,24 @@ class AdbStartService : Service() {
             .setDeleteIntent(restorePendingIntent)
             .setContentIntent(wifiPendingIntent)
             .build()
+    }
+
+    fun showTcpNotification(context: Context, message: String) {
+        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        // For Android Oreo and above, you need a notification channel
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                CHANNEL_ID, getString(R.string.wadb_notification_title), NotificationManager.IMPORTANCE_LOW)
+            notificationManager.createNotificationChannel(channel)
+        }
+
+        val builder = NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_system_icon) // make sure this icon exists
+            .setContentTitle("TCP Info")
+            .setContentText(message)
+
+        notificationManager.notify(1548, builder.build())
     }
 
     companion object {
