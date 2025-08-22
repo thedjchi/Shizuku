@@ -2,6 +2,7 @@ package moe.shizuku.manager.starter
 
 import android.content.Context
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,6 +12,7 @@ import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
 import moe.shizuku.manager.AppConstants.EXTRA
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
@@ -164,7 +166,7 @@ private class ViewModel(context: Context, root: Boolean, host: String?, port: In
     }
 
     private fun startAdb(host: String, port: Int) {
-        sb.append("Starting with wireless adb in port $port...").append('\n').append('\n')
+        sb.append("Starting with wireless adb...").append('\n').append('\n')
         postResult()
 
         GlobalScope.launch(Dispatchers.IO) {
@@ -178,8 +180,54 @@ private class ViewModel(context: Context, root: Boolean, host: String?, port: In
                 return@launch
             }
 
+            // First try to connect over TCP if already enabled
+            AdbClient("127.0.0.1", 5555, key).runCatching {
+                connect()
+                shellCommand(Starter.internalCommand) {
+                    sb.append(String(it))
+                    postResult()
+                }
+                close()
+                return@launch
+            }
+
+            // If TCP not enabled, connect over TLS first and switch to TCP mode
+            sb.append("Connecting over TLS on port $port...").append('\n')
+            postResult()
+
             AdbClient(host, port, key).runCatching {
                 connect()
+                tcpipCommand() {
+                    sb.append(String(it))
+                    postResult()
+                }
+                close()
+            }.onFailure {
+                it.printStackTrace()
+
+                sb.append('\n').append(Log.getStackTraceString(it)).append('\n').append('\n')
+                postResult(it)
+            }
+
+            delay(1000)
+
+            // Now connect over TCP
+            AdbClient("127.0.0.1", 5555, key).runCatching {
+                var delayTime = 1000L
+                var connected = false
+                repeat(3) {
+                    try {
+                        connect()
+                        connected = true
+                        return@repeat
+                    } catch(e: Exception) {
+                        delay(delayTime)
+                        delayTime *=2
+                    }
+                }
+
+                if (!connected) throw ConnectException("Failed to connect over TCP after 3 attempts")
+
                 shellCommand(Starter.internalCommand) {
                     sb.append(String(it))
                     postResult()

@@ -113,6 +113,39 @@ class AdbClient(private val host: String, private val port: Int, private val key
         }
     }
 
+    fun tcpipCommand(port: String = "5555", listener: ((ByteArray) -> Unit)? = null) {
+        val localId = 1
+        write(A_OPEN, localId, 0, "tcpip:$port")
+
+        var message = read()
+        when (message.command) {
+            A_OKAY -> {
+                while (true) {
+                    message = read()
+                    val remoteId = message.arg0
+                    if (message.command == A_WRTE) {
+                        if (message.data_length > 0) {
+                            listener?.invoke(message.data!!)
+                        }
+                        write(A_OKAY, localId, remoteId)
+                    } else if (message.command == A_CLSE) {
+                        write(A_CLSE, localId, remoteId)
+                        break
+                    } else {
+                        error("not A_WRTE or A_CLSE")
+                    }
+                }
+            }
+            A_CLSE -> {
+                val remoteId = message.arg0
+                write(A_CLSE, localId, remoteId)
+            }
+            else -> {
+                error("not A_OKAY or A_CLSE")
+            }
+        }
+    }
+
     private fun write(command: Int, arg0: Int, arg1: Int, data: ByteArray? = null) = write(AdbMessage(command, arg0, arg1, data))
 
     private fun write(command: Int, arg0: Int, arg1: Int, data: String) = write(AdbMessage(command, arg0, arg1, data))

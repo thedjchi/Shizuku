@@ -23,6 +23,12 @@ import androidx.core.app.ServiceCompat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.CompletableDeferred
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbClient
@@ -87,9 +93,27 @@ class AdbStartService : Service() {
         val toast = Toast.makeText(context, R.string.notification_service_start_failed, Toast.LENGTH_SHORT)
 
         CoroutineScope(Dispatchers.IO).launch {
+            if (Settings.Global.getInt(cr, "adb_wifi_enabled", 0) != 1) return@launch
+
             val latch = CountDownLatch(1)
-            val adbMdns = AdbMdns(context, AdbMdns.TLS_CONNECT) { port ->
-                if (port <= 0) return@AdbMdns
+            val shouldCloseFlow = CompletableDeferred<Unit>()
+
+            val portFlow = callbackFlow {
+                val adbMdns = AdbMdns(context, AdbMdns.TLS_CONNECT) { port ->
+                    if (port > 0) {
+                        trySend(port)
+                    }
+                }
+
+                adbMdns.start()
+
+                shouldCloseFlow.await()
+                adbMdns.stop()
+                close()
+                stopSelf()
+            }
+
+            portFlow.collect { port ->
                 try {
 
                     val keystore = PreferenceAdbKeyStore(ShizukuSettings.getPreferences())
@@ -97,25 +121,54 @@ class AdbStartService : Service() {
                     val client = AdbClient("127.0.0.1", port, key)
 
                     client.connect()
-                    client.shellCommand(Starter.internalCommand, null)
+                    client.tcpipCommand()
                     client.close()
 
                     Settings.Global.putInt(cr, "adb_wifi_enabled", 0)
+
+                    delay(1000)
+
+                    val tcpipClient = AdbClient("127.0.0.1", 5555, key)
+
+                    var delayTime = 1000L
+                    var connected = false
+                    repeat(3) {
+                        try {
+                            tcpipClient.connect()
+                            connected = true
+                            return@repeat
+                        } catch(e: Exception) {
+                            delay(delayTime)
+                            delayTime *=2
+                        }
+                    }
+
+                    if (!connected) throw Exception("Failed to connect over TCP after 3 attempts")
+
+                    tcpipClient.shellCommand(Starter.internalCommand, null)
+                    tcpipClient.close()
 
                     val toastMsg = context.getString(
                         R.string.home_status_service_is_running,
                         context.getString(R.string.app_name)
                     )
-                    Toast.makeText(context, toastMsg, Toast.LENGTH_SHORT).show()
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(context, toastMsg, Toast.LENGTH_SHORT).show()
+                    }
 
-                    stopSelf()
+                    shouldCloseFlow.complete(Unit)
                 } catch (_: Exception) {}
                 latch.countDown()
             }
-            if (Settings.Global.getInt(cr, "adb_wifi_enabled", 0) == 1) {
-                adbMdns.start()
-                if (!latch.await(15, TimeUnit.SECONDS)) toast.show()
-                adbMdns.stop()
+
+            val success = withContext(Dispatchers.IO) {
+                latch.await(15, TimeUnit.SECONDS)
+            }
+
+            if (!success) {
+                withContext(Dispatchers.Main) {
+                    toast.show()
+                }
             }
         }
     }
