@@ -15,7 +15,6 @@ import moe.shizuku.manager.AppConstants.EXTRA
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbClient
-import moe.shizuku.manager.adb.AdbTcpipClient
 import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.AdbKeyException
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
@@ -102,7 +101,7 @@ class StarterActivity : AppBarActivity() {
     }
 }
 
-private class ViewModel(private val context: Context, root: Boolean, host: String?, port: Int) : androidx.lifecycle.ViewModel() {
+private class ViewModel(context: Context, root: Boolean, host: String?, port: Int) : androidx.lifecycle.ViewModel() {
 
     private val sb = StringBuilder()
     private val _output = MutableLiveData<Resource<StringBuilder>>()
@@ -114,7 +113,7 @@ private class ViewModel(private val context: Context, root: Boolean, host: Strin
             if (root) {
                 startRoot()
             } else {
-                startAdbTcpip(host!!, port)
+                startAdb(host!!, port)
             }
         } catch (e: Throwable) {
             postResult(e)
@@ -179,7 +178,6 @@ private class ViewModel(private val context: Context, root: Boolean, host: Strin
                 return@launch
             }
 
-            var retries = 3
             AdbClient(host, port, key).runCatching {
                 connect()
                 shellCommand(Starter.internalCommand) {
@@ -188,36 +186,6 @@ private class ViewModel(private val context: Context, root: Boolean, host: Strin
                 }
                 close()
             }.onFailure {
-                if (retries > 0) {
-                    retries--
-                    sb.append('\n').append("Retrying...").append('\n')
-                    postResult()
-                    Thread.sleep(1000)
-                    startAdb(host, port)
-                    return@onFailure
-                }
-
-                it.printStackTrace()
-
-                sb.append('\n').append(Log.getStackTraceString(it))
-                postResult(it)
-            }
-        }
-    }
-
-    private fun startAdbTcpip(host: String, port: Int) {
-        sb.append("Starting with local adb in port $port (this can take up to a minute)...").append('\n').append('\n')
-        postResult()
-
-        GlobalScope.launch(Dispatchers.IO) {
-            AdbTcpipClient.getInstance(context).runCatching {
-                val output = start(port)
-                sb.append(output).append('\n')
-                postResult()
-            }.onSuccess {
-                startAdb(host, 5555)
-            }
-            .onFailure {
                 it.printStackTrace()
 
                 sb.append('\n').append(Log.getStackTraceString(it))
