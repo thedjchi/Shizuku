@@ -26,7 +26,6 @@ import kotlinx.coroutines.launch
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbClient
-import moe.shizuku.manager.adb.AdbTcpipClient
 import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
@@ -88,46 +87,36 @@ class AdbStartService : Service() {
         val toast = Toast.makeText(context, R.string.notification_service_start_failed, Toast.LENGTH_SHORT)
 
         CoroutineScope(Dispatchers.IO).launch {
-            var retries = 3
-            while (retries > 0) {
-                val latch = CountDownLatch(1)
-                val adbMdns = AdbMdns(context, AdbMdns.TLS_CONNECT) { port ->
-                    if (port <= 0) return@AdbMdns
-                    try {
-                        AdbTcpipClient.getInstance(context).start(port) 
+            val latch = CountDownLatch(1)
+            val adbMdns = AdbMdns(context, AdbMdns.TLS_CONNECT) { port ->
+                if (port <= 0) return@AdbMdns
+                try {
 
-                        val keystore = PreferenceAdbKeyStore(ShizukuSettings.getPreferences())
-                        val key = AdbKey(keystore, "shizuku")
-                        val client = AdbClient("127.0.0.1", 5555, key)
+                    val keystore = PreferenceAdbKeyStore(ShizukuSettings.getPreferences())
+                    val key = AdbKey(keystore, "shizuku")
+                    val client = AdbClient("127.0.0.1", port, key)
 
-                        client.connect()
-                        client.shellCommand(Starter.internalCommand, null)
-                        client.close()
+                    client.connect()
+                    client.shellCommand(Starter.internalCommand, null)
+                    client.close()
 
-                        Settings.Global.putInt(cr, "adb_wifi_enabled", 0)
+                    Settings.Global.putInt(cr, "adb_wifi_enabled", 0)
 
-                        val toastMsg = context.getString(
-                            R.string.home_status_service_is_running,
-                            context.getString(R.string.app_name)
-                        )
-                        Toast.makeText(context, toastMsg, Toast.LENGTH_SHORT).show()
+                    val toastMsg = context.getString(
+                        R.string.home_status_service_is_running,
+                        context.getString(R.string.app_name)
+                    )
+                    Toast.makeText(context, toastMsg, Toast.LENGTH_SHORT).show()
 
-                        stopSelf()
-                    } catch (_: Exception) {}
-                    latch.countDown()
-                }
-                if (Settings.Global.getInt(cr, "adb_wifi_enabled", 0) == 1) {
-                    adbMdns.start()
-                    if (!latch.await(15, TimeUnit.SECONDS)) {
-                        retries--
-                        if (retries == 0) {
-                            toast.show()
-                        }
-                    } 
-                    adbMdns.stop()
-                }
+                    stopSelf()
+                } catch (_: Exception) {}
+                latch.countDown()
             }
-            
+            if (Settings.Global.getInt(cr, "adb_wifi_enabled", 0) == 1) {
+                adbMdns.start()
+                if (!latch.await(15, TimeUnit.SECONDS)) toast.show()
+                adbMdns.stop()
+            }
         }
     }
 
@@ -190,23 +179,6 @@ class AdbStartService : Service() {
             .build()
     }
 
-    fun showTcpNotification(context: Context, message: String) {
-        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-
-        // For Android Oreo and above, you need a notification channel
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channel = NotificationChannel(
-                CHANNEL_ID, getString(R.string.wadb_notification_title), NotificationManager.IMPORTANCE_LOW)
-            notificationManager.createNotificationChannel(channel)
-        }
-
-        val builder = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_system_icon) // make sure this icon exists
-            .setContentTitle("TCP Info")
-            .setContentText(message)
-
-        notificationManager.notify(1548, builder.build())
-    }
 
     companion object {
         const val TAG = "AdbStartService"

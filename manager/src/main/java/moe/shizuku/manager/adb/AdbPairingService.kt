@@ -64,8 +64,6 @@ class AdbPairingService : Service() {
 
     private var started = false
 
-    private var pairingStage = 1
-
     override fun onCreate() {
         super.onCreate()
 
@@ -139,7 +137,7 @@ class AdbPairingService : Service() {
 
     private fun onStart(): Notification {
         startSearch()
-        return createSearchingNotification()
+        return searchingNotification
     }
 
     private fun onInput(code: String, port: Int): Notification {
@@ -153,27 +151,12 @@ class AdbPairingService : Service() {
                 return@launch
             }
 
-            when (pairingStage) {
-                1 -> {
-                    AdbPairingClient(host, port, code, key).runCatching {
-                        start()
-                    }.onFailure {
-                        handleResult(false, it)
-                    }.onSuccess {
-                        pairingStage++
-                        getSystemService(NotificationManager::class.java)
-                            .notify(notificationId, createSearchingNotification())
-                    }
-                }
-                2 -> {
-                    AdbTcpipClient.getInstance(applicationContext).runCatching {
-                        pair(port, code)
-                    }.onFailure {
-                        handleResult(false, it)
-                    }.onSuccess { result ->
-                        handleResult(result, null)
-                    }
-                }
+            AdbPairingClient(host, port, code, key).runCatching {
+                start()
+            }.onFailure {
+                handleResult(false, it)
+            }.onSuccess {
+                handleResult(it, null)
             }
         }
 
@@ -182,7 +165,6 @@ class AdbPairingService : Service() {
 
     private fun handleResult(success: Boolean, exception: Throwable?) {
         stopForeground(STOP_FOREGROUND_REMOVE)
-        stopSearch()
 
         val title: String
         val text: String?
@@ -192,6 +174,8 @@ class AdbPairingService : Service() {
 
             title = getString(R.string.notification_adb_pairing_succeed_title)
             text = getString(R.string.notification_adb_pairing_succeed_text)
+
+            stopSearch()
         } else {
             title = getString(R.string.notification_adb_pairing_failed_title)
 
@@ -314,12 +298,11 @@ class AdbPairingService : Service() {
         return action
     }
 
-    private fun createSearchingNotification(): Notification {
-        return Notification.Builder(this, notificationChannel)
+    private val searchingNotification by unsafeLazy {
+        Notification.Builder(this, notificationChannel)
             .setColor(getColor(R.color.notification))
             .setSmallIcon(R.drawable.ic_system_icon)
             .setContentTitle(getString(R.string.notification_adb_pairing_searching_for_service_title))
-            .setContentText(getPairingStageMessage())
             .addAction(stopNotificationAction)
             .build()
     }
@@ -328,7 +311,6 @@ class AdbPairingService : Service() {
         return Notification.Builder(this, notificationChannel)
             .setColor(getColor(R.color.notification))
             .setContentTitle(getString(R.string.notification_adb_pairing_service_found_title))
-            .setContentText(getPairingStageMessage())
             .setSmallIcon(R.drawable.ic_system_icon)
             .addAction(replyNotificationAction(port))
             .build()
@@ -340,14 +322,6 @@ class AdbPairingService : Service() {
             .setContentTitle(getString(R.string.notification_adb_pairing_working_title))
             .setSmallIcon(R.drawable.ic_system_icon)
             .build()
-    }
-
-    private fun getPairingStageMessage(): String {
-        return when(pairingStage) {
-            1 -> "Stage 1: Pairing via Shizuku..."
-            2 -> "Stage 2: Pairing via local ADB shell..."
-            else -> "Unknown Stage"
-        }
     }
 
     override fun onBind(intent: Intent?): IBinder? {
