@@ -2,7 +2,6 @@ package moe.shizuku.manager.starter
 
 import android.content.Context
 import android.os.Bundle
-import android.provider.Settings
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
