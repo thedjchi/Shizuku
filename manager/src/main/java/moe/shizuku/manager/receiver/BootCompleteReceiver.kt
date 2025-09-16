@@ -27,7 +27,8 @@ import rikka.shizuku.Shizuku
 class BootCompleteReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action != Intent.ACTION_BOOT_COMPLETED) return
+        if (intent.action != Intent.ACTION_BOOT_COMPLETED &&
+            intent.action != "moe.shizuku.privileged.api.TEST_BOOT") return
 
         if (UserHandleCompat.myUserId() > 0 || Shizuku.pingBinder()) return
 
