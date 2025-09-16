@@ -5,6 +5,7 @@ import android.content.Context
 import android.provider.Settings
 import android.widget.Toast
 import androidx.work.*
+import java.io.EOFException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.channels.awaitClose
@@ -22,9 +23,12 @@ import moe.shizuku.manager.starter.Starter
 
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
-        val cr = applicationContext.contentResolver
-
         try {
+            val cr = applicationContext.contentResolver
+
+            val keystore = PreferenceAdbKeyStore(ShizukuSettings.getPreferences())
+            val key = AdbKey(keystore, "shizuku")
+            
             Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
             Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
             Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
@@ -41,12 +45,14 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 }.first()
             }
 
-            val keystore = PreferenceAdbKeyStore(ShizukuSettings.getPreferences())
-            val key = AdbKey(keystore, "shizuku")
             val client = AdbClient("127.0.0.1", port, key)
 
             client.connect()
-            client.tcpipCommand()
+            try {
+                client.tcpipCommand()
+            } catch(e: EOFException) {
+                // Continue. Expected when ADB restarts in TCP mode
+            }
             client.close()
 
             Settings.Global.putInt(cr, "adb_wifi_enabled", 0)
@@ -89,9 +95,15 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
             return Result.success()
         } catch (e: Exception) {
+            val lineNumber = e.stackTrace.firstOrNull {
+                    it.className.contains("AdbStartWorker")
+                }?.lineNumber
+
+            val errorMessage = "Error at line $lineNumber: $e.message"
+
             withContext(Dispatchers.Main) {
-                // Toast.makeText(applicationContext, R.string.notification_service_start_failed, Toast.LENGTH_SHORT).show()
-                Toast.makeText(applicationContext, e.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.notification_service_start_failed, Toast.LENGTH_SHORT).show()
+                // Toast.makeText(applicationContext, errorMessage, Toast.LENGTH_LONG).show()
             }
             return Result.retry()
         }
