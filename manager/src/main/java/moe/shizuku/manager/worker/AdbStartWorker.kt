@@ -1,9 +1,15 @@
 package moe.shizuku.manager.worker
 
+import android.app.Notification
+import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.provider.Settings
 import android.widget.Toast
+import androidx.core.app.NotificationCompat
 import androidx.work.*
 import java.io.EOFException
 import kotlinx.coroutines.Dispatchers
@@ -63,6 +69,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
             var delayTime = 1000L
             var connected = false
+            var connectionError: Exception? = null
             repeat(3) {
                 try {
                     tcpipClient.connect()
@@ -72,12 +79,12 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     connected = true
                     return@repeat
                 } catch(e: Exception) {
+                    connectionError = e
                     delay(delayTime)
                     delayTime *= 2
                 }
             }
-
-            if (!connected) throw Exception("Failed to connect over TCP after 3 attempts")
+            if (!connected) throw connectionError ?: IllegalStateException("Unknown connection error")
 
             val toastMsg = applicationContext.getString(
                 R.string.home_status_service_is_running,
@@ -95,18 +102,48 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
             return Result.success()
         } catch (e: Exception) {
-            val lineNumber = e.stackTrace.firstOrNull {
-                    it.className.contains("AdbStartWorker")
-                }?.lineNumber
-
-            val errorMessage = "Error at line $lineNumber: $e.message"
-
-            withContext(Dispatchers.Main) {
-                Toast.makeText(applicationContext, R.string.notification_service_start_failed, Toast.LENGTH_SHORT).show()
-                // Toast.makeText(applicationContext, errorMessage, Toast.LENGTH_LONG).show()
-            }
+            showErrorNotification(applicationContext, e)
             return Result.retry()
         }
+    }
+
+    private fun showErrorNotification(context: Context, e: Exception) {
+        val lineNumber = e.stackTrace.firstOrNull {
+            it.className.contains("AdbStartWorker")
+        }?.lineNumber
+
+        val msgEmail = "Line $lineNumber: $e"
+        val msgNotif = "$msgEmail. Tap to notify the developer"
+
+        val channel = NotificationChannel(
+            CHANNEL_ID,
+            context.getString(R.string.wadb_notification_title),
+            NotificationManager.IMPORTANCE_LOW
+        )
+        val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        nm.createNotificationChannel(channel)
+
+        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf("shizukuforkdev@fire.fundersclub.com"))
+            putExtra(Intent.EXTRA_SUBJECT, "Error while starting on boot")
+            putExtra(Intent.EXTRA_TEXT, msgEmail)
+        }
+
+        val emailPendingIntent = PendingIntent.getActivity(
+            context, 0, emailIntent, PendingIntent.FLAG_IMMUTABLE
+        )
+
+        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_system_icon)
+            .setContentTitle("Error while starting on boot")
+            .setContentText(msgNotif)
+            .setSilent(true)
+            .setContentIntent(emailPendingIntent)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(msgNotif))
+            .build()
+
+        nm.notify(NOTIFICATION_ID, notification)
     }
 
     companion object {
@@ -128,5 +165,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 request
             )
         }
+        const val CHANNEL_ID = "AdbStartWorker"
+        const val NOTIFICATION_ID = 1448
     }
 }

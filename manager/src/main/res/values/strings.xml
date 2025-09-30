@@ -157,6 +157,8 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Starting Shizuku…</string>
     <string name="wadb_notification_content">Awaiting Wi-Fi connection before proceeding</string>
+    <string name="wadb_permission_error_notification_title">Permission Error</string>
+    <string name="wadb_permission_error_notification_content">Shizuku needs WRITE_SECURE_SETTINGS to start on boot. Tap to learn how to grant it.</string>
     <string name="wadb_notification_channel">ADB auto-start service</string>
 
     <!-- Misc -->

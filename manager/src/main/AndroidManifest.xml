@@ -157,6 +157,7 @@
 
         <receiver android:name=".receiver.BootAttemptReceiver" android:exported="true" />
         <receiver android:name=".receiver.BootCancelReceiver" android:exported="true" />
+        <receiver android:name=".receiver.BootRestoreReceiver" android:exported="true" />
 
 
         <receiver
