@@ -43,7 +43,7 @@ class AdbDialogFragment : DialogFragment() {
             setNegativeButton(android.R.string.cancel, null)
             setPositiveButton(R.string.development_settings, null)
 
-            if (port != -1) {
+            if (port > 0) {
                 setNeutralButton("$port", null)
             }
         }
@@ -64,7 +64,6 @@ class AdbDialogFragment : DialogFragment() {
         if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
             val cr = context.contentResolver
             Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
-            Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
             Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
         }
 
@@ -89,10 +88,8 @@ class AdbDialogFragment : DialogFragment() {
     }
 
     private fun startAndDismiss(port: Int) {
-        val host = "127.0.0.1"
         val intent = Intent(context, StarterActivity::class.java).apply {
             putExtra(StarterActivity.EXTRA_IS_ROOT, false)
-            putExtra(StarterActivity.EXTRA_HOST, host)
             putExtra(StarterActivity.EXTRA_PORT, port)
         }
         requireContext().startActivity(intent)

@@ -1,9 +1,12 @@
 package moe.shizuku.manager.home
 
+import android.Manifest.permission.WRITE_SECURE_SETTINGS
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.SystemProperties
+import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +14,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
+import java.net.Inet4Address
 import moe.shizuku.manager.Helps
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbPairingTutorialActivity
@@ -24,7 +28,6 @@ import rikka.core.content.asActivity
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
-import java.net.Inet4Address
 
 class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: View) :
     BaseViewHolder<Any?>(root) {
@@ -65,20 +68,21 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
     }
 
     private fun onAdbClicked(context: Context) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
-            return
-        }
+        if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
+            Settings.Global.putInt(context.contentResolver, Settings.Global.ADB_ENABLED, 1)
 
         val port = EnvironmentUtils.getAdbTcpPort()
-        if (port > 0) {
-            val host = "127.0.0.1"
+        val adbEnabled = Settings.Global.getInt(context.contentResolver, Settings.Global.ADB_ENABLED, 0) 
+        if (port > 0 && adbEnabled > 0) {
             val intent = Intent(context, StarterActivity::class.java).apply {
-                putExtra(StarterActivity.EXTRA_IS_ROOT, false)
-                putExtra(StarterActivity.EXTRA_HOST, host)
                 putExtra(StarterActivity.EXTRA_PORT, port)
+                putExtra(StarterActivity.EXTRA_IS_TCP, true)
             }
             context.startActivity(intent)
+        } else if (port > 0) {
+            WadbEnableUsbDebuggingDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         } else {
             WadbNotEnabledDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         }

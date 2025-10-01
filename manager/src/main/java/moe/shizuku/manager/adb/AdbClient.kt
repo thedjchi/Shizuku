@@ -80,42 +80,9 @@ class AdbClient(private val host: String, private val port: Int, private val key
         if (message.command != A_CNXN) error("not A_CNXN")
     }
 
-    fun shellCommand(command: String, listener: ((ByteArray) -> Unit)?) {
+    fun command(cmd: String, listener: ((ByteArray) -> Unit)? = null) {
         val localId = 1
-        write(A_OPEN, localId, 0, "shell:$command")
-
-        var message = read()
-        when (message.command) {
-            A_OKAY -> {
-                while (true) {
-                    message = read()
-                    val remoteId = message.arg0
-                    if (message.command == A_WRTE) {
-                        if (message.data_length > 0) {
-                            listener?.invoke(message.data!!)
-                        }
-                        write(A_OKAY, localId, remoteId)
-                    } else if (message.command == A_CLSE) {
-                        write(A_CLSE, localId, remoteId)
-                        break
-                    } else {
-                        error("not A_WRTE or A_CLSE")
-                    }
-                }
-            }
-            A_CLSE -> {
-                val remoteId = message.arg0
-                write(A_CLSE, localId, remoteId)
-            }
-            else -> {
-                error("not A_OKAY or A_CLSE")
-            }
-        }
-    }
-
-    fun tcpipCommand(port: String = "5555", listener: ((ByteArray) -> Unit)? = null) {
-        val localId = 1
-        write(A_OPEN, localId, 0, "tcpip:$port")
+        write(A_OPEN, localId, 0, cmd)
 
         var message = read()
         when (message.command) {

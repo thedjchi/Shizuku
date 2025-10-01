@@ -1,6 +1,5 @@
 package moe.shizuku.manager.worker
 
-import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -11,30 +10,21 @@ import android.provider.Settings
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.work.*
-import java.io.EOFException
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 import moe.shizuku.manager.R
-import moe.shizuku.manager.ShizukuSettings
-import moe.shizuku.manager.adb.AdbClient
-import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.AdbMdns
-import moe.shizuku.manager.adb.PreferenceAdbKeyStore
-import moe.shizuku.manager.starter.Starter
+import moe.shizuku.manager.adb.AdbStarter
 
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
         try {
             val cr = applicationContext.contentResolver
 
-            val keystore = PreferenceAdbKeyStore(ShizukuSettings.getPreferences())
-            val key = AdbKey(keystore, "shizuku")
-            
             Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
             Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
             Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
@@ -50,41 +40,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     }
                 }.first()
             }
-
-            val client = AdbClient("127.0.0.1", port, key)
-
-            client.connect()
-            try {
-                client.tcpipCommand()
-            } catch(e: EOFException) {
-                // Continue. Expected when ADB restarts in TCP mode
-            }
-            client.close()
-
-            Settings.Global.putInt(cr, "adb_wifi_enabled", 0)
-
-            delay(1000)
-
-            val tcpipClient = AdbClient("127.0.0.1", 5555, key)
-
-            var delayTime = 1000L
-            var connected = false
-            var connectionError: Exception? = null
-            repeat(3) {
-                try {
-                    tcpipClient.connect()
-                    tcpipClient.shellCommand(Starter.internalCommand, null)
-                    tcpipClient.close()
-                        
-                    connected = true
-                    return@repeat
-                } catch(e: Exception) {
-                    connectionError = e
-                    delay(delayTime)
-                    delayTime *= 2
-                }
-            }
-            if (!connected) throw connectionError ?: IllegalStateException("Unknown connection error")
+            AdbStarter.startAdb(applicationContext, port)
 
             val toastMsg = applicationContext.getString(
                 R.string.home_status_service_is_running,
@@ -108,12 +64,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
     }
 
     private fun showErrorNotification(context: Context, e: Exception) {
-        val lineNumber = e.stackTrace.firstOrNull {
-            it.className.contains("AdbStartWorker")
-        }?.lineNumber
-
-        val msgEmail = "Line $lineNumber: $e"
-        val msgNotif = "$msgEmail. Tap to notify the developer"
+        val msgNotif = "$e. Tap to notify the developer."
 
         val channel = NotificationChannel(
             CHANNEL_ID,
@@ -123,12 +74,13 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         nm.createNotificationChannel(channel)
 
-        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:")
-            putExtra(Intent.EXTRA_EMAIL, arrayOf("shizukuforkdev@fire.fundersclub.com"))
-            putExtra(Intent.EXTRA_SUBJECT, "Error while starting on boot")
-            putExtra(Intent.EXTRA_TEXT, msgEmail)
-        }
+        val uri = Uri.parse(
+            "mailto:shizukuforkdev@fire.fundersclub.com" +
+            "?subject=" + Uri.encode("Error while starting on boot") +
+            "&body=" + Uri.encode(e.stackTraceToString())
+        )
+
+        val emailIntent = Intent(Intent.ACTION_SENDTO, uri)
 
         val emailPendingIntent = PendingIntent.getActivity(
             context, 0, emailIntent, PendingIntent.FLAG_IMMUTABLE

@@ -5,39 +5,37 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.topjohnwu.superuser.CallbackList
 import com.topjohnwu.superuser.Shell
+import java.net.SocketException
+import javax.net.ssl.SSLProtocolException
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.delay
 import moe.shizuku.manager.AppConstants.EXTRA
 import moe.shizuku.manager.R
-import moe.shizuku.manager.ShizukuSettings
-import moe.shizuku.manager.adb.AdbClient
-import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.AdbKeyException
-import moe.shizuku.manager.adb.PreferenceAdbKeyStore
+import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.databinding.StarterActivityBinding
 import rikka.lifecycle.Resource
 import rikka.lifecycle.Status
 import rikka.lifecycle.viewModels
 import rikka.shizuku.Shizuku
-import java.net.ConnectException
-import javax.net.ssl.SSLProtocolException
 
-private class NotRootedException : Exception()
+private class NotRootedException: Exception()
 
 class StarterActivity : AppBarActivity() {
 
     private val viewModel by viewModels {
         ViewModel(
             this,
-            intent.getBooleanExtra(EXTRA_IS_ROOT, true),
-            intent.getStringExtra(EXTRA_HOST),
-            intent.getIntExtra(EXTRA_PORT, 0)
+            intent.getBooleanExtra(EXTRA_IS_ROOT, false),
+            intent.getBooleanExtra(EXTRA_IS_TCP, false),
+            intent.getIntExtra(EXTRA_PORT, 0),
         )
     }
 
@@ -53,13 +51,12 @@ class StarterActivity : AppBarActivity() {
         viewModel.output.observe(this) {
             val output = it.data!!.trim()
             if (output.endsWith("info: shizuku_starter exit with 0")) {
-                viewModel.appendOutput("")
-                viewModel.appendOutput("Waiting for service...")
+                viewModel.log("\nWaiting for service...")
 
                 Shizuku.addBinderReceivedListener(object : Shizuku.OnBinderReceivedListener {
                     override fun onBinderReceived() {
                         Shizuku.removeBinderReceivedListener(this)
-                        viewModel.appendOutput("Service started, this window will be automatically closed in 3 seconds")
+                        viewModel.log("Service started, this window will be automatically closed in 3 seconds")
 
                         window?.decorView?.postDelayed({
                             if (!isFinishing) finish()
@@ -75,7 +72,7 @@ class StarterActivity : AppBarActivity() {
                     is NotRootedException -> {
                         message = R.string.start_with_root_failed
                     }
-                    is ConnectException -> {
+                    is SocketException -> {
                         message = R.string.cannot_connect_port
                     }
                     is SSLProtocolException -> {
@@ -97,147 +94,58 @@ class StarterActivity : AppBarActivity() {
     companion object {
 
         const val EXTRA_IS_ROOT = "$EXTRA.IS_ROOT"
-        const val EXTRA_HOST = "$EXTRA.HOST"
+        const val EXTRA_IS_TCP = "$EXTRA.IS_TCP"
         const val EXTRA_PORT = "$EXTRA.PORT"
     }
 }
 
-private class ViewModel(context: Context, root: Boolean, host: String?, port: Int) : androidx.lifecycle.ViewModel() {
+private class ViewModel(context: Context, root: Boolean, isTcp: Boolean, port: Int) : androidx.lifecycle.ViewModel() {
 
     private val sb = StringBuilder()
     private val _output = MutableLiveData<Resource<StringBuilder>>()
 
     val output = _output as LiveData<Resource<StringBuilder>>
 
+    private val handler = CoroutineExceptionHandler { _, throwable ->
+        if (throwable is CancellationException) throw throwable
+        log(error = throwable)
+    }
+
     init {
-        try {
-            if (root) {
-                startRoot()
-            } else {
-                startAdb(host!!, port)
-            }
-        } catch (e: Throwable) {
-            postResult(e)
+        viewModelScope.launch(Dispatchers.IO + handler) {
+            if (root) startRoot() else AdbStarter.startAdb(context, port, isTcp, { log(it) })
         }
     }
 
-    fun appendOutput(line: String) {
-        sb.appendLine(line)
-        postResult()
-    }
+    fun log(line: String? = null, error: Throwable? = null) {
+        line?.let { sb.appendLine(it) }
+        error?.let { sb.appendLine().appendLine(Log.getStackTraceString(it)) }
 
-    private fun postResult(throwable: Throwable? = null) {
-        if (throwable == null)
+        if (error == null)
             _output.postValue(Resource.success(sb))
         else
-            _output.postValue(Resource.error(throwable, sb))
+            _output.postValue(Resource.error(error, sb))
     }
 
     private fun startRoot() {
-        sb.append("Starting with root...").append('\n').append('\n')
-        postResult()
+        log("Starting with root...\n")
 
-        GlobalScope.launch(Dispatchers.IO) {
+        if (!Shell.getShell().isRoot) {
+            // Try again just in case
+            Shell.getCachedShell()?.close()
+
             if (!Shell.getShell().isRoot) {
                 Shell.getCachedShell()?.close()
-                sb.append('\n').append("Can't open root shell, try again...").append('\n')
-
-                postResult()
-                if (!Shell.getShell().isRoot) {
-                    sb.append('\n').append("Still not :(").append('\n')
-                    postResult(NotRootedException())
-                    return@launch
-                }
-            }
-
-            Shell.cmd(Starter.internalCommand).to(object : CallbackList<String?>() {
-                override fun onAddElement(s: String?) {
-                    sb.append(s).append('\n')
-                    postResult()
-                }
-            }).submit {
-                if (it.code != 0) {
-                    sb.append('\n').append("Send this to developer may help solve the problem.")
-                    postResult()
-                }
+                throw NotRootedException()
             }
         }
-    }
 
-    private fun startAdb(host: String, port: Int) {
-        sb.append("Starting with wireless adb...").append('\n').append('\n')
-        postResult()
-
-        GlobalScope.launch(Dispatchers.IO) {
-            val key = try {
-                AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
-            } catch (e: Throwable) {
-                e.printStackTrace()
-                sb.append('\n').append(Log.getStackTraceString(e))
-
-                postResult(AdbKeyException(e))
-                return@launch
+        Shell.cmd(Starter.internalCommand).to(object : CallbackList<String?>() {
+            override fun onAddElement(s: String?) {
+                s?.let { log(it) }
             }
-
-            // First try to connect over TCP if already enabled
-            AdbClient("127.0.0.1", 5555, key).runCatching {
-                connect()
-                shellCommand(Starter.internalCommand) {
-                    sb.append(String(it))
-                    postResult()
-                }
-                close()
-                return@launch
-            }
-
-            // If TCP not enabled, connect over TLS first and switch to TCP mode
-            sb.append("Connecting over TLS on port $port...").append('\n')
-            postResult()
-
-            AdbClient(host, port, key).runCatching {
-                connect()
-                tcpipCommand() {
-                    sb.append(String(it))
-                    postResult()
-                }
-                close()
-            }.onFailure {
-                it.printStackTrace()
-
-                sb.append('\n').append(Log.getStackTraceString(it)).append('\n').append('\n')
-                postResult(it)
-            }
-
-            delay(1000)
-
-            // Now connect over TCP
-            AdbClient("127.0.0.1", 5555, key).runCatching {
-                var delayTime = 1000L
-                var connected = false
-                repeat(3) {
-                    try {
-                        connect()
-                        connected = true
-                        return@repeat
-                    } catch(e: Exception) {
-                        delay(delayTime)
-                        delayTime *=2
-                    }
-                }
-
-                if (!connected) throw ConnectException("Failed to connect over TCP after 3 attempts")
-
-                shellCommand(Starter.internalCommand) {
-                    sb.append(String(it))
-                    postResult()
-                }
-                close()
-            }.onFailure {
-                it.printStackTrace()
-
-                sb.append('\n').append(Log.getStackTraceString(it))
-                postResult(it)
-            }
+        }).submit {
+            if (it.code != 0) log("\nPlease notify the developer.")
         }
     }
 }
