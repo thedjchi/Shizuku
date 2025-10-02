@@ -3,7 +3,7 @@ package moe.shizuku.manager.adb
 import android.content.Context
 import android.provider.Settings
 import java.io.EOFException
-import java.net.ConnectException
+import java.net.SocketException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import moe.shizuku.manager.ShizukuSettings
@@ -35,7 +35,7 @@ object AdbStarter {
                 log?.invoke("restarting in TCP mode port: $activePort")
                 runCatching {
                     client.command("tcpip:$activePort")
-                }.onFailure { if (it !is EOFException) throw it } // EOFException is expected when ADB restarts in TCP mode
+                }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts in TCP mode
             }
 
             Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 0)
