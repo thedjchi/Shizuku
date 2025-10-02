@@ -14,7 +14,8 @@ import androidx.preference.*
 import androidx.recyclerview.widget.RecyclerView
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
-import moe.shizuku.manager.ShizukuSettings.KEEP_START_ON_BOOT
+import moe.shizuku.manager.ShizukuSettings.KEY_LANGUAGE
+import moe.shizuku.manager.ShizukuSettings.KEY_NIGHT_MODE
 import moe.shizuku.manager.app.ThemeHelper
 import moe.shizuku.manager.app.ThemeHelper.KEY_BLACK_NIGHT_THEME
 import moe.shizuku.manager.app.ThemeHelper.KEY_USE_SYSTEM_COLOR
@@ -30,18 +31,16 @@ import rikka.recyclerview.fixEdgeEffect
 import rikka.shizuku.manager.ShizukuLocales
 import rikka.widget.borderview.BorderRecyclerView
 import java.util.*
-import moe.shizuku.manager.ShizukuSettings.LANGUAGE as KEY_LANGUAGE
-import moe.shizuku.manager.ShizukuSettings.NIGHT_MODE as KEY_NIGHT_MODE
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
-    private lateinit var languagePreference: ListPreference
-    private lateinit var nightModePreference: IntegerSimpleMenuPreference
-    private lateinit var blackNightThemePreference: TwoStatePreference
-    private lateinit var startOnBootPreference: TwoStatePreference
     private lateinit var startupPreference: PreferenceCategory
+    private lateinit var startOnBootPreference: TwoStatePreference
+    private lateinit var languagePreference: ListPreference
     private lateinit var translationPreference: Preference
     private lateinit var translationContributorsPreference: Preference
+    private lateinit var nightModePreference: IntegerSimpleMenuPreference
+    private lateinit var blackNightThemePreference: TwoStatePreference
     private lateinit var useSystemColorPreference: TwoStatePreference
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -55,8 +54,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         languagePreference = findPreference(KEY_LANGUAGE)!!
         nightModePreference = findPreference(KEY_NIGHT_MODE)!!
         blackNightThemePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
-        startOnBootPreference = findPreference(KEEP_START_ON_BOOT)!!
-        startupPreference = findPreference("startup")!!
+        startOnBootPreference = findPreference("start_on_boot")!!
         translationPreference = findPreference("translation")!!
         translationContributorsPreference = findPreference("translation_contributors")!!
         useSystemColorPreference = findPreference(KEY_USE_SYSTEM_COLOR)!!

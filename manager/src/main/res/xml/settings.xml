@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
-        android:key="startup"
-        android:title="@string/settings_startup">
+    <PreferenceCategory android:title="@string/settings_startup">
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="start_on_boot"
             android:summary="@string/settings_start_on_boot_summary"
             android:title="@string/settings_start_on_boot" />
+
+        <rikka.material.preference.MaterialSwitchPreference
+            android:key="tcp"
+            android:summary="@string/settings_tcp_summary"
+            android:title="@string/settings_tcp" />
+
+        <EditTextPreference
+            android:key="tcp_port"
+            android:summary="@string/settings_tcp_port_summary"
+            android:title="@string/settings_tcp_port" />
 
     </PreferenceCategory>
 
@@ -31,9 +39,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="user_interface"
-        android:title="@string/settings_user_interface">
+    <PreferenceCategory android:title="@string/settings_user_interface">
 
         <moe.shizuku.manager.settings.IntegerSimpleMenuPreference
             android:entries="@array/night_mode"

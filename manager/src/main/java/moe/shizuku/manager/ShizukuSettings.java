@@ -22,9 +22,8 @@ import static java.lang.annotation.RetentionPolicy.SOURCE;
 public class ShizukuSettings {
 
     public static final String NAME = "settings";
-    public static final String NIGHT_MODE = "night_mode";
-    public static final String LANGUAGE = "language";
-    public static final String KEEP_START_ON_BOOT = "start_on_boot";
+    public static final String KEY_NIGHT_MODE = "night_mode";
+    public static final String KEY_LANGUAGE = "language";
 
     private static SharedPreferences sPreferences;
 
@@ -90,11 +89,11 @@ public class ShizukuSettings {
         if (EnvironmentUtils.isWatch(ActivityThread.currentActivityThread().getApplication())) {
             defValue = AppCompatDelegate.MODE_NIGHT_YES;
         }
-        return getPreferences().getInt(NIGHT_MODE, defValue);
+        return getPreferences().getInt(KEY_NIGHT_MODE, defValue);
     }
 
     public static Locale getLocale() {
-        String tag = getPreferences().getString(LANGUAGE, null);
+        String tag = getPreferences().getString(KEY_LANGUAGE, null);
         if (TextUtils.isEmpty(tag) || "SYSTEM".equals(tag)) {
             return Locale.getDefault();
         }
