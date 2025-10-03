@@ -102,7 +102,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             icon!!.mutate().setTint(tintColor.data)
 
             setOnPreferenceClickListener {
-                CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.translation_url))
+                CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.automation_apps_url))
                 true
             }
         }
