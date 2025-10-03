@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen   xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory android:title="@string/settings_startup">
 
@@ -9,14 +10,22 @@
             android:title="@string/settings_start_on_boot" />
 
         <rikka.material.preference.MaterialSwitchPreference
-            android:key="tcp"
-            android:summary="@string/settings_tcp_summary"
-            android:title="@string/settings_tcp" />
+            android:key="tcp_mode"
+            android:summary="@string/settings_tcp_mode_summary"
+            android:title="@string/settings_tcp_mode" 
+            android:defaultValue="true" />
 
         <EditTextPreference
             android:key="tcp_port"
-            android:summary="@string/settings_tcp_port_summary"
-            android:title="@string/settings_tcp_port" />
+            app:useSimpleSummaryProvider="true"
+            android:title="@string/settings_tcp_port"
+            android:inputType="number"
+            android:defaultValue="5555" />
+
+        <Preference
+            android:key="tcp_learn_more"
+            android:summary="@string/settings_tcp_learn_more"
+            android:icon="@drawable/ic_learn_more_24dp" />
 
     </PreferenceCategory>
 
@@ -51,11 +60,13 @@
         <rikka.material.preference.MaterialSwitchPreference
             android:key="black_night_theme"
             android:summary="@string/settings_black_night_theme_summary"
-            android:title="@string/settings_black_night_theme" />
+            android:title="@string/settings_black_night_theme"
+            android:defaultValue="false" />
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="use_system_color"
-            android:title="@string/settings_use_system_color" />
+            android:title="@string/settings_use_system_color"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 

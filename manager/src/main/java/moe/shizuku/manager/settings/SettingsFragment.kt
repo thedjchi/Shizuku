@@ -4,6 +4,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.text.InputType
 import android.text.TextUtils
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -11,19 +12,18 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
+import androidx.preference.Preference.SummaryProvider
 import androidx.recyclerview.widget.RecyclerView
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
-import moe.shizuku.manager.ShizukuSettings.KEY_LANGUAGE
-import moe.shizuku.manager.ShizukuSettings.KEY_NIGHT_MODE
+import moe.shizuku.manager.ShizukuSettings.Keys.*
 import moe.shizuku.manager.app.ThemeHelper
-import moe.shizuku.manager.app.ThemeHelper.KEY_BLACK_NIGHT_THEME
-import moe.shizuku.manager.app.ThemeHelper.KEY_USE_SYSTEM_COLOR
 import moe.shizuku.manager.ktx.isComponentEnabled
 import moe.shizuku.manager.ktx.setComponentEnabled
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.BootCompleteReceiver
 import moe.shizuku.manager.utils.CustomTabsHelper
+import moe.shizuku.manager.utils.EnvironmentUtils
 import rikka.core.util.ResourceUtils
 import rikka.material.app.LocaleDelegate
 import rikka.recyclerview.addEdgeSpacing
@@ -34,15 +34,6 @@ import java.util.*
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
-    private lateinit var startupPreference: PreferenceCategory
-    private lateinit var startOnBootPreference: TwoStatePreference
-    private lateinit var languagePreference: ListPreference
-    private lateinit var translationPreference: Preference
-    private lateinit var translationContributorsPreference: Preference
-    private lateinit var nightModePreference: IntegerSimpleMenuPreference
-    private lateinit var blackNightThemePreference: TwoStatePreference
-    private lateinit var useSystemColorPreference: TwoStatePreference
-
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         val context = requireContext()
 
@@ -51,43 +42,89 @@ class SettingsFragment : PreferenceFragmentCompat() {
         preferenceManager.sharedPreferencesMode = Context.MODE_PRIVATE
         setPreferencesFromResource(R.xml.settings, null)
 
-        languagePreference = findPreference(KEY_LANGUAGE)!!
-        nightModePreference = findPreference(KEY_NIGHT_MODE)!!
-        blackNightThemePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
-        startOnBootPreference = findPreference("start_on_boot")!!
-        translationPreference = findPreference("translation")!!
-        translationContributorsPreference = findPreference("translation_contributors")!!
-        useSystemColorPreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
+        val startOnBootPreference: TwoStatePreference = findPreference(KEY_START_ON_BOOT)!!
+        val tcpModePreference: TwoStatePreference = findPreference(KEY_TCP_MODE)!!
+        val tcpPortPreference: EditTextPreference = findPreference(KEY_TCP_PORT)!!
+        val tcpLearnMorePreference: Preference = findPreference(KEY_TCP_LEARN_MORE)!!
+        val languagePreference: ListPreference = findPreference(KEY_LANGUAGE)!!
+        val translationPreference: Preference = findPreference(KEY_TRANSLATION)!!
+        val translationContributorsPreference: Preference = findPreference(KEY_TRANSLATION_CONTRIBUTORS)!!
+        val nightModePreference: IntegerSimpleMenuPreference = findPreference(KEY_NIGHT_MODE)!!
+        val blackNightThemePreference: TwoStatePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
+        val useSystemColorPreference: TwoStatePreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
 
-        val componentName = ComponentName(context.packageName, BootCompleteReceiver::class.java.name)
+        val prefs = ShizukuSettings.getPreferences()
 
-        startOnBootPreference.isChecked = context.packageManager.isComponentEnabled(componentName)
-        startOnBootPreference.onPreferenceChangeListener =
-            Preference.OnPreferenceChangeListener { _: Preference?, newValue: Any ->
-                if (newValue is Boolean) {
-                    context.packageManager.setComponentEnabled(componentName, newValue)
-                    context.packageManager.isComponentEnabled(componentName) == newValue
-                } else false
-            }
-        languagePreference.onPreferenceChangeListener =
-            Preference.OnPreferenceChangeListener { _: Preference?, newValue: Any ->
-                if (newValue is String) {
-                    val locale: Locale = if ("SYSTEM" == newValue) {
-                        LocaleDelegate.systemLocale
-                    } else {
-                        Locale.forLanguageTag(newValue)
-                    }
-                    LocaleDelegate.defaultLocale = locale
-                    activity?.recreate()
+        startOnBootPreference.apply {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isRooted()) {
+                isEnabled = true
+
+                val bootCompleteReceiver = ComponentName(context.packageName, BootCompleteReceiver::class.java.name)
+                isChecked = context.packageManager.isComponentEnabled(bootCompleteReceiver)
+
+                setOnPreferenceChangeListener { _, newValue ->
+                    if (newValue is Boolean) {
+                        context.packageManager.setComponentEnabled(bootCompleteReceiver, newValue)
+                        context.packageManager.isComponentEnabled(bootCompleteReceiver) == newValue
+                    } else false
                 }
+
+                summary = ""
+            } else {
+                isEnabled = false
+                isChecked = false
+                summary = context.getString(R.string.settings_start_on_boot_summary)         
+            }
+        }
+
+        tcpModePreference.setOnPreferenceChangeListener { _, newValue ->
+            if (newValue is Boolean)  {
+                tcpPortPreference.isVisible = newValue        
+                true
+            } else false
+        }
+
+        tcpPortPreference.apply {
+            setOnBindEditTextListener { editText ->
+                editText.hint = context.getString(R.string.settings_tcp_port_hint)
+                editText.inputType = InputType.TYPE_CLASS_NUMBER
+                editText.setSelection(editText.text.length)
+            }
+            summaryProvider = SummaryProvider<EditTextPreference> { pref ->
+                val text = pref.text
+                if (text.isNullOrEmpty()) "5555" else text
+            }
+        }
+
+        tcpLearnMorePreference.apply {
+            val tintColor = TypedValue()
+            context.theme.resolveAttribute(R.attr.colorOnSurfaceVariant, tintColor, true)
+            icon!!.mutate().setTint(tintColor.data)
+
+            setOnPreferenceClickListener {
+                CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.translation_url))
                 true
             }
+        }
 
-        setupLocalePreference()
+        languagePreference.setOnPreferenceChangeListener { _, newValue ->
+            if (newValue is String) {
+                val locale: Locale = if ("SYSTEM" == newValue) {
+                    LocaleDelegate.systemLocale
+                } else {
+                    Locale.forLanguageTag(newValue)
+                }
+                LocaleDelegate.defaultLocale = locale
+                activity?.recreate()
+            }
+            true
+        }
 
-        nightModePreference.value = ShizukuSettings.getNightMode()
-        nightModePreference.onPreferenceChangeListener =
-            Preference.OnPreferenceChangeListener { _: Preference?, value: Any? ->
+        setupLocalePreference(languagePreference)
+
+        nightModePreference.apply {
+            value = ShizukuSettings.getNightMode()
+            setOnPreferenceChangeListener { _, value ->
                 if (value is Int) {
                     if (ShizukuSettings.getNightMode() != value) {
                         AppCompatDelegate.setDefaultNightMode(value)
@@ -96,45 +133,44 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 }
                 true
             }
-        if (ShizukuSettings.getNightMode() != AppCompatDelegate.MODE_NIGHT_NO) {
-            blackNightThemePreference.isChecked = ThemeHelper.isBlackNightTheme(context)
-            blackNightThemePreference.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { _: Preference?, _: Any? ->
-                    if (ResourceUtils.isNightMode(context.resources.configuration)) {
+        }
+
+        blackNightThemePreference.apply {
+            if (ShizukuSettings.getNightMode() != AppCompatDelegate.MODE_NIGHT_NO) {
+                isChecked = ThemeHelper.isBlackNightTheme(context)
+                setOnPreferenceChangeListener { _, _ ->
+                    if (ResourceUtils.isNightMode(context.resources.configuration))
                         activity?.recreate()
-                    }
                     true
                 }
-        } else {
-            blackNightThemePreference.isVisible = false
+            } else isVisible = false
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            useSystemColorPreference.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { _: Preference?, value: Any? ->
+        useSystemColorPreference.apply {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                setOnPreferenceChangeListener { _, value ->
                     if (value is Boolean) {
-                        if (ThemeHelper.isUsingSystemColor() != value) {
+                        if (ThemeHelper.isUsingSystemColor() != value)
                             activity?.recreate()
-                        }
                     }
                     true
                 }
-        } else {
-            useSystemColorPreference.isVisible = false
+            } else isVisible = false
         }
 
-        translationPreference.summary =
-            context.getString(R.string.settings_translation_summary, context.getString(R.string.app_name))
-        translationPreference.setOnPreferenceClickListener {
-            CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.translation_url))
-            true
+        translationPreference.apply {
+            summary = context.getString(R.string.settings_translation_summary, context.getString(R.string.app_name))
+            setOnPreferenceClickListener {
+                CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.translation_url))
+                true
+            }
         }
 
-        val contributors = context.getString(R.string.translation_contributors).toHtml().toString()
-        if (contributors.isNotBlank()) {
-            translationContributorsPreference.summary = contributors
-        } else {
-            translationContributorsPreference.isVisible = false
+        translationContributorsPreference.apply {
+            val contributors = context.getString(R.string.translation_contributors).toHtml().toString()
+            if (contributors.isNotBlank()) {
+                summary = contributors
+            } else isVisible = false
         }
     }
 
@@ -156,7 +192,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         return recyclerView
     }
 
-    private fun setupLocalePreference() {
+    private fun setupLocalePreference(languagePreference: ListPreference) {
         val localeTags = ShizukuLocales.LOCALES
         val displayLocaleTags = ShizukuLocales.DISPLAY_LOCALES
 

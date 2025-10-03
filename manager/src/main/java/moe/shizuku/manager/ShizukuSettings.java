@@ -22,8 +22,19 @@ import static java.lang.annotation.RetentionPolicy.SOURCE;
 public class ShizukuSettings {
 
     public static final String NAME = "settings";
-    public static final String KEY_NIGHT_MODE = "night_mode";
-    public static final String KEY_LANGUAGE = "language";
+    public static class Keys {
+        public static final String KEY_START_ON_BOOT = "start_on_boot";
+        public static final String KEY_TCP_MODE = "tcp_mode";
+        public static final String KEY_TCP_PORT = "tcp_port";
+        public static final String KEY_TCP_LEARN_MORE = "tcp_learn_more";
+        public static final String KEY_LANGUAGE = "language";
+        public static final String KEY_TRANSLATION = "translation";
+        public static final String KEY_TRANSLATION_CONTRIBUTORS = "translation_contributors";
+        public static final String KEY_LIGHT_THEME = "light_theme";
+        public static final String KEY_NIGHT_MODE = "night_mode";
+        public static final String KEY_BLACK_NIGHT_THEME = "black_night_theme";
+        public static final String KEY_USE_SYSTEM_COLOR = "use_system_color";
+    }
 
     private static SharedPreferences sPreferences;
 
@@ -89,11 +100,11 @@ public class ShizukuSettings {
         if (EnvironmentUtils.isWatch(ActivityThread.currentActivityThread().getApplication())) {
             defValue = AppCompatDelegate.MODE_NIGHT_YES;
         }
-        return getPreferences().getInt(KEY_NIGHT_MODE, defValue);
+        return getPreferences().getInt(Keys.KEY_NIGHT_MODE, defValue);
     }
 
     public static Locale getLocale() {
-        String tag = getPreferences().getString(KEY_LANGUAGE, null);
+        String tag = getPreferences().getString(Keys.KEY_LANGUAGE, null);
         if (TextUtils.isEmpty(tag) || "SYSTEM".equals(tag)) {
             return Locale.getDefault();
         }

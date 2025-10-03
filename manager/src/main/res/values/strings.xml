@@ -113,12 +113,13 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
     <string name="settings_translation">Participate in translation</string>
     <string name="settings_translation_summary">Help us translate %s into your language</string>
     <string name="settings_start_on_boot">Start on boot</string>
-    <string name="settings_start_on_boot_summary">Only works on Android 11+ or rooted devices</string>
+    <string name="settings_start_on_boot_summary">Requires Android 11+ or root</string>
     <string name="settings_use_system_color">Use system theme color</string>
-    <string name="settings_tcp">TCP mode</string>
-    <string name="settings_tcp_summary">When enabled, Shizuku can be restarted without a Wi-Fi connection, and automation apps can start Shizuku over ADB Wi-Fi</string>
+    <string name="settings_tcp_mode">TCP mode</string>
+    <string name="settings_tcp_mode_summary">"Allows Shizuku to restart without Wi-Fi, and allows automation apps to restart Shizuku. (Shizuku must have started once since reboot)"</string>
     <string name="settings_tcp_port">TCP port</string>
-    <string name="settings_tcp_port_summary">Listen for ADB Wi-Fi commands on this port</string>
+    <string name="settings_tcp_port_hint">Leave blank to use default (5555)</string>
+    <string name="settings_tcp_learn_more">Learn more about using automation apps to control Shizuku</string>
 
     <!-- About -->
     <string name="action_about">About</string>
