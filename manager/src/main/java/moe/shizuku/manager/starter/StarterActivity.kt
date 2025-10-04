@@ -34,7 +34,6 @@ class StarterActivity : AppBarActivity() {
         ViewModel(
             this,
             intent.getBooleanExtra(EXTRA_IS_ROOT, false),
-            intent.getBooleanExtra(EXTRA_IS_TCP, false),
             intent.getIntExtra(EXTRA_PORT, 0),
         )
     }
@@ -94,12 +93,11 @@ class StarterActivity : AppBarActivity() {
     companion object {
 
         const val EXTRA_IS_ROOT = "$EXTRA.IS_ROOT"
-        const val EXTRA_IS_TCP = "$EXTRA.IS_TCP"
         const val EXTRA_PORT = "$EXTRA.PORT"
     }
 }
 
-private class ViewModel(context: Context, root: Boolean, isTcp: Boolean, port: Int) : androidx.lifecycle.ViewModel() {
+private class ViewModel(context: Context, root: Boolean, port: Int) : androidx.lifecycle.ViewModel() {
 
     private val sb = StringBuilder()
     private val _output = MutableLiveData<Resource<StringBuilder>>()
@@ -113,7 +111,7 @@ private class ViewModel(context: Context, root: Boolean, isTcp: Boolean, port: I
 
     init {
         viewModelScope.launch(Dispatchers.IO + handler) {
-            if (root) startRoot() else AdbStarter.startAdb(context, port, isTcp, { log(it) })
+            if (root) startRoot() else AdbStarter.startAdb(context, port, { log(it) })
         }
     }
 

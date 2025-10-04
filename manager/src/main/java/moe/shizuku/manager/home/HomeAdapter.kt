@@ -1,6 +1,7 @@
 package moe.shizuku.manager.home
 
 import android.os.Build
+import kotlinx.coroutines.CoroutineScope
 import moe.shizuku.manager.management.AppsViewModel
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.UserHandleCompat
@@ -8,7 +9,7 @@ import rikka.recyclerview.IdBasedRecyclerViewAdapter
 import rikka.recyclerview.IndexCreatorPool
 import rikka.shizuku.Shizuku
 
-class HomeAdapter(private val homeModel: HomeViewModel, private val appsModel: AppsViewModel) :
+class HomeAdapter(private val homeModel: HomeViewModel, private val appsModel: AppsViewModel, private val scope: CoroutineScope) :
     IdBasedRecyclerViewAdapter(ArrayList()) {
 
     init {
@@ -60,7 +61,7 @@ class HomeAdapter(private val homeModel: HomeViewModel, private val appsModel: A
             }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.getAdbTcpPort() > 0) {
-                addItem(StartWirelessAdbViewHolder.CREATOR, null, ID_START_WADB)
+                addItem(StartWirelessAdbViewHolder.creator(scope), null, ID_START_WADB)
             }
 
             addItem(StartAdbViewHolder.CREATOR, null, ID_START_ADB)

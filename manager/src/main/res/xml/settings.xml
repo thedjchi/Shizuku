@@ -19,8 +19,7 @@
             android:key="tcp_port"
             app:useSimpleSummaryProvider="true"
             android:title="@string/settings_tcp_port"
-            android:inputType="number"
-            android:defaultValue="5555" />
+            android:inputType="number" />
 
         <Preference
             android:key="tcp_learn_more"

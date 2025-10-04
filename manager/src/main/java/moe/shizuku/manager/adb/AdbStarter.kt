@@ -7,31 +7,36 @@ import java.net.SocketException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import moe.shizuku.manager.ShizukuSettings
+import moe.shizuku.manager.ShizukuSettings.Keys.*
 import moe.shizuku.manager.adb.AdbClient
 import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
 import moe.shizuku.manager.starter.Starter
 
 object AdbStarter {
-    suspend fun startAdb(context: Context, port: Int, isTcp: Boolean = false, log: ((String) -> Unit)? = null) {
+    suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
         suspend fun AdbClient.runCommand(cmd: String) {
             command(cmd) { log?.invoke(String(it)) }
         }
 
         log?.invoke("Starting with wireless adb...\n")
+
+        val prefs = ShizukuSettings.getPreferences()
         
-        val key = runCatching { AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku") }
+        val key = runCatching { AdbKey(PreferenceAdbKeyStore(prefs), "shizuku") }
             .getOrElse {
                 if (it is CancellationException) throw it
                 else throw AdbKeyException(it)
             }
 
         var activePort = port
-        if (!isTcp) { // && user setting is true
+        val tcpMode = prefs.getBoolean(KEY_TCP_MODE, true)
+        val tcpPort = prefs.getString(KEY_TCP_PORT, "5555")?.toIntOrNull() ?: 5555
+        if (tcpMode && activePort != tcpPort) {
             log?.invoke("Connecting on port $activePort...")
             AdbClient("127.0.0.1", activePort, key).use { client ->
                 client.connect()
-                activePort = 5555 // Change to user setting
+                activePort = tcpPort
                 log?.invoke("restarting in TCP mode port: $activePort")
                 runCatching {
                     client.command("tcpip:$activePort")

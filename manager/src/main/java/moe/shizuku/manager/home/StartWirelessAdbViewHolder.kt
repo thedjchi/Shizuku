@@ -14,9 +14,19 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.io.EOFException
+import java.net.SocketException
 import java.net.Inet4Address
 import moe.shizuku.manager.Helps
+import moe.shizuku.manager.ShizukuSettings
+import moe.shizuku.manager.ShizukuSettings.Keys.*
 import moe.shizuku.manager.R
+import moe.shizuku.manager.adb.AdbClient
+import moe.shizuku.manager.adb.AdbKey
+import moe.shizuku.manager.adb.PreferenceAdbKeyStore
 import moe.shizuku.manager.adb.AdbPairingTutorialActivity
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeStartWirelessAdbBinding
@@ -29,20 +39,22 @@ import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
 
-class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: View) :
+class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: View, private val scope: CoroutineScope) :
     BaseViewHolder<Any?>(root) {
 
     companion object {
-        val CREATOR = Creator<Any> { inflater: LayoutInflater, parent: ViewGroup? ->
-            val outer = HomeItemContainerBinding.inflate(inflater, parent, false)
-            val inner = HomeStartWirelessAdbBinding.inflate(inflater, outer.root, true)
-            StartWirelessAdbViewHolder(inner, outer.root)
+        fun creator (scope: CoroutineScope): Creator<Any> {
+            return Creator { inflater: LayoutInflater, parent: ViewGroup? ->
+                val outer = HomeItemContainerBinding.inflate(inflater, parent, false)
+                val inner = HomeStartWirelessAdbBinding.inflate(inflater, outer.root, true)
+                StartWirelessAdbViewHolder(inner, outer.root, scope)
+            }
         }
     }
 
     init {
         binding.button1.setOnClickListener { v: View ->
-            onAdbClicked(v.context)
+            onAdbClicked(v.context, scope)
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -67,24 +79,40 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
         super.onBind(payloads)
     }
 
-    private fun onAdbClicked(context: Context) {
+    private fun onAdbClicked(context: Context, scope: CoroutineScope) {
         if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
             Settings.Global.putInt(context.contentResolver, Settings.Global.ADB_ENABLED, 1)
 
-        val port = EnvironmentUtils.getAdbTcpPort()
-        val adbEnabled = Settings.Global.getInt(context.contentResolver, Settings.Global.ADB_ENABLED, 0) 
-        if (port > 0 && adbEnabled > 0) {
-            val intent = Intent(context, StarterActivity::class.java).apply {
-                putExtra(StarterActivity.EXTRA_PORT, port)
-                putExtra(StarterActivity.EXTRA_IS_TCP, true)
-            }
-            context.startActivity(intent)
-        } else if (port > 0) {
-            WadbEnableUsbDebuggingDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
-        } else {
+        val tcpPort = EnvironmentUtils.getAdbTcpPort()
+        val adbEnabled = Settings.Global.getInt(context.contentResolver, Settings.Global.ADB_ENABLED, 0)
+        val tcpMode = ShizukuSettings.getPreferences().getBoolean(KEY_TCP_MODE, true)
+        // If ADB is not listening to a TCP port and the device doesn't support TLS, inform the user
+        if (tcpPort <= 0 && Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
             WadbNotEnabledDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+        // If USB debugging is off and Shizuku couldn't toggle it, prompt the user to toggle it manually
+        } else if (adbEnabled == 0) {
+            WadbEnableUsbDebuggingDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+        // If ADB IS NOT listening to a TCP port but the device supports TLS, start mDns discovery
+        } else if (tcpPort <= 0) {
+            AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+        // If ADB IS listening to a TCP port but the user wants to close it and use TLS instead, close the TCP port and start mDns discovery
+        } else if (!tcpMode) {
+            scope.launch(Dispatchers.IO) {
+                val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
+                AdbClient("127.0.0.1", tcpPort, key).use { client ->
+                    client.connect()
+                    runCatching {
+                        client.command("usb:")
+                    }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts
+                }
+            }
+            AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+        // Otherwise ADB IS listening to a TCP port and the user wants to keep it open. Start Shizuku via TCP
+        } else {
+            val intent = Intent(context, StarterActivity::class.java).apply {
+                    putExtra(StarterActivity.EXTRA_PORT, tcpPort)
+                }
+            context.startActivity(intent)
         }
     }
 

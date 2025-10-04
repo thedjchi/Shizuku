@@ -85,6 +85,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         tcpPortPreference.apply {
+            isVisible = tcpModePreference.isChecked
             setOnBindEditTextListener { editText ->
                 editText.hint = context.getString(R.string.settings_tcp_port_hint)
                 editText.inputType = InputType.TYPE_CLASS_NUMBER

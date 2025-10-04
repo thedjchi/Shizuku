@@ -9,6 +9,7 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
@@ -40,7 +41,7 @@ abstract class HomeActivity : AppBarActivity() {
 
     private val homeModel by viewModels { HomeViewModel() }
     private val appsModel by appsViewModel()
-    private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel) }
+    private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -89,7 +89,6 @@ class AdbDialogFragment : DialogFragment() {
 
     private fun startAndDismiss(port: Int) {
         val intent = Intent(context, StarterActivity::class.java).apply {
-            putExtra(StarterActivity.EXTRA_IS_ROOT, false)
             putExtra(StarterActivity.EXTRA_PORT, port)
         }
         requireContext().startActivity(intent)
