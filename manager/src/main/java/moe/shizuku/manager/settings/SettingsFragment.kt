@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
 import androidx.preference.Preference.SummaryProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar;
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.ShizukuSettings.Keys.*
@@ -54,13 +55,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val blackNightThemePreference: TwoStatePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
         val useSystemColorPreference: TwoStatePreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
 
-        val prefs = ShizukuSettings.getPreferences()
-
         startOnBootPreference.apply {
             val bootCompleteReceiver = ComponentName(context.packageName, BootCompleteReceiver::class.java.name)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isRooted()) {
-                isEnabled = true
-                summary = null
+                isChecked = context.packageManager.getComponentEnabledSetting(bootCompleteReceiver) in setOf(
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+                )
 
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean) {
@@ -82,17 +83,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     bootCompleteReceiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
                 )      
             }
-
-            isChecked = context.packageManager.getComponentEnabledSetting(bootCompleteReceiver) in setOf(
-                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
-            )
         }
 
         tcpModePreference.apply {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                isVisible = true
-
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean)  {
                         tcpPortPreference.isVisible = newValue        
@@ -113,7 +107,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
             summaryProvider = SummaryProvider<EditTextPreference> { pref ->
                 val text = pref.text
-                if (text.isNullOrEmpty()) "5555" else text
+                if (text.isNullOrEmpty()) "Default (5555)" else text
+            }
+
+            setOnPreferenceChangeListener { _, newValue ->
+                val port = (newValue as? String)?.toIntOrNull()
+                if (port == null || port in 1..65535) {
+                    true
+                } else {
+                    Snackbar.make(requireView(), "Port must be between 1 and 65535", Snackbar.LENGTH_SHORT).show()
+                    false
+                }
             }
         }
 
@@ -171,6 +175,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         useSystemColorPreference.apply {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                isChecked = ThemeHelper.isUsingSystemColor()
                 setOnPreferenceChangeListener { _, value ->
                     if (value is Boolean) {
                         if (ThemeHelper.isUsingSystemColor() != value)

@@ -6,7 +6,6 @@
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="start_on_boot"
-            android:summary="@string/settings_start_on_boot_summary"
             android:title="@string/settings_start_on_boot" />
 
         <rikka.material.preference.MaterialSwitchPreference
@@ -17,7 +16,6 @@
 
         <EditTextPreference
             android:key="tcp_port"
-            app:useSimpleSummaryProvider="true"
             android:title="@string/settings_tcp_port"
             android:inputType="number" />
 
@@ -59,13 +57,11 @@
         <rikka.material.preference.MaterialSwitchPreference
             android:key="black_night_theme"
             android:summary="@string/settings_black_night_theme_summary"
-            android:title="@string/settings_black_night_theme"
-            android:defaultValue="false" />
+            android:title="@string/settings_black_night_theme" />
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="use_system_color"
-            android:title="@string/settings_use_system_color"
-            android:defaultValue="false" />
+            android:title="@string/settings_use_system_color" />
 
     </PreferenceCategory>
 
@@ -74,8 +70,7 @@
         <rikka.material.preference.MaterialSwitchPreference
             android:key="legacy_pairing"
             android:summary="@string/settings_legacy_pairing_summary"
-            android:title="@string/settings_legacy_pairing"
-            android:defaultValue="false" />
+            android:title="@string/settings_legacy_pairing" />
 
     </PreferenceCategory>
 

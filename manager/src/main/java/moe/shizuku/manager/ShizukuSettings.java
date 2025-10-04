@@ -95,6 +95,22 @@ public class ShizukuSettings {
         getPreferences().edit().putInt("mode", method).apply();
     }
 
+    public static boolean getTcpMode() {
+        return getPreferences().getBoolean(Keys.KEY_TCP_MODE, true);
+    }
+
+    public static int getTcpPort() {
+        try {
+            return Integer.parseInt(getPreferences().getString(Keys.KEY_TCP_PORT, "5555"));
+        } catch (NumberFormatException e) {
+            return 5555;
+        }
+    }
+
+    public static boolean getLegacyPairing() {
+        return getPreferences().getBoolean(Keys.KEY_LEGACY_PAIRING, false);
+    }
+
     @AppCompatDelegate.NightMode
     public static int getNightMode() {
         int defValue = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;

@@ -11,12 +11,14 @@ import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.io.EOFException
 import java.net.SocketException
 import java.net.Inet4Address
@@ -82,10 +84,12 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
     private fun onAdbClicked(context: Context, scope: CoroutineScope) {
         if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
             Settings.Global.putInt(context.contentResolver, Settings.Global.ADB_ENABLED, 1)
+        
+        val adbEnabled = Settings.Global.getInt(context.contentResolver, Settings.Global.ADB_ENABLED, 0)
 
         val tcpPort = EnvironmentUtils.getAdbTcpPort()
-        val adbEnabled = Settings.Global.getInt(context.contentResolver, Settings.Global.ADB_ENABLED, 0)
-        val tcpMode = ShizukuSettings.getPreferences().getBoolean(KEY_TCP_MODE, true)
+        val tcpMode = ShizukuSettings.getTcpMode()
+
         // If ADB is not listening to a TCP port and the device doesn't support TLS, inform the user
         if (tcpPort <= 0 && Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
             WadbNotEnabledDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
@@ -97,15 +101,7 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
             AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         // If ADB IS listening to a TCP port but the user wants to close it and use TLS instead, close the TCP port and start mDns discovery
         } else if (!tcpMode) {
-            scope.launch(Dispatchers.IO) {
-                val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
-                AdbClient("127.0.0.1", tcpPort, key).use { client ->
-                    client.connect()
-                    runCatching {
-                        client.command("usb:")
-                    }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts
-                }
-            }
+            stopTcp(context, scope, tcpPort)
             AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         // Otherwise ADB IS listening to a TCP port and the user wants to keep it open. Start Shizuku via TCP
         } else {
@@ -116,9 +112,28 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
         }
     }
 
+    private fun stopTcp(context: Context, scope: CoroutineScope, port: Int) {
+        scope.launch(Dispatchers.IO) {
+            runCatching {
+                val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
+                AdbClient("127.0.0.1", port, key).use { client ->
+                    client.connect()  
+                    client.command("usb:")
+                }
+            }.onFailure {
+                if (it !is EOFException && it !is SocketException) { // Expected when ADB restarts
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp), Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
+            }
+        }
+    }
+
     @RequiresApi(Build.VERSION_CODES.R)
     private fun onPairClicked(context: Context) {
-        val legacyPairingOverride = ShizukuSettings.getPreferences().getBoolean(KEY_LEGACY_PAIRING, false)
+        val legacyPairingOverride = ShizukuSettings.getLegacyPairing()
         if ((context.display?.displayId ?: -1) > 0 || legacyPairingOverride) {
             // Running in a multi-display environment (e.g., Windows Subsystem for Android),
             // pairing dialog can be displayed simultaneously with Shizuku.
