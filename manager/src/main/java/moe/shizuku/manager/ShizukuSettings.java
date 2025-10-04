@@ -34,6 +34,7 @@ public class ShizukuSettings {
         public static final String KEY_NIGHT_MODE = "night_mode";
         public static final String KEY_BLACK_NIGHT_THEME = "black_night_theme";
         public static final String KEY_USE_SYSTEM_COLOR = "use_system_color";
+        public static final String KEY_LEGACY_PAIRING = "legacy_pairing";
     }
 
     private static SharedPreferences sPreferences;

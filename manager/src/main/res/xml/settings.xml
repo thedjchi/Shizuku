@@ -69,4 +69,14 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/settings_advanced">
+
+        <rikka.material.preference.MaterialSwitchPreference
+            android:key="legacy_pairing"
+            android:summary="@string/settings_legacy_pairing_summary"
+            android:title="@string/settings_legacy_pairing"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

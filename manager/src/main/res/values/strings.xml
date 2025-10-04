@@ -120,6 +120,9 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
     <string name="settings_tcp_port">TCP port</string>
     <string name="settings_tcp_port_hint">Leave blank to use default (5555)</string>
     <string name="settings_tcp_learn_more">Learn more about using automation apps to control Shizuku</string>
+    <string name="settings_advanced">Advanced</string>
+    <string name="settings_legacy_pairing">Legacy pairing</string>
+    <string name="settings_legacy_pairing_summary">Enter the pairing code in a dialog instead of a notification</string>
 
     <!-- About -->
     <string name="action_about">About</string>

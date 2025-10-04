@@ -1,5 +1,6 @@
 package moe.shizuku.manager.settings
 
+import android.content.pm.PackageManager
 import android.content.ComponentName
 import android.content.Context
 import android.os.Build
@@ -56,41 +57,60 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val prefs = ShizukuSettings.getPreferences()
 
         startOnBootPreference.apply {
+            val bootCompleteReceiver = ComponentName(context.packageName, BootCompleteReceiver::class.java.name)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isRooted()) {
                 isEnabled = true
-
-                val bootCompleteReceiver = ComponentName(context.packageName, BootCompleteReceiver::class.java.name)
-                isChecked = context.packageManager.isComponentEnabled(bootCompleteReceiver)
+                summary = null
 
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean) {
-                        context.packageManager.setComponentEnabled(bootCompleteReceiver, newValue)
-                        context.packageManager.isComponentEnabled(bootCompleteReceiver) == newValue
+                        val state = if (newValue) {
+                            PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                        } else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+
+                        context.packageManager.setComponentEnabledSetting(
+                            bootCompleteReceiver, state, PackageManager.DONT_KILL_APP
+                        )
+                        true
                     } else false
                 }
-
-                summary = ""
             } else {
                 isEnabled = false
-                isChecked = false
-                summary = context.getString(R.string.settings_start_on_boot_summary)         
+                summary = context.getString(R.string.settings_start_on_boot_summary)
+
+                context.packageManager.setComponentEnabledSetting(
+                    bootCompleteReceiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
+                )      
             }
+
+            isChecked = context.packageManager.getComponentEnabledSetting(bootCompleteReceiver) in setOf(
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+            )
         }
 
-        tcpModePreference.setOnPreferenceChangeListener { _, newValue ->
-            if (newValue is Boolean)  {
-                tcpPortPreference.isVisible = newValue        
-                true
-            } else false
+        tcpModePreference.apply {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                isVisible = true
+
+                setOnPreferenceChangeListener { _, newValue ->
+                    if (newValue is Boolean)  {
+                        tcpPortPreference.isVisible = newValue        
+                        true
+                    } else false
+                }
+            } else isVisible = false
         }
 
         tcpPortPreference.apply {
-            isVisible = tcpModePreference.isChecked
+            isVisible = tcpModePreference.isVisible && tcpModePreference.isChecked
+
             setOnBindEditTextListener { editText ->
                 editText.hint = context.getString(R.string.settings_tcp_port_hint)
                 editText.inputType = InputType.TYPE_CLASS_NUMBER
                 editText.setSelection(editText.text.length)
             }
+
             summaryProvider = SummaryProvider<EditTextPreference> { pref ->
                 val text = pref.text
                 if (text.isNullOrEmpty()) "5555" else text
@@ -98,9 +118,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         tcpLearnMorePreference.apply {
+            isVisible = tcpModePreference.isVisible
+
             val tintColor = TypedValue()
             context.theme.resolveAttribute(R.attr.colorOnSurfaceVariant, tintColor, true)
-            icon!!.mutate().setTint(tintColor.data)
+            icon?.mutate()?.setTint(tintColor.data)
 
             setOnPreferenceClickListener {
                 CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.automation_apps_url))
