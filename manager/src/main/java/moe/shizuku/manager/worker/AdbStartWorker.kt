@@ -58,7 +58,8 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
             return Result.success()
         } catch (e: Exception) {
-            showErrorNotification(applicationContext, e)
+            if (e !is CancellationException && e !is EOFException)
+                showErrorNotification(applicationContext, e)
             return Result.retry()
         }
     }
