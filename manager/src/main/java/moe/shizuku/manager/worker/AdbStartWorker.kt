@@ -10,6 +10,8 @@ import android.provider.Settings
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.work.*
+import java.io.EOFException
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
@@ -19,6 +21,7 @@ import kotlinx.coroutines.withTimeout
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.AdbStarter
+import moe.shizuku.manager.utils.EnvironmentUtils
 
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
@@ -29,7 +32,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
             Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
             Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
 
-            val port = withTimeout(15000) {
+            val port = EnvironmentUtils.getAdbTcpPort().takeIf { it > 0 } ?: withTimeout(15000) {
                 callbackFlow {
                     val adbMdns = AdbMdns(applicationContext, AdbMdns.TLS_CONNECT) { port ->
                         if (port > 0) trySend(port)

@@ -151,7 +151,15 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="moe.shizuku.privileged.api.TEST_BOOT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receiver.StartShizukuReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="moe.shizuku.privileged.api.START" />
             </intent-filter>
         </receiver>
 

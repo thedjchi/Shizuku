@@ -4,8 +4,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-class BootRestoreReceiver : BroadcastReceiver() {
+class StartShizukuReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        StartShizukuIntentHandler.showStartupNotification(context)
+        if (intent.action == "moe.shizuku.privileged.api.START")
+            StartShizukuIntentHandler.handle(context, intent)
     }
 }
