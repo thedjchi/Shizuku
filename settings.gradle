@@ -4,16 +4,16 @@ pluginManagement {
         mavenLocal()
         mavenCentral()
         maven {
-            url = 'https://plugins.gradle.org/m2/'
+            url = "https://plugins.gradle.org/m2/"
         }
     }
     plugins {
-        id 'com.android.application' version '8.11.1'
-        id 'com.android.library' version '8.11.1'
-        id 'org.jetbrains.kotlin.android' version '2.2.20'
-        id 'dev.rikka.tools.autoresconfig' version '1.2.2'
-        id 'dev.rikka.tools.materialthemebuilder' version '1.5.1'
-        id 'dev.rikka.tools.refine' version '4.4.0'
+        id "com.android.application" version "8.11.1"
+        id "com.android.library" version "8.11.1"
+        id "org.jetbrains.kotlin.android" version "2.2.20"
+        id "dev.rikka.tools.autoresconfig" version "1.2.2"
+        id "dev.rikka.tools.materialthemebuilder" version "1.5.1"
+        id "dev.rikka.tools.refine" version "4.4.0"
     }
 
 }
@@ -24,31 +24,31 @@ dependencyResolutionManagement {
         mavenLocal()
         mavenCentral()
         maven {
-            url = 'https://jitpack.io'
+            url = "https://jitpack.io"
             content {
-                includeGroup('com.github.topjohnwu.libsu')
+                includeGroup("com.github.topjohnwu.libsu")
             }
         }
     }
     versionCatalogs {
         libs {
-            version('hidden-api', '4.4.0')
-            library('hidden-compat', 'dev.rikka.hidden', 'compat').versionRef('hidden-api')
-            library('hidden-stub', 'dev.rikka.hidden', 'stub').versionRef('hidden-api')
+            version("hidden-api", "4.4.0")
+            library("hidden-compat", "dev.rikka.hidden", "compat").versionRef("hidden-api")
+            library("hidden-stub", "dev.rikka.hidden", "stub").versionRef("hidden-api")
 
-            version('refine', '4.4.0')
-            library('refine-runtime', 'dev.rikka.tools.refine', 'runtime').versionRef('refine')
-            library('refine-annotation', 'dev.rikka.tools.refine', 'annotation').versionRef('refine')
-            library('refine-annotation-processor', 'dev.rikka.tools.refine', 'annotation-processor').versionRef('refine')
+            version("refine", "4.4.0")
+            library("refine-runtime", "dev.rikka.tools.refine", "runtime").versionRef("refine")
+            library("refine-annotation", "dev.rikka.tools.refine", "annotation").versionRef("refine")
+            library("refine-annotation-processor", "dev.rikka.tools.refine", "annotation-processor").versionRef("refine")
         }
     }
 }
 
-include ':server', ':starter', ':shell', ':manager', ':common'
+include ":server", ":starter", ":shell", ":manager", ":common"
 
 def root = "api"
 
-def propFile = file('local.properties')
+def propFile = file("local.properties")
 def props = new Properties()
 
 if (propFile.canRead()) {
@@ -61,20 +61,20 @@ if (propFile.canRead()) {
     }
 }
 
-include ':aidl'
-project(':aidl').projectDir = file("$root${File.separator}aidl")
+include ":aidl"
+project(":aidl").projectDir = file("$root${File.separator}aidl")
 
-include ':rish'
-project(':rish').projectDir = file("$root${File.separator}rish")
+include ":rish"
+project(":rish").projectDir = file("$root${File.separator}rish")
 
-include ':shared'
-project(':shared').projectDir = file("$root${File.separator}shared")
+include ":shared"
+project(":shared").projectDir = file("$root${File.separator}shared")
 
-include ':api'
-project(':api').projectDir = file("$root${File.separator}api")
+include ":api"
+project(":api").projectDir = file("$root${File.separator}api")
 
-include ':provider'
-project(':provider').projectDir = file("$root${File.separator}provider")
+include ":provider"
+project(":provider").projectDir = file("$root${File.separator}provider")
 
-include ':server-shared'
-project(':server-shared').projectDir = file("$root${File.separator}server-shared")
+include ":server-shared"
+project(":server-shared").projectDir = file("$root${File.separator}server-shared")

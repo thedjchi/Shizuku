@@ -1,15 +1,15 @@
 plugins {
-    id 'idea'
-    id 'com.android.library' apply false
-    id 'org.jetbrains.kotlin.android' apply false
+    id "idea"
+    id "com.android.library" apply false
+    id "org.jetbrains.kotlin.android" apply false
 }
 
 idea.module {
-    excludeDirs += file('out')
+    excludeDirs += file("out")
 }
 
 subprojects { subproject ->
-    plugins.withId('com.android.base') {
+    plugins.withId("com.android.base") {
         android {
             compileSdk = 36
             ndkVersion = "29.0.13113456"
@@ -25,9 +25,9 @@ subprojects { subproject ->
     }
 }
 
-apply from: 'api/manifest.gradle'
-def gitCommitId = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
-def gitCommitCount = Integer.parseInt('git rev-list --count HEAD'.execute([], project.rootDir).text.trim())
+apply from: "api/manifest.gradle"
+def gitCommitId = "git rev-parse --short HEAD".execute([], project.rootDir).text.trim()
+def gitCommitCount = Integer.parseInt("git rev-list --count HEAD".execute([], project.rootDir).text.trim())
 def baseVersionName = "${api_version_major}.6.0"
 ext {
     versionCode = gitCommitCount

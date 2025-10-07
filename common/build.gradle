@@ -1,9 +1,9 @@
 plugins {
-    id 'com.android.library'
+    id "com.android.library"
 }
 
 android {
-    namespace = 'rikka.shizuku.common'
+    namespace = "rikka.shizuku.common"
     buildFeatures {
         buildConfig = false
     }
