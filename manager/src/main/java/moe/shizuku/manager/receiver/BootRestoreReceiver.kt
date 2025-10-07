@@ -6,6 +6,7 @@ import android.content.Intent
 
 class BootRestoreReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        StartShizukuIntentHandler.showStartupNotification(context)
+        val isWifiRequired = intent.getBooleanExtra("is_wifi_required", true)
+        StartShizukuIntentHandler.showStartupNotification(context, isWifiRequired)
     }
 }

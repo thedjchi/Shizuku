@@ -7,6 +7,6 @@ import android.content.Intent
 class StartShizukuReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == "moe.shizuku.privileged.api.START")
-            StartShizukuIntentHandler.handle(context, intent)
+            StartShizukuIntentHandler.handle(context, intent, isWifiRequired = false)
     }
 }

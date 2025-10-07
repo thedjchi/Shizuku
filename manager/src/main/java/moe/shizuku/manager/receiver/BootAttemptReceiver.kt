@@ -8,6 +8,7 @@ import moe.shizuku.manager.worker.AdbStartWorker
 class BootAttemptReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val notificationId = intent.getIntExtra("notification_id", -1)
-        AdbStartWorker.enqueue(context, notificationId)
+        val isWifiRequired = intent.getBooleanExtra("is_wifi_required", true)
+        AdbStartWorker.enqueue(context, isWifiRequired, notificationId)
     }
 }

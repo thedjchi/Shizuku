@@ -103,10 +103,11 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
     }
 
     companion object {
-        fun enqueue(context: Context, notificationId: Int) {
-            val constraints = Constraints.Builder()
-                .setRequiredNetworkType(NetworkType.UNMETERED)
-                .build()
+        fun enqueue(context: Context, isWifiRequired: Boolean, notificationId: Int) {
+            val cb = Constraints.Builder()
+            if (isWifiRequired)
+                cb.setRequiredNetworkType(NetworkType.UNMETERED)
+            val constraints = cb.build()
 
             val inputData = workDataOf("notification_id" to notificationId)
 

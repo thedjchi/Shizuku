@@ -28,7 +28,7 @@ object StartShizukuIntentHandler {
     private const val CHANNEL_ID = "AdbStartWorker"
     private const val NOTIFICATION_ID = 1447
 
-    fun handle(context: Context, intent: Intent) {
+    fun handle(context: Context, intent: Intent, isWifiRequired: Boolean = true) {
         if (intent.action != Intent.ACTION_BOOT_COMPLETED &&
             intent.action != "moe.shizuku.privileged.api.START") return
 
@@ -39,8 +39,8 @@ object StartShizukuIntentHandler {
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
-                    AdbStartWorker.enqueue(context, NOTIFICATION_ID)
-                    showStartupNotification(context)
+                    AdbStartWorker.enqueue(context, isWifiRequired, NOTIFICATION_ID)
+                    showStartupNotification(context, isWifiRequired)
                 } else {
                     showPermissionErrorNotification(context)
                 }
@@ -49,7 +49,7 @@ object StartShizukuIntentHandler {
         }
     }
 
-    fun showStartupNotification(context: Context) {
+    fun showStartupNotification(context: Context, isWifiRequired: Boolean) {
 
         val channel = NotificationChannel(
             CHANNEL_ID,
@@ -68,12 +68,15 @@ object StartShizukuIntentHandler {
 
         val attemptNowIntent = Intent(context, BootAttemptReceiver::class.java).apply {
             putExtra("notification_id", NOTIFICATION_ID)
+            putExtra("is_wifi_required", isWifiRequired)
         }
         val attemptNowPendingIntent = PendingIntent.getBroadcast(
             context, 0, attemptNowIntent, PendingIntent.FLAG_IMMUTABLE
         )
 
-        val restoreIntent = Intent(context, BootRestoreReceiver::class.java)
+        val restoreIntent = Intent(context, BootRestoreReceiver::class.java).apply {
+            putExtra("is_wifi_required", isWifiRequired)
+        }
         val restorePendingIntent = PendingIntent.getBroadcast(
             context, 0, restoreIntent, PendingIntent.FLAG_IMMUTABLE
         )
@@ -118,8 +121,7 @@ object StartShizukuIntentHandler {
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         nm.createNotificationChannel(channel)
 
-        val webpageIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/thedjchi/Shizuku/wiki#setup-guide"))
-
+        val webpageIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/thedjchi/Shizuku/wiki#shizuku-isnt-starting-on-boot-for-me"))
         val pendingWebpageIntent = PendingIntent.getActivity(
             context, 0, webpageIntent, PendingIntent.FLAG_IMMUTABLE
         )
