@@ -1,49 +1,50 @@
 import java.nio.file.Paths
+import org.gradle.process.ExecOperations
 import com.android.build.gradle.internal.tasks.CompileArtProfileTask
 
 plugins {
-    id('com.android.application')
-    id('org.jetbrains.kotlin.android')
-    id('dev.rikka.tools.refine')
-    id('dev.rikka.tools.autoresconfig')
-    id('dev.rikka.tools.materialthemebuilder')
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dev.rikka.tools.refine'
+    id 'dev.rikka.tools.autoresconfig'
+    id 'dev.rikka.tools.materialthemebuilder'
 }
 
 android {
-    namespace 'moe.shizuku.manager'
+    namespace = 'moe.shizuku.manager'
     defaultConfig {
-        applicationId "moe.shizuku.privileged.api"
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        applicationId = "moe.shizuku.privileged.api"
+        versionCode = rootProject.ext.versionCode
+        versionName = rootProject.ext.versionName
         externalNativeBuild {
             cmake {
-                arguments '-DANDROID_STL=none'
+                arguments = ['-DANDROID_STL=none']
             }
         }
     }
     buildFeatures {
-        buildConfig true
-        viewBinding true
-        prefab true
+        buildConfig = true
+        viewBinding = true
+        prefab = true
     }
     signingConfigs {
-        sign
+        sign {}
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.sign
+            signingConfig = signingConfigs.sign
         }
         release {
-            signingConfig signingConfigs.sign
-            minifyEnabled true
-            shrinkResources true
-            vcsInfo.include false
-            proguardFiles 'proguard-rules.pro'
+            signingConfig = signingConfigs.sign
+            minifyEnabled = true
+            shrinkResources = true
+            vcsInfo.include = false
+            proguardFiles = ['proguard-rules.pro']
         }
     }
     externalNativeBuild {
         cmake {
-            path 'src/main/jni/CMakeLists.txt'
+            path = file('src/main/jni/CMakeLists.txt')
             version = "3.31.0+"
         }
     }
@@ -52,17 +53,17 @@ android {
     }
     packagingOptions {
         jniLibs {
-            useLegacyPackaging true
+            useLegacyPackaging = true
         }
         resources {
             excludes += ['**']
         }
     }
     dependenciesInfo {
-        includeInApk false
+        includeInApk = false
     }
     lint {
-        checkReleaseBuilds false
+        checkReleaseBuilds = false
     }
 }
 
@@ -87,20 +88,23 @@ materialThemeBuilder {
     generateTextColors = true
 }
 
-def collapseReleaseResourceNames = task('collapseReleaseResourceNames').doLast {
+def collapseReleaseResourceNames = tasks.register('collapseReleaseResourceNames') {
     def aapt2 = Paths.get(project.android.sdkDirectory.path, 'build-tools', project.android.buildToolsVersion, 'aapt2')
     def zip = Paths.get(project.buildDir.path, 'intermediates',
-            'optimized_processed_res', 'release', 'optimizeReleaseResources', 'resources-release-optimize.ap_')
-    def optimized = new File("${zip}.opt")
-    def cmd = exec {
-        commandLine aapt2, 'optimize', '--collapse-resource-names',
+        'optimized_processed_res', 'release', 'optimizeReleaseResources', 'resources-release-optimize.ap_')
+    doLast {
+        def optimized = new File("${zip}.opt")
+        def execOps = services.get(ExecOperations)
+        execOps.exec {
+            commandLine aapt2.toFile(), 'optimize', '--collapse-resource-names',
                 '--resources-config-path', 'aapt2-resources.cfg',
-                '-o', optimized, zip
-        ignoreExitValue false
-    }
-    if (cmd.exitValue == 0) {
-        delete(zip)
-        optimized.renameTo("$zip")
+                '-o', optimized, zip.toFile()
+            ignoreExitValue = false
+        }
+        if (optimized.exists()) {
+            delete(zip.toFile())
+            optimized.renameTo(zip.toFile())
+        }
     }
 }
 

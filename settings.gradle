@@ -3,15 +3,19 @@ pluginManagement {
         google()
         mavenLocal()
         mavenCentral()
+        maven {
+            url = 'https://plugins.gradle.org/m2/'
+        }
     }
     plugins {
-        id("com.android.application") version "8.10.1"
-        id("com.android.library") version "8.10.1"
-        id("org.jetbrains.kotlin.android") version "2.1.21"
-        id("dev.rikka.tools.autoresconfig") version "1.2.2"
-        id("dev.rikka.tools.materialthemebuilder") version "1.5.1"
-        id("dev.rikka.tools.refine") version "4.4.0"
+        id 'com.android.application' version '8.11.1'
+        id 'com.android.library' version '8.11.1'
+        id 'org.jetbrains.kotlin.android' version '2.2.20'
+        id 'dev.rikka.tools.autoresconfig' version '1.2.2'
+        id 'dev.rikka.tools.materialthemebuilder' version '1.5.1'
+        id 'dev.rikka.tools.refine' version '4.4.0'
     }
+
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -20,9 +24,9 @@ dependencyResolutionManagement {
         mavenLocal()
         mavenCentral()
         maven {
-            url("https://jitpack.io")
+            url = 'https://jitpack.io'
             content {
-                includeGroup("com.github.topjohnwu.libsu")
+                includeGroup('com.github.topjohnwu.libsu')
             }
         }
     }
@@ -40,9 +44,7 @@ dependencyResolutionManagement {
     }
 }
 
-include ':server', ':starter', ':shell'
-include ':manager'
-include ':common'
+include ':server', ':starter', ':shell', ':manager', ':common'
 
 def root = "api"
 
@@ -76,6 +78,3 @@ project(':provider').projectDir = file("$root${File.separator}provider")
 
 include ':server-shared'
 project(':server-shared').projectDir = file("$root${File.separator}server-shared")
-
-include ':hidden-api-stub'
-project(':hidden-api-stub').projectDir = file("$root${File.separator}hidden-api-stub")
