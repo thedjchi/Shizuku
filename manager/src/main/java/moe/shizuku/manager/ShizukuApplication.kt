@@ -9,6 +9,7 @@ import moe.shizuku.manager.ktx.logd
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import rikka.core.util.BuildUtils.atLeast30
 import rikka.material.app.LocaleDelegate
+import rikka.shizuku.Shizuku
 
 lateinit var application: ShizukuApplication
 
@@ -30,6 +31,7 @@ class ShizukuApplication : Application() {
     }
 
     private fun init(context: Context?) {
+        Shizuku.init(context)
         ShizukuSettings.initialize(context)
         LocaleDelegate.defaultLocale = ShizukuSettings.getLocale()
         AppCompatDelegate.setDefaultNightMode(ShizukuSettings.getNightMode())

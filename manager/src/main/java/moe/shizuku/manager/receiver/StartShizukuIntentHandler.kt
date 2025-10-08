@@ -19,6 +19,7 @@ import moe.shizuku.manager.AppConstants
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.ShizukuSettings.LaunchMethod
 import moe.shizuku.manager.starter.Starter
+import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.UserHandleCompat
 import moe.shizuku.manager.worker.AdbStartWorker
 import rikka.shizuku.Shizuku
@@ -28,10 +29,7 @@ object StartShizukuIntentHandler {
     private const val CHANNEL_ID = "AdbStartWorker"
     private const val NOTIFICATION_ID = 1447
 
-    fun handle(context: Context, intent: Intent, isWifiRequired: Boolean = true) {
-        if (intent.action != Intent.ACTION_BOOT_COMPLETED &&
-            intent.action != "moe.shizuku.privileged.api.START") return
-
+    fun handle(context: Context, intent: Intent) {
         if (UserHandleCompat.myUserId() > 0 || Shizuku.pingBinder()) return
 
         if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
@@ -39,6 +37,7 @@ object StartShizukuIntentHandler {
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
+                    val isWifiRequired = EnvironmentUtils.getAdbTcpPort().let { it > 0 }
                     AdbStartWorker.enqueue(context, isWifiRequired, NOTIFICATION_ID)
                     showStartupNotification(context, isWifiRequired)
                 } else {

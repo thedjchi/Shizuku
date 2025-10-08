@@ -163,10 +163,17 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.BootAttemptReceiver" android:exported="true" />
-        <receiver android:name=".receiver.BootCancelReceiver" android:exported="true" />
-        <receiver android:name=".receiver.BootRestoreReceiver" android:exported="true" />
+        <receiver android:name=".receiver.ShizukuDeathReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="rikka.shizuku.BINDER_DIED" />
+            </intent-filter>
+        </receiver>
 
+        <receiver android:name=".receiver.BootAttemptReceiver" />
+        <receiver android:name=".receiver.BootCancelReceiver" />
+        <receiver android:name=".receiver.BootRestoreReceiver" />
 
         <receiver
             android:name=".receiver.ShizukuReceiver"
