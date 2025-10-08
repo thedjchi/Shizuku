@@ -40,7 +40,7 @@
     <string name="home_learn_more_description">Shizuku로 개발하는 방법 알아보기</string>
     <string name="app_management_item_summary_requires_root">* 루트 권한으로 실행된 Shizuku 필요</string>
     <string name="notification_working">진행 중…</string>
-    <string name="settings_startup">시작</string>
+    <string name="settings_behavior">시작</string>
     <string name="settings_translation_contributors">번역 기여자</string>
     <string name="settings_translation">번역 참여</string>
     <string name="action_about">정보</string>

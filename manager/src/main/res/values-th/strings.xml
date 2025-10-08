@@ -41,7 +41,7 @@
     <string name="settings_translation_summary">ช่วยเราแปล %s เป็นภาษาของคุณ</string>
     <string name="settings_translation">มีส่วนร่วมในการแปล</string>
     <string name="settings_translation_contributors">ผู้มีส่วนร่วมในการแปลภาษา</string>
-    <string name="settings_startup">เมื่อเริ่มต้น</string>
+    <string name="settings_behavior">เมื่อเริ่มต้น</string>
     <string name="settings_black_night_theme_summary">ใช้ธีมสีดำสนิทหากธีมมืดถูกเปิดอยู่</string>
     <string name="settings_black_night_theme">ธีมมืดมิด</string>
     <string name="settings_user_interface">ลักษณะ</string>

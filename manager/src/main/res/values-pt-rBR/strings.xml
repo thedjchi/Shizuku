@@ -35,7 +35,7 @@
     <string name="settings_translation_summary">Ajude-nos à traduzir %s para o seu idioma</string>
     <string name="settings_translation">Contribua com a tradução</string>
     <string name="settings_translation_contributors">Tradutores deste APP</string>
-    <string name="settings_startup">Inicialização</string>
+    <string name="settings_behavior">Inicialização</string>
     <string name="settings_black_night_theme_summary">Use o tema preto puro se o modo escuro estiver habilitado. Em telas AMOLED, economiza bateria</string>
     <string name="settings_black_night_theme">Tema preto AMOLED</string>
     <string name="settings_user_interface">Aparência</string>

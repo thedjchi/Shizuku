@@ -65,7 +65,7 @@
     <string name="notification_service_start_no_root">No se ha podido solicitar el permiso de root.</string>
     <string name="notification_channel_service_status">Estado de inicio del servicio</string>
     <string name="dialog_stop_message">El servicio de Shizuku se detendrá.</string>
-    <string name="settings_startup">Inicio</string>
+    <string name="settings_behavior">Inicio</string>
     <plurals name="home_app_management_authorized_apps_count">
         <item quantity="one">Aplicación %d autorizada</item>
         <item quantity="other">Aplicaciones %d autorizadas</item>

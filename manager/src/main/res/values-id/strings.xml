@@ -70,7 +70,7 @@
     <string name="settings_user_interface">Penampilan</string>
     <string name="settings_black_night_theme">Tema hitam gelap</string>
     <string name="settings_black_night_theme_summary">Gunakan tema hitam gelap jika mode malam diaktifkan</string>
-    <string name="settings_startup">Pemulaian</string>
+    <string name="settings_behavior">Pemulaian</string>
     <string name="settings_translation_contributors">Kontributor penerjemah</string>
     <string name="settings_translation">Ikut menerjemahkan</string>
     <string name="settings_translation_summary">Bantu kami menerjemahkan %s dengan bahasa Anda</string>

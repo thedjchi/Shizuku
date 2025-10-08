@@ -117,7 +117,7 @@
     <string name="settings_start_on_boot_summary">Para dispositivos rooteados, Shizuku puede iniciarse automáticamente en el arranque</string>
     <string name="settings_start_on_boot">Iniciar en el arranque (root)</string>
     <string name="settings_translation_summary">Ayúdanos a traducir %s a tu idioma</string>
-    <string name="settings_startup">Empezando</string>
+    <string name="settings_behavior">Empezando</string>
     <string name="settings_user_interface">Apariencia</string>
     <string name="settings_language">Idioma</string>
     <string name="terminal_tutorial_3_description">Algunos consejos: otorgue permiso de ejecución a %1$s y agréguelo a %2$s, podrá usar %1$s directamente.</string>

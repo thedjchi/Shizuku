@@ -44,7 +44,7 @@
 \nzostał skopiowany do schowka.</string>
     <string name="notification_working">Działa…</string>
     <string name="notification_service_start_failed">Błąd przy starcie usługi Shizuku.</string>
-    <string name="settings_startup">Rozruch</string>
+    <string name="settings_behavior">Rozruch</string>
     <string name="app_management_item_summary_requires_root">* wymaga by Shizuku działało z rootem</string>
     <string name="app_management_dialog_adb_is_limited_title">Uprawnienia adb są ograniczone</string>
     <string name="home_learn_more_title">Dowiedz się więcej o Shizuku</string>

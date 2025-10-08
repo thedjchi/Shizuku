@@ -80,7 +80,7 @@
     <string name="settings_black_night_theme">Black night テーマ</string>
     <string name="settings_user_interface">外観</string>
     <string name="settings_black_night_theme_summary">ナイトモードが有効な場合、黒色のテーマを使用します</string>
-    <string name="settings_startup">スタートアップ</string>
+    <string name="settings_behavior">スタートアップ</string>
     <string name="settings_translation_contributors">翻訳協力者</string>
     <string name="settings_translation">翻訳作業に参加</string>
     <string name="settings_translation_summary">%sをあなたの言語に翻訳するのを手伝ってください</string>

@@ -1,8 +1,11 @@
 package moe.shizuku.manager.settings
 
 import android.content.pm.PackageManager
+import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.text.InputType
@@ -11,6 +14,7 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
 import androidx.preference.Preference.SummaryProvider
@@ -56,6 +60,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val nightModePreference: IntegerSimpleMenuPreference = findPreference(KEY_NIGHT_MODE)!!
         val blackNightThemePreference: TwoStatePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
         val useSystemColorPreference: TwoStatePreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
+        val helpPreference: Preference = findPreference(KEY_HELP)!!
+        val reportBugPreference: Preference = findPreference(KEY_REPORT_BUG)!!
 
         startOnBootPreference.apply {
             val bootCompleteReceiver = ComponentName(context.packageName, BootCompleteReceiver::class.java.name)
@@ -220,6 +226,21 @@ class SettingsFragment : PreferenceFragmentCompat() {
             if (contributors.isNotBlank()) {
                 summary = contributors
             } else isVisible = false
+        }
+
+        helpPreference.setOnPreferenceClickListener {
+            CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.help_url))
+            true
+        }
+
+        reportBugPreference.setOnPreferenceClickListener {
+            val intent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:shizukuforkdev@fire.fundersclub.com"))
+            try {
+                context.startActivity(intent)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(context, "No email app found", Toast.LENGTH_SHORT).show()
+            }
+            true
         }
     }
 

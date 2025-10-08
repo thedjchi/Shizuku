@@ -44,7 +44,7 @@
     <string name="settings_translation_summary">Ajude-nos a traduzir %s para o seu idioma</string>
     <string name="settings_translation">Participe da tradução</string>
     <string name="settings_translation_contributors">Colaboradores de tradução</string>
-    <string name="settings_startup">Comece</string>
+    <string name="settings_behavior">Comece</string>
     <string name="settings_black_night_theme_summary">Use o tema preto puro se o modo noturno estiver ativado</string>
     <string name="settings_black_night_theme">Tema escuro</string>
     <string name="settings_user_interface">Aparência</string>

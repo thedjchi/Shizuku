@@ -48,7 +48,7 @@
     <string name="settings_translation_summary">Aidez-nous à traduire %s dans votre langue</string>
     <string name="settings_translation">Participer à la traduction</string>
     <string name="settings_translation_contributors">Contributeurs à la traduction</string>
-    <string name="settings_startup">Démarrage</string>
+    <string name="settings_behavior">Démarrage</string>
     <string name="settings_black_night_theme_summary">Utilise le thème noir pur si le thème sombre est activé</string>
     <string name="settings_black_night_theme">Thème sombre noir</string>
     <string name="settings_user_interface">Apparence</string>

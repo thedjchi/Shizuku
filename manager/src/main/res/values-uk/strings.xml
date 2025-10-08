@@ -25,7 +25,7 @@
     <string name="home_root_button_start">Запуск</string>
     <string name="home_status_service_version">версія %2$s, %1$s</string>
     <string name="settings_user_interface">Зовнішній вигляд</string>
-    <string name="settings_startup">Стартап</string>
+    <string name="settings_behavior">Стартап</string>
     <string name="home_status_service_version_update">версія %2$s, %1$s&lt;br&gt;почніть оновлюватися до версії %3$s</string>
     <string name="permission_label">доступ до Shizuku</string>
     <string name="app_management_item_summary_requires_root">* потрібен root, щоб запускався Shizuku</string>

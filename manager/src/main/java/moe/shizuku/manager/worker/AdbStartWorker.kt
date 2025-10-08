@@ -59,8 +59,6 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
     }
 
     private fun showErrorNotification(context: Context, e: Exception) {
-        val msgNotif = "$e. Tap to notify the developer."
-
         val channel = NotificationChannel(
             CHANNEL_ID,
             context.getString(R.string.wadb_notification_title),
@@ -69,6 +67,8 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         nm.createNotificationChannel(channel)
 
+        val nb = NotificationCompat.Builder(context, CHANNEL_ID)
+
         val uri = Uri.parse(
             "mailto:shizukuforkdev@fire.fundersclub.com" +
             "?subject=" + Uri.encode("Error while starting on boot") +
@@ -76,17 +76,22 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         )
 
         val emailIntent = Intent(Intent.ACTION_SENDTO, uri)
+        var msgNotif = ""
+        if (emailIntent.resolveActivity(context.packageManager) != null) {
+            val emailPendingIntent = PendingIntent.getActivity(
+                context, 0, emailIntent, PendingIntent.FLAG_IMMUTABLE
+            )
+            nb.setContentIntent(emailPendingIntent)
+            msgNotif = "$e. Tap to notify the developer."
+        } else {
+            msgNotif = "$e. Send an email to shizukuforkdev@fire.fundersclub.com."
+        }
 
-        val emailPendingIntent = PendingIntent.getActivity(
-            context, 0, emailIntent, PendingIntent.FLAG_IMMUTABLE
-        )
-
-        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+        val notification = nb
             .setSmallIcon(R.drawable.ic_system_icon)
             .setContentTitle("Error while starting on boot")
             .setContentText(msgNotif)
             .setSilent(true)
-            .setContentIntent(emailPendingIntent)
             .setStyle(NotificationCompat.BigTextStyle().bigText(msgNotif))
             .build()
 

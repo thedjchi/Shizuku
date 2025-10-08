@@ -98,7 +98,7 @@
     <string name="terminal_tutorial_3_description">Alcuni suggerimenti: concedi il permesso di esecuzione a %1$s e aggiungilo a %2$s, così potrai utilizzare %1$s direttamente.</string>
     <string name="settings_user_interface">Aspetto</string>
     <string name="settings_black_night_theme">Tema nero notte</string>
-    <string name="settings_startup">Avvio</string>
+    <string name="settings_behavior">Avvio</string>
     <string name="settings_translation_contributors">Contributori alla traduzione</string>
     <string name="settings_start_on_boot">Avvia all\'accensione (root)</string>
     <string name="toast_copied_to_clipboard">%s

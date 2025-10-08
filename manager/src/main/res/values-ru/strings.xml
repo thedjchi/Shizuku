@@ -24,7 +24,7 @@
     <string name="settings_translation_summary">Помогите перевести %s на ваш язык</string>
     <string name="settings_translation">Участвуйте в переводе</string>
     <string name="settings_translation_contributors">Авторы перевода</string>
-    <string name="settings_startup">Запуск при включении устройства</string>
+    <string name="settings_behavior">Запуск при включении устройства</string>
     <string name="settings_black_night_theme_summary">Глубокий черный цвет фона при работе темной темы</string>
     <string name="settings_black_night_theme">Черная тема</string>
     <string name="settings_user_interface">Внешний вид</string>

@@ -2,7 +2,7 @@
 <PreferenceScreen   xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory android:title="@string/settings_startup">
+    <PreferenceCategory android:title="@string/settings_behavior">
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="start_on_boot"
@@ -67,6 +67,18 @@
         <rikka.material.preference.MaterialSwitchPreference
             android:key="use_system_color"
             android:title="@string/settings_use_system_color" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_support">
+
+        <Preference
+            android:key="help"
+            android:title="@string/settings_help" />
+
+        <Preference
+            android:key="report_bug"
+            android:title="@string/settings_report_bug" />
 
     </PreferenceCategory>
 

@@ -28,7 +28,7 @@
     <string name="settings_translation_summary">Pomozte nám přeložit %s do vašeho jazyka</string>
     <string name="settings_translation">Podílet se na překladu</string>
     <string name="settings_translation_contributors">Přispěvatelé překladu</string>
-    <string name="settings_startup">Spuštění</string>
+    <string name="settings_behavior">Spuštění</string>
     <string name="settings_black_night_theme_summary">Pokud je povolen noční režim, použijte motiv čistě černé barvy</string>
     <string name="settings_black_night_theme">Motiv černé noci</string>
     <string name="settings_user_interface">Vzhled</string>

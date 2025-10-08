@@ -24,7 +24,7 @@
     <string name="settings_translation_summary">Օգնեք մեզ թարգմանել %s-ը Ձեր լեզվով</string>
     <string name="settings_translation">Մասնակցել թարգմանության մեջ</string>
     <string name="settings_translation_contributors">Թարգմանության աջակցողներ</string>
-    <string name="settings_startup">Միացում</string>
+    <string name="settings_behavior">Միացում</string>
     <string name="settings_black_night_theme_summary">Օգտագործել սև տեսքը եթե գիշերային ռեժիմը միացված է</string>
     <string name="settings_black_night_theme">Սև գիշերի տեսք</string>
     <string name="settings_user_interface">Տեսք</string>

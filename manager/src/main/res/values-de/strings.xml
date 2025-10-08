@@ -63,7 +63,7 @@
     <string name="settings_translation_summary">Uns helfen, %s in Ihre Sprache zu übersetzen</string>
     <string name="settings_start_on_boot_summary">Bei gerooteten Geräten kann Shizuku beim Booten automatisch starten</string>
     <string name="settings_start_on_boot">Beim Hochfahren starten (Root)</string>
-    <string name="settings_startup">Beim Starten</string>
+    <string name="settings_behavior">Beim Starten</string>
     <string name="settings_user_interface">Aussehen</string>
     <string name="settings_language">Sprache</string>
     <string name="settings_title">Einstellungen</string>

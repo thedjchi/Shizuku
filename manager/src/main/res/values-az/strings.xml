@@ -43,7 +43,7 @@
     <string name="settings_translation_summary">%s dilini öz dilinizə tərcümə etməkdə bizə kömək edin</string>
     <string name="settings_translation">Tərcümədə iştirak et</string>
     <string name="settings_translation_contributors">Tərcümədə iştirak edənlər</string>
-    <string name="settings_startup">başlamaq</string>
+    <string name="settings_behavior">başlamaq</string>
     <string name="settings_black_night_theme_summary">Gecə rejimi aktivdirsə, saf qara temasından istifadə edin</string>
     <string name="settings_black_night_theme">Qara gecə teması</string>
     <string name="settings_user_interface">Görünüş</string>

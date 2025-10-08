@@ -58,7 +58,7 @@
     <string name="settings_user_interface">Aspect</string>
     <string name="settings_black_night_theme">Tema de noapte întunecată</string>
     <string name="settings_black_night_theme_summary">Folosește tema negru pur dacă modul noapte este activat</string>
-    <string name="settings_startup">Lansare</string>
+    <string name="settings_behavior">Lansare</string>
     <string name="settings_translation">Participă la traducere</string>
     <string name="settings_translation_summary">Ajută-ne să traducem %s în limba ta</string>
     <string name="settings_start_on_boot">Start la pornire (root)</string>

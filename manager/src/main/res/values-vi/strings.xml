@@ -50,7 +50,7 @@
     <string name="terminal_tutorial_3">Cuối cùng, di chuyển các tệp đến một nơi nào đó mà ứng dụng đầu cuối của bạn có thể truy cập, bạn sẽ có thể sử dụng %1$s để chạy các lệnh thông qua Shizuku.</string>
     <string name="rish_description">Với %1$s, trong bất kỳ ứng dụng đầu cuối nào, bạn có thể kết nối và tương tác với shell do Shizuku điều hành. &lt;p&gt;Về cách sử dụng chi tiết %1$s, nhấn để xem tài liệu.</string>
     <string name="settings_title">Cài đặt</string>
-    <string name="settings_startup">Khởi động</string>
+    <string name="settings_behavior">Khởi động</string>
     <string name="settings_start_on_boot">Tự khởi động (root)</string>
     <string name="settings_start_on_boot_summary">Đối với các thiết bị đã root, Shizuku có thể tự khởi động khi thiết bị khởi động</string>
     <string name="notification_channel_service_status">Trạng thái khởi động dịch vụ</string>

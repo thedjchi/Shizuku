@@ -71,7 +71,7 @@
     <string name="settings_translation_summary">%s , dilinize çevirmemize yardımcı olun</string>
     <string name="settings_translation">Çeviriye katılın</string>
     <string name="settings_translation_contributors">Çeviriye katkıda bulunanlar</string>
-    <string name="settings_startup">Başlangıç</string>
+    <string name="settings_behavior">Başlangıç</string>
     <string name="settings_black_night_theme_summary">Gece modu etkinse saf siyah temasını kullanın</string>
     <string name="settings_black_night_theme">Siyah gece teması</string>
     <string name="settings_user_interface">Görünüm</string>

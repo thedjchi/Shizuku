@@ -96,7 +96,7 @@
     <string name="settings_user_interface">ظاهر</string>
     <string name="settings_black_night_theme">طرح زمینه شب سیاه</string>
     <string name="settings_black_night_theme_summary">اگر حالت شب فعال است از طرح زمینه سیاه خالص استفاده کنید</string>
-    <string name="settings_startup">شروع به کار</string>
+    <string name="settings_behavior">شروع به کار</string>
     <string name="settings_translation_contributors">مشارکت کنندگان ترجمه</string>
     <string name="settings_translation">در ترجمه شرکت کنید</string>
     <string name="settings_translation_summary">با ما همکاری کنید تا %s را به زبان شما ترجمه کنیم</string>

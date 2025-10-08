@@ -25,7 +25,7 @@
     <string name="home_wireless_adb_description_pre_11">على الأجهزة الأقدم من إصدار الأندرويد 11 ، يلزم الاتصال بجهاز كمبيوتر لتمكين المعالجة/التصحيح اللاسلكي.</string>
     <string name="dialog_adb_pairing_discovery">جاري البحث على جهاز للإتصال</string>
     <string name="translation_contributors">‮المشاركين في الترجمة</string>
-    <string name="settings_startup">بدء</string>
+    <string name="settings_behavior">بدء</string>
     <string name="settings_black_night_theme_summary">استخدم سمة السواد النقيّ إذ الوضع الليلي الذي بالجهاز مفعل</string>
     <string name="settings_black_night_theme">وضع السواد النقيّ</string>
     <string name="settings_user_interface">المظهر</string>
