@@ -164,7 +164,7 @@
         </receiver>
 
         <receiver android:name=".receiver.ShizukuDeathReceiver"
-            android:enabled="true"
+            android:enabled="false"
             android:exported="true">
             <intent-filter>
                 <action android:name="rikka.shizuku.BINDER_DIED" />

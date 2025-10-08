@@ -24,6 +24,7 @@ import moe.shizuku.manager.ktx.isComponentEnabled
 import moe.shizuku.manager.ktx.setComponentEnabled
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.BootCompleteReceiver
+import moe.shizuku.manager.receiver.ShizukuDeathReceiver
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
 import rikka.core.util.ResourceUtils
@@ -45,6 +46,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         setPreferencesFromResource(R.xml.settings, null)
 
         val startOnBootPreference: TwoStatePreference = findPreference(KEY_START_ON_BOOT)!!
+        val watchdogPreference: TwoStatePreference = findPreference(KEY_WATCHDOG)!!
         val tcpModePreference: TwoStatePreference = findPreference(KEY_TCP_MODE)!!
         val tcpPortPreference: EditTextPreference = findPreference(KEY_TCP_PORT)!!
         val tcpLearnMorePreference: Preference = findPreference(KEY_TCP_LEARN_MORE)!!
@@ -82,6 +84,25 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 context.packageManager.setComponentEnabledSetting(
                     bootCompleteReceiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
                 )      
+            }
+        }
+
+        watchdogPreference.apply {
+            val ShizukuDeathReceiver = ComponentName(context.packageName, ShizukuDeathReceiver::class.java.name)
+            isChecked = context.packageManager.getComponentEnabledSetting(ShizukuDeathReceiver) ==
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+
+            setOnPreferenceChangeListener { _, newValue ->
+                if (newValue is Boolean) {
+                    val state = if (newValue) {
+                        PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                    } else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+
+                    context.packageManager.setComponentEnabledSetting(
+                        ShizukuDeathReceiver, state, PackageManager.DONT_KILL_APP
+                    )
+                    true
+                } else false
             }
         }
 

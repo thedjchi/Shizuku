@@ -9,6 +9,11 @@
             android:title="@string/settings_start_on_boot" />
 
         <rikka.material.preference.MaterialSwitchPreference
+            android:key="watchdog"
+            android:summary="@string/settings_watchdog_summary"
+            android:title="@string/settings_watchdog" />
+
+        <rikka.material.preference.MaterialSwitchPreference
             android:key="tcp_mode"
             android:summary="@string/settings_tcp_mode_summary"
             android:title="@string/settings_tcp_mode" 

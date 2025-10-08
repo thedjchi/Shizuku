@@ -7,7 +7,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
-import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.work.*
 import java.io.EOFException
@@ -44,14 +43,6 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 }.first()
             }
             AdbStarter.startAdb(applicationContext, port)
-
-            val toastMsg = applicationContext.getString(
-                R.string.home_status_service_is_running,
-                applicationContext.getString(R.string.app_name)
-            )
-            withContext(Dispatchers.Main) {
-                Toast.makeText(applicationContext, toastMsg, Toast.LENGTH_SHORT).show()
-            }
 
             val notificationId = inputData.getInt("notification_id", -1)
             if (notificationId != -1) {

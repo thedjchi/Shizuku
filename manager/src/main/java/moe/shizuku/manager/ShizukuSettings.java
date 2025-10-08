@@ -24,6 +24,7 @@ public class ShizukuSettings {
     public static final String NAME = "settings";
     public static class Keys {
         public static final String KEY_START_ON_BOOT = "start_on_boot";
+        public static final String KEY_WATCHDOG = "watchdog";
         public static final String KEY_TCP_MODE = "tcp_mode";
         public static final String KEY_TCP_PORT = "tcp_port";
         public static final String KEY_TCP_LEARN_MORE = "tcp_learn_more";
@@ -93,6 +94,10 @@ public class ShizukuSettings {
 
     public static void setLastLaunchMode(@LaunchMethod int method) {
         getPreferences().edit().putInt("mode", method).apply();
+    }
+
+    public static boolean getWatchdog() {
+        return getPreferences().getBoolean(Keys.KEY_WATCHDOG, false);
     }
 
     public static boolean getTcpMode() {
