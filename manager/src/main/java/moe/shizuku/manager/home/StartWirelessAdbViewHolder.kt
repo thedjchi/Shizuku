@@ -82,10 +82,13 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
     }
 
     private fun onAdbClicked(context: Context, scope: CoroutineScope) {
-        if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
-            Settings.Global.putInt(context.contentResolver, Settings.Global.ADB_ENABLED, 1)
+        val cr = context.contentResolver
+        if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
+            Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
+            Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
+        }
         
-        val adbEnabled = Settings.Global.getInt(context.contentResolver, Settings.Global.ADB_ENABLED, 0)
+        val adbEnabled = Settings.Global.getInt(cr, Settings.Global.ADB_ENABLED, 0)
 
         val tcpPort = EnvironmentUtils.getAdbTcpPort()
         val tcpMode = ShizukuSettings.getTcpMode()

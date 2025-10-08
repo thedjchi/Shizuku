@@ -28,12 +28,12 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         try {
             val cr = applicationContext.contentResolver
 
-            Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
             Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
             Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
 
             val port = EnvironmentUtils.getAdbTcpPort().takeIf { it > 0 } ?: withTimeout(15000) {
                 callbackFlow {
+                    Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
                     val adbMdns = AdbMdns(applicationContext, AdbMdns.TLS_CONNECT) { port ->
                         if (port > 0) trySend(port)
                     }
