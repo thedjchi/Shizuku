@@ -28,7 +28,7 @@ import moe.shizuku.manager.ktx.isComponentEnabled
 import moe.shizuku.manager.ktx.setComponentEnabled
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.BootCompleteReceiver
-import moe.shizuku.manager.receiver.ShizukuDeathReceiver
+import moe.shizuku.manager.receiver.BinderDeadReceiver
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
 import rikka.core.util.ResourceUtils
@@ -94,8 +94,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         watchdogPreference.apply {
-            val ShizukuDeathReceiver = ComponentName(context.packageName, ShizukuDeathReceiver::class.java.name)
-            isChecked = context.packageManager.getComponentEnabledSetting(ShizukuDeathReceiver) ==
+            val BinderDeadReceiver = ComponentName(context.packageName, BinderDeadReceiver::class.java.name)
+            isChecked = context.packageManager.getComponentEnabledSetting(BinderDeadReceiver) ==
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED
 
             setOnPreferenceChangeListener { _, newValue ->
@@ -105,7 +105,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     } else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 
                     context.packageManager.setComponentEnabledSetting(
-                        ShizukuDeathReceiver, state, PackageManager.DONT_KILL_APP
+                        BinderDeadReceiver, state, PackageManager.DONT_KILL_APP
                     )
                     true
                 } else false

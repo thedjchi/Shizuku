@@ -6,7 +6,7 @@ import android.content.Intent
 import androidx.work.WorkManager
 import android.app.NotificationManager
 
-class BootCancelReceiver : BroadcastReceiver() {
+class NotifCancelReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         WorkManager.getInstance(context).cancelUniqueWork("adb_start_worker")
         val notificationId = intent.getIntExtra("notification_id", -1)

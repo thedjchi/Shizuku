@@ -155,7 +155,7 @@
         </receiver>
 
         <receiver
-            android:name=".receiver.StartShizukuReceiver"
+            android:name=".receiver.ManualStartReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -163,7 +163,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.ShizukuDeathReceiver"
+        <receiver android:name=".receiver.BinderDeadReceiver"
             android:enabled="false"
             android:exported="true">
             <intent-filter>
@@ -171,12 +171,12 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.BootAttemptReceiver" />
-        <receiver android:name=".receiver.BootCancelReceiver" />
-        <receiver android:name=".receiver.BootRestoreReceiver" />
+        <receiver android:name=".receiver.NotifAttemptReceiver" />
+        <receiver android:name=".receiver.NotifCancelReceiver" />
+        <receiver android:name=".receiver.NotifRestoreReceiver" />
 
         <receiver
-            android:name=".receiver.ShizukuReceiver"
+            android:name=".receiver.BinderRequestReceiver"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true"

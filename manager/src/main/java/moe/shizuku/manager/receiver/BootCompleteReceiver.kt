@@ -7,6 +7,6 @@ import android.content.Intent
 class BootCompleteReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action != Intent.ACTION_BOOT_COMPLETED) return
-        StartShizukuIntentHandler.handle(context, intent)
+        ShizukuReceiverStarter.start(context, intent)
     }
 }
