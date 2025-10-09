@@ -20,6 +20,7 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbKeyException
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.app.AppBarActivity
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.databinding.StarterActivityBinding
 import rikka.lifecycle.Resource
 import rikka.lifecycle.Status
@@ -138,12 +139,18 @@ private class ViewModel(context: Context, root: Boolean, port: Int) : androidx.l
             }
         }
 
+        ShizukuStateMachine.setState(ShizukuStateMachine.State.STARTING)
         Shell.cmd(Starter.internalCommand).to(object : CallbackList<String?>() {
             override fun onAddElement(s: String?) {
                 s?.let { log(it) }
             }
         }).submit {
-            if (it.code != 0) log("\nPlease notify the developer.")
+            if (it.code == 0) {
+                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
+            } else {
+                log("\nPlease notify the developer.")
+                ShizukuStateMachine.setState(ShizukuStateMachine.State.CRASHED)
+            }
         }
     }
 }

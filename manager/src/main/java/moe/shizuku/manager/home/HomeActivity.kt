@@ -20,6 +20,7 @@ import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.management.appsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
 import moe.shizuku.manager.utils.AppIconCache
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.ktx.unsafeLazy
 import rikka.lifecycle.Status
 import rikka.lifecycle.viewModels
@@ -123,8 +124,14 @@ abstract class HomeActivity : AppBarActivity() {
                     .setMessage(R.string.dialog_stop_message)
                     .setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
                         try {
+                            ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPING)
                             Shizuku.exit()
                         } catch (e: Throwable) {
+                            if (Shizuku.pingBinder()) {
+                                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
+                            } else {
+                                ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
+                            }
                         }
                     }
                     .setNegativeButton(android.R.string.cancel, null)

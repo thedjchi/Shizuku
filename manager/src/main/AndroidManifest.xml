@@ -167,7 +167,7 @@
             android:enabled="false"
             android:exported="true">
             <intent-filter>
-                <action android:name="rikka.shizuku.BINDER_DIED" />
+                <action android:name="rikka.shizuku.BINDER_DEAD" />
             </intent-filter>
         </receiver>
 

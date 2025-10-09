@@ -20,6 +20,7 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.ShizukuSettings.LaunchMethod
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.UserHandleCompat
 import moe.shizuku.manager.worker.AdbStartWorker
 import rikka.shizuku.Shizuku
@@ -37,7 +38,7 @@ object ShizukuReceiverStarter {
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
-                    val isWifiRequired = EnvironmentUtils.getAdbTcpPort().let { it > 0 }
+                    val isWifiRequired = EnvironmentUtils.getAdbTcpPort() > 0
                     AdbStartWorker.enqueue(context, isWifiRequired, NOTIFICATION_ID)
                     showNotification(context, isWifiRequired)
                 } else {
@@ -107,7 +108,14 @@ object ShizukuReceiverStarter {
             return
         }
 
-        Shell.cmd(Starter.internalCommand).exec()
+        try {
+            ShizukuStateMachine.setState(ShizukuStateMachine.State.STARTING)
+            Shell.cmd(Starter.internalCommand).exec()
+            ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
+        } catch (e: Exception) {
+            Log.e(AppConstants.TAG, "Failed to start Shizuku with root", e)
+            ShizukuStateMachine.setState(ShizukuStateMachine.State.CRASHED)
+        }
     }
 
     private fun showPermissionErrorNotification(context: Context) {

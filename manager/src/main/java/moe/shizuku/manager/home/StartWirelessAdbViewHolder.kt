@@ -36,10 +36,12 @@ import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.starter.StarterActivity
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.content.asActivity
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
+import rikka.shizuku.Shizuku
 
 class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: View, private val scope: CoroutineScope) :
     BaseViewHolder<Any?>(root) {
@@ -120,11 +122,16 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
             runCatching {
                 val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
                 AdbClient("127.0.0.1", port, key).use { client ->
-                    client.connect()  
+                    client.connect()
+
+                    ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPING)
                     client.command("usb:")
                 }
             }.onFailure {
-                if (it !is EOFException && it !is SocketException) { // Expected when ADB restarts
+                if (!Shizuku.pingBinder()) {
+                    ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
+                } else {
+                    ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
                     withContext(Dispatchers.Main) {
                         Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp), Toast.LENGTH_SHORT)
                             .show()

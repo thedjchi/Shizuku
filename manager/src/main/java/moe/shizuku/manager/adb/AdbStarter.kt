@@ -11,6 +11,7 @@ import moe.shizuku.manager.adb.AdbClient
 import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
 import moe.shizuku.manager.starter.Starter
+import moe.shizuku.manager.utils.ShizukuStateMachine
 
 object AdbStarter {
     suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
@@ -57,7 +58,14 @@ object AdbStarter {
                     delayTime += 1000
                 }
             }
-            client.runCommand("shell:${Starter.internalCommand}")
+            try {
+                ShizukuStateMachine.setState(ShizukuStateMachine.State.STARTING)
+                client.runCommand("shell:${Starter.internalCommand}")
+                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
+            } catch (e: Exception) {
+                ShizukuStateMachine.setState(ShizukuStateMachine.State.CRASHED)
+                throw e
+            }
         }
     }
 }
