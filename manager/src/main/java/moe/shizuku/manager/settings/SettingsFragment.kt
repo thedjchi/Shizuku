@@ -64,49 +64,29 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val reportBugPreference: Preference = findPreference(KEY_REPORT_BUG)!!
 
         startOnBootPreference.apply {
-            val bootCompleteReceiver = ComponentName(context.packageName, BootCompleteReceiver::class.java.name)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isRooted()) {
-                isChecked = context.packageManager.getComponentEnabledSetting(bootCompleteReceiver) in setOf(
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                    PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
-                )
+                isChecked = ShizukuSettings.getStartOnBoot(context)
 
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean) {
-                        val state = if (newValue) {
-                            PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                        } else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-
-                        context.packageManager.setComponentEnabledSetting(
-                            bootCompleteReceiver, state, PackageManager.DONT_KILL_APP
-                        )
+                        ShizukuSettings.setStartOnBoot(context, newValue)
                         true
                     } else false
                 }
             } else {
                 isEnabled = false
+                isChecked = false
                 summary = context.getString(R.string.settings_start_on_boot_summary)
-
-                context.packageManager.setComponentEnabledSetting(
-                    bootCompleteReceiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP
-                )      
+                ShizukuSettings.setStartOnBoot(context, false)
             }
         }
 
         watchdogPreference.apply {
-            val BinderDeadReceiver = ComponentName(context.packageName, BinderDeadReceiver::class.java.name)
-            isChecked = context.packageManager.getComponentEnabledSetting(BinderDeadReceiver) ==
-                PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+            isChecked = ShizukuSettings.getWatchdog(context)
 
             setOnPreferenceChangeListener { _, newValue ->
                 if (newValue is Boolean) {
-                    val state = if (newValue) {
-                        PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                    } else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-
-                    context.packageManager.setComponentEnabledSetting(
-                        BinderDeadReceiver, state, PackageManager.DONT_KILL_APP
-                    )
+                    ShizukuSettings.setWatchdog(context, newValue)
                     true
                 } else false
             }

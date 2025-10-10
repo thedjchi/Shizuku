@@ -1,24 +1,23 @@
 package moe.shizuku.manager;
 
 import android.app.ActivityThread;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.text.TextUtils;
-
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
-
 import java.lang.annotation.Retention;
 import java.util.Locale;
-
+import moe.shizuku.manager.receiver.BinderDeadReceiver;
+import moe.shizuku.manager.receiver.BootCompleteReceiver;
 import moe.shizuku.manager.utils.EmptySharedPreferencesImpl;
 import moe.shizuku.manager.utils.EnvironmentUtils;
-
 import static java.lang.annotation.RetentionPolicy.SOURCE;
-
 public class ShizukuSettings {
 
     public static final String NAME = "settings";
@@ -73,14 +72,14 @@ public class ShizukuSettings {
     public static void initialize(Context context) {
         if (sPreferences == null) {
             sPreferences = getSettingsStorageContext(context)
-                    .getSharedPreferences(NAME, Context.MODE_PRIVATE);
+                .getSharedPreferences(NAME, Context.MODE_PRIVATE);
         }
     }
 
     @IntDef({
-            LaunchMethod.UNKNOWN,
-            LaunchMethod.ROOT,
-            LaunchMethod.ADB,
+        LaunchMethod.UNKNOWN,
+        LaunchMethod.ROOT,
+        LaunchMethod.ADB,
     })
     @Retention(SOURCE)
     public @interface LaunchMethod {
@@ -98,8 +97,34 @@ public class ShizukuSettings {
         getPreferences().edit().putInt("mode", method).apply();
     }
 
-    public static boolean getWatchdog() {
-        return getPreferences().getBoolean(Keys.KEY_WATCHDOG, false);
+    public static boolean getStartOnBoot(Context context) {
+        ComponentName bootCompleteReceiver = new ComponentName(context.getPackageName(), BootCompleteReceiver.class.getName());
+        int state = context.getPackageManager().getComponentEnabledSetting(bootCompleteReceiver);
+        return state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED || state == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
+    }
+
+    public static void setStartOnBoot(Context context, boolean enable) {
+        ComponentName bootCompleteReceiver = new ComponentName(context.getPackageName(), BootCompleteReceiver.class.getName());
+        context.getPackageManager().setComponentEnabledSetting(
+            bootCompleteReceiver,
+            enable ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP
+        );
+    }
+    
+    public static boolean getWatchdog(Context context) {
+        ComponentName binderDeadReceiver = new ComponentName(context.getPackageName(), BinderDeadReceiver.class.getName());
+        int state = context.getPackageManager().getComponentEnabledSetting(binderDeadReceiver);
+        return state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+    }
+
+    public static void setWatchdog(Context context, boolean enable) {
+        ComponentName binderDeadReceiver = new ComponentName(context.getPackageName(), BinderDeadReceiver.class.getName());
+        context.getPackageManager().setComponentEnabledSetting(
+            binderDeadReceiver,
+            enable ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP
+        );
     }
 
     public static boolean getTcpMode() {

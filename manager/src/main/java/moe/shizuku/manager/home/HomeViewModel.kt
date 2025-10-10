@@ -1,6 +1,9 @@
 package moe.shizuku.manager.home
 
+import android.app.Application
+import android.content.Context
 import android.content.pm.PackageManager
+import android.os.PowerManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,6 +13,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.Manifest
+import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.model.ServiceStatus
 import moe.shizuku.manager.utils.Logger.LOGGER
 import moe.shizuku.manager.utils.ShizukuSystemApis
@@ -20,6 +24,10 @@ class HomeViewModel : ViewModel() {
 
     private val _serviceStatus = MutableLiveData<Resource<ServiceStatus>>()
     val serviceStatus = _serviceStatus as LiveData<Resource<ServiceStatus>>
+
+    private val _batteryOptimization = MutableLiveData<Boolean>(false)
+    val batteryOptimization: LiveData<Boolean> = _batteryOptimization
+
 
     private fun load(): ServiceStatus {
         if (!Shizuku.pingBinder()) {
@@ -58,4 +66,19 @@ class HomeViewModel : ViewModel() {
             }
         }
     }
+
+    fun checkBatteryOptimization(context: Context) {
+        viewModelScope.launch(Dispatchers.Default) {
+            if (!ShizukuSettings.getStartOnBoot(context) && !ShizukuSettings.getWatchdog(context)) return@launch
+
+            val pm = context.getSystemService(PowerManager::class.java)
+            val ignoring = pm?.isIgnoringBatteryOptimizations(context.packageName) ?: false
+            if (!ignoring)
+                _batteryOptimization.postValue(true)
+        }
+    }
+    fun batteryOptimizationHandled() {
+        _batteryOptimization.value = false
+    }
+
 }

@@ -2,8 +2,10 @@ package moe.shizuku.manager.home
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Process
+import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -11,6 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.app.AppBarActivity
@@ -44,6 +47,8 @@ abstract class HomeActivity : AppBarActivity() {
     private val appsModel by appsViewModel()
     private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
 
+    private var snackbar: Snackbar? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -55,6 +60,26 @@ abstract class HomeActivity : AppBarActivity() {
                 val status = homeModel.serviceStatus.value?.data ?: return@observe
                 adapter.updateData()
                 ShizukuSettings.setLastLaunchMode(if (status.uid == 0) ShizukuSettings.LaunchMethod.ROOT else ShizukuSettings.LaunchMethod.ADB)
+            }
+        }
+        homeModel.batteryOptimization.observe(this) {
+            if (it) {
+                if (snackbar?.isShown == true) return@observe
+
+                snackbar = Snackbar.make(
+                    binding.root,
+                    "Disable battery optimization for start on boot and watchdog to work correctly.",
+                    Snackbar.LENGTH_INDEFINITE
+                ).setAction("OK") {
+                    val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
+                        data = Uri.parse("package:${packageName}")
+                    }
+                    startActivity(intent)
+                    snackbar?.dismiss()
+                }
+
+                snackbar?.show()
+                homeModel.batteryOptimizationHandled()
             }
         }
         appsModel.grantedCount.observe(this) {
@@ -76,6 +101,7 @@ abstract class HomeActivity : AppBarActivity() {
     override fun onResume() {
         super.onResume()
         checkServerStatus()
+        homeModel.checkBatteryOptimization(applicationContext)
     }
 
     private fun checkServerStatus() {
