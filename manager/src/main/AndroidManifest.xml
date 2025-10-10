@@ -163,6 +163,15 @@
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".receiver.ManualStopReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="moe.shizuku.privileged.api.STOP" />
+            </intent-filter>
+        </receiver>
+
         <receiver android:name=".receiver.BinderDeadReceiver"
             android:enabled="false"
             android:exported="true">
