@@ -72,7 +72,10 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         val uri = Uri.parse(
             "mailto:" + context.getString(R.string.support_email) +
             "?subject=" + Uri.encode("Error while starting on boot") +
-            "&body=" + Uri.encode(e.stackTraceToString())
+            "&body=v" + Uri.encode(
+                context.packageManager.getPackageInfo(context.packageName, 0).versionName + "\n\n" +
+                e.stackTraceToString()
+            )
         )
 
         val emailIntent = Intent(Intent.ACTION_SENDTO, uri)

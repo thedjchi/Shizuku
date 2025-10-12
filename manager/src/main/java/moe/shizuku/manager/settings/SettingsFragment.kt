@@ -241,7 +241,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         reportBugPreference.setOnPreferenceClickListener {
             val intent = Intent(Intent.ACTION_SENDTO, Uri.parse(
-                "mailto:${context.getString(R.string.support_email)}"
+                "mailto:" + context.getString(R.string.support_email) + 
+                "?body=v" + Uri.encode(context.packageManager.getPackageInfo(context.packageName, 0).versionName)
             ))
             try {
                 context.startActivity(intent)
