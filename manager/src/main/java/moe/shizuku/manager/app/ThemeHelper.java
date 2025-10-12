@@ -1,10 +1,13 @@
 package moe.shizuku.manager.app;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.os.Build;
-
+import android.util.TypedValue;
+import android.view.View;
 import androidx.annotation.StyleRes;
-
+import androidx.core.graphics.ColorUtils;
+import com.google.android.material.snackbar.Snackbar;
 import moe.shizuku.manager.R;
 import moe.shizuku.manager.ShizukuSettings;
 import moe.shizuku.manager.utils.EnvironmentUtils;
@@ -41,5 +44,17 @@ public class ThemeHelper {
             default:
                 return R.style.ThemeOverlay;
         }
+    }
+
+    public static void applySnackbarTheme(Context context, Snackbar snackbar) {
+        snackbar.setBackgroundTint(resolveColor(context, R.attr.colorPrimaryContainer))
+            .setTextColor(resolveColor(context, R.attr.colorOnSurface))
+            .setActionTextColor(resolveColor(context, R.attr.colorPrimary));
+    }
+
+    private static int resolveColor(Context context, int color) {
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(color, typedValue, true);
+        return typedValue.data;
     }
 }

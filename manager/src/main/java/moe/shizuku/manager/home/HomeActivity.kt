@@ -2,10 +2,8 @@ package moe.shizuku.manager.home
 
 import android.content.DialogInterface
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.os.Process
-import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -17,6 +15,7 @@ import com.google.android.material.snackbar.Snackbar
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.app.AppBarActivity
+import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.databinding.AboutDialogBinding
 import moe.shizuku.manager.databinding.HomeActivityBinding
 import moe.shizuku.manager.ktx.toHtml
@@ -47,8 +46,6 @@ abstract class HomeActivity : AppBarActivity() {
     private val appsModel by appsViewModel()
     private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
 
-    private var snackbar: Snackbar? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -62,26 +59,21 @@ abstract class HomeActivity : AppBarActivity() {
                 ShizukuSettings.setLastLaunchMode(if (status.uid == 0) ShizukuSettings.LaunchMethod.ROOT else ShizukuSettings.LaunchMethod.ADB)
             }
         }
-        homeModel.batteryOptimization.observe(this) {
+        homeModel.showBatteryOptimizationSnackbar.observe(this) {
             if (it) {
-                if (snackbar?.isShown == true) return@observe
-
-                snackbar = Snackbar.make(
+                SnackbarHelper.show(
+                    this,
                     binding.root,
-                    "Disable battery optimization for start on boot and watchdog to work correctly.",
-                    Snackbar.LENGTH_INDEFINITE
-                ).setAction("OK") {
-                    val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
-                        data = Uri.parse("package:${packageName}")
-                    }
-                    startActivity(intent)
-                    snackbar?.dismiss()
-                }
-
-                snackbar?.show()
+                    msg = getString(R.string.snackbar_battery_optimization_home),
+                    duration = Snackbar.LENGTH_INDEFINITE,
+                    actionText = getString(R.string.snackbar_action_fix),
+                    action = { ShizukuSettings.requestIgnoreBatteryOptimizations(this, null) }
+                )
                 homeModel.batteryOptimizationHandled()
             }
         }
+        homeModel.checkBatteryOptimization(applicationContext)
+
         appsModel.grantedCount.observe(this) {
             if (it.status == Status.SUCCESS) {
                 adapter.updateData()
@@ -101,7 +93,11 @@ abstract class HomeActivity : AppBarActivity() {
     override fun onResume() {
         super.onResume()
         checkServerStatus()
-        homeModel.checkBatteryOptimization(applicationContext)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        SnackbarHelper.dismiss()
     }
 
     private fun checkServerStatus() {

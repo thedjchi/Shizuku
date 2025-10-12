@@ -70,7 +70,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         val nb = NotificationCompat.Builder(context, CHANNEL_ID)
 
         val uri = Uri.parse(
-            "mailto:shizukuforkdev@fire.fundersclub.com" +
+            "mailto:" + context.getString(R.string.support_email) +
             "?subject=" + Uri.encode("Error while starting on boot") +
             "&body=" + Uri.encode(e.stackTraceToString())
         )
@@ -82,14 +82,14 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 context, 0, emailIntent, PendingIntent.FLAG_IMMUTABLE
             )
             nb.setContentIntent(emailPendingIntent)
-            msgNotif = "$e. Tap to notify the developer."
+            msgNotif = "$e. ${context.getString(R.string.wadb_error_notify_dev)}"
         } else {
-            msgNotif = "$e. Send an email to shizukuforkdev@fire.fundersclub.com."
+            msgNotif = "$e. ${context.getString(R.string.wadb_error_send_email)} ${context.getString(R.string.support_email)}"
         }
 
         val notification = nb
             .setSmallIcon(R.drawable.ic_system_icon)
-            .setContentTitle("Error while starting on boot")
+            .setContentTitle(context.getString(R.string.wadb_error_title))
             .setContentText(msgNotif)
             .setSilent(true)
             .setStyle(NotificationCompat.BigTextStyle().bigText(msgNotif))

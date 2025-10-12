@@ -3,7 +3,6 @@ package moe.shizuku.manager.home
 import android.app.Application
 import android.content.Context
 import android.content.pm.PackageManager
-import android.os.PowerManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -25,8 +24,8 @@ class HomeViewModel : ViewModel() {
     private val _serviceStatus = MutableLiveData<Resource<ServiceStatus>>()
     val serviceStatus = _serviceStatus as LiveData<Resource<ServiceStatus>>
 
-    private val _batteryOptimization = MutableLiveData<Boolean>(false)
-    val batteryOptimization: LiveData<Boolean> = _batteryOptimization
+    private val _showBatteryOptimizationSnackbar = MutableLiveData<Boolean>(false)
+    val showBatteryOptimizationSnackbar: LiveData<Boolean> = _showBatteryOptimizationSnackbar
 
 
     private fun load(): ServiceStatus {
@@ -70,15 +69,13 @@ class HomeViewModel : ViewModel() {
     fun checkBatteryOptimization(context: Context) {
         viewModelScope.launch(Dispatchers.Default) {
             if (!ShizukuSettings.getStartOnBoot(context) && !ShizukuSettings.getWatchdog(context)) return@launch
-
-            val pm = context.getSystemService(PowerManager::class.java)
-            val ignoring = pm?.isIgnoringBatteryOptimizations(context.packageName) ?: false
-            if (!ignoring)
-                _batteryOptimization.postValue(true)
+            _showBatteryOptimizationSnackbar.postValue(
+                !ShizukuSettings.isIgnoringBatteryOptimizations(context)
+            )
         }
     }
     fun batteryOptimizationHandled() {
-        _batteryOptimization.value = false
+        _showBatteryOptimizationSnackbar.value = false
     }
 
 }

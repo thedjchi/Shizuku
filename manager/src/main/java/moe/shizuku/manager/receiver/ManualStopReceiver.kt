@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import moe.shizuku.manager.R
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.shizuku.Shizuku
 
@@ -18,7 +19,8 @@ class ManualStopReceiver : BroadcastReceiver() {
                 ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
             } else {
                 ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
-                Toast.makeText(context, "Failed to stop Shizuku: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.toast_failed_to_stop), Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }

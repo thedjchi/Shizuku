@@ -4,12 +4,18 @@ import android.app.ActivityThread;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.text.TextUtils;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import java.lang.annotation.Retention;
 import java.util.Locale;
@@ -158,5 +164,23 @@ public class ShizukuSettings {
             return Locale.getDefault();
         }
         return Locale.forLanguageTag(tag);
+    }
+
+    public static boolean isIgnoringBatteryOptimizations(Context context) {
+        PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        return pm.isIgnoringBatteryOptimizations(context.getPackageName());
+    }
+
+    public static void requestIgnoreBatteryOptimizations(
+        Context context,
+        @Nullable ActivityResultLauncher<Intent> launcher
+    ) {
+        Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+        intent.setData(Uri.parse("package:" + context.getPackageName()));
+        if (launcher != null) {
+            launcher.launch(intent);
+        } else {
+            context.startActivity(intent);
+        }
     }
 }
