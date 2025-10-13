@@ -30,7 +30,7 @@ object ShizukuReceiverStarter {
     private const val CHANNEL_ID = "AdbStartWorker"
     private const val NOTIFICATION_ID = 1447
 
-    fun start(context: Context, intent: Intent) {
+    fun start(context: Context) {
         if (UserHandleCompat.myUserId() > 0 || Shizuku.pingBinder()) return
 
         if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
@@ -38,7 +38,7 @@ object ShizukuReceiverStarter {
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
-                    val isWifiRequired = EnvironmentUtils.getAdbTcpPort() > 0
+                    val isWifiRequired = EnvironmentUtils.getAdbTcpPort() <= 0
                     AdbStartWorker.enqueue(context, isWifiRequired, NOTIFICATION_ID)
                     showNotification(context, isWifiRequired)
                 } else {
