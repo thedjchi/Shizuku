@@ -12,54 +12,58 @@ import android.os.IBinder
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import moe.shizuku.manager.R
+import moe.shizuku.manager.utils.ShizukuStateMachine
+import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import rikka.shizuku.Shizuku
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicBoolean
 
 class WatchdogService : Service() {
+
     private val executor = Executors.newSingleThreadExecutor { r -> Thread(r, "shizuku-watchdog") }
+
     private val listener = Shizuku.OnBinderDeadListener {
-        Log.i(TAG, "Listener called")
         executor.execute { onBinderDead() }
     }
 
-    private var registered = false
-
     override fun onCreate() {
         super.onCreate()
-        if (!registered) {
+        if (isRunning.compareAndSet(false, true)) {
             try {
                 Shizuku.addBinderDeadListener(listener)
-                registered = true
             } catch (t: Throwable) {
-                Toast.makeText(this, "Start watchdog failed", Toast.LENGTH_SHORT).show()
+                Log.w(TAG, "Start watchdog failed", t)
+                isRunning.set(false)
             }
         }
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        startForeground(
-            NOTIFICATION_ID,
-            buildNotification(),
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                ServiceInfo.FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED
-            } else {
-                0
-            })
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            startForeground(
+                NOTIFICATION_ID,
+                buildNotification(),
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE
+            )
+        } else {
+            startForeground(
+                NOTIFICATION_ID,
+                buildNotification()
+            )
+        }
         return START_STICKY
     }
 
     override fun onDestroy() {
-        Log.i(TAG, "Stopping watchdog")
-        if (registered) {
+        if (isRunning.compareAndSet(true, false)) {
             try {
                 Shizuku.removeBinderDeadListener(listener)
-                registered = false
             } catch (t: Throwable) {
-                Toast.makeText(this, "Remove watchdog failed", Toast.LENGTH_SHORT).show()
+                Log.w(TAG, "Stop watchdog failed", t)
+                isRunning.set(true)
             }
         }
         shutdownExecutor()
@@ -69,9 +73,18 @@ class WatchdogService : Service() {
     override fun onBind(intent: Intent?): IBinder? = null
 
     private fun onBinderDead() {
-        Log.i(TAG, "Inside executor")
         Handler(Looper.getMainLooper()).post {
-            Toast.makeText(this, "Shizuku stopped", Toast.LENGTH_SHORT).show()
+            val currentState = ShizukuStateMachine.getState()
+            when (currentState) {
+                ShizukuStateMachine.State.STOPPING -> {
+                    ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
+                }
+                ShizukuStateMachine.State.RUNNING -> {
+                    ShizukuStateMachine.setState(ShizukuStateMachine.State.CRASHED)
+                    ShizukuReceiverStarter.start(applicationContext)
+                }
+                else -> return@post
+            }
         }
     }
 
@@ -97,8 +110,7 @@ class WatchdogService : Service() {
         manager.createNotificationChannel(channel)
 
         return NotificationCompat.Builder(this, channelId)
-            .setContentTitle("Shizuku Watchdog")
-            .setContentText("Monitoring binder health")
+            .setContentTitle("Shizuku watchdog is running")
             .setSmallIcon(R.drawable.ic_system_icon)
             .setOngoing(true)
             .build()
@@ -108,12 +120,19 @@ class WatchdogService : Service() {
         private const val TAG = "ShizukuWatchdog"
         private const val NOTIFICATION_ID = 1001
 
+        private val isRunning = AtomicBoolean(false)
+
+        @JvmStatic
         fun start(context: Context) {
             context.startForegroundService(Intent(context, WatchdogService::class.java))
         }
 
+        @JvmStatic
         fun stop(context: Context) {
             context.stopService(Intent(context, WatchdogService::class.java))
         }
+
+        @JvmStatic
+        fun isRunning(): Boolean = isRunning.get()
     }
 }

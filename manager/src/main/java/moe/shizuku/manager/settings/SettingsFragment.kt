@@ -91,7 +91,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     if (newValue is Boolean) {
                         val shouldToggle = shouldToggleBatterySensitiveSetting(newValue) { result ->
                             ShizukuSettings.setStartOnBoot(context, result)
-                            isChecked = result
+                            isChecked = ShizukuSettings.getStartOnBoot(context)
                         }
                         return@setOnPreferenceChangeListener shouldToggle
                     } else false
@@ -104,13 +104,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         watchdogPreference.apply {
-            isChecked = ShizukuSettings.getWatchdog()
+            isChecked = ShizukuSettings.getWatchdogState()
 
             setOnPreferenceChangeListener { _, newValue ->
                 if (newValue is Boolean) {
                     val shouldToggle = shouldToggleBatterySensitiveSetting(newValue) { result ->
                         ShizukuSettings.setWatchdog(context, result)
-                        isChecked = result
+                        isChecked = ShizukuSettings.getWatchdogState()
                     }
                     return@setOnPreferenceChangeListener shouldToggle
                 } else false

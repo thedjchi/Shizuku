@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
 
     <uses-permission
         android:name="android.permission.WRITE_SECURE_SETTINGS"
@@ -151,7 +151,14 @@
         <service
             android:name=".service.WatchdogService"
             android:exported="false"
-            android:foregroundServiceType="systemExempted" />
+            android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+            android:value="Many apps rely on this app's API service for core functionality.
+                The API service can stop unexpectedly for various reasons (e.g., when connecting to Android Auto over USB).
+                This prevents the other apps from functioning properly.
+                The watchdog service would ensure the API is always available for the apps to use.
+                The watchdog service would be opt-in and toggleable via settings, so users can choose to disable it at any time if not desired."/>
+        </service>
 
         <receiver
             android:name=".receiver.BinderRequestReceiver"

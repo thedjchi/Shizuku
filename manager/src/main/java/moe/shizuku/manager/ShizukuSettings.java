@@ -19,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import java.lang.annotation.Retention;
 import java.util.Locale;
+import moe.shizuku.manager.service.WatchdogService;
 import moe.shizuku.manager.receiver.BootCompleteReceiver;
 import moe.shizuku.manager.utils.EmptySharedPreferencesImpl;
 import moe.shizuku.manager.utils.EnvironmentUtils;
@@ -121,7 +122,16 @@ public class ShizukuSettings {
         return getPreferences().getBoolean(Keys.KEY_WATCHDOG, true);
     }
 
+    public static boolean getWatchdogState() {
+        return WatchdogService.isRunning();
+    }
+
     public static void setWatchdog(Context context, boolean enable) {
+        if (enable) {
+            WatchdogService.start(context);
+        } else {
+            WatchdogService.stop(context);
+        }
         return;
     }
 
