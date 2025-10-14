@@ -68,7 +68,7 @@ class HomeViewModel : ViewModel() {
 
     fun checkBatteryOptimization(context: Context) {
         viewModelScope.launch(Dispatchers.Default) {
-            if (!ShizukuSettings.getStartOnBoot(context) && !ShizukuSettings.getWatchdog(context)) return@launch
+            if (!ShizukuSettings.getStartOnBoot(context) && !ShizukuSettings.getWatchdog()) return@launch
             _showBatteryOptimizationSnackbar.postValue(
                 !ShizukuSettings.isIgnoringBatteryOptimizations(context)
             )

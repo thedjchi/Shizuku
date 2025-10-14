@@ -157,14 +157,6 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.BinderDeadReceiver"
-            android:enabled="false"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="rikka.shizuku.BINDER_DEAD" />
-            </intent-filter>
-        </receiver>
-
         <receiver
             android:name=".receiver.BootCompleteReceiver"
             android:enabled="false"

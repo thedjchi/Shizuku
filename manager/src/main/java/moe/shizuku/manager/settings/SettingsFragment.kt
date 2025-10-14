@@ -41,7 +41,6 @@ import moe.shizuku.manager.ktx.isComponentEnabled
 import moe.shizuku.manager.ktx.setComponentEnabled
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.BootCompleteReceiver
-import moe.shizuku.manager.receiver.BinderDeadReceiver
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
 import rikka.core.util.ResourceUtils
@@ -105,7 +104,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         watchdogPreference.apply {
-            isChecked = ShizukuSettings.getWatchdog(context)
+            isChecked = ShizukuSettings.getWatchdog()
 
             setOnPreferenceChangeListener { _, newValue ->
                 if (newValue is Boolean) {

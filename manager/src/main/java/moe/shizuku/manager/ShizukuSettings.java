@@ -19,7 +19,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import java.lang.annotation.Retention;
 import java.util.Locale;
-import moe.shizuku.manager.receiver.BinderDeadReceiver;
 import moe.shizuku.manager.receiver.BootCompleteReceiver;
 import moe.shizuku.manager.utils.EmptySharedPreferencesImpl;
 import moe.shizuku.manager.utils.EnvironmentUtils;
@@ -118,19 +117,12 @@ public class ShizukuSettings {
         );
     }
     
-    public static boolean getWatchdog(Context context) {
-        ComponentName binderDeadReceiver = new ComponentName(context.getPackageName(), BinderDeadReceiver.class.getName());
-        int state = context.getPackageManager().getComponentEnabledSetting(binderDeadReceiver);
-        return state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+    public static boolean getWatchdog() {
+        return getPreferences().getBoolean(Keys.KEY_WATCHDOG, true);
     }
 
     public static void setWatchdog(Context context, boolean enable) {
-        ComponentName binderDeadReceiver = new ComponentName(context.getPackageName(), BinderDeadReceiver.class.getName());
-        context.getPackageManager().setComponentEnabledSetting(
-            binderDeadReceiver,
-            enable ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-            PackageManager.DONT_KILL_APP
-        );
+        return;
     }
 
     public static boolean getTcpMode() {
