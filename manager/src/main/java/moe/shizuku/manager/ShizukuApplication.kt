@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.topjohnwu.superuser.Shell
 import moe.shizuku.manager.ktx.logd
 import moe.shizuku.manager.service.WatchdogService
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import rikka.core.util.BuildUtils.atLeast30
 import rikka.material.app.LocaleDelegate
@@ -36,6 +37,7 @@ class ShizukuApplication : Application() {
         LocaleDelegate.defaultLocale = ShizukuSettings.getLocale()
         AppCompatDelegate.setDefaultNightMode(ShizukuSettings.getNightMode())
 
+        ShizukuStateMachine.init()
         if(ShizukuSettings.getWatchdog()) WatchdogService.start(context)
     }
 

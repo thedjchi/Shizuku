@@ -1,6 +1,6 @@
 package moe.shizuku.manager.utils
 
-import android.util.Log
+import java.util.concurrent.atomic.AtomicReference
 import rikka.shizuku.Shizuku
 
 object ShizukuStateMachine {
@@ -13,13 +13,19 @@ object ShizukuStateMachine {
         CRASHED
     }
 
-    private var currentState: State = State.STOPPED
+    private var currentState = AtomicReference<State>()
 
-    fun setState(newState: State) {
-        currentState = newState
+    fun init() {
+        if (currentState.get() != null) return
+        val state = if (Shizuku.pingBinder()) State.RUNNING else State.STOPPED
+        currentState.set(state)
     }
 
-    fun getState(): State {
-        return currentState
+    fun setState(newState: State) {
+        currentState.set(newState)
+    }
+
+    fun getState(): State? {
+        return currentState.get()
     }
 }
