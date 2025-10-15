@@ -20,11 +20,21 @@ import kotlinx.coroutines.withTimeout
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.AdbStarter
+import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.EnvironmentUtils
 
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
+        val isWifiRequired = EnvironmentUtils.getAdbTcpPort() <= 0
         try {
+            if (isWifiRequired) {
+                ShizukuReceiverStarter.showNotification(
+                    applicationContext,
+                    isWifiRequired,
+                    applicationContext.getString(R.string.wadb_notification_wifi_found)
+                )
+            }
+
             val cr = applicationContext.contentResolver
 
             Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
@@ -54,6 +64,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         } catch (e: Exception) {
             if (e !is CancellationException && e !is EOFException)
                 showErrorNotification(applicationContext, e)
+            ShizukuReceiverStarter.showNotification(applicationContext, isWifiRequired)
             return Result.retry()
         }
     }
