@@ -1,5 +1,7 @@
 package moe.shizuku.manager.adb
 
+import android.Manifest.permission.WRITE_SECURE_SETTINGS
+import android.content.pm.PackageManager
 import android.content.Context
 import android.provider.Settings
 import java.io.EOFException
@@ -40,8 +42,6 @@ object AdbStarter {
                     client.command("tcpip:$activePort")
                 }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts in TCP mode
             }
-
-            Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 0)
         }  
         
         log?.invoke("Connecting on port $activePort...\n")
@@ -67,5 +67,8 @@ object AdbStarter {
                 throw e
             }
         }
+
+        if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
+            Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 0)
     }
 }
