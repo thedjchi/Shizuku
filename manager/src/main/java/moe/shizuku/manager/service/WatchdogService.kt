@@ -99,7 +99,7 @@ class WatchdogService : Service() {
 
     private fun buildNotification(): Notification {
         val channelId = "shizuku_watchdog"
-        val channelName = "Shizuku Watchdog"
+        val channelName = "Watchdog"
 
         val channel = NotificationChannel(
             channelId,
@@ -110,7 +110,7 @@ class WatchdogService : Service() {
         manager.createNotificationChannel(channel)
 
         return NotificationCompat.Builder(this, channelId)
-            .setContentTitle("Shizuku watchdog is running")
+            .setContentTitle(getString(R.string.watchdog_running))
             .setSmallIcon(R.drawable.ic_system_icon)
             .setOngoing(true)
             .build()

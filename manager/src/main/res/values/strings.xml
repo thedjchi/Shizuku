@@ -197,6 +197,9 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
     <string name="wadb_permission_error_notification_content">Shizuku needs WRITE_SECURE_SETTINGS to start on boot. Tap to learn how to grant it.</string>
     <string name="wadb_notification_channel">ADB auto-start service</string>
 
+    <!-- Watchdog -->
+    <string name="watchdog_running">Watchdog is running</string>
+
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Can\'t start browser</string>
     <string name="toast_copied_to_clipboard">%s\nhas been copied to clipboard.</string>
