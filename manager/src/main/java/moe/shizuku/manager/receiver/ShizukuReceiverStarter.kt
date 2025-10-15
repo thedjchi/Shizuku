@@ -49,7 +49,7 @@ object ShizukuReceiverStarter {
         }
     }
 
-    fun showNotification(context: Context, isWifiRequired: Boolean) {
+    fun showNotification(context: Context, isWifiRequired: Boolean, msg: String? = null) {
 
         val channel = NotificationChannel(
             CHANNEL_ID,
@@ -86,10 +86,17 @@ object ShizukuReceiverStarter {
             context, 0, wifiIntent, PendingIntent.FLAG_IMMUTABLE
         )
 
-        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+        val nb = NotificationCompat.Builder(context, CHANNEL_ID)
+        
+        if (msg != null) {
+            nb.setContentText(msg)
+        } else if (isWifiRequired) {
+            nb.setContentText(context.getString(R.string.wadb_notification_wifi_required))
+        }
+
+        val notification = nb
             .setSmallIcon(R.drawable.ic_system_icon)
             .setContentTitle(context.getString(R.string.wadb_notification_title))
-            .setContentText(context.getString(R.string.wadb_notification_content))
             .setOngoing(true)
             .setSilent(true)
             .addAction(R.drawable.ic_server_restart, context.getString(R.string.wadb_notification_attempt_now), attemptNowPendingIntent)
