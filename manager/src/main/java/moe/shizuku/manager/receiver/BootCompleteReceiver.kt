@@ -9,8 +9,6 @@ import moe.shizuku.manager.service.WatchdogService
 class BootCompleteReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action != Intent.ACTION_BOOT_COMPLETED) return
-
-        if(ShizukuSettings.getWatchdog()) WatchdogService.start(context)
         ShizukuReceiverStarter.start(context)
     }
 }
