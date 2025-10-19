@@ -1,7 +1,17 @@
-name: Bug report
+name: Bug Report
 description: Report a bug of Shizuku
+labels: bug
 
 body:
+  - type: checkboxes
+    id: read_wiki
+    attributes:
+      label: Wiki
+      description: Please read the [wiki](https://example.com) and follow all relevant troubleshooting steps before creating an issue 
+      options:
+        - label: I read the wiki and followed all troubleshooting steps
+          required: true
+
   - type: checkboxes
     id: requirements
     attributes:
@@ -14,16 +24,17 @@ body:
   - type: input
     id: version
     attributes:
-      label: Latest Shizuku version
+      label: Latest Shizuku Version
     validations:
       required: true
 
-  - type: input
+  - type: checkboxes
     id: shizuku_version
     attributes:
-      label: Version in use
-    validations:
-      required: true
+      label: Version In Use
+      options:
+        - label: I am using the latest version of Shizuku
+          required: true
 
   - type: dropdown
     id: mode
@@ -39,7 +50,7 @@ body:
   - type: input
     id: android_version
     attributes:
-      label: Android version
+      label: Android Version
     validations:
       required: true
 
@@ -51,17 +62,12 @@ body:
       required: true
 
   - type: textarea
-    id: reproducer
-    attributes:
-      label: What did you do
-
-  - type: textarea
     id: logs
     attributes:
-      label: What happened
-      description: You can upload log and screenshot
+      label: Issue Description
+      description: Please upload any relevant logs and/or screenshots
 
   - type: textarea
-    id: expected-behaviour
+    id: reproducer
     attributes:
-      label: What do you expect
+      label: Steps To Reproduce
