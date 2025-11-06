@@ -93,6 +93,7 @@ abstract class HomeActivity : AppBarActivity() {
     override fun onResume() {
         super.onResume()
         checkServerStatus()
+        appsModel.load()
     }
 
     override fun onPause() {
