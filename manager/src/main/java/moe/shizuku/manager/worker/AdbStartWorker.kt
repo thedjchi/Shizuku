@@ -93,9 +93,10 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         var msgNotif = ""
         if (emailIntent.resolveActivity(context.packageManager) != null) {
             val emailPendingIntent = PendingIntent.getActivity(
-                context, 0, emailIntent, PendingIntent.FLAG_IMMUTABLE
+                context, 0, emailIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             )
             nb.setContentIntent(emailPendingIntent)
+            nb.setAutoCancel(true)
             msgNotif = "$e. ${context.getString(R.string.wadb_error_notify_dev)}"
         } else {
             msgNotif = "$e. ${context.getString(R.string.wadb_error_send_email)} ${context.getString(R.string.support_email)}"

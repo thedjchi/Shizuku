@@ -63,7 +63,7 @@ object ShizukuReceiverStarter {
             putExtra("notification_id", NOTIFICATION_ID)
         }
         val cancelPendingIntent = PendingIntent.getBroadcast(
-            context, 0, cancelIntent, PendingIntent.FLAG_IMMUTABLE
+            context, 0, cancelIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
         val attemptNowIntent = Intent(context, NotifAttemptReceiver::class.java).apply {
@@ -71,19 +71,19 @@ object ShizukuReceiverStarter {
             putExtra("is_wifi_required", isWifiRequired)
         }
         val attemptNowPendingIntent = PendingIntent.getBroadcast(
-            context, 0, attemptNowIntent, PendingIntent.FLAG_IMMUTABLE
+            context, 0, attemptNowIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
         val restoreIntent = Intent(context, NotifRestoreReceiver::class.java).apply {
             putExtra("is_wifi_required", isWifiRequired)
         }
         val restorePendingIntent = PendingIntent.getBroadcast(
-            context, 0, restoreIntent, PendingIntent.FLAG_IMMUTABLE
+            context, 0, restoreIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
         val wifiIntent = Intent(Settings.Panel.ACTION_INTERNET_CONNECTIVITY)
         val wifiPendingIntent = PendingIntent.getActivity(
-            context, 0, wifiIntent, PendingIntent.FLAG_IMMUTABLE
+            context, 0, wifiIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
         val nb = NotificationCompat.Builder(context, CHANNEL_ID)
