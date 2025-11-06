@@ -56,9 +56,7 @@ class ApplicationManagementActivity : AppBarActivity() {
                 }
             }
         }
-        if (viewModel.packages.value == null) {
-            viewModel.load()
-        }
+        viewModel.load()
 
         val recyclerView = binding.list
         recyclerView.adapter = adapter
