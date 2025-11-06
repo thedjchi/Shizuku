@@ -157,7 +157,8 @@
                 The API service can stop unexpectedly for various reasons (e.g., when connecting to Android Auto over USB).
                 This prevents the other apps from functioning properly.
                 The watchdog service would ensure the API is always available for the apps to use.
-                The watchdog service would be opt-in and toggleable via settings, so users can choose to disable it at any time if not desired."/>
+                The watchdog service uses minimal resources and battery. There is no constant polling; it only reacts when the API service stops unexpectedly.
+                The watchdog service is opt-in and toggleable via settings, so users can choose to disable it at any time if not desired."/>
         </service>
 
         <receiver
