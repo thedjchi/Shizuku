@@ -154,11 +154,12 @@ class WatchdogService : Service() {
         val disablePendingIntent = PendingIntent.getActivity(this, 0, disableIntent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
 
         val notification = NotificationCompat.Builder(this, channelId)
-            .setContentTitle("Shizuku crashed recently")
-            .setContentText("Learn about potential fixes")
+            .setContentTitle(getString(R.string.watchdog_shizuku_crashed_title))
+            .setContentText(getString(R.string.watchdog_shizuku_crashed_text))
             .setSmallIcon(R.drawable.ic_system_icon)
-            .addAction(0, "Learn More", learnMorePendingIntent)
-            .addAction(0, "Turn Off Alerts", disablePendingIntent)
+            .setContentIntent(learnMorePendingIntent)
+            .setAutoCancel(true)
+            .addAction(0, getString(R.string.watchdog_shizuku_crashed_action_turn_off_alerts), disablePendingIntent)
             .build()
 
         nm.notify(NOTIFICATION_ID_CRASH, notification)
