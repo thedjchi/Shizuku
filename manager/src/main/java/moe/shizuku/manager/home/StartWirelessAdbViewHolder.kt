@@ -61,7 +61,7 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
             onAdbClicked(v.context, scope)
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        if (EnvironmentUtils.isTlsSupported()) {
             binding.button3.setOnClickListener { v: View ->
                 CustomTabsHelper.launchUrlOrCopy(v.context, Helps.ADB_ANDROID11.get())
             }
