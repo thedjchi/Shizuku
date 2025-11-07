@@ -119,7 +119,7 @@ public class ShizukuSettings {
     }
     
     public static boolean getWatchdog() {
-        return getPreferences().getBoolean(Keys.KEY_WATCHDOG, true);
+        return getPreferences().getBoolean(Keys.KEY_WATCHDOG, false);
     }
 
     public static boolean getWatchdogState() {
