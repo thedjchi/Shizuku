@@ -61,7 +61,7 @@ abstract class HomeActivity : AppBarActivity() {
             }
         }
 
-        if (!EnvironmentUtils.isTelevision(this)) {
+        if (!EnvironmentUtils.isTelevision()) {
             homeModel.showBatteryOptimizationSnackbar.observe(this) {
                 if (it) {
                     SnackbarHelper.show(

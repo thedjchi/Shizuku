@@ -4,22 +4,27 @@ import android.app.UiModeManager
 import android.content.Context
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.os.Build
 import android.os.SystemProperties
+import moe.shizuku.manager.ShizukuApplication
 import java.io.File
+
+val appContext: Context
+    get() = ShizukuApplication.appContext
 
 object EnvironmentUtils {
 
     @JvmStatic
-    fun isWatch(context: Context): Boolean {
-        return (context.getSystemService(UiModeManager::class.java).currentModeType
+    fun isWatch(): Boolean {
+        return (appContext.getSystemService(UiModeManager::class.java).currentModeType
                 == Configuration.UI_MODE_TYPE_WATCH)
     }
 
     @JvmStatic
-    fun isTelevision(context: Context): Boolean {
-        return (context.getSystemService(UiModeManager::class.java).currentModeType
+    fun isTelevision(): Boolean {
+        return (appContext.getSystemService(UiModeManager::class.java).currentModeType
                 == Configuration.UI_MODE_TYPE_TELEVISION ||
-                context.packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK))
+                appContext.packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK))
     }
 
     fun isRooted(): Boolean {
@@ -29,6 +34,7 @@ object EnvironmentUtils {
     fun getAdbTcpPort(): Int {
         var port = SystemProperties.getInt("service.adb.tcp.port", -1)
         if (port == -1) port = SystemProperties.getInt("persist.adb.tcp.port", -1)
+        if (port == -1 && isTelevision() && Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) port = 5555
         return port
     }
 }

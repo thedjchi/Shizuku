@@ -30,6 +30,10 @@ class ShizukuApplication : Application() {
                 System.loadLibrary("adb")
             }
         }
+
+        lateinit var appContext: Context
+            private set
+
     }
 
     private fun init(context: Context) {
@@ -44,6 +48,7 @@ class ShizukuApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         application = this
+        appContext = applicationContext
         init(this)
     }
 

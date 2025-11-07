@@ -154,7 +154,7 @@ public class ShizukuSettings {
     @AppCompatDelegate.NightMode
     public static int getNightMode() {
         int defValue = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
-        if (EnvironmentUtils.isWatch(ActivityThread.currentActivityThread().getApplication())) {
+        if (EnvironmentUtils.isWatch()) {
             defValue = AppCompatDelegate.MODE_NIGHT_YES;
         }
         return getPreferences().getInt(Keys.KEY_NIGHT_MODE, defValue);

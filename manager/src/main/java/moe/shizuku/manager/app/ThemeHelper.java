@@ -19,7 +19,7 @@ public class ThemeHelper {
     private static final String THEME_BLACK = "BLACK";
 
     public static boolean isBlackNightTheme(Context context) {
-        return ShizukuSettings.getPreferences().getBoolean(ShizukuSettings.Keys.KEY_BLACK_NIGHT_THEME, EnvironmentUtils.isWatch(context));
+        return ShizukuSettings.getPreferences().getBoolean(ShizukuSettings.Keys.KEY_BLACK_NIGHT_THEME, EnvironmentUtils.isWatch());
     }
 
     public static boolean isUsingSystemColor() {

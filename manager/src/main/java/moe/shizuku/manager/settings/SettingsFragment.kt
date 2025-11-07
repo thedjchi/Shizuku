@@ -279,7 +279,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         onResult: (Boolean) -> Unit
     ): Boolean {
         val context = requireContext()
-        if (!newValue || ShizukuSettings.isIgnoringBatteryOptimizations(context) || EnvironmentUtils.isTelevision(context)) {
+        if (!newValue || ShizukuSettings.isIgnoringBatteryOptimizations(context) || EnvironmentUtils.isTelevision()) {
             onResult(true)
             return true
         }
