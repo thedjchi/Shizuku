@@ -127,7 +127,7 @@ abstract class HomeActivity : AppBarActivity() {
                 binding.sourceCode.movementMethod = LinkMovementMethod.getInstance()
                 binding.sourceCode.text = getString(
                     R.string.about_view_source_code,
-                    "<b><a href=\"https://github.com/RikkaApps/Shizuku\">GitHub</a></b>"
+                    "<b><a href=\"https://github.com/thedjchi/Shizuku\">GitHub</a></b>"
                 ).toHtml()
                 binding.icon.setImageBitmap(
                     AppIconCache.getOrLoadBitmap(
@@ -138,9 +138,16 @@ abstract class HomeActivity : AppBarActivity() {
                     )
                 )
                 binding.versionName.text = packageManager.getPackageInfo(packageName, 0).versionName
-                MaterialAlertDialogBuilder(this)
+
+                val dialog = MaterialAlertDialogBuilder(this)
                     .setView(binding.root)
-                    .show()
+                    .create()
+
+                binding.btnClose.setOnClickListener {
+                    dialog.dismiss()
+                }
+                
+                dialog.show()
                 true
             }
             R.id.action_stop -> {
