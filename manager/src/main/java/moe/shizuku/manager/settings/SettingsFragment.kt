@@ -122,14 +122,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         tcpModePreference.apply {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            if (EnvironmentUtils.isTlsSupported()) {
+                summary = context.getString(R.string.settings_tcp_mode_summary)
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean)  {
                         tcpPortPreference.isVisible = newValue        
                         true
                     } else false
                 }
-            } else isVisible = false
+            } else if (EnvironmentUtils.isTelevision()) {
+                isEnabled = false
+                isChecked = true
+            } else {
+                isVisible = false
+            }
         }
 
         tcpPortPreference.apply {

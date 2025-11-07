@@ -98,12 +98,9 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
 
         val tcpPort = EnvironmentUtils.getAdbTcpPort()
         val tcpMode = ShizukuSettings.getTcpMode()
-        val isTlsSupported = if (EnvironmentUtils.isTelevision())
-            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
-            else Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 
         // If ADB is NOT listening to a TCP port and the device doesn't support TLS, inform the user
-        if (tcpPort <= 0 && !isTlsSupported) {
+        if (tcpPort <= 0 && !EnvironmentUtils.isTlsSupported()) {
             WadbNotEnabledDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         // If ADB IS NOT listening to a TCP port but the device supports TLS, start mDns discovery
         } else if (tcpPort <= 0) {

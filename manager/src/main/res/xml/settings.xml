@@ -15,7 +15,6 @@
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="tcp_mode"
-            android:summary="@string/settings_tcp_mode_summary"
             android:title="@string/settings_tcp_mode" 
             android:defaultValue="true" />
 

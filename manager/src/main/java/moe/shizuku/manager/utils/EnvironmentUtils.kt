@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import android.os.Build
 import android.os.SystemProperties
 import moe.shizuku.manager.ShizukuApplication
+import moe.shizuku.manager.ShizukuSettings
 import java.io.File
 
 val appContext: Context
@@ -27,6 +28,12 @@ object EnvironmentUtils {
                 appContext.packageManager.hasSystemFeature(PackageManager.FEATURE_LEANBACK))
     }
 
+    fun isTlsSupported(): Boolean {
+        return if (isTelevision())
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+            else Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
+    }
+
     fun isRooted(): Boolean {
         return System.getenv("PATH")?.split(File.pathSeparatorChar)?.find { File("$it/su").exists() } != null
     }
@@ -34,7 +41,7 @@ object EnvironmentUtils {
     fun getAdbTcpPort(): Int {
         var port = SystemProperties.getInt("service.adb.tcp.port", -1)
         if (port == -1) port = SystemProperties.getInt("persist.adb.tcp.port", -1)
-        if (port == -1 && isTelevision() && Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) port = 5555
+        if (port == -1 && isTelevision() && !isTlsSupported()) port = ShizukuSettings.getTcpPort()
         return port
     }
 }
