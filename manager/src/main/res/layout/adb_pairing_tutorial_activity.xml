@@ -264,6 +264,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="-8dp"
                     android:text="@string/development_settings"
+                    app:backgroundTint="@color/button_background_color"
                     app:icon="@drawable/ic_outline_open_in_new_24"
                     app:iconPadding="16dp" />
 

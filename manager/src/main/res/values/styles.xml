@@ -18,6 +18,7 @@
     <style name="CardButton" parent="Widget.Material3.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/button_background_color</item>
         <item name="iconPadding">12dp</item>
     </style>
 
