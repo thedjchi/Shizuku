@@ -35,7 +35,7 @@ object ShizukuReceiverStarter {
 
         if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
             rootStart(context)
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
+        } else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isTelevision())
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
                     val isWifiRequired = EnvironmentUtils.getAdbTcpPort() <= 0

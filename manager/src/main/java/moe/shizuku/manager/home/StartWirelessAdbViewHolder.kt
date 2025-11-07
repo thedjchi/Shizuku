@@ -91,16 +91,20 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
         }
         
         val adbEnabled = Settings.Global.getInt(cr, Settings.Global.ADB_ENABLED, 0)
+        if (adbEnabled == 0) {
+            WadbEnableUsbDebuggingDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+            return
+        }
 
         val tcpPort = EnvironmentUtils.getAdbTcpPort()
         val tcpMode = ShizukuSettings.getTcpMode()
+        val isTlsSupported = if (EnvironmentUtils.isTelevision())
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+            else Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 
-        // If ADB is not listening to a TCP port and the device doesn't support TLS, inform the user
-        if (tcpPort <= 0 && Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
+        // If ADB is NOT listening to a TCP port and the device doesn't support TLS, inform the user
+        if (tcpPort <= 0 && !isTlsSupported) {
             WadbNotEnabledDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
-        // If USB debugging is off and Shizuku couldn't toggle it, prompt the user to toggle it manually
-        } else if (adbEnabled == 0) {
-            WadbEnableUsbDebuggingDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         // If ADB IS NOT listening to a TCP port but the device supports TLS, start mDns discovery
         } else if (tcpPort <= 0) {
             AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
@@ -143,8 +147,7 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
 
     @RequiresApi(Build.VERSION_CODES.R)
     private fun onPairClicked(context: Context) {
-        val legacyPairingOverride = ShizukuSettings.getLegacyPairing()
-        if ((context.display?.displayId ?: -1) > 0 || legacyPairingOverride) {
+        if ((context.display?.displayId ?: -1) > 0 || ShizukuSettings.getLegacyPairing()) {
             // Running in a multi-display environment (e.g., Windows Subsystem for Android),
             // pairing dialog can be displayed simultaneously with Shizuku.
             // Input from notification is harder to use under this situation.
