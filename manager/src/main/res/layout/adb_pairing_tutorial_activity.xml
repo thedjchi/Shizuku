@@ -27,7 +27,8 @@
             style="@style/FilledCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:focusable="false">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -264,10 +265,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="-8dp"
                     android:text="@string/development_settings"
-                    android:textColor="@color/button_text_color"
-                    app:backgroundTint="@color/button_background_color"
                     app:icon="@drawable/ic_outline_open_in_new_24"
-                    app:iconTint="@color/button_text_color"
                     app:iconPadding="16dp" />
 
             </LinearLayout>
