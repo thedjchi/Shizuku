@@ -22,6 +22,7 @@ import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.management.appsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
 import moe.shizuku.manager.utils.AppIconCache
+import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.ktx.unsafeLazy
 import rikka.lifecycle.Status
@@ -59,20 +60,23 @@ abstract class HomeActivity : AppBarActivity() {
                 ShizukuSettings.setLastLaunchMode(if (status.uid == 0) ShizukuSettings.LaunchMethod.ROOT else ShizukuSettings.LaunchMethod.ADB)
             }
         }
-        homeModel.showBatteryOptimizationSnackbar.observe(this) {
-            if (it) {
-                SnackbarHelper.show(
-                    this,
-                    binding.root,
-                    msg = getString(R.string.snackbar_battery_optimization_home),
-                    duration = Snackbar.LENGTH_INDEFINITE,
-                    actionText = getString(R.string.snackbar_action_fix),
-                    action = { ShizukuSettings.requestIgnoreBatteryOptimizations(this, null) }
-                )
-                homeModel.batteryOptimizationHandled()
+
+        if (!EnvironmentUtils.isTelevision(this)) {
+            homeModel.showBatteryOptimizationSnackbar.observe(this) {
+                if (it) {
+                    SnackbarHelper.show(
+                        this,
+                        binding.root,
+                        msg = getString(R.string.snackbar_battery_optimization_home),
+                        duration = Snackbar.LENGTH_INDEFINITE,
+                        actionText = getString(R.string.snackbar_action_fix),
+                        action = { ShizukuSettings.requestIgnoreBatteryOptimizations(this, null) }
+                    )
+                    homeModel.batteryOptimizationHandled()
+                }
             }
+            homeModel.checkBatteryOptimization(applicationContext)
         }
-        homeModel.checkBatteryOptimization(applicationContext)
 
         appsModel.grantedCount.observe(this) {
             if (it.status == Status.SUCCESS) {
