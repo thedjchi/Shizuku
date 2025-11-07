@@ -7,7 +7,8 @@
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
     app:liftOnScroll="true"
-    tools:viewBindingIgnore="true">
+    tools:viewBindingIgnore="true"
+    android:touchscreenBlocksFocus="false" >
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -18,6 +19,7 @@
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
         app:layout_collapseMode="pin"
-        tools:title="Title" />
+        tools:title="Title"
+        android:touchscreenBlocksFocus="false" />
 
 </com.google.android.material.appbar.AppBarLayout>

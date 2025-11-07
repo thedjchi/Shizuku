@@ -9,7 +9,8 @@
     app:consumeSystemWindowsInsets="start|end"
     app:edgeToEdge="true"
     app:fitsSystemWindowsInsets="start|end"
-    tools:viewBindingIgnore="true">
+    tools:viewBindingIgnore="true"
+    android:touchscreenBlocksFocus="false">
 
     <include layout="@layout/appbar" />
 
