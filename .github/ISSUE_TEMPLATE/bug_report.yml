@@ -1,5 +1,6 @@
-name: Bug Report
-description: Report a bug of Shizuku
+name: 🐞 Bug Report
+description: Help Us fix bugs by Reporting issues you've Encountered
+titel: "[BUG] "
 labels: bug
 
 body:
@@ -41,9 +42,9 @@ body:
     attributes:
       label: Mode
       options:
-        - adb
-        - root
-        - manual
+        - Adb
+        - Root
+        - Mianual
     validations:
       required: true
 
@@ -71,3 +72,8 @@ body:
     id: reproducer
     attributes:
       label: Steps To Reproduce
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See Error
+      
