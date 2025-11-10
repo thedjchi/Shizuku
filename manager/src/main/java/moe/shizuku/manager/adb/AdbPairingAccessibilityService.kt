@@ -27,6 +27,8 @@ class AdbPairingAccessibilityService : AccessibilityService() {
     var port: Int? = null
     var password: String? = null
 
+    private val handler = Handler(Looper.getMainLooper())
+
     override fun onServiceConnected() {
         super.onServiceConnected()
         
@@ -42,7 +44,7 @@ class AdbPairingAccessibilityService : AccessibilityService() {
         }
         startActivity(intent)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        handler.postDelayed({
             Toast.makeText(this, "Shizuku pairing service timed out.", Toast.LENGTH_LONG).show()
             disableSelf()
         }, 60_000)
@@ -109,5 +111,10 @@ class AdbPairingAccessibilityService : AccessibilityService() {
     }
 
     override fun onInterrupt() {}
+
+    override fun onUnbind(intent: Intent?): Boolean {
+        handler.removeCallbacksAndMessages(null)
+        return super.onUnbind(intent)
+    }
 
 }
