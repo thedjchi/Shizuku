@@ -39,12 +39,15 @@
     <string name="cannot_connect_port">Can\'t connect to wireless debugging service.</string>
     <string name="dialog_wireless_adb_not_enabled">Wireless debugging is not enabled.\nNote, before Android 11, to enable wireless debugging, computer connection is a must.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging is not enabled.\nPlease enable it in \"Developer Options\".</string>
-    <string name="dialog_adb_pairing_message">Please start paring by the following steps: \"Developer Options\" - \"Wireless debugging\" - \"Pairing device using pairing code\".\n\nAfter the pairing process starts, you will able to input the pairing code.</string>
+    <string name="dialog_adb_pairing_message">Please start pairing by performing the following steps: \"Developer Options\" - \"Wireless debugging\" - \"Pair device with pairing code.\"\n\nAfter the pairing process starts, you will able to input the pairing code.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Please enable the accessibility service to start the pairing process. This allows Shizuku to detect the pairing code.\n\nThe accessibility service will be turned off when the code is found or after 1 minute to save energy.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Please navigate to \"Developer Options\" > \"Wireless debugging\" > \"Pair device with pairing code.\" Shizuku will automatically detect the pairing code.</string>
     <string name="adb_pairing_requires_multi_window">Please enter split-screen (multi-window) mode first.</string>
     <string name="adb_pairing_requires_multi_window_reason">The system requires the pairing dialog always visible, using split-screen mode is the only way to let this app and system dialog visible at the same time.</string>
     <string name="adb_error_key_store">Unable to generate key for wireless debugging.\nThis may be because KeyStore mechanism of this device is broken.</string>
     <string name="adb_error_stop_tcp">Failed to stop ADB over TCP</string>
     <string name="adb_pair_required">Please go through the pairing step first.</string>
+    <string name="enable">Enable</string>
     <string name="development_settings">Developer options</string>
     <string name="notification_settings">Notification options</string>
     <string name="adb_pairing_tutorial_title">Pair Shizuku with your device</string>
@@ -208,6 +211,7 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
     <string name="dialog_cannot_open_browser_title">Can\'t start browser</string>
     <string name="toast_copied_to_clipboard">%s\nhas been copied to clipboard.</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> has been copied to clipboard.]]></string>
+    <string name="accessibility_service_description">Provides pairing support for devices (e.g., TVs running Android 14+) where notifications or split screen cannot be used.\n\nEnables Shizuku to extract the pairing code from the wireless debugging pairing screen. It will disable itself once the pairing code is found.</string>
 
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s does not support modern Shizuku</string>

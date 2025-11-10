@@ -20,6 +20,7 @@ import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.databinding.AdbDialogBinding
 import moe.shizuku.manager.starter.StarterActivity
 import moe.shizuku.manager.utils.EnvironmentUtils
+import android.util.Log
 
 @RequiresApi(Build.VERSION_CODES.R)
 class AdbDialogFragment : DialogFragment() {
@@ -79,7 +80,9 @@ class AdbDialogFragment : DialogFragment() {
         }
 
         port.observe(this) {
+            Log.d("ShizukuDebug", "Found port $it")
             if (it > 65535 || it < 1) return@observe
+            port.removeObservers(this)
             startAndDismiss(it)
         }
     }

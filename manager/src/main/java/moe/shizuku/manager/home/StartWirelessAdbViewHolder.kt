@@ -112,8 +112,8 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
         // Otherwise ADB IS listening to a TCP port and the user wants to keep it open. Start Shizuku via TCP
         } else {
             val intent = Intent(context, StarterActivity::class.java).apply {
-                    putExtra(StarterActivity.EXTRA_PORT, tcpPort)
-                }
+                putExtra(StarterActivity.EXTRA_PORT, tcpPort)
+            }
             context.startActivity(intent)
         }
     }
@@ -149,6 +149,8 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
             // pairing dialog can be displayed simultaneously with Shizuku.
             // Input from notification is harder to use under this situation.
             AdbPairDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+        } else if (EnvironmentUtils.isTelevision()) {
+            AdbPairAccessibilityDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         } else {
             context.startActivity(Intent(context, AdbPairingTutorialActivity::class.java))
         }
