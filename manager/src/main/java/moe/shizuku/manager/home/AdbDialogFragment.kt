@@ -80,7 +80,6 @@ class AdbDialogFragment : DialogFragment() {
         }
 
         port.observe(this) {
-            Log.d("ShizukuDebug", "Found port $it")
             if (it > 65535 || it < 1) return@observe
             port.removeObservers(this)
             startAndDismiss(it)

@@ -122,7 +122,7 @@ public class ShizukuSettings {
         return getPreferences().getBoolean(Keys.KEY_WATCHDOG, false);
     }
 
-    public static boolean getWatchdogState() {
+    public static boolean isWatchdogRunning() {
         return WatchdogService.isRunning();
     }
 

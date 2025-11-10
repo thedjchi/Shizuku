@@ -1,8 +1,10 @@
 package moe.shizuku.manager
 
 import android.app.Application
+import android.app.ForegroundServiceStartNotAllowedException
 import android.content.Context
 import android.os.Build
+import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import com.topjohnwu.superuser.Shell
 import moe.shizuku.manager.ktx.logd
@@ -42,7 +44,14 @@ class ShizukuApplication : Application() {
         AppCompatDelegate.setDefaultNightMode(ShizukuSettings.getNightMode())
 
         ShizukuStateMachine.init()
-        if(ShizukuSettings.getWatchdog()) WatchdogService.start(context)
+        if(ShizukuSettings.getWatchdog() && !ShizukuSettings.isWatchdogRunning()) {
+            try {
+                WatchdogService.start(context)
+            } catch (e: Exception) {
+                if (e !is ForegroundServiceStartNotAllowedException)
+                    Log.e("ShizukuApplication", "Failed to start WatchdogService: ${e.message}" )
+            }
+        }
     }
 
     override fun onCreate() {

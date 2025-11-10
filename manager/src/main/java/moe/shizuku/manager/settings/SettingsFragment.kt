@@ -106,7 +106,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         watchdogPreference.apply {
-            isChecked = ShizukuSettings.getWatchdogState()
+            isChecked = ShizukuSettings.isWatchdogRunning()
 
             setOnPreferenceChangeListener { _, newValue ->
                 if (newValue is Boolean) {
