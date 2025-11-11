@@ -5,7 +5,8 @@
 
     <dimen name="request_dialog_text_size">18sp</dimen>
 
-    <dimen name="list_padding">16dp</dimen>
+    <dimen name="list_header_padding">16dp</dimen>
+    <dimen name="list_padding">32dp</dimen>
 
     <dimen name="toolbar_content_padding_start">16dp</dimen>
     <dimen name="toolbar_content_padding_start_with_navigation">72dp</dimen>

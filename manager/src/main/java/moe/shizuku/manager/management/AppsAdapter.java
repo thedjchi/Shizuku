@@ -6,12 +6,16 @@ import java.util.List;
 
 import rikka.recyclerview.BaseRecyclerViewAdapter;
 import rikka.recyclerview.ClassCreatorPool;
+import moe.shizuku.manager.authorization.AuthorizationManager;
 
 public class AppsAdapter extends BaseRecyclerViewAdapter<ClassCreatorPool> {
+
+    public static final class HeaderMarker {}
 
     public AppsAdapter() {
         super();
 
+        getCreatorPool().putRule(HeaderMarker.class, ToggleAllViewHolder.CREATOR);
         getCreatorPool().putRule(PackageInfo.class, AppViewHolder.CREATOR);
         getCreatorPool().putRule(Object.class, EmptyViewHolder.CREATOR);
         setHasStableIds(true);
@@ -32,6 +36,7 @@ public class AppsAdapter extends BaseRecyclerViewAdapter<ClassCreatorPool> {
         if (data.isEmpty()) {
             getItems().add(new Object());
         } else {
+            getItems().add(new HeaderMarker());
             getItems().addAll(data);
         }
         notifyDataSetChanged();
