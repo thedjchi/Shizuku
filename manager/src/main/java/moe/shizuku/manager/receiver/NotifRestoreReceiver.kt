@@ -6,7 +6,6 @@ import android.content.Intent
 
 class NotifRestoreReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        val isWifiRequired = intent.getBooleanExtra("is_wifi_required", true)
-        ShizukuReceiverStarter.showNotification(context, isWifiRequired)
+        ShizukuReceiverStarter.showNotification(context)
     }
 }

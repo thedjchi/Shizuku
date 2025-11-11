@@ -13,24 +13,25 @@ import java.io.EOFException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 import moe.shizuku.manager.R
+import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.EnvironmentUtils
+import android.util.Log
 
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
-        val isWifiRequired = EnvironmentUtils.getAdbTcpPort() <= 0
         try {
-            if (isWifiRequired) {
+            if (EnvironmentUtils.isWifiRequired()) {
                 ShizukuReceiverStarter.showNotification(
                     applicationContext,
-                    isWifiRequired,
                     applicationContext.getString(R.string.wadb_notification_wifi_found)
                 )
             }
@@ -40,7 +41,12 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
             Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
             Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
 
-            val port = EnvironmentUtils.getAdbTcpPort().takeIf { it > 0 } ?: withTimeout(15000) {
+            val tcpPort = EnvironmentUtils.getAdbTcpPort()
+            if (tcpPort > 0 && !ShizukuSettings.getTcpMode()) {
+                AdbStarter.stopTcp(applicationContext, tcpPort)
+            }
+
+            val port = EnvironmentUtils.getAdbTcpPort().takeIf { !EnvironmentUtils.isWifiRequired() } ?: withTimeout(15000) {
                 callbackFlow {
                     Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
                     val adbMdns = AdbMdns(applicationContext, AdbMdns.TLS_CONNECT) { port ->
@@ -54,17 +60,14 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
             }
             AdbStarter.startAdb(applicationContext, port)
 
-            val notificationId = inputData.getInt("notification_id", -1)
-            if (notificationId != -1) {
-                val nm = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-                nm.cancel(notificationId)
-            }
+            val nm = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            nm.cancel(ShizukuReceiverStarter.NOTIFICATION_ID)
 
             return Result.success()
         } catch (e: Exception) {
             if (e !is CancellationException && e !is EOFException)
                 showErrorNotification(applicationContext, e)
-            ShizukuReceiverStarter.showNotification(applicationContext, isWifiRequired)
+            ShizukuReceiverStarter.showNotification(applicationContext)
             return Result.retry()
         }
     }
@@ -114,17 +117,14 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
     }
 
     companion object {
-        fun enqueue(context: Context, isWifiRequired: Boolean, notificationId: Int) {
+        fun enqueue(context: Context) {
             val cb = Constraints.Builder()
-            if (isWifiRequired)
+            if (EnvironmentUtils.isWifiRequired())
                 cb.setRequiredNetworkType(NetworkType.UNMETERED)
             val constraints = cb.build()
 
-            val inputData = workDataOf("notification_id" to notificationId)
-
             val request = OneTimeWorkRequestBuilder<AdbStartWorker>()
                 .setConstraints(constraints)
-                .setInputData(inputData)
                 .build()
 
             WorkManager.getInstance(context).enqueueUniqueWork(

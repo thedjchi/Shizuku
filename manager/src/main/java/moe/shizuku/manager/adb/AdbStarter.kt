@@ -4,16 +4,22 @@ import android.Manifest.permission.WRITE_SECURE_SETTINGS
 import android.content.pm.PackageManager
 import android.content.Context
 import android.provider.Settings
+import android.widget.Toast
 import java.io.EOFException
 import java.net.SocketException
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
+import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbClient
 import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
 import moe.shizuku.manager.starter.Starter
+import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
+import rikka.shizuku.Shizuku
 
 object AdbStarter {
     suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
@@ -21,7 +27,7 @@ object AdbStarter {
             command(cmd) { log?.invoke(String(it)) }
         }
 
-        log?.invoke("Starting with wireless adb...\n")
+        log?.invoke("Starting with wireless adb...")
         
         val key = runCatching { AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku") }
             .getOrElse {
@@ -33,18 +39,24 @@ object AdbStarter {
         val tcpMode = ShizukuSettings.getTcpMode()
         val tcpPort = ShizukuSettings.getTcpPort()
         if (tcpMode && activePort != tcpPort) {
-            log?.invoke("Connecting on port $activePort...")
+            log?.invoke("\nConnecting on port $activePort...")
+
             AdbClient("127.0.0.1", activePort, key).use { client ->
                 client.connect()
+
+                log?.invoke("Successfully connected on port $activePort...")
+
                 activePort = tcpPort
-                log?.invoke("restarting in TCP mode port: $activePort")
+                log?.invoke("\nRestarting in TCP mode port: $activePort")
+
                 runCatching {
                     client.command("tcpip:$activePort")
                 }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts in TCP mode
             }
-        }  
+        }
         
-        log?.invoke("Connecting on port $activePort...\n")
+        log?.invoke("\nConnecting on port $activePort...")
+
         AdbClient("127.0.0.1", activePort, key).use { client ->
             var delayTime = 1000L
             val maxAttempts = 5
@@ -54,10 +66,16 @@ object AdbStarter {
                     client.connect()
                     break
                 } catch (e: Exception) {
-                    if (attempt == maxAttempts || e is CancellationException) throw e
+                    if (attempt == maxAttempts || e is CancellationException) {
+                        log?.invoke("\nFailed to connect on port $activePort...")
+                        throw e
+                    }
                     delayTime += 1000
                 }
             }
+
+            log?.invoke("\nSuccessfully connected on port $activePort...")
+            
             try {
                 ShizukuStateMachine.setState(ShizukuStateMachine.State.STARTING)
                 client.runCommand("shell:${Starter.internalCommand}")
@@ -70,5 +88,25 @@ object AdbStarter {
 
         if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
             Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 0)
+    }
+
+    suspend fun stopTcp(context: Context, port: Int) {
+        runCatching {
+            val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
+            AdbClient("127.0.0.1", port, key).use { client ->
+                client.connect()
+
+                ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPING)
+                client.command("usb:")
+            }
+        }.onFailure {
+            if (EnvironmentUtils.getAdbTcpPort() > 0) {
+                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp), Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+        }
     }
 }

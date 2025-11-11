@@ -139,6 +139,10 @@ public class ShizukuSettings {
         return getPreferences().getBoolean(Keys.KEY_TCP_MODE, true);
     }
 
+    public static void setTcpMode(boolean enable) {
+        getPreferences().edit().putBoolean(Keys.KEY_TCP_MODE, enable).apply();
+    }
+
     public static int getTcpPort() {
         try {
             return Integer.parseInt(getPreferences().getString(Keys.KEY_TCP_PORT, "5555"));

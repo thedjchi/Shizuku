@@ -34,6 +34,10 @@ object EnvironmentUtils {
             else Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
     }
 
+    fun isWifiRequired(): Boolean {
+        return (getAdbTcpPort() <= 0 || !ShizukuSettings.getTcpMode())
+    }
+
     fun isRooted(): Boolean {
         return System.getenv("PATH")?.split(File.pathSeparatorChar)?.find { File("$it/su").exists() } != null
     }

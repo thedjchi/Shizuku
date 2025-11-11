@@ -5,30 +5,21 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
-import android.os.SystemProperties
 import android.provider.Settings
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import java.io.EOFException
-import java.net.SocketException
-import java.net.Inet4Address
 import moe.shizuku.manager.Helps
 import moe.shizuku.manager.ShizukuSettings
-import moe.shizuku.manager.ShizukuSettings.Keys.*
 import moe.shizuku.manager.R
-import moe.shizuku.manager.adb.AdbClient
-import moe.shizuku.manager.adb.AdbKey
-import moe.shizuku.manager.adb.PreferenceAdbKeyStore
+import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.adb.AdbPairingTutorialActivity
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeStartWirelessAdbBinding
@@ -36,7 +27,6 @@ import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.starter.StarterActivity
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
-import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.content.asActivity
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
@@ -107,7 +97,9 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
             AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         // If ADB IS listening to a TCP port but the user wants to close it and use TLS instead, close the TCP port and start mDns discovery
         } else if (!tcpMode) {
-            stopTcp(context, scope, tcpPort)
+            scope.launch(Dispatchers.IO) {
+                AdbStarter.stopTcp(context, tcpPort)
+            }
             AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         // Otherwise ADB IS listening to a TCP port and the user wants to keep it open. Start Shizuku via TCP
         } else {
@@ -115,30 +107,6 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
                 putExtra(StarterActivity.EXTRA_PORT, tcpPort)
             }
             context.startActivity(intent)
-        }
-    }
-
-    private fun stopTcp(context: Context, scope: CoroutineScope, port: Int) {
-        scope.launch(Dispatchers.IO) {
-            runCatching {
-                val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
-                AdbClient("127.0.0.1", port, key).use { client ->
-                    client.connect()
-
-                    ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPING)
-                    client.command("usb:")
-                }
-            }.onFailure {
-                if (!Shizuku.pingBinder()) {
-                    ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
-                } else {
-                    ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp), Toast.LENGTH_SHORT)
-                            .show()
-                    }
-                }
-            }
         }
     }
 

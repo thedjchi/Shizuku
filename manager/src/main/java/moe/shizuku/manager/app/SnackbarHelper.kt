@@ -22,7 +22,7 @@ object SnackbarHelper {
         snackbar = Snackbar.make(view, msg, duration)
             .setDuration(duration)
         if (action != null) {
-            snackbar!!.setAction(actionText ?: context.getString(R.string.snackbar_action_ok)) { action() }
+            snackbar!!.setAction(actionText ?: context.getString(android.R.string.ok)) { action() }
         }
         if (onDismiss != null) {
             snackbar!!.addCallback(object : Snackbar.Callback() {

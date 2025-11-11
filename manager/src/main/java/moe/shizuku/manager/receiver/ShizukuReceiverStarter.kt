@@ -27,20 +27,20 @@ import rikka.shizuku.Shizuku
 
 object ShizukuReceiverStarter {
 
+    const val NOTIFICATION_ID = 1447
     private const val CHANNEL_ID = "AdbStartWorker"
-    private const val NOTIFICATION_ID = 1447
 
     fun start(context: Context) {
-        if (UserHandleCompat.myUserId() > 0 || Shizuku.pingBinder()) return
+        val togglingTcpMode = (EnvironmentUtils.getAdbTcpPort() > 0) != ShizukuSettings.getTcpMode()
+        if (UserHandleCompat.myUserId() > 0 || (Shizuku.pingBinder() && !togglingTcpMode)) return
 
         if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
             rootStart(context)
         } else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isTelevision())
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
-                    val isWifiRequired = EnvironmentUtils.getAdbTcpPort() <= 0
-                    AdbStartWorker.enqueue(context, isWifiRequired, NOTIFICATION_ID)
-                    showNotification(context, isWifiRequired)
+                    AdbStartWorker.enqueue(context)
+                    showNotification(context)
                 } else {
                     showPermissionErrorNotification(context)
                 }
@@ -49,7 +49,7 @@ object ShizukuReceiverStarter {
         }
     }
 
-    fun showNotification(context: Context, isWifiRequired: Boolean, msg: String? = null) {
+    fun showNotification(context: Context, msg: String? = null) {
 
         val channel = NotificationChannel(
             CHANNEL_ID,
@@ -66,17 +66,12 @@ object ShizukuReceiverStarter {
             context, 0, cancelIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        val attemptNowIntent = Intent(context, NotifAttemptReceiver::class.java).apply {
-            putExtra("notification_id", NOTIFICATION_ID)
-            putExtra("is_wifi_required", isWifiRequired)
-        }
+        val attemptNowIntent = Intent(context, NotifAttemptReceiver::class.java)
         val attemptNowPendingIntent = PendingIntent.getBroadcast(
             context, 0, attemptNowIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        val restoreIntent = Intent(context, NotifRestoreReceiver::class.java).apply {
-            putExtra("is_wifi_required", isWifiRequired)
-        }
+        val restoreIntent = Intent(context, NotifRestoreReceiver::class.java)
         val restorePendingIntent = PendingIntent.getBroadcast(
             context, 0, restoreIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
@@ -90,7 +85,7 @@ object ShizukuReceiverStarter {
         
         if (msg != null) {
             nb.setContentText(msg)
-        } else if (isWifiRequired) {
+        } else if (EnvironmentUtils.isWifiRequired()) {
             nb.setContentText(context.getString(R.string.wadb_notification_wifi_required))
         }
 

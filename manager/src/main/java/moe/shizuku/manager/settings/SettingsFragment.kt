@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -24,7 +25,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.preference.*
 import androidx.preference.Preference.SummaryProvider
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
@@ -41,9 +43,11 @@ import moe.shizuku.manager.ktx.isComponentEnabled
 import moe.shizuku.manager.ktx.setComponentEnabled
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.BootCompleteReceiver
+import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
 import rikka.core.util.ResourceUtils
+import rikka.html.text.HtmlCompat
 import rikka.material.app.LocaleDelegate
 import rikka.recyclerview.addEdgeSpacing
 import rikka.recyclerview.fixEdgeEffect
@@ -51,7 +55,21 @@ import rikka.shizuku.manager.ShizukuLocales
 import rikka.widget.borderview.BorderRecyclerView
 import java.util.*
 
-class SettingsFragment : PreferenceFragmentCompat() {
+class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
+
+    private lateinit var startOnBootPreference: TwoStatePreference
+    private lateinit var watchdogPreference: TwoStatePreference
+    private lateinit var tcpModePreference: TwoStatePreference
+    private lateinit var tcpPortPreference: EditTextPreference
+    private lateinit var tcpLearnMorePreference: Preference
+    private lateinit var languagePreference: ListPreference
+    private lateinit var translationPreference: Preference
+    private lateinit var translationContributorsPreference: Preference
+    private lateinit var nightModePreference: IntegerSimpleMenuPreference
+    private lateinit var blackNightThemePreference: TwoStatePreference
+    private lateinit var useSystemColorPreference: TwoStatePreference
+    private lateinit var helpPreference: Preference
+    private lateinit var reportBugPreference: Preference
 
     private lateinit var batteryOptimizationListener: ActivityResultLauncher<Intent>
     private var batteryOptimizationContinuation: CancellableContinuation<Boolean>? = null
@@ -64,19 +82,19 @@ class SettingsFragment : PreferenceFragmentCompat() {
         preferenceManager.sharedPreferencesMode = Context.MODE_PRIVATE
         setPreferencesFromResource(R.xml.settings, null)
 
-        val startOnBootPreference: TwoStatePreference = findPreference(KEY_START_ON_BOOT)!!
-        val watchdogPreference: TwoStatePreference = findPreference(KEY_WATCHDOG)!!
-        val tcpModePreference: TwoStatePreference = findPreference(KEY_TCP_MODE)!!
-        val tcpPortPreference: EditTextPreference = findPreference(KEY_TCP_PORT)!!
-        val tcpLearnMorePreference: Preference = findPreference(KEY_TCP_LEARN_MORE)!!
-        val languagePreference: ListPreference = findPreference(KEY_LANGUAGE)!!
-        val translationPreference: Preference = findPreference(KEY_TRANSLATION)!!
-        val translationContributorsPreference: Preference = findPreference(KEY_TRANSLATION_CONTRIBUTORS)!!
-        val nightModePreference: IntegerSimpleMenuPreference = findPreference(KEY_NIGHT_MODE)!!
-        val blackNightThemePreference: TwoStatePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
-        val useSystemColorPreference: TwoStatePreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
-        val helpPreference: Preference = findPreference(KEY_HELP)!!
-        val reportBugPreference: Preference = findPreference(KEY_REPORT_BUG)!!
+        startOnBootPreference = findPreference(KEY_START_ON_BOOT)!!
+        watchdogPreference = findPreference(KEY_WATCHDOG)!!
+        tcpModePreference = findPreference(KEY_TCP_MODE)!!
+        tcpPortPreference = findPreference(KEY_TCP_PORT)!!
+        tcpLearnMorePreference = findPreference(KEY_TCP_LEARN_MORE)!!
+        languagePreference = findPreference(KEY_LANGUAGE)!!
+        translationPreference = findPreference(KEY_TRANSLATION)!!
+        translationContributorsPreference = findPreference(KEY_TRANSLATION_CONTRIBUTORS)!!
+        nightModePreference = findPreference(KEY_NIGHT_MODE)!!
+        blackNightThemePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
+        useSystemColorPreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
+        helpPreference = findPreference(KEY_HELP)!!
+        reportBugPreference = findPreference(KEY_REPORT_BUG)!!
 
         batteryOptimizationListener = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             val accepted = ShizukuSettings.isIgnoringBatteryOptimizations(requireContext())
@@ -126,9 +144,21 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 summary = context.getString(R.string.settings_tcp_mode_summary)
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean)  {
-                        tcpPortPreference.isVisible = newValue        
-                        true
-                    } else false
+                        MaterialAlertDialogBuilder(context)
+                            .setTitle(R.string.settings_tcp_mode_dialog_title)
+                            .setMessage(HtmlCompat.fromHtml(
+                                context.getString(R.string.settings_tcp_mode_dialog_message)
+                            ))
+                            .setPositiveButton(android.R.string.ok) { _, _ ->
+                                ShizukuSettings.setTcpMode(newValue)
+                                isChecked = newValue
+                                tcpPortPreference.isVisible = newValue
+                                ShizukuReceiverStarter.start(context)
+                            }
+                            .setNegativeButton(android.R.string.cancel, null)
+                            .show()   
+                    }
+                    false
                 }
             } else if (EnvironmentUtils.isTelevision()) {
                 isEnabled = false
@@ -259,6 +289,25 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 Toast.makeText(context, context.getString(R.string.toast_no_email_app), Toast.LENGTH_SHORT).show()
             }
             true
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        preferenceScreen.sharedPreferences?.registerOnSharedPreferenceChangeListener(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        preferenceScreen.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(this)
+    }
+
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
+        when (key) {
+            KEY_TCP_MODE -> {
+                val newValue = ShizukuSettings.getTcpMode()
+                tcpModePreference.isChecked = newValue
+            }
         }
     }
 
