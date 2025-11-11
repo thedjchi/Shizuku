@@ -18,6 +18,7 @@
         android:background="@null"
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        android:focusedByDefault="true"
         app:layout_collapseMode="pin"
         tools:title="Title"
         android:touchscreenBlocksFocus="false" />
