@@ -146,6 +146,7 @@ With %1$s, in any terminal app, you can connect to and interact with the shell r
     <!-- Toast -->
     <string name="toast_no_email_app">No email app found</string>
     <string name="toast_failed_to_stop">Failed to stop Shizuku</string>
+    <string name="toast_shizuku_already_starting">Shizuku is already starting in the background</string>
 
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Theme</string>

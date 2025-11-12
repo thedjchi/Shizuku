@@ -24,7 +24,6 @@ import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.EnvironmentUtils
-import android.util.Log
 
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
@@ -46,7 +45,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 AdbStarter.stopTcp(applicationContext, tcpPort)
             }
 
-            val port = EnvironmentUtils.getAdbTcpPort().takeIf { !EnvironmentUtils.isWifiRequired() } ?: withTimeout(15000) {
+            val port = tcpPort.takeIf { !EnvironmentUtils.isWifiRequired() } ?: withTimeout(15000) {
                 callbackFlow {
                     Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
                     val adbMdns = AdbMdns(applicationContext, AdbMdns.TLS_CONNECT) { port ->
