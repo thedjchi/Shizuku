@@ -1,5 +1,6 @@
 package moe.shizuku.manager.utils
 
+import android.util.Log
 import java.util.concurrent.atomic.AtomicReference
 import rikka.shizuku.Shizuku
 
@@ -23,6 +24,7 @@ object ShizukuStateMachine {
 
     fun setState(newState: State) {
         currentState.set(newState)
+        Log.d("ShizukuStateMachine", "${ShizukuStateMachine.getState()}")
     }
 
     fun getState(): State? {
