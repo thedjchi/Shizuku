@@ -4,6 +4,8 @@ import android.content.Context
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
@@ -23,6 +25,9 @@ class AdbMdns(
     private var serviceName: String? = null
     private val listener = DiscoveryListener(this)
     private val nsdManager: NsdManager = context.getSystemService(NsdManager::class.java)
+    private val handler = Handler(Looper.getMainLooper())
+    private var restartScheduled = false
+    private var attempts = 0
 
     fun start() {
         if (running) return
@@ -35,6 +40,7 @@ class AdbMdns(
     fun stop() {
         if (!running) return
         running = false
+        handler.removeCallbacksAndMessages(null)
         if (registered) {
             nsdManager.stopServiceDiscovery(listener)
         }
@@ -68,6 +74,17 @@ class AdbMdns(
         ) {
             serviceName = resolvedService.serviceName
             observer.onChanged(resolvedService.port)
+        } else if (running && attempts < 5 && !restartScheduled) {
+            attempts++
+            restartScheduled = true
+            val delay = attempts * 1000L
+            handler.postDelayed({
+                if (registered) nsdManager.stopServiceDiscovery(listener)
+                handler.postDelayed({
+                    if (!registered) nsdManager.discoverServices(serviceType, NsdManager.PROTOCOL_DNS_SD, listener)
+                    restartScheduled = false
+                }, 100L)
+            }, delay)
         }
     }
 
