@@ -4,6 +4,10 @@
 
 This is a **FORK** of Shizuku. If you are looking for the original version, please visit the [RikkaApps/Shizuku](https://github.com/RikkaApps/Shizuku) repository.
 
+### Download
+
+Get the latest version from the [releases page](https://github.com/thedjchi/Shizuku/releases).
+
 ### Added Features
 
 This version of Shizuku includes some extra features over the original version, such as:
