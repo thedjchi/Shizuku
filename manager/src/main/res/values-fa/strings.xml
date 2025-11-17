@@ -32,7 +32,6 @@
     <string name="paring_code_is_wrong">رمز مرتبط کردن اشتباه است.</string>
     <string name="cannot_connect_port">نمی توان به خدمات اشکال زدایی بی‌سیم متصل شد.</string>
     <string name="dialog_wireless_adb_not_enabled">اشکال‌زدایی بی‌سیم فعال نیست.\nتوجه داشته باشید، قبل از اندروید ۱۱، برای فعال کردن اشکال‌زدایی بی‌سیم، اتصال به رایانه ضروری است.</string>
-    <string name="dialog_adb_pairing_message">لطفاً مرتبط کردن را با مراحل زیر شروع کنید: \"گزینه‌های توسعه دهنده\" - \"اشکال‌زدایی بی‌سیم\" - \"مرتبط کردن دستگاه با استفاده از رمز مرتبط سازی\".\n\nپس از شروع فرآیند جفت‌سازی، می‌توانید رمز جفت‌سازی را وارد کنید.</string>
     <string name="adb_pairing_requires_multi_window">لطفاً ابتدا وارد حالت تقسیم صفحه (چند پنجره) شوید.</string>
     <string name="adb_pairing_requires_multi_window_reason">دستگاه نیاز دارد گفتگوی جفت‌سازی همیشه قابل مشاهده باشد، استفاده از حالت تقسیم صفحه تنها راهی است که به این برنامه و گفتگوی دستگاه اجازه می‌دهد همزمان قابل مشاهده باشند.</string>
     <string name="adb_error_key_store">قادر به تولید کلید برای اشکال زدایی بی‌سیم نیست.\nاین ممکن است به این دلیل باشد که ساز و برگ KeyStore این دستگاه خراب است.</string>
@@ -63,7 +62,6 @@
         <item quantity="other"><![CDATA[%d برنامه مجاز]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[برای مدیریت برنامه های مجاز ضربه بزنید]]></string>
-    <string name="home_app_management_empty">برنامه‌هایی که Shizuku را درخواست کرده یا اعلام کرده‌اند در اینجا نشان داده می‌شوند.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">یادگیری Shizuku</string>
     <string name="home_learn_more_description">یاد بگیرید که چگونه با Shizuku توسعه دهید</string>
@@ -89,16 +87,17 @@
     ]]></string>
     <!-- Settings -->
     <string name="settings_title">تنظیمات</string>
+    <string name="settings_use_system_color">از رنگ طرح زمینه دستگاه استفاده کنید</string>
     <string name="settings_language">زبان</string>
-    <string name="settings_user_interface">ظاهر</string>
-    <string name="settings_black_night_theme">طرح زمینه شب سیاه</string>
-    <string name="settings_black_night_theme_summary">اگر حالت شب فعال است از طرح زمینه سیاه خالص استفاده کنید</string>
     <string name="settings_translation_contributors">مشارکت کنندگان ترجمه</string>
     <string name="settings_translation">در ترجمه شرکت کنید</string>
     <string name="settings_translation_summary">با ما همکاری کنید تا %s را به زبان شما ترجمه کنیم</string>
-    <string name="settings_start_on_boot">شروع هنگام راه‌اندازی دستگاه (دسترسی ریشه)</string>
-    <string name="settings_start_on_boot_summary">برای دستگاه های روت شده، Shizuku می تواند به طور خودکار در هنگام راه‌اندازی دستگاه شروع شود</string>
-    <string name="settings_use_system_color">از رنگ طرح زمینه دستگاه استفاده کنید</string>
+    <string name="settings_user_interface">ظاهر</string>
+    <string name="settings_black_night_theme">طرح زمینه شب سیاه</string>
+    <string name="settings_black_night_theme_summary">اگر حالت شب فعال است از طرح زمینه سیاه خالص استفاده کنید</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">درباره</string>
     <string name="about_view_source_code"><![CDATA[کد منبع را در %s مشاهده کنید]]></string>
@@ -130,6 +129,8 @@
     <!-- Starter -->
     <string name="starter">شروع کننده</string>
     <string name="start_with_root_failed">نمی‌توان خدمات را راه‌اندازی کرد زیرا مجوز ریشه داده نشده است یا این دستگاه روت نشده است.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">نمی توان مرورگر را راه اندازی کرد</string>
     <string name="toast_copied_to_clipboard">%s\nدر بریده‌دان رونوشت شده است.</string>
