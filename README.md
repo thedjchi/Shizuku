@@ -22,6 +22,12 @@ This version of Shizuku includes some extra features over the original version, 
 
 Please read the [wiki](https://github.com/thedjchi/Shizuku/wiki) for setup and troubleshooting instructions.
 
+### Translations
+
+[![Crowdin](https://badges.crowdin.net/shizuku/localized.svg)](https://crowdin.com/project/shizuku)
+
+Contribute translations through the [Crowdin project](https://crowdin.com/project/shizuku). 
+
 ## Background
 
 When developing apps that requires root, the most common method is to run some commands in the su shell. For example, there is an app that uses the `pm enable/disable` command to enable/disable components.
