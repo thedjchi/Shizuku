@@ -1,5 +1,5 @@
 files:
-  - source: /manager/**/res/values/strings.xml
-    translation: /manager/**/res/values-%two_letters_code%/%original_file_name%
+  - source: /manager/src/main/res/values/strings.xml
+    translation: /manager/src/main/res/values-%two_letters_code%/%original_file_name%
     translate_attributes: 0
     content_segmentation: 0
