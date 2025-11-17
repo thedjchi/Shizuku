@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">Hindi makakonekta sa serbisyo ng wireless na pag-debug.</string>
     <string name="dialog_wireless_adb_not_enabled">Hindi nakabukas ang wireless na pag-debug.
 \nTandaan, kailangang kumonekta sa kompyuter para mabuksan ang wireless na pag-debug sa Android 10 pababa.</string>
-    <string name="dialog_adb_pairing_message">Mangyaring simulan ang pagpapares, pumunta sa: \"Mga opsyon ng developer\" - \"Wireless na pag-debug\" - \"Pinapares ang device gamit ang code ng pagpapares\".
-\n
-\nMailalagay mo ang code ng pagpapares pagkatapos magsimula ang proseso ng pagpapares.</string>
     <string name="adb_pairing_requires_multi_window">Pumunta muna sa split-screen (multi-window) mode.</string>
     <string name="adb_pairing_requires_multi_window_reason">Kailangan ng sistemang laging makita ang diyalogo ng pagpapares, kaya split-screen mode lang ang paraan para makita ang app na ito at ang diyalogo ng sistema nang sabay.</string>
     <string name="adb_error_key_store">Hindi makagawa ng susi para sa wireless na pag-debug.
@@ -68,7 +65,6 @@
         <item quantity="other"><![CDATA[%d na aplikasyon ang awtorisado]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Pindutin para pamahalaan ang mga awtorisadong app]]></string>
-    <string name="home_app_management_empty">Lalabas dito ang mga app na hiniling o idineklara ang Shizuku.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Matuto Pa Tungkol sa Shizuku</string>
     <string name="home_learn_more_description">Matuto kung paano mag-develop gamit ang Shizuku</string>
@@ -98,16 +94,17 @@
     <string name="rish_description"><![CDATA[Gamit ang %1$s, makakakonekta ka sa shell ng Shizuku gamit ang anumang terminal app. &lt;p&gt;Pindutin para makita ang detalyadong impormasyon tungkol sa %1$s.]]></string>
     <!-- Settings -->
     <string name="settings_title">Mga Setting</string>
+    <string name="settings_use_system_color">Gamitin ang kulay ng tema ng sistema</string>
     <string name="settings_language">Wika</string>
-    <string name="settings_user_interface">Hitsura</string>
-    <string name="settings_black_night_theme">Itim na panggabing tema</string>
-    <string name="settings_black_night_theme_summary">Gamitin ang purong itim na tema kung nakabukas ang panggabing mode</string>
     <string name="settings_translation_contributors">Mga nag-ambag sa pagsasalin</string>
     <string name="settings_translation">Sumali sa pagsasalin</string>
     <string name="settings_translation_summary">Tulungan kaming isalin ang %s sa iyong wika</string>
-    <string name="settings_start_on_boot">Buksan pagka-boot (root)</string>
-    <string name="settings_start_on_boot_summary">Pwede itakdang tumakbo agad pagka-boot ang Shizuku sa mga naka-root na device</string>
-    <string name="settings_use_system_color">Gamitin ang kulay ng tema ng sistema</string>
+    <string name="settings_user_interface">Hitsura</string>
+    <string name="settings_black_night_theme">Itim na panggabing tema</string>
+    <string name="settings_black_night_theme_summary">Gamitin ang purong itim na tema kung nakabukas ang panggabing mode</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Tungkol</string>
     <string name="about_view_source_code"><![CDATA[Tingnan ang source code sa %s]]></string>
@@ -139,6 +136,8 @@
     <!-- Starter -->
     <string name="starter">Panimula</string>
     <string name="start_with_root_failed">Hindi masimulan ang serbisyo sapagkat walang pahintulot sa root o hindi na-root ang device na ito.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Hindi mabuksan ang browser</string>
     <string name="toast_copied_to_clipboard">Nakopya sa clipboard ang
