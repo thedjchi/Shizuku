@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">Nie można połączyć usługi bezprzewodowego debugowania.</string>
     <string name="dialog_wireless_adb_not_enabled">Debugowanie bezprzewodowe jest wyłączone.
 \nPrzed Android 11 żeby włączyć debugowanie bezprzewodowe musisz mieć polączenie z komputerem.</string>
-    <string name="dialog_adb_pairing_message">Proszę rozpocznij parowanie podejmując następujące czynności: \"Opcje dla programistów\" - \"Bezprzewodowe debugowanie\" - \"Sparuj urządzenie używając kodu parowania\".
-\n
-\nPo rozpoczęciu procesu parowania będziesz w stanie wpisać kod parowania.</string>
     <string name="adb_pairing_requires_multi_window">Proszę, uruchom najpierw tryb podzielonego ekranu.</string>
     <string name="adb_pairing_requires_multi_window_reason">System wymaga ciągle otwartego okna parowania, używanie trybu podzielonego ekranu jest jedyną opcją aby korzystać z aplikacji i okna parowania w jednej chwili.</string>
     <string name="adb_error_key_store">Nie można wygenerować klucza debugowania bezprzewodowego.
@@ -68,7 +65,6 @@
         <item quantity="other"><![CDATA[Aktualizowano aplikacje: %d]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Kliknij aby zarządzać autoryzowanymi aplikacjami]]></string>
-    <string name="home_app_management_empty">Tutaj pojawią się aplikacje, które zażądały lub zadeklarowały Shizuku.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Dowiedz się więcej o Shizuku</string>
     <string name="home_learn_more_description">Dowiedz się, jak programować za pomocą Shizuku</string>
@@ -98,16 +94,17 @@
     <string name="rish_description"><![CDATA[Z %1$s, w każdej aplikacji terminala, będziesz mógł połączyć się i wykonywać interakcje z shellem działającym w Shizuku.&lt;p&gt;O szczegółowym użyciu %1$s, dotknij by pokazać dokument.]]></string>
     <!-- Settings -->
     <string name="settings_title">Ustawienia</string>
+    <string name="settings_use_system_color">Użyj systemowego motywu kolorystycznego</string>
     <string name="settings_language">Język</string>
-    <string name="settings_user_interface">Wygląd</string>
-    <string name="settings_black_night_theme">Motyw ciemny</string>
-    <string name="settings_black_night_theme_summary">Użyj czysto-czarnego motywu gdy tryb nnocny jest włączony</string>
     <string name="settings_translation_contributors">Pomogli w tłumaczeniu</string>
     <string name="settings_translation">Przyłącz się do tłumaczenia</string>
     <string name="settings_translation_summary">Pomóż nam tłumaczyć %s na Twój język</string>
-    <string name="settings_start_on_boot">Uruchom przy starcie systemu (tylko dla urządzeń z rootem)</string>
-    <string name="settings_start_on_boot_summary">W urządzeniach zrootowanych, Shizuku może się uruchamiać automatycznie</string>
-    <string name="settings_use_system_color">Użyj systemowego motywu kolorystycznego</string>
+    <string name="settings_user_interface">Wygląd</string>
+    <string name="settings_black_night_theme">Motyw ciemny</string>
+    <string name="settings_black_night_theme_summary">Użyj czysto-czarnego motywu gdy tryb nnocny jest włączony</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">O aplikacji</string>
     <string name="about_view_source_code"><![CDATA[Zobacz kod źródłowy na %s]]></string>
@@ -139,6 +136,8 @@
     <!-- Starter -->
     <string name="starter">Uruchamiacz</string>
     <string name="start_with_root_failed">Nie można uruchomić usługi ponieważ nie przyznano uprawnień root lub urządzenie nie jest zrootowane.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Nie można uruchomić przeglądarki</string>
     <string name="toast_copied_to_clipboard">%s
