@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">无法连接至无线调试服务。</string>
     <string name="dialog_wireless_adb_not_enabled">无线调试未启用。
 \n请注意，在 Android 11 之前，要启用无线调试必须连接电脑。</string>
-    <string name="dialog_adb_pairing_message">请跟随下面的步骤开始配对：“开发者选项” - “无线调试” - “使用配对码配对设备”。
-\n
-\n配对过程开始后，您将能够输入配对码。</string>
     <string name="adb_pairing_requires_multi_window">请先进入分屏（多窗口）模式。</string>
     <string name="adb_pairing_requires_multi_window_reason">系统要求配对对话框始终可见，使用分屏模式是使此应用和系统对话框同时可见的唯一方法。</string>
     <string name="adb_error_key_store">无法为无线调试生成密钥。\n这可能是因为此设备上的 KeyStore 机制已损坏。</string>
@@ -67,7 +64,6 @@
         <item quantity="other"><![CDATA[已授权 %d 个应用]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[点按以管理授权的应用]]></string>
-    <string name="home_app_management_empty">已请求或声明 Shizuku 的应用程序将显示在此处。</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">了解 Shizuku</string>
     <string name="home_learn_more_description">了解如何使用 Shizuku 开发</string>
@@ -92,16 +88,17 @@
 <p>有关 %1$s 的具体使用方式，点按以阅读文档。]]></string>
     <!-- Settings -->
     <string name="settings_title">设置</string>
+    <string name="settings_use_system_color">使用系统主题颜色</string>
     <string name="settings_language">语言</string>
-    <string name="settings_user_interface">界面外观</string>
-    <string name="settings_black_night_theme">黑色夜间主题</string>
-    <string name="settings_black_night_theme_summary">当夜间模式启用时使用纯黑色主题</string>
     <string name="settings_translation_contributors">翻译贡献者</string>
     <string name="settings_translation">参与翻译</string>
     <string name="settings_translation_summary">帮助我们将 %s 翻译至您的语言</string>
-    <string name="settings_start_on_boot">开机启动（root）</string>
-    <string name="settings_start_on_boot_summary">对于已 root 设备，Shizuku 可以开机启动</string>
-    <string name="settings_use_system_color">使用系统主题颜色</string>
+    <string name="settings_user_interface">界面外观</string>
+    <string name="settings_black_night_theme">黑色夜间主题</string>
+    <string name="settings_black_night_theme_summary">当夜间模式启用时使用纯黑色主题</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">关于</string>
     <string name="about_view_source_code"><![CDATA[在 %s 查看源码]]></string>
@@ -133,6 +130,8 @@
     <!-- Starter -->
     <string name="starter">启动程序</string>
     <string name="start_with_root_failed">未授予 root 权限或是该设备没有 root，因此无法启动服务。</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">无法启动浏览器</string>
     <string name="toast_copied_to_clipboard">%s\n已被复制到剪贴板。</string>
