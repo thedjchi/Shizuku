@@ -31,9 +31,6 @@
     <string name="cannot_connect_port">Հնարավոր չէ կպնել անլար կարգաբերման ծառայությանը։</string>
     <string name="dialog_wireless_adb_not_enabled">Անլար կարգաբերումը միացված չէ։
 \nAndroid 11-ից առաջ անլար կարգաբերման համար անհրաժեշտ է համակարգչային կապ։</string>
-    <string name="dialog_adb_pairing_message">Սկսեք զուգելը հետևյալ քայլերով. «Ծրագրավորողի կարգավորումներ» - «Անլար կարգաբերում» - «Զուգել սարքը զուգվելու կոդով»։
-\n
-\nԶուգվելու պրոցեսի սկսվելուց հետո դուք կկարողանաք ներմուծել զուգվելու կոդը։</string>
     <string name="adb_pairing_requires_multi_window">Սկզբում միացրեք էկրանի կիսման ռեժիմը։</string>
     <string name="adb_pairing_requires_multi_window_reason">Համակարգին անհրաժեշտ է որ զուգման պատուհանը միշտ երևա։ Էկրանի կիսման ռեժիմը միակ միջոցն է որ այս ծրագիրը և զուգման պատուհանը միաժամանակ երևան։</string>
     <string name="adb_error_key_store">Չստացվեց բանակի ստանալ անլար կարգաբերման համար։
@@ -63,14 +60,15 @@
     <!-- Settings -->
     <string name="settings_title">Կարգավորումներ</string>
     <string name="settings_language">Լեզու</string>
-    <string name="settings_user_interface">Տեսք</string>
-    <string name="settings_black_night_theme">Սև գիշերի տեսք</string>
-    <string name="settings_black_night_theme_summary">Օգտագործել սև տեսքը եթե գիշերային ռեժիմը միացված է</string>
     <string name="settings_translation_contributors">Թարգմանության աջակցողներ</string>
     <string name="settings_translation">Մասնակցել թարգմանության մեջ</string>
     <string name="settings_translation_summary">Օգնեք մեզ թարգմանել %s-ը Ձեր լեզվով</string>
-    <string name="settings_start_on_boot">Միանալ սարքի հետ (root-ով)</string>
-    <string name="settings_start_on_boot_summary">Root թույլտվություն ունեցող սարքերում Shizuku-ն ավտոմատացված ձևով կարող է միանալ սարքի հետ</string>
+    <string name="settings_user_interface">Տեսք</string>
+    <string name="settings_black_night_theme">Սև գիշերի տեսք</string>
+    <string name="settings_black_night_theme_summary">Օգտագործել սև տեսքը եթե գիշերային ռեժիմը միացված է</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Ծրագրի մասին</string>
     <string name="about_view_source_code"><![CDATA[Տեսնել կոդի աղբյուրը %s-ում]]></string>
@@ -92,6 +90,8 @@
     <!-- Starter -->
     <string name="starter">Սկսնակ</string>
     <string name="start_with_root_failed">Չհաջողվեց բեռնել ծառայությունը քանի որ root թույլտվությունը մերժված է կամ սարքը root չունի։</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Չհաջողվեց միացնել ինտերնետի ծրագիրը</string>
     <string name="toast_copied_to_clipboard">%s-ն
