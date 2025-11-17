@@ -153,7 +153,7 @@
     <string name="notification_working">Working…</string>
     <string name="notification_channel_adb_pairing">Wireless debugging pairing</string>
     <string name="notification_adb_pairing_input_paring_code">Enter pairing code</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Searching for pairing service</string>
+    <string name="notification_adb_pairing_searching_for_service_title">S\'està buscant el servei d\'aparellament</string>
     <string name="notification_adb_pairing_service_found_title">Pairing service found</string>
     <string name="notification_adb_pairing_stop_searching">Stop searching</string>
     <string name="notification_adb_pairing_working_title">Pairing in progress</string>
