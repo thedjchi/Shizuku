@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">Nelze se připojit k bezdrátové ladicí službě.</string>
     <string name="dialog_wireless_adb_not_enabled">Bezdrátové ladění není povoleno.
 \nPřed povolením systému Android 11 je pro povolení bezdrátového ladění nutné připojení k počítači.</string>
-    <string name="dialog_adb_pairing_message">Začněte párovat podle následujících kroků: „Možnosti pro vývojáře“ - „Bezdrátové ladění“ - „Párování zařízení pomocí párovacího kódu“.
-\n
-\nPo zahájení procesu párování budete moci zadat párovací kód.</string>
     <string name="adb_pairing_requires_multi_window">Nejprve prosím přejděte do režimu rozdělené obrazovky (více oken).</string>
     <string name="adb_pairing_requires_multi_window_reason">Systém vyžaduje, aby bylo dialogové okno párování vždy viditelné, použití režimu rozdělené obrazovky je jediný způsob, jak nechat tuto aplikaci a systémový dialog viditelný současně.</string>
     <string name="adb_error_key_store">Nelze vygenerovat klíč pro bezdrátové ladění.
@@ -96,16 +93,17 @@
     <string name="terminal_tutorial_3">Nakonec, přesuňte ty soubory někam kde k nim vaše terminálová aplikace může přistupovat a budete moci používat %1$s aby jste pouštěli příkazy přes Shizuku.</string>
     <!-- Settings -->
     <string name="settings_title">Nastavení</string>
+    <string name="settings_use_system_color">Použít systémovou barvu motivu</string>
     <string name="settings_language">Jazyk</string>
-    <string name="settings_user_interface">Vzhled</string>
-    <string name="settings_black_night_theme">Motiv černé noci</string>
-    <string name="settings_black_night_theme_summary">Pokud je povolen noční režim, použijte motiv čistě černé barvy</string>
     <string name="settings_translation_contributors">Přispěvatelé překladu</string>
     <string name="settings_translation">Podílet se na překladu</string>
     <string name="settings_translation_summary">Pomozte nám přeložit %s do vašeho jazyka</string>
-    <string name="settings_start_on_boot">Spustit při spuštění (root)</string>
-    <string name="settings_start_on_boot_summary">U rootovaných zařízení je Shizuku schopen automaticky spustit při spuštění</string>
-    <string name="settings_use_system_color">Použít systémovou barvu motivu</string>
+    <string name="settings_user_interface">Vzhled</string>
+    <string name="settings_black_night_theme">Motiv černé noci</string>
+    <string name="settings_black_night_theme_summary">Pokud je povolen noční režim, použijte motiv čistě černé barvy</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">O Shizuku</string>
     <string name="about_view_source_code"><![CDATA[Zobrazit zdrojový kód na %su]]></string>
@@ -137,6 +135,8 @@
     <!-- Starter -->
     <string name="starter">Spouštěč</string>
     <string name="start_with_root_failed">Službu nelze spustit, protože není uděleno oprávnění k rootu nebo toto zařízení není rootováno.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Prohlížeč nelze spustit</string>
     <string name="toast_copied_to_clipboard">%s
