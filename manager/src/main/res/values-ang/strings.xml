@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <plurals name="home_app_management_authorized_apps_count">
-        <item quantity="one">Webmaster araçlan</item>
-        <item quantity="other"></item>
-    </plurals>
-    <string name="notification_service_start_failed">Webmaster araçlan</string>
-</resources>
