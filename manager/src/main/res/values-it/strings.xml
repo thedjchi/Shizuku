@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">Impossibile connettersi al servizio di debug wireless.</string>
     <string name="dialog_wireless_adb_not_enabled">Il debug wireless non è abilitato.
 \nNota, per versioni precedenti ad Android 11, per abilitare il debug wireless, è necessaria la connessione al computer.</string>
-    <string name="dialog_adb_pairing_message">Inizia l\'accoppiamento con i seguenti passaggi: \"Opzioni sviluppatore\" - \"Debug wireless\" - \"Accoppiamento del dispositivo tramite codice di associazione\".
-\n
-\nDopo l\'avvio del processo di accoppiamento, potrai inserire il codice.</string>
     <string name="adb_pairing_requires_multi_window">Entra prima nella modalità schermo diviso (multi-finestra).</string>
     <string name="adb_pairing_requires_multi_window_reason">Il sistema richiede che la finestra di dialogo di accoppiamento sia sempre visibile, l\'utilizzo della modalità schermo diviso è l\'unico modo per rendere visibili contemporaneamente l\'app e la finestra di dialogo di sistema.</string>
     <string name="adb_error_key_store">Impossibile generare la chiave per il debug wireless.
@@ -69,7 +66,6 @@
         <item quantity="other"><![CDATA[%d applicazioni autorizzate]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Premere per gestire le app autorizzate]]></string>
-    <string name="home_app_management_empty">Le app che hanno richiesto o dichiarato Shizuku verranno visualizzate qui</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Impara Shizuku</string>
     <string name="home_learn_more_description">Impara a sviluppare con Shizuku</string>
@@ -99,16 +95,17 @@
     <string name="rish_description"><![CDATA[Con %1$s, in qualsiasi app terminale, puoi connetterti e interagire con la shell eseguita da Shizuku. &lt;p&gt;Per info sull'utilizzo dettagliato di %1$s, tocca per visualizzare il documento.]]></string>
     <!-- Settings -->
     <string name="settings_title">Impostazioni</string>
+    <string name="settings_use_system_color">Usa il colore del tema di sistema</string>
     <string name="settings_language">Lingua</string>
-    <string name="settings_user_interface">Aspetto</string>
-    <string name="settings_black_night_theme">Tema nero notte</string>
-    <string name="settings_black_night_theme_summary">Usa il tema nero puro se la modalità notte è abilitata</string>
     <string name="settings_translation_contributors">Contributori alla traduzione</string>
     <string name="settings_translation">Partecipa alla traduzione</string>
     <string name="settings_translation_summary">Aiutaci a tradurre %s nella tua lingua</string>
-    <string name="settings_start_on_boot">Avvia all\'accensione (root)</string>
-    <string name="settings_start_on_boot_summary">Per i dispositivi rootati, Shizuku è in grado di avviarsi automaticamente all\'avvio</string>
-    <string name="settings_use_system_color">Usa il colore del tema di sistema</string>
+    <string name="settings_user_interface">Aspetto</string>
+    <string name="settings_black_night_theme">Tema nero notte</string>
+    <string name="settings_black_night_theme_summary">Usa il tema nero puro se la modalità notte è abilitata</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Info</string>
     <string name="about_view_source_code"><![CDATA[Visualizza il codice sorgente a %s]]></string>
@@ -140,6 +137,8 @@
     <!-- Starter -->
     <string name="starter">Accensione</string>
     <string name="start_with_root_failed">Impossibile avviare il servizio poiché i permessi di root non sono stati concessi o questo dispositivo non è rootato.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossibile avviare il browser</string>
     <string name="toast_copied_to_clipboard">%s
