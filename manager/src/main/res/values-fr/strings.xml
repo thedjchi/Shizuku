@@ -30,7 +30,6 @@
     <string name="paring_code_is_wrong">Le code d\'association n\'est pas le bon.</string>
     <string name="cannot_connect_port">Impossible de se connecter au service de débogage sans fil.</string>
     <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, pour activer le débogage sans fil, la connexion à un ordinateur est requise.</string>
-    <string name="dialog_adb_pairing_message">Merci de démarrer l\'association en suivant les étapes suivantes : \"Options pour les développeurs\" - \"Débogage sans fil\" - \"Associer avec un code d\'association\".\n\nAprès que le processus d\'association ai démarré, vous serez capable d\'entrer le code d\'association.</string>
     <string name="adb_pairing_requires_multi_window">Merci d\'activer le mode écran partagé (mode multi-fenêtres) d\'abord.</string>
     <string name="adb_pairing_requires_multi_window_reason">Le système nécessite que la fenêtre d\'association soit toujours visible, l\'utilisation du mode écran partagé est la seule manière de laisser cette appli et la fenêtre système visibles au même moment.</string>
     <string name="adb_error_key_store">Impossible de générer une clé pour le débogage sans fil.\nCela peut être dû au fait que le mécanisme du magasin de clés de l\'appareil est cassé.</string>
@@ -61,7 +60,6 @@
         <item quantity="other"><![CDATA[%d applications autorisées]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Appuyez pour gérer les applis autorisées]]></string>
-    <string name="home_app_management_empty">Les applications qui ont demandé ou déclaré l\'accès à Shizuku apparaîtront ici.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Apprendre Shizuku</string>
     <string name="home_learn_more_description">Apprenez comment développer avec Shizuku</string>
@@ -91,16 +89,17 @@
     <string name="rish_description"><![CDATA[Avec %1$s, dans n'importe quelle appli de terminal, vous pouvez vous connecter et interagir avec le shell lancé par Shizuku. &lt;p&gt;À propos de l'usage détaillé de %1$s, appuyez pour voir le document.]]></string>
     <!-- Settings -->
     <string name="settings_title">Paramètres</string>
+    <string name="settings_use_system_color">Utiliser la couleur du thème système</string>
     <string name="settings_language">Langue</string>
-    <string name="settings_user_interface">Apparence</string>
-    <string name="settings_black_night_theme">Thème sombre noir</string>
-    <string name="settings_black_night_theme_summary">Utilise le thème noir pur si le thème sombre est activé</string>
     <string name="settings_translation_contributors">Contributeurs à la traduction</string>
     <string name="settings_translation">Participer à la traduction</string>
     <string name="settings_translation_summary">Aidez-nous à traduire %s dans votre langue</string>
-    <string name="settings_start_on_boot">Lancer au démarrage de l\'appareil (root)</string>
-    <string name="settings_start_on_boot_summary">Pour les appareils rootés ou sous Android 11+ ou plus, Shizuku peut se lancer automatiquement au démarrage</string>
-    <string name="settings_use_system_color">Utiliser la couleur du thème système</string>
+    <string name="settings_user_interface">Apparence</string>
+    <string name="settings_black_night_theme">Thème sombre noir</string>
+    <string name="settings_black_night_theme_summary">Utilise le thème noir pur si le thème sombre est activé</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">À propos</string>
     <string name="about_view_source_code"><![CDATA[Voir le code source sur %s]]></string>
@@ -132,6 +131,8 @@
     <!-- Starter -->
     <string name="starter">Démarreur</string>
     <string name="start_with_root_failed">Impossible de lancer le service parce que la permission root n\'est pas accordée ou que cet appareil n\'est pas rooté.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossible de lancer le navigateur</string>
     <string name="toast_copied_to_clipboard">%s
