@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">Não é possível conectar ao serviço de Depuração via Wireless.</string>
     <string name="dialog_wireless_adb_not_enabled">A Depuração via Wireless não está ativada.
 \nObserve que, antes do Android 11, para habilitar a Depuração via Wireless a conexão com um computador é obrigatória.</string>
-    <string name="dialog_adb_pairing_message">Comece o pareamento seguindo às etapas: \"Opções do Desenvolvedor\" → \"Depuração por Wi-Fi\" → \"Parear aparelho usando um código de pareamento\".
-\n
-\nApós o início do pareamento, você poderá colocar o código de pareamento gerado.</string>
     <string name="adb_pairing_requires_multi_window">Primeiramente, ative o modo de janela dividida, por favor.</string>
     <string name="adb_pairing_requires_multi_window_reason">O sistema necessita da caixa de diálogo de pareamento sempre visível. Usar o modo de tela dividida é a única maneira de deixar este aplicativo e a caixa de diálogo do sistema visíveis ao mesmo tempo.</string>
     <string name="adb_error_key_store">Incapaz de gerar a chave para a Depuração via Wireless.
@@ -69,7 +66,6 @@
         <item quantity="other"><![CDATA[%d aplicativos autorizados]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Toque para gerenciar os aplicativos autorizados]]></string>
-    <string name="home_app_management_empty">Apps que solicitaram ou declararam acesso ao Shizuku aparecerão aqui.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Aprenda sobre Shizuku</string>
     <string name="home_learn_more_description">Aprenda a desenvolver com Shizuku</string>
@@ -99,16 +95,17 @@
     <string name="rish_description"><![CDATA[Com %1$s, em qualquer aplicativo de terminal, você pode se conectar e interagir com o shell executado pelo Shizuku. &lt;p&gt; Sobre o uso detalhado %1$s, toque para ver o documento.]]></string>
     <!-- Settings -->
     <string name="settings_title">Configurações</string>
+    <string name="settings_use_system_color">Usar tema do sistema</string>
     <string name="settings_language">Idioma</string>
-    <string name="settings_user_interface">Aparência</string>
-    <string name="settings_black_night_theme">Tema preto AMOLED</string>
-    <string name="settings_black_night_theme_summary">Use o tema preto puro se o modo escuro estiver habilitado. Em telas AMOLED, economiza bateria</string>
     <string name="settings_translation_contributors">Tradutores deste APP</string>
     <string name="settings_translation">Contribua com a tradução</string>
     <string name="settings_translation_summary">Ajude-nos à traduzir %s para o seu idioma</string>
-    <string name="settings_start_on_boot">Iniciar APP no boot (apenas com root)</string>
-    <string name="settings_start_on_boot_summary">Para dispositivos com acesso root, o Shizuku é capaz de abrir automaticamente na inicialização do sistema</string>
-    <string name="settings_use_system_color">Usar tema do sistema</string>
+    <string name="settings_user_interface">Aparência</string>
+    <string name="settings_black_night_theme">Tema preto AMOLED</string>
+    <string name="settings_black_night_theme_summary">Use o tema preto puro se o modo escuro estiver habilitado. Em telas AMOLED, economiza bateria</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Sobre</string>
     <string name="about_view_source_code"><![CDATA[Ver o código-fonte no %s]]></string>
@@ -140,6 +137,8 @@
     <!-- Starter -->
     <string name="starter">Iniciante</string>
     <string name="start_with_root_failed">Não é possível iniciar o serviço porque a permissão de root não foi concedida ou este aparelho não está rooteado.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Não consigo iniciar o navegador</string>
     <string name="toast_copied_to_clipboard">%s
