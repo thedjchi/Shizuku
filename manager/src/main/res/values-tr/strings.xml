@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">Kablosuz hata ayıklama hizmeti bağlanamıyor.</string>
     <string name="dialog_wireless_adb_not_enabled">Kablosuz hata ayıklama etkin değil.
 \nNot, Android 11’den önce kablosuz hata ayıklamayı etkinleştirmek için bilgisayar bağlantısının şart olduğunu unutmayın.</string>
-    <string name="dialog_adb_pairing_message">Lütfen aşağıdaki adımları izleyerek eşleştirme işlemine başlayın: \"Geliştirici Seçenekleri\" - \"Kablosuz hata ayıklama\" - \"Cihazı eşleme kodu kullanarak eşleştir\".
-\n
-\nEşleştirme işlemi başladıktan sonra eşleştirme kodunu girebilirsiniz.</string>
     <string name="adb_pairing_requires_multi_window">Lütfen önce bölünmüş ekran (çoklu pencere) moduna girin.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem, eşleştirme iletişim kutusunun her zaman görünür olmasını zorunda kılıyor; bölünmüş ekran modunu kullanmak, bu uygulamanın ve sistem iletişim kutusunun aynı anda görünür olmasını sağlamanın tek yoludur.</string>
     <string name="adb_error_key_store">Kablosuz hata ayıklama için anahtar üretilemiyor.
@@ -68,7 +65,6 @@
         <item quantity="other"><![CDATA[Yetkilendirilmiş %d tane uygulama]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Yetkilendirilmiş uygulamaları yönetmek için dokunun]]></string>
-    <string name="home_app_management_empty">Shizuku iznine ihtiyaç duyan uygulamalar burada gösterilir.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Daha fazlasını öğren</string>
     <string name="home_learn_more_description">Shizuku ile nasıl uygulama geliştireceğinizi öğrenin</string>
@@ -98,16 +94,17 @@
     <string name="rish_description"><![CDATA[%1$s ile herhangi bir terminal uygulamasında Shizuku'nun shell run'larına bağlanabilir ve bunlarla etkileşim kurabilirsiniz. &lt;p&gt;%1$s ayrıntılı kullanımı hakkında, belgeyi görüntülemek için dokunun.]]></string>
     <!-- Settings -->
     <string name="settings_title">Ayarlar</string>
+    <string name="settings_use_system_color">Sistem tema rengini kullan</string>
     <string name="settings_language">Dil</string>
-    <string name="settings_user_interface">Görünüm</string>
-    <string name="settings_black_night_theme">Siyah gece teması</string>
-    <string name="settings_black_night_theme_summary">Gece modu etkinse saf siyah temasını kullanın</string>
     <string name="settings_translation_contributors">Çeviriye katkıda bulunanlar</string>
     <string name="settings_translation">Çeviriye katılın</string>
     <string name="settings_translation_summary">%s , dilinize çevirmemize yardımcı olun</string>
-    <string name="settings_start_on_boot">Sistem açılışında başlat (root)</string>
-    <string name="settings_start_on_boot_summary">Rootlu cihazlar için, Shizuku sistem açılışı sırasında otomatik olarak başlayabilir</string>
-    <string name="settings_use_system_color">Sistem tema rengini kullan</string>
+    <string name="settings_user_interface">Görünüm</string>
+    <string name="settings_black_night_theme">Siyah gece teması</string>
+    <string name="settings_black_night_theme_summary">Gece modu etkinse saf siyah temasını kullanın</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Hakkında</string>
     <string name="about_view_source_code"><![CDATA[%s ’da kaynak kodunu görüntüle]]></string>
@@ -139,6 +136,8 @@
     <!-- Starter -->
     <string name="starter">Başlatıcı</string>
     <string name="start_with_root_failed">Root izni verilmediği veya bu aygıtın rootlu olmadığı için hizmet başlatılamıyor.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Tarayıcı başlatılamıyor</string>
     <string name="toast_copied_to_clipboard">%s
