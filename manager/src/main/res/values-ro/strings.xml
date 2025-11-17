@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">Nu se poate conecta la serviciul de depanare wireless.</string>
     <string name="dialog_wireless_adb_not_enabled">Depanarea wireless nu este activată.
 \nReține că înainte de Android 11, pentru a activa depanarea wireless, conexiunea la computer este o necesitate.</string>
-    <string name="dialog_adb_pairing_message">Începe asocierea prin următorii pași: „Opțiuni dezvoltator” - „Depanare wireless” - „Asocierea dispozitivului folosind codul de asociere”.
-\n
-\nDupă începerea procesului de asociere, vei putea introduce codul de asociere.</string>
     <string name="adb_pairing_requires_multi_window">Intră mai întâi în modul ecran divizat (ferestre multiple).</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistemul necesită dialogul de asociere întotdeauna vizibil, utilizarea modului ecran divizat este singura modalitate de a lăsa această aplicație și dialogul de sistem vizibile în același timp.</string>
     <string name="adb_error_key_store">Nu se poate genera cheia pentru depanarea wireless.
@@ -69,7 +66,6 @@
         <item quantity="other"><![CDATA[%d aplicații autorizate]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Atinge pentru a gestiona aplicațiile autorizate]]></string>
-    <string name="home_app_management_empty">Aplicațiile care au solicitat sau au declarat Shizuku se vor afișa aici.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Învață Shizuku</string>
     <string name="home_learn_more_description">Află cum să dezvolți cu Shizuku</string>
@@ -99,16 +95,17 @@
     <string name="rish_description"><![CDATA[Cu %1$s, în orice aplicație de terminal, vei putea conecta și interacționa cu shell-urile rulate de Shizuku. &lt;p&gt;Despre utilizarea detaliată %1$s, atinge pentru a vizualiza documentul.]]></string>
     <!-- Settings -->
     <string name="settings_title">Setări</string>
+    <string name="settings_use_system_color">Utilizează culoarea temei de sistem</string>
     <string name="settings_language">Limba</string>
-    <string name="settings_user_interface">Aspect</string>
-    <string name="settings_black_night_theme">Tema de noapte întunecată</string>
-    <string name="settings_black_night_theme_summary">Folosește tema negru pur dacă modul noapte este activat</string>
     <string name="settings_translation_contributors">Colaboratori de traduceri</string>
     <string name="settings_translation">Participă la traducere</string>
     <string name="settings_translation_summary">Ajută-ne să traducem %s în limba ta</string>
-    <string name="settings_start_on_boot">Start la pornire (root)</string>
-    <string name="settings_start_on_boot_summary">Pentru dispozitivele root-ate, Shizuku poate porni automat la pornire</string>
-    <string name="settings_use_system_color">Utilizează culoarea temei de sistem</string>
+    <string name="settings_user_interface">Aspect</string>
+    <string name="settings_black_night_theme">Tema de noapte întunecată</string>
+    <string name="settings_black_night_theme_summary">Folosește tema negru pur dacă modul noapte este activat</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Despre</string>
     <string name="about_view_source_code"><![CDATA[Vizualizează codul sursă la %s]]></string>
@@ -140,6 +137,8 @@
     <!-- Starter -->
     <string name="starter">Începător</string>
     <string name="start_with_root_failed">Nu se poate porni serviciul deoarece permisiunea root nu este acordată sau acest dispozitiv nu este root-at.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Nu se poate porni browser-ul</string>
     <string name="toast_copied_to_clipboard">%s
