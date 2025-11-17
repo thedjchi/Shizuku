@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">No se puede conectar al servicio de depuración inalámbrico.</string>
     <string name="dialog_wireless_adb_not_enabled">La depuración inalámbrica no está habilitada.
 \nTenga en cuenta que antes de Android 11, para habilitar la depuración inalámbrica, la conexión a la computadora es imprescindible.</string>
-    <string name="dialog_adb_pairing_message">Por favor, inicie el emparejamiento mediante los siguientes pasos: \"Opciones de desarrollador\" - \"Depuración inalámbrica\" - \"Emparejar el dispositivo con el código de emparejamiento\".
-\n
-\nUna vez iniciado el proceso de emparejamiento, podrá introducir el código de emparejamiento.</string>
     <string name="adb_pairing_requires_multi_window">Ingrese primero al modo de pantalla dividida (ventanas múltiples).</string>
     <string name="adb_pairing_requires_multi_window_reason">El sistema requiere que el cuadro de diálogo de emparejamiento esté siempre visible, el uso del modo de pantalla dividida es la única forma de permitir que esta aplicación y el cuadro de diálogo del sistema estén visibles al mismo tiempo.</string>
     <string name="adb_error_key_store">No se puede generar la clave para la depuración inalámbrica.
@@ -85,14 +82,15 @@
     <!-- Settings -->
     <string name="settings_title">Configuraciones</string>
     <string name="settings_language">Idioma</string>
-    <string name="settings_user_interface">Apariencia</string>
-    <string name="settings_black_night_theme">Tema negro</string>
-    <string name="settings_black_night_theme_summary">Use el tema negro puro si el modo nocturno está habilitado</string>
     <string name="settings_translation_contributors">Colaboradores de traducción</string>
     <string name="settings_translation">Participe en la traducción</string>
     <string name="settings_translation_summary">Ayúdanos a traducir %s a tu idioma</string>
-    <string name="settings_start_on_boot">Iniciar en el arranque (root)</string>
-    <string name="settings_start_on_boot_summary">Para dispositivos root, Shizuku puede iniciarse automáticamente al arrancar</string>
+    <string name="settings_user_interface">Apariencia</string>
+    <string name="settings_black_night_theme">Tema negro</string>
+    <string name="settings_black_night_theme_summary">Use el tema negro puro si el modo nocturno está habilitado</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Acerca de</string>
     <string name="about_view_source_code"><![CDATA[Ver código fuente en %s]]></string>
@@ -117,6 +115,8 @@
     <!-- Starter -->
     <string name="starter">Inicio</string>
     <string name="start_with_root_failed">No se puede iniciar el servicio porque el permiso de root no está concedido o este dispositivo no está rooteado.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">No se puede iniciar el navegador</string>
     <string name="toast_copied_to_clipboard">%s
