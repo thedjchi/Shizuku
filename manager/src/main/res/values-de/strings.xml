@@ -33,9 +33,6 @@
     <string name="cannot_connect_port">Verbindung zum kabellosen Debugging-Dienst nicht möglich.</string>
     <string name="dialog_wireless_adb_not_enabled">Kabelloses Debugging ist nicht aktiviert.
 \nHinweis: Vor Android 11 ist für die Aktivierung des kabellosen Debugging eine Computerverbindung erforderlich.</string>
-    <string name="dialog_adb_pairing_message">Bitte die Kopplung mit den folgenden Schritten straten: \"Entwickleroptionen\" - \"Kabelloses Debugging\" - \"Gerät mit Pairing-Code koppeln\".
-\n
-\nNachdem der Kopplungsrozess gestartet wurde, können Sie den Pairing-Code eingeben.</string>
     <string name="adb_pairing_requires_multi_window">Bitte zuerst in den Modus \"Geteilter Bildschirm\" (Mehrfenster) gehen.</string>
     <string name="adb_pairing_requires_multi_window_reason">Der Kopplungsdialog muss immer sichtbar sein. Den Split-Screen Modus zu benutzen, ist der einzige Weg diese App und den Systemdialog zur selben Zeit sichtbar zu lassen.</string>
     <string name="adb_error_key_store">Schlüssel für kabelloses Debugging kann nicht generiert werden.
@@ -66,7 +63,6 @@
         <item quantity="other"><![CDATA[%d autorisierte Apps]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tippen, um autorisierte Apps zu verwalten]]></string>
-    <string name="home_app_management_empty">Apps, die Shizuku angefordert oder deklariert haben, werden hier angezeigt.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Shizuku kennenlernen</string>
     <string name="home_learn_more_description">Lernen Sie, wie Apps mit Shizuku entwickelt werden</string>
@@ -96,16 +92,17 @@
     <string name="rish_description"><![CDATA[Mit %1$s können Sie in jeder Terminal-App eine Verbindung zur Shell von Shizuku herstellen und mit ihr interagieren. &lt;p&gt;Zur detaillierten Verwendung von %1$s tippen, um das Dokument anzuzeigen.]]></string>
     <!-- Settings -->
     <string name="settings_title">Einstellungen</string>
+    <string name="settings_use_system_color">Verwende Farbe des Systemdesigns</string>
     <string name="settings_language">Sprache</string>
-    <string name="settings_user_interface">Aussehen</string>
-    <string name="settings_black_night_theme">Schwarzes Thema</string>
-    <string name="settings_black_night_theme_summary">Das rein schwarze Thema verwenden, wenn der Nachtmodus aktiviert ist</string>
     <string name="settings_translation_contributors">Zur Übersetzung beigetragen</string>
     <string name="settings_translation">An der Übersetzung mitarbeiten</string>
     <string name="settings_translation_summary">Uns helfen, %s in Ihre Sprache zu übersetzen</string>
-    <string name="settings_start_on_boot">Beim Hochfahren starten (Root)</string>
-    <string name="settings_start_on_boot_summary">Bei gerooteten Geräten kann Shizuku beim Booten automatisch starten</string>
-    <string name="settings_use_system_color">Verwende Farbe des Systemdesigns</string>
+    <string name="settings_user_interface">Aussehen</string>
+    <string name="settings_black_night_theme">Schwarzes Thema</string>
+    <string name="settings_black_night_theme_summary">Das rein schwarze Thema verwenden, wenn der Nachtmodus aktiviert ist</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Über</string>
     <string name="about_view_source_code"><![CDATA[Quelltext auf %s anzeigen]]></string>
@@ -136,6 +133,8 @@
     <string name="grant_dialog_button_deny">"Verweigern"</string>
     <!-- Starter -->
     <string name="start_with_root_failed">Dienst starten nicht möglich, da keine Root-Rechte erteilt wurden oder das Gerät nicht gerootet ist.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Browser starten nicht möglich</string>
     <string name="toast_copied_to_clipboard">%s
