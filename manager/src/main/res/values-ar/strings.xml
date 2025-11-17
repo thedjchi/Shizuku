@@ -40,15 +40,15 @@
     <string name="dialog_adb_pairing_message">يرجى بدء الاقتران بالخطوات التالية: \"خيارات المطور\" - \"التصحيح اللاسلكي\" - \"إقران الجهاز باستخدام رمز الاقتران\".
 \n
 \nبعد بدء عملية الاقتران ، ستتمكن من إدخال رمز الاقتران.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Please enable the accessibility service to start the pairing process. This allows Shizuku to detect the pairing code.\n\nThe accessibility service will be turned off when the code is found or after 1 minute to save energy.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Please navigate to \"Developer Options\" &gt; \"Wireless debugging\" &gt; \"Pair device with pairing code.\" Shizuku will automatically detect the pairing code.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">الرجاء تمكين خدمة الوصول لبدء عملية الإقران. هذا يسمح لشيزوكو للكشف عن رمز الإقران.\n\nسيتم إيقاف تشغيل خدمة الوصول عند العثور على الكود البرمجي أو بعد دقيقة واحدة لتوفير الطاقة.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">يرجى الانتقال إلى \"خيارات المطور\" &gt; \"تصحيح الأخطاء اللاسلكية\" &gt; \"جهاز مزدوج مع رمز الإقران\". سيكتشف شيزوكو تلقائياً رمز الإقران.</string>
     <string name="adb_pairing_requires_multi_window">الرجاء إدخال وضع تقسيم الشاشة (متعدد النوافذ) أولاً.</string>
     <string name="adb_pairing_requires_multi_window_reason">يتطلب النظام أن يكون مربع حوار الاقتران مرئيًا دائمًا ، واستخدام وضع تقسيم الشاشة هو الطريقة الوحيدة للسماح لهذا التطبيق ومربع حوار النظام بالظهور في نفس الوقت.</string>
     <string name="adb_error_key_store">تعذر إنشاء مفتاح لتصحيح الأخطاء اللاسلكية.
 \nقد يكون هذا بسبب تعطل آلية KeyStore لهذا الجهاز.</string>
-    <string name="adb_error_stop_tcp">Failed to stop ADB over TCP</string>
+    <string name="adb_error_stop_tcp">فشل إيقاف ADB عبر TCP</string>
     <string name="adb_pair_required">يرجى المرور بخطوة الاقتران أولاً.</string>
-    <string name="enable">Enable</string>
+    <string name="enable">تمكين</string>
     <string name="development_settings">خيارات للمطور</string>
     <string name="notification_settings">إعداد الإشعارات</string>
     <string name="adb_pairing_tutorial_title">قم بإقران Shizuku بجهازك</string>
@@ -95,7 +95,7 @@
     <string name="app_management_dialog_adb_is_limited_title">إذن الADB محدود</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[من المحتمل جدًا أن تحدد الشركة المصنعة للجهاز إذن adb. &lt;p&gt; قد يكون هناك حل لنظامك في &lt;b&gt;&lt;a href="%1$s"&gt;هذا المستند&lt;/a&gt;&lt;/b&gt;.]]></string>
     <string name="app_management_item_summary_requires_root">* يطلب Shizuku الجذر (الروت) للعمل</string>
-    <string name="app_management_toggle_all">Toggle all</string>
+    <string name="app_management_toggle_all">تبديل الكل</string>
     <!-- Terminal -->
     <string name="home_terminal_title">استخدم Shizuku في تطبيقات المحطة</string>
     <string name="home_terminal_description">قم بتشغيل الأوامر من خلال Shizuku في تطبيقات المحطة التي تريدها</string>
@@ -115,16 +115,16 @@
     <string name="settings_start_on_boot">ابدأ عند التشغيل من حالة القفل (تحتاج جذر/روت)</string>
     <string name="settings_start_on_boot_summary">بالنسبة للأجهزة المجذرة (تستخدم الروت) ، يمكن لـShizuku البدء تلقائيًا عند التشغيل من حالة القفل</string>
     <string name="settings_use_system_color">استخدم لون سمة النظام</string>
-    <string name="settings_watchdog">Watchdog</string>
-    <string name="settings_watchdog_summary">Automatically restart Shizuku if it stops</string>
-    <string name="settings_tcp_mode">TCP mode</string>
-    <string name="settings_tcp_mode_summary">"Allows Shizuku to restart without Wi-Fi. (Shizuku must have started once since reboot)"</string>
-    <string name="settings_tcp_mode_dialog_title">Restart Required</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku needs to restart in order to apply this setting.<br><br><b>Shizuku will continue running and wait for a Wi-Fi connection before restarting.</b>]]></string>
-    <string name="settings_tcp_port">TCP port</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
-    <string name="settings_tcp_port_hint">Leave blank to use default (5555)</string>
-    <string name="settings_tcp_learn_more">Learn more about using automation apps to control Shizuku</string>
+    <string name="settings_watchdog">مراقبة</string>
+    <string name="settings_watchdog_summary">إعادة تشغيل Shizuku تلقائياً إذا توقف</string>
+    <string name="settings_tcp_mode">وضع TCP</string>
+    <string name="settings_tcp_mode_summary">"يسمح لشيزوكو بإعادة التشغيل بدون Wi-Fi. (يجب أن يكون قد بدأ مرة واحدة منذ إعادة التشغيل)"</string>
+    <string name="settings_tcp_mode_dialog_title">إعادة التشغيل مطلوبة</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[يحتاج Shizuku إلى إعادة تشغيل من أجل تطبيق هذا الإعداد.<br><br><b>Shizuku سوف يستمر في التشغيل وانتظار اتصال Wi-Fi قبل إعادة التشغيل.</b>]]></string>
+    <string name="settings_tcp_port">منفذ TCP</string>
+    <string name="settings_tcp_port_deafult">الافتراضي (5555)</string>
+    <string name="settings_tcp_port_hint">اتركه فارغاً لاستخدام الافتراضي (5555)</string>
+    <string name="settings_tcp_learn_more">تعرف على المزيد حول استخدام تطبيقات التشغيل الآلي للتحكم بشيزوكو</string>
     <string name="settings_language">اللغة</string>
     <string name="settings_translation_contributors">المساهمون في الترجمة</string>
     <string name="settings_translation">شارك في الترجمة</string>
@@ -132,28 +132,28 @@
     <string name="settings_user_interface">المظهر</string>
     <string name="settings_black_night_theme">وضع السواد النقيّ</string>
     <string name="settings_black_night_theme_summary">استخدم سمة السواد النقيّ إذ الوضع الليلي الذي بالجهاز مفعل</string>
-    <string name="settings_support">Support</string>
-    <string name="settings_help">Help</string>
-    <string name="settings_report_bug">Report a bug</string>
-    <string name="settings_advanced">Advanced</string>
+    <string name="settings_support">الدعم</string>
+    <string name="settings_help">مساعدة</string>
+    <string name="settings_report_bug">أبلغ عن خلل</string>
+    <string name="settings_advanced">متقدم</string>
     <string name="settings_legacy_pairing">Legacy pairing</string>
-    <string name="settings_legacy_pairing_summary">Enter the pairing code in a dialog instead of a notification</string>
+    <string name="settings_legacy_pairing_summary">أدخل رمز الاقتران في مربع حوار بدلاً من إشعار</string>
     <!-- Snackbar -->
-    <string name="snackbar_invalid_port">Port must be between 1 and 65535</string>
-    <string name="snackbar_battery_optimization_home">Battery optimization must be disabled for start on boot/watchdog to work properly.</string>
-    <string name="snackbar_battery_optimization_settings">Please disable battery optimization to use this feature.</string>
-    <string name="snackbar_action_fix">Fix</string>
+    <string name="snackbar_invalid_port">المنفذ يجب أن يكون بين 1 و 65535</string>
+    <string name="snackbar_battery_optimization_home">يجب تعطيل تحسين البطارية للبدء عند التشغيل/ساعة العمل بشكل صحيح.</string>
+    <string name="snackbar_battery_optimization_settings">الرجاء تعطيل تحسين البطارية لاستخدام هذه الميزة.</string>
+    <string name="snackbar_action_fix">إصلاح</string>
     <!-- Toast -->
-    <string name="toast_no_email_app">No email app found</string>
-    <string name="toast_failed_to_stop">Failed to stop Shizuku</string>
-    <string name="toast_shizuku_already_starting">Shizuku is already starting in the background</string>
+    <string name="toast_no_email_app">لم يتم العثور على تطبيق بريد إلكتروني</string>
+    <string name="toast_failed_to_stop">فشل في إيقاف Shizuku</string>
+    <string name="toast_shizuku_already_starting">شيزوكو بدأ بالفعل في الخلفية</string>
     <!-- Dark Mode Setting Override -->
-    <string name="dark_theme">Theme</string>
-    <string name="dark_theme_off">Always light</string>
-    <string name="dark_theme_on">Always dark</string>
+    <string name="dark_theme">السمة</string>
+    <string name="dark_theme_off">ضوء دائمًا</string>
+    <string name="dark_theme_on">مظلمة دائمًا</string>
     <!-- About -->
     <string name="action_about">حول</string>
-    <string name="about_dialog_button_close">Close</string>
+    <string name="about_dialog_button_close">أغلق</string>
     <string name="about_view_source_code"><![CDATA[عرض التعليمات البرمجية المصدر في %s]]></string>
     <!-- Stop -->
     <string name="action_stop">إيقاف Shizuku</string>
@@ -184,31 +184,31 @@
     <string name="starter">مفتاح التشغيل</string>
     <string name="start_with_root_failed">لا يمكن بدء الخدمة لأنه لم يتم منح إذن الجذر (الروت) أو قد يكون هذا الجهاز ليس مزوّدًا بحق الوصول إلى الجذر (الروت).</string>
     <!-- WADB Starter -->
-    <string name="wadb_notification_title">Starting Shizuku…</string>
-    <string name="wadb_notification_wifi_required">Awaiting Wi-Fi connection before proceeding</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi found. Proceeding</string>
-    <string name="wadb_error_title">Error while starting on boot</string>
-    <string name="wadb_error_notify_dev">Tap to notify the developer.</string>
-    <string name="wadb_error_send_email">Send an email to</string>
-    <string name="wadb_permission_error_notification_title">Permission Error</string>
-    <string name="wadb_permission_error_notification_content">Shizuku needs WRITE_SECURE_SETTINGS to start on boot. Tap to learn how to grant it.</string>
-    <string name="wadb_notification_channel">ADB auto-start service</string>
+    <string name="wadb_notification_title">بدء تشغيل Shizuku…</string>
+    <string name="wadb_notification_wifi_required">في انتظار اتصال Wi-Fi قبل المتابعة</string>
+    <string name="wadb_notification_wifi_found">تم العثور على Wi-Fi</string>
+    <string name="wadb_error_title">حدث خطأ أثناء بدء التشغيل</string>
+    <string name="wadb_error_notify_dev">انقر لإعلام المطور.</string>
+    <string name="wadb_error_send_email">إرسال بريد إلكتروني إلى</string>
+    <string name="wadb_permission_error_notification_title">خطأ في الإذن</string>
+    <string name="wadb_permission_error_notification_content">يحتاج Shizuku إلى WRITE_SECURE_SETTINGS للبدء عند التشغيل. انقر لمعرفة كيفية منحه.</string>
+    <string name="wadb_notification_channel">خدمة التشغيل التلقائي لـ ADB</string>
     <!-- Watchdog -->
-    <string name="watchdog_running">Watchdog is running</string>
-    <string name="watchdog_shizuku_crashed_title">Shizuku crashed recently</string>
-    <string name="watchdog_shizuku_crashed_text">Watchdog restarted the service. Tap to learn about potential fixes to prevent future crashes.</string>
-    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Turn Off Alerts</string>
+    <string name="watchdog_running">المشاهدة قيد التشغيل</string>
+    <string name="watchdog_shizuku_crashed_title">شيزوكو تحطمت مؤخرا</string>
+    <string name="watchdog_shizuku_crashed_text">أعد المشاهدة تشغيل الخدمة. انقر للاطلاع على الإصلاحات المحتملة لمنع وقوع حوادث في المستقبل.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">إيقاف التنبيهات</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">لا يمكن بدء المتصفح</string>
     <string name="toast_copied_to_clipboard">%s
 \n تم نسخه إلى الحافظة.</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[تم نسخ <b>%s</b> إلى الحافظة.]]></string>
-    <string name="accessibility_service_description">Provides pairing support for devices (e.g., TVs running Android 14+) where notifications or split screen cannot be used.\n\nEnables Shizuku to extract the pairing code from the wireless debugging pairing screen. It will disable itself once the pairing code is found.</string>
+    <string name="accessibility_service_description">يوفر دعم الاقتران للأجهزة (مثل أجهزة التلفزيون التي تعمل بنظام أندرويد 14+) حيث لا يمكن استخدام الإشعارات أو تقسيم الشاشة.\n\nتمكين Shizuku لاستخراج رمز الاقتران من شاشة اقتران التصحيح اللاسلكية. سوف يعطل نفسه بمجرد العثور على رمز الاقتران.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s لا يدعم النسخة الحديثة من Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[تم إهمال Legacy Shizuku منذ آذار (مارس) 2019. أيضًا ، لا يعمل Shizuku القديم على أنظمة Android الأحدث. &lt;p&gt; يُرجى مطالبة مطور &lt;b&gt; %1$s &lt;/b&gt; بالتحديث.]]></string>
     <string name="dialog_requesting_legacy_title">يطلب %1$s تطبيق Shizuku القديم</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[يحتوي &lt;b&gt; %1$s &lt;/b&gt; على دعم Shizuku الحديث ، لكنه يتطلب شيزوكو القديم. قد يكون هذا بسبب عدم تشغيل Shizuku ، يرجى التحقق في تطبيق Shizuku. &lt;p&gt; تم إيقاف Legacy Shizuku منذ آذار (مارس) 2019.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">افتح Shizuku</string>
-    <string name="wadb_notification_attempt_now">Attempt now</string>
+    <string name="wadb_notification_attempt_now">حاول الآن</string>
 </resources>
