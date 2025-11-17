@@ -3,51 +3,57 @@
     <!-- To translators: you can leave your here -->
     <string name="translation_contributors"></string>
     <!-- Home - Status -->
-    <string name="home_status_service_is_running">%1$s is running</string>
-    <string name="home_status_service_not_running">%1$s is not running</string>
-    <string name="home_status_service_version">Version %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Version %2$s, %1$s<br>Start again to update to version %3$s]]></string>
+    <string name="home_status_service_is_running">%1$s se izvršava</string>
+    <string name="home_status_service_not_running">%1$s se ne izvršava</string>
+    <string name="home_status_service_version">Verzija %2$s, %1$s</string>
+    <string name="home_status_service_version_update"><![CDATA[Verzija %2$s, %1$s&lt;br&gt;Počni ispočetka zbog ažuriranja na verziju%3$s]]></string>
     <!-- Home - Adb -->
-    <string name="home_adb_title"><![CDATA[Start by connecting to a computer]]></string>
-    <string name="home_adb_description"><![CDATA[For devices without root, you need to use adb to start Shizuku (requires computer connection). This process needs to be repeated every time the device is restarted. Please <b><a href=\"%1$s\">read the help</a></b>.]]></string>
-    <string name="home_adb_button_view_help">Read help</string>
-    <string name="home_adb_button_view_command">View command</string>
+    <string name="home_adb_title"><![CDATA[Pokreni uz pomoć konekcije preko računara]]></string>
+    <string name="home_adb_description"><![CDATA[Za uređaje koji nisu root-ovani, potrebno je izvršiti adb komandu radi pokretanja Shizuku aplikacije (zahteva konekciju sa računarom). Ovaj proces je neophodno svaki put ponoviti nakon restarta uređaja. Molim Vas <b><a href="%1$s">pročitajte pomoć </a></b>.]]></string>
+    <string name="home_adb_button_view_help">Pročitajte pomoć</string>
+    <string name="home_adb_button_view_command">Pregled komande</string>
     <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* There are some other considerations, please confirm that you have read the help first.]]></string>
-    <string name="home_adb_dialog_view_command_copy_button">Copy</string>
-    <string name="home_adb_dialog_view_command_button_send">Send</string>
+    <string name="home_adb_dialog_view_command_copy_button">Kopiraj</string>
+    <string name="home_adb_dialog_view_command_button_send">Pošalji</string>
     <!-- Home - Wireless Adb -->
-    <string name="home_wireless_adb_title"><![CDATA[Start via Wireless debugging]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[On Android 11 or above, you can enable Wireless debugging and start Shizuku directly from your device, without connecting to a computer.<p>Please view the step-by-step guide first.]]></string>
-    <string name="home_wireless_adb_description_pre_11"><![CDATA[Before Android 11, connecting to a computer is required to enable Wireless debugging.]]></string>
-    <string name="home_wireless_adb_view_guide_button">Step-by-step guide</string>
+    <string name="home_wireless_adb_title"><![CDATA[Pokreni preko Bežičnog otklanjanja grešaka]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Za Android verziju softvera 11 i više, možete omogućavanjem rada režima Bežičnog otklanjanja grešaka pokrenuti Shizuku aplikaciju direktno sa Vašeg  telefona, zaobilazeći konekciju sa računarom.&lt;p&gt; Molimo Vas, najpre pogledajte vodič Korak-po-korak.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Pre Android verzije softvera 11, konekcija sa računarom bila je neophodna  u cilju omogućavanja rada režima Bežično otklanjanja grešaka.]]></string>
+    <string name="home_wireless_adb_view_guide_button">Vodič Korak-po-korak</string>
     <!-- Adb -->
-    <string name="dialog_adb_discovery">Searching for wireless debugging service</string>
-    <string name="dialog_adb_discovery_message">Please enable \"Wireless debugging\" in \"Developer options\". \"Wireless debugging\" is automatically disabled when network changes.\n\nNote, do not disable \"Developer options\" or \"USB debugging\", or Shizuku will be stopped.</string>
+    <string name="dialog_adb_discovery">Traženje servisa Bežično otklanjanje grešaka</string>
+    <string name="dialog_adb_discovery_message">Molimo Vas omogućite rad režima \"Bežično otklanjanje  grešaka\" u sekciji \"Opcije programera\". Režim  \"Bežično otklanjanje grešaka\" se automatski onemogućava pri svakoj promeni mrežne konekcije..
+\n
+\nPrimetićete, onemogućavanjem sekcije \"Opcije programera\" ili režima \"USB otklanjanje grešaka\", proces rada aplikacije Shizuku se prekida.</string>
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Please try to disable and enable \"Wireless debugging\" if it keeps searching.</string>
     <string name="dialog_adb_port">Port</string>
     <string name="dialog_adb_invalid_port">Port is an integer ranging from 1 to 65535.</string>
     <string name="adb_pairing">Pairing</string>
-    <string name="dialog_adb_pairing_title">Pair with device</string>
-    <string name="dialog_adb_pairing_discovery">Searching for pairing service</string>
-    <string name="dialog_adb_pairing_paring_code">Pairing code</string>
-    <string name="paring_code_is_wrong">Pairing code is wrong.</string>
-    <string name="cannot_connect_port">Can\'t connect to wireless debugging service.</string>
-    <string name="dialog_wireless_adb_not_enabled">Wireless debugging is not enabled.\nNote, before Android 11, to enable wireless debugging, computer connection is a must.</string>
+    <string name="dialog_adb_pairing_title">Upari sa uređajem</string>
+    <string name="dialog_adb_pairing_discovery">Traženje uređaja za uparivanje</string>
+    <string name="dialog_adb_pairing_paring_code">Kód za uparivanje</string>
+    <string name="paring_code_is_wrong">Kód za uparivanje je pogrešan.</string>
+    <string name="cannot_connect_port">Nemoguće je povezivanje sa uslugom bežičnog otklanjanje grešaka.</string>
+    <string name="dialog_wireless_adb_not_enabled">Bežično otklanjanje grešaka nije omogućeno.
+\nPrimedba: Pre Android-a 11, omogućavanje bežičnog otklanjanja grešaka bilo je uslovljeno postojanjem konekcije sa računarom.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging is not enabled.\nPlease enable it in \"Developer Options\".</string>
-    <string name="dialog_adb_pairing_message">Please start pairing by performing the following steps: \"Developer Options\" - \"Wireless debugging\" - \"Pair device with pairing code.\"\n\nAfter the pairing process starts, you will able to input the pairing code.</string>
+    <string name="dialog_adb_pairing_message">Molim Vas, započnite proces uparivanja prateći sledeće korake: \"Razvojne opcije programera\" - \"Bežično otklanjanje grešaka\" - \"Uparivanje  uređaja pomoću kóda za uparivanje\".
+\n
+\nNakon uspešno izvršenog početka procesa uparivanja, moći ćete da unesete kód za uparivanje.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Please enable the accessibility service to start the pairing process. This allows Shizuku to detect the pairing code.\n\nThe accessibility service will be turned off when the code is found or after 1 minute to save energy.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Please navigate to \"Developer Options\" &gt; \"Wireless debugging\" &gt; \"Pair device with pairing code.\" Shizuku will automatically detect the pairing code.</string>
-    <string name="adb_pairing_requires_multi_window">Please enter split-screen (multi-window) mode first.</string>
+    <string name="adb_pairing_requires_multi_window">Molim Vas, najpre izaberite režim podeljenog ekrana, odnosno režim više prozora.</string>
     <string name="adb_pairing_requires_multi_window_reason">The system requires the pairing dialog always visible, using split-screen mode is the only way to let this app and system dialog visible at the same time.</string>
-    <string name="adb_error_key_store">Unable to generate key for wireless debugging.\nThis may be because KeyStore mechanism of this device is broken.</string>
+    <string name="adb_error_key_store">Neuspešno generisanje ključa za bežično otklanjanje grešaka.
+\nOvo je možda iz razloga što je mehanizam skladišta ključeva ovog uređaja neispravan.</string>
     <string name="adb_error_stop_tcp">Failed to stop ADB over TCP</string>
-    <string name="adb_pair_required">Please go through the pairing step first.</string>
+    <string name="adb_pair_required">Molim Vas, najpre prođite kroz korake za uparivanje uređaja.</string>
     <string name="enable">Enable</string>
-    <string name="development_settings">Developer options</string>
-    <string name="notification_settings">Notification options</string>
-    <string name="adb_pairing_tutorial_title">Pair Shizuku with your device</string>
-    <string name="adb_pairing_tutorial_content_notification">A notification from Shizuku will help you complete the pairing.</string>
-    <string name="adb_pairing_tutorial_content_steps">Enter \"Developer options\" - \"Wireless debugging\". Tap \"Pair device with pairing code\", you will see a six-digit code.</string>
+    <string name="development_settings">Razvojne opcije programera</string>
+    <string name="notification_settings">Opcije obaveštenja</string>
+    <string name="adb_pairing_tutorial_title">Uparite Shizuku sa Vašim uređajem</string>
+    <string name="adb_pairing_tutorial_content_notification">Notifikacija iz Shizuku aplikacije će Vam pomoći da dovršite uparivanje.</string>
+    <string name="adb_pairing_tutorial_content_steps">Otvorite sekciju \"Razvojne opcije programera\" - \"Bežično otklanjanje grešaka\". Dodirnite \"Uparivanje uređaja pomoću kóda za uparivanje\" i pojaviće Vam se 6-cifreni kód.</string>
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Enter the code in the notification to complete pairing.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">The pairing process needs you to interact with a notification from Shizuku. Please allow Shizuku to post notifications.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI users may need to switch notification style to \"Android\" from \"Notification\" - \"Notification shade\" in system settings.</string>
@@ -152,7 +158,7 @@
     <string name="notification_working">Working…</string>
     <string name="notification_channel_adb_pairing">Wireless debugging pairing</string>
     <string name="notification_adb_pairing_input_paring_code">Enter pairing code</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Searching for pairing service</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Traženje uređaja za uparivanje</string>
     <string name="notification_adb_pairing_service_found_title">Pairing service found</string>
     <string name="notification_adb_pairing_stop_searching">Stop searching</string>
     <string name="notification_adb_pairing_working_title">Pairing in progress</string>
