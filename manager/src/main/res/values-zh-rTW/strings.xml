@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">無法連線至無線偵錯服務。</string>
     <string name="dialog_wireless_adb_not_enabled">無線偵錯未啟用。
 \n請注意，在 Android 11 之前，要啟用無線偵錯必須先與電腦連線。</string>
-    <string name="dialog_adb_pairing_message">請跟隨下面的步驟開始配對：「開發人員選項」 - 「無線偵錯」- 「使用配對碼配對裝置」。
-\n
-\n配對過程開始後，您將能夠輸入配對碼。</string>
     <string name="adb_pairing_requires_multi_window">請先進入「分割畫面」(多視窗) 模式。</string>
     <string name="adb_pairing_requires_multi_window_reason">系統要求配對對話方塊始終可見，使用「分割畫面」模式是使此應用程式和系統對話方塊同時可見的唯一方法。</string>
     <string name="adb_error_key_store">無法為無線偵錯產生金鑰。
@@ -68,7 +65,6 @@
         <item quantity="other"><![CDATA[已授權 %d 個應用程式]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[輕觸以管理已授權的應用程式]]></string>
-    <string name="home_app_management_empty">已要求或宣告 Shizuku 的應用程式將顯示在此處。</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">瞭解 Shizuku</string>
     <string name="home_learn_more_description">瞭解如何使用 Shizuku 開發</string>
@@ -98,16 +94,17 @@
     <string name="rish_description"><![CDATA[透過 %1$s，您可以在任何終端機應用程式中連線到由 Shizuku 執行的 shell 並與之互動。 &lt;p&gt;有關 %1$s 的具體使用方式，請輕觸以檢視文件。]]></string>
     <!-- Settings -->
     <string name="settings_title">設定</string>
+    <string name="settings_use_system_color">使用系統主題色彩</string>
     <string name="settings_language">語言</string>
-    <string name="settings_user_interface">外觀</string>
-    <string name="settings_black_night_theme">黑色夜間主題</string>
-    <string name="settings_black_night_theme_summary">夜間模式啟用時使用純黑色主題</string>
     <string name="settings_translation_contributors">翻譯貢獻者</string>
     <string name="settings_translation">參與翻譯</string>
     <string name="settings_translation_summary">協助我們將 %s 翻譯至您的語言</string>
-    <string name="settings_start_on_boot">在開機時啟動 (Root)</string>
-    <string name="settings_start_on_boot_summary">對於已 Root 裝置，Shizuku 可以在開機時自動啟動</string>
-    <string name="settings_use_system_color">使用系統主題色彩</string>
+    <string name="settings_user_interface">外觀</string>
+    <string name="settings_black_night_theme">黑色夜間主題</string>
+    <string name="settings_black_night_theme_summary">夜間模式啟用時使用純黑色主題</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">關於</string>
     <string name="about_view_source_code"><![CDATA[在 %s 檢視原始碼]]></string>
@@ -139,6 +136,8 @@
     <!-- Starter -->
     <string name="starter">啟動器</string>
     <string name="start_with_root_failed">未授予 Root 權限或是此裝置沒有 Root，因此無法啟動服務。</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">無法啟動瀏覽器</string>
     <string name="toast_copied_to_clipboard">%s
