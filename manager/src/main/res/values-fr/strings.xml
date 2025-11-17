@@ -33,16 +33,16 @@
     <string name="paring_code_is_wrong">Le code d\'association n\'est pas le bon.</string>
     <string name="cannot_connect_port">Impossible de se connecter au service de débogage sans fil.</string>
     <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, pour activer le débogage sans fil, la connexion à un ordinateur est requise.</string>
-    <string name="dialog_usb_debugging_not_enabled">USB debugging is not enabled.\nPlease enable it in \"Developer Options\".</string>
+    <string name="dialog_usb_debugging_not_enabled">Le débogage USB n\'est pas activé.\nVeuillez l\'activer dans \"Options de développement\".</string>
     <string name="dialog_adb_pairing_message">Merci de démarrer l\'association en suivant les étapes suivantes : \"Options pour les développeurs\" - \"Débogage sans fil\" - \"Associer avec un code d\'association\".\n\nAprès que le processus d\'association ai démarré, vous serez capable d\'entrer le code d\'association.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Please enable the accessibility service to start the pairing process. This allows Shizuku to detect the pairing code.\n\nThe accessibility service will be turned off when the code is found or after 1 minute to save energy.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Please navigate to \"Developer Options\" &gt; \"Wireless debugging\" &gt; \"Pair device with pairing code.\" Shizuku will automatically detect the pairing code.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Veuillez activer le service d\'accessibilité pour démarrer le processus d\'appairage. Cela permet à Shizuku de détecter le code d\'appairage.\n\nLe service d\'accessibilité sera désactivé lorsque le code sera trouvé ou après 1 minute pour économiser de l\'énergie.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Veuillez naviguer vers \"Options du développeur\" &gt; \"Débogage sans fil\" &gt; \"Associer l\'appareil avec le code d\'appairage\". Shizuku détectera automatiquement le code d\'appairage.</string>
     <string name="adb_pairing_requires_multi_window">Merci d\'activer le mode écran partagé (mode multi-fenêtres) d\'abord.</string>
     <string name="adb_pairing_requires_multi_window_reason">Le système nécessite que la fenêtre d\'association soit toujours visible, l\'utilisation du mode écran partagé est la seule manière de laisser cette appli et la fenêtre système visibles au même moment.</string>
     <string name="adb_error_key_store">Impossible de générer une clé pour le débogage sans fil.\nCela peut être dû au fait que le mécanisme du magasin de clés de l\'appareil est cassé.</string>
-    <string name="adb_error_stop_tcp">Failed to stop ADB over TCP</string>
+    <string name="adb_error_stop_tcp">Échec de l\'arrêt de l\'ADB sur TCP</string>
     <string name="adb_pair_required">Merci d\'aller à l\'étape d\'association d\'abord.</string>
-    <string name="enable">Enable</string>
+    <string name="enable">Activer</string>
     <string name="development_settings">Options pour les développeurs</string>
     <string name="notification_settings">Options des notifications</string>
     <string name="adb_pairing_tutorial_title">Associer Shizuku avec votre appareil</string>
@@ -84,7 +84,7 @@
     <string name="app_management_dialog_adb_is_limited_title">La permission de adb est limitée</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Il est fortement possible que le fabricant de votre appareil limite la permission de adb.&lt;p&gt;Il pourrait avoir une solution pour votre système dans &lt;b&gt;&lt;a href="%1$s"&gt;ce document&lt;/a&gt;&lt;/b&gt;.]]></string>
     <string name="app_management_item_summary_requires_root">* nécessite que Shizuku fonctionne avec le root</string>
-    <string name="app_management_toggle_all">Toggle all</string>
+    <string name="app_management_toggle_all">Activer/désactiver tout</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Utiliser Shizuku dans les applis de terminal</string>
     <string name="home_terminal_description">Exécuter des commandes à travers Shizuku dans les applis de terminal que vous aimez</string>
@@ -104,16 +104,16 @@
     <string name="settings_start_on_boot">Lancer au démarrage de l\'appareil (root)</string>
     <string name="settings_start_on_boot_summary">Pour les appareils rootés ou sous Android 11+ ou plus, Shizuku peut se lancer automatiquement au démarrage</string>
     <string name="settings_use_system_color">Utiliser la couleur du thème système</string>
-    <string name="settings_watchdog">Watchdog</string>
-    <string name="settings_watchdog_summary">Automatically restart Shizuku if it stops</string>
-    <string name="settings_tcp_mode">TCP mode</string>
-    <string name="settings_tcp_mode_summary">"Allows Shizuku to restart without Wi-Fi. (Shizuku must have started once since reboot)"</string>
-    <string name="settings_tcp_mode_dialog_title">Restart Required</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku needs to restart in order to apply this setting.<br><br><b>Shizuku will continue running and wait for a Wi-Fi connection before restarting.</b>]]></string>
-    <string name="settings_tcp_port">TCP port</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
-    <string name="settings_tcp_port_hint">Leave blank to use default (5555)</string>
-    <string name="settings_tcp_learn_more">Learn more about using automation apps to control Shizuku</string>
+    <string name="settings_watchdog">Chien de garde</string>
+    <string name="settings_watchdog_summary">Redémarrer automatiquement Shizuku s\'il s\'arrête</string>
+    <string name="settings_tcp_mode">Mode TCP</string>
+    <string name="settings_tcp_mode_summary">"Permet à Shizuku de redémarrer sans Wi-Fi. (Shizuku doit avoir démarré une fois depuis le redémarrage)"</string>
+    <string name="settings_tcp_mode_dialog_title">Redémarrage Requis</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku doit redémarrer pour appliquer ce paramètre.<br><br><b>Shizuku va continuer à fonctionner et attendre une connexion Wi-Fi avant de redémarrer.</b>]]></string>
+    <string name="settings_tcp_port">Port TCP</string>
+    <string name="settings_tcp_port_deafult">Par défaut (5555)</string>
+    <string name="settings_tcp_port_hint">Laisser vide pour utiliser la valeur par défaut (5555)</string>
+    <string name="settings_tcp_learn_more">En savoir plus sur l\'utilisation des applications d\'automatisation pour contrôler Shizuku</string>
     <string name="settings_language">Langue</string>
     <string name="settings_translation_contributors">Contributeurs à la traduction</string>
     <string name="settings_translation">Participer à la traduction</string>
@@ -121,28 +121,28 @@
     <string name="settings_user_interface">Apparence</string>
     <string name="settings_black_night_theme">Thème sombre noir</string>
     <string name="settings_black_night_theme_summary">Utilise le thème noir pur si le thème sombre est activé</string>
-    <string name="settings_support">Support</string>
-    <string name="settings_help">Help</string>
-    <string name="settings_report_bug">Report a bug</string>
-    <string name="settings_advanced">Advanced</string>
+    <string name="settings_support">Soutien</string>
+    <string name="settings_help">Aide</string>
+    <string name="settings_report_bug">Signaler un bug</string>
+    <string name="settings_advanced">Avancé</string>
     <string name="settings_legacy_pairing">Legacy pairing</string>
-    <string name="settings_legacy_pairing_summary">Enter the pairing code in a dialog instead of a notification</string>
+    <string name="settings_legacy_pairing_summary">Entrez le code d\'appairage dans une boîte de dialogue au lieu d\'une notification</string>
     <!-- Snackbar -->
-    <string name="snackbar_invalid_port">Port must be between 1 and 65535</string>
-    <string name="snackbar_battery_optimization_home">Battery optimization must be disabled for start on boot/watchdog to work properly.</string>
-    <string name="snackbar_battery_optimization_settings">Please disable battery optimization to use this feature.</string>
-    <string name="snackbar_action_fix">Fix</string>
+    <string name="snackbar_invalid_port">Le port doit être compris entre 1 et 65535</string>
+    <string name="snackbar_battery_optimization_home">L\'optimisation de la batterie doit être désactivée pour que le démarrage fonctionne correctement.</string>
+    <string name="snackbar_battery_optimization_settings">Veuillez désactiver l\'optimisation de la batterie pour utiliser cette fonctionnalité.</string>
+    <string name="snackbar_action_fix">Corriger</string>
     <!-- Toast -->
-    <string name="toast_no_email_app">No email app found</string>
-    <string name="toast_failed_to_stop">Failed to stop Shizuku</string>
-    <string name="toast_shizuku_already_starting">Shizuku is already starting in the background</string>
+    <string name="toast_no_email_app">Aucune application de messagerie trouvée</string>
+    <string name="toast_failed_to_stop">Impossible d\'arrêter Shizuku</string>
+    <string name="toast_shizuku_already_starting">Shizuku commence déjà en arrière-plan</string>
     <!-- Dark Mode Setting Override -->
-    <string name="dark_theme">Theme</string>
-    <string name="dark_theme_off">Always light</string>
-    <string name="dark_theme_on">Always dark</string>
+    <string name="dark_theme">Thème</string>
+    <string name="dark_theme_off">Toujours léger</string>
+    <string name="dark_theme_on">Toujours sombre</string>
     <!-- About -->
     <string name="action_about">À propos</string>
-    <string name="about_dialog_button_close">Close</string>
+    <string name="about_dialog_button_close">Fermer</string>
     <string name="about_view_source_code"><![CDATA[Voir le code source sur %s]]></string>
     <!-- Stop -->
     <string name="action_stop">Arrêter Shizuku</string>
@@ -174,25 +174,25 @@
     <string name="start_with_root_failed">Impossible de lancer le service parce que la permission root n\'est pas accordée ou que cet appareil n\'est pas rooté.</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Shizuku est en cours de démarrage...</string>
-    <string name="wadb_notification_wifi_required">Awaiting Wi-Fi connection before proceeding</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi found. Proceeding</string>
-    <string name="wadb_error_title">Error while starting on boot</string>
-    <string name="wadb_error_notify_dev">Tap to notify the developer.</string>
-    <string name="wadb_error_send_email">Send an email to</string>
-    <string name="wadb_permission_error_notification_title">Permission Error</string>
-    <string name="wadb_permission_error_notification_content">Shizuku needs WRITE_SECURE_SETTINGS to start on boot. Tap to learn how to grant it.</string>
+    <string name="wadb_notification_wifi_required">En attente de connexion Wi-Fi avant de continuer</string>
+    <string name="wadb_notification_wifi_found">Wi-Fi trouvé. En cours</string>
+    <string name="wadb_error_title">Erreur lors du démarrage au démarrage</string>
+    <string name="wadb_error_notify_dev">Appuyer pour notifier le développeur.</string>
+    <string name="wadb_error_send_email">Envoyer un e-mail à</string>
+    <string name="wadb_permission_error_notification_title">Erreur de permission</string>
+    <string name="wadb_permission_error_notification_content">Shizuku a besoin de WRITE_SECURE_SETTINGS pour démarrer au démarrage. Appuyez pour savoir comment l\'accorder.</string>
     <string name="wadb_notification_channel">Service de démarrage automatique par ADB</string>
     <!-- Watchdog -->
-    <string name="watchdog_running">Watchdog is running</string>
-    <string name="watchdog_shizuku_crashed_title">Shizuku crashed recently</string>
-    <string name="watchdog_shizuku_crashed_text">Watchdog restarted the service. Tap to learn about potential fixes to prevent future crashes.</string>
-    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Turn Off Alerts</string>
+    <string name="watchdog_running">Le chien de garde est en cours</string>
+    <string name="watchdog_shizuku_crashed_title">Shizuku a planté récemment</string>
+    <string name="watchdog_shizuku_crashed_text">Le chien de garde a redémarré le service. Appuyez pour en savoir plus sur les corrections potentielles pour éviter les plantages futurs.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Désactiver les alertes</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossible de lancer le navigateur</string>
     <string name="toast_copied_to_clipboard">%s
 \na bien été copié dans le presse papier.</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> a bien été copié dans le presse papier.]]></string>
-    <string name="accessibility_service_description">Provides pairing support for devices (e.g., TVs running Android 14+) where notifications or split screen cannot be used.\n\nEnables Shizuku to extract the pairing code from the wireless debugging pairing screen. It will disable itself once the pairing code is found.</string>
+    <string name="accessibility_service_description">Fournit la prise en charge de l\'appairage pour les appareils (par exemple, les téléviseurs exécutant Android 14+) où les notifications ou les écrans partagés ne peuvent pas être utilisés.\n\nPermet à Shizuku d\'extraire le code d\'appairage de l\'écran de débogage sans fil. Il se désactivera une fois que le code d\'appairage sera trouvé.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ne supporte pas les versions plus récentes de Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Les anciennes versions de Shizuku sont obsolètes depuis mars 2019. Aussi, elles ne fonctionnent pas sur les versions plus récentes d'Android.&lt;p&gt;Merci de demander au développeur de &lt;b&gt;%1$s&lt;/b&gt; de mettre à jour.]]></string>
