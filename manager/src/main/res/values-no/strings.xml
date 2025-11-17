@@ -1,198 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- To translators: you can leave your here -->
-    <string name="translation_contributors"></string>
     <!-- Home - Status -->
-    <string name="home_status_service_is_running">%1$s kjører</string>
-    <string name="home_status_service_not_running">%1$s kjører ikke</string>
-    <string name="home_status_service_version">Versjon %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Versjon %2$s, %1$s<br>startet igjen for å oppdatere til versjon %3$s]]></string>
     <!-- Home - Adb -->
-    <string name="home_adb_title"><![CDATA[Start ved tilkobling til en datamaskin]]></string>
-    <string name="home_adb_description"><![CDATA[For enheter uten rot, må du bruke adb for å starte Shizuku (krever datamaskintilkobling). Denne prosessen må gjentas hver gang enheten startes på nytt. Vennligst <b><a href=\"%1$s\">les hjelpen</a></b>.]]></string>
-    <string name="home_adb_button_view_help">Les hjelp</string>
-    <string name="home_adb_button_view_command">Vis kommando</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Det finnes andre hensyn, vennligst bekreft at du har lest hjelpen først.]]></string>
-    <string name="home_adb_dialog_view_command_copy_button">Kopier</string>
-    <string name="home_adb_dialog_view_command_button_send">Sende</string>
     <!-- Home - Wireless Adb -->
-    <string name="home_wireless_adb_title"><![CDATA[Start via trådløs feilsøking]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[På Android 11 eller mer kan du aktivere trådløs feilsøking og starte Shizuku direkte fra enheten, uten å koble til en datamaskin.<p>Vennligst se steg for steg veilederen først.]]></string>
-    <string name="home_wireless_adb_description_pre_11"><![CDATA[Før Android 11 er det nødvendig å koble til en datamaskin for å aktivere trådløs feilsøking.]]></string>
-    <string name="home_wireless_adb_view_guide_button">Trinn-for-trinn guide</string>
     <!-- Adb -->
-    <string name="dialog_adb_discovery">Søker etter trådløs feilsøkingstjeneste</string>
-    <string name="dialog_adb_discovery_message">Vennligst aktiver \"Trådløs feilsøking\" i \"Utvikler alternativer\". \"Trådløs feilsøking blir automatisk deaktivert når nettverket endres.\n\nMerk! Ikke deaktiver \"Utviklerinnstillinger\" eller \"USB-feilsøking\" eller Shizuku vil bli stoppet.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Vennligst prøv å deaktivere og aktivere \"Trådløs feilsøking\" hvis det fortsetter å søke.</string>
-    <string name="dialog_adb_port">Port</string>
-    <string name="dialog_adb_invalid_port">Port er et heltall mellom 1 og 65535.</string>
-    <string name="adb_pairing">Pairing</string>
-    <string name="dialog_adb_pairing_title">Koble sammen med enheten</string>
-    <string name="dialog_adb_pairing_discovery">Søker etter paringstjeneste</string>
-    <string name="dialog_adb_pairing_paring_code">Pairing code</string>
-    <string name="paring_code_is_wrong">Sammenkobling av kode er feil.</string>
-    <string name="cannot_connect_port">Kan ikke koble til trådløs feilsøkingstjeneste.</string>
-    <string name="dialog_wireless_adb_not_enabled">Trådløs feilsøking er ikke aktivert.\nNote, før Android 11, for å aktivere trådløs feilsøking, datamaskintilkobling er en må.</string>
-    <string name="dialog_usb_debugging_not_enabled">USB-feilsøking er ikke aktivert.\nAktiver det i \"Utvikler Alternativer\".</string>
-    <string name="dialog_adb_pairing_message">Please start pairing by performing the following steps: \"Developer Options\" - \"Wireless debugging\" - \"Pair device with pairing code.\"\n\nAfter the pairing process starts, you will able to input the pairing code.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Vennligst aktiver tilgjengelighetstjenesten for å starte sammenkoblingsprosessen. Dette gjør at Shizuku kan finne koden til sammenkoblingen.\n\nTilgjengelighetstjenesten deaktiveres når koden blir funnet eller etter 1 minutt å spare strøm.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Vennligst gå til \"Developer innstillinger\" &gt; \"Trådløs feilsøking\" &gt; \"Par enhet med sammenkoblingskode.\" Shizuku vil automatisk oppdage sammenkoblingskoden.</string>
-    <string name="adb_pairing_requires_multi_window">Vennligst skriv inn delt skjerm (flervindu) modus først.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Systemet krever paringsdialogboksen alltid synlig, bruk av split-screen er den eneste måten å la denne appen og systemdialogen være synlig samtidig.</string>
-    <string name="adb_error_key_store">Kan ikke generere nøkkel for trådløs feilsøking.\nDette kan være fordi KeyStore-mekanismen til denne enheten er ødelagt.</string>
-    <string name="adb_error_stop_tcp">Kan ikke stoppe ADB over TCP</string>
-    <string name="adb_pair_required">Du må gå gjennom sammenkoblingstrinnet først.</string>
-    <string name="enable">Aktiver</string>
-    <string name="development_settings">Alternativer for utviklere</string>
-    <string name="notification_settings">Varslings alternativer</string>
-    <string name="adb_pairing_tutorial_title">Par Shizuku med enheten din</string>
-    <string name="adb_pairing_tutorial_content_notification">En melding fra Shizuku hjelper deg å fylle ut pairingen.</string>
-    <string name="adb_pairing_tutorial_content_steps">Skriv inn \"Utvikleralternativer\" - \"Trådløs feilsøking\". Trykk på \"Par enhet med sammenkoblingskode\" vil du se en kode på seks siffer.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Angi koden i varselet for å fullføre paring.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Koblingsprosessen trenger deg til å samhandle med en melding fra Shizuku. Vennligst tillat Shizuku å poste varsler.</string>
-    <string name="adb_pairing_tutorial_content_miui">MIUI brukere må kanskje bytte varselstil til \"Android\" fra \"Varsling\" - \"Varseldeling\" i systeminnstillingene.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Ellers kan du ikke skrive inn pareringskode fra varslingen.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Vær oppmerksom på at venstre del av alternativet \"Trådløs feilsøking\" er klikkbar, å trykke på den vil åpne en ny side. Det er kun ved bytte til høyre feil.</string>
-    <string name="adb_pairing_tutorial_content_finish">Tilbake til Shizuku og start Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku må få tilgang til lokalt nettverk. Den styres av nettverkstillatelsen.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Noen systemer (f.eks. MIUI) tillater apper å få tilgang til nettverket når de ikke er synlige, selv om appen bruker forgrunnstjenesten som standard. Deaktiver batterioptimaliseringsfunksjoner for Shizuku på slike systemer.</string>
     <!-- Home - Root -->
-    <string name="home_root_title"><![CDATA[Start (for rootede enheter)]]></string>
-    <string name="home_root_description"><![CDATA[I tillegg kan Shizuku startes automatisk ved oppstart. Hvis ikke, vennligst sjekk om systemet ditt eller tredjeparts verktøy har begrenset Shizuku.<br>Du kan referere til %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Hvis du bruker Magisk, kan du prøve %1$s. For rot brukere, vil det til slutt erstatte Shizuku. Legg merke til at eksisterende programmer må endre lite for å bruke %2$s.]]></string>
-    <string name="home_root_button_start">Begynn</string>
-    <string name="home_root_button_restart">Omstart</string>
     <!-- Home - Application management -->
-    <string name="home_app_management_title">Administrasjon av applikasjoner</string>
-    <plurals name="home_app_management_authorized_apps_count">
-        <item quantity="one"><![CDATA[Autorisert %d applikasjon]]></item>
-        <item quantity="other"><![CDATA[Autoriserte %d programmer]]></item>
-    </plurals>
-    <string name="home_app_management_view_authorized_apps"><![CDATA[Trykk for å behandle autoriserte apper]]></string>
-    <string name="home_app_management_empty">Apper som har bedt om eller erklært tillatelsen Shizuku vises her.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Lær Shizuku</string>
-    <string name="home_learn_more_description">Lær hvordan du utvikler deg med Shizuku</string>
     <!-- Home - Adb permissions limited -->
-    <string name="home_adb_is_limited_title">Du må ta et ekstra steg</string>
-    <string name="home_adb_is_limited_description">Your device manufacturer has restricted adb permissions and apps using Shizuku will not work properly.\n\nUsually, this limitation can be lifted by adjusting some options in \"Developer options\". Please read the help for details on how to do this.\n\nYou may need to restart Shizuku for the operation to take effect.</string>
     <!-- Application management -->
-    <string name="app_management_dialog_adb_is_limited_title">Tillatelsen til adb er begrenset</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Det er svært mulig at produsenten av enheten din begrenser tillatelsen til adb.<p>Det kan være en løsning for ditt system i <b><a href=\"%1$s\">dette dokumentet</a></b>.]]></string>
-    <string name="app_management_item_summary_requires_root">* krever at Shizuku kjører med rot</string>
-    <string name="app_management_toggle_all">Velg alle</string>
     <!-- Terminal -->
-    <string name="home_terminal_title">Bruk Shizuku i terminalapper</string>
-    <string name="home_terminal_description">Kjør kommandoer gjennom Shizuku i terminal apper du vil</string>
-    <string name="terminal_tutorial_1">Først, eksporter filer til hvor du vil. Du finner to filer, %1$s og %2$s.</string>
-    <string name="terminal_tutorial_1_description">Hvis det er filer med samme navn i den valgte mappen, vil de bli slettet.\n\nEksport funksjonen bruker SAF (Lagringstilgang). Det rapporteres at MIUI bryter funksjonene til SAF. Hvis du bruker MIUI, kan det hende du må trekke ut filen fra Shizuku\'s apk eller laste ned fra GitHub.</string>
-    <string name="terminal_export_files">Eksporter filer</string>
-    <string name="terminal_tutorial_2">Deretter brukes en tekstredigeringsprogram til å åpne og redigere %1$s.</string>
-    <string name="terminal_tutorial_2_description">Hvis du vil bruke Shizuku i %1$sfor eksempel, bør du erstatte %2$s med %3$s (%4$s er pakkenavnet på %1$s).</string>
-    <string name="terminal_tutorial_3">Til slutt, flytt filene til et sted der terminal appen kan få tilgang til, vil du bruke %1$s til å kjøre kommandoer gjennom Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Noen tips: gi henvisningsrettigheter til %1$s og legg den til %2$s, vil du kunne bruke %1$s direkte.</string>
-    <string name="rish_description"><![CDATA[Med %1$si hvilken som helst terminal app kan du koble til og interagere med skjellet kjører av Shizuku.
-<p>Om den detaljerte bruken %1$s, trykk for å vise dokumentet.
-    ]]></string>
     <!-- Settings -->
-    <string name="settings_title">Innstillinger</string>
-    <string name="settings_behavior">Oppførsel</string>
-    <string name="settings_start_on_boot">Start ved oppstart</string>
-    <string name="settings_start_on_boot_summary">Krever Android 11+ eller rot</string>
-    <string name="settings_use_system_color">Bruk systemets temafarge</string>
-    <string name="settings_watchdog">Vakthund</string>
-    <string name="settings_watchdog_summary">Start Shizuku automatisk hvis den stopper</string>
-    <string name="settings_tcp_mode">TCP modus</string>
-    <string name="settings_tcp_mode_summary">"Tillater Shizuku å starte på nytt uten Wi-Fi. (Shizuku må ha startet en gang siden gjenoppstart)"</string>
-    <string name="settings_tcp_mode_dialog_title">Omstart nødvendig</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku må starte på nytt for å bruke denne innstillingen.<br><br><b>Shizuku vil fortsette å kjøre og vente på en Wi-Fi-tilkobling før den startes igjen.</b>]]></string>
-    <string name="settings_tcp_port">TCP port</string>
-    <string name="settings_tcp_port_deafult">Standard (5555)</string>
-    <string name="settings_tcp_port_hint">La være blank for å bruke standard (5555)</string>
-    <string name="settings_tcp_learn_more">Lær mer om å bruke automatiseringsapper for å kontrollere Shizuku</string>
-    <string name="settings_language">Språk</string>
-    <string name="settings_translation_contributors">Oversettelse bidragsytere</string>
-    <string name="settings_translation">Delta i oversettelse</string>
-    <string name="settings_translation_summary">Hjelp oss med å oversette %s til ditt språk</string>
-    <string name="settings_user_interface">Utseende</string>
-    <string name="settings_black_night_theme">Svart natt-tema</string>
-    <string name="settings_black_night_theme_summary">Bruk det svarte temaet hvis nattmodus er aktivert</string>
-    <string name="settings_support">Brukerstøtte</string>
-    <string name="settings_help">Hjelp</string>
-    <string name="settings_report_bug">Rapporter feil</string>
-    <string name="settings_advanced">Avansert</string>
-    <string name="settings_legacy_pairing">Legacy pairing</string>
-    <string name="settings_legacy_pairing_summary">Skriv inn paringskoden i en dialog i stedet for et varsel</string>
     <!-- Snackbar -->
-    <string name="snackbar_invalid_port">Port må være mellom 1 og 65535</string>
-    <string name="snackbar_battery_optimization_home">Batterioptimalisering må være deaktivert for at boot/watchdog skal fungere riktig.</string>
-    <string name="snackbar_battery_optimization_settings">Deaktiver batterioptimalisering for å bruke denne funksjonen.</string>
-    <string name="snackbar_action_fix">Reparer</string>
     <!-- Toast -->
-    <string name="toast_no_email_app">Ingen e-postapp funnet</string>
-    <string name="toast_failed_to_stop">Kan ikke stoppe Shizuku</string>
-    <string name="toast_shizuku_already_starting">Shizuku starter allerede i bakgrunnen</string>
     <!-- Dark Mode Setting Override -->
-    <string name="dark_theme">Tema</string>
-    <string name="dark_theme_off">Alltid lys</string>
-    <string name="dark_theme_on">Alltid mørk</string>
     <!-- About -->
-    <string name="action_about">Om</string>
-    <string name="about_dialog_button_close">Lukk</string>
-    <string name="about_view_source_code"><![CDATA[Vis kildekode på %s]]></string>
     <!-- Stop -->
-    <string name="action_stop">Stop Shizuku</string>
-    <string name="dialog_stop_message">Shizuku tjenesten vil bli stoppet.</string>
     <!-- Notification -->
-    <string name="notification_channel_service_status">Status start tjenesten</string>
-    <string name="notification_service_starting">Shizuku tjenesten starter…</string>
-    <string name="notification_service_start_failed">Start Shizuku tjenesten mislyktes.</string>
-    <string name="notification_service_start_no_root">Kan ikke be om rot-tillatelse.</string>
-    <string name="notification_working">Arbeider…</string>
-    <string name="notification_channel_adb_pairing">Trådløs feilsøking paringen</string>
-    <string name="notification_adb_pairing_input_paring_code">Skriv inn paringskode</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Søker etter paringstjeneste</string>
-    <string name="notification_adb_pairing_service_found_title">Paringstjeneste funnet</string>
-    <string name="notification_adb_pairing_stop_searching">Slutt å søke</string>
-    <string name="notification_adb_pairing_working_title">Parring pågår</string>
-    <string name="notification_adb_pairing_succeed_title">Sammenkobling vellykket</string>
-    <string name="notification_adb_pairing_succeed_text">Du kan nå starte Shizuku service.</string>
-    <string name="notification_adb_pairing_failed_title">Sammenkobling mislyktes</string>
-    <string name="notification_adb_pairing_retry">Prøv igjen</string>
     <!-- Permission related, appears in system permission UI -->
-    <string name="permission_label">access Shizuku</string>
-    <string name="permission_description">Tillat appen å bruke Shizuku.</string>
-    <string name="permission_warning_template"><![CDATA[Tillat <b>%1$s</b> til %2$s?]]></string>
-    <string name="grant_dialog_button_allow_always">Tillat hele tiden</string>
-    <string name="grant_dialog_button_deny">"Avslå"</string>
     <!-- Starter -->
-    <string name="starter">Begynner</string>
-    <string name="start_with_root_failed">Kan ikke starte tjenesten fordi root-tillatelse ikke er gitt eller enheten er ikke rootet.</string>
     <!-- WADB Starter -->
-    <string name="wadb_notification_title">Starter Shizuku…</string>
-    <string name="wadb_notification_wifi_required">Venter på Wi-Fi-tilkobling før du fortsetter</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi funnet. Fortsett</string>
-    <string name="wadb_error_title">Feil under oppstart</string>
-    <string name="wadb_error_notify_dev">Trykk for å varsle utvikleren.</string>
-    <string name="wadb_error_send_email">Send en e-post til</string>
-    <string name="wadb_permission_error_notification_title">Feil med tillatelse</string>
-    <string name="wadb_permission_error_notification_content">Shizuku trenger WRITE_SECURE_SETTINGS for å starte ved oppstart. Trykk for å lære hvordan du skal gi den.</string>
-    <string name="wadb_notification_channel">ADB auto-start-tjeneste</string>
     <!-- Watchdog -->
-    <string name="watchdog_running">Vakthund kjører</string>
-    <string name="watchdog_shizuku_crashed_title">Shizuku krasjet nylig</string>
-    <string name="watchdog_shizuku_crashed_text">Vakthund startet på nytt. Trykk for å lære om mulige fikser for å forhindre fremtidige krasjer.</string>
-    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Slå av varsler</string>
     <!-- Misc -->
-    <string name="dialog_cannot_open_browser_title">Kan ikke starte nettleser</string>
-    <string name="toast_copied_to_clipboard">%s\nhar blitt kopiert til utklippstavlen.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> har blitt kopiert til utklippstavlen.]]></string>
-    <string name="accessibility_service_description">Tilbyr sammenkoblingsstøtte for enheter (f.eks. TV-er som kjører Android 14+) der meldinger eller splittskjerm ikke kan brukes.\n\naktiverer Shizuku for å hente ut paringskoden fra den trådløse feilsøkingsskjermen på parringsskjermen. Det vil deaktivere seg selv når paringskoden er funnet.</string>
     <!-- Messages for legacy -->
-    <string name="dialog_legacy_not_support_title">%1$s støtter ikke moderne Shizuku</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[Legacy Shizuku har blitt foreldet siden mars 2019. Videre fungerer heller ikke eldre Shizuku på nyere Android-systemer.<p>Be utvikler av <b>%1$s</b> om å oppdatere.]]></string>
-    <string name="dialog_requesting_legacy_title">%1$s ber om legitimasjon Shizuku</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> har moderne Shizuku støtte, men det spør etter legitimasjon Shizuku. Dette kan skyldes at Shizuku ikke kjører, vennligst sjekk i Shizuku appen.<p>Legacy Shizuku har blitt foreldet siden mars 2019.]]></string>
-    <string name="dialog_requesting_legacy_button_open_shizuku">Open Shizuku</string>
-    <string name="wadb_notification_attempt_now">Forsøk nå</string>
 </resources>
