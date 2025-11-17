@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">لا يمكن الاتصال بخدمة تصحيح الأخطاء اللاسلكية.</string>
     <string name="dialog_wireless_adb_not_enabled">التصحيح اللاسلكي غير ممكّن.
 \nملاحظة ، قبل Android 11 ، لتمكين التصحيح اللاسلكي ، يجب أن يكون الاتصال بالكمبيوتر أمرًا ضروريًا.</string>
-    <string name="dialog_adb_pairing_message">يرجى بدء الاقتران بالخطوات التالية: \"خيارات المطور\" - \"التصحيح اللاسلكي\" - \"إقران الجهاز باستخدام رمز الاقتران\".
-\n
-\nبعد بدء عملية الاقتران ، ستتمكن من إدخال رمز الاقتران.</string>
     <string name="adb_pairing_requires_multi_window">الرجاء إدخال وضع تقسيم الشاشة (متعدد النوافذ) أولاً.</string>
     <string name="adb_pairing_requires_multi_window_reason">يتطلب النظام أن يكون مربع حوار الاقتران مرئيًا دائمًا ، واستخدام وضع تقسيم الشاشة هو الطريقة الوحيدة للسماح لهذا التطبيق ومربع حوار النظام بالظهور في نفس الوقت.</string>
     <string name="adb_error_key_store">تعذر إنشاء مفتاح لتصحيح الأخطاء اللاسلكية.
@@ -74,7 +71,6 @@
         <item quantity="other"><![CDATA[تطبيقات %d معتمدة]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[انقر لإدارة التطبيقات المصرح بها]]></string>
-    <string name="home_app_management_empty">ستظهر هنا التطبيقات التي تتطلب Shizuku.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">معلومات عن Shizuku</string>
     <string name="home_learn_more_description">تعلم كيف تطور مع Shizuku</string>
@@ -104,16 +100,17 @@
     <string name="rish_description"><![CDATA[باستخدام %1$s ، في أي تطبيق طرفي ، يمكنك الاتصال والتفاعل مع عمليات تشغيل shell بواسطة Shizuku. &lt;p&gt; حول الاستخدام التفصيلي %1$s ، انقر لعرض المستند.]]></string>
     <!-- Settings -->
     <string name="settings_title">الإعدادات</string>
+    <string name="settings_use_system_color">استخدم لون سمة النظام</string>
     <string name="settings_language">اللغة</string>
-    <string name="settings_user_interface">المظهر</string>
-    <string name="settings_black_night_theme">وضع السواد النقيّ</string>
-    <string name="settings_black_night_theme_summary">استخدم سمة السواد النقيّ إذ الوضع الليلي الذي بالجهاز مفعل</string>
     <string name="settings_translation_contributors">المساهمون في الترجمة</string>
     <string name="settings_translation">شارك في الترجمة</string>
     <string name="settings_translation_summary">ساعدنا في ترجمة %s إلى لغتك</string>
-    <string name="settings_start_on_boot">ابدأ عند التشغيل من حالة القفل (تحتاج جذر/روت)</string>
-    <string name="settings_start_on_boot_summary">بالنسبة للأجهزة المجذرة (تستخدم الروت) ، يمكن لـShizuku البدء تلقائيًا عند التشغيل من حالة القفل</string>
-    <string name="settings_use_system_color">استخدم لون سمة النظام</string>
+    <string name="settings_user_interface">المظهر</string>
+    <string name="settings_black_night_theme">وضع السواد النقيّ</string>
+    <string name="settings_black_night_theme_summary">استخدم سمة السواد النقيّ إذ الوضع الليلي الذي بالجهاز مفعل</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">حول</string>
     <string name="about_view_source_code"><![CDATA[عرض التعليمات البرمجية المصدر في %s]]></string>
@@ -145,6 +142,8 @@
     <!-- Starter -->
     <string name="starter">مفتاح التشغيل</string>
     <string name="start_with_root_failed">لا يمكن بدء الخدمة لأنه لم يتم منح إذن الجذر (الروت) أو قد يكون هذا الجهاز ليس مزوّدًا بحق الوصول إلى الجذر (الروت).</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">لا يمكن بدء المتصفح</string>
     <string name="toast_copied_to_clipboard">%s
