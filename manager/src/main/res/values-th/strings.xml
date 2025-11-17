@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">ไม่สามารถเชื่อมต่อกับบริการการแก้ไขข้อบกพร่องผ่าน Wi-Fi</string>
     <string name="dialog_wireless_adb_not_enabled">การแก้ไขข้อบกพร่องผ่าน Wi-Fi ไม่ถูกเปิดไว้
 \nหมายเหตุ หาก Android เป็นรุ่นที่เก่ากว่า 11 การจะเปิดการแก้ไขข้อบกพร่องผ่าน Wi-Fi จำเป็นต้องมีการเชื่อมต่อกับคอมพิวเตอร์</string>
-    <string name="dialog_adb_pairing_message">โปรดเริ่มจับคู่ตามขั้นตอนนี้: \"ตัวเลือกสำหรับนักพัฒนาแอป\" - \"การแก้ไขข้อบกพร่องผ่าน Wi-Fi\" - \"จับคู่อุปกรณ์ด้วยรหัสการจับคู่\"
-\n
-\nหลังจากเริ่มกระบวนการจับคู่ จะสามารถป้อนรหัสการจับคู่</string>
     <string name="adb_pairing_requires_multi_window">โปรดเข้าสู่โหมดแยกหน้าจอ (หลายหน้าต่าง) ก่อน</string>
     <string name="adb_pairing_requires_multi_window_reason">ระบบจำเป็นจะต้องให้มีหน้าต่างรหัสการจับคู่แสดงอยู่ตลอดเวลา ใช้โหมดแนกหน้าจอเป็นหนทางเดียวที่จะปล่อยแอปและหน้าต่างของระบบแสดงพร้อมกันในเวลาเดียวกัน</string>
     <string name="adb_error_key_store">ไม่สามารถสร้างรหัสเพื่อเชื่อมต่อการแก้ไขข้อบกพร่องผ่าน Wi-Fi
@@ -68,7 +65,6 @@
         <item quantity="other"><![CDATA[อนุญาตแล้ว %d แอปพลิเคชัน]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[แตะเพื่อจัดการแอปที่ได้รับอนุญาต]]></string>
-    <string name="home_app_management_empty">แอปที่ขอร้องหรือขอใช้ Shizuku จะแสดงที่นี่</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">เรียนรู้ Shizuku</string>
     <string name="home_learn_more_description">เรียนรู้การพัฒนาเพื่อใช้ร่วมกันกับ Shizuku</string>
@@ -98,16 +94,17 @@
     <string name="rish_description"><![CDATA[ด้วย %1$s ในแอปเทอร์มินอลใด ๆ คุณจะสามารถเชื่อมต่อและดำเนินการกับ shell ที่รันโดย Shizuku &lt;p&gt;รายละเอียดอื่น ๆ ในการใช้ %1$s แตะเพื่อดูเอกสาร]]></string>
     <!-- Settings -->
     <string name="settings_title">การตั้งค่า</string>
+    <string name="settings_use_system_color">ใช้สีของธีมระบบ</string>
     <string name="settings_language">ภาษา</string>
-    <string name="settings_user_interface">ลักษณะ</string>
-    <string name="settings_black_night_theme">ธีมมืดมิด</string>
-    <string name="settings_black_night_theme_summary">ใช้ธีมสีดำสนิทหากธีมมืดถูกเปิดอยู่</string>
     <string name="settings_translation_contributors">ผู้มีส่วนร่วมในการแปลภาษา</string>
     <string name="settings_translation">มีส่วนร่วมในการแปล</string>
     <string name="settings_translation_summary">ช่วยเราแปล %s เป็นภาษาของคุณ</string>
-    <string name="settings_start_on_boot">เริ่มเมื่อเปิดเครื่อง (รูท)</string>
-    <string name="settings_start_on_boot_summary">สำหรับอุปกรณ์ที่รูทแล้ว Shizuku จะสามารถเริ่มได้โดยอัตโนมัติเมื่อเปิดเครื่อง</string>
-    <string name="settings_use_system_color">ใช้สีของธีมระบบ</string>
+    <string name="settings_user_interface">ลักษณะ</string>
+    <string name="settings_black_night_theme">ธีมมืดมิด</string>
+    <string name="settings_black_night_theme_summary">ใช้ธีมสีดำสนิทหากธีมมืดถูกเปิดอยู่</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">เกี่ยวกับ</string>
     <string name="about_view_source_code"><![CDATA[ดูซอร์สโค้ดใน %s]]></string>
@@ -139,6 +136,8 @@
     <!-- Starter -->
     <string name="starter">ตัวเริ่ม</string>
     <string name="start_with_root_failed">ไม่สามารถเริ่มบริการเนื่องจากไม่ได้รับการอนุญาตรูทหรืออุปกรณ์ไม่ได้ถูกรูท</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ไม่สามารถเปิดบราวเซอร์</string>
     <string name="toast_copied_to_clipboard">%s
