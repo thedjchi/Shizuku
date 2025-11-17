@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">Không thể kết nối với dịch vụ gỡ lỗi không dây.</string>
     <string name="dialog_wireless_adb_not_enabled">Gỡ lỗi không dây không được kích hoạt.
 \nLưu ý, trước Android 11, để kích hoạt tính năng gỡ lỗi không dây, kết nối máy tính là điều bắt buộc.</string>
-    <string name="dialog_adb_pairing_message">Vui lòng bắt đầu ghép nối theo các bước sau: \"Tùy chọn nhà phát triển\" - \"Gỡ lỗi không dây\" - \"Ghép nối thiết bị bằng mã ghép nối\".
-\n
-\nSau khi quá trình ghép nối bắt đầu, bạn sẽ có thể nhập mã ghép nối.</string>
     <string name="adb_pairing_requires_multi_window">Vui lòng vào chế độ chia đôi màn hình (đa cửa sổ) trước.</string>
     <string name="adb_pairing_requires_multi_window_reason">Hệ thống yêu cầu hộp thoại ghép nối luôn hiển thị, sử dụng chế độ chia đôi màn hình là cách duy nhất để cho phép ứng dụng này và hộp thoại hệ thống hiển thị cùng một lúc.</string>
     <string name="adb_error_key_store">Không thể tạo khóa để gỡ lỗi không dây.
@@ -68,7 +65,6 @@
         <item quantity="other"><![CDATA[Đã ủy quyền %d ứng dụng]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Nhấn để quản lý các ứng dụng được ủy quyền]]></string>
-    <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo Shizuku sẽ hiển thị ở đây.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Tìm hiểu Shizuku</string>
     <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng dụng bằng Shizuku</string>
@@ -92,16 +88,17 @@
     <string name="rish_description"><![CDATA[Với %1$s, trong bất kỳ ứng dụng đầu cuối nào, bạn có thể kết nối và tương tác với shell do Shizuku điều hành. &lt;p&gt;Về cách sử dụng chi tiết %1$s, nhấn để xem tài liệu.]]></string>
     <!-- Settings -->
     <string name="settings_title">Cài đặt</string>
+    <string name="settings_use_system_color">Sử dụng màu chủ đề hệ thống</string>
     <string name="settings_language">Ngôn ngữ</string>
-    <string name="settings_user_interface">Hiển thị</string>
-    <string name="settings_black_night_theme">Chủ đề đen</string>
-    <string name="settings_black_night_theme_summary">Sử dụng chủ đề đen tuyền nếu chế độ ban đêm được bật</string>
     <string name="settings_translation_contributors">Người đóng góp bản dịch</string>
     <string name="settings_translation">Tham gia phiên dịch</string>
     <string name="settings_translation_summary">Giúp chúng tôi dịch %s sang ngôn ngữ của bạn</string>
-    <string name="settings_start_on_boot">Tự khởi động (root)</string>
-    <string name="settings_start_on_boot_summary">Đối với các thiết bị đã root, Shizuku có thể tự khởi động khi thiết bị khởi động</string>
-    <string name="settings_use_system_color">Sử dụng màu chủ đề hệ thống</string>
+    <string name="settings_user_interface">Hiển thị</string>
+    <string name="settings_black_night_theme">Chủ đề đen</string>
+    <string name="settings_black_night_theme_summary">Sử dụng chủ đề đen tuyền nếu chế độ ban đêm được bật</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Giới thiệu</string>
     <string name="about_view_source_code"><![CDATA[Xem mã nguồn tại %s]]></string>
@@ -133,6 +130,8 @@
     <!-- Starter -->
     <string name="starter">Trình khởi động</string>
     <string name="start_with_root_failed">Không thể bắt đầu dịch vụ vì quyền root chưa được cấp hoặc thiết bị này chưa được root.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Không thể khởi động trình duyệt</string>
     <string name="toast_copied_to_clipboard">%s
