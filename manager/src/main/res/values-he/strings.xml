@@ -2,8 +2,21 @@
 <resources>
     <!-- To translators: you can leave your here -->
     <!-- Home - Status -->
+    <string name="home_status_service_is_running">%1$s פועל</string>
+    <string name="home_status_service_not_running">%1$s לא רץ</string>
+    <string name="home_status_service_version">גירסה %2$s, %1$s</string>
+    <string name="home_status_service_version_update"><![CDATA[גירסה %2$s, %1$s&lt;br&gt;התחל מחדש כדי לעדכן לגירסה %3$s]]></string>
     <!-- Home - Adb -->
+    <string name="home_adb_title"><![CDATA[התחל באמצעות חיבור למחשב]]></string>
+    <string name="home_adb_description"><![CDATA[עבור מכשירים ללא גישת שורש, עליך להשתמש ב-adb כדי להתחיל את Shizuku (נדרש חיבור למחשב). \u0020עליך לחזור על תהליך זה בכל פעם שמכשירך יופעל מחדש. בבקשה <b> <a href="%1$s">קראו את דפי העזרה</a></b>.]]></string>
+    <string name="home_adb_button_view_help">קראו את דפי העזרה</string>
+    <string name="home_adb_button_view_command">הצג פקודה</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* יש עדין שיקולים אחרים, בבקשה תאשר שקראת את העזרה לפני.]]></string>
+    <string name="home_adb_dialog_view_command_copy_button">העתק</string>
+    <string name="home_adb_dialog_view_command_button_send">שלח</string>
     <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[התחל עם ניפוי באגים אלחוטי]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[באנדרואיד 11 ומעלה, אתם יכולים להפעיל ניפוי באגים אלחוטי ולהתחיל את Shizuku ישירות מהמכשיר שלכם, ללא חיבור למחשב. קודם כל, הביטו בבקשה במדריך.]]></string>
     <!-- Adb -->
     <!-- Home - Root -->
     <!-- Home - Application management -->
@@ -12,16 +25,11 @@
     <!-- Application management -->
     <!-- Terminal -->
     <!-- Settings -->
-    <!-- Snackbar -->
-    <!-- Toast -->
-    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <!-- Stop -->
     <!-- Notification -->
     <!-- Permission related, appears in system permission UI -->
     <!-- Starter -->
-    <!-- WADB Starter -->
-    <!-- Watchdog -->
     <!-- Misc -->
     <!-- Messages for legacy -->
 </resources>
