@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">Gagal menyambungkan ke layanan debug nirkabel.</string>
     <string name="dialog_wireless_adb_not_enabled">Debug nirkabel belum diaktifkan.
 \nSebagai catatan, Anda harus terhubung ke komputer untuk mengaktifkan debug nirkabel pada perangkat sebelum Android 11.</string>
-    <string name="dialog_adb_pairing_message">Harap mulai penyambungan melalui langkah berikut: \"Pilihan Pengembang\" – \"Debug Nirkabel\" – \"Sambungkan perangkat dengan kode penghubung\".
-\n
-\nSetelah penyambungan dimulai, Anda akan diminta untuk memasukkan kode penghubung.</string>
     <string name="adb_pairing_requires_multi_window">Harap pindah ke mode layar pisah (split-screen) terlebih dahulu.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem mengharuskan dialog penyambungan untuk selalu terlihat, hal ini hanya bisa diakali dengan mode layar pisah (split-screen) untuk membuat Shizuku dan dialog sistem muncul secara bersamaan.</string>
     <string name="adb_error_key_store">Gagal membuat kunci untuk debug nirkabel.
@@ -67,7 +64,6 @@
         <item quantity="other"><![CDATA[%d aplikasi terdaftar]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Ketuk untuk mengatur aplikasi terdaftar]]></string>
-    <string name="home_app_management_empty">Aplikasi yang telah meminta atau mendeklarasikan Shizuku akan ditampilkan di sini.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Pelajari Shizuku</string>
     <string name="home_learn_more_description">Pelajari cara mengembangkan dengan Shizuku</string>
@@ -97,16 +93,17 @@
     <string name="rish_description"><![CDATA[Dengan %1$s, di aplikasi terminal mana pun, Anda dapat terhubung dan berinteraksi dengan shell yang dijalankan oleh Shizuku. &lt;p&gt;Tentang detail penggunaan %1$s, ketuk untuk melihat dokumen.]]></string>
     <!-- Settings -->
     <string name="settings_title">Pengaturan</string>
+    <string name="settings_use_system_color">Gunakan tema warna sistem</string>
     <string name="settings_language">Bahasa</string>
-    <string name="settings_user_interface">Penampilan</string>
-    <string name="settings_black_night_theme">Tema hitam gelap</string>
-    <string name="settings_black_night_theme_summary">Gunakan tema hitam gelap jika mode malam diaktifkan</string>
     <string name="settings_translation_contributors">Kontributor penerjemah</string>
     <string name="settings_translation">Ikut menerjemahkan</string>
     <string name="settings_translation_summary">Bantu kami menerjemahkan %s dengan bahasa Anda</string>
-    <string name="settings_start_on_boot">Mulai saat boot (root)</string>
-    <string name="settings_start_on_boot_summary">Untuk perangkat root, Shizuku bisa mulai otomatis saat boot</string>
-    <string name="settings_use_system_color">Gunakan tema warna sistem</string>
+    <string name="settings_user_interface">Penampilan</string>
+    <string name="settings_black_night_theme">Tema hitam gelap</string>
+    <string name="settings_black_night_theme_summary">Gunakan tema hitam gelap jika mode malam diaktifkan</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Tentang</string>
     <string name="about_view_source_code"><![CDATA[Lihat kode sumbernya di %s]]></string>
@@ -138,6 +135,8 @@
     <!-- Starter -->
     <string name="starter">Pemulaian</string>
     <string name="start_with_root_failed">Layanan tidak bisa dimulai karena aplikasi tidak mendapat izin root atau perangkat tidak memiliki akses root.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Tidak bisa membuka browser</string>
     <string name="toast_copied_to_clipboard">%s
