@@ -5,7 +5,7 @@
     <string name="home_status_service_is_running">%1$s se está ejecutando</string>
     <string name="home_status_service_not_running">%1$s no se está ejecutando</string>
     <string name="home_status_service_version">Versión %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Versión %2$s, %1$s&lt;br&gt;Inicie nuevamente para actualizar a la versión %3$s]]></string>
+    <string name="home_status_service_version_update"><![CDATA[Versión %2$s, %1$s<br>Inicie nuevamente para actualizar a la versión %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Inicie conectándose a una computadora]]></string>
     <string name="home_adb_description"><![CDATA[Para dispositivos sin acceso root, se necesita ADB para ejecutar Shizuku (requiere conexión a una computadora). Este proceso debe repetirse cada vez que el dispositivo sea reiniciado.Favor <b><a href="%1$s">leer la guía</a></b>.]]></string>
