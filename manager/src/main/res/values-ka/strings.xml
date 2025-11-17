@@ -3,6 +3,10 @@
     <!-- To translators: you can leave your here -->
     <!-- Home - Status -->
     <!-- Home - Adb -->
+    <string name="home_adb_title"><![CDATA[დაიწყე კომპიუტერთან დაკავშირებით]]></string>
+    <string name="home_adb_description"><![CDATA[არა დარუთული მოწყობილობებისთვის, Shizuku რომ ჩართო შენ გჭირდება ადბ-ს გამოყენება(საჭიროებს კომპიუტერთან კავშირს). ეს პროცესი უნდა გაიმეოროთ თქვენი მოწყობილობის ყოველ გადატვირთვაზე. გთხოვთ <b><a href="%1$s">წაიკითხოთ დახმარება</a></b>.]]></string>
+    <string name="home_adb_button_view_help">წაიკითხეთ დახმარება</string>
+    <string name="home_adb_button_view_command">ბრძანების ნახვა</string>
     <!-- Home - Wireless Adb -->
     <!-- Adb -->
     <!-- Home - Root -->
@@ -12,16 +16,11 @@
     <!-- Application management -->
     <!-- Terminal -->
     <!-- Settings -->
-    <!-- Snackbar -->
-    <!-- Toast -->
-    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <!-- Stop -->
     <!-- Notification -->
     <!-- Permission related, appears in system permission UI -->
     <!-- Starter -->
-    <!-- WADB Starter -->
-    <!-- Watchdog -->
     <!-- Misc -->
     <!-- Messages for legacy -->
 </resources>
