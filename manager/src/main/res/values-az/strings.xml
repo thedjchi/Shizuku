@@ -33,9 +33,6 @@
     <string name="cannot_connect_port">Simsiz debaq cihazına qoşulmaq mümkün olmadı</string>
     <string name="dialog_wireless_adb_not_enabled">Simsiz debaq aktiv edilməyib.
 \nQeyd edək ki, Android 11-dən əvvəl simsiz debaqı aktivləşdirmək üçün kompüter bağlantısı mütləqdir.</string>
-    <string name="dialog_adb_pairing_message">Zəhmət olmasa, aşağıdakı addımlarla cütləşdirmə etməyə başlayın: \"Tərtibatçı Seçimləri\" - \"Simsiz debaq\" - \"Cütləşdirmə kodundan istifadə edərək cihazın cütləşdirilməsi\".
-\n
-\nCütləşdirmə prosesi başladıqdan sonra siz cütləşdirmə kodunu daxil edə biləcəksiniz</string>
     <string name="adb_pairing_requires_multi_window">Əvvəlcə bölünmüş ekran (çoxu pəncərə) rejiminə daxil olun.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem cütləşmə dialoqunun həmişə görünməsini tələb edir, bölünmüş ekran rejimindən istifadə bu proqram və sistem dialoqunun eyni vaxtda görünməsinə imkan verən yeganə yoldur.</string>
     <string name="adb_error_key_store">Simsiz debaq üçün açar yaratmaq mümkün deyil.
@@ -90,16 +87,17 @@
     <string name="rish_description"><![CDATA[%1$s ilə istənilən terminal proqramında siz Shizuku tərəfindən hazırlanmış shell-lərə qoşula və onlarla əlaqə saxlaya bilərsiniz. &lt;p&gt;Ətraflı istifadə %1$s haqqında sənədə baxmaq üçün toxunun.]]></string>
     <!-- Settings -->
     <string name="settings_title">Parametrlər</string>
+    <string name="settings_use_system_color">Sistem teması rəngindən istifadə edin</string>
     <string name="settings_language">Dil</string>
-    <string name="settings_user_interface">Görünüş</string>
-    <string name="settings_black_night_theme">Qara gecə teması</string>
-    <string name="settings_black_night_theme_summary">Gecə rejimi aktivdirsə, saf qara temasından istifadə edin</string>
     <string name="settings_translation_contributors">Tərcümədə iştirak edənlər</string>
     <string name="settings_translation">Tərcümədə iştirak et</string>
     <string name="settings_translation_summary">%s dilini öz dilinizə tərcümə etməkdə bizə kömək edin</string>
-    <string name="settings_start_on_boot">Boot anında başlatın (Root lazımdır)</string>
-    <string name="settings_start_on_boot_summary">Rootlu cihazlar üçün, Shizuku boot zamanı avtomatik başlaya bilir</string>
-    <string name="settings_use_system_color">Sistem teması rəngindən istifadə edin</string>
+    <string name="settings_user_interface">Görünüş</string>
+    <string name="settings_black_night_theme">Qara gecə teması</string>
+    <string name="settings_black_night_theme_summary">Gecə rejimi aktivdirsə, saf qara temasından istifadə edin</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Haqqında</string>
     <string name="about_view_source_code"><![CDATA[Qaynaq kodlarına buradan baxın %s]]></string>
@@ -131,6 +129,8 @@
     <!-- Starter -->
     <string name="starter">Başlanğıc</string>
     <string name="start_with_root_failed">Root icazəsi verilmədiyi və ya bu cihaz rootlu olmadığı üçün xidməti başlatmaq mümkün deyil.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Brauzeri başlatmaq mümkün deyil</string>
     <string name="toast_copied_to_clipboard">%s
