@@ -31,11 +31,16 @@
     <!-- Application management -->
     <!-- Terminal -->
     <!-- Settings -->
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <!-- Stop -->
     <!-- Notification -->
     <!-- Permission related, appears in system permission UI -->
     <!-- Starter -->
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <!-- Messages for legacy -->
     <string name="dialog_requesting_legacy_button_open_shizuku">Obre Shizuku</string>
