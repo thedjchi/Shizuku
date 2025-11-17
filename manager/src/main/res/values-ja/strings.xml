@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">ワイヤレスデバッグサービスに接続することができません。</string>
     <string name="dialog_wireless_adb_not_enabled">ワイヤレスデバッグが有効になっていません。
 \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
-    <string name="dialog_adb_pairing_message">以下の手順でペアリングを開始してください。「開発者向けオプション」＞「ワイヤレスデバッグ」＞「ペア設定コードによるデバイスのペアの設定」を選択します。
-\n
-\nペアリング処理が開始されると、ペアリングコードの入力が可能になります。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
     <string name="adb_pairing_requires_multi_window_reason">システムではペアリングダイアログが常に表示されている必要があり、このアプリとシステムダイアログを同時に表示させるには、分割画面を使用するしかありません。</string>
     <string name="adb_error_key_store">ワイヤレスデバッグ用のキーを生成できません。
@@ -67,7 +64,6 @@
         <item quantity="other"><![CDATA[承認された %d 個のアプリケーション]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[タップで許可されたアプリを管理]]></string>
-    <string name="home_app_management_empty">Shizukuを権限をリクエストしたアプリはここに表示されます。</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Shizukuについて学ぶ</string>
     <string name="home_learn_more_description">Shizukuを使った開発方法、Shizukuを使ったアプリの入手方法について学ぶことができます</string>
@@ -97,16 +93,17 @@
     <string name="rish_description"><![CDATA[%1$sを使えば、任意のターミナルアプリで、Shizukuが実行するシェルに接続し、対話することができます。&lt;p&gt;詳しい使い方については、%1$sをタップするとドキュメントが表示されます。]]></string>
     <!-- Settings -->
     <string name="settings_title">設定</string>
+    <string name="settings_use_system_color">システムテーマカラー</string>
     <string name="settings_language">言語</string>
-    <string name="settings_user_interface">外観</string>
-    <string name="settings_black_night_theme">Black night テーマ</string>
-    <string name="settings_black_night_theme_summary">ナイトモードが有効な場合、黒色のテーマを使用します</string>
     <string name="settings_translation_contributors">翻訳協力者</string>
     <string name="settings_translation">翻訳作業に参加</string>
     <string name="settings_translation_summary">%sをあなたの言語に翻訳するのを手伝ってください</string>
-    <string name="settings_start_on_boot">起動時にスタート（要root)</string>
-    <string name="settings_start_on_boot_summary">root化された端末では、起動時に自動的にShizukuを起動できます</string>
-    <string name="settings_use_system_color">システムテーマカラー</string>
+    <string name="settings_user_interface">外観</string>
+    <string name="settings_black_night_theme">Black night テーマ</string>
+    <string name="settings_black_night_theme_summary">ナイトモードが有効な場合、黒色のテーマを使用します</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">このアプリについて</string>
     <string name="about_view_source_code"><![CDATA[%sでソースコードを見る]]></string>
@@ -138,6 +135,8 @@
     <!-- Starter -->
     <string name="starter">起動</string>
     <string name="start_with_root_failed">root権限が付与されていないか、端末がroot化されていないため、サービスを開始できません。</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ブラウザが起動することができません</string>
     <string name="toast_copied_to_clipboard">%s
