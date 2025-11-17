@@ -2,7 +2,10 @@
 <resources>
     <!-- To translators: you can leave your here -->
     <!-- Home - Status -->
+    <string name="home_status_service_version">Versioon %2$s, %1$s</string>
     <!-- Home - Adb -->
+    <string name="home_adb_dialog_view_command_copy_button">Kopeeri</string>
+    <string name="home_adb_dialog_view_command_button_send">Saada</string>
     <!-- Home - Wireless Adb -->
     <!-- Adb -->
     <!-- Home - Root -->
@@ -12,16 +15,11 @@
     <!-- Application management -->
     <!-- Terminal -->
     <!-- Settings -->
-    <!-- Snackbar -->
-    <!-- Toast -->
-    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <!-- Stop -->
     <!-- Notification -->
     <!-- Permission related, appears in system permission UI -->
     <!-- Starter -->
-    <!-- WADB Starter -->
-    <!-- Watchdog -->
     <!-- Misc -->
     <!-- Messages for legacy -->
 </resources>
