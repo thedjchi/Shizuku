@@ -5,6 +5,9 @@
     <!-- Home - Adb -->
     <!-- Home - Wireless Adb -->
     <!-- Adb -->
+    <string name="dialog_adb_pairing_message">Molim Vas, započnite proces uparivanja prateći sledeće korake: \"Razvojne opcije programera\" - \"Bežično otklanjanje grešaka\" - \"Uparivanje  uređaja pomoću kóda za uparivanje\".
+\n
+\nNakon uspešno izvršenog početka procesa uparivanja, moći ćete da unesete kód za uparivanje.</string>
     <!-- Home - Root -->
     <!-- Home - Application management -->
     <!-- Home - Learn more -->
