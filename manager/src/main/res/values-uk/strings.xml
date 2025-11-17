@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">Неможливо під\'\'єднатися до сервісу бездротового налагодження.</string>
     <string name="dialog_wireless_adb_not_enabled">Налагодження через Wi-Fi не ввімкнено.
 \nЗверніть увагу, до Android 11, щоб увімкнути налагодження через Wi-Fi, під\'\'єднання до ПК обов\'\'язкове.</string>
-    <string name="dialog_adb_pairing_message">Будь ласка, почніть парування, виконавши такі кроки: \"Параметри розробника\" - \"Налагодження через Wi-Fi\" - \"Підключати пристрій за допомогою коду підключення\".
-\n
-\nПісля початку процесу парування, ви зможете ввести код парування.</string>
     <string name="adb_pairing_requires_multi_window">Спершу увійдіть в режим розділеного екрана (багатьох вікон).</string>
     <string name="adb_pairing_requires_multi_window_reason">Системі потрібно, щоб діалогове вікно парування завжди було видимим. Використання режиму розділеного екрана — єдиний спосіб, щоб ця програма та системне діалогове вікно були видимими одночасно.</string>
     <string name="adb_error_key_store">Неможливо генерувати ключ для налагодження через Wi-Fi.
@@ -71,7 +68,6 @@
         <item quantity="other"><![CDATA[Авторизовано %d програм]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Натисніть для перегляду авторизованих додатків]]></string>
-    <string name="home_app_management_empty">Додатки, що запросили або декларували використання Shizuku будуть відображені тут.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Вивчіть Shizuku</string>
     <string name="home_learn_more_description">Дізнайтеся, як розробляти з Shizuku</string>
@@ -101,16 +97,17 @@
     <string name="rish_description"><![CDATA[З %1$s, в будь-якій програмі терміналу, ви зможете під''єднатися та взаємодіяти з Shizuku. &lt;p&gt;Ви можете дізнатися більше про використання %1$s, натисніть тут щоб перегляньте документацію.]]></string>
     <!-- Settings -->
     <string name="settings_title">Налаштування</string>
+    <string name="settings_use_system_color">Використовувати системний колір</string>
     <string name="settings_language">Мова</string>
-    <string name="settings_user_interface">Зовнішній вигляд</string>
-    <string name="settings_black_night_theme">Чорна темна тема</string>
-    <string name="settings_black_night_theme_summary">Використовуйте чорну тему, якщо включений нічний режим</string>
     <string name="settings_translation_contributors">Співробітники перекладу</string>
     <string name="settings_translation">Беріть участь у перекладі</string>
     <string name="settings_translation_summary">Допоможіть нам перекласти %s на вашу мову</string>
-    <string name="settings_start_on_boot">Запуск при завантаженні системи (root)</string>
-    <string name="settings_start_on_boot_summary">Для рутованих пристроїв, Shizuku має можливість автоматично запускатися при завантаженні системи</string>
-    <string name="settings_use_system_color">Використовувати системний колір</string>
+    <string name="settings_user_interface">Зовнішній вигляд</string>
+    <string name="settings_black_night_theme">Чорна темна тема</string>
+    <string name="settings_black_night_theme_summary">Використовуйте чорну тему, якщо включений нічний режим</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Про додаток</string>
     <string name="about_view_source_code"><![CDATA[Переглянути вихідний код на %s]]></string>
@@ -142,6 +139,8 @@
     <!-- Starter -->
     <string name="starter">Запуск</string>
     <string name="start_with_root_failed">Неможливо запустити службу, оскільки не надано дозвіл root або цей пристрій не рутовано.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не вдається запустити браузер</string>
     <string name="toast_copied_to_clipboard">%s
