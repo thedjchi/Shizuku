@@ -35,9 +35,6 @@
     <string name="cannot_connect_port">Не удается подключиться к службе отладки по Wi-Fi.</string>
     <string name="dialog_wireless_adb_not_enabled">Отладка по Wi-Fi не включена.
 \nВнимание: на системах старше Android 11 для включения этой отладки необходимо соединение с компьютером.</string>
-    <string name="dialog_adb_pairing_message">Пожалуйста, для подключения выполните следующие шаги: «Для разработчиков» – «Отладка по Wi-Fi» – «Подключиться к устройству, используя код».
-\n
-\nПосле начала процесса вы сможете ввести код подключения.</string>
     <string name="adb_pairing_requires_multi_window">Пожалуйста, сначала активируйте режим разделения экрана (многооконный режим).</string>
     <string name="adb_pairing_requires_multi_window_reason">Системе нужно постоянно видеть диалоговое окно сопряжения, и многооконный режим – это единственный способ вывести на экран и это приложение, и системное окно одновременно.</string>
     <string name="adb_error_key_store">Не удалось сгенерировать ключ для отладки по Wi-Fi.
@@ -71,7 +68,6 @@
         <item quantity="other"><![CDATA[Доступно для %d приложений]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Нажмите для управления списком допущенных приложений]]></string>
-    <string name="home_app_management_empty">Приложения, которые запросили или задекларировали использование Shizuku будут отображаться здесь.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Узнать больше о Shizuku</string>
     <string name="home_learn_more_description">Узнайте, как начать разрабатывать с Shizuku</string>
@@ -101,16 +97,17 @@
     <string name="rish_description"><![CDATA[Посредством %1$s из любого приложения-терминала можно подключаться и взаимодействовать с shell, запущенной Shizuku. &lt;p&gt;Нажмите здесь для просмотра инструкции по работе с %1$s.]]></string>
     <!-- Settings -->
     <string name="settings_title">Настройки</string>
+    <string name="settings_use_system_color">Палитра цветов из системы</string>
     <string name="settings_language">Язык</string>
-    <string name="settings_user_interface">Внешний вид</string>
-    <string name="settings_black_night_theme">Черная тема</string>
-    <string name="settings_black_night_theme_summary">Глубокий черный цвет фона при работе темной темы</string>
     <string name="settings_translation_contributors">Авторы перевода</string>
     <string name="settings_translation">Участвуйте в переводе</string>
     <string name="settings_translation_summary">Помогите перевести %s на ваш язык</string>
-    <string name="settings_start_on_boot">Автозапуск (с root правами)</string>
-    <string name="settings_start_on_boot_summary">На устройствах с root правами Shizuku может автоматически запускаться после загрузки системы</string>
-    <string name="settings_use_system_color">Палитра цветов из системы</string>
+    <string name="settings_user_interface">Внешний вид</string>
+    <string name="settings_black_night_theme">Черная тема</string>
+    <string name="settings_black_night_theme_summary">Глубокий черный цвет фона при работе темной темы</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">О приложении</string>
     <string name="about_view_source_code"><![CDATA[Исходный код доступен на %s]]></string>
@@ -142,6 +139,8 @@
     <!-- Starter -->
     <string name="starter">Запуск</string>
     <string name="start_with_root_failed">Не удалось запустить службу. Root права не выданы или они недоступны на устройстве.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не удается запустить браузер</string>
     <string name="toast_copied_to_clipboard">%s
