@@ -12,16 +12,11 @@
     <!-- Application management -->
     <!-- Terminal -->
     <!-- Settings -->
-    <!-- Snackbar -->
-    <!-- Toast -->
-    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <!-- Stop -->
     <!-- Notification -->
     <!-- Permission related, appears in system permission UI -->
     <!-- Starter -->
-    <!-- WADB Starter -->
-    <!-- Watchdog -->
     <!-- Misc -->
     <!-- Messages for legacy -->
 </resources>
