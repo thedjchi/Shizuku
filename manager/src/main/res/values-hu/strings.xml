@@ -31,7 +31,6 @@
     <string name="paring_code_is_wrong">Hibás a párosítási kód.</string>
     <string name="cannot_connect_port">Nem lehet csatlakozni a vezeték nélküli hibakereső szolgáltatáshoz.</string>
     <string name="dialog_wireless_adb_not_enabled">Vezeték nélküli hibakeresés nincs engedélyezve.\nNe feledje, hogy az Android 11 előtt a vezeték nélküli hibakeresés engedélyezéséhez számítógépes csatlakozásra van szükség.</string>
-    <string name="dialog_adb_pairing_message">Kezdje el a párosítást a következő lépésekkel: \"Fejlesztői lehetőségek\" - \"Vezeték nélküli hibakeresés\" - \"Eszköz párosítása párosítási kóddal\".\n\nA párosítási folyamat megkezdése után beírhatja a párosítási kódot.</string>
     <string name="adb_pairing_requires_multi_window">Kérjük, először lépjen az osztott képernyős (több ablakos) módba.</string>
     <string name="adb_pairing_requires_multi_window_reason">A rendszer megköveteli, hogy a párosítási párbeszédpanel mindig látható legyen, az osztott képernyős mód az egyetlen módja annak, hogy ez az alkalmazás és a rendszer párbeszédpanel egyszerre látható legyen.</string>
     <string name="adb_error_key_store">Nem sikerült létrehozni a kulcsot a vezeték nélküli hibakereséshez.\nEz azért lehet, mert az eszköz KeyStore mechanizmusa meghibásodott.</string>
@@ -62,7 +61,6 @@
         <item quantity="other"><![CDATA[%d app engedélyezett]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Érintse meg az engedélyezett alkalmazások kezeléséhez]]></string>
-    <string name="home_app_management_empty">Itt jelennek meg azok az alkalmazások, amelyek Shizukut kértek vagy bejelentettek.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Tanulja a Shizukut</string>
     <string name="home_learn_more_description">Tanuljon meg fejlődni a Shizukuval</string>
@@ -88,16 +86,17 @@
     ]]></string>
     <!-- Settings -->
     <string name="settings_title">Beállítások</string>
+    <string name="settings_use_system_color">Használja a rendszertéma színét</string>
     <string name="settings_language">Nyelv</string>
-    <string name="settings_user_interface">Megjelenés</string>
-    <string name="settings_black_night_theme">Sötét éj téma</string>
-    <string name="settings_black_night_theme_summary">Használja a tiszta fekete témát, ha az éjszakai mód be van kapcsolva</string>
     <string name="settings_translation_contributors">Fordítási közreműködők</string>
     <string name="settings_translation">Vegyen részt a fordításban</string>
     <string name="settings_translation_summary">Segítsen nekünk lefordítani a %s-t az Ön nyelvére</string>
-    <string name="settings_start_on_boot">Induljon rendszerindításkor (root)</string>
-    <string name="settings_start_on_boot_summary">Rootolt eszközök esetén a Shizuku képes auto. elindulni rendszerindításkor</string>
-    <string name="settings_use_system_color">Használja a rendszertéma színét</string>
+    <string name="settings_user_interface">Megjelenés</string>
+    <string name="settings_black_night_theme">Sötét éj téma</string>
+    <string name="settings_black_night_theme_summary">Használja a tiszta fekete témát, ha az éjszakai mód be van kapcsolva</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">Rólunk</string>
     <string name="about_view_source_code"><![CDATA[Forráskód megtekintése itt: %s]]></string>
@@ -129,6 +128,8 @@
     <!-- Starter -->
     <string name="starter">Indító</string>
     <string name="start_with_root_failed">A szolgáltatás nem indítható el, mert nincs root jogosultság megadva, vagy ez az eszköz nincs rootolva.</string>
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Nem lehet elindítani a böngészőt</string>
     <string name="toast_copied_to_clipboard">%s\n a vágólapra másolva.</string>
