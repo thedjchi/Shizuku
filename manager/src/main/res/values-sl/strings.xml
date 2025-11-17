@@ -34,9 +34,6 @@
     <string name="cannot_connect_port">Povezava z storitvijo za brezžično razhroščevanje se ne more vzpostaviti.</string>
     <string name="dialog_wireless_adb_not_enabled">Brezžično razhroščevanje ni omogočeno.
 \nPozor! Pred Androidom 11, je za omogočanje brezžičnega razhroščevanja potreben računalnik.</string>
-    <string name="dialog_adb_pairing_message">Prosimo, začnite z seznanitvijo po teh korakih: \"Nastavitve za razvijalce\" - \"Seznanjanje naprave z seznantitveno kodo\".
-\n
-\nKo se proces seznanjanja začne, boste lahko vnesli kodo za seznanitev.</string>
     <!-- Home - Root -->
     <!-- Home - Application management -->
     <!-- Home - Learn more -->
@@ -44,10 +41,11 @@
     <!-- Application management -->
     <!-- Terminal -->
     <!-- Settings -->
-    <string name="settings_translation_summary">Pomagajte nam prevajati %s v vaš jezik</string>
-    <string name="settings_start_on_boot">Zaženi na zagonu (root)</string>
-    <string name="settings_start_on_boot_summary">Za naprave z rootom, se lahko Shizuku zažene avtomatsko na zagonu</string>
     <string name="settings_use_system_color">Uporabi sistemsko barvo teme</string>
+    <string name="settings_translation_summary">Pomagajte nam prevajati %s v vaš jezik</string>
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
     <!-- About -->
     <string name="action_about">O</string>
     <string name="about_view_source_code"><![CDATA[Poglej izvorno kodo na %s]]></string>
@@ -69,6 +67,8 @@
     <string name="notification_adb_pairing_succeed_title">Seznanitev uspešna</string>
     <!-- Permission related, appears in system permission UI -->
     <!-- Starter -->
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
     <!-- Misc -->
     <!-- Messages for legacy -->
 </resources>
