@@ -91,6 +91,16 @@ class StarterActivity : AppBarActivity() {
         }
     }
 
+    private var hasStarted = false
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus && !hasStarted) {
+            hasStarted = true
+            viewModel.start()
+        }
+    }
+
     companion object {
 
         const val EXTRA_IS_ROOT = "$EXTRA.IS_ROOT"
@@ -98,7 +108,11 @@ class StarterActivity : AppBarActivity() {
     }
 }
 
-private class ViewModel(context: Context, root: Boolean, port: Int) : androidx.lifecycle.ViewModel() {
+private class ViewModel(
+    private val context: Context,
+    private val root: Boolean,
+    private val port: Int
+) : androidx.lifecycle.ViewModel() {
 
     private val sb = StringBuilder()
     private val _output = MutableLiveData<Resource<StringBuilder>>()
@@ -110,7 +124,12 @@ private class ViewModel(context: Context, root: Boolean, port: Int) : androidx.l
         log(error = throwable)
     }
 
-    init {
+    private var started = false
+
+    fun start() {
+        if (started) return
+        started = true
+
         viewModelScope.launch(Dispatchers.IO + handler) {
             if (root) startRoot() else AdbStarter.startAdb(context, port, { log(it) })
         }
