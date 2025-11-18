@@ -35,17 +35,11 @@ class AdbDialogFragment : DialogFragment() {
             port.postValue(it)
         }
 
-        val port = EnvironmentUtils.getAdbTcpPort()
-
         val builder = MaterialAlertDialogBuilder(context).apply {
             setTitle(R.string.dialog_adb_discovery)
             setView(binding.root)
             setNegativeButton(android.R.string.cancel, null)
             setPositiveButton(R.string.development_settings, null)
-
-            if (port > 0) {
-                setNeutralButton("$port", null)
-            }
         }
         val dialog = builder.create()
         dialog.setCanceledOnTouchOutside(false)
@@ -72,10 +66,6 @@ class AdbDialogFragment : DialogFragment() {
                 it.context.startActivity(intent)
             } catch (_: ActivityNotFoundException) {
             }
-        }
-
-        dialog.getButton(AlertDialog.BUTTON_NEUTRAL)?.setOnClickListener {
-            startAndDismiss(EnvironmentUtils.getAdbTcpPort())
         }
 
         port.observe(this) {
