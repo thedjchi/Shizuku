@@ -100,6 +100,7 @@
     <string name="settings_start_on_boot">自启动</string>
     <string name="settings_start_on_boot_summary">需要 Android 11 或更高版本或 root 权限</string>
     <string name="settings_use_system_color">使用系统主题颜色</string>
+    <string name="settings_watchdog">Watchdog</string>
     <string name="settings_watchdog_summary">Shizuku 停止时自动重启 Shizuku</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"允许 Shizuku 在没有 Wi-Fi 的情况下重启。（Shizuku 必须在重启后启动过一次）"</string>
@@ -121,11 +122,23 @@
     <string name="settings_report_bug">报告错误</string>
     <string name="settings_advanced">高级</string>
     <string name="settings_legacy_pairing">传统配对</string>
+    <string name="settings_legacy_pairing_summary">请在对话框中输入配对码，而不是在通知中输入</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">端口必须介于 1 和 65535 之间</string>
+    <string name="snackbar_battery_optimization_home">要使 开机启动/watchdog 功能正常工作，必须禁用电池优化。</string>
+    <string name="snackbar_battery_optimization_settings">请禁用电池优化功能以使用此功能。</string>
+    <string name="snackbar_action_fix">修复</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">未找到电子邮件应用</string>
+    <string name="toast_failed_to_stop">停止 Shizuku 失败</string>
+    <string name="toast_shizuku_already_starting">Shizuku 已在后台启动</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">主题</string>
+    <string name="dark_theme_off">浅色主题</string>
+    <string name="dark_theme_on">深色主题</string>
     <!-- About -->
     <string name="action_about">关于</string>
+    <string name="about_dialog_button_close">关闭</string>
     <string name="about_view_source_code"><![CDATA[在 %s 查看源码]]></string>
     <!-- Stop -->
     <string name="action_stop">停止 Shizuku</string>
@@ -156,15 +169,30 @@
     <string name="starter">启动程序</string>
     <string name="start_with_root_failed">未授予 root 权限或是该设备没有 root，因此无法启动服务。</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">正在启动 Shizuku...</string>
+    <string name="wadb_notification_wifi_required">正在等待 Wi-Fi 连接，连接成功后才能继续。</string>
+    <string name="wadb_notification_wifi_found">已找到Wi-Fi，正在继续</string>
+    <string name="wadb_error_title">在系统启动时启动出现错误</string>
+    <string name="wadb_error_notify_dev">点击通知开发者。</string>
+    <string name="wadb_error_send_email">发送电子邮件到</string>
+    <string name="wadb_permission_error_notification_title">权限错误</string>
+    <string name="wadb_permission_error_notification_content">Shizuku 需要 WRITE_SECURE_SETTINGS 权限才能开机启动。点击了解如何授予此权限。</string>
+    <string name="wadb_notification_channel">ADB 自动启动服务</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">Watchdog 正在运行</string>
+    <string name="watchdog_shizuku_crashed_title">Shizuku 最近崩溃了</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog 已重启服务。点击了解可防止未来崩溃的潜在修复方案。</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">关闭提醒</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">无法启动浏览器</string>
     <string name="toast_copied_to_clipboard">%s\n已被复制到剪贴板。</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> 已被复制到剪贴板。]]></string>
+    <string name="accessibility_service_description">为无法使用通知或分屏功能的设备（例如，运行 Android 14 及更高版本的电视）提供配对支持。\n\n使 Shizuku 能够从无线调试配对屏幕中提取配对码。找到配对码后，它将自动禁用。</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s 不支持现代 Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[旧式 Shizuku 已于 2019 年 3 月被弃用。此外，旧式 Shizuku 无法在较新版本的 Android 系统上工作。<p>请要求 <b>%1$s</b> 的开发者进行更新。]]></string>
     <string name="dialog_requesting_legacy_title">%1$s 正在请求旧式 Shizuku</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> 支持现代 Shizuku，但它正在请求旧式 Shizuku。这可能是因为 Shizuku 没有运行，请在 Shizuku 应用内检查。<p>旧式 Shizuku 已于 2019 年 3 月被弃用。]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">打开 Shizuku</string>
+    <string name="wadb_notification_attempt_now">现在尝试</string>
 </resources>
