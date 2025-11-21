@@ -12,13 +12,6 @@ class BootCompleteReceiver : BroadcastReceiver() {
         if (intent.action != Intent.ACTION_BOOT_COMPLETED) return
 
         ShizukuReceiverStarter.start(context)
-
-        if(ShizukuSettings.getWatchdog() && !ShizukuSettings.isWatchdogRunning()) {
-            try {
-                WatchdogService.start(context)
-            } catch (e: Exception) {
-                Log.e("ShizukuApplication", "Failed to start WatchdogService: ${e.message}" )
-            }
-        }
+        if(ShizukuSettings.getWatchdog()) WatchdogService.start(context)
     }
 }

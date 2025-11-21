@@ -1,5 +1,6 @@
 package moe.shizuku.manager.service
 
+import android.app.ForegroundServiceStartNotAllowedException
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -29,20 +30,18 @@ class WatchdogService : Service() {
 
     private val executor = Executors.newSingleThreadExecutor { r -> Thread(r, "shizuku-watchdog") }
 
-    private val listener = Shizuku.OnBinderDeadListener {
+    private val onBinderReceivedListener = Shizuku.OnBinderReceivedListener {
+        executor.execute { onBinderReceived() }
+    }
+    private val onBinderDeadListener = Shizuku.OnBinderDeadListener {
         executor.execute { onBinderDead() }
     }
 
     override fun onCreate() {
         super.onCreate()
-        if (isRunning.compareAndSet(false, true)) {
-            try {
-                Shizuku.addBinderDeadListener(listener)
-            } catch (t: Throwable) {
-                Log.w(TAG, "Start watchdog failed", t)
-                isRunning.set(false)
-            }
-        }
+        isRunning.set(true)
+        Shizuku.addBinderReceivedListener(onBinderReceivedListener)
+        Shizuku.addBinderDeadListener(onBinderDeadListener)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -62,19 +61,18 @@ class WatchdogService : Service() {
     }
 
     override fun onDestroy() {
-        if (isRunning.compareAndSet(true, false)) {
-            try {
-                Shizuku.removeBinderDeadListener(listener)
-            } catch (t: Throwable) {
-                Log.w(TAG, "Stop watchdog failed", t)
-                isRunning.set(true)
-            }
-        }
+        Shizuku.removeBinderReceivedListener(onBinderReceivedListener)
+        Shizuku.removeBinderDeadListener(onBinderDeadListener)
         shutdownExecutor()
+        isRunning.set(false)
         super.onDestroy()
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
+
+    private fun onBinderReceived() {
+        ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
+    }
 
     private fun onBinderDead() {
         Handler(Looper.getMainLooper()).post {
@@ -175,7 +173,12 @@ class WatchdogService : Service() {
 
         @JvmStatic
         fun start(context: Context) {
-            context.startForegroundService(Intent(context, WatchdogService::class.java))
+            try {
+                context.startForegroundService(Intent(context, WatchdogService::class.java))
+            } catch (e: Exception) {
+                if (e !is ForegroundServiceStartNotAllowedException)
+                    Log.e("ShizukuApplication", "Failed to start WatchdogService: ${e.message}" )
+            }
         }
 
         @JvmStatic
