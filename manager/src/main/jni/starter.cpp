@@ -136,7 +136,6 @@ static void start_server(const char *path, const char *main_class, const char *p
         default: {
             printf("info: shizuku_server pid is %d\n", pid);
             printf("info: shizuku_starter exit with 0\n");
-            sleep(1);
             exit(EXIT_SUCCESS);
         }
     }
