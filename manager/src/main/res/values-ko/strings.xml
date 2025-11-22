@@ -35,11 +35,17 @@
     <string name="cannot_connect_port">무선 디버깅 서비스에 연결할 수 없습니다.</string>
     <string name="dialog_wireless_adb_not_enabled">무선 디버깅을 사용하고 있지 않습니다.
 \n안드로이드 11 이전은 무선 디버깅을 사용하기 위해서 컴퓨터 연결을 필수로 해야 합니다.</string>
+    <string name="dialog_usb_debugging_not_enabled">USB 디버깅이 활성화되어 있지 않습니다.\n\"개발자 옵션\"에서 활성화해 주세요.</string>
+    <string name="dialog_adb_pairing_message">다음 단계를 수행하여 페어링을 시작하세요. \"개발자 옵션\" - \"무선 디버깅\" - \"페어링 코드로 기기 페어링\"\n\n페어링 프로세스가 시작되면 페어링 코드를 입력할 수 있습니다.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">페어링 과정을 시작하려면 접근성 서비스를 활성화하세요. 이렇게 하면 Shizuku가 페어링 코드를 감지할 수 있습니다.\n\n코드를 찾거나 1분 후에 에너지 절약을 위해 접근성 서비스가 꺼집니다.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">\"개발자 옵션\" &gt; \"무선 디버깅\" &gt; \"페어링 코드로 기기 페어링\"으로 이동하세요. Shizuku가 자동으로 페어링 코드를 감지합니다.</string>
     <string name="adb_pairing_requires_multi_window">먼저 화면 분할 (멀티 윈도우) 모드로 진입하세요.</string>
     <string name="adb_pairing_requires_multi_window_reason">시스템에서 페어링 대화 상자를 항상 표시하도록 해야합니다. 화면 분할을 사용하는 것이 앱과 시스템 대화 상자를 동시에 표시할 수 있는 유일한 방법입니다.</string>
     <string name="adb_error_key_store">무선 디버깅을 위한 키를 생성할 수 없습니다.
 \n기기의 KeyStore 메커니즘 손상이 원인일 수 있습니다.</string>
+    <string name="adb_error_stop_tcp">TCP를 통한 ADB를 중지하지 못했습니다.</string>
     <string name="adb_pair_required">페어링 단계를 먼저 진행하세요.</string>
+    <string name="enable">할 수 있게 하다</string>
     <string name="development_settings">개발자 옵션</string>
     <string name="notification_settings">알림 옵션</string>
     <string name="adb_pairing_tutorial_title">기기와 Shizuku 페어링</string>
@@ -65,6 +71,7 @@
         <item quantity="other"><![CDATA[%d개 앱 인증됨]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[탭하여 인증된 앱 관리]]></string>
+    <string name="home_app_management_empty">Shizuku 권한을 요청하거나 선언한 앱이 여기에 표시됩니다.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Shizuku 알아보기</string>
     <string name="home_learn_more_description">Shizuku로 개발하는 방법 알아보기</string>
@@ -79,6 +86,7 @@
     <string name="app_management_dialog_adb_is_limited_title">ADB의 권한이 제한됨</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[기기 제조사에서 ADB의 권한을 제한하고 있을 가능성이 높습니다.&lt;p&gt;&lt;b&gt;&lt;a href="%1$s"&gt;이 문서&lt;/a&gt;&lt;/b&gt;에 시스템에 대한 해결 방안이 있을 수 있습니다.]]></string>
     <string name="app_management_item_summary_requires_root">* 루트 권한으로 실행된 Shizuku 필요</string>
+    <string name="app_management_toggle_all">모두 전환</string>
     <!-- Terminal -->
     <string name="home_terminal_title">터미널에서 Shizuku 사용</string>
     <string name="home_terminal_description">좋아하는 터미널 앱에서 Shizuku를 통해 명령 실행</string>
@@ -94,7 +102,20 @@
     <string name="rish_description"><![CDATA[%1$s를 사용하면 모든 터미널 앱에서 Shizuku가 실행하는 셸에 연결하고 상호 작용할 수 있습니다. &lt;p&gt;자세한 사용법 %1$s에 대해 문서를 보려면 탭하세요.]]></string>
     <!-- Settings -->
     <string name="settings_title">설정</string>
+    <string name="settings_behavior">행동</string>
+    <string name="settings_start_on_boot">부팅 시 시작</string>
+    <string name="settings_start_on_boot_summary">Android 11 이상 또는 루트가 필요합니다.</string>
     <string name="settings_use_system_color">시스템 테마 색상 사용</string>
+    <string name="settings_watchdog">지키는 개</string>
+    <string name="settings_watchdog_summary">시즈쿠가 멈추면 자동으로 재시작합니다.</string>
+    <string name="settings_tcp_mode">TCP 모드</string>
+    <string name="settings_tcp_mode_summary">"Shizuku가 Wi-Fi 없이 재시작할 수 있도록 합니다. (Shizuku는 재부팅 후 한 번 시작되어야 합니다.)"</string>
+    <string name="settings_tcp_mode_dialog_title">재시작 필요</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[이 설정을 적용하려면 Shizuku를 다시 시작해야 합니다.<br><br><b>Shizuku는 계속 실행되며 Wi-Fi 연결을 기다린 후 다시 시작합니다.</b>]]></string>
+    <string name="settings_tcp_port">TCP 포트</string>
+    <string name="settings_tcp_port_deafult">기본값(5555)</string>
+    <string name="settings_tcp_port_hint">기본값(5555)을 사용하려면 비워두세요.</string>
+    <string name="settings_tcp_learn_more">자동화 앱을 사용하여 Shizuku를 제어하는 방법에 대해 자세히 알아보세요.</string>
     <string name="settings_language">언어</string>
     <string name="settings_translation_contributors">번역 기여자</string>
     <string name="settings_translation">번역 참여</string>
@@ -102,11 +123,27 @@
     <string name="settings_user_interface">화면</string>
     <string name="settings_black_night_theme">검은 테마</string>
     <string name="settings_black_night_theme_summary">어두운 테마가 사용될 때 검은 테마를 사용</string>
+    <string name="settings_support">지원하다</string>
+    <string name="settings_help">돕다</string>
+    <string name="settings_report_bug">버그 신고</string>
+    <string name="settings_advanced">고급의</string>
+    <string name="settings_legacy_pairing">레거시 페어링</string>
+    <string name="settings_legacy_pairing_summary">알림 대신 대화 상자에 페어링 코드를 입력하세요.</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">포트는 1~65535 사이여야 합니다.</string>
+    <string name="snackbar_battery_optimization_home">부팅/워치독 시작 시 배터리 최적화를 비활성화해야 제대로 작동합니다.</string>
+    <string name="snackbar_battery_optimization_settings">이 기능을 사용하려면 배터리 최적화를 비활성화하세요.</string>
+    <string name="snackbar_action_fix">고치다</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">이메일 앱을 찾을 수 없습니다</string>
+    <string name="toast_shizuku_already_starting">시즈쿠는 이미 배경에서 시작하고 있습니다</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">주제</string>
+    <string name="dark_theme_off">항상 가볍다</string>
+    <string name="dark_theme_on">항상 어둡다</string>
     <!-- About -->
     <string name="action_about">정보</string>
+    <string name="about_dialog_button_close">닫다</string>
     <string name="about_view_source_code"><![CDATA[%s에서 소스코드 보기]]></string>
     <!-- Stop -->
     <string name="action_stop">Shizuku 중지</string>
@@ -137,16 +174,31 @@
     <string name="starter">실행기</string>
     <string name="start_with_root_failed">루트 권한이 부여되지 않았거나 이 기기가 루팅되지 않아서 서비스를 시작할 수 없습니다.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">시즈쿠 시작…</string>
+    <string name="wadb_notification_wifi_required">진행하기 전에 Wi-Fi 연결을 기다리는 중</string>
+    <string name="wadb_notification_wifi_found">Wi-Fi를 찾았습니다. 계속 진행 중</string>
+    <string name="wadb_error_title">부팅 시 시작 중 오류 발생</string>
+    <string name="wadb_error_notify_dev">개발자에게 알리려면 탭하세요.</string>
+    <string name="wadb_error_send_email">이메일을 보내세요</string>
+    <string name="wadb_permission_error_notification_title">권한 오류</string>
+    <string name="wadb_permission_error_notification_content">Shizuku를 부팅 시 시작하려면 WRITE_SECURE_SETTINGS 권한이 필요합니다. 탭하여 권한을 부여하는 방법을 알아보세요.</string>
+    <string name="wadb_notification_channel">ADB 자동 시작 서비스</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">워치독이 실행 중입니다</string>
+    <string name="watchdog_shizuku_crashed_title">시즈쿠는 최근에 추락했습니다</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog이 서비스를 다시 시작했습니다. 향후 충돌을 방지하기 위한 잠재적인 수정 사항을 알아보려면 탭하세요.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">알림 끄기</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">브라우저를 실행할 수 없음</string>
     <string name="toast_copied_to_clipboard">%s
 \n클립보드로 복사됨.</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[&lt;b&gt;%s&lt;/b&gt;가 클립보드로 복사되었습니다.]]></string>
+    <string name="accessibility_service_description">알림이나 분할 화면을 사용할 수 없는 기기(예: Android 14 이상을 실행하는 TV)에 대한 페어링 지원을 제공합니다.\n\nShizuku가 무선 디버깅 페어링 화면에서 페어링 코드를 추출할 수 있도록 합니다. 페어링 코드를 찾으면 Shizuku가 자동으로 비활성화됩니다.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s는 최신 Shizuku를 지원하지 않음</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[구형 Shizuku는 2019년 3월에 지원이 중단되었습니다. 또한, 구형 Shizuku는 새로운 안드로이드 시스템에서 동작하지 않습니다.&lt;p&gt;&lt;b&gt;%1$s&lt;/b&gt; 개발자에게 업데이트를 문의하세요.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s가 구형 Shizuku를 요청하고 있음</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt;가 최신 Shizuku를 지원하지만, 구형 Shizuku를 요청하고 있습니다. Shizuku가 실행 중이지 않아서 발생할 수 있으니 Shizuku 앱에서 확인하세요.&lt;p&gt;구형 Shizuku는 2019년 3월 부터 지원이 중단되었습니다.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Shizuku 열기</string>
+    <string name="wadb_notification_attempt_now">지금 시도하세요</string>
 </resources>
