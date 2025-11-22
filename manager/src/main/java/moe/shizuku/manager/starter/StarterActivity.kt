@@ -11,10 +11,13 @@ import com.topjohnwu.superuser.CallbackList
 import com.topjohnwu.superuser.Shell
 import java.net.SocketException
 import javax.net.ssl.SSLProtocolException
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
 import moe.shizuku.manager.AppConstants.EXTRA
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbKeyException
@@ -141,7 +144,7 @@ private class ViewModel(
             _output.postValue(Resource.error(error, sb))
     }
 
-    private fun startRoot() {
+    private suspend fun startRoot() {
         log("Starting with root...\n")
 
         if (!Shell.getShell().isRoot) {
@@ -155,13 +158,18 @@ private class ViewModel(
         }
 
         ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
-        Shell.cmd(Starter.internalCommand).to(object : CallbackList<String?>() {
-            override fun onAddElement(s: String?) {
-                s?.let { log(it) }
-            }
-        }).submit {
-            if (!it.isSuccess)
-                throw Exception("Failed to start with root")
+        return suspendCancellableCoroutine { cont ->
+            Shell.cmd(Starter.internalCommand)
+                .to(object : CallbackList<String?>() {
+                    override fun onAddElement(s: String?) { s?.let { log(it) } }
+                })
+                .submit {
+                    if (it.isSuccess) {
+                        cont.resume(Unit)
+                    } else {
+                        cont.resumeWithException(Exception("Failed to start with root"))
+                    }
+                }
         }
     }
 }
