@@ -5,42 +5,192 @@
     <string name="home_status_service_is_running">%1$s estas funkcianta</string>
     <string name="home_status_service_not_running">%1$s ne estas funkcianta</string>
     <string name="home_status_service_version">Versio %2$s, %1$s</string>
+    <string name="home_status_service_version_update"><![CDATA[Versio %2$s, %1$s<br>Rekomencu por ĝisdatigi al versio %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Konektu al komputilo por komenci]]></string>
+    <string name="home_adb_description"><![CDATA[Por aparatoj sen radik-uzanto, vi bezonas uzi adb por lanĉi Shizuku (postulas komputilan konekton). Ĉi tiu procezo devas esti ripetata ĉiufoje kiam la aparato estas rekomencita. Bonvolu <b><a href=\"%1$s\">legi la helpon</a></b>.]]></string>
     <string name="home_adb_button_view_help">Legi helpon</string>
     <string name="home_adb_button_view_command">Vidi komandon</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Estas kelkaj aliaj konsideroj, bonvolu konfirmi, ke vi unue legis la helpon.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Kopii</string>
     <string name="home_adb_dialog_view_command_button_send">Sendi</string>
     <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[Komencu per sendrata sencimigado]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[En Android 11 aŭ pli nova, vi povas ebligi sendratan sencimigadon kaj lanĉi Shizuku rekte de via aparato, sen konekti al komputilo.<p>Bonvolu unue rigardi la paŝon post paŝa gvidilo.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Antaŭ Android 11, konekto al komputilo estas necesa por ebligi sendratan sencimigadon.]]></string>
+    <string name="home_wireless_adb_view_guide_button">Paŝon post paŝo gvidilo</string>
     <!-- Adb -->
+    <string name="dialog_adb_discovery">Serĉante sendratan sencimigan servon</string>
+    <string name="dialog_adb_discovery_message">Bonvolu ebligi \"Sendratan sencimigadon\" en \"Ellaborantaj opcioj\". \"Sendrata sencimigado\" aŭtomate malŝaltiĝas kiam la reto ŝanĝiĝas.\n\nNotu, ne malŝaltu \"Ellaborantaj opcioj\" aŭ \"USB-sencimigadon\", alie Shizuku haltiĝos.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Bonvolu provi malŝalti kaj ebligi \"Sendratan sencimigadon\" se ĝi daŭre serĉas.</string>
+    <string name="dialog_adb_port">Haveno</string>
+    <string name="dialog_adb_invalid_port">Haveno estas entjero de 1 ĝis 65535.</string>
+    <string name="adb_pairing">Parigo</string>
+    <string name="dialog_adb_pairing_title">Parigu kun aparato</string>
+    <string name="dialog_adb_pairing_discovery">Serĉante parigan servon</string>
+    <string name="dialog_adb_pairing_paring_code">Pariga kodo</string>
+    <string name="paring_code_is_wrong">La pariĝa kodo estas malĝusta.</string>
+    <string name="cannot_connect_port">Ne eblas konekti al sendrata sencimiga servo.</string>
+    <string name="dialog_wireless_adb_not_enabled">Sendrata sencimigado ne estas ebligita.\nNotu, ke antaŭ Android 11, por ebligi sendratan sencimigadon, komputila konekto estas nepra.</string>
+    <string name="dialog_usb_debugging_not_enabled">USB-sencimigado ne estas ebligita.\nBonvolu ebligi ĝin en \"Agordoj por programistoj\".</string>
+    <string name="dialog_adb_pairing_message">Bonvolu komenci la parigon per la jenaj paŝoj: \"Agordoj por programistoj\" - \"Sendrata sencimigado\" - \"Parigu aparaton per pariga kodo.\"\n\nPost kiam la pariga procezo komenciĝos, vi povos enigi la parigan kodon.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Bonvolu ebligi la alireblecan servon por komenci la parigan procezon. Tio permesas al Ŝizuku detekti la parigan kodon.\n\nLa alirebleca servo estos malŝaltita kiam la kodo estos trovita aŭ post 1 minuto por ŝpari energion.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Bonvolu navigi al \"Opcioj por programistoj\" &gt; \"Sendrata sencimigado\" &gt; \"Kunligi aparaton per kuniga kodo.\" Shizuku aŭtomate detektos la kunigan kodon.</string>
+    <string name="adb_pairing_requires_multi_window">Bonvolu unue eniri dividitan ekranan (plurfenestran) reĝimon.</string>
+    <string name="adb_pairing_requires_multi_window_reason">La sistemo postulas, ke la pariĝa dialogo estu ĉiam videbla, kaj la sola maniero por samtempe videbligi ĉi tiun aplikaĵan kaj sisteman dialogon estas uzi dividitan ekranan reĝimon.</string>
+    <string name="adb_error_key_store">Ne eblas generi ŝlosilon por sendrata sencimigado.\nTio eble estas ĉar la KeyStore-mekanismo de ĉi tiu aparato estas difektita.</string>
+    <string name="adb_error_stop_tcp">Malsukcesis haltigi ADB per TCP</string>
+    <string name="adb_pair_required">Bonvolu unue trairi la parigan paŝon.</string>
+    <string name="enable">Ebligi</string>
     <string name="development_settings">Programistaj opcioj</string>
+    <string name="notification_settings">Sciigaj opcioj</string>
+    <string name="adb_pairing_tutorial_title">Kunigu Ŝizuku-on kun via aparato</string>
+    <string name="adb_pairing_tutorial_content_notification">Sciigo de Ŝizuku helpos vin kompletigi la parigon.</string>
+    <string name="adb_pairing_tutorial_content_steps">Eniru \"Programistaj opcioj\" - \"Sendrata sencimigado\". Alklaku \"Kunligi aparaton per kuniga kodo\", vi vidos sesciferan kodon.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Enigu la kodon en la sciigo por kompletigi la parigon.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">La pariĝa procezo bezonas, ke vi interagu kun sciigo de Ŝizuku. Bonvolu permesi al Ŝizuku afiŝi sciigojn.</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI-uzantoj eble bezonos ŝanĝi sciigstilon al \"Android\" de \"Sciigo\" - \"Sciiga nuanco\" en sistemaj agordoj.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Alie, vi eble ne povos enigi parigan kodon el la sciigo.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Bonvolu noti, ke la maldekstra parto de la opcio \"Sendrata sencimigado\" estas alklakebla, frapetante ĝin malfermos novan paĝon. Nur ŝalti la ŝaltilon dekstre estas malĝuste.</string>
+    <string name="adb_pairing_tutorial_content_finish">Reen al Shizuku kaj komencu Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Ŝizuku bezonas aliri la lokan reton. Ĝi estas kontrolata de la retpermeso.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Iuj sistemoj (kiel MIUI) malpermesas al aplikaĵoj aliri la reton kiam ili ne estas videblaj, eĉ se la aplikaĵo uzas malfonan servon kiel normon. Bonvolu malŝalti bateriajn optimumigajn funkciojn por Shizuku en tiaj sistemoj.</string>
     <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[Komencu (por enradikiĝintaj aparatoj)]]></string>
+    <string name="home_root_description"><![CDATA[Krome, Shizuku povas esti aŭtomate lanĉata ĉe starto. Se ne, bonvolu kontroli ĉu via sistemo aŭ triapartaj iloj limigis Shizuku-on.<br>Vi povas rilati al %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Se vi uzas Magisk, vi povas provi %1$s. Por administraj uzantoj, ĝi poste anstataŭigos Shizuku. Notu, ke ekzistantaj aplikaĵoj bezonas iom ŝanĝiĝi por uzi %2$s.]]></string>
     <string name="home_root_button_start">Komenci</string>
+    <string name="home_root_button_restart">Rekomenci</string>
     <!-- Home - Application management -->
+    <string name="home_app_management_title">Aplikaĵa administrado</string>
     <plurals name="home_app_management_authorized_apps_count">
         <item quantity="one"><![CDATA[Rajtigis %d aplikaĵon]]></item>
         <item quantity="other"><![CDATA[Rajtigis %d aplikaĵojn]]></item>
     </plurals>
+    <string name="home_app_management_view_authorized_apps"><![CDATA[Tuŝu por administri rajtigitajn aplikaĵojn]]></string>
+    <string name="home_app_management_empty">Aplikaĵoj, kiuj petis aŭ deklaris la permeson Shizuku, aperos ĉi tie.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Lerni Shizuku</string>
+    <string name="home_learn_more_description">Lernu kiel disvolvi kun Shizuku</string>
     <!-- Home - Adb permissions limited -->
+    <string name="home_adb_is_limited_title">Vi bezonas fari plian paŝon</string>
+    <string name="home_adb_is_limited_description">La fabrikanto de via aparato limigis adb-permesojn kaj aplikaĵoj uzantaj Shizuku ne funkcios ĝuste.\n\nKutime, ĉi tiu limigo povas esti forigita per agordo de iuj opcioj en \"Opcioj por programistoj\". Bonvolu legi la helpon por detaloj pri kiel fari tion.\n\nEble vi devos rekomenci Shizuku por ke la operacio efektiviĝu.</string>
     <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">La permeso de adb estas limigita</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Estas tre eble, ke la fabrikanto de via aparato limigas la permeson de adb.<p>Eble ekzistas solvo por via sistemo en <b><a href=\"%1$s\">ĉi tiu dokumento</a></b>.]]></string>
+    <string name="app_management_item_summary_requires_root">* postulas ke Shizuku funkciu kun radiko</string>
+    <string name="app_management_toggle_all">Malŝalti ĉion</string>
     <!-- Terminal -->
+    <string name="home_terminal_title">Uzu Ŝizuku en terminalaj aplikaĵoj</string>
+    <string name="home_terminal_description">Rulu komandojn per Shizuku en terminalaj aplikaĵoj, kiujn vi ŝatas</string>
+    <string name="terminal_tutorial_1">Unue, eksportu dosierojn al iu ajn loko, kiun vi deziras. Vi trovos du dosierojn, %1$s kaj %2$s.</string>
+    <string name="terminal_tutorial_1_description">Se estas dosieroj kun la sama nomo en la elektita dosierujo, ili estos forigitaj.\n\nLa eksporta funkcio uzas SAF (Storage Access Framework). Estas raportite, ke MIUI rompas la funkciojn de SAF. Se vi uzas MIUI, vi eble devos eltiri la dosieron el la apk de Shizuku aŭ elŝuti ĝin de GitHub.</string>
+    <string name="terminal_export_files">Eksporti dosierojn</string>
+    <string name="terminal_tutorial_2">Poste, uzu iun ajn tekstredaktilon por malfermi kaj redakti %1$s.</string>
+    <string name="terminal_tutorial_2_description">Ekzemple, se vi volas uzi Shizuku en %1$s, vi devas anstataŭigi %2$s per %3$s (%4$s estas la pakaĵnomo de %1$s).</string>
+    <string name="terminal_tutorial_3">Fine, movu la dosierojn al ie, kien via fina aplikaĵo povas aliri, vi povos uzi %1$s por plenumi komandojn per Shizuku.</string>
+    <string name="terminal_tutorial_3_description">Kelkaj konsiloj: donu plenumpermeson al %1$s kaj aldonu ĝin al %2$s, vi povos uzi %1$s rekte.</string>
+    <string name="rish_description"><![CDATA[Per %1$s, en iu ajn fina aplikaĵo, vi povas konektiĝi al kaj interagi kun la ŝelo funkciigata de Shizuku.
+<p>Pri la detala uzado %1$s, frapetu por vidi la dokumenton.
+    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Agordoj</string>
+    <string name="settings_behavior">Konduto</string>
+    <string name="settings_start_on_boot">Komencu ĉe starto</string>
+    <string name="settings_start_on_boot_summary">Postulas Android 11+ aŭ radikon</string>
+    <string name="settings_use_system_color">Uzi sistemteman koloron</string>
+    <string name="settings_watchdog">Gardohundo</string>
+    <string name="settings_watchdog_summary">Aŭtomate rekomencu Ŝizuku-on se ĝi haltas</string>
+    <string name="settings_tcp_mode">TCP-reĝimo</string>
+    <string name="settings_tcp_mode_summary">"Permesas al Ŝizuku rekomenci sen Wi-Fi. (Ŝizuku devas esti rekomencinta unufoje post la rekomenco)"</string>
+    <string name="settings_tcp_mode_dialog_title">Rekomenco necesa</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Ŝizuku bezonas rekomenci por apliki ĉi tiun agordon.<br><br><b>Ŝizuku daŭre funkcios kaj atendos Wi-Fi-konekton antaŭ ol rekomenci.</b>]]></string>
+    <string name="settings_tcp_port">TCP-pordo</string>
+    <string name="settings_tcp_port_deafult">Defaŭlta (5555)</string>
+    <string name="settings_tcp_port_hint">Lasu malplena por uzi la defaŭltan (5555)</string>
+    <string name="settings_tcp_learn_more">Lernu pli pri uzado de aŭtomatigaj aplikaĵoj por kontroli Shizuku-on</string>
     <string name="settings_language">Lingvo</string>
+    <string name="settings_translation_contributors">Tradukaj kontribuantoj</string>
+    <string name="settings_translation">Partopreni en tradukado</string>
+    <string name="settings_translation_summary">Helpu nin traduki %s en vian lingvon</string>
     <string name="settings_user_interface">Aspekto</string>
     <string name="settings_black_night_theme">Nigra nokta etoso</string>
+    <string name="settings_black_night_theme_summary">Uzu la puran nigran temon se nokta reĝimo estas ebligita</string>
+    <string name="settings_support">Subteno</string>
+    <string name="settings_help">Helpu</string>
+    <string name="settings_report_bug">Raporti cimon</string>
+    <string name="settings_advanced">Altnivela</string>
+    <string name="settings_legacy_pairing">Heredaĵa parigo</string>
+    <string name="settings_legacy_pairing_summary">Enigu la parigan kodon en dialogo anstataŭ sciigo</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">Pordo devas esti inter 1 kaj 65535</string>
+    <string name="snackbar_battery_optimization_home">Baterio-optimigo devas esti malŝaltita por ke starto ĉe starto/kontroldogo funkciu ĝuste.</string>
+    <string name="snackbar_battery_optimization_settings">Bonvolu malŝalti baterian optimumigon por uzi ĉi tiun funkcion.</string>
+    <string name="snackbar_action_fix">Ripari</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">Neniu retpoŝta aplikaĵo trovita</string>
+    <string name="toast_shizuku_already_starting">Ŝizuku jam komenciĝas en la fono</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">Temo</string>
+    <string name="dark_theme_off">Ĉiam malpeza</string>
+    <string name="dark_theme_on">Ĉiam malluma</string>
     <!-- About -->
+    <string name="action_about">Pri</string>
+    <string name="about_dialog_button_close">Fermi</string>
+    <string name="about_view_source_code"><![CDATA[Vidu fontkodon ĉe %s]]></string>
     <!-- Stop -->
+    <string name="action_stop">Haltu Shizuku</string>
+    <string name="dialog_stop_message">La servo Ŝizuku estos haltigita.</string>
     <!-- Notification -->
+    <string name="notification_channel_service_status">Komenca stato de servo</string>
+    <string name="notification_service_starting">La servo Ŝizuku komenciĝas…</string>
+    <string name="notification_service_start_failed">La komenco de la servo Ŝizuku malsukcesis.</string>
+    <string name="notification_service_start_no_root">Malsukcesis peti permeson de administranto.</string>
+    <string name="notification_working">Laborante…</string>
+    <string name="notification_channel_adb_pairing">Sendrata sencimiga parigo</string>
+    <string name="notification_adb_pairing_input_paring_code">Enigu parigan kodon</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Serĉante parigan servon</string>
+    <string name="notification_adb_pairing_service_found_title">Pariga servo trovita</string>
+    <string name="notification_adb_pairing_stop_searching">Ĉesu serĉi</string>
+    <string name="notification_adb_pairing_working_title">Parigo okazas</string>
+    <string name="notification_adb_pairing_succeed_title">Parigo sukcesa</string>
+    <string name="notification_adb_pairing_succeed_text">Vi povas komenci la servon Shizuku nun.</string>
+    <string name="notification_adb_pairing_failed_title">Parigo malsukcesis</string>
+    <string name="notification_adb_pairing_retry">Reprovi</string>
     <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">aliri Shizuku</string>
+    <string name="permission_description">Permesu al la aplikaĵo uzi Ŝizuku.</string>
+    <string name="permission_warning_template"><![CDATA[Permesi <b>%1$s</b> al %2$s?]]></string>
+    <string name="grant_dialog_button_allow_always">Permesu la tutan tempon</string>
+    <string name="grant_dialog_button_deny">"Malkonfesi"</string>
     <!-- Starter -->
+    <string name="starter">Startigilo</string>
+    <string name="start_with_root_failed">Ne eblas lanĉi la servon ĉar la permeso de administrado ne estas donita aŭ ĉi tiu aparato ne estas administrata.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">Komencante Ŝizuku…</string>
+    <string name="wadb_notification_wifi_required">Atendante Wi-Fi-konekton antaŭ ol daŭrigi</string>
+    <string name="wadb_notification_wifi_found">Sendrata reto trovita. Daŭrigante</string>
+    <string name="wadb_error_title">Eraro dum startado</string>
+    <string name="wadb_error_notify_dev">Frapetu por sciigi la programiston.</string>
+    <string name="wadb_error_send_email">Sendu retpoŝton al</string>
+    <string name="wadb_permission_error_notification_title">Permesa Eraro</string>
+    <string name="wadb_permission_error_notification_content">Ŝizuku bezonas WRITE_SECURE_SETTINGS por komenci dum la starto. Alklaku por lerni kiel permesi ĝin.</string>
+    <string name="wadb_notification_channel">ADB aŭtomata starta servo</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">Gardhundo funkcias</string>
+    <string name="watchdog_shizuku_crashed_title">Ŝizuku kraŝis antaŭ nelonge</string>
+    <string name="watchdog_shizuku_crashed_text">La servo \"Garddog\" rekomencis la servon. Alklaku por lerni pri eblaj riparoj por eviti estontajn kraŝojn.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Malŝalti Avertojn</string>
     <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">Ne eblas lanĉi retumilon</string>
+    <string name="toast_copied_to_clipboard">%s\nestis kopiita al la tondujo.</string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> estis kopiita al la tondujo.]]></string>
+    <string name="accessibility_service_description">Provizas parigan subtenon por aparatoj (ekz., televidiloj kun Android 14+) kie sciigoj aŭ dividita ekrano ne uzeblas.\n\nEbligas al Ŝizuku eltiri la parigan kodon el la pariga ekrano de sendrata sencimigo. Ĝi malŝaltos sin post kiam la pariga kodo estos trovita.</string>
     <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">%1$s ne subtenas modernan Ŝizuku-on</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[La hereda Shizuku estas malrekomendita ekde marto 2019. Ankaŭ, la hereda Shizuku ne funkcias sur pli novaj Android-sistemoj.<p>Bonvolu peti la programiston de <b>%1$s</b> por ĝisdatigi.]]></string>
+    <string name="dialog_requesting_legacy_title">%1$s petas heredaĵan Ŝizuku-on</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> havas modernan subtenon por Shizuku, sed ĝi petas la malnovan Shizuku. Tio povus esti ĉar Shizuku ne funkcias, bonvolu kontroli en la Shizuku-aplikaĵo.<p>La malnova Shizuku estas malrekomendita ekde marto 2019.]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">Malfermu Shizuku</string>
+    <string name="wadb_notification_attempt_now">Provu nun</string>
 </resources>
