@@ -11,25 +11,186 @@
     <string name="home_adb_description"><![CDATA[Root அணுகல் இல்லாத பட்சத்தில், adb பயன்படுத்தி Shizuku வை தொடங்க வேண்டும் (கணினி இணைப்பு தேவை). ஒவ்வொரு முறை திறன்பேசி மறுதொடக்கம் ஆகும்போதும் இச்செயலை செய்ய வேண்டும். <b><a href="%1$s">உதவி பக்கத்தை படிக்கவும்</a></b>]]></string>
     <string name="home_adb_button_view_help">உதவி பக்கத்தை திற</string>
     <string name="home_adb_button_view_command">கட்டளையைக் காட்டு</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* வேறு சில பரிசீலனைகள் உள்ளன, முதலில் நீங்கள் உதவியைப் படித்திருப்பதை உறுதிப்படுத்தவும்.]]></string>
+    <string name="home_adb_dialog_view_command_copy_button">நகலெடு</string>
+    <string name="home_adb_dialog_view_command_button_send">அனுப்பவும்</string>
     <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[வயர்லெஸ் பிழைத்திருத்தம் மூலம் தொடங்கவும்]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Android 11 அல்லது அதற்கு மேற்பட்ட பதிப்புகளில், கணினியுடன் இணைக்காமலேயே, வயர்லெஸ் பிழைத்திருத்தத்தை இயக்கி, உங்கள் சாதனத்திலிருந்து நேரடியாக Shizuku ஐத் தொடங்கலாம்.<p>முதலில் படிப்படியான வழிகாட்டியைப் பார்க்கவும்.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[ஆண்ட்ராய்டு 11க்கு முன், வயர்லெஸ் பிழைத்திருத்தத்தை இயக்க கணினியுடன் இணைப்பது அவசியம்.]]></string>
+    <string name="home_wireless_adb_view_guide_button">படிப்படியான வழிகாட்டி</string>
     <!-- Adb -->
+    <string name="dialog_adb_discovery">வயர்லெஸ் பிழைத்திருத்த சேவையைத் தேடுகிறது</string>
+    <string name="dialog_adb_discovery_message">\"டெவலப்பர் விருப்பங்கள்\" இல் \"வயர்லெஸ் பிழைத்திருத்தத்தை\" இயக்கவும். நெட்வொர்க் மாறும்போது \"வயர்லெஸ் பிழைத்திருத்தம்\" தானாகவே முடக்கப்படும்.\n\n\"டெவலப்பர் விருப்பங்கள்\" அல்லது \"USB பிழைத்திருத்தத்தை\" முடக்க வேண்டாம் என்பதை நினைவில் கொள்க, இல்லையெனில் ஷிசுகு நிறுத்தப்படும்.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">\"வயர்லெஸ் பிழைத்திருத்தம்\" தொடர்ந்து தேடினால் அதை முடக்கி இயக்க முயற்சிக்கவும்.</string>
+    <string name="dialog_adb_port">துறைமுகம்</string>
+    <string name="dialog_adb_invalid_port">போர்ட் என்பது 1 முதல் 65535 வரையிலான ஒரு முழு எண் ஆகும்.</string>
+    <string name="adb_pairing">இணைத்தல்</string>
+    <string name="dialog_adb_pairing_title">சாதனத்துடன் இணை</string>
+    <string name="dialog_adb_pairing_discovery">இணைத்தல் சேவையைத் தேடுகிறது</string>
+    <string name="dialog_adb_pairing_paring_code">இணைத்தல் குறியீடு</string>
+    <string name="paring_code_is_wrong">இணைத்தல் குறியீடு தவறானது.</string>
+    <string name="cannot_connect_port">வயர்லெஸ் பிழைத்திருத்த சேவையுடன் இணைக்க முடியவில்லை.</string>
+    <string name="dialog_wireless_adb_not_enabled">வயர்லெஸ் பிழைத்திருத்தம் இயக்கப்படவில்லை.\nகுறிப்பு, Android 11 க்கு முன், வயர்லெஸ் பிழைத்திருத்தத்தை இயக்க, கணினி இணைப்பு அவசியம்.</string>
+    <string name="dialog_usb_debugging_not_enabled">USB பிழைத்திருத்தம் இயக்கப்படவில்லை.\n\"டெவலப்பர் விருப்பங்கள்\" என்பதில் அதை இயக்கவும்.</string>
+    <string name="dialog_adb_pairing_message">பின்வரும் படிகளைச் செய்வதன் மூலம் இணைக்கத் தொடங்குங்கள்: \"டெவலப்பர் விருப்பங்கள்\" - \"வயர்லெஸ் பிழைத்திருத்தம்\" - \"இணைப்பு குறியீட்டுடன் சாதனத்தை இணை.\"\n\nஇணைத்தல் செயல்முறை தொடங்கிய பிறகு, நீங்கள் இணைத்தல் குறியீட்டை உள்ளிட முடியும்.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">இணைத்தல் செயல்முறையைத் தொடங்க அணுகல் சேவையை இயக்கவும். இது ஷிசுகுவை இணைத்தல் குறியீட்டைக் கண்டறிய அனுமதிக்கிறது.\n\nகுறியீடு கண்டுபிடிக்கப்பட்டதும் அல்லது 1 நிமிடத்திற்குப் பிறகு ஆற்றலைச் சேமிக்க அணுகல் சேவை முடக்கப்படும்.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">\"டெவலப்பர் விருப்பங்கள்\" &gt; \"வயர்லெஸ் பிழைத்திருத்தம்\" &gt; \"இணைத்தல் குறியீட்டுடன் சாதனத்தை இணைக்கவும்\" என்பதற்குச் செல்லவும். ஷிசுகு தானாகவே இணைத்தல் குறியீட்டைக் கண்டறியும்.</string>
+    <string name="adb_pairing_requires_multi_window">முதலில் பிளவு-திரை (பல-சாளர) பயன்முறையை உள்ளிடவும்.</string>
+    <string name="adb_pairing_requires_multi_window_reason">இந்த அமைப்பு, இணைத்தல் உரையாடலை எப்போதும் காணும்படி கோருகிறது, ஸ்பிளிட்-ஸ்கிரீன் பயன்முறையைப் பயன்படுத்துவதுதான் இந்த செயலியையும் கணினி உரையாடலையும் ஒரே நேரத்தில் காண அனுமதிக்கும் ஒரே வழி.</string>
+    <string name="adb_error_key_store">வயர்லெஸ் பிழைத்திருத்தத்திற்கான விசையை உருவாக்க முடியவில்லை.\nஇந்த சாதனத்தின் கீஸ்டோர் பொறிமுறை உடைந்திருப்பதால் இது ஏற்பட்டிருக்கலாம்.</string>
+    <string name="adb_error_stop_tcp">TCP வழியாக ADB ஐ நிறுத்த முடியவில்லை.</string>
+    <string name="adb_pair_required">முதலில் இணைத்தல் படிக்குச் செல்லவும்.</string>
+    <string name="enable">இயக்கு</string>
+    <string name="development_settings">டெவலப்பர் விருப்பங்கள்</string>
+    <string name="notification_settings">அறிவிப்பு விருப்பங்கள்</string>
+    <string name="adb_pairing_tutorial_title">உங்கள் சாதனத்துடன் ஷிசுகுவை இணைக்கவும்</string>
+    <string name="adb_pairing_tutorial_content_notification">ஷிசுகுவிலிருந்து வரும் அறிவிப்பு, இணைப்பை முடிக்க உங்களுக்கு உதவும்.</string>
+    <string name="adb_pairing_tutorial_content_steps">\"டெவலப்பர் விருப்பங்கள்\" - \"வயர்லெஸ் பிழைத்திருத்தம்\" என்பதை உள்ளிடவும். \"இணைப்பு குறியீட்டுடன் சாதனத்தை இணை\" என்பதைத் தட்டவும், நீங்கள் ஆறு இலக்க குறியீட்டைக் காண்பீர்கள்.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">இணைப்பதை முடிக்க அறிவிப்பில் குறியீட்டை உள்ளிடவும்.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">இணைத்தல் செயல்முறைக்கு ஷிசுகுவிலிருந்து வரும் அறிவிப்புடன் நீங்கள் தொடர்பு கொள்ள வேண்டும். அறிவிப்புகளை இடுகையிட ஷிசுகுவை அனுமதிக்கவும்.</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI பயனர்கள் கணினி அமைப்புகளில் \"அறிவிப்பு\" - \"அறிவிப்பு நிழல்\" என்பதிலிருந்து அறிவிப்பு பாணியை \"Android\" க்கு மாற்ற வேண்டியிருக்கலாம்.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">இல்லையெனில், அறிவிப்பிலிருந்து பாரிங் குறியீட்டை உள்ளிட முடியாமல் போகலாம்.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">\"வயர்லெஸ் பிழைத்திருத்தம்\" விருப்பத்தின் இடது பகுதி கிளிக் செய்யக்கூடியது என்பதை நினைவில் கொள்க, அதைத் தட்டினால் ஒரு புதிய பக்கம் திறக்கும். வலதுபுறத்தில் உள்ள சுவிட்சை டியூரிங் செய்வது மட்டுமே தவறானது.</string>
+    <string name="adb_pairing_tutorial_content_finish">ஷிசுகுக்குத் திரும்பி ஷிசுகுவைத் தொடங்குங்கள்.</string>
+    <string name="adb_pairing_tutorial_content_network">ஷிசுகு உள்ளூர் நெட்வொர்க்கை அணுக வேண்டும். இது நெட்வொர்க் அனுமதியால் கட்டுப்படுத்தப்படுகிறது.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">சில அமைப்புகள் (MIUI போன்றவை) பயன்பாடுகள் முன்புற சேவையை தரநிலையாகப் பயன்படுத்தினாலும், அவை தெரியாதபோது நெட்வொர்க்கை அணுக அனுமதிக்காது. அத்தகைய அமைப்புகளில் ஷிசுகுவிற்கான பேட்டரி உகப்பாக்க அம்சங்களை முடக்கவும்.</string>
     <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[தொடங்கு (ரூட் செய்யப்பட்ட சாதனங்களுக்கு)]]></string>
+    <string name="home_root_description"><![CDATA[கூடுதலாக, ஷிசுகுவை துவக்கும்போது தானாகவே தொடங்கலாம். இல்லையென்றால், உங்கள் கணினி அல்லது மூன்றாம் தரப்பு கருவிகள் ஷிசுகுவை கட்டுப்படுத்தியுள்ளதா எனச் சரிபார்க்கவும்.<br>நீங்கள் %sஐப் பார்க்கலாம்.]]></string>
+    <string name="home_root_description_sui"><![CDATA[நீங்கள் Magisk ஐப் பயன்படுத்துகிறீர்கள் என்றால், %1$sஐ முயற்சி செய்யலாம். ரூட் பயனர்களுக்கு, இது இறுதியில் Shizuku ஐ மாற்றும். குறிப்பு, %2$sஐப் பயன்படுத்த ஏற்கனவே உள்ள பயன்பாடுகள் சிறிது மாற வேண்டும்.]]></string>
+    <string name="home_root_button_start">தொடங்கு</string>
+    <string name="home_root_button_restart">மறுதொடக்கம்</string>
     <!-- Home - Application management -->
+    <string name="home_app_management_title">விண்ணப்ப மேலாண்மை</string>
+    <plurals name="home_app_management_authorized_apps_count">
+        <item quantity="one"><![CDATA[அங்கீகரிக்கப்பட்ட %d விண்ணப்பம்]]></item>
+        <item quantity="other"><![CDATA[அங்கீகரிக்கப்பட்ட %d விண்ணப்பங்கள்]]></item>
+    </plurals>
+    <string name="home_app_management_view_authorized_apps"><![CDATA[அங்கீகரிக்கப்பட்ட பயன்பாடுகளை நிர்வகிக்க தட்டவும்]]></string>
+    <string name="home_app_management_empty">ஷிசுகு அனுமதியைக் கோரிய அல்லது அறிவித்த பயன்பாடுகள் இங்கே காண்பிக்கப்படும்.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">ஷிசுகு கற்றுக்கொள்ளுங்கள்</string>
+    <string name="home_learn_more_description">ஷிசுகுவுடன் எவ்வாறு உருவாக்குவது என்பதை அறிக</string>
     <!-- Home - Adb permissions limited -->
+    <string name="home_adb_is_limited_title">நீங்கள் ஒரு கூடுதல் படி எடுக்க வேண்டும்.</string>
+    <string name="home_adb_is_limited_description">உங்கள் சாதன உற்பத்தியாளர் adb அனுமதிகளை கட்டுப்படுத்தியுள்ளார், மேலும் Shizuku ஐப் பயன்படுத்தும் பயன்பாடுகள் சரியாக வேலை செய்யாது.\n\nவழக்கமாக, \"டெவலப்பர் விருப்பங்கள்\" இல் உள்ள சில விருப்பங்களை சரிசெய்வதன் மூலம் இந்த வரம்பை நீக்க முடியும். இதை எப்படி செய்வது என்பது குறித்த விவரங்களுக்கு உதவியைப் படிக்கவும்.\n\nசெயல்பாடு நடைமுறைக்கு வர நீங்கள் Shizuku ஐ மறுதொடக்கம் செய்ய வேண்டியிருக்கலாம்.</string>
     <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">adb இன் அனுமதி குறைவாக உள்ளது.</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[உங்கள் சாதன உற்பத்தியாளர் adb இன் அனுமதியை வரம்பிடுவது மிகவும் சாத்தியம்.<p> <b><a href=\"%1$s\">இந்த ஆவணத்தில்</a></b>உங்கள் கணினிக்கு ஒரு தீர்வு இருக்கலாம்.]]></string>
+    <string name="app_management_item_summary_requires_root">* ரூட்டுடன் கூடிய ஷிசுகு ரன்கள் தேவை.</string>
+    <string name="app_management_toggle_all">அனைத்தையும் மாற்று</string>
     <!-- Terminal -->
+    <string name="home_terminal_title">டெர்மினல் பயன்பாடுகளில் ஷிசுகுவைப் பயன்படுத்தவும்</string>
+    <string name="home_terminal_description">நீங்கள் விரும்பும் முனைய பயன்பாடுகளில் Shizuku வழியாக கட்டளைகளை இயக்கவும்.</string>
+    <string name="terminal_tutorial_1">முதலில், நீங்கள் விரும்பும் எந்த இடத்திற்கும் கோப்புகளை ஏற்றுமதி செய்யுங்கள். நீங்கள் இரண்டு கோப்புகளைக் காண்பீர்கள், %1$s மற்றும் %2$s.</string>
+    <string name="terminal_tutorial_1_description">தேர்ந்தெடுக்கப்பட்ட கோப்புறையில் ஒரே பெயரில் கோப்புகள் இருந்தால், அவை நீக்கப்படும்.\n\nஏற்றுமதி செயல்பாடு SAF (சேமிப்பக அணுகல் கட்டமைப்பைப்) பயன்படுத்துகிறது. MIUI SAF இன் செயல்பாடுகளை உடைப்பதாக தெரிவிக்கப்பட்டுள்ளது. நீங்கள் MIUI ஐப் பயன்படுத்துகிறீர்கள் என்றால், நீங்கள் Shizuku இன் apk இலிருந்து கோப்பைப் பிரித்தெடுக்க வேண்டும் அல்லது GitHub இலிருந்து பதிவிறக்க வேண்டும்.</string>
+    <string name="terminal_export_files">கோப்புகளை ஏற்றுமதி செய்</string>
+    <string name="terminal_tutorial_2">பின்னர், %1$sஐத் திறந்து திருத்த ஏதேனும் ஒரு உரை திருத்தியைப் பயன்படுத்தவும்.</string>
+    <string name="terminal_tutorial_2_description">உதாரணமாக, %1$sஇல் ஷிசுகுவைப் பயன்படுத்த விரும்பினால், %2$s ஐ %3$s உடன் மாற்ற வேண்டும் (%4$s என்பது %1$sஇன் தொகுப்பு பெயர்).</string>
+    <string name="terminal_tutorial_3">இறுதியாக, உங்கள் டெர்மினல் பயன்பாடு அணுகக்கூடிய இடத்திற்கு கோப்புகளை நகர்த்தவும், நீங்கள் %1$s ஐப் பயன்படுத்தி ஷிசுகு வழியாக கட்டளைகளை இயக்க முடியும்.</string>
+    <string name="terminal_tutorial_3_description">சில குறிப்புகள்: %1$s -க்கு இயக்க அனுமதி வழங்கி, அதை %2$sஇல் சேர்த்தால், நீங்கள் %1$s -ஐ நேரடியாகப் பயன்படுத்த முடியும்.</string>
+    <string name="rish_description"><![CDATA[ %1$sஉடன், எந்த முனைய பயன்பாட்டிலும், நீங்கள் ஷிசுகுவால் இயக்கப்படும் ஷெல்லுடன் இணைக்கலாம் மற்றும் தொடர்பு கொள்ளலாம்.
+<p>விரிவான பயன்பாடு பற்றி %1$s, ஆவணத்தைக் காண தட்டவும்.
+    ]]></string>
     <!-- Settings -->
+    <string name="settings_title">அமைப்புகள்</string>
+    <string name="settings_behavior">நடத்தை</string>
+    <string name="settings_start_on_boot">துவக்கத்தில் தொடங்கு</string>
+    <string name="settings_start_on_boot_summary">Android 11+ அல்லது ரூட் தேவை</string>
+    <string name="settings_use_system_color">சிஸ்டம் தீம் நிறத்தைப் பயன்படுத்து</string>
+    <string name="settings_watchdog">கண்காணிப்பு நாய்</string>
+    <string name="settings_watchdog_summary">ஷிசுகு நின்றால் தானாகவே மறுதொடக்கம் செய்யுங்கள்</string>
+    <string name="settings_tcp_mode">TCP பயன்முறை</string>
+    <string name="settings_tcp_mode_summary">"Wi-Fi இல்லாமல் Shizukuவை மறுதொடக்கம் செய்ய அனுமதிக்கிறது. (மறுதொடக்கம் செய்யப்பட்டதிலிருந்து Shizuku ஒரு முறை தொடங்கியிருக்க வேண்டும்)"</string>
+    <string name="settings_tcp_mode_dialog_title">மறுதொடக்கம் அவசியம்</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[இந்த அமைப்பைப் பயன்படுத்த ஷிசுகுவை மறுதொடக்கம் செய்ய வேண்டும்.<br><br><b>ஷிசுகு தொடர்ந்து இயங்கும், மறுதொடக்கம் செய்வதற்கு முன்பு வைஃபை இணைப்புக்காகக் காத்திருக்கும்.</b>]]></string>
+    <string name="settings_tcp_port">TCP போர்ட்</string>
+    <string name="settings_tcp_port_deafult">இயல்புநிலை (5555)</string>
+    <string name="settings_tcp_port_hint">இயல்புநிலையைப் பயன்படுத்த காலியாக விடவும் (5555)</string>
+    <string name="settings_tcp_learn_more">ஷிசுகுவை கட்டுப்படுத்த ஆட்டோமேஷன் பயன்பாடுகளைப் பயன்படுத்துவது பற்றி மேலும் அறிக.</string>
+    <string name="settings_language">மொழி</string>
+    <string name="settings_translation_contributors">மொழிபெயர்ப்பு பங்களிப்பாளர்கள்</string>
+    <string name="settings_translation">மொழிபெயர்ப்பில் பங்கேற்கவும்.</string>
+    <string name="settings_translation_summary">%s ஐ உங்கள் மொழியில் மொழிபெயர்க்க எங்களுக்கு உதவுங்கள்.</string>
+    <string name="settings_user_interface">தோற்றம்</string>
+    <string name="settings_black_night_theme">கருப்பு இரவு தீம்</string>
+    <string name="settings_black_night_theme_summary">இரவு முறை இயக்கப்பட்டிருந்தால், தூய கருப்பு கருப்பொருளைப் பயன்படுத்தவும்.</string>
+    <string name="settings_support">ஆதரவு</string>
+    <string name="settings_help">உதவி</string>
+    <string name="settings_report_bug">பிழையைப் புகாரளிக்கவும்</string>
+    <string name="settings_advanced">மேம்பட்டது</string>
+    <string name="settings_legacy_pairing">லெகஸி இணைத்தல்</string>
+    <string name="settings_legacy_pairing_summary">அறிவிப்புக்குப் பதிலாக உரையாடலில் இணைத்தல் குறியீட்டை உள்ளிடவும்.</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">போர்ட் 1 மற்றும் 65535 க்கு இடையில் இருக்க வேண்டும்.</string>
+    <string name="snackbar_battery_optimization_home">துவக்கத்தில்/வாட்ச்டாக்கில் ஸ்டார்ட் சரியாக வேலை செய்ய பேட்டரி ஆப்டிமைசேஷன் முடக்கப்பட்டிருக்க வேண்டும்.</string>
+    <string name="snackbar_battery_optimization_settings">இந்த அம்சத்தைப் பயன்படுத்த பேட்டரி மேம்படுத்தலை முடக்கவும்.</string>
+    <string name="snackbar_action_fix">சரிசெய்தல்</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">மின்னஞ்சல் பயன்பாடு எதுவும் கிடைக்கவில்லை.</string>
+    <string name="toast_shizuku_already_starting">ஷிசுகு ஏற்கனவே பின்னணியில் தொடங்குகிறது.</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">தீம்</string>
+    <string name="dark_theme_off">எப்போதும் வெளிச்சம்</string>
+    <string name="dark_theme_on">எப்போதும் இருள்</string>
     <!-- About -->
+    <string name="action_about">பற்றி</string>
+    <string name="about_dialog_button_close">மூடு</string>
+    <string name="about_view_source_code"><![CDATA[%sஇல் மூலக் குறியீட்டைக் காண்க]]></string>
     <!-- Stop -->
+    <string name="action_stop">ஷிசுகுவை நிறுத்து</string>
+    <string name="dialog_stop_message">ஷிசுகு சேவை நிறுத்தப்படும்.</string>
     <!-- Notification -->
+    <string name="notification_channel_service_status">சேவை தொடக்க நிலை</string>
+    <string name="notification_service_starting">ஷிசுகு சேவை தொடங்குகிறது…</string>
+    <string name="notification_service_start_failed">ஷிசுகு சேவையைத் தொடங்குவது தோல்வியடைந்தது.</string>
+    <string name="notification_service_start_no_root">ரூட் அனுமதியைக் கோர முடியவில்லை.</string>
+    <string name="notification_working">…வேலை செய்கிறது</string>
+    <string name="notification_channel_adb_pairing">வயர்லெஸ் பிழைத்திருத்த இணைத்தல்</string>
+    <string name="notification_adb_pairing_input_paring_code">இணைத்தல் குறியீட்டை உள்ளிடவும்</string>
+    <string name="notification_adb_pairing_searching_for_service_title">இணைத்தல் சேவையைத் தேடுகிறது</string>
+    <string name="notification_adb_pairing_service_found_title">இணைத்தல் சேவை கண்டறியப்பட்டது</string>
+    <string name="notification_adb_pairing_stop_searching">தேடுவதை நிறுத்து</string>
+    <string name="notification_adb_pairing_working_title">இணைத்தல் செயலில் உள்ளது</string>
+    <string name="notification_adb_pairing_succeed_title">இணைத்தல் வெற்றியடைந்தது</string>
+    <string name="notification_adb_pairing_succeed_text">நீங்கள் இப்போது ஷிசுகு சேவையைத் தொடங்கலாம்.</string>
+    <string name="notification_adb_pairing_failed_title">இணைத்தல் தோல்வியடைந்தது</string>
+    <string name="notification_adb_pairing_retry">மீண்டும் முயற்சிக்கவும்</string>
     <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">ஷிசுகுவை அணுகவும்</string>
+    <string name="permission_description">ஷிசுகுவைப் பயன்படுத்த பயன்பாட்டை அனுமதிக்கவும்.</string>
+    <string name="permission_warning_template"><![CDATA[<b>%1$s</b> %2$sஐ அனுமதிக்கவா?]]></string>
+    <string name="grant_dialog_button_allow_always">எல்லா நேரங்களிலும் அனுமதி</string>
+    <string name="grant_dialog_button_deny">"மறுக்கவும்"</string>
     <!-- Starter -->
+    <string name="starter">ஸ்டார்டர்</string>
+    <string name="start_with_root_failed">ரூட் அனுமதி வழங்கப்படாததாலோ அல்லது இந்த சாதனம் ரூட் செய்யப்படாததாலோ சேவையைத் தொடங்க முடியாது.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">ஷிசுகுவைத் தொடங்குதல்…</string>
+    <string name="wadb_notification_wifi_required">தொடர்வதற்கு முன் Wi-Fi இணைப்புக்காகக் காத்திருக்கிறது</string>
+    <string name="wadb_notification_wifi_found">வைஃபை உள்ளது. தொடர்கிறது</string>
+    <string name="wadb_error_title">துவக்கத்தில் தொடங்கும் போது பிழை</string>
+    <string name="wadb_error_notify_dev">டெவலப்பருக்குத் தெரிவிக்க தட்டவும்.</string>
+    <string name="wadb_error_send_email">மின்னஞ்சல் அனுப்பு</string>
+    <string name="wadb_permission_error_notification_title">அனுமதி பிழை</string>
+    <string name="wadb_permission_error_notification_content">துவக்கத்தில் தொடங்க ஷிசுகுவுக்கு WRITE_SECURE_SETTINGS தேவை. அதை எப்படி வழங்குவது என்பதை அறிய தட்டவும்.</string>
+    <string name="wadb_notification_channel">ADB தானியங்கு தொடக்க சேவை</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">கண்காணிப்புக் குழு இயங்குகிறது.</string>
+    <string name="watchdog_shizuku_crashed_title">ஷிசுகு சமீபத்தில் விபத்துக்குள்ளானது.</string>
+    <string name="watchdog_shizuku_crashed_text">வாட்ச்டாக் சேவையை மீண்டும் தொடங்கியது. எதிர்கால விபத்துகளைத் தடுப்பதற்கான சாத்தியமான திருத்தங்களைப் பற்றி அறிய தட்டவும்.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">விழிப்பூட்டல்களை முடக்கு</string>
     <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">உலாவியைத் தொடங்க முடியவில்லை.</string>
+    <string name="toast_copied_to_clipboard">%s\nகிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது.</string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது.]]></string>
+    <string name="accessibility_service_description">அறிவிப்புகள் அல்லது ஸ்பிளிட் ஸ்கிரீனைப் பயன்படுத்த முடியாத சாதனங்களுக்கு (எ.கா., Android 14+ இயங்கும் டிவிகள்) இணைத்தல் ஆதரவை வழங்குகிறது.\n\nவயர்லெஸ் பிழைத்திருத்த இணைத்தல் திரையில் இருந்து இணைத்தல் குறியீட்டைப் பிரித்தெடுக்க Shizuku ஐ இயக்குகிறது. இணைத்தல் குறியீடு கண்டுபிடிக்கப்பட்டதும் அது தானாகவே முடக்கப்படும்.</string>
     <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">%1$s நவீன ஷிசுகுவை ஆதரிக்கவில்லை</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[மார்ச் 2019 முதல் Legacy Shizuku நிறுத்தப்பட்டுள்ளது. மேலும், Legacy Shizuku புதிய Android அமைப்புகளில் வேலை செய்யாது.<p>புதுப்பிக்க <b>%1$s</b> டெவலப்பரிடம் கேளுங்கள்.]]></string>
+    <string name="dialog_requesting_legacy_title">%1$s மரபுவழி ஷிசுகுவைக் கோருகிறது</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> நவீன ஷிசுகு ஆதரவைக் கொண்டுள்ளது, ஆனால் இது மரபுவழி ஷிசுகுவைக் கோருகிறது. ஷிசுகு இயங்காததால் இது நிகழலாம், தயவுசெய்து ஷிசுகு பயன்பாட்டைப் பார்க்கவும்.<p>மரபுவழி ஷிசுகு மார்ச் 2019 முதல் நிறுத்தப்பட்டுள்ளது.]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">ஷிசுகுவைத் திறக்கவும்</string>
+    <string name="wadb_notification_attempt_now">இப்போதே முயற்சிக்கவும்</string>
 </resources>
