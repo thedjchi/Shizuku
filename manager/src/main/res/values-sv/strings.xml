@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!-- To translators: you can leave your here -->
+    <!-- Home - Status -->
+    <!-- Home - Adb -->
+    <!-- Home - Wireless Adb -->
+    <!-- Adb -->
+    <!-- Home - Root -->
+    <!-- Home - Application management -->
+    <!-- Home - Learn more -->
+    <!-- Home - Adb permissions limited -->
+    <!-- Application management -->
+    <!-- Terminal -->
+    <!-- Settings -->
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
+    <!-- About -->
+    <!-- Stop -->
+    <!-- Notification -->
+    <!-- Permission related, appears in system permission UI -->
+    <!-- Starter -->
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
+    <!-- Misc -->
+    <!-- Messages for legacy -->
+</resources>
