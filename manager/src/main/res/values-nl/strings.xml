@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home_status_service_version">Versie %2$s, %1$s</string>
-    <string name="home_status_service_not_running">%1$s is niet actief</string>
+    <!-- To translators: you can leave your here -->
+    <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s is actief</string>
+    <string name="home_status_service_not_running">%1$s is niet actief</string>
+    <string name="home_status_service_version">Versie %2$s, %1$s</string>
+    <!-- Home - Adb -->
+    <!-- Home - Wireless Adb -->
+    <!-- Adb -->
+    <!-- Home - Root -->
+    <!-- Home - Application management -->
+    <!-- Home - Learn more -->
+    <!-- Home - Adb permissions limited -->
+    <!-- Application management -->
+    <!-- Terminal -->
+    <!-- Settings -->
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
+    <!-- About -->
+    <!-- Stop -->
+    <!-- Notification -->
+    <!-- Permission related, appears in system permission UI -->
+    <!-- Starter -->
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
+    <!-- Misc -->
+    <!-- Messages for legacy -->
 </resources>
