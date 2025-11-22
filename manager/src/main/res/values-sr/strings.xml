@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="dialog_adb_port">Port</string>
-    <string name="dialog_adb_discovery_message">"Molimo Vas omogućite rad režima \"Bežično otklanjanje  grešaka\" u sekciji \"Opcije programera\". Režim  \"Bežično otklanjanje grešaka\" se automatski onemogućava pri svakoj promeni mrežne konekcije..
-\n
-\nPrimetićete, onemogućavanjem sekcije \"Opcije programera\" ili režima \"USB otklanjanje grešaka\", proces rada aplikacije Shizuku se prekida."</string>
-    <string name="dialog_adb_discovery">Traženje servisa Bežično otklanjanje grešaka</string>
-    <string name="home_wireless_adb_view_guide_button">Vodič Korak-po-korak</string>
-    <string name="home_wireless_adb_description_pre_11">"Pre Android verzije softvera 11, konekcija sa računarom bila je neophodna  u cilju omogućavanja rada režima Bežično otklanjanja grešaka."</string>
-    <string name="home_wireless_adb_description">"Za Android verziju softvera 11 i više, možete omogućavanjem rada režima Bežičnog otklanjanja grešaka pokrenuti Shizuku aplikaciju direktno sa Vašeg  telefona, zaobilazeći konekciju sa računarom.&lt;p&gt; Molimo Vas, najpre pogledajte vodič Korak-po-korak."</string>
-    <string name="home_wireless_adb_title">Pokreni preko Bežičnog otklanjanja grešaka</string>
-    <string name="home_adb_dialog_view_command_button_send">Pošalji</string>
-    <string name="home_adb_dialog_view_command_copy_button">Kopiraj</string>
-    <string name="home_adb_button_view_command">Pregled komande</string>
-    <string name="home_adb_button_view_help">Pročitajte pomoć</string>
-    <string name="home_adb_description">Za uređaje koji nisu root-ovani, potrebno je izvršiti adb komandu radi pokretanja Shizuku aplikacije (zahteva konekciju sa računarom). Ovaj proces je neophodno svaki put ponoviti nakon restarta uređaja. Molim Vas <b><a href="%1$s">pročitajte pomoć </a></b>.</string>
-    <string name="home_adb_title">Pokreni uz pomoć konekcije preko računara</string>
-    <string name="home_status_service_version_update">Verzija %2$s, %1$s&lt;br&gt;Počni ispočetka zbog ažuriranja na verziju%3$s</string>
-    <string name="home_status_service_version">Verzija %2$s, %1$s</string>
-    <string name="home_status_service_not_running">%1$s se ne izvršava</string>
+    <!-- To translators: you can leave your here -->
+    <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s se izvršava</string>
+    <string name="home_status_service_not_running">%1$s se ne izvršava</string>
+    <string name="home_status_service_version">Verzija %2$s, %1$s</string>
+    <string name="home_status_service_version_update"><![CDATA[Verzija %2$s, %1$s&lt;br&gt;Počni ispočetka zbog ažuriranja na verziju%3$s]]></string>
+    <!-- Home - Adb -->
+    <string name="home_adb_title"><![CDATA[Pokreni uz pomoć konekcije preko računara]]></string>
+    <string name="home_adb_description"><![CDATA[Za uređaje koji nisu root-ovani, potrebno je izvršiti adb komandu radi pokretanja Shizuku aplikacije (zahteva konekciju sa računarom). Ovaj proces je neophodno svaki put ponoviti nakon restarta uređaja. Molim Vas <b><a href="%1$s">pročitajte pomoć </a></b>.]]></string>
+    <string name="home_adb_button_view_help">Pročitajte pomoć</string>
+    <string name="home_adb_button_view_command">Pregled komande</string>
+    <string name="home_adb_dialog_view_command_copy_button">Kopiraj</string>
+    <string name="home_adb_dialog_view_command_button_send">Pošalji</string>
+    <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[Pokreni preko Bežičnog otklanjanja grešaka]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Za Android verziju softvera 11 i više, možete omogućavanjem rada režima Bežičnog otklanjanja grešaka pokrenuti Shizuku aplikaciju direktno sa Vašeg  telefona, zaobilazeći konekciju sa računarom.&lt;p&gt; Molimo Vas, najpre pogledajte vodič Korak-po-korak.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Pre Android verzije softvera 11, konekcija sa računarom bila je neophodna  u cilju omogućavanja rada režima Bežično otklanjanja grešaka.]]></string>
+    <string name="home_wireless_adb_view_guide_button">Vodič Korak-po-korak</string>
+    <!-- Adb -->
+    <string name="dialog_adb_discovery">Traženje servisa Bežično otklanjanje grešaka</string>
+    <string name="dialog_adb_discovery_message">Molimo Vas omogućite rad režima \"Bežično otklanjanje  grešaka\" u sekciji \"Opcije programera\". Režim  \"Bežično otklanjanje grešaka\" se automatski onemogućava pri svakoj promeni mrežne konekcije..
+\n
+\nPrimetićete, onemogućavanjem sekcije \"Opcije programera\" ili režima \"USB otklanjanje grešaka\", proces rada aplikacije Shizuku se prekida.</string>
     <string name="dialog_adb_pairing_title">Upari sa uređajem</string>
     <string name="dialog_adb_pairing_discovery">Traženje uređaja za uparivanje</string>
     <string name="dialog_adb_pairing_paring_code">Kód za uparivanje</string>
@@ -26,9 +30,6 @@
     <string name="cannot_connect_port">Nemoguće je povezivanje sa uslugom bežičnog otklanjanje grešaka.</string>
     <string name="dialog_wireless_adb_not_enabled">Bežično otklanjanje grešaka nije omogućeno.
 \nPrimedba: Pre Android-a 11, omogućavanje bežičnog otklanjanja grešaka bilo je uslovljeno postojanjem konekcije sa računarom.</string>
-    <string name="dialog_adb_pairing_message">"Molim Vas, započnite proces uparivanja prateći sledeće korake: \"Razvojne opcije programera\" - \"Bežično otklanjanje grešaka\" - \"Uparivanje  uređaja pomoću kóda za uparivanje\".
-\n
-\nNakon uspešno izvršenog početka procesa uparivanja, moći ćete da unesete kód za uparivanje."</string>
     <string name="adb_pairing_requires_multi_window">Molim Vas, najpre izaberite režim podeljenog ekrana, odnosno režim više prozora.</string>
     <string name="adb_error_key_store">Neuspešno generisanje ključa za bežično otklanjanje grešaka.
 \nOvo je možda iz razloga što je mehanizam skladišta ključeva ovog uređaja neispravan.</string>
@@ -38,4 +39,23 @@
     <string name="adb_pairing_tutorial_title">Uparite Shizuku sa Vašim uređajem</string>
     <string name="adb_pairing_tutorial_content_notification">Notifikacija iz Shizuku aplikacije će Vam pomoći da dovršite uparivanje.</string>
     <string name="adb_pairing_tutorial_content_steps">Otvorite sekciju \"Razvojne opcije programera\" - \"Bežično otklanjanje grešaka\". Dodirnite \"Uparivanje uređaja pomoću kóda za uparivanje\" i pojaviće Vam se 6-cifreni kód.</string>
+    <!-- Home - Root -->
+    <!-- Home - Application management -->
+    <!-- Home - Learn more -->
+    <!-- Home - Adb permissions limited -->
+    <!-- Application management -->
+    <!-- Terminal -->
+    <!-- Settings -->
+    <!-- Snackbar -->
+    <!-- Toast -->
+    <!-- Dark Mode Setting Override -->
+    <!-- About -->
+    <!-- Stop -->
+    <!-- Notification -->
+    <!-- Permission related, appears in system permission UI -->
+    <!-- Starter -->
+    <!-- WADB Starter -->
+    <!-- Watchdog -->
+    <!-- Misc -->
+    <!-- Messages for legacy -->
 </resources>
