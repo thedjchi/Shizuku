@@ -32,10 +32,16 @@
     <string name="paring_code_is_wrong">رمز مرتبط کردن اشتباه است.</string>
     <string name="cannot_connect_port">نمی توان به خدمات اشکال زدایی بی‌سیم متصل شد.</string>
     <string name="dialog_wireless_adb_not_enabled">اشکال‌زدایی بی‌سیم فعال نیست.\nتوجه داشته باشید، قبل از اندروید ۱۱، برای فعال کردن اشکال‌زدایی بی‌سیم، اتصال به رایانه ضروری است.</string>
+    <string name="dialog_usb_debugging_not_enabled">اشکال‌زدایی USB فعال نیست.\nلطفاً آن را در «گزینه‌های توسعه‌دهنده» فعال کنید.</string>
+    <string name="dialog_adb_pairing_message">لطفاً با انجام مراحل زیر، جفت‌سازی را شروع کنید: «گزینه‌های توسعه‌دهنده» - «اشکال‌زدایی بی‌سیم» - «جفت‌سازی دستگاه با کد جفت‌سازی.»\n\nپس از شروع فرآیند جفت‌سازی، می‌توانید کد جفت‌سازی را وارد کنید.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">لطفاً برای شروع فرآیند جفت‌سازی، سرویس دسترسی را فعال کنید. این به شیزوکو اجازه می‌دهد تا کد جفت‌سازی را تشخیص دهد.\n\nسرویس دسترسی هنگام یافتن کد یا پس از ۱ دقیقه برای صرفه‌جویی در مصرف انرژی خاموش می‌شود.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">لطفاً به «گزینه‌های توسعه‌دهنده» &gt; «اشکال‌زدایی بی‌سیم» &gt; «جفت کردن دستگاه با کد جفت‌سازی» بروید. شیزوکو به‌طور خودکار کد جفت‌سازی را تشخیص می‌دهد.</string>
     <string name="adb_pairing_requires_multi_window">لطفاً ابتدا وارد حالت تقسیم صفحه (چند پنجره) شوید.</string>
     <string name="adb_pairing_requires_multi_window_reason">دستگاه نیاز دارد گفتگوی جفت‌سازی همیشه قابل مشاهده باشد، استفاده از حالت تقسیم صفحه تنها راهی است که به این برنامه و گفتگوی دستگاه اجازه می‌دهد همزمان قابل مشاهده باشند.</string>
     <string name="adb_error_key_store">قادر به تولید کلید برای اشکال زدایی بی‌سیم نیست.\nاین ممکن است به این دلیل باشد که ساز و برگ KeyStore این دستگاه خراب است.</string>
+    <string name="adb_error_stop_tcp">متوقف کردن ADB روی TCP ناموفق بود</string>
     <string name="adb_pair_required">لطفاً ابتدا مرحله مرتبط کردن را طی کنید.</string>
+    <string name="enable">فعال کردن</string>
     <string name="development_settings">گزینه های توسعه دهنده</string>
     <string name="notification_settings">گزینه های اعلان</string>
     <string name="adb_pairing_tutorial_title">برنامه Shizuku را با دستگاه خود مرتبط کنید</string>
@@ -62,6 +68,7 @@
         <item quantity="other"><![CDATA[%d برنامه مجاز]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[برای مدیریت برنامه های مجاز ضربه بزنید]]></string>
+    <string name="home_app_management_empty">برنامه‌هایی که درخواست مجوز Shizuku را داده‌اند یا آن را اعلام کرده‌اند، اینجا نمایش داده می‌شوند.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">یادگیری Shizuku</string>
     <string name="home_learn_more_description">یاد بگیرید که چگونه با Shizuku توسعه دهید</string>
@@ -72,6 +79,7 @@
     <string name="app_management_dialog_adb_is_limited_title">مجوز adb محدود است</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[این احتمال وجود دارد که سازنده دستگاه شما مجوز adb را محدود کند.<p>ممکن است راه حلی برای دستگاه شما در <b><a href=\"%1$s\">این سند</a></b> وجود داشته باشد.]]></string>
     <string name="app_management_item_summary_requires_root">* نیاز دارد که Shizuku با امتیازات ریشه اجرا شود</string>
+    <string name="app_management_toggle_all">همه را تغییر دهید</string>
     <!-- Terminal -->
     <string name="home_terminal_title">از Shizuku در برنامه های پایانه استفاده کنید</string>
     <string name="home_terminal_description">دستورات را از طریق Shizuku در برنامه های پایانه که دوست دارید اجرا کنید</string>
@@ -87,7 +95,20 @@
     ]]></string>
     <!-- Settings -->
     <string name="settings_title">تنظیمات</string>
+    <string name="settings_behavior">رفتار</string>
+    <string name="settings_start_on_boot">شروع در بوت</string>
+    <string name="settings_start_on_boot_summary">نیاز به اندروید ۱۱+ یا روت دارد</string>
     <string name="settings_use_system_color">از رنگ طرح زمینه دستگاه استفاده کنید</string>
+    <string name="settings_watchdog">دیده‌بان</string>
+    <string name="settings_watchdog_summary">اگر Shizuku متوقف شود، آن را به طور خودکار مجدداً راه اندازی کنید</string>
+    <string name="settings_tcp_mode">حالت TCP</string>
+    <string name="settings_tcp_mode_summary">"به Shizuku اجازه می‌دهد بدون Wi-Fi دوباره راه‌اندازی شود. (Shizuku باید یک بار از زمان راه‌اندازی مجدد شروع شده باشد)"</string>
+    <string name="settings_tcp_mode_dialog_title">راه اندازی مجدد مورد نیاز است</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[برای اعمال این تنظیم، Shizuku باید مجدداً راه‌اندازی شود.<br><br><b>Shizuku به اجرای خود ادامه می‌دهد و قبل از راه‌اندازی مجدد، منتظر اتصال Wi-Fi می‌ماند.</b>]]></string>
+    <string name="settings_tcp_port">پورت TCP</string>
+    <string name="settings_tcp_port_deafult">پیش‌فرض (۵۵۵۵)</string>
+    <string name="settings_tcp_port_hint">برای استفاده از مقدار پیش‌فرض (۵۵۵۵) خالی بگذارید.</string>
+    <string name="settings_tcp_learn_more">درباره استفاده از برنامه‌های اتوماسیون برای کنترل شیزوکو بیشتر بدانید</string>
     <string name="settings_language">زبان</string>
     <string name="settings_translation_contributors">مشارکت کنندگان ترجمه</string>
     <string name="settings_translation">در ترجمه شرکت کنید</string>
@@ -95,11 +116,27 @@
     <string name="settings_user_interface">ظاهر</string>
     <string name="settings_black_night_theme">طرح زمینه شب سیاه</string>
     <string name="settings_black_night_theme_summary">اگر حالت شب فعال است از طرح زمینه سیاه خالص استفاده کنید</string>
+    <string name="settings_support">پشتیبانی</string>
+    <string name="settings_help">کمک</string>
+    <string name="settings_report_bug">گزارش اشکال</string>
+    <string name="settings_advanced">پیشرفته</string>
+    <string name="settings_legacy_pairing">جفت‌سازی قدیمی</string>
+    <string name="settings_legacy_pairing_summary">کد جفت‌سازی را به جای اعلان، در یک کادر محاوره‌ای وارد کنید</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">پورت باید بین ۱ تا ۶۵۵۳۵ باشد</string>
+    <string name="snackbar_battery_optimization_home">برای اینکه شروع به کار در هنگام بوت/واچ‌داگ به درستی انجام شود، باید بهینه‌سازی باتری غیرفعال باشد.</string>
+    <string name="snackbar_battery_optimization_settings">لطفاً برای استفاده از این ویژگی، بهینه‌سازی باتری را غیرفعال کنید.</string>
+    <string name="snackbar_action_fix">رفع</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">هیچ برنامه ایمیلی یافت نشد</string>
+    <string name="toast_shizuku_already_starting">شیزوکو از قبل در پس‌زمینه شروع به کار کرده است</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">تم</string>
+    <string name="dark_theme_off">همیشه روشن</string>
+    <string name="dark_theme_on">همیشه تاریک</string>
     <!-- About -->
     <string name="action_about">درباره</string>
+    <string name="about_dialog_button_close">بستن</string>
     <string name="about_view_source_code"><![CDATA[کد منبع را در %s مشاهده کنید]]></string>
     <!-- Stop -->
     <string name="action_stop">توقف Shizuku</string>
@@ -130,15 +167,30 @@
     <string name="starter">شروع کننده</string>
     <string name="start_with_root_failed">نمی‌توان خدمات را راه‌اندازی کرد زیرا مجوز ریشه داده نشده است یا این دستگاه روت نشده است.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">شروع شیزوکو…</string>
+    <string name="wadb_notification_wifi_required">قبل از ادامه، منتظر اتصال Wi-Fi هستم</string>
+    <string name="wadb_notification_wifi_found">وای‌فای پیدا شد. ادامه دارد</string>
+    <string name="wadb_error_title">خطا هنگام شروع بوت</string>
+    <string name="wadb_error_notify_dev">برای اطلاع به توسعه‌دهنده، ضربه بزنید.</string>
+    <string name="wadb_error_send_email">ارسال ایمیل به</string>
+    <string name="wadb_permission_error_notification_title">خطای مجوز</string>
+    <string name="wadb_permission_error_notification_content">شیزوکو برای شروع به کار در هنگام بوت شدن به WRITE_SECURE_SETTINGS نیاز دارد. برای یادگیری نحوه اعطای آن، روی ضربه بزنید.</string>
+    <string name="wadb_notification_channel">سرویس شروع خودکار ADB</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">واچ داگ در حال اجرا است</string>
+    <string name="watchdog_shizuku_crashed_title">شیزوکو اخیراً تصادف کرد</string>
+    <string name="watchdog_shizuku_crashed_text">واچ‌داگ سرویس را مجدداً راه‌اندازی کرد. برای کسب اطلاعات در مورد راه‌حل‌های احتمالی برای جلوگیری از خرابی‌های آینده، ضربه بزنید.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">خاموش کردن هشدارها</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">نمی توان مرورگر را راه اندازی کرد</string>
     <string name="toast_copied_to_clipboard">%s\nدر بریده‌دان رونوشت شده است.</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> در بریده‌دان رونوشت شده است.]]></string>
+    <string name="accessibility_service_description">پشتیبانی از جفت‌سازی را برای دستگاه‌هایی (مثلاً تلویزیون‌های دارای اندروید ۱۴+) که در آن‌ها نمی‌توان از اعلان‌ها یا تقسیم صفحه استفاده کرد، فراهم می‌کند.\n\nبه Shizuku این امکان را می‌دهد که کد جفت‌سازی را از صفحه جفت‌سازی اشکال‌زدایی بی‌سیم استخراج کند. پس از یافتن کد جفت‌سازی، خود را غیرفعال می‌کند.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s از شیزوکوی جدید پشتیبانی نمی کند</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[شیزوکوی قدیمی از مارس ۲۰۱۹ منسوخ شده است. همچنین، Shizuku قدیمی در دستگاه‌های اندروید جدید کار نمی‌کند.<p>لطفاً از توسعه‌دهنده <b>%1$s</b> بخواهید که به‌روزرسانی کند.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s در حال درخواست Shizuku قدیمی است</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> پشتیبانی نسخه جدید شیزوکو دارد، اما شیزوکو قدیمی را درخواست می‌کند. این ممکن است به این دلیل باشد که Shizuku در حال اجرا نیست، لطفاً در برنامه Shizuku بررسی کنید.<p>Shizuku قدیمی از مارس ۲۰۱۹ منسوخ شده است.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">باز کردن Shizuku</string>
+    <string name="wadb_notification_attempt_now">همین حالا تلاش کنید</string>
 </resources>
