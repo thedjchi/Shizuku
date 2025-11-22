@@ -131,7 +131,6 @@
     <string name="snackbar_action_fix">Napraw</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Nie znaleziono aplikacji pocztowej</string>
-    <string name="toast_failed_to_stop">Nie udało się zatrzymać Shizuku</string>
     <string name="toast_shizuku_already_starting">Shizuku już uruchamia się w tle</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Motyw</string>
