@@ -19,8 +19,6 @@ import moe.shizuku.manager.adb.PreferenceAdbKeyStore
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
-import rikka.shizuku.Shizuku
-import android.util.Log
 
 object AdbStarter {
     suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
@@ -29,9 +27,8 @@ object AdbStarter {
         }
 
         try {
-            ShizukuStateMachine.setState(ShizukuStateMachine.State.STARTING)
-            log?.invoke("Starting with wireless adb...")
-            Log.d("AdbStarter", "Starting with wireless adb...")
+            ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
+            log?.invoke("Starting with wireless adb...\n")
         
             val key = runCatching { AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku") }
                 .getOrElse {
@@ -43,16 +40,13 @@ object AdbStarter {
             val tcpMode = ShizukuSettings.getTcpMode()
             val tcpPort = ShizukuSettings.getTcpPort()
             if (tcpMode && activePort != tcpPort) {
-                log?.invoke("\nConnecting on port $activePort...")
-                Log.d("AdbStarter", "Connecting on port $activePort...")
+                log?.invoke("Connecting on port $activePort...")
 
                 AdbClient("127.0.0.1", activePort, key).use { client ->
                     client.connect()
 
                     log?.invoke("Successfully connected on port $activePort...")
                     log?.invoke("\nRestarting in TCP mode port: $tcpPort")
-                    Log.d("AdbStarter", "Successfully connected on port $activePort...")
-                    Log.d("AdbStarter", "Restarting in TCP mode port: $tcpPort")
 
                     activePort = tcpPort
                     runCatching {
@@ -61,8 +55,7 @@ object AdbStarter {
                 }
             }
         
-            log?.invoke("\nConnecting on port $activePort...")
-            Log.d("AdbStarter", "Connecting on port $activePort...")
+            log?.invoke("Connecting on port $activePort...")
 
             AdbClient("127.0.0.1", activePort, key).use { client ->
                 var delayTime = 0L
@@ -74,22 +67,16 @@ object AdbStarter {
                         break
                     } catch (e: Exception) {
                         if (attempt == maxAttempts || e is CancellationException) {
-                            log?.invoke("Failed to connect on port $activePort...")
+                            log?.invoke("Failed to connect on port $activePort...\n")
                             throw e
                         }
                         delayTime += 1000
                     }
                 }
-                log?.invoke("Successfully connected on port $activePort...")
-                Log.d("AdbStarter", "Successfully connected on port $activePort...")
+                log?.invoke("Successfully connected on port $activePort...\n")
             
                 client.runCommand("shell:${Starter.internalCommand}")
-                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
             }
-        } catch (e: Exception) {
-            ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
-            Log.e("AdbStarter", "Error starting with wireless adb", e)
-            throw e
         } finally {
             if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
                 Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 0)
@@ -98,19 +85,15 @@ object AdbStarter {
 
     suspend fun stopTcp(context: Context, port: Int) { 
         runCatching {
-            ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPING)
-            Log.d("AdbStarter", "Getting AdbKey")
+            ShizukuStateMachine.set(ShizukuStateMachine.State.STOPPING)
             val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
             AdbClient("127.0.0.1", port, key).use { client ->
-                Log.d("AdbStarter", "Connecting on port $port")
                 client.connect()
-                Log.d("AdbStarter", "Restarting adbd in USB mode")
                 client.command("usb:")
             }
         }.onFailure {
             if (EnvironmentUtils.getAdbTcpPort() > 0) {
-                Log.e("AdbStarter", "Failed to restart adbd in USB mode", it)
-                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
+                ShizukuStateMachine.update()
                 withContext(Dispatchers.Main) {
                     Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp), Toast.LENGTH_SHORT)
                         .show()

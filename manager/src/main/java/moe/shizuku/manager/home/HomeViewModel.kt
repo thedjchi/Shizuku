@@ -15,6 +15,7 @@ import moe.shizuku.manager.Manifest
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.model.ServiceStatus
 import moe.shizuku.manager.utils.Logger.LOGGER
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.ShizukuSystemApis
 import rikka.lifecycle.Resource
 import rikka.shizuku.Shizuku
@@ -29,7 +30,7 @@ class HomeViewModel : ViewModel() {
 
 
     private fun load(): ServiceStatus {
-        if (!Shizuku.pingBinder()) {
+        if (!ShizukuStateMachine.isRunning()) {
             return ServiceStatus()
         }
 

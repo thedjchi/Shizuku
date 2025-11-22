@@ -12,10 +12,10 @@ import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeStartRootBinding
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.starter.StarterActivity
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
-import rikka.shizuku.Shizuku
 
 class StartRootViewHolder(private val binding: HomeStartRootBinding, root: View) :
     BaseViewHolder<Boolean>(root) {
@@ -66,7 +66,7 @@ class StartRootViewHolder(private val binding: HomeStartRootBinding, root: View)
                     "<b><a href=\"https://dontkillmyapp.com/\">Don\'t kill my app!</a></b>"
                 )
             )
-        if (Shizuku.pingBinder()) {
+        if (ShizukuStateMachine.isRunning()) {
             sb.append("<p>").append(
                 context.getString(
                     R.string.home_root_description_sui,

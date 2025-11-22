@@ -10,6 +10,7 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.databinding.AppsActivityBinding
 import moe.shizuku.manager.utils.CustomTabsHelper
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.lifecycle.Status
 import rikka.recyclerview.addEdgeSpacing
 import rikka.recyclerview.fixEdgeEffect
@@ -30,7 +31,7 @@ class ApplicationManagementActivity : AppBarActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!Shizuku.pingBinder()) {
+        if (!ShizukuStateMachine.isRunning()) {
             finish()
             return
         }

@@ -25,7 +25,6 @@ import moe.shizuku.manager.databinding.StarterActivityBinding
 import rikka.lifecycle.Resource
 import rikka.lifecycle.Status
 import rikka.lifecycle.viewModels
-import rikka.shizuku.Shizuku
 
 private class NotRootedException: Exception()
 
@@ -50,19 +49,10 @@ class StarterActivity : AppBarActivity() {
 
         viewModel.output.observe(this) {
             val output = it.data!!.trim()
-            if (output.endsWith("info: shizuku_starter exit with 0")) {
-                viewModel.log("\nWaiting for service...")
-
-                Shizuku.addBinderReceivedListener(object : Shizuku.OnBinderReceivedListener {
-                    override fun onBinderReceived() {
-                        Shizuku.removeBinderReceivedListener(this)
-                        viewModel.log("Service started, this window will be automatically closed in 3 seconds")
-
-                        window?.decorView?.postDelayed({
-                            if (!isFinishing) finish()
-                        }, 3000)
-                    }
-                })
+            if (output.endsWith("Service started, this window will be automatically closed in 3 seconds")) {
+                window?.decorView?.postDelayed({
+                    if (!isFinishing) finish()
+                }, 3000)
             } else if (it.status == Status.ERROR) {
                 var message = 0
                 when (it.error) {
@@ -120,7 +110,6 @@ private class ViewModel(
     val output = _output as LiveData<Resource<StringBuilder>>
 
     private val handler = CoroutineExceptionHandler { _, throwable ->
-        if (throwable is CancellationException) throw throwable
         log(error = throwable)
     }
 
@@ -131,11 +120,18 @@ private class ViewModel(
         started = true
 
         viewModelScope.launch(Dispatchers.IO + handler) {
-            if (root) startRoot() else AdbStarter.startAdb(context, port, { log(it) })
+            try {
+                if (root) {
+                    startRoot()
+                } else AdbStarter.startAdb(context, port, { log(it) })
+                Starter.waitForBinder({ log(it) })
+            } finally {
+                ShizukuStateMachine.update()
+            }
         }
     }
 
-    fun log(line: String? = null, error: Throwable? = null) {
+    private fun log(line: String? = null, error: Throwable? = null) {
         line?.let { sb.appendLine(it) }
         error?.let { sb.appendLine().appendLine(Log.getStackTraceString(it)) }
 
@@ -158,18 +154,14 @@ private class ViewModel(
             }
         }
 
-        ShizukuStateMachine.setState(ShizukuStateMachine.State.STARTING)
+        ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
         Shell.cmd(Starter.internalCommand).to(object : CallbackList<String?>() {
             override fun onAddElement(s: String?) {
                 s?.let { log(it) }
             }
         }).submit {
-            if (it.code == 0) {
-                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
-            } else {
-                log("\nPlease notify the developer.")
-                ShizukuStateMachine.setState(ShizukuStateMachine.State.CRASHED)
-            }
+            if (!it.isSuccess)
+                throw Exception("Failed to start with root")
         }
     }
 }

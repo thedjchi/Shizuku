@@ -8,6 +8,7 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
 import androidx.core.app.NotificationCompat
+import androidx.lifecycle.asFlow
 import androidx.work.*
 import java.io.EOFException
 import kotlinx.coroutines.CancellationException
@@ -23,7 +24,9 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
+import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.ShizukuStateMachine
 
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
@@ -58,14 +61,19 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 }.first()
             }
             AdbStarter.startAdb(applicationContext, port)
+            Starter.waitForBinder()
 
             val nm = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             nm.cancel(ShizukuReceiverStarter.NOTIFICATION_ID)
 
             return Result.success()
         } catch (e: Exception) {
+            if (ShizukuStateMachine.update() == ShizukuStateMachine.State.RUNNING)
+                return Result.success()
+
             if (e !is CancellationException && e !is EOFException)
                 showErrorNotification(applicationContext, e)
+
             ShizukuReceiverStarter.showNotification(applicationContext)
             return Result.retry()
         }

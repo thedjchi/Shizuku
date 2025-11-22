@@ -34,7 +34,6 @@ import rikka.core.content.asActivity
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
-import rikka.shizuku.Shizuku
 
 class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: View, private val scope: CoroutineScope) :
     BaseViewHolder<Any?>(root) {
@@ -77,7 +76,7 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
     }
 
     private fun onAdbClicked(context: Context, scope: CoroutineScope) {
-        if (ShizukuStateMachine.getState() == ShizukuStateMachine.State.STARTING) {
+        if (ShizukuStateMachine.get() == ShizukuStateMachine.State.STARTING) {
             Toast.makeText(context, context.getString(R.string.toast_shizuku_already_starting), Toast.LENGTH_SHORT).show()
             return
         }

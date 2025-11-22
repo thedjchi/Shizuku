@@ -46,12 +46,12 @@ import moe.shizuku.manager.receiver.BootCompleteReceiver
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.util.ResourceUtils
 import rikka.html.text.HtmlCompat
 import rikka.material.app.LocaleDelegate
 import rikka.recyclerview.addEdgeSpacing
 import rikka.recyclerview.fixEdgeEffect
-import rikka.shizuku.Shizuku
 import rikka.shizuku.manager.ShizukuLocales
 import rikka.widget.borderview.BorderRecyclerView
 import java.util.*
@@ -145,7 +145,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                 summary = context.getString(R.string.settings_tcp_mode_summary)
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean) {
-                        if (!Shizuku.pingBinder()) return@setOnPreferenceChangeListener true
+                        if (!ShizukuStateMachine.isRunning()) return@setOnPreferenceChangeListener true
                         else MaterialAlertDialogBuilder(context)
                             .setTitle(R.string.settings_tcp_mode_dialog_title)
                             .setMessage(HtmlCompat.fromHtml(

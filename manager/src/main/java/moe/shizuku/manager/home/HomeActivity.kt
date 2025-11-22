@@ -37,18 +37,25 @@ import rikka.shizuku.Shizuku
 
 abstract class HomeActivity : AppBarActivity() {
 
-    private val binderReceivedListener = Shizuku.OnBinderReceivedListener {
-        checkServerStatus()
-        appsModel.load()
-    }
-
-    private val binderDeadListener = Shizuku.OnBinderDeadListener {
-        checkServerStatus()
-    }
-
     private val homeModel by viewModels { HomeViewModel() }
     private val appsModel by appsViewModel()
     private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
+
+    private val stateListener: (ShizukuStateMachine.State) -> Unit = {
+        when (it) {
+            ShizukuStateMachine.State.RUNNING -> {
+                checkServerStatus()
+                appsModel.load()
+            }
+            ShizukuStateMachine.State.STOPPED -> {
+                checkServerStatus()
+            }
+            ShizukuStateMachine.State.CRASHED -> {
+                checkServerStatus()
+            }
+            else -> {}
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,8 +104,7 @@ abstract class HomeActivity : AppBarActivity() {
             AdbPairAccessibilityDialogFragment().show(this.asActivity<FragmentActivity>().supportFragmentManager)
         }
 
-        Shizuku.addBinderReceivedListenerSticky(binderReceivedListener)
-        Shizuku.addBinderDeadListener(binderDeadListener)
+        ShizukuStateMachine.addListener(stateListener)
     }
 
     override fun onResume() {
@@ -117,9 +123,8 @@ abstract class HomeActivity : AppBarActivity() {
     }
 
     override fun onDestroy() {
+        ShizukuStateMachine.removeListener(stateListener)
         super.onDestroy()
-        Shizuku.removeBinderReceivedListener(binderReceivedListener)
-        Shizuku.removeBinderDeadListener(binderDeadListener)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -158,25 +163,16 @@ abstract class HomeActivity : AppBarActivity() {
                 true
             }
             R.id.action_stop -> {
-                if (!Shizuku.pingBinder()) {
-                    return true
-                }
-                MaterialAlertDialogBuilder(this)
-                    .setMessage(R.string.dialog_stop_message)
-                    .setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
-                        try {
-                            ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPING)
-                            Shizuku.exit()
-                        } catch (e: Throwable) {
-                            if (Shizuku.pingBinder()) {
-                                ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
-                            } else {
-                                ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
-                            }
+                if (ShizukuStateMachine.isRunning()) {
+                    MaterialAlertDialogBuilder(this)
+                        .setMessage(R.string.dialog_stop_message)
+                        .setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
+                            ShizukuStateMachine.set(ShizukuStateMachine.State.STOPPING)
+                            runCatching { Shizuku.exit() }
                         }
-                    }
-                    .setNegativeButton(android.R.string.cancel, null)
-                    .show()
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .show()
+                }
                 true
             }
             R.id.action_settings -> {

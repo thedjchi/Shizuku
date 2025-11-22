@@ -1,6 +1,5 @@
 package moe.shizuku.manager.service
 
-import android.app.ForegroundServiceStartNotAllowedException
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -12,8 +11,6 @@ import android.content.pm.ServiceInfo
 import android.net.Uri
 import android.os.Build
 import android.os.IBinder
-import android.os.Handler
-import android.os.Looper
 import android.provider.Settings
 import android.util.Log
 import androidx.core.app.NotificationCompat
@@ -21,27 +18,21 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.MainActivity
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.ShizukuStateMachine
-import rikka.shizuku.Shizuku
-import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
 class WatchdogService : Service() {
 
-    private val executor = Executors.newSingleThreadExecutor { r -> Thread(r, "shizuku-watchdog") }
-
-    private val onBinderReceivedListener = Shizuku.OnBinderReceivedListener {
-        executor.execute { onBinderReceived() }
-    }
-    private val onBinderDeadListener = Shizuku.OnBinderDeadListener {
-        executor.execute { onBinderDead() }
+    private val stateListener: (ShizukuStateMachine.State) -> Unit = {
+        if (it == ShizukuStateMachine.State.CRASHED) {
+            showCrashNotification()
+            ShizukuReceiverStarter.start(applicationContext)
+        }
     }
 
     override fun onCreate() {
         super.onCreate()
         isRunning.set(true)
-        Shizuku.addBinderReceivedListener(onBinderReceivedListener)
-        Shizuku.addBinderDeadListener(onBinderDeadListener)
+        ShizukuStateMachine.addListener(stateListener)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -61,44 +52,12 @@ class WatchdogService : Service() {
     }
 
     override fun onDestroy() {
-        Shizuku.removeBinderReceivedListener(onBinderReceivedListener)
-        Shizuku.removeBinderDeadListener(onBinderDeadListener)
-        shutdownExecutor()
+        ShizukuStateMachine.removeListener(stateListener)
         isRunning.set(false)
         super.onDestroy()
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
-
-    private fun onBinderReceived() {
-        ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
-    }
-
-    private fun onBinderDead() {
-        Handler(Looper.getMainLooper()).post {
-            val currentState = ShizukuStateMachine.getState()
-            when (currentState) {
-                ShizukuStateMachine.State.STOPPING -> {
-                    ShizukuStateMachine.setState(ShizukuStateMachine.State.STOPPED)
-                }
-                ShizukuStateMachine.State.RUNNING -> {
-                    showCrashNotification()
-                    ShizukuStateMachine.setState(ShizukuStateMachine.State.CRASHED)
-                    ShizukuReceiverStarter.start(applicationContext)
-                }
-                else -> return@post
-            }
-        }
-    }
-
-    private fun shutdownExecutor() {
-        executor.shutdown()
-        try {
-            if (!executor.awaitTermination(1, TimeUnit.SECONDS)) executor.shutdownNow()
-        } catch (_: InterruptedException) {
-            executor.shutdownNow()
-        }
-    }
 
     private fun buildNotification(): Notification {
         val channelId = "shizuku_watchdog"
@@ -176,8 +135,7 @@ class WatchdogService : Service() {
             try {
                 context.startForegroundService(Intent(context, WatchdogService::class.java))
             } catch (e: Exception) {
-                if (e !is ForegroundServiceStartNotAllowedException)
-                    Log.e("ShizukuApplication", "Failed to start WatchdogService: ${e.message}" )
+                Log.e("ShizukuApplication", "Failed to start WatchdogService: ${e.message}" )
             }
         }
 

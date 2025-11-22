@@ -23,7 +23,6 @@ import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.UserHandleCompat
 import moe.shizuku.manager.worker.AdbStartWorker
-import rikka.shizuku.Shizuku
 
 object ShizukuReceiverStarter {
 
@@ -32,7 +31,7 @@ object ShizukuReceiverStarter {
 
     fun start(context: Context) {
         val togglingTcpMode = (EnvironmentUtils.getAdbTcpPort() > 0) != ShizukuSettings.getTcpMode()
-        if (UserHandleCompat.myUserId() > 0 || (Shizuku.pingBinder() && !togglingTcpMode)) return
+        if (UserHandleCompat.myUserId() > 0 || (ShizukuStateMachine.isRunning() && !togglingTcpMode)) return
 
         if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
             rootStart(context)
@@ -111,12 +110,11 @@ object ShizukuReceiverStarter {
         }
 
         try {
-            ShizukuStateMachine.setState(ShizukuStateMachine.State.STARTING)
+            ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
             Shell.cmd(Starter.internalCommand).exec()
-            ShizukuStateMachine.setState(ShizukuStateMachine.State.RUNNING)
         } catch (e: Exception) {
             Log.e(AppConstants.TAG, "Failed to start Shizuku with root", e)
-            ShizukuStateMachine.setState(ShizukuStateMachine.State.CRASHED)
+            ShizukuStateMachine.update()
         }
     }
 

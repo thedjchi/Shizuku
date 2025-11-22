@@ -42,7 +42,9 @@ class ShizukuApplication : Application() {
         LocaleDelegate.defaultLocale = ShizukuSettings.getLocale()
         AppCompatDelegate.setDefaultNightMode(ShizukuSettings.getNightMode())
 
-        ShizukuStateMachine.init()
+        ShizukuStateMachine.update()
+        Shizuku.addBinderReceivedListener(binderReceivedListener)
+        Shizuku.addBinderDeadListener(binderDeadListener)
         if(ShizukuSettings.getWatchdog()) WatchdogService.start(context)
     }
 
@@ -51,6 +53,25 @@ class ShizukuApplication : Application() {
         application = this
         appContext = applicationContext
         init(this)
+    }
+
+    override fun onTerminate() {
+        Shizuku.removeBinderReceivedListener(binderReceivedListener)
+        Shizuku.removeBinderDeadListener(binderDeadListener)
+        super.onTerminate()
+    }
+
+    val binderReceivedListener = Shizuku.OnBinderReceivedListener {
+        ShizukuStateMachine.set(ShizukuStateMachine.State.RUNNING)
+    }
+
+    val binderDeadListener = Shizuku.OnBinderDeadListener {
+        val currentState = ShizukuStateMachine.get()
+        if (currentState == ShizukuStateMachine.State.STOPPING) {
+            ShizukuStateMachine.set(ShizukuStateMachine.State.STOPPED)
+        } else if (currentState == ShizukuStateMachine.State.RUNNING) {
+            ShizukuStateMachine.set(ShizukuStateMachine.State.CRASHED)
+        }
     }
 
 }

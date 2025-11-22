@@ -8,7 +8,6 @@ import rikka.hidden.compat.PackageManagerApis
 import rikka.hidden.compat.PermissionManagerApis
 import rikka.hidden.compat.UserManagerApis
 import rikka.hidden.compat.util.SystemServiceBinder
-import rikka.shizuku.Shizuku
 import rikka.shizuku.ShizukuBinderWrapper
 
 object ShizukuSystemApis {
@@ -22,7 +21,7 @@ object ShizukuSystemApis {
     private val users = arrayListOf<UserInfoCompat>()
 
     private fun getUsers(): List<UserInfoCompat> {
-        return if (!Shizuku.pingBinder()) {
+        return if (!ShizukuStateMachine.isRunning()) {
             arrayListOf(UserInfoCompat(UserHandleCompat.myUserId(), "Owner"))
         } else try {
             val list = UserManagerApis.getUsers(true, true, true)
@@ -54,7 +53,7 @@ object ShizukuSystemApis {
     }
 
     fun getInstalledPackages(flags: Long, userId: Int): List<PackageInfo> {
-        return if (!Shizuku.pingBinder()) {
+        return if (!ShizukuStateMachine.isRunning()) {
             ArrayList()
         } else try {
             val listSlice: ParceledListSlice<PackageInfo>? =
@@ -71,7 +70,7 @@ object ShizukuSystemApis {
     }
 
     fun checkPermission(permName: String, pkgName: String, userId: Int): Int {
-        return if (!Shizuku.pingBinder()) {
+        return if (!ShizukuStateMachine.isRunning()) {
             PackageManager.PERMISSION_DENIED
         } else try {
             PermissionManagerApis.checkPermission(permName, pkgName, userId)
@@ -81,7 +80,7 @@ object ShizukuSystemApis {
     }
 
     fun grantRuntimePermission(packageName: String, permissionName: String, userId: Int) {
-        if (!Shizuku.pingBinder()) {
+        if (!ShizukuStateMachine.isRunning()) {
             return
         }
         try {
@@ -92,7 +91,7 @@ object ShizukuSystemApis {
     }
 
     fun revokeRuntimePermission(packageName: String, permissionName: String, userId: Int) {
-        if (!Shizuku.pingBinder()) {
+        if (!ShizukuStateMachine.isRunning()) {
             return
         }
         try {
