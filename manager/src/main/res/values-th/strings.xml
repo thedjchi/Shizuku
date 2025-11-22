@@ -35,11 +35,17 @@
     <string name="cannot_connect_port">ไม่สามารถเชื่อมต่อกับบริการการแก้ไขข้อบกพร่องผ่าน Wi-Fi</string>
     <string name="dialog_wireless_adb_not_enabled">การแก้ไขข้อบกพร่องผ่าน Wi-Fi ไม่ถูกเปิดไว้
 \nหมายเหตุ หาก Android เป็นรุ่นที่เก่ากว่า 11 การจะเปิดการแก้ไขข้อบกพร่องผ่าน Wi-Fi จำเป็นต้องมีการเชื่อมต่อกับคอมพิวเตอร์</string>
+    <string name="dialog_usb_debugging_not_enabled">การดีบัก USB ไม่ได้เปิดใช้งาน\nโปรดเปิดใช้งานใน \"ตัวเลือกสำหรับนักพัฒนา\"</string>
+    <string name="dialog_adb_pairing_message">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้: \"ตัวเลือกนักพัฒนา\" - \"การดีบักไร้สาย\" - \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\"\n\nหลังจากเริ่มกระบวนการจับคู่แล้ว คุณจะสามารถป้อนรหัสจับคู่ได้</string>
+    <string name="dialog_adb_pairing_accessibility_enable">กรุณาเปิดใช้งานบริการการเข้าถึงเพื่อเริ่มขั้นตอนการจับคู่ ซึ่งจะทำให้ Shizuku สามารถตรวจจับรหัสการจับคู่ได้\n\nบริการการเข้าถึงจะถูกปิดเมื่อพบรหัส หรือหลังจาก 1 นาที เพื่อประหยัดพลังงาน</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">กรุณาไปที่ \"ตัวเลือกสำหรับนักพัฒนา\" &gt; \"การดีบักไร้สาย\" &gt; \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" Shizuku จะตรวจจับรหัสจับคู่โดยอัตโนมัติ</string>
     <string name="adb_pairing_requires_multi_window">โปรดเข้าสู่โหมดแยกหน้าจอ (หลายหน้าต่าง) ก่อน</string>
     <string name="adb_pairing_requires_multi_window_reason">ระบบจำเป็นจะต้องให้มีหน้าต่างรหัสการจับคู่แสดงอยู่ตลอดเวลา ใช้โหมดแนกหน้าจอเป็นหนทางเดียวที่จะปล่อยแอปและหน้าต่างของระบบแสดงพร้อมกันในเวลาเดียวกัน</string>
     <string name="adb_error_key_store">ไม่สามารถสร้างรหัสเพื่อเชื่อมต่อการแก้ไขข้อบกพร่องผ่าน Wi-Fi
 \nอาจเป็นเพราะกลไกการจัดเก็บรหัสของอุปกรณ์เสียหาย</string>
+    <string name="adb_error_stop_tcp">ไม่สามารถหยุด ADB ผ่าน TCP ได้</string>
     <string name="adb_pair_required">โปรดทำขั้นตอนการจับคู่ก่อน</string>
+    <string name="enable">เปิดใช้งาน</string>
     <string name="development_settings">ตัวเลือกสำหรับนักพัฒนาแอป</string>
     <string name="notification_settings">ตัวเลือกการแจ้งเตือน</string>
     <string name="adb_pairing_tutorial_title">จับคู่ Shizuku กับอุปกรณ์</string>
@@ -65,6 +71,7 @@
         <item quantity="other"><![CDATA[อนุญาตแล้ว %d แอปพลิเคชัน]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[แตะเพื่อจัดการแอปที่ได้รับอนุญาต]]></string>
+    <string name="home_app_management_empty">แอปที่ได้ร้องขอหรือประกาศการอนุญาต Shizuku จะแสดงที่นี่</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">เรียนรู้ Shizuku</string>
     <string name="home_learn_more_description">เรียนรู้การพัฒนาเพื่อใช้ร่วมกันกับ Shizuku</string>
@@ -79,6 +86,7 @@
     <string name="app_management_dialog_adb_is_limited_title">การอนุญาตของ adb นั้นจำกัด</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[เป็นไปได้สูงที่ผู้ผลิตอุปกรณ์ของคุณจะจำกัดการอนุญาตของ adb &lt;p&gt;อาจมีวิธีแก้ไขสำหรับอุปกรณ์ของคุณใน&lt;b&gt;&lt;a href="%1$s"&gt;เอกสารนี้&lt;/a&gt;&lt;/b&gt;]]></string>
     <string name="app_management_item_summary_requires_root">* จำเป็นต้องให้ Shizuku ทำงานผ่านรูท</string>
+    <string name="app_management_toggle_all">สลับทั้งหมด</string>
     <!-- Terminal -->
     <string name="home_terminal_title">ใช้ Shizuku ในแอปเทอร์มินอล</string>
     <string name="home_terminal_description">สั่งคำสั่งผ่าน Shizuku ในแอปเทอร์มินอลที่คุณเลือก</string>
@@ -94,7 +102,20 @@
     <string name="rish_description"><![CDATA[ด้วย %1$s ในแอปเทอร์มินอลใด ๆ คุณจะสามารถเชื่อมต่อและดำเนินการกับ shell ที่รันโดย Shizuku &lt;p&gt;รายละเอียดอื่น ๆ ในการใช้ %1$s แตะเพื่อดูเอกสาร]]></string>
     <!-- Settings -->
     <string name="settings_title">การตั้งค่า</string>
+    <string name="settings_behavior">พฤติกรรม</string>
+    <string name="settings_start_on_boot">เริ่มต้นเมื่อบูตเครื่อง</string>
+    <string name="settings_start_on_boot_summary">ต้องใช้ Android 11+ หรือรูท</string>
     <string name="settings_use_system_color">ใช้สีของธีมระบบ</string>
+    <string name="settings_watchdog">สุนัขเฝ้าบ้าน</string>
+    <string name="settings_watchdog_summary">รีสตาร์ทชิซึกุโดยอัตโนมัติหากหยุด</string>
+    <string name="settings_tcp_mode">โหมด TCP</string>
+    <string name="settings_tcp_mode_summary">"ช่วยให้ชิซึกุสามารถรีสตาร์ทได้โดยไม่ต้องใช้ Wi-Fi (ชิซึกุต้องเริ่มใหม่ครั้งหนึ่งหลังจากรีบูต)"</string>
+    <string name="settings_tcp_mode_dialog_title">จำเป็นต้องรีสตาร์ท</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[ชิซึกุจำเป็นต้องรีสตาร์ทเพื่อใช้การตั้งค่านี้<br><br><b>ชิซึกุจะยังคงทำงานต่อไปและรอการเชื่อมต่อ Wi-Fi ก่อนที่จะรีสตาร์ท</b>]]></string>
+    <string name="settings_tcp_port">พอร์ต TCP</string>
+    <string name="settings_tcp_port_deafult">ค่าเริ่มต้น (5555)</string>
+    <string name="settings_tcp_port_hint">เว้นว่างไว้เพื่อใช้ค่าเริ่มต้น (5555)</string>
+    <string name="settings_tcp_learn_more">เรียนรู้เพิ่มเติมเกี่ยวกับการใช้แอปอัตโนมัติเพื่อควบคุมชิซูกุ</string>
     <string name="settings_language">ภาษา</string>
     <string name="settings_translation_contributors">ผู้มีส่วนร่วมในการแปลภาษา</string>
     <string name="settings_translation">มีส่วนร่วมในการแปล</string>
@@ -102,11 +123,27 @@
     <string name="settings_user_interface">ลักษณะ</string>
     <string name="settings_black_night_theme">ธีมมืดมิด</string>
     <string name="settings_black_night_theme_summary">ใช้ธีมสีดำสนิทหากธีมมืดถูกเปิดอยู่</string>
+    <string name="settings_support">สนับสนุน</string>
+    <string name="settings_help">ช่วย</string>
+    <string name="settings_report_bug">รายงานจุดบกพร่อง</string>
+    <string name="settings_advanced">ขั้นสูง</string>
+    <string name="settings_legacy_pairing">การจับคู่แบบมรดก</string>
+    <string name="settings_legacy_pairing_summary">ป้อนรหัสการจับคู่ในกล่องโต้ตอบแทนการแจ้งเตือน</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">พอร์ตต้องอยู่ระหว่าง 1 ถึง 65535</string>
+    <string name="snackbar_battery_optimization_home">จะต้องปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อให้เริ่มทำงานเมื่อบูตเครื่อง/เฝ้าระวังเพื่อให้ทำงานได้อย่างถูกต้อง</string>
+    <string name="snackbar_battery_optimization_settings">โปรดปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อใช้ฟีเจอร์นี้</string>
+    <string name="snackbar_action_fix">แก้ไข</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">ไม่พบแอปอีเมล</string>
+    <string name="toast_shizuku_already_starting">ชิซึกุเริ่มอยู่ด้านหลังแล้ว</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">ธีม</string>
+    <string name="dark_theme_off">สว่างเสมอ</string>
+    <string name="dark_theme_on">มืดเสมอ</string>
     <!-- About -->
     <string name="action_about">เกี่ยวกับ</string>
+    <string name="about_dialog_button_close">ปิด</string>
     <string name="about_view_source_code"><![CDATA[ดูซอร์สโค้ดใน %s]]></string>
     <!-- Stop -->
     <string name="action_stop">หยุดทำงาน Shizuku</string>
@@ -137,16 +174,31 @@
     <string name="starter">ตัวเริ่ม</string>
     <string name="start_with_root_failed">ไม่สามารถเริ่มบริการเนื่องจากไม่ได้รับการอนุญาตรูทหรืออุปกรณ์ไม่ได้ถูกรูท</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">เริ่มต้นชิซึกุ…</string>
+    <string name="wadb_notification_wifi_required">รอการเชื่อมต่อ Wi-Fi ก่อนดำเนินการต่อ</string>
+    <string name="wadb_notification_wifi_found">พบ Wi-Fi แล้ว กำลังดำเนินการต่อไป</string>
+    <string name="wadb_error_title">เกิดข้อผิดพลาดขณะเริ่มต้นระบบ</string>
+    <string name="wadb_error_notify_dev">แตะเพื่อแจ้งให้ผู้พัฒนาทราบ</string>
+    <string name="wadb_error_send_email">ส่งอีเมล์ถึง</string>
+    <string name="wadb_permission_error_notification_title">ข้อผิดพลาดในการอนุญาต</string>
+    <string name="wadb_permission_error_notification_content">ชิซูกุต้องใช้ WRITE_SECURE_SETTINGS เพื่อเริ่มต้นระบบเมื่อบูตเครื่อง แตะเพื่อดูวิธีให้สิทธิ์</string>
+    <string name="wadb_notification_channel">บริการเริ่มต้นอัตโนมัติของ ADB</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">วอทช์ด็อกกำลังทำงาน</string>
+    <string name="watchdog_shizuku_crashed_title">ชิซึกุเพิ่งประสบอุบัติเหตุเมื่อเร็วๆ นี้</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog ได้รีสตาร์ทบริการแล้ว แตะเพื่อดูวิธีแก้ไขที่อาจเกิดขึ้นเพื่อป้องกันปัญหาขัดข้องในอนาคต</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">ปิดการแจ้งเตือน</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ไม่สามารถเปิดบราวเซอร์</string>
     <string name="toast_copied_to_clipboard">%s
 \nได้ถูกคัดลอกไปยังคลิปบอร์ด</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> ได้ถูกคัดลอกไปยังคลิปบอร์ด]]></string>
+    <string name="accessibility_service_description">รองรับการจับคู่อุปกรณ์ (เช่น ทีวีที่ใช้ Android 14 ขึ้นไป) ที่ไม่สามารถแสดงการแจ้งเตือนหรือแบ่งหน้าจอได้\n\nช่วยให้ Shizuku สามารถดึงรหัสการจับคู่จากหน้าจอการจับคู่เพื่อแก้ไขข้อบกพร่องแบบไร้สายได้ ระบบจะปิดตัวเองเมื่อพบรหัสการจับคู่</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ไม่รองรับ Shizuku รุ่นใหม่</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Shizuku รุ่นเก่าได้ถูกเลิกใช้ไปแล้วตั้งแต่เดือนมีนาคม 2019 นอกจากนี้ Shizuku รุ่นเก่ายังใช้งานไม่ได้กับระบบ Android ที่ใหม่กว่า &lt;p&gt;โปรดติดต่อผู้พัฒนาของ &lt;b&gt;%1$s&lt;/b&gt; เพื่ออัปเดตเป็นเวอร์ชันใหม่]]></string>
     <string name="dialog_requesting_legacy_title">%1$s กำลังขอร้อง Shizuku รุ่นเก่า</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; รองรับ Shizuku รุ่นใหม่ แต่กำลังขอร้อง Shizuku รุ่นเก่า นี่อาจเป็นเพราะ Shizuku ไม่ทำงาน โปรดตรวจสอบในแอป Shizuku &lt;p&gt;Shizuku รุ่นเก่าได้ถูกเลิกใช้ไปแล้วตั้งแต่เดือนมีนาคมปี 2019]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">เปิด Shizuku</string>
+    <string name="wadb_notification_attempt_now">ลองตอนนี้เลย</string>
 </resources>
