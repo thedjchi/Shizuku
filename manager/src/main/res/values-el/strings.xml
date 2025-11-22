@@ -4,18 +4,25 @@
     <!-- Home - Status -->
     <string name="home_status_service_is_running">Το %1$s εκτελείται</string>
     <string name="home_status_service_not_running">Το %1$s δεν εκτελείται</string>
+    <string name="home_status_service_version">Έκδοση %2$s, %1$s</string>
     <string name="home_status_service_version_update"><![CDATA[Έκδοση %2$s, %1$s&lt;br&gt;Κάντε ξανά εκκίνηση για ενημέρωση στην έκδοση %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Έναρξη μέσω σύνδεσης με υπολογιστή]]></string>
     <string name="home_adb_description"><![CDATA[Για συσκευές χωρίς πρόσβαση root, πρέπει να χρησιμοποιήσετε το adb για την εκκίνηση του Shizuku (απαιτεί σύνδεση σε υπολογιστή). Αυτή η διαδικασία θα πρέπει να επαναλαμβάνεται κάθε φορά που επανεκκινείται η συσκευή. <b><a href="%1$s">Διαβάστε τη βοήθεια</a></b>.]]></string>
     <string name="home_adb_button_view_help">Ανάγνωση βοήθειας</string>
     <string name="home_adb_button_view_command">Προβολή εντολής</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Υπάρχουν και άλλες σκέψεις, παρακαλούμε επιβεβαιώστε ότι έχετε διαβάσει πρώτα τη βοήθεια.]]></string>
+    <string name="home_adb_dialog_view_command_copy_button">Αντίγραφο</string>
+    <string name="home_adb_dialog_view_command_button_send">Στέλνω</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Έναρξη μέσω Ασύρματου εντοπισμού σφαλμάτων]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Σε Android 11 ή νεότερη έκδοση, μπορείτε να ενεργοποιήσετε την ασύρματη αποσφαλμάτωση και να ξεκινήσετε το Shizuku απευθείας από τη συσκευή σας, χωρίς να συνδεθείτε σε υπολογιστή.<p>Παρακαλούμε δείτε πρώτα τον αναλυτικό οδηγό.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Πριν από το Android 11, είναι απαραίτητη η σύνδεση με έναν υπολογιστή για την ενεργοποίηση του ασύρματου εντοπισμού σφαλμάτων.]]></string>
     <string name="home_wireless_adb_view_guide_button">Αναλυτικός οδηγός</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Αναζήτηση για υπηρεσία ασύρματου εντοπισμού σφαλμάτων</string>
+    <string name="dialog_adb_discovery_message">Ενεργοποιήστε την επιλογή \"Ασύρματη αποσφαλμάτωση\" στις \"Επιλογές προγραμματιστή\". Η επιλογή \"Ασύρματη αποσφαλμάτωση\" απενεργοποιείται αυτόματα όταν αλλάζει το δίκτυο.\n\nΣημείωση: μην απενεργοποιήσετε τις \"Επιλογές προγραμματιστή\" ή την επιλογή \"Εντοπισμός σφαλμάτων USB\", διαφορετικά το Shizuku θα σταματήσει.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Δοκιμάστε να απενεργοποιήσετε και να ενεργοποιήσετε την επιλογή \"Ασύρματη αποσφαλμάτωση\" εάν συνεχίζει να κάνει αναζήτηση.</string>
     <string name="dialog_adb_port">Θύρα</string>
     <string name="dialog_adb_invalid_port">Η θύρα είναι ένας ακέραιος αριθμός μεταξύ 1 και 65535.</string>
     <string name="adb_pairing">Σύζευξη</string>
@@ -24,23 +31,166 @@
     <string name="dialog_adb_pairing_paring_code">Κωδικός σύζευξης</string>
     <string name="paring_code_is_wrong">Ο κωδικός σύζευξης είναι εσφαλμένος.</string>
     <string name="cannot_connect_port">Δεν είναι δυνατή η σύνδεση με την υπηρεσία ασύρματου εντοπισμού σφαλμάτων.</string>
+    <string name="dialog_wireless_adb_not_enabled">Η ασύρματη λειτουργία εντοπισμού σφαλμάτων δεν είναι ενεργοποιημένη.\nΣημειώστε ότι πριν από το Android 11, για να ενεργοποιήσετε την ασύρματη λειτουργία εντοπισμού σφαλμάτων, ήταν απαραίτητη η σύνδεση με τον υπολογιστή.</string>
+    <string name="dialog_usb_debugging_not_enabled">Η λειτουργία εντοπισμού σφαλμάτων USB δεν είναι ενεργοποιημένη.\nΕνεργοποιήστε την στις \"Επιλογές προγραμματιστή\".</string>
+    <string name="dialog_adb_pairing_message">Ξεκινήστε τη σύζευξη ακολουθώντας τα παρακάτω βήματα: \"Επιλογές προγραμματιστή\" - \"Ασύρματος εντοπισμός σφαλμάτων\" - \"Σύζευξη συσκευής με κωδικό σύζευξης.\"\n\nΑφού ξεκινήσει η διαδικασία σύζευξης, θα μπορείτε να εισαγάγετε τον κωδικό σύζευξης.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Ενεργοποιήστε την υπηρεσία προσβασιμότητας για να ξεκινήσει η διαδικασία σύζευξης. Αυτό επιτρέπει στο Shizuku να εντοπίσει τον κωδικό σύζευξης.\n\nΗ υπηρεσία προσβασιμότητας θα απενεργοποιηθεί όταν βρεθεί ο κωδικός ή μετά από 1 λεπτό για εξοικονόμηση ενέργειας.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Μεταβείτε στις \"Επιλογές προγραμματιστή\" &gt; \"Ασύρματη διόρθωση σφαλμάτων\" &gt; \"Σύζευξη συσκευής με κωδικό σύζευξης\". Το Shizuku θα εντοπίσει αυτόματα τον κωδικό σύζευξης.</string>
+    <string name="adb_pairing_requires_multi_window">Παρακαλώ, μεταβείτε πρώτα σε λειτουργία διαιρεμένης οθόνης (πολλαπλών παραθύρων).</string>
+    <string name="adb_pairing_requires_multi_window_reason">Το σύστημα απαιτεί το παράθυρο διαλόγου σύζευξης να είναι πάντα ορατό. Η χρήση της λειτουργίας διαιρεμένης οθόνης είναι ο μόνος τρόπος για να είναι ορατά ταυτόχρονα αυτή η εφαρμογή και το παράθυρο διαλόγου συστήματος.</string>
+    <string name="adb_error_key_store">Δεν είναι δυνατή η δημιουργία κλειδιού για ασύρματο εντοπισμό σφαλμάτων.\nΑυτό μπορεί να οφείλεται στο ότι ο μηχανισμός KeyStore αυτής της συσκευής είναι κατεστραμμένος.</string>
+    <string name="adb_error_stop_tcp">Απέτυχε η διακοπή του ADB μέσω TCP</string>
+    <string name="adb_pair_required">Παρακαλούμε ακολουθήστε πρώτα το βήμα σύζευξης.</string>
+    <string name="enable">Ενεργοποιώ</string>
+    <string name="development_settings">Επιλογές προγραμματιστή</string>
+    <string name="notification_settings">Επιλογές ειδοποιήσεων</string>
+    <string name="adb_pairing_tutorial_title">Συνδέστε το Shizuku με τη συσκευή σας</string>
+    <string name="adb_pairing_tutorial_content_notification">Μια ειδοποίηση από το Shizuku θα σας βοηθήσει να ολοκληρώσετε τη σύζευξη.</string>
+    <string name="adb_pairing_tutorial_content_steps">Εισαγάγετε \"Επιλογές προγραμματιστή\" - \"Ασύρματος εντοπισμός σφαλμάτων\". Πατήστε \"Σύζευξη συσκευής με κωδικό σύζευξης\" και θα δείτε έναν εξαψήφιο κωδικό.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Εισαγάγετε τον κωδικό στην ειδοποίηση για να ολοκληρώσετε τη σύζευξη.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Η διαδικασία σύζευξης απαιτεί να αλληλεπιδράσετε με μια ειδοποίηση από το Shizuku. Επιτρέψτε στο Shizuku να δημοσιεύει ειδοποιήσεις.</string>
+    <string name="adb_pairing_tutorial_content_miui">Οι χρήστες MIUI ίσως χρειαστεί να αλλάξουν το στυλ ειδοποιήσεων σε \"Android\" από \"Ειδοποίηση\" - \"Σκιά ειδοποιήσεων\" στις ρυθμίσεις συστήματος.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Διαφορετικά, ενδέχεται να μην μπορείτε να εισαγάγετε τον κωδικό ζεύξης από την ειδοποίηση.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Λάβετε υπόψη ότι το αριστερό μέρος της επιλογής \"Ασύρματη αποσφαλμάτωση\" είναι δυνατό με κλικ. Αν το πατήσετε, θα ανοίξει μια νέα σελίδα. Η ενεργοποίηση μόνο του διακόπτη στα δεξιά είναι λανθασμένη.</string>
+    <string name="adb_pairing_tutorial_content_finish">Επιστρέψτε στο Shizuku και ξεκινήστε το Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Το Shizuku χρειάζεται πρόσβαση στο τοπικό δίκτυο. Ελέγχεται από τα δικαιώματα δικτύου.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Ορισμένα συστήματα (όπως το MIUI) δεν επιτρέπουν στις εφαρμογές να έχουν πρόσβαση στο δίκτυο όταν δεν είναι ορατές, ακόμα κι αν η εφαρμογή χρησιμοποιεί την υπηρεσία foreground ως στάνταρ. Απενεργοποιήστε τις λειτουργίες βελτιστοποίησης μπαταρίας για το Shizuku σε τέτοια συστήματα.</string>
     <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[Έναρξη (για συσκευές με root)]]></string>
+    <string name="home_root_description"><![CDATA[Επιπλέον, το Shizuku μπορεί να ξεκινήσει αυτόματα κατά την εκκίνηση. Εάν όχι, ελέγξτε εάν το σύστημά σας ή εργαλεία τρίτων έχουν περιορίσει το Shizuku.<br>Μπορείτε να ανατρέξετε στο %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Αν χρησιμοποιείτε Magisk, μπορείτε να δοκιμάσετε το %1$s. Για τους χρήστες root, τελικά θα αντικαταστήσει το Shizuku. Σημειώστε ότι οι υπάρχουσες εφαρμογές πρέπει να αλλάξουν λίγο για να χρησιμοποιήσουν το %2$s.]]></string>
+    <string name="home_root_button_start">Αρχή</string>
+    <string name="home_root_button_restart">Επανεκκίνηση</string>
     <!-- Home - Application management -->
+    <string name="home_app_management_title">Διαχείριση εφαρμογών</string>
+    <plurals name="home_app_management_authorized_apps_count">
+        <item quantity="one"><![CDATA[Εξουσιοδοτημένη εφαρμογή %d]]></item>
+        <item quantity="other"><![CDATA[Εξουσιοδοτημένες %d εφαρμογές]]></item>
+    </plurals>
+    <string name="home_app_management_view_authorized_apps"><![CDATA[Πατήστε για να διαχειριστείτε εξουσιοδοτημένες εφαρμογές]]></string>
+    <string name="home_app_management_empty">Οι εφαρμογές που έχουν ζητήσει ή δηλώσει την άδεια Shizuku θα εμφανίζονται εδώ.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Μάθετε Σιζούκου</string>
+    <string name="home_learn_more_description">Μάθετε πώς να αναπτύσσεστε με το Shizuku</string>
     <!-- Home - Adb permissions limited -->
+    <string name="home_adb_is_limited_title">Πρέπει να κάνεις ένα επιπλέον βήμα</string>
+    <string name="home_adb_is_limited_description">Ο κατασκευαστής της συσκευής σας έχει περιορίσει τα δικαιώματα adb και οι εφαρμογές που χρησιμοποιούν το Shizuku δεν θα λειτουργούν σωστά.\n\nΣυνήθως, αυτός ο περιορισμός μπορεί να αρθεί προσαρμόζοντας ορισμένες επιλογές στις \"Επιλογές προγραμματιστή\". Διαβάστε τη βοήθεια για λεπτομέρειες σχετικά με το πώς να το κάνετε αυτό.\n\nΕνδέχεται να χρειαστεί να επανεκκινήσετε το Shizuku για να τεθεί σε ισχύ η λειτουργία.</string>
     <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">Η άδεια του adb είναι περιορισμένη</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Είναι πολύ πιθανό ο κατασκευαστής της συσκευής σας να περιορίζει την άδεια του adb.<p>Μπορεί να υπάρχει μια λύση για το σύστημά σας σε <b><a href=\"%1$s\">αυτό το έγγραφο</a></b>.]]></string>
+    <string name="app_management_item_summary_requires_root">* απαιτεί εκτέλεση Shizuku με root</string>
+    <string name="app_management_toggle_all">Εναλλαγή όλων</string>
     <!-- Terminal -->
+    <string name="home_terminal_title">Χρήση Shizuku σε εφαρμογές τερματικού</string>
+    <string name="home_terminal_description">Εκτελέστε εντολές μέσω του Shizuku σε εφαρμογές τερματικού που σας αρέσουν</string>
+    <string name="terminal_tutorial_1">Αρχικά, εξάγετε αρχεία σε οποιαδήποτε θέση θέλετε. Θα βρείτε δύο αρχεία, %1$s και %2$s.</string>
+    <string name="terminal_tutorial_1_description">Εάν υπάρχουν αρχεία με το ίδιο όνομα στον επιλεγμένο φάκελο, θα διαγραφούν.\n\nΗ λειτουργία εξαγωγής χρησιμοποιεί SAF (Storage Access Framework). Έχει αναφερθεί ότι το MIUI διακόπτει τις λειτουργίες του SAF. Εάν χρησιμοποιείτε MIUI, ίσως χρειαστεί να εξαγάγετε το αρχείο από το apk του Shizuku ή να το κατεβάσετε από το GitHub.</string>
+    <string name="terminal_export_files">Εξαγωγή αρχείων</string>
+    <string name="terminal_tutorial_2">Στη συνέχεια, χρησιμοποιήστε οποιοδήποτε πρόγραμμα επεξεργασίας κειμένου για να ανοίξετε και να επεξεργαστείτε το %1$s.</string>
+    <string name="terminal_tutorial_2_description">Για παράδειγμα, αν θέλετε να χρησιμοποιήσετε το Shizuku στο %1$s, θα πρέπει να αντικαταστήσετε το %2$s με το %3$s (το%4$s είναι το όνομα του πακέτου του %1$s).</string>
+    <string name="terminal_tutorial_3">Τέλος, μετακινήστε τα αρχεία σε ένα σημείο όπου έχει πρόσβαση η εφαρμογή τερματικού σας. Θα μπορείτε να χρησιμοποιήσετε το %1$s για να εκτελέσετε εντολές μέσω του Shizuku.</string>
+    <string name="terminal_tutorial_3_description">Μερικές συμβουλές: παραχωρήστε δικαίωμα εκτέλεσης στο %1$s και προσθέστε το στο %2$s, θα μπορείτε να χρησιμοποιήσετε απευθείας το %1$s .</string>
+    <string name="rish_description"><![CDATA[Με το %1$s, σε οποιαδήποτε εφαρμογή τερματικού, μπορείτε να συνδεθείτε και να αλληλεπιδράσετε με τα εκτελέσιμα κελύφους του Shizuku.
+<p>Σχετικά με τη λεπτομερή χρήση %1$s, πατήστε για να δείτε το έγγραφο.
+    ]]></string>
     <!-- Settings -->
+    <string name="settings_title">Ρυθμίσεις</string>
+    <string name="settings_behavior">Συμπεριφορά</string>
+    <string name="settings_start_on_boot">Ξεκινήστε από την εκκίνηση</string>
+    <string name="settings_start_on_boot_summary">Απαιτεί Android 11+ ή root</string>
+    <string name="settings_use_system_color">Χρήση χρώματος θέματος συστήματος</string>
+    <string name="settings_watchdog">Άγρυπνος φρουρός</string>
+    <string name="settings_watchdog_summary">Αυτόματη επανεκκίνηση του Shizuku εάν σταματήσει</string>
+    <string name="settings_tcp_mode">Λειτουργία TCP</string>
+    <string name="settings_tcp_mode_summary">"Επιτρέπει στο Shizuku να επανεκκινήσει χωρίς Wi-Fi. (Το Shizuku πρέπει να ξεκίνησε μία φορά από την επανεκκίνηση)"</string>
+    <string name="settings_tcp_mode_dialog_title">Απαιτείται επανεκκίνηση</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Το Shizuku χρειάζεται επανεκκίνηση για να εφαρμοστεί αυτή η ρύθμιση.<br><br><b>Το Shizuku θα συνεχίσει να εκτελείται και θα περιμένει σύνδεση Wi-Fi πριν από την επανεκκίνηση.</b>]]></string>
+    <string name="settings_tcp_port">Θύρα TCP</string>
+    <string name="settings_tcp_port_deafult">Προεπιλογή (5555)</string>
+    <string name="settings_tcp_port_hint">Αφήστε κενό για χρήση προεπιλογής (5555)</string>
+    <string name="settings_tcp_learn_more">Μάθετε περισσότερα σχετικά με τη χρήση εφαρμογών αυτοματισμού για τον έλεγχο του Shizuku</string>
+    <string name="settings_language">Γλώσσα</string>
+    <string name="settings_translation_contributors">Συνεισφέροντες στη μετάφραση</string>
+    <string name="settings_translation">Συμμετοχή στη μετάφραση</string>
+    <string name="settings_translation_summary">Βοηθήστε μας να μεταφράσουμε το %s στη γλώσσα σας</string>
+    <string name="settings_user_interface">Εμφάνιση</string>
+    <string name="settings_black_night_theme">Θέμα μαύρης νύχτας</string>
+    <string name="settings_black_night_theme_summary">Χρησιμοποιήστε το θέμα καθαρού μαύρου εάν είναι ενεργοποιημένη η νυχτερινή λειτουργία</string>
+    <string name="settings_support">Υποστηρίζω</string>
+    <string name="settings_help">Βοήθεια</string>
+    <string name="settings_report_bug">Αναφορά σφάλματος</string>
+    <string name="settings_advanced">Προχωρημένος</string>
+    <string name="settings_legacy_pairing">Σύζευξη παλαιού τύπου</string>
+    <string name="settings_legacy_pairing_summary">Εισαγάγετε τον κωδικό σύζευξης σε ένα παράθυρο διαλόγου αντί για μια ειδοποίηση</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">Η θύρα πρέπει να είναι μεταξύ 1 και 65535</string>
+    <string name="snackbar_battery_optimization_home">Η βελτιστοποίηση μπαταρίας πρέπει να είναι απενεργοποιημένη για να λειτουργήσει σωστά η εκκίνηση κατά την εκκίνηση/επιτήρηση.</string>
+    <string name="snackbar_battery_optimization_settings">Απενεργοποιήστε τη βελτιστοποίηση μπαταρίας για να χρησιμοποιήσετε αυτήν τη δυνατότητα.</string>
+    <string name="snackbar_action_fix">Διορθώνω</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">Δεν βρέθηκε εφαρμογή email</string>
+    <string name="toast_shizuku_already_starting">Το Shizuku ξεκινά ήδη στο παρασκήνιο</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">Θέμα</string>
+    <string name="dark_theme_off">Πάντα ελαφρύ</string>
+    <string name="dark_theme_on">Πάντα σκοτεινό</string>
     <!-- About -->
+    <string name="action_about">Για</string>
+    <string name="about_dialog_button_close">Κλείνω</string>
+    <string name="about_view_source_code"><![CDATA[Δείτε τον πηγαίο κώδικα στη διεύθυνση %s]]></string>
     <!-- Stop -->
+    <string name="action_stop">Σταματήστε το Shizuku</string>
+    <string name="dialog_stop_message">Η υπηρεσία Shizuku θα διακοπεί.</string>
     <!-- Notification -->
+    <string name="notification_channel_service_status">Κατάσταση έναρξης υπηρεσίας</string>
+    <string name="notification_service_starting">Η υπηρεσία Shizuku ξεκινά…</string>
+    <string name="notification_service_start_failed">Η έναρξη της υπηρεσίας Shizuku απέτυχε.</string>
+    <string name="notification_service_start_no_root">Αποτυχία αιτήματος δικαιωμάτων root.</string>
+    <string name="notification_working">Εργασία…</string>
+    <string name="notification_channel_adb_pairing">Ασύρματη αντιστοίχιση εντοπισμού σφαλμάτων</string>
+    <string name="notification_adb_pairing_input_paring_code">Εισαγάγετε τον κωδικό σύζευξης</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Αναζήτηση υπηρεσίας σύζευξης</string>
+    <string name="notification_adb_pairing_service_found_title">Βρέθηκε υπηρεσία σύζευξης</string>
+    <string name="notification_adb_pairing_stop_searching">Διακοπή αναζήτησης</string>
+    <string name="notification_adb_pairing_working_title">Σύζευξη σε εξέλιξη</string>
+    <string name="notification_adb_pairing_succeed_title">Η σύζευξη ήταν επιτυχής</string>
+    <string name="notification_adb_pairing_succeed_text">Μπορείτε να ξεκινήσετε την υπηρεσία Shizuku τώρα.</string>
+    <string name="notification_adb_pairing_failed_title">Η σύζευξη απέτυχε</string>
+    <string name="notification_adb_pairing_retry">Δοκιμάζω πάλι</string>
     <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">πρόσβαση στο Shizuku</string>
+    <string name="permission_description">Επιτρέψτε στην εφαρμογή να χρησιμοποιεί το Shizuku.</string>
+    <string name="permission_warning_template"><![CDATA[Επιτρέπεται η χρήση του <b>%1$s</b> σε %2$s;]]></string>
+    <string name="grant_dialog_button_allow_always">Επιτρέπεται συνεχώς</string>
+    <string name="grant_dialog_button_deny">"Αρνούμαι"</string>
     <!-- Starter -->
+    <string name="starter">Μίζα</string>
+    <string name="start_with_root_failed">Δεν είναι δυνατή η εκκίνηση της υπηρεσίας επειδή δεν έχει παραχωρηθεί άδεια root ή επειδή αυτή η συσκευή δεν έχει root.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">Έναρξη Σιζούκου…</string>
+    <string name="wadb_notification_wifi_required">Αναμονή σύνδεσης Wi-Fi πριν προχωρήσετε</string>
+    <string name="wadb_notification_wifi_found">Βρέθηκε Wi-Fi. Ενέργεια</string>
+    <string name="wadb_error_title">Σφάλμα κατά την εκκίνηση κατά την εκκίνηση</string>
+    <string name="wadb_error_notify_dev">Πατήστε για να ειδοποιήσετε τον προγραμματιστή.</string>
+    <string name="wadb_error_send_email">Στείλτε ένα email στο</string>
+    <string name="wadb_permission_error_notification_title">Σφάλμα άδειας</string>
+    <string name="wadb_permission_error_notification_content">Ο Shizuku χρειάζεται WRITE_SECURE_SETTINGS για να ξεκινήσει από την εκκίνηση. Αγγίξτε το για να μάθετε πώς μπορείτε να το εκχωρήσετε.</string>
+    <string name="wadb_notification_channel">Υπηρεσία αυτόματης εκκίνησης ADB</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">Το Watchdog τρέχει</string>
+    <string name="watchdog_shizuku_crashed_title">Ο Shizuku συνετρίβη πρόσφατα</string>
+    <string name="watchdog_shizuku_crashed_text">Το Watchdog επανεκκίνησε την υπηρεσία. Πατήστε για να μάθετε σχετικά με πιθανές επιδιορθώσεις για την αποτροπή μελλοντικών σφαλμάτων.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Απενεργοποίηση ειδοποιήσεων</string>
     <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">Δεν είναι δυνατή η εκκίνηση του προγράμματος περιήγησης</string>
+    <string name="toast_copied_to_clipboard">Το %s\nέχει αντιγραφεί στο πρόχειρο.</string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[Το <b>%s</b> έχει αντιγραφεί στο πρόχειρο.]]></string>
+    <string name="accessibility_service_description">Παρέχει υποστήριξη σύζευξης για συσκευές (π.χ., τηλεοράσεις με Android 14+) όπου δεν μπορούν να χρησιμοποιηθούν ειδοποιήσεις ή διαιρεμένη οθόνη.\n\nΕπιτρέπει στο Shizuku να εξαγάγει τον κωδικό σύζευξης από την οθόνη σύζευξης ασύρματου εντοπισμού σφαλμάτων. Θα απενεργοποιηθεί μόνο του μόλις βρεθεί ο κωδικός σύζευξης.</string>
     <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">Το %1$s δεν υποστηρίζει το σύγχρονο Shizuku</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Το παλαιότερο Shizuku έχει καταργηθεί από τον Μάρτιο του 2019. Επίσης, το παλαιότερο Shizuku δεν λειτουργεί σε νεότερα συστήματα Android.<p>Παρακαλούμε ρωτήστε τον προγραμματιστή του <b>%1$s</b> για ενημέρωση.]]></string>
+    <string name="dialog_requesting_legacy_title">Το %1$s ζητά παλαιότερο Shizuku</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> υποστηρίζει το σύγχρονο Shizuku, αλλά ζητά παλαιότερο Shizuku. Αυτό μπορεί να οφείλεται στο ότι το Shizuku δεν εκτελείται, ελέγξτε στην εφαρμογή Shizuku.<p>Το παλαιότερο Shizuku έχει καταργηθεί από τον Μάρτιο του 2019.]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">Ανοίξτε το Shizuku</string>
+    <string name="wadb_notification_attempt_now">Προσπαθήστε τώρα</string>
 </resources>
