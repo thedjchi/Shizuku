@@ -130,7 +130,6 @@
     <string name="snackbar_action_fix">修复</string>
     <!-- Toast -->
     <string name="toast_no_email_app">未找到电子邮件应用</string>
-    <string name="toast_failed_to_stop">停止 Shizuku 失败</string>
     <string name="toast_shizuku_already_starting">Shizuku 已在后台启动</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">主题</string>
