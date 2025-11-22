@@ -4,6 +4,7 @@
     <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s est en cours de fonctionnement</string>
     <string name="home_status_service_not_running">%1$s est arrêté</string>
+    <string name="home_status_service_version">Version %2$s, %1$s</string>
     <string name="home_status_service_version_update"><![CDATA[Version %2$s, %1$s&lt;br&gt;Relancez pour mettre à jour vers la version %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Démarrer par connection à un ordinateur]]></string>
@@ -22,6 +23,7 @@
     <string name="dialog_adb_discovery">Recherche du service de débogage sans fil</string>
     <string name="dialog_adb_discovery_message">Merci d\'activer \"Débogage sans fil\" dans les \"Options pour les développeurs\". Le paramètre \"Débogage sans fil\" est automatiquement désactivé quand la connexion réseau change.\n\nNote, ne pas désactiver les \"Options pour les développeurs\" ou le \"Débogage USB\", ou Shizuku sera arrêté.</string>
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Merci d\'essayer de désactiver et de réactiver le \"Débogage sans-fil\" si ça continue à chercher.</string>
+    <string name="dialog_adb_port">Port</string>
     <string name="dialog_adb_invalid_port">Le port est un entier compris entre 1 et 65535.</string>
     <string name="adb_pairing">Association</string>
     <string name="dialog_adb_pairing_title">Associer avec l\'appareil</string>
@@ -30,10 +32,16 @@
     <string name="paring_code_is_wrong">Le code d\'association n\'est pas le bon.</string>
     <string name="cannot_connect_port">Impossible de se connecter au service de débogage sans fil.</string>
     <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, pour activer le débogage sans fil, la connexion à un ordinateur est requise.</string>
+    <string name="dialog_usb_debugging_not_enabled">Le débogage USB n’est pas activé.\nVeuillez l’activer dans « Options développeur ».</string>
+    <string name="dialog_adb_pairing_message">Veuillez commencer l’appairage en effectuant les étapes suivantes : « Options développeur » - « Débogage sans fil » - « Appairer l’appareil avec le code d’appairage ».\n\nAprès le début du processus d’appariement, vous pourrez entrer le code d’appariement.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Veuillez activer le service d’accessibilité pour lancer le processus d’appairage. Cela permet à Shizuku de détecter le code d’appairage.\n\nLe service d’accessibilité sera désactivé dès que le code sera trouvé ou après 1 minute pour économiser de l’énergie.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Veuillez naviguer dans « Options développeurs » &gt; « Débogage sans fil » &gt; « Appairer l’appareil avec le code d’appairage. » Shizuku détectera automatiquement le code d’appairage.</string>
     <string name="adb_pairing_requires_multi_window">Merci d\'activer le mode écran partagé (mode multi-fenêtres) d\'abord.</string>
     <string name="adb_pairing_requires_multi_window_reason">Le système nécessite que la fenêtre d\'association soit toujours visible, l\'utilisation du mode écran partagé est la seule manière de laisser cette appli et la fenêtre système visibles au même moment.</string>
     <string name="adb_error_key_store">Impossible de générer une clé pour le débogage sans fil.\nCela peut être dû au fait que le mécanisme du magasin de clés de l\'appareil est cassé.</string>
+    <string name="adb_error_stop_tcp">Échec à arrêter ADB via TCP</string>
     <string name="adb_pair_required">Merci d\'aller à l\'étape d\'association d\'abord.</string>
+    <string name="enable">Activer</string>
     <string name="development_settings">Options pour les développeurs</string>
     <string name="notification_settings">Options des notifications</string>
     <string name="adb_pairing_tutorial_title">Associer Shizuku avec votre appareil</string>
@@ -60,6 +68,7 @@
         <item quantity="other"><![CDATA[%d applications autorisées]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Appuyez pour gérer les applis autorisées]]></string>
+    <string name="home_app_management_empty">Les applications qui ont demandé ou déclaré la permission de Shizuku apparaîtront ici.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Apprendre Shizuku</string>
     <string name="home_learn_more_description">Apprenez comment développer avec Shizuku</string>
@@ -74,6 +83,7 @@
     <string name="app_management_dialog_adb_is_limited_title">La permission de adb est limitée</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Il est fortement possible que le fabricant de votre appareil limite la permission de adb.&lt;p&gt;Il pourrait avoir une solution pour votre système dans &lt;b&gt;&lt;a href="%1$s"&gt;ce document&lt;/a&gt;&lt;/b&gt;.]]></string>
     <string name="app_management_item_summary_requires_root">* nécessite que Shizuku fonctionne avec le root</string>
+    <string name="app_management_toggle_all">Basculer tout</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Utiliser Shizuku dans les applis de terminal</string>
     <string name="home_terminal_description">Exécuter des commandes à travers Shizuku dans les applis de terminal que vous aimez</string>
@@ -89,7 +99,20 @@
     <string name="rish_description"><![CDATA[Avec %1$s, dans n'importe quelle appli de terminal, vous pouvez vous connecter et interagir avec le shell lancé par Shizuku. &lt;p&gt;À propos de l'usage détaillé de %1$s, appuyez pour voir le document.]]></string>
     <!-- Settings -->
     <string name="settings_title">Paramètres</string>
+    <string name="settings_behavior">Comportement</string>
+    <string name="settings_start_on_boot">Démarrez au démarrage</string>
+    <string name="settings_start_on_boot_summary">Nécessite Android 11+ ou root</string>
     <string name="settings_use_system_color">Utiliser la couleur du thème système</string>
+    <string name="settings_watchdog">Chien de garde</string>
+    <string name="settings_watchdog_summary">Redémarre automatiquement Shizuku si ça s’arrête</string>
+    <string name="settings_tcp_mode">Mode TCP</string>
+    <string name="settings_tcp_mode_summary">"Permet à Shizuku de redémarrer sans Wi-Fi. (Shizuku a dû commencer une fois depuis le reboot)"</string>
+    <string name="settings_tcp_mode_dialog_title">Redémarrage nécessaire</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku doit recommencer pour appliquer ce réglage.<br><br><b>Shizuku continue de fonctionner et attend une connexion Wi-Fi avant de redémarrer.</b>]]></string>
+    <string name="settings_tcp_port">Port TCP</string>
+    <string name="settings_tcp_port_deafult">Par défaut (5555)</string>
+    <string name="settings_tcp_port_hint">Laisser vide pour utiliser par défaut (5555)</string>
+    <string name="settings_tcp_learn_more">En savoir plus sur l’utilisation des applications d’automatisation pour contrôler Shizuku</string>
     <string name="settings_language">Langue</string>
     <string name="settings_translation_contributors">Contributeurs à la traduction</string>
     <string name="settings_translation">Participer à la traduction</string>
@@ -97,11 +120,27 @@
     <string name="settings_user_interface">Apparence</string>
     <string name="settings_black_night_theme">Thème sombre noir</string>
     <string name="settings_black_night_theme_summary">Utilise le thème noir pur si le thème sombre est activé</string>
+    <string name="settings_support">Soutien</string>
+    <string name="settings_help">Aide</string>
+    <string name="settings_report_bug">Signaler un bug</string>
+    <string name="settings_advanced">Avancé</string>
+    <string name="settings_legacy_pairing">Appariement héritier</string>
+    <string name="settings_legacy_pairing_summary">Saisissez le code d’appairement dans une boîte de dialogue au lieu d’une notification</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">Le port doit être compris entre 1 et 65535</string>
+    <string name="snackbar_battery_optimization_home">L’optimisation de la batterie doit être désactivée pour que le démarrage au démarrage/watchdog fonctionne correctement.</string>
+    <string name="snackbar_battery_optimization_settings">Veuillez désactiver l’optimisation de la batterie pour utiliser cette fonctionnalité.</string>
+    <string name="snackbar_action_fix">Réparer</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">Aucune application de messagerie trouvée</string>
+    <string name="toast_shizuku_already_starting">Shizuku commence déjà en arrière-plan</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">Thème</string>
+    <string name="dark_theme_off">Toujours léger</string>
+    <string name="dark_theme_on">Toujours sombre</string>
     <!-- About -->
     <string name="action_about">À propos</string>
+    <string name="about_dialog_button_close">Fermer</string>
     <string name="about_view_source_code"><![CDATA[Voir le code source sur %s]]></string>
     <!-- Stop -->
     <string name="action_stop">Arrêter Shizuku</string>
@@ -132,16 +171,31 @@
     <string name="starter">Démarreur</string>
     <string name="start_with_root_failed">Impossible de lancer le service parce que la permission root n\'est pas accordée ou que cet appareil n\'est pas rooté.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">Début de Shizuku…</string>
+    <string name="wadb_notification_wifi_required">En attente de connexion Wi-Fi avant de poursuivre</string>
+    <string name="wadb_notification_wifi_found">Wi-Fi trouvé. Acte</string>
+    <string name="wadb_error_title">Erreur au démarrage</string>
+    <string name="wadb_error_notify_dev">Appuyez pour informer le promoteur.</string>
+    <string name="wadb_error_send_email">Envoyez un e-mail à</string>
+    <string name="wadb_permission_error_notification_title">Erreur de permission</string>
+    <string name="wadb_permission_error_notification_content">Shizuku a besoin de WRITE_SECURE_SETTINGS pour commencer le démarrage. Appuyez pour apprendre à l’accorder.</string>
+    <string name="wadb_notification_channel">Service de démarrage automatique de l’ADB</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">Le chien de garde est en fuite</string>
+    <string name="watchdog_shizuku_crashed_title">Shizuku s’est récemment écrasée</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog a relancé le service. Appuyez pour connaître les solutions potentielles afin d’éviter de futurs plantages.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Désactivez les alertes</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossible de lancer le navigateur</string>
     <string name="toast_copied_to_clipboard">%s
 \na bien été copié dans le presse papier.</string>
     <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> a bien été copié dans le presse papier.]]></string>
+    <string name="accessibility_service_description">Offre un support de l’appairage pour les appareils (par exemple, les téléviseurs sous Android 14+) où les notifications ou l’écran partagé ne peuvent pas être utilisés.\n\nPermet à Shizuku d’extraire le code d’appairage de l’écran de débogage sans fil. Il se désactivera lui-même une fois le code d’appariement trouvé.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ne supporte pas les versions plus récentes de Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Les anciennes versions de Shizuku sont obsolètes depuis mars 2019. Aussi, elles ne fonctionnent pas sur les versions plus récentes d'Android.&lt;p&gt;Merci de demander au développeur de &lt;b&gt;%1$s&lt;/b&gt; de mettre à jour.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s requiert l\'ancien Shizuku</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; supporte les versions récentes de Shizuku, mais demande l'accès à l'ancien Shizuku. C'est peut être parce que Shizuku n'est pas en cours de fonctionnement, merci de vérifier dans l'appli Shizuku.&lt;p&gt;L'ancien Shizuku est obsolète depuis mars 2019.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Ouvrir Shizuku</string>
+    <string name="wadb_notification_attempt_now">Tentez maintenant</string>
 </resources>
