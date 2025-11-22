@@ -5,26 +5,192 @@
     <string name="home_status_service_is_running">%1$s is actief</string>
     <string name="home_status_service_not_running">%1$s is niet actief</string>
     <string name="home_status_service_version">Versie %2$s, %1$s</string>
+    <string name="home_status_service_version_update"><![CDATA[Versie %2$s, %1$s<br>Opnieuw beginnen om de versie bij te werken %3$s]]></string>
     <!-- Home - Adb -->
+    <string name="home_adb_title"><![CDATA[Begin met het verbinden met een computer]]></string>
+    <string name="home_adb_description"><![CDATA[Voor apparaten zonder root moet je adb gebruiken om Shizuku te starten (vereist computerverbinding). Dit proces moet elke keer worden herhaald wanneer het apparaat wordt herstart. Alstublieft <b><a href=\"%1$s\">Lees de hulp</a></b>.]]></string>
+    <string name="home_adb_button_view_help">Lees hulp</string>
+    <string name="home_adb_button_view_command">View-commando</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Er zijn nog enkele andere overwegingen, bevestig alstublieft dat u de hulp eerst heeft gelezen.]]></string>
+    <string name="home_adb_dialog_view_command_copy_button">Kopiëren</string>
+    <string name="home_adb_dialog_view_command_button_send">Verzenden</string>
     <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[Begin via draadloos debuggen]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Op Android 11 of hoger kun je draadloos debuggen inschakelen en Shizuku direct vanaf je apparaat starten, zonder verbinding te maken met een computer.<p>Bekijk eerst de stapsgewijze handleiding.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Voor Android 11 was verbinding maken met een computer vereist om draadloze debugging in te schakelen.]]></string>
+    <string name="home_wireless_adb_view_guide_button">Stapsgewijze handleiding</string>
     <!-- Adb -->
+    <string name="dialog_adb_discovery">Zoeken naar draadloze debugdienst</string>
+    <string name="dialog_adb_discovery_message">Schakel alstublieft \"Draadloos debuggen\" in in \"Ontwikkelaarsopties\". \"Draadloos debuggen\" wordt automatisch uitgeschakeld wanneer het netwerk verandert.\n\nLet op, schakel \"Ontwikkelaarsopties\" of \"USB-debugging\" niet uit, anders wordt Shizuku gestopt.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Probeer alsjeblieft \"Draadloos debuggen\" uit te schakelen en in te schakelen als het blijft zoeken.</string>
+    <string name="dialog_adb_port">Haven</string>
+    <string name="dialog_adb_invalid_port">Port is een geheel getal dat varieert van 1 tot 65535.</string>
+    <string name="adb_pairing">Koppeling</string>
+    <string name="dialog_adb_pairing_title">Koppel met apparaat</string>
+    <string name="dialog_adb_pairing_discovery">Zoeken naar koppelingsdienst</string>
+    <string name="dialog_adb_pairing_paring_code">Koppelingscode</string>
+    <string name="paring_code_is_wrong">Code koppelen is verkeerd.</string>
+    <string name="cannot_connect_port">Kan geen verbinding maken met de draadloze debugdienst.</string>
+    <string name="dialog_wireless_adb_not_enabled">Draadloos debuggen is niet ingeschakeld.\nLet op: vóór Android 11 is een computerverbinding noodzakelijk om draadloos debuggen mogelijk te maken.</string>
+    <string name="dialog_usb_debugging_not_enabled">USB-debugging is niet ingeschakeld.\nSchakel het alstublieft in in \"Ontwikkelaarsopties\".</string>
+    <string name="dialog_adb_pairing_message">Begin alstublieft met koppelen door de volgende stappen uit te voeren: \"Ontwikkelaarsopties\" - \"Draadloos debuggen\" - \"Koppel apparaat met koppelcode.\"\n\nNadat het koppelingsproces is gestart, kun je de koppelcode invoeren.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Schakel alstublieft de toegankelijkheidsdienst in om het koppelingsproces te starten. Hierdoor kan Shizuku de koppelcode detecteren.\n\nDe toegankelijkheidsdienst wordt uitgeschakeld zodra de code is gevonden of na 1 minuut om energie te besparen.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Ga alstublieft naar \"Ontwikkelaarsopties\" &gt; \"Draadloos debuggen\" &gt; \"Koppel apparaat met koppelcode.\" Shizuku zal de koppelcode automatisch detecteren.</string>
+    <string name="adb_pairing_requires_multi_window">Ga eerst in split-screen (multi-window) modus.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Het systeem vereist dat de koppelingsdialoog altijd zichtbaar is; splitscreen-modus is de enige manier om deze app en systeemdialoog tegelijkertijd zichtbaar te maken.</string>
+    <string name="adb_error_key_store">Kan geen sleutel genereren voor draadloos debuggen.\nDit kan komen doordat het KeyStore-mechanisme van dit apparaat kapot is.</string>
+    <string name="adb_error_stop_tcp">Niet geslaagd om ADB via TCP te stoppen</string>
+    <string name="adb_pair_required">Ga eerst door de koppelingsstap.</string>
+    <string name="enable">Inschakelen</string>
+    <string name="development_settings">Ontwikkelaarsopties</string>
+    <string name="notification_settings">Meldingsopties</string>
+    <string name="adb_pairing_tutorial_title">Koppel Shizuku met je apparaat</string>
+    <string name="adb_pairing_tutorial_content_notification">Een melding van Shizuku helpt je om de koppeling te voltooien.</string>
+    <string name="adb_pairing_tutorial_content_steps">Voer \"Ontwikkelaarsopties\" in - \"Draadloze debugging\". Tik op \"Apparaat koppelen met koppelcode\", je ziet een zescijferige code.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Voer de code in de melding in om de koppeling te voltooien.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Het koppelproces vereist dat je reageert op een melding van Shizuku. Laat Shizuku alsjeblieft meldingen plaatsen.</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moeten mogelijk de notificatiestijl wijzigen naar \"Android\" van \"Notification\" - \"Notification shade\" in de systeeminstellingen.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Anders kun je misschien geen paringcode invoeren vanuit de melding.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Let op, het linkerdeel van de optie \"Draadloos debuggen\" is klikbaar, en tikken opent een nieuwe pagina. Alleen turen op de schakelaar rechts is onjuist.</string>
+    <string name="adb_pairing_tutorial_content_finish">Terug naar Shizuku en Shizuku beginnen.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku moet toegang krijgen tot het lokale netwerk. Het wordt beheerst door de netwerkrecht.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige systemen (zoals MIUI) staan apps niet toe om toegang te krijgen tot het netwerk wanneer ze niet zichtbaar zijn, zelfs als de app standaard een voorgrondservice gebruikt. Schakel de batterijoptimalisatiefuncties voor Shizuku uit op zulke systemen.</string>
     <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[Start (voor geroote apparaten)]]></string>
+    <string name="home_root_description"><![CDATA[Daarnaast kan Shizuku automatisch worden gestart bij het opstarten. Zo niet, controleer dan of je systeem of externe tools Shizuku hebben beperkt.<br>Je kunt verwijzen naar %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Als je Magisk gebruikt, kun je het proberen %1$s. Voor rootgebruikers zal het uiteindelijk Shizuku vervangen. Let op: bestaande applicaties moeten een beetje veranderen om te kunnen gebruiken %2$s.]]></string>
+    <string name="home_root_button_start">Beginnen</string>
+    <string name="home_root_button_restart">Herstarten</string>
     <!-- Home - Application management -->
+    <string name="home_app_management_title">Applicatiebeheer</string>
+    <plurals name="home_app_management_authorized_apps_count">
+        <item quantity="one"><![CDATA[Geautoriseerd %d toepassing]]></item>
+        <item quantity="other"><![CDATA[Geautoriseerd %d Toepassingen]]></item>
+    </plurals>
+    <string name="home_app_management_view_authorized_apps"><![CDATA[Tik om geautoriseerde apps te beheren]]></string>
+    <string name="home_app_management_empty">Apps die de Shizuku-toestemming hebben aangevraagd of verklaard, worden hier weergegeven.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Leer Shizuku</string>
+    <string name="home_learn_more_description">Leer hoe je je ontwikkelt met Shizuku</string>
     <!-- Home - Adb permissions limited -->
+    <string name="home_adb_is_limited_title">Je moet een extra stap zetten</string>
+    <string name="home_adb_is_limited_description">De fabrikant van je apparaat heeft ADB-rechten beperkt en apps die Shizuku gebruiken werken niet goed.\n\nMeestal kan deze beperking worden opgeheven door enkele opties in \"Ontwikkelaarsopties\" aan te passen. Lees de hulp voor details over hoe je dit kunt doen.\n\nJe moet Shizuku mogelijk opnieuw starten voordat de operatie effect kan hebben.</string>
     <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">De toestemming voor adb is beperkt</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Het is zeer goed mogelijk dat de fabrikant van je apparaat de toestemming van adb beperkt.<p>Er kan een oplossing zijn voor jouw systeem in <b><a href=\"%1$s\">Dit document</a></b>.]]></string>
+    <string name="app_management_item_summary_requires_root">* vereist dat Shizuku met root loopt</string>
+    <string name="app_management_toggle_all">Schakel alles uit</string>
     <!-- Terminal -->
+    <string name="home_terminal_title">Gebruik Shizuku in terminalapps</string>
+    <string name="home_terminal_description">Voer commando\'s uit via Shizuku in terminal-apps die je leuk vindt</string>
+    <string name="terminal_tutorial_1">Exporteer eerst bestanden naar waar je maar wilt. U vindt twee dossiers, %1$s en %2$s.</string>
+    <string name="terminal_tutorial_1_description">Als er bestanden met dezelfde naam in de geselecteerde map staan, worden deze verwijderd.\n\nDe exportfunctie gebruikt SAF (Storage Access Framework). Er wordt gemeld dat MIUI de functies van SAF onderbreekt. Als je MIUI gebruikt, moet je het bestand misschien uit Shizuku\'s apk halen of downloaden van GitHub.</string>
+    <string name="terminal_export_files">Bestanden exporteren</string>
+    <string name="terminal_tutorial_2">Gebruik vervolgens een willekeurige teksteditor om te openen en te bewerken %1$s.</string>
+    <string name="terminal_tutorial_2_description">Bijvoorbeeld, als je Shizuku wilt gebruiken in %1$s, je zou moeten vervangen %2$s met %3$s (%4$s is de pakketnaam van %1$s).</string>
+    <string name="terminal_tutorial_3">Verplaats de bestanden tenslotte naar een plek waar je terminal-app toegang heeft, die je kunt gebruiken %1$s om commando\'s via Shizuku uit te voeren.</string>
+    <string name="terminal_tutorial_3_description">Enkele tips: geef uitvoeringsvergunning aan %1$s en voeg het toe aan %2$s, die je kunt gebruiken %1$s direct.</string>
+    <string name="rish_description"><![CDATA[Met %1$s, in elke terminal-app kun je verbinding maken met en interactie hebben met de shell run van Shizuku.
+<p>Over het gedetailleerde gebruik %1$s, tik om het document te bekijken.
+    ]]></string>
     <!-- Settings -->
+    <string name="settings_title">Instellingen</string>
+    <string name="settings_behavior">Gedrag</string>
+    <string name="settings_start_on_boot">Start bij opstart</string>
+    <string name="settings_start_on_boot_summary">Vereist Android 11+ of root</string>
+    <string name="settings_use_system_color">Gebruik systeemthemakleur</string>
+    <string name="settings_watchdog">Waakhond</string>
+    <string name="settings_watchdog_summary">Shizuku automatisch opnieuw opstarten als het stopt</string>
+    <string name="settings_tcp_mode">TCP-modus</string>
+    <string name="settings_tcp_mode_summary">"Stelt Shizuku in staat om zonder wifi opnieuw te starten. (Shizuku moet sinds de reboot al eens begonnen zijn)"</string>
+    <string name="settings_tcp_mode_dialog_title">Herstart vereist</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku moet opnieuw beginnen om deze instelling toe te passen.<br><br><b>Shizuku blijft draaien en wacht op een Wi-Fi-verbinding voordat hij opnieuw opstart.</b>]]></string>
+    <string name="settings_tcp_port">TCP-poort</string>
+    <string name="settings_tcp_port_deafult">Standaard (5555)</string>
+    <string name="settings_tcp_port_hint">Laat leeg om de standaard (5555) te gebruiken</string>
+    <string name="settings_tcp_learn_more">Lees meer over het gebruik van automatiseringsapps om Shizuku te bedienen</string>
+    <string name="settings_language">Taal</string>
+    <string name="settings_translation_contributors">Vertaalbijdragers</string>
+    <string name="settings_translation">Deelname aan vertaling</string>
+    <string name="settings_translation_summary">Help ons vertalen %s in je taal</string>
+    <string name="settings_user_interface">Uiterlijk</string>
+    <string name="settings_black_night_theme">Zwarte nacht thema</string>
+    <string name="settings_black_night_theme_summary">Gebruik het pure black thema als nachtmodus is ingeschakeld</string>
+    <string name="settings_support">Steunen</string>
+    <string name="settings_help">Help</string>
+    <string name="settings_report_bug">Meld een bug</string>
+    <string name="settings_advanced">Geavanceerd</string>
+    <string name="settings_legacy_pairing">Legacy-koppeling</string>
+    <string name="settings_legacy_pairing_summary">Voer de koppelcode in een dialoogvenster in in plaats van een melding</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">De poort moet tussen 1 en 65535 liggen</string>
+    <string name="snackbar_battery_optimization_home">Batterijoptimalisatie moet uitgeschakeld zijn om bij opstarten/watchdog goed te starten.</string>
+    <string name="snackbar_battery_optimization_settings">Schakel alstublieft batterijoptimalisatie uit om deze functie te gebruiken.</string>
+    <string name="snackbar_action_fix">Repareren</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">Geen e-mailapp gevonden</string>
+    <string name="toast_shizuku_already_starting">Shizuku begint al op de achtergrond</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">Thema</string>
+    <string name="dark_theme_off">Altijd licht</string>
+    <string name="dark_theme_on">Altijd donker</string>
     <!-- About -->
+    <string name="action_about">Over</string>
+    <string name="about_dialog_button_close">Sluiten</string>
+    <string name="about_view_source_code"><![CDATA[Bekijk broncode op %s]]></string>
     <!-- Stop -->
+    <string name="action_stop">Stop Shizuku</string>
+    <string name="dialog_stop_message">De dienst van Shizuku wordt stopgezet.</string>
     <!-- Notification -->
+    <string name="notification_channel_service_status">Startstatus van de dienstregeling</string>
+    <string name="notification_service_starting">De dienst in Shizuku begint…</string>
+    <string name="notification_service_start_failed">Start Shizuku-service faalde.</string>
+    <string name="notification_service_start_no_root">Niet geslaagd om root-toestemming aan te vragen.</string>
+    <string name="notification_working">Werkend…</string>
+    <string name="notification_channel_adb_pairing">Draadloos debugging-koppeling</string>
+    <string name="notification_adb_pairing_input_paring_code">Voer de koppelingscode in</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Zoeken naar koppelingsdienst</string>
+    <string name="notification_adb_pairing_service_found_title">Koppelingsdienst gevonden</string>
+    <string name="notification_adb_pairing_stop_searching">Stop met zoeken</string>
+    <string name="notification_adb_pairing_working_title">Pairing in uitvoering</string>
+    <string name="notification_adb_pairing_succeed_title">Succesvolle combinatie</string>
+    <string name="notification_adb_pairing_succeed_text">Je kunt nu beginnen met de Shizuku-service.</string>
+    <string name="notification_adb_pairing_failed_title">Koppeling mislukte</string>
+    <string name="notification_adb_pairing_retry">Opnieuw</string>
     <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">toegang tot Shizuku</string>
+    <string name="permission_description">Laat de app Shizuku gebruiken.</string>
+    <string name="permission_warning_template"><![CDATA[Toestaan <b>%1$s</b> Aan %2$s?]]></string>
+    <string name="grant_dialog_button_allow_always">Geef alle tijd</string>
+    <string name="grant_dialog_button_deny">"Ontkennen"</string>
     <!-- Starter -->
+    <string name="starter">Starter</string>
+    <string name="start_with_root_failed">Kan de service niet starten omdat root-rechten niet worden verleend of dit apparaat niet geroot is.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">Shizuku starten…</string>
+    <string name="wadb_notification_wifi_required">Wacht op Wi-Fi-verbinding voordat ik verder ga</string>
+    <string name="wadb_notification_wifi_found">Wi-Fi gevonden. Procedure</string>
+    <string name="wadb_error_title">Fout bij het opstarten bij het opstarten</string>
+    <string name="wadb_error_notify_dev">Tik om de ontwikkelaar te informeren.</string>
+    <string name="wadb_error_send_email">Stuur een e-mail naar</string>
+    <string name="wadb_permission_error_notification_title">Toestemmingsfout</string>
+    <string name="wadb_permission_error_notification_content">Shizuku heeft WRITE_SECURE_SETTINGS nodig om bij opstart te beginnen. Tik om te leren hoe je het kunt toestaan.</string>
+    <string name="wadb_notification_channel">ADB automatische start service</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">Watchdog loopt</string>
+    <string name="watchdog_shizuku_crashed_title">Shizuku is onlangs neergestort</string>
+    <string name="watchdog_shizuku_crashed_text">De waakhond startte de dienst opnieuw. Tik om te leren over mogelijke oplossingen om toekomstige crashes te voorkomen.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Zet meldingen uit</string>
     <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">Kan de browser niet starten</string>
+    <string name="toast_copied_to_clipboard">%s\nis overgeschreven naar een clipboard.</string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> is overgeschreven naar een clipboard.]]></string>
+    <string name="accessibility_service_description">Biedt koppelingsondersteuning voor apparaten (bijv. tv\'s met Android 14+) waar meldingen of splitscreen niet kunnen worden gebruikt.\n\nStelt Shizuku in staat om de koppelcode uit het draadloze debug-koppelingsscherm te halen. Het schakelt zichzelf uit zodra de koppelingscode is gevonden.</string>
     <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">%1$s ondersteunt de moderne Shizuku niet</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Legacy Shizuku is sinds maart 2019 buiten gebruik gesteld. Ook werkt legacy Shizuku niet op nieuwere Android-systemen.<p>Vraag het alsjeblieft aan de ontwikkelaar van <b>%1$s</b> Om te updaten.]]></string>
+    <string name="dialog_requesting_legacy_title">%1$s vraagt om erfenis Shizuku</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> heeft moderne Shizuku-ondersteuning, maar het vraagt om legacy Shizuku. Dit kan komen doordat Shizuku niet draait, check alsjeblieft in de Shizuku-app.<p>Legacy Shizuku is sinds maart 2019 buiten gebruik gesteld.]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">Open Shizuku</string>
+    <string name="wadb_notification_attempt_now">Probeer nu</string>
 </resources>
