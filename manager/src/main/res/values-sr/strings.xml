@@ -11,6 +11,7 @@
     <string name="home_adb_description"><![CDATA[Za uređaje koji nisu root-ovani, potrebno je izvršiti adb komandu radi pokretanja Shizuku aplikacije (zahteva konekciju sa računarom). Ovaj proces je neophodno svaki put ponoviti nakon restarta uređaja. Molim Vas <b><a href="%1$s">pročitajte pomoć </a></b>.]]></string>
     <string name="home_adb_button_view_help">Pročitajte pomoć</string>
     <string name="home_adb_button_view_command">Pregled komande</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Постоје још нека разматрања, молимо вас да прво потврдите да сте прочитали помоћ.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Kopiraj</string>
     <string name="home_adb_dialog_view_command_button_send">Pošalji</string>
     <!-- Home - Wireless Adb -->
@@ -23,6 +24,10 @@
     <string name="dialog_adb_discovery_message">Molimo Vas omogućite rad režima \"Bežično otklanjanje  grešaka\" u sekciji \"Opcije programera\". Režim  \"Bežično otklanjanje grešaka\" se automatski onemogućava pri svakoj promeni mrežne konekcije..
 \n
 \nPrimetićete, onemogućavanjem sekcije \"Opcije programera\" ili režima \"USB otklanjanje grešaka\", proces rada aplikacije Shizuku se prekida.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Молимо вас да покушате да онемогућите и омогућите „Бежично отклањање грешака“ ако се претрага настави.</string>
+    <string name="dialog_adb_port">Лука</string>
+    <string name="dialog_adb_invalid_port">Порт је цео број у распону од 1 до 65535.</string>
+    <string name="adb_pairing">Упаривање</string>
     <string name="dialog_adb_pairing_title">Upari sa uređajem</string>
     <string name="dialog_adb_pairing_discovery">Traženje uređaja za uparivanje</string>
     <string name="dialog_adb_pairing_paring_code">Kód za uparivanje</string>
@@ -30,32 +35,167 @@
     <string name="cannot_connect_port">Nemoguće je povezivanje sa uslugom bežičnog otklanjanje grešaka.</string>
     <string name="dialog_wireless_adb_not_enabled">Bežično otklanjanje grešaka nije omogućeno.
 \nPrimedba: Pre Android-a 11, omogućavanje bežičnog otklanjanja grešaka bilo je uslovljeno postojanjem konekcije sa računarom.</string>
+    <string name="dialog_usb_debugging_not_enabled">Отклањање грешака преко USB-а није омогућено.\nОмогућите га у „Опцијама за програмере“.</string>
+    <string name="dialog_adb_pairing_message">Молимо вас да покренете упаривање тако што ћете извршити следеће кораке: „Опције за програмере“ - „Бежично отклањање грешака“ - „Упарите уређај помоћу кода за упаривање“.\n\nНакон што процес упаривања почне, моћи ћете да унесете код за упаривање.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Омогућите услугу приступачности да бисте започели процес упаривања. Ово омогућава Шизукуу да детектује код за упаривање.\n\nУслуга приступачности ће бити искључена када се пронађе код или након 1 минута ради уштеде енергије.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Идите на „Опције за програмере“ &gt; „Бежично отклањање грешака“ &gt; „Упари уређај помоћу кода за упаривање“. Шизуку ће аутоматски детектовати код за упаривање.</string>
     <string name="adb_pairing_requires_multi_window">Molim Vas, najpre izaberite režim podeljenog ekrana, odnosno režim više prozora.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Систем захтева да дијалог за упаривање увек буде видљив, коришћење режима подељеног екрана је једини начин да се ова апликација и системски дијалог виде истовремено.</string>
     <string name="adb_error_key_store">Neuspešno generisanje ključa za bežično otklanjanje grešaka.
 \nOvo je možda iz razloga što je mehanizam skladišta ključeva ovog uređaja neispravan.</string>
+    <string name="adb_error_stop_tcp">Заустављање ADB-а преко TCP-а није успело</string>
     <string name="adb_pair_required">Molim Vas, najpre prođite kroz korake za uparivanje uređaja.</string>
+    <string name="enable">Омогући</string>
     <string name="development_settings">Razvojne opcije programera</string>
     <string name="notification_settings">Opcije obaveštenja</string>
     <string name="adb_pairing_tutorial_title">Uparite Shizuku sa Vašim uređajem</string>
     <string name="adb_pairing_tutorial_content_notification">Notifikacija iz Shizuku aplikacije će Vam pomoći da dovršite uparivanje.</string>
     <string name="adb_pairing_tutorial_content_steps">Otvorite sekciju \"Razvojne opcije programera\" - \"Bežično otklanjanje grešaka\". Dodirnite \"Uparivanje uređaja pomoću kóda za uparivanje\" i pojaviće Vam se 6-cifreni kód.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Унесите код из обавештења да бисте завршили упаривање.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Процес упаривања захтева вашу интеракцију са обавештењем од Шизукуа. Дозволите Шизукуу да објављује обавештења.</string>
+    <string name="adb_pairing_tutorial_content_miui">Корисници MIUI-ја ће можда морати да промене стил обавештења на „Android“ из „Обавештења“ - „Тањир обавештења“ у системским подешавањима.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">У супротном, можда нећете моћи да унесете код за упаривање из обавештења.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Имајте у виду да је леви део опције „Бежично отклањање грешака“ кликабилан, додиривањем ће се отворити нова страница. Само укључивање прекидача са десне стране је погрешно.</string>
+    <string name="adb_pairing_tutorial_content_finish">Вратите се на Шизуку и започните Шизуку.</string>
+    <string name="adb_pairing_tutorial_content_network">Шизуку треба да приступи локалној мрежи. То се контролише мрежном дозволом.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Неки системи (као што је MIUI) не дозвољавају апликацијама приступ мрежи када нису видљиве, чак и ако апликација стандардно користи услугу у првом плану. Молимо вас да онемогућите функције оптимизације батерије за Shizuku на таквим системима.</string>
     <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[Покрени (за рутоване уређаје)]]></string>
+    <string name="home_root_description"><![CDATA[Поред тога, Шизуку се може аутоматски покренути при покретању система. Ако не, проверите да ли ваш систем или алати треће стране ограничавају Шизуку.<br>Можете погледати %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Ако користите Magisk, можете испробати %1$s. За root кориснике, на крају ће заменити Shizuku. Имајте на уму да постојеће апликације треба мало да се промене да би користиле %2$s.]]></string>
+    <string name="home_root_button_start">Почетак</string>
+    <string name="home_root_button_restart">Поново покрени</string>
     <!-- Home - Application management -->
+    <string name="home_app_management_title">Управљање апликацијама</string>
+    <plurals name="home_app_management_authorized_apps_count">
+        <item quantity="one"><![CDATA[Овлашћена %d апликација]]></item>
+        <item quantity="few"><![CDATA[Овлашћене %d апликације]]></item>
+        <item quantity="other"><![CDATA[Овлашћене %d апликације]]></item>
+    </plurals>
+    <string name="home_app_management_view_authorized_apps"><![CDATA[Додирните да бисте управљали овлашћеним апликацијама]]></string>
+    <string name="home_app_management_empty">Апликације које су затражиле или пријавиле Шизуку дозволу биће приказане овде.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Научите Шизуку</string>
+    <string name="home_learn_more_description">Научите како да развијате уз Шизуку</string>
     <!-- Home - Adb permissions limited -->
+    <string name="home_adb_is_limited_title">Морате направити додатни корак</string>
+    <string name="home_adb_is_limited_description">Произвођач вашег уређаја је ограничио adb дозволе и апликације које користе Shizuku неће исправно радити.\n\nОбично се ово ограничење може уклонити подешавањем неких опција у „Опцијама за програмере“. Молимо вас да прочитате помоћ за детаље о томе како да то урадите.\n\nМожда ћете морати поново да покренете Shizuku да би операција ступила на снагу.</string>
     <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">Дозвола adb-а је ограничена</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Врло је могуће да произвођач вашег уређаја ограничава дозволе adb-а.<p>Можда постоји решење за ваш систем у <b><a href=\"%1$s\">овом документу</a></b>.]]></string>
+    <string name="app_management_item_summary_requires_root">* захтева да Шизуку ради са root-ом</string>
+    <string name="app_management_toggle_all">Укључи/искључи све</string>
     <!-- Terminal -->
+    <string name="home_terminal_title">Користите Шизуку у терминалним апликацијама</string>
+    <string name="home_terminal_description">Покрените команде преко Шизукуа у терминалним апликацијама које вам се свиђају</string>
+    <string name="terminal_tutorial_1">Прво, извезите датотеке било где где желите. Наћи ћете две датотеке, %1$s и %2$s.</string>
+    <string name="terminal_tutorial_1_description">Ако у изабраној фасцикли постоје датотеке са истим именом, оне ће бити обрисане.\n\nФункција извоза користи SAF (Storage Access Framework). Пријављено је да MIUI прекида функције SAF-а. Ако користите MIUI, можда ћете морати да извучете датотеку из Shizuku-ове апликације или да је преузмете са GitHub-а.</string>
+    <string name="terminal_export_files">Извоз датотека</string>
+    <string name="terminal_tutorial_2">Затим, користите било који уређивач текста да бисте отворили и уредили %1$s.</string>
+    <string name="terminal_tutorial_2_description">На пример, ако желите да користите Шизуку у %1$s, требало би да замените %2$s са %3$s (%4$s је назив пакета %1$s).</string>
+    <string name="terminal_tutorial_3">Коначно, преместите датотеке негде где ваша терминална апликација може да им приступи, моћи ћете да користите %1$s за покретање команди преко Шизукуа.</string>
+    <string name="terminal_tutorial_3_description">Неки савети: доделите дозволу за извршавање %1$s и додајте је у %2$s, моћи ћете директно да користите %1$s .</string>
+    <string name="rish_description"><![CDATA[Са %1$s, у било којој терминалној апликацији, можете се повезати и интераговати са љуском коју покреће Shizuku.
+<p>О детаљној употреби %1$s, додирните да бисте видели документ.
+    ]]></string>
     <!-- Settings -->
+    <string name="settings_title">Подешавања</string>
+    <string name="settings_behavior">Понашање</string>
+    <string name="settings_start_on_boot">Покрени при покретању</string>
+    <string name="settings_start_on_boot_summary">Захтева Андроид 11+ или рут</string>
+    <string name="settings_use_system_color">Користи боју системске теме</string>
+    <string name="settings_watchdog">Чувар</string>
+    <string name="settings_watchdog_summary">Аутоматски поново покрените Шизуку ако се заустави</string>
+    <string name="settings_tcp_mode">TCP режим</string>
+    <string name="settings_tcp_mode_summary">"Омогућава Шизукуу да се поново покрене без Wi-Fi-ја. (Шизуку се морао једном покренути од поновног покретања)"</string>
+    <string name="settings_tcp_mode_dialog_title">Потребно је поновно покретање</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Шизуку треба поново покренути да би се применило ово подешавање.<br><br><b>Шизуку ће наставити да ради и чекати на Wi-Fi везу пре поновног покретања.</b>]]></string>
+    <string name="settings_tcp_port">ТЦП порт</string>
+    <string name="settings_tcp_port_deafult">Подразумевано (5555)</string>
+    <string name="settings_tcp_port_hint">Оставите празно да бисте користили подразумевано (5555)</string>
+    <string name="settings_tcp_learn_more">Сазнајте више о коришћењу апликација за аутоматизацију за контролу Шизукуа</string>
+    <string name="settings_language">Језик</string>
+    <string name="settings_translation_contributors">Сарадници на преводу</string>
+    <string name="settings_translation">Учествујте у преводу</string>
+    <string name="settings_translation_summary">Помозите нам да преведемо %s на ваш језик</string>
+    <string name="settings_user_interface">Изглед</string>
+    <string name="settings_black_night_theme">Тема црне ноћи</string>
+    <string name="settings_black_night_theme_summary">Користите чисто црну тему ако је омогућен ноћни режим</string>
+    <string name="settings_support">Подршка</string>
+    <string name="settings_help">Помоћ</string>
+    <string name="settings_report_bug">Пријави грешку</string>
+    <string name="settings_advanced">Напредно</string>
+    <string name="settings_legacy_pairing">Упаривање са старим уређајима</string>
+    <string name="settings_legacy_pairing_summary">Унесите код за упаривање у дијалогу уместо у обавештењу</string>
     <!-- Snackbar -->
+    <string name="snackbar_invalid_port">Порт мора бити између 1 и 65535</string>
+    <string name="snackbar_battery_optimization_home">Оптимизација батерије мора бити онемогућена да би покретање при покретању/чување система исправно функционисало.</string>
+    <string name="snackbar_battery_optimization_settings">Онемогућите оптимизацију батерије да бисте користили ову функцију.</string>
+    <string name="snackbar_action_fix">Поправи</string>
     <!-- Toast -->
+    <string name="toast_no_email_app">Није пронађена апликација за е-пошту</string>
+    <string name="toast_shizuku_already_starting">Шизуку већ почиње у позадини</string>
     <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">Тема</string>
+    <string name="dark_theme_off">Увек светло</string>
+    <string name="dark_theme_on">Увек мрачно</string>
     <!-- About -->
+    <string name="action_about">О нама</string>
+    <string name="about_dialog_button_close">Затвори</string>
+    <string name="about_view_source_code"><![CDATA[Погледајте изворни код на %s]]></string>
     <!-- Stop -->
+    <string name="action_stop">Заустави Шизуку</string>
+    <string name="dialog_stop_message">Шизуку линија ће бити обустављена.</string>
     <!-- Notification -->
+    <string name="notification_channel_service_status">Статус покретања услуге</string>
+    <string name="notification_service_starting">Шизуку линија почиње…</string>
+    <string name="notification_service_start_failed">Покретање Шизуку услуге није успело.</string>
+    <string name="notification_service_start_no_root">Није успело захтевање root дозволе.</string>
+    <string name="notification_working">Ради…</string>
+    <string name="notification_channel_adb_pairing">Бежично упаривање за отклањање грешака</string>
+    <string name="notification_adb_pairing_input_paring_code">Унесите код за упаривање</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Тражење услуге упаривања</string>
+    <string name="notification_adb_pairing_service_found_title">Пронађена је услуга упаривања</string>
+    <string name="notification_adb_pairing_stop_searching">Престани претрагу</string>
+    <string name="notification_adb_pairing_working_title">Упаривање у току</string>
+    <string name="notification_adb_pairing_succeed_title">Упаривање је успешно</string>
+    <string name="notification_adb_pairing_succeed_text">Сада можете покренути Шизуку услугу.</string>
+    <string name="notification_adb_pairing_failed_title">Упаривање није успело</string>
+    <string name="notification_adb_pairing_retry">Покушај поново</string>
     <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">приступ Шизуку</string>
+    <string name="permission_description">Дозволите апликацији да користи Шизуку.</string>
+    <string name="permission_warning_template"><![CDATA[Дозволити <b>%1$s</b> до %2$s?]]></string>
+    <string name="grant_dialog_button_allow_always">Дозволи све време</string>
+    <string name="grant_dialog_button_deny">"Одбиј"</string>
     <!-- Starter -->
+    <string name="starter">Стартер</string>
+    <string name="start_with_root_failed">Не могу да покренем услугу јер није одобрена root дозвола или овај уређај није рутован.</string>
     <!-- WADB Starter -->
+    <string name="wadb_notification_title">Почетак игре Шизуку…</string>
+    <string name="wadb_notification_wifi_required">Чека се Wi-Fi веза пре него што се настави</string>
+    <string name="wadb_notification_wifi_found">Пронађен је Wi-Fi. Наставља се.</string>
+    <string name="wadb_error_title">Грешка при покретању система</string>
+    <string name="wadb_error_notify_dev">Додирните да бисте обавестили програмера.</string>
+    <string name="wadb_error_send_email">Пошаљите имејл на</string>
+    <string name="wadb_permission_error_notification_title">Грешка дозволе</string>
+    <string name="wadb_permission_error_notification_content">Шизуку захтева WRITE_SECURE_SETTINGS да би се покренуо при покретању система. Додирните да бисте сазнали како да га одобрите.</string>
+    <string name="wadb_notification_channel">ADB услуга аутоматског покретања</string>
     <!-- Watchdog -->
+    <string name="watchdog_running">Чуварски орган ради</string>
+    <string name="watchdog_shizuku_crashed_title">Шизуку се недавно срушио</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog је поново покренуо услугу. Додирните да бисте сазнали више о потенцијалним решењима за спречавање будућих падова.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Искључи упозорења</string>
     <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">Не могу да покренем прегледач</string>
+    <string name="toast_copied_to_clipboard">%s\nје копирано у међуспремник.</string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> је копирано у међуспремник.]]></string>
+    <string name="accessibility_service_description">Пружа подршку за упаривање уређаја (нпр. телевизора са Андроидом 14+) где обавештења или подељени екран не могу да се користе.\n\nОмогућава Шизуку-у да издвоји код за упаривање са екрана за упаривање за бежично отклањање грешака. Сам ће се деактивирати када се пронађе код за упаривање.</string>
     <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">%1$s не подржава модерни Шизуку</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Застарели Шизуку је застарео од марта 2019. Такође, застарели Шизуку не ради на новијим Андроид системима.<p>Замолите програмера <b>%1$s</b> да ажурира.]]></string>
+    <string name="dialog_requesting_legacy_title">%1$s захтева старију верзију Шизукуа</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> има подршку за модерни Шизуку, али захтева старији Шизуку. То би могло бити зато што Шизуку не ради, проверите у апликацији Шизуку.<p>Старији Шизуку је застарео од марта 2019.]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">Отвори Шизуку</string>
+    <string name="wadb_notification_attempt_now">Покушај сада</string>
 </resources>
