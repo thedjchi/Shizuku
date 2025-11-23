@@ -114,6 +114,12 @@ v_current = (uintptr_t) v + v_size - sizeof(char *); \
 }
 
 static void start_server(const char *path, const char *main_class, const char *process_name) {
+    int fds[2];
+    if (pipe(fds) < 0) {
+        perrorf("fatal: can't create pipe\n");
+        exit(EXIT_FATAL_FORK);
+    }
+
     pid_t pid = fork();
     switch (pid) {
         case -1: {
@@ -122,6 +128,7 @@ static void start_server(const char *path, const char *main_class, const char *p
         }
         case 0: {
             LOGD("child");
+            close(fds[0]);
             setsid();
             chdir("/");
             int fd = open("/dev/null", O_RDWR);
@@ -131,9 +138,19 @@ static void start_server(const char *path, const char *main_class, const char *p
                 dup2(fd, STDERR_FILENO);
                 if (fd > 2) close(fd);
             }
+            
+            char ready = 1;
+            write(fds[1], &ready, 1);
+            close(fds[1]);
+
             run_server(path, main_class, process_name);
         }
         default: {
+            close(fds[1]);
+            char ready;
+            read(fds[0], &ready, 1);
+            close(fds[0]);
+
             printf("info: shizuku_server pid is %d\n", pid);
             printf("info: shizuku_starter exit with 0\n");
             exit(EXIT_SUCCESS);
