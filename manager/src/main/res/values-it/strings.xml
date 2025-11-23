@@ -61,7 +61,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alcuni sistemi (come MIUI) non consentono alle app di accedere alla rete quando queste non sono visibili, anche se l\'app utilizza il servizio in primo piano come standard. Disattiva le funzioni di ottimizzazione della batteria per Shizuku su tali sistemi.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Avvia (per dispositivi rootati)]]></string>
-    <string name="home_root_description"><![CDATA[Inoltre, Shizuku può essere avviato automaticamente all'avvio. In caso contrario, controlla se il tuo sistema o l'opzione app esterne hanno limitato Shizuku.&lt;br&gt;Puoi fare riferimento a %s.]]></string>
+    <string name="home_root_description"><![CDATA[Inoltre, Shizuku può essere avviato automaticamente all\'avvio. In caso contrario, controlla se il tuo sistema o l\'opzione app esterne hanno limitato Shizuku.&lt;br&gt;Puoi fare riferimento a %s.]]></string>
     <string name="home_root_description_sui"><![CDATA[Se stai usando Magisk, puoi provare %1$s. Per gli utenti root, alla fine sostituirà Shizuku. Nota, le applicazioni esistenti devono essere leggermente modificate per poter usare %2$s.]]></string>
     <string name="home_root_button_start">Avvia</string>
     <string name="home_root_button_restart">Riavvia</string>
@@ -100,7 +100,7 @@
     <string name="terminal_tutorial_2_description">Ad esempio, se vuoi utilizzare Shizuku in %1$s, devi sostituire %2$s con %3$s (%4$s è il nome del pacchetto di %1$s).</string>
     <string name="terminal_tutorial_3">Infine, sposta i file in un punto in cui l\'app del terminale può accedere, così sarai in grado di utilizzare %1$s per eseguire comandi tramite Shizuku.</string>
     <string name="terminal_tutorial_3_description">Alcuni suggerimenti: concedi il permesso di esecuzione a %1$s e aggiungilo a %2$s, così potrai utilizzare %1$s direttamente.</string>
-    <string name="rish_description"><![CDATA[Con %1$s, in qualsiasi app terminale, puoi connetterti e interagire con la shell eseguita da Shizuku. &lt;p&gt;Per info sull'utilizzo dettagliato di %1$s, tocca per visualizzare il documento.]]></string>
+    <string name="rish_description"><![CDATA[Con %1$s, in qualsiasi app terminale, puoi connetterti e interagire con la shell eseguita da Shizuku. &lt;p&gt;Per info sull\'utilizzo dettagliato di %1$s, tocca per visualizzare il documento.]]></string>
     <!-- Settings -->
     <string name="settings_title">Impostazioni</string>
     <string name="settings_behavior">Comportamento</string>
@@ -199,7 +199,7 @@
     <string name="dialog_legacy_not_support_title">%1$s non supporta il moderno Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Shizuku legacy è stato deprecato a marzo 2019. Inoltre, Shizuku legacy non funziona sui sistemi Android più recenti.&lt;p&gt;Chiedi allo sviluppatore&lt;b&gt;%1$s&lt;/b&gt; di aggiornare.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s sta richiedendo Shizuku legacy</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; ha il supporto al Shizuku moderno, ma sta richiedendo Shizuku legacy. Questo potrebbe essere perché Shizuku non è in esecuzione, controlla nell'app Shizuku.&lt;p&gt;Shizuku legacy è stato deprecato a marzo 2019.]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; ha il supporto al Shizuku moderno, ma sta richiedendo Shizuku legacy. Questo potrebbe essere perché Shizuku non è in esecuzione, controlla nell\'app Shizuku.&lt;p&gt;Shizuku legacy è stato deprecato a marzo 2019.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Apri Shizuku</string>
     <string name="wadb_notification_attempt_now">Prova ora</string>
 </resources>

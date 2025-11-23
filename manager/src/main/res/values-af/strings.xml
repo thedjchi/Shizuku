@@ -7,17 +7,17 @@
     <string name="home_status_service_version">Weergawe %2$s, %1$s</string>
     <string name="home_status_service_version_update"><![CDATA[Weergawe %2$s, %1$s<br>Begin weer om op te dateer na weergawe %3$s]]></string>
     <!-- Home - Adb -->
-    <string name="home_adb_title"><![CDATA[Begin deur aan 'n rekenaar te koppel]]></string>
+    <string name="home_adb_title"><![CDATA[Begin deur aan \'n rekenaar te koppel]]></string>
     <string name="home_adb_description"><![CDATA[Vir toestelle sonder root, moet jy adb gebruik om Shizuku te begin (vereis rekenaarverbinding). Hierdie proses moet elke keer herhaal word wanneer die toestel herbegin word. Lees asseblief <b><a href=\"%1$s\">die hulp</a></b>.]]></string>
     <string name="home_adb_button_view_help">Lees hulp</string>
     <string name="home_adb_button_view_command">Bekyk opdrag</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Daar is nog 'n paar oorwegings, bevestig asseblief dat u eers die hulp gelees het.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Daar is nog \'n paar oorwegings, bevestig asseblief dat u eers die hulp gelees het.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Kopieer</string>
     <string name="home_adb_dialog_view_command_button_send">Stuur</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Begin via draadlose ontfouting]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Op Android 11 of hoër kan jy draadlose ontfouting aktiveer en Shizuku direk vanaf jou toestel begin, sonder om aan 'n rekenaar te koppel.<p>Kyk asseblief eers na die stap-vir-stap gids.]]></string>
-    <string name="home_wireless_adb_description_pre_11"><![CDATA[Voor Android 11 is verbinding met 'n rekenaar nodig om draadlose ontfouting te aktiveer.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Op Android 11 of hoër kan jy draadlose ontfouting aktiveer en Shizuku direk vanaf jou toestel begin, sonder om aan \'n rekenaar te koppel.<p>Kyk asseblief eers na die stap-vir-stap gids.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Voor Android 11 is verbinding met \'n rekenaar nodig om draadlose ontfouting te aktiveer.]]></string>
     <string name="home_wireless_adb_view_guide_button">Stap-vir-stap gids</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Soek na draadlose ontfoutingsdiens</string>
@@ -58,7 +58,7 @@
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
     <string name="home_root_description"><![CDATA[Daarbenewens kan Shizuku outomaties met opstart begin word. Indien nie, kyk asseblief of jou stelsel of derdeparty-instrumente Shizuku beperk het.<br>Jy kan verwys na %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet 'n bietjie verander om %2$ste gebruik.]]></string>
+    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet \'n bietjie verander om %2$ste gebruik.]]></string>
     <string name="home_root_button_start">Begin</string>
     <string name="home_root_button_restart">Herbegin</string>
     <!-- Home - Application management -->
@@ -77,7 +77,7 @@
     <string name="home_adb_is_limited_description">Jou toestelvervaardiger het ADB-toestemmings beperk en programme wat Shizuku gebruik, sal nie behoorlik werk nie.\n\nGewoonlik kan hierdie beperking opgehef word deur sommige opsies in \"Ontwikkelaaropsies\" aan te pas. Lees asseblief die hulp vir besonderhede oor hoe om dit te doen.\n\nJy moet dalk Shizuku herbegin vir die bewerking om in werking te tree.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Die toestemming van adb is beperk</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Dit is hoogs moontlik dat jou toestelvervaardiger die toestemming van adb beperk.<p>Daar mag dalk 'n oplossing vir jou stelsel wees in <b><a href=\"%1$s\">hierdie dokument</a></b>.]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Dit is hoogs moontlik dat jou toestelvervaardiger die toestemming van adb beperk.<p>Daar mag dalk \'n oplossing vir jou stelsel wees in <b><a href=\"%1$s\">hierdie dokument</a></b>.]]></string>
     <string name="app_management_item_summary_requires_root">* vereis Shizuku-lopies met root</string>
     <string name="app_management_toggle_all">Wissel alles</string>
     <!-- Terminal -->
@@ -104,7 +104,7 @@
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku moes een keer sedert herbegin begin het)"</string>
     <string name="settings_tcp_mode_dialog_title">Herbegin Vereis</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku moet herbegin om hierdie instelling toe te pas.<br><br><b>Shizuku sal aanhou loop en wag vir 'n Wi-Fi-verbinding voordat dit herbegin.</b>]]></string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku moet herbegin om hierdie instelling toe te pas.<br><br><b>Shizuku sal aanhou loop en wag vir \'n Wi-Fi-verbinding voordat dit herbegin.</b>]]></string>
     <string name="settings_tcp_port">TCP-poort</string>
     <string name="settings_tcp_port_deafult">Standaard (5555)</string>
     <string name="settings_tcp_port_hint">Los leeg om verstekwaarde (5555) te gebruik</string>

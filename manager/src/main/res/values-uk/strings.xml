@@ -16,8 +16,8 @@
     <string name="home_adb_dialog_view_command_button_send">Відправити</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Запуск за допомогою налагоджування через Wi-Fi]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Починаючи з Android 11 та вище, ви можете ввімкнути налагодження через WiFi та запустити Shizuku прямо з вашого пристрою, не під'єднуючись до комп'ютеру.&lt;p&gt;Будь ласка, спочатку перегляньте інструкцію.]]></string>
-    <string name="home_wireless_adb_description_pre_11"><![CDATA[До Android 11, потрібно під'єднатися до комп'ютеру щоб ввімкнути налагодження через Wi-FI.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Починаючи з Android 11 та вище, ви можете ввімкнути налагодження через WiFi та запустити Shizuku прямо з вашого пристрою, не під\'єднуючись до комп\'ютеру.&lt;p&gt;Будь ласка, спочатку перегляньте інструкцію.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[До Android 11, потрібно під\'єднатися до комп\'ютеру щоб ввімкнути налагодження через Wi-FI.]]></string>
     <string name="home_wireless_adb_view_guide_button">Покрокова інструкція</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Пошук сервісу бездротового налагодження</string>
@@ -102,7 +102,7 @@
     <string name="terminal_tutorial_2_description">Наприклад, якщо ви хочете використати Shizuku в %1$s, вам потрібно замінити %2$s на %3$s (%4$s це назва пакету %1$s).</string>
     <string name="terminal_tutorial_3">Нарешті, перемістіть файли туди, де програма терміналу матиме доступ до них, ви зможете використовувати %1$s для запуску команд через Shizuku.</string>
     <string name="terminal_tutorial_3_description">Деякі поради: надайте %1$s дозвіл на виконання та додайте його в %2$s, ви зможете використовувати %1$s відразу.</string>
-    <string name="rish_description"><![CDATA[З %1$s, в будь-якій програмі терміналу, ви зможете під''єднатися та взаємодіяти з Shizuku. &lt;p&gt;Ви можете дізнатися більше про використання %1$s, натисніть тут щоб перегляньте документацію.]]></string>
+    <string name="rish_description"><![CDATA[З %1$s, в будь-якій програмі терміналу, ви зможете під\'\'єднатися та взаємодіяти з Shizuku. &lt;p&gt;Ви можете дізнатися більше про використання %1$s, натисніть тут щоб перегляньте документацію.]]></string>
     <!-- Settings -->
     <string name="settings_title">Налаштування</string>
     <string name="settings_behavior">Поведінка</string>

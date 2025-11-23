@@ -8,16 +8,16 @@
     <string name="home_status_service_version_update"><![CDATA[Versió %2$s, %1$s<br>Comença de nou per actualitzar a la versió %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Comenceu connectant-vos a un ordinador]]></string>
-    <string name="home_adb_description"><![CDATA[Per als dispositius sense root, cal utilitzar adb per iniciar Shizuku (requereix connexió a l'ordinador). Aquest procés s'ha de repetir cada vegada que el dispositiu es reinicia. Si us plau <b><a href=\"%1$s\">Llegeix l'ajuda</a></b>.]]></string>
+    <string name="home_adb_description"><![CDATA[Per als dispositius sense root, cal utilitzar adb per iniciar Shizuku (requereix connexió a l\'ordinador). Aquest procés s\'ha de repetir cada vegada que el dispositiu es reinicia. Si us plau <b><a href=\"%1$s\">Llegeix l\'ajuda</a></b>.]]></string>
     <string name="home_adb_button_view_help">Llegeix l\'ajuda</string>
     <string name="home_adb_button_view_command">Veure comanda</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Hi ha altres consideracions, si us plau, confirma que has llegit l'ajuda primer.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Hi ha altres consideracions, si us plau, confirma que has llegit l\'ajuda primer.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Còpia</string>
     <string name="home_adb_dialog_view_command_button_send">Enviar</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Comenceu mitjançant la depuració sense fil]]></string>
     <string name="home_wireless_adb_description"><![CDATA[Amb Android 11 o superior, pots activar la depuració sense fils i iniciar Shizuku directament des del teu dispositiu, sense connectar-te a un ordinador.<p>Si us plau, consulteu primer la guia pas a pas.]]></string>
-    <string name="home_wireless_adb_description_pre_11"><![CDATA[Abans d'Android 11, cal connectar-se a un ordinador per habilitar la depuració sense fil.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Abans d\'Android 11, cal connectar-se a un ordinador per habilitar la depuració sense fil.]]></string>
     <string name="home_wireless_adb_view_guide_button">Guia pas a pas</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Cercant servei de depuració sense fil</string>
@@ -79,7 +79,7 @@
     <string name="home_adb_is_limited_description">El fabricant del teu dispositiu ha restringit els permisos adb i les aplicacions que utilitzen Shizuku no funcionaran correctament.\n\nNormalment, aquesta limitació es pot eliminar ajustant algunes opcions a \"Opcions de desenvolupador\". Si us plau, llegeix l\'ajuda per a més detalls sobre com fer-ho.\n\nPotser hauràs de reiniciar la Shizuku perquè l\'operació faci efecte.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">El permís de l\'adb és limitat</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[És molt possible que el fabricant del teu dispositiu limiti el permís de l'adb.<p>Potser hi ha una solució per al teu sistema a <b><a href=\"%1$s\">Aquest document</a></b>.]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[És molt possible que el fabricant del teu dispositiu limiti el permís de l\'adb.<p>Potser hi ha una solució per al teu sistema a <b><a href=\"%1$s\">Aquest document</a></b>.]]></string>
     <string name="app_management_item_summary_requires_root">* requereix que la Shizuku funcioni amb root</string>
     <string name="app_management_toggle_all">Canvia tot</string>
     <!-- Terminal -->
@@ -93,7 +93,7 @@
     <string name="terminal_tutorial_3">Finalment, mou els fitxers a un lloc on la teva aplicació de terminal pugui accedir-hi, que podràs utilitzar %1$s per executar ordres a través de la Shizuku.</string>
     <string name="terminal_tutorial_3_description">Alguns consells: concedeix permís per executar %1$s i afegeix-ho a %2$s, podràs utilitzar %1$s directament.</string>
     <string name="rish_description"><![CDATA[Amb %1$s, en qualsevol aplicació de terminal, pots connectar-te i interactuar amb la shell executada per Shizuku.
-<p>Sobre l'ús detallat %1$s, toca per veure el document.
+<p>Sobre l\'ús detallat %1$s, toca per veure el document.
     ]]></string>
     <!-- Settings -->
     <string name="settings_title">Configuració</string>
@@ -186,13 +186,13 @@
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">No es pot iniciar el navegador</string>
     <string name="toast_copied_to_clipboard">%s\ns\'ha copiat a la carpeta de papers.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> s'ha copiat a la carpeta de papers.]]></string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> s\'ha copiat a la carpeta de papers.]]></string>
     <string name="accessibility_service_description">Proporciona suport per a aparellaments per a dispositius (per exemple, televisors amb Android 14+) on no es poden utilitzar notificacions o pantalla dividida.\n\nPermet a Shizuku extreure el codi d\'aparellament de la pantalla de depuració sense fils. Es desactivarà un cop es trobi el codi de parella.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s no suporta la Shizuku moderna</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Llegat Shizuku ha estat obsolet des de març de 2019. A més, el Shizuku antic no funciona en sistemes Android més nous.<p>Si us plau, pregunta al desenvolupador de <b>%1$s</b> Per actualitzar.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s està demanant llegat Shizuku</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> té suport modern per a Shizuku, però està demanant Shizuku llegat. Això podria ser perquè la Shizuku no està funcionant, si us plau, comprova a l'aplicació de Shizuku.<p>Llegat Shizuku ha estat obsolet des de març de 2019.]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> té suport modern per a Shizuku, però està demanant Shizuku llegat. Això podria ser perquè la Shizuku no està funcionant, si us plau, comprova a l\'aplicació de Shizuku.<p>Llegat Shizuku ha estat obsolet des de març de 2019.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Obre Shizuku</string>
     <string name="wadb_notification_attempt_now">Intenta-ho ara</string>
 </resources>

@@ -16,7 +16,7 @@
     <string name="home_adb_dialog_view_command_button_send">Gönder</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Kablosuz hata ayıklama ile başlat]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Android 11 ve üzeri sürümlerde, Kablosuz hata ayıklama ve Shizuku'yu cihazınızdan bir bilgisayara bağlanmadan direkt aktif edebilirsiniz.&lt;p&gt;Lütfen öncelikle adım adım kılavuz'u inceleyin.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Android 11 ve üzeri sürümlerde, Kablosuz hata ayıklama ve Shizuku\'yu cihazınızdan bir bilgisayara bağlanmadan direkt aktif edebilirsiniz.&lt;p&gt;Lütfen öncelikle adım adım kılavuz\'u inceleyin.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Android 11 ve önceki sürümlerde, Kablosuz hata ayıklama’yı aktif etmek için bir bilgisayara bağlanmak gereklidir.]]></string>
     <string name="home_wireless_adb_view_guide_button">Adım adım kılavuz</string>
     <!-- Adb -->
@@ -61,7 +61,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bazı sistemler (MIUI gibi), uygulama standart olarak ön plan hizmetini kullansa bile, arka planda çalıştıklarında ağa erişmesine izin vermez. Lütfen bu tür sistemlerde Shizuku için pil optimizasyon özelliklerini devre dışı bırakın.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (rootlu cihazlar için)]]></string>
-    <string name="home_root_description"><![CDATA[Buna ek olarak, Shizuku otomatik olarak açılışta başlatılabilir. Aksi durumda ise, lütfen sisteminizin veya üçüncü taraf araçlarınızın Shizuku'yu kısıtlayıp kısıtlamadığını kontrol edin. &lt;br&gt;%s 'ye başvurabilirsiniz.]]></string>
+    <string name="home_root_description"><![CDATA[Buna ek olarak, Shizuku otomatik olarak açılışta başlatılabilir. Aksi durumda ise, lütfen sisteminizin veya üçüncü taraf araçlarınızın Shizuku\'yu kısıtlayıp kısıtlamadığını kontrol edin. &lt;br&gt;%s \'ye başvurabilirsiniz.]]></string>
     <string name="home_root_description_sui"><![CDATA[Magisk kullanıyorsanız, %1$s’yi deneyebilirsiniz. Kök kullanıcıları için sonunda Shizuku’nun yerini alacak. %2$s’yi kullanmak için mevcut uygulamaların biraz değişmesi gerektiğini unutmayın.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yeniden başlat</string>
@@ -100,7 +100,7 @@
     <string name="terminal_tutorial_2_description">Örneğin, Shizuku\'yu %1$s içinde kullanmak istiyorsanız, %2$s\'yi %3$s ile değiştirmelisiniz (%4$s, %1$s paketinin adıdır).</string>
     <string name="terminal_tutorial_3">Son olarak, dosyaları terminal uygulamanızın erişebileceği bir yere taşıyın, Shizuku aracılığıyla komutları çalıştırmak için %1$s kullanabileceksiniz.</string>
     <string name="terminal_tutorial_3_description">Bazı ipuçları: %1$s’e yürütme izni verin ve %2$s’a ekleyin, %1$s’i doğrudan kullanabileceksiniz.</string>
-    <string name="rish_description"><![CDATA[%1$s ile herhangi bir terminal uygulamasında Shizuku'nun shell run'larına bağlanabilir ve bunlarla etkileşim kurabilirsiniz. &lt;p&gt;%1$s ayrıntılı kullanımı hakkında, belgeyi görüntülemek için dokunun.]]></string>
+    <string name="rish_description"><![CDATA[%1$s ile herhangi bir terminal uygulamasında Shizuku\'nun shell run\'larına bağlanabilir ve bunlarla etkileşim kurabilirsiniz. &lt;p&gt;%1$s ayrıntılı kullanımı hakkında, belgeyi görüntülemek için dokunun.]]></string>
     <!-- Settings -->
     <string name="settings_title">Ayarlar</string>
     <string name="settings_behavior">Davranış</string>
@@ -112,7 +112,7 @@
     <string name="settings_tcp_mode">TCP modu</string>
     <string name="settings_tcp_mode_summary">"Shizuku'nun Wi-Fi olmadan yeniden başlatılmasına izin verir. (Shizuku'nun yeniden başlatıldıktan sonra bir kez başlatılmış olması gerekir)"</string>
     <string name="settings_tcp_mode_dialog_title">Yeniden Başlatma Gerekli</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Bu ayarın uygulanabilmesi için Shizuku'nun yeniden başlatılması gerekiyor.<br><br><b>Shizuku çalışmaya devam edecek ve yeniden başlatılmadan önce bir Wi-Fi bağlantısı bekleyecek.</b>]]></string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Bu ayarın uygulanabilmesi için Shizuku\'nun yeniden başlatılması gerekiyor.<br><br><b>Shizuku çalışmaya devam edecek ve yeniden başlatılmadan önce bir Wi-Fi bağlantısı bekleyecek.</b>]]></string>
     <string name="settings_tcp_port">TCP bağlantı noktası</string>
     <string name="settings_tcp_port_deafult">Varsayılan (5555)</string>
     <string name="settings_tcp_port_hint">Varsayılanı (5555) kullanmak için boş bırakın</string>
