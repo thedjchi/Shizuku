@@ -128,8 +128,9 @@ private class ViewModel(
                     startRoot()
                 } else AdbStarter.startAdb(context, port, { log(it) })
                 Starter.waitForBinder({ log(it) })
-            } finally {
+            } catch (e: Exception) {
                 ShizukuStateMachine.update()
+                throw e
             }
         }
     }
