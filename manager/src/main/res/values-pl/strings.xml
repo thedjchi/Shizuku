@@ -33,7 +33,7 @@
     <string name="cannot_connect_port">Nie można połączyć się z usługą debugowania bezprzewodowego.</string>
     <string name="dialog_wireless_adb_not_enabled">Debugowanie bezprzewodowe nie jest włączone.\nUwaga: w wersjach starszych niż Android 11, włączenie debugowania bezprzewodowego wymaga połączenia z komputerem.</string>
     <string name="dialog_usb_debugging_not_enabled">Debugowanie USB nie jest włączone.\nWłącz je w \"Opcjach programisty\".</string>
-    <string name="dialog_adb_pairing_message">Rozpocznij parowanie, wykonując następujące kroki: \"Opcje programisty\" -> \"Debugowanie bezprzewodowe\" -> \"Sparuj urządzenie przy pomocy kodu parowania\".\n\nGdy proces parowania się rozpocznie, będziesz mógł wpisać kod.</string>
+    <string name="dialog_adb_pairing_message">Rozpocznij parowanie, wykonując następujące kroki: \"Opcje programisty\" -&gt; \"Debugowanie bezprzewodowe\" -&gt; \"Sparuj urządzenie przy pomocy kodu parowania\".\n\nGdy proces parowania się rozpocznie, będziesz mógł wpisać kod.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Włącz usługę ułatwień dostępu, aby rozpocząć proces parowania. Pozwoli to Shizuku wykryć kod parowania.\n\nUsługa zostanie wyłączona po znalezieniu kodu lub po minucie, aby oszczędzać energię.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Przejdź do \"Opcje programisty\" &gt; \"Debugowanie bezprzewodowe\" &gt; \"Sparuj urządzenie przy pomocy kodu parowania\". Shizuku automatycznie wykryje kod parowania.</string>
     <string name="adb_pairing_requires_multi_window">Najpierw uruchom tryb podzielonego ekranu.</string>
@@ -46,10 +46,10 @@
     <string name="notification_settings">Opcje powiadomień</string>
     <string name="adb_pairing_tutorial_title">Sparuj Shizuku z urządzeniem</string>
     <string name="adb_pairing_tutorial_content_notification">Powiadomienie od Shizuku pomoże ci ukończyć parowanie.</string>
-    <string name="adb_pairing_tutorial_content_steps">Wejdź w \"Opcje programisty\" -> \"Debugowanie bezprzewodowe\". Dotknij \"Sparuj urządzenie przy pomocy kodu parowania\", a zobaczysz 6-cyfrowy kod.</string>
+    <string name="adb_pairing_tutorial_content_steps">Wejdź w \"Opcje programisty\" -&gt; \"Debugowanie bezprzewodowe\". Dotknij \"Sparuj urządzenie przy pomocy kodu parowania\", a zobaczysz 6-cyfrowy kod.</string>
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Wpisz kod w powiadomieniu, aby zakończyć parowanie.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proces parowania wymaga interakcji z powiadomieniem od Shizuku. Zezwol Shizuku na wyświetlanie powiadomień.</string>
-    <string name="adb_pairing_tutorial_content_miui">Użytkownicy MIUI mogą potrzebować zmiany stylu powiadomień na \"Android\" w ustawieniach systemu (Powiadomienia -> Styl powiadomień).</string>
+    <string name="adb_pairing_tutorial_content_miui">Użytkownicy MIUI mogą potrzebować zmiany stylu powiadomień na \"Android\" w ustawieniach systemu (Powiadomienia -&gt; Styl powiadomień).</string>
     <string name="adb_pairing_tutorial_content_miui_2">W przeciwnym razie wpisanie kodu parowania z powiadomienia może nie być możliwe.</string>
     <string name="adb_pairing_tutorial_content_left_is_clickable">Pamiętaj, że lewa część opcji \"Debugowanie bezprzewodowe\" jest klikalna, dotknięcie jej otworzy nową stronę. Samo włączenie przełącznika po prawej stronie jest nieprawidłowe.</string>
     <string name="adb_pairing_tutorial_content_finish">Wróć do Shizuku i uruchom usługę.</string>
