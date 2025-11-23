@@ -15,13 +15,34 @@ object ShizukuStateMachine {
     private var state = AtomicReference<State>(State.STOPPED)
     private val listeners = CopyOnWriteArrayList<(State) -> Unit>()
 
+    init {
+        Shizuku.addBinderReceivedListenerSticky(
+            Shizuku.OnBinderReceivedListener { set(State.RUNNING) }
+        )
+        Shizuku.addBinderDeadListener(
+            Shizuku.OnBinderDeadListener { setDead() }
+        )
+    }
+
     fun get(): State = state.get()
 
-    fun set(newState: State) {
-        if (newState == get()) return
-        state.set(newState)
-        listeners.forEach { it(newState) }
-        Log.d("ShizukuStateMachine", newState.toString())
+    private fun transition(transform: (State) -> State) {
+        val oldState = state.getAndUpdate(transform)
+        val newState = transform(oldState)
+        if(oldState != newState) {
+            listeners.forEach { it(newState) }
+            Log.d("ShizukuStateMachine", newState.toString())
+        }
+    }
+
+    fun set(newState: State) = transition { newState }
+
+    fun setDead() = transition {
+        when (it) {
+            State.RUNNING -> State.CRASHED
+            State.STOPPING -> State.STOPPED
+            else -> it
+        }
     }
 
     fun update(): State {
@@ -32,6 +53,10 @@ object ShizukuStateMachine {
 
     fun isRunning(): Boolean {
         return get() == State.RUNNING
+    }
+
+    fun isDead(): Boolean {
+        return (get() == State.STOPPED || get() == State.CRASHED) 
     }
 
     fun addListener(listener: (State) -> Unit) {
@@ -48,6 +73,5 @@ object ShizukuStateMachine {
         addListener(listener)
         awaitClose { removeListener(listener) }
     }
-
 
 }

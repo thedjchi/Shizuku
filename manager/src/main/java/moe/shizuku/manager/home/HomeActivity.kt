@@ -42,18 +42,11 @@ abstract class HomeActivity : AppBarActivity() {
     private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
 
     private val stateListener: (ShizukuStateMachine.State) -> Unit = {
-        when (it) {
-            ShizukuStateMachine.State.RUNNING -> {
-                checkServerStatus()
-                appsModel.load()
-            }
-            ShizukuStateMachine.State.STOPPED -> {
-                checkServerStatus()
-            }
-            ShizukuStateMachine.State.CRASHED -> {
-                checkServerStatus()
-            }
-            else -> {}
+        if (ShizukuStateMachine.isRunning()) {
+            checkServerStatus()
+            appsModel.load()
+        } else if (ShizukuStateMachine.isDead()) {
+            checkServerStatus()
         }
     }
 

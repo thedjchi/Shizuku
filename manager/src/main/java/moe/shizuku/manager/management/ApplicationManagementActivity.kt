@@ -22,10 +22,9 @@ class ApplicationManagementActivity : AppBarActivity() {
     private val viewModel by appsViewModel()
     private val adapter = AppsAdapter()
 
-    private val binderDeadListener = Shizuku.OnBinderDeadListener {
-        if (!isFinishing) {
+    private val stateListener: (ShizukuStateMachine.State) -> Unit = {
+        if (ShizukuStateMachine.isDead() && !isFinishing)
             finish()
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,13 +69,12 @@ class ApplicationManagementActivity : AppBarActivity() {
             }
         })
 
-        Shizuku.addBinderDeadListener(binderDeadListener)
+        ShizukuStateMachine.addListener(stateListener)
     }
 
     override fun onDestroy() {
+        ShizukuStateMachine.removeListener(stateListener)
         super.onDestroy()
-
-        Shizuku.removeBinderDeadListener(binderDeadListener)
     }
 
     override fun onResume() {
