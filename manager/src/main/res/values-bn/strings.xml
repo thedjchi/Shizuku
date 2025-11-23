@@ -1,12 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home_adb_dialog_view_command_copy_button">নকল</string>
-    <string name="home_adb_button_view_command">কমান্ড প্রদর্শন করুন</string>
-    <string name="home_adb_button_view_help">সহযোগিতা নিন</string>
-    <string name="home_adb_title">একটি কম্পিউটার এ সংযোগ প্রদানের মাধ্যমে শুরু করুন</string>
-    <string name="home_status_service_version_update">সংস্করণ %2$s, %1$s&lt;br&gt; %3$s সংস্করণে নবায়ন করতে আবার শুরু করুন</string>
-    <string name="home_status_service_version">সংস্করণ %2$s, %1$s</string>
-    <string name="home_status_service_not_running">%1$s চলছে না</string>
+    <!-- To translators: you can leave your here -->
+    <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s চলমান</string>
-    <string name="translation_contributors">অনুবাদকগণ</string>
+    <string name="home_status_service_not_running">%1$s চলছে না</string>
+    <string name="home_status_service_version">সংস্করণ %2$s, %1$s</string>
+    <string name="home_status_service_version_update"><![CDATA[সংস্করণ %2$s, %1$s&lt;br&gt; %3$s সংস্করণে নবায়ন করতে আবার শুরু করুন]]></string>
+    <!-- Home - Adb -->
+    <string name="home_adb_title"><![CDATA[একটি কম্পিউটার এ সংযোগ প্রদানের মাধ্যমে শুরু করুন]]></string>
+    <string name="home_adb_description"><![CDATA[রুট ছাড়া ডিভাইসগুলির জন্য, শিজুকু শুরু করতে আপনাকে adb ব্যবহার করতে হবে (কম্পিউটার সংযোগ প্রয়োজন)। প্রতিবার ডিভাইসটি পুনঃশুরু করার সময় এই প্রক্রিয়াটি পুনরাবৃত্তি করা প্রয়োজন। অনুগ্রহ করে <b><a href=\"%1$s\">সাহায্য পড়ুন</a></b>.]]></string>
+    <string name="home_adb_button_view_help">সহযোগিতা নিন</string>
+    <string name="home_adb_button_view_command">কমান্ড প্রদর্শন করুন</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* আরও কিছু বিবেচনা রয়েছে, দয়া করে নিশ্চিত করুন যে আপনি প্রথমে সাহায্যটি পড়েছেন।]]></string>
+    <string name="home_adb_dialog_view_command_copy_button">নকল</string>
+    <string name="home_adb_dialog_view_command_button_send">প্রেরণ</string>
+    <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[ওয়্যারলেস ডিবাগিংয়ের মাধ্যমে শুরু করুন]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[অ্যান্ড্রয়েড 11 বা তার উপরে, আপনি ওয়্যারলেস ডিবাগিং সক্ষম করতে পারেন এবং কম্পিউটারের সাথে সংযোগ না করেই সরাসরি আপনার ডিভাইস থেকে শিজুকু শুরু করতে পারেন।<p>দয়া করে প্রথমে ধাপে ধাপে গাইডটি দেখুন।]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[অ্যান্ড্রয়েড 11 এর আগে, ওয়্যারলেস ডিবাগিং সক্ষম করতে কম্পিউটারের সাথে সংযোগ করা প্রয়োজন।]]></string>
+    <string name="home_wireless_adb_view_guide_button">ধাপে ধাপে গাইড</string>
+    <!-- Adb -->
+    <string name="dialog_adb_discovery">ওয়্যারলেস ডিবাগিং পরিষেবা অনুসন্ধান করা হচ্ছে</string>
+    <string name="dialog_adb_discovery_message">দয়া করে \"বিকাশকারী বিকল্পগুলিতে\" \"ওয়্যারলেস ডিবাগিং\" সক্ষম করুন। নেটওয়ার্ক পরিবর্তন হলে \"ওয়্যারলেস ডিবাগিং\" স্বয়ংক্রিয়ভাবে অক্ষম হয়।\n\nদ্রষ্টব্য, \"বিকাশকারী বিকল্পগুলি\" বা \"ইউএসবি ডিবাগিং\" অক্ষম করবেন না, বা শিজুকু বন্ধ হয়ে যাবে।</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">যদি এটি অনুসন্ধান চালিয়ে যায় তবে দয়া করে \"ওয়্যারলেস ডিবাগিং\" অক্ষম এবং সক্ষম করার চেষ্টা করুন।</string>
+    <string name="dialog_adb_port">পোর্ট</string>
+    <string name="dialog_adb_invalid_port">পোর্ট 1 থেকে 65535 পর্যন্ত একটি পূর্ণসংখ্যা।</string>
+    <string name="adb_pairing">জোড় বাঁধা</string>
+    <string name="dialog_adb_pairing_title">ডিভাইসের সাথে জোড় বাঁধুন</string>
+    <string name="dialog_adb_pairing_discovery">জোড় বাঁধার পরিষেবা অনুসন্ধান করা হচ্ছে</string>
+    <string name="dialog_adb_pairing_paring_code">জোড় বাঁধা কোড</string>
+    <string name="paring_code_is_wrong">জোড় বাঁধার কোড ভুল।</string>
+    <string name="cannot_connect_port">ওয়্যারলেস ডিবাগিং পরিষেবাতে সংযোগ করা যাচ্ছে না।</string>
+    <string name="dialog_wireless_adb_not_enabled">ওয়্যারলেস ডিবাগিং সক্ষম নেই।\nনোট করুন, অ্যান্ড্রয়েড 11 এর আগে, ওয়্যারলেস ডিবাগিং সক্ষম করার জন্য, কম্পিউটার সংযোগ আবশ্যক।</string>
+    <string name="dialog_usb_debugging_not_enabled">ইউএসবি ডিবাগিং সক্ষম নেই।\nদয়া করে এটি \"বিকাশকারী বিকল্পগুলিতে\" সক্ষম করুন।</string>
+    <string name="dialog_adb_pairing_message">অনুগ্রহ করে নিম্নলিখিত পদক্ষেপগুলি সম্পাদন করে জোড় বাঁধা শুরু করুন: \"বিকাশকারী বিকল্পগুলি\" - \"ওয়্যারলেস ডিবাগিং\" - \"জোড় বাঁধার কোডের সাথে ডিভাইসটি জোড় বাড়ান\"।\n\nজোড় বাঁধার প্রক্রিয়া শুরু হওয়ার পরে, আপনি জোড় বাঁধার কোডটি ইনপুট করতে সক্ষম হবেন।</string>
+    <string name="dialog_adb_pairing_accessibility_enable">জোড় বাঁধার প্রক্রিয়া শুরু করতে দয়া করে অ্যাক্সেসযোগ্যতা পরিষেবাটি সক্ষম করুন। এটি শিজুকুকে জোড় কোডটি সনাক্ত করতে দেয়।\n\nকোডটি খুঁজে পেলে বা শক্তি সাশ্রয় করতে 1 মিনিট পরে অ্যাক্সেসযোগ্যতার পরিষেবাটি বন্ধ হবে।</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">অনুগ্রহ করে \"বিকাশকারী বিকল্পগুলিতে\" নেভিগেট করুন &gt; \"ওয়্যারলেস ডিবাগিং\" &gt; জোড় বাঁধার কোডের সাথে ডিভাইসটি জোড় বাঁধুন। শিজুকু স্বয়ংক্রিয়ভাবে জোড় বাঁধার কোডটি সনাক্ত করবে।</string>
+    <string name="adb_pairing_requires_multi_window">দয়া করে প্রথমে স্প্লিট-স্ক্রীন (মাল্টি-উইন্ডো) মোডে প্রবেশ করুন।</string>
+    <string name="adb_pairing_requires_multi_window_reason">সিস্টেমের জন্য জোড় বাঁধার ডায়ালগটি সর্বদা দৃশ্যমান হওয়া প্রয়োজন, স্প্লিট-স্ক্রিন মোড ব্যবহার করা এই অ্যাপ্লিকেশন এবং সিস্টেম ডায়ালগকে একই সময়ে দৃশ্যমান করার একমাত্র উপায়।</string>
+    <string name="adb_error_key_store">ওয়্যারলেস ডিবাগিংয়ের জন্য কী তৈরি করতে অক্ষম।\nএটি হতে পারে কারণ এই ডিভাইসের কীস্টোর প্রক্রিয়াটি ভেঙে গেছে।</string>
+    <string name="adb_error_stop_tcp">টিসিপির মাধ্যমে এডিবি থামাতে ব্যর্থ হয়েছে</string>
+    <string name="adb_pair_required">দয়া করে প্রথমে জোড় বাঁধার পদক্ষেপটি দেখুন।</string>
+    <string name="enable">সক্ষম</string>
+    <string name="development_settings">ডেভেলপার অপশন</string>
+    <string name="notification_settings">বিজ্ঞপ্তি অপশন</string>
+    <string name="adb_pairing_tutorial_title">আপনার ডিভাইসের সাথে শিজুকু জোড় বাঁধুন</string>
+    <string name="adb_pairing_tutorial_content_notification">শিজুকু থেকে একটি বিজ্ঞপ্তি আপনাকে জোড় বাঁধা সম্পূর্ণ করতে সহায়তা করবে।</string>
+    <string name="adb_pairing_tutorial_content_steps">\"বিকাশকারী বিকল্পগুলি\" - \"ওয়্যারলেস ডিবাগিং\" লিখুন। \"জোড় বাঁধার কোডের সাথে ডিভাইস জোড়\" আলতো চাপুন, আপনি একটি ছয়-সংখ্যার কোড দেখতে পাবেন।</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">জোড় বাঁধা সম্পূর্ণ করতে বিজ্ঞপ্তিতে কোডটি লিখুন।</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">জোড় বাঁধার প্রক্রিয়াটির জন্য আপনাকে শিজুকু থেকে একটি বিজ্ঞপ্তির সাথে ইন্টারঅ্যাক্ট করতে হবে। অনুগ্রহ করে শিজুকুকে বিজ্ঞপ্তিগুলি পোস্ট করার অনুমতি দিন।</string>
+    <string name="adb_pairing_tutorial_content_miui">এমআইইউআই ব্যবহারকারীদের সিস্টেম সেটিংসে \"বিজ্ঞপ্তি\" - \"বিজ্ঞপ্তি শেড\" থেকে \"অ্যান্ড্রয়েড\" এ বিজ্ঞপ্তি শৈলী স্যুইচ করতে হতে পারে।</string>
+    <string name="adb_pairing_tutorial_content_miui_2">অন্যথায়, আপনি বিজ্ঞপ্তি থেকে প্যারিং কোড প্রবেশ করতে সক্ষম নাও হতে পারেন।</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">দয়া করে মনে রাখবেন, \"ওয়্যারলেস ডিবাগিং\" বিকল্পের বাম অংশটি ক্লিকযোগ্য, এটি আলতো চাপলে একটি নতুন পৃষ্ঠা খুলবে। কেবল ডানদিকের সুইচটিতে টুরিং করা ভুল।</string>
+    <string name="adb_pairing_tutorial_content_finish">শিজুকুতে ফিরে যান এবং শিজুকু শুরু করুন।</string>
+    <string name="adb_pairing_tutorial_content_network">শিজুকুকে স্থানীয় নেটওয়ার্ক অ্যাক্সেস করতে হবে। এটি নেটওয়ার্ক অনুমতি দ্বারা নিয়ন্ত্রিত হয়।</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">কিছু সিস্টেম (যেমন এমআইইউআই) অ্যাপ্লিকেশনগুলিকে দৃশ্যমান না হলে নেটওয়ার্ক অ্যাক্সেস করার অনুমতি দেয় না, এমনকি অ্যাপটি স্ট্যান্ডার্ড হিসাবে ফোরগ্রাউন্ড পরিষেবা ব্যবহার করলেও সেগুলি। অনুগ্রহ করে এই ধরনের সিস্টেমে শিজুকুর জন্য ব্যাটারি অপ্টিমাইজেশন বৈশিষ্ট্যগুলি অক্ষম করুন।</string>
+    <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[শুরু করুন (রুট করা ডিভাইসগুলির জন্য)]]></string>
+    <string name="home_root_description"><![CDATA[উপরন্তু, শিজুকু বুটে স্বয়ংক্রিয়ভাবে চালু করা যেতে পারে। যদি তা না হয় তবে দয়া করে পরীক্ষা করে দেখুন যে আপনার সিস্টেম বা তৃতীয় পক্ষের সরঞ্জামগুলি শিজুকুকে সীমাবদ্ধ করেছে কিনা।<br>আপনি উল্লেখ করতে পারেন %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[আপনি যদি ম্যাজিস্ক ব্যবহার করেন তবে আপনি চেষ্টা করতে পারেন %1$s. রুট ব্যবহারকারীদের জন্য, এটি শেষ পর্যন্ত শিজুকুকে প্রতিস্থাপন করবে। দ্রষ্টব্য, বিদ্যমান অ্যাপ্লিকেশনগুলি ব্যবহার করার জন্য কিছুটা পরিবর্তন করা দরকার %2$s.]]></string>
+    <string name="home_root_button_start">সূচনা</string>
+    <string name="home_root_button_restart">পুনর্সূচনা</string>
+    <!-- Home - Application management -->
+    <string name="home_app_management_title">অ্যাপ্লিকেশন ব্যবস্থাপনা</string>
+    <plurals name="home_app_management_authorized_apps_count">
+        <item quantity="one"><![CDATA[অনুমোদিত %d প্রয়োগ]]></item>
+        <item quantity="other"><![CDATA[অনুমোদিত %d প্রয়োগ]]></item>
+    </plurals>
+    <string name="home_app_management_view_authorized_apps"><![CDATA[অনুমোদিত অ্যাপগুলি পরিচালনা করতে ট্যাপ করুন]]></string>
+    <string name="home_app_management_empty">যে অ্যাপগুলি শিজুকু অনুমতির অনুরোধ করেছে বা ঘোষণা করেছে সেগুলি এখানে প্রদর্শিত হবে।</string>
+    <!-- Home - Learn more -->
+    <string name="home_learn_more_title">শিজুকু শিখুন</string>
+    <string name="home_learn_more_description">শিজুকুর সাথে কীভাবে বিকাশ করতে হয় তা শিখুন</string>
+    <!-- Home - Adb permissions limited -->
+    <string name="home_adb_is_limited_title">আপনাকে একটি অতিরিক্ত পদক্ষেপ নিতে হবে</string>
+    <string name="home_adb_is_limited_description">আপনার ডিভাইস প্রস্তুতকারক adb অনুমতিগুলি সীমাবদ্ধ করেছে এবং শিজুকু ব্যবহার করে অ্যাপগুলি যথাযথভাবে কাজ করবে না।\n\nসাধারণত, \"বিকাশকারী বিকল্পগুলিতে\" কিছু বিকল্প সামঞ্জস্য করে এই সীমাবদ্ধতা তুলে নেওয়া যেতে পারে। এটি কীভাবে করবেন সে সম্পর্কে বিশদের জন্য দয়া করে সহায়তা পড়ুন।\n\nঅপারেশনটি কার্যকর হওয়ার জন্য আপনাকে শিজুকু পুনরায় চালু করতে হতে পারে।</string>
+    <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">এডিবির অনুমতি সীমিত</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[এটি অত্যন্ত সম্ভব যে আপনার ডিভাইস প্রস্তুতকারক adb এর অনুমতি সীমাবদ্ধ করে।<p>আপনার সিস্টেমের জন্য একটি সমাধান থাকতে পারে <b><a href=\"%1$s\">এই নথি</a></b>.]]></string>
+    <string name="app_management_item_summary_requires_root">* শিজুকু রুট দিয়ে রান করা প্রয়োজন</string>
+    <string name="app_management_toggle_all">সব টগল করুন</string>
+    <!-- Terminal -->
+    <string name="home_terminal_title">টার্মিনাল অ্যাপগুলিতে শিজুকু ব্যবহার করুন</string>
+    <string name="home_terminal_description">আপনার পছন্দসই টার্মিনাল অ্যাপগুলিতে শিজুকুর মাধ্যমে আদেশগুলি চালান</string>
+    <string name="terminal_tutorial_1">প্রথমত, আপনি যে কোনও জায়গায় ফাইল রফতানি করুন। আপনি দুটি ফাইল পাবেন, %1$s এবং %2$s.</string>
+    <string name="terminal_tutorial_1_description">যদি নির্বাচিত ফোল্ডারে একই নামের ফাইল থাকে তবে সেগুলি মুছে ফেলা হবে।\n\nএক্সপোর্ট ফাংশনটি এসএএফ (স্টোরেজ অ্যাক্সেস ফ্রেমওয়ার্ক) ব্যবহার করে। জানা গেছে যে এমআইইউআই এসএএফের ফাংশনগুলি ভেঙে দেয়। আপনি যদি এমআইইউআই ব্যবহার করেন তবে আপনাকে শিজুকুর এপিকে থেকে ফাইলটি বের করতে হতে পারে বা গিটহাব থেকে ডাউনলোড করতে হতে পারে।</string>
+    <string name="terminal_export_files">ফাইল রপ্তানি করুন</string>
+    <string name="terminal_tutorial_2">তারপরে, খুলতে এবং সম্পাদনা করতে যে কোনও পাঠ্য সম্পাদক ব্যবহার করুন %1$s.</string>
+    <string name="terminal_tutorial_2_description">উদাহরণস্বরূপ, আপনি যদি শিজুকু ব্যবহার করতে চান %1$s, আপনার প্রতিস্থাপন করা উচিত %2$s সাথে %3$s (%4$s এর প্যাকেজের নাম %1$s).</string>
+    <string name="terminal_tutorial_3">অবশেষে, ফাইলগুলি এমন কোথাও স্থানান্তরিত করুন যেখানে আপনার টার্মিনাল অ্যাপ্লিকেশনটি অ্যাক্সেস করতে পারে, আপনি ব্যবহার করতে সক্ষম হবেন %1$s শিজুকুর মাধ্যমে কমান্ড চালানোর জন্য।</string>
+    <string name="terminal_tutorial_3_description">কিছু টিপস: কার্যকর করার অনুমতি দিন %1$s এবং এটি যোগ করুন %2$s, আপনি ব্যবহার করতে সক্ষম হবেন %1$s সরাসরি।</string>
+    <string name="rish_description"><![CDATA[সাথে %1$s, যে কোনও টার্মিনাল অ্যাপ্লিকেশনে, আপনি শিজুকু দ্বারা চালিত শেলের সাথে সংযোগ করতে এবং ইন্টারঅ্যাক্ট করতে পারেন।
+<p>বিস্তারিত ব্যবহার সম্পর্কে %1$s, নথিটি দেখতে আলতো চাপুন।
+    ]]></string>
+    <!-- Settings -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="settings_behavior">আচরণ</string>
+    <string name="settings_start_on_boot">বুটে শুরু করুন</string>
+    <string name="settings_start_on_boot_summary">অ্যান্ড্রয়েড 11+ বা রুট প্রয়োজন</string>
+    <string name="settings_use_system_color">সিস্টেম থিমের রঙ ব্যবহার করুন</string>
+    <string name="settings_watchdog">ওয়াচডগ</string>
+    <string name="settings_watchdog_summary">শিজুকু বন্ধ হয়ে গেলে স্বয়ংক্রিয়ভাবে এটি পুনরায় চালু করুন</string>
+    <string name="settings_tcp_mode">টিসিপি মোড</string>
+    <string name="settings_tcp_mode_summary">"ওয়াই-ফাই ছাড়াই শিজুকুকে পুনঃশুরু করার অনুমতি দেয়। (শিজুকু অবশ্যই রিবুট হওয়ার পর থেকে একবার শুরু করেছে)"</string>
+    <string name="settings_tcp_mode_dialog_title">পুনরায় শুরু করা আবশ্যক</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[এই সেটিংটি প্রয়োগ করার জন্য শিজুকুকে পুনরায় চালু করতে হবে।<br><br><b>শিজুকু চলমান অবিরত থাকবে এবং পুনঃশুরু করার আগে একটি Wi-Fi সংযোগের জন্য অপেক্ষা করবে।</b>]]></string>
+    <string name="settings_tcp_port">TCP পোর্ট</string>
+    <string name="settings_tcp_port_deafult">ডিফল্ট (5555)</string>
+    <string name="settings_tcp_port_hint">ডিফল্ট ব্যবহার করতে ফাঁকা রাখুন (5555)</string>
+    <string name="settings_tcp_learn_more">শিজুকু নিয়ন্ত্রণ করতে অটোমেশন অ্যাপগুলি ব্যবহার করা সম্পর্কে আরও জানুন</string>
+    <string name="settings_language">ভাষা</string>
+    <string name="settings_translation_contributors">অনুবাদ অবদানকারী</string>
+    <string name="settings_translation">অনুবাদে অংশগ্রহণ করুন</string>
+    <string name="settings_translation_summary">অনুবাদ করতে আমাদের সাহায্য করুন %s আপনার ভাষায়</string>
+    <string name="settings_user_interface">উপস্থিতি</string>
+    <string name="settings_black_night_theme">ব্ল্যাক নাইট থিম</string>
+    <string name="settings_black_night_theme_summary">নাইট মোড সক্ষম থাকলে খাঁটি কালো থিমটি ব্যবহার করুন</string>
+    <string name="settings_support">সমর্থন</string>
+    <string name="settings_help">সহায়তা</string>
+    <string name="settings_report_bug">একটি বাগ রিপোর্ট করুন</string>
+    <string name="settings_advanced">উন্নত</string>
+    <string name="settings_legacy_pairing">উত্তরাধিকার জুটি</string>
+    <string name="settings_legacy_pairing_summary">কোনও বিজ্ঞপ্তির পরিবর্তে একটি ডায়ালগে জোড় বাঁধার কোডটি লিখুন</string>
+    <!-- Snackbar -->
+    <string name="snackbar_invalid_port">পোর্ট অবশ্যই 1 এবং 65535 এর মধ্যে হতে হবে</string>
+    <string name="snackbar_battery_optimization_home">সঠিকভাবে কাজ করার জন্য বুট/ওয়াচডগ শুরু করার জন্য ব্যাটারি অপটিমাইজেশন অবশ্যই অক্ষম করতে হবে।</string>
+    <string name="snackbar_battery_optimization_settings">এই বৈশিষ্ট্যটি ব্যবহার করতে দয়া করে ব্যাটারি অপ্টিমাইজেশন অক্ষম করুন।</string>
+    <string name="snackbar_action_fix">সমাধান</string>
+    <!-- Toast -->
+    <string name="toast_no_email_app">কোনও ইমেল অ্যাপ খুঁজে পাওয়া যায়নি</string>
+    <string name="toast_shizuku_already_starting">শিজুকু ইতিমধ্যে ব্যাকগ্রাউন্ডে শুরু হচ্ছে</string>
+    <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">থীম</string>
+    <string name="dark_theme_off">সর্বদা হালকা</string>
+    <string name="dark_theme_on">সর্বদা অন্ধকার</string>
+    <!-- About -->
+    <string name="action_about">সম্বন্ধে</string>
+    <string name="about_dialog_button_close">বন্ধ</string>
+    <string name="about_view_source_code"><![CDATA[এখানে সোর্স কোড দেখুন %s]]></string>
+    <!-- Stop -->
+    <string name="action_stop">শিজুকু বন্ধ করুন</string>
+    <string name="dialog_stop_message">শিজুকু পরিষেবা বন্ধ হয়ে যাবে।</string>
+    <!-- Notification -->
+    <string name="notification_channel_service_status">পরিষেবা শুরুর অবস্থা</string>
+    <string name="notification_service_starting">শিজুকু পরিষেবা শুরু হচ্ছে…</string>
+    <string name="notification_service_start_failed">Shizuku পরিষেবা শুরু করতে ব্যর্থ হয়েছে।</string>
+    <string name="notification_service_start_no_root">রুট অনুমতির অনুরোধ করতে ব্যর্থ হয়েছে।</string>
+    <string name="notification_working">কাজ…</string>
+    <string name="notification_channel_adb_pairing">ওয়্যারলেস ডিবাগিং জোড় বাঁধা</string>
+    <string name="notification_adb_pairing_input_paring_code">জোড় বাঁধার কোড লিখুন</string>
+    <string name="notification_adb_pairing_searching_for_service_title">জোড় বাঁধার পরিষেবা অনুসন্ধান করা হচ্ছে</string>
+    <string name="notification_adb_pairing_service_found_title">জোড় বাঁধার পরিষেবা খুঁজে পাওয়া গেছে</string>
+    <string name="notification_adb_pairing_stop_searching">অনুসন্ধান বন্ধ করুন</string>
+    <string name="notification_adb_pairing_working_title">জোড় বাঁধা চলছে</string>
+    <string name="notification_adb_pairing_succeed_title">জুটি বাঁধা সফল</string>
+    <string name="notification_adb_pairing_succeed_text">আপনি এখন শিজুকু পরিষেবা শুরু করতে পারেন।</string>
+    <string name="notification_adb_pairing_failed_title">জোড় বাঁধা ব্যর্থ হয়েছে</string>
+    <string name="notification_adb_pairing_retry">পুনঃচেষ্টা</string>
+    <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">শিজুকু অ্যাক্সেস করুন</string>
+    <string name="permission_description">অ্যাপটিকে শিজুকু ব্যবহার করার অনুমতি দিন।</string>
+    <string name="permission_warning_template"><![CDATA[মঞ্জুরি <b>%1$s</b> করতে %2$s?]]></string>
+    <string name="grant_dialog_button_allow_always">সব সময় অনুমতি দিন</string>
+    <string name="grant_dialog_button_deny">"অস্বীকার"</string>
+    <!-- Starter -->
+    <string name="starter">স্টার্টার</string>
+    <string name="start_with_root_failed">রুট অনুমতি মঞ্জুর না হওয়ার কারণে বা এই ডিভাইসটি রুট না থাকার কারণে পরিষেবা শুরু করা যাচ্ছে না।</string>
+    <!-- WADB Starter -->
+    <string name="wadb_notification_title">শিজুকু শুরু করা…</string>
+    <string name="wadb_notification_wifi_required">অগ্রসর হওয়ার আগে Wi-Fi সংযোগের জন্য অপেক্ষা করছে</string>
+    <string name="wadb_notification_wifi_found">ওয়াই-ফাই পাওয়া গেছে। অগ্রসর হচ্ছে</string>
+    <string name="wadb_error_title">বুট শুরু করার সময় ত্রুটি</string>
+    <string name="wadb_error_notify_dev">বিকাশকারীকে বিজ্ঞাপিত করতে ট্যাপ করুন।</string>
+    <string name="wadb_error_send_email">একটি ইমেইল পাঠান</string>
+    <string name="wadb_permission_error_notification_title">অনুমতি ত্রুটি</string>
+    <string name="wadb_permission_error_notification_content">বুটে শুরু করার জন্য শিজুকুর WRITE_SECURE_SETTINGS প্রয়োজন। এটি কীভাবে মঞ্জুর করতে হয় তা শিখতে ট্যাপ করুন।</string>
+    <string name="wadb_notification_channel">এডিবি অটো-স্টার্ট সার্ভিস</string>
+    <!-- Watchdog -->
+    <string name="watchdog_running">ওয়াচডগ চলছে</string>
+    <string name="watchdog_shizuku_crashed_title">শিজুকু সম্প্রতি ক্র্যাশ হয়েছে</string>
+    <string name="watchdog_shizuku_crashed_text">ওয়াচডগ পরিষেবাটি পুনরায় চালু করেছে। ভবিষ্যতের ক্র্যাশগুলি প্রতিরোধ করতে সম্ভাব্য সংশোধনগুলি সম্বন্ধে জানতে ট্যাপ করুন।</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">সতর্কতাগুলি বন্ধ করুন</string>
+    <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">ব্রাউজার শুরু করা যাচ্ছে না</string>
+    <string name="toast_copied_to_clipboard">%s\nক্লিপবোর্ডে অনুলিপি করা হয়েছে।</string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> ক্লিপবোর্ডে অনুলিপি করা হয়েছে।]]></string>
+    <string name="accessibility_service_description">ডিভাইসগুলির জন্য জোড় বাঁধা সমর্থন সরবরাহ করে (যেমন, অ্যান্ড্রয়েড 14+ চালিত টিভিগুলি) যেখানে বিজ্ঞপ্তিগুলি বা বিভাজন স্ক্রিন ব্যবহার করা যায় না।\n\nওয়্যারলেস ডিবাগিং পেয়ারিং স্ক্রিন থেকে জোড় বাঁধার কোডটি বের করতে শিজুকুকে সক্ষম করে। জোড় বাঁধার কোডটি একবার খুঁজে পাওয়া গেলে এটি নিজেকে অক্ষম করবে।</string>
+    <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">%1$s আধুনিক শিজুকু সমর্থন করে না</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[উত্তরাধিকার শিজুকু মার্চ 2019 থেকে বাতিল করা হয়েছে। এছাড়াও, উত্তরাধিকার শিজুকু নতুন অ্যান্ড্রয়েড সিস্টেমে কাজ করে না।<p>অনুগ্রহ করে এর বিকাশকারীকে জিজ্ঞাসা করুন <b>%1$s</b> আপডেট করার জন্য।]]></string>
+    <string name="dialog_requesting_legacy_title">%1$s উত্তরাধিকার শিজুকুর অনুরোধ করছেন</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> আধুনিক শিজুকু সমর্থন রয়েছে, তবে এটি উত্তরাধিকার শিজুকুর অনুরোধ করছে। এটি হতে পারে কারণ শিজুকু চলছে না, দয়া করে শিজুকু অ্যাপে চেক করুন।<p>উত্তরাধিকার শিজুকু মার্চ 2019 থেকে বাতিল করা হয়েছে।]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">শিজুকু খুলুন</string>
+    <string name="wadb_notification_attempt_now">এখনই চেষ্টা করুন</string>
 </resources>

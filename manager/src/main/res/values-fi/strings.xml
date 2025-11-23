@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- To translators: you can leave your here -->
+    <!-- Home - Status -->
+    <string name="home_status_service_is_running">%1$s on käynnissä</string>
+    <string name="home_status_service_not_running">%1$s ei juokse</string>
+    <string name="home_status_service_version">Versio %2$s, %1$s</string>
+    <string name="home_status_service_version_update"><![CDATA[Versio %2$s, %1$s<br>Aloita uudelleen päivittääksesi version %3$s]]></string>
+    <!-- Home - Adb -->
+    <string name="home_adb_title"><![CDATA[Aloita yhdistämällä tietokoneeseen]]></string>
+    <string name="home_adb_description"><![CDATA[Laitteille, joilla ei ole rootia, sinun täytyy käyttää adb:tä Shizukun käynnistämiseen (vaatii tietokoneyhteyden). Tämä prosessi täytyy toistaa aina, kun laite käynnistetään uudelleen. Anteeksi <b><a href=\"%1$s\">Lue apua</a></b>.]]></string>
+    <string name="home_adb_button_view_help">Lue apua</string>
+    <string name="home_adb_button_view_command">Näytä komento</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* On muitakin huomioita, vahvista ensin, että olet lukenut ohjeen.]]></string>
+    <string name="home_adb_dialog_view_command_copy_button">Kopioida</string>
+    <string name="home_adb_dialog_view_command_button_send">Lähettää</string>
+    <!-- Home - Wireless Adb -->
+    <string name="home_wireless_adb_title"><![CDATA[Aloita langattomalla debuggauksella]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Android 11:llä tai uudemmilla voit ottaa langattoman debuggauksen käyttöön ja käynnistää Shizukun suoraan laitteelta, ilman että sinun tarvitsee yhdistää tietokoneeseen.<p>Katso ensin vaiheittaiset ohjeet.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Ennen Android 11:tä langattoman virheenkorjauksen mahdollistamiseksi vaadittiin tietokoneeseen yhdistäminen.]]></string>
+    <string name="home_wireless_adb_view_guide_button">Vaiheittainen opas</string>
+    <!-- Adb -->
+    <string name="dialog_adb_discovery">Langattoman virheenkorjauspalvelun etsiminen</string>
+    <string name="dialog_adb_discovery_message">Ota käyttöön \"Langaton debugging\" kohdassa \"Kehittäjäasetukset\". \"Langaton virheenkorjaus\" poistetaan automaattisesti käytöstä, kun verkko muuttuu.\n\nHuomaa, älä poista käytöstä \"Kehittäjäasetukset\" tai \"USB-debugging\" -toimintoja, muuten Shizuku pysäytetään.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Yritä poistaa käytöstä ja ottaa käyttöön \"Langaton debuggaus\", jos se jatkaa etsintää.</string>
+    <string name="dialog_adb_port">Satama</string>
+    <string name="dialog_adb_invalid_port">Portti on kokonaisluku, joka vaihtelee välillä 1–65535.</string>
+    <string name="adb_pairing">Paritus</string>
+    <string name="dialog_adb_pairing_title">Pari laitteeseen</string>
+    <string name="dialog_adb_pairing_discovery">Etsitään parituspalvelua</string>
+    <string name="dialog_adb_pairing_paring_code">Parituskoodi</string>
+    <string name="paring_code_is_wrong">Parituskoodi on väärä.</string>
+    <string name="cannot_connect_port">En pysty yhdistämään langattomaan virheenkorjauspalveluun.</string>
+    <string name="dialog_wireless_adb_not_enabled">Langaton virheenkorjaus ei ole käytössä.\nHuomaa, että ennen Android 11:tä, langattoman virheenkorjauksen mahdollistamiseksi tietokoneyhteys oli välttämätön.</string>
+    <string name="dialog_usb_debugging_not_enabled">USB-virheenkorjaus ei ole käytössä.\nOta se käyttöön kohdassa \"Kehittäjäasetukset\".</string>
+    <string name="dialog_adb_pairing_message">Aloita parittaminen suorittamalla seuraavat vaiheet: \"Kehittäjäasetukset\" - \"Langaton debugging\" - \"Yhdistä laite parituskoodilla.\"\n\nKun paritusprosessi alkaa, voit syöttää parituskoodin.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Ole hyvä ja ota saavutettavuuspalvelu käyttöön aloittaaksesi paritusprosessin. Tämä mahdollistaa Shizukun tunnistaa parituskoodin.\n\nEsteettömyyspalvelu kytketään pois päältä, kun koodi löytyy, tai minuutin kuluttua energian säästämiseksi.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Siirry kohtaan \"Kehittäjävaihtoehdot\" &gt; \"Langaton virheenkorjaus\" &gt; \"Yhdistä laite parituskoodiin.\" Shizuku tunnistaa automaattisesti parituskoodin.</string>
+    <string name="adb_pairing_requires_multi_window">Siirry ensin jaetun ruudun (moniikkuna) tilaan.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Järjestelmä vaatii, että paritusdialogi on aina näkyvissä, ja jaettu ruututila on ainoa tapa saada tämä sovellus ja järjestelmädialogi näkyviksi samanaikaisesti.</string>
+    <string name="adb_error_key_store">Langattoman virheenkorjauksen avainta ei pysty generoimaan.\nTämä voi johtua siitä, että laitteen KeyStore-mekanismi on rikki.</string>
+    <string name="adb_error_stop_tcp">ADB:n pysäyttäminen TCP:n kautta epäonnistui</string>
+    <string name="adb_pair_required">Käy ensin läpi paritusvaihe.</string>
+    <string name="enable">Ottaa käyttöön</string>
+    <string name="development_settings">Kehittäjävaihtoehdot</string>
+    <string name="notification_settings">Ilmoitusvaihtoehdot</string>
+    <string name="adb_pairing_tutorial_title">Yhdistä Shizuku laitteeseesi</string>
+    <string name="adb_pairing_tutorial_content_notification">Shizukun ilmoitus auttaa sinua täydentämään parituksen.</string>
+    <string name="adb_pairing_tutorial_content_steps">Syötä \"Kehittäjäasetukset\" - \"Langaton virheenkorjaus\". Napauta \"Yhdistä laite parituskoodilla\", näet kuusinumeroisen koodin.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Syötä koodi ilmoitukseen parittelun saamiseksi päätökseen.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Paritusprosessi vaatii, että olet vuorovaikutuksessa Shizukun ilmoituksen kanssa. Sallithan Shizukun lähettää ilmoituksia.</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI:n käyttäjät saattavat joutua vaihtamaan ilmoitustyylin \"Android\"-muotoon \"Notification\" - \"Notification shade\" -asetuksista järjestelmäasetuksista.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Muuten et välttämättä pysty syöttämään paring-koodia ilmoituksesta.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Huomaa, että vasen osa \"Langaton debuggaus\" -vaihtoehdosta on klikattavissa, ja sen napauttaminen avaa uuden sivun. Vain oikeanpuoleisen kytkimen turlaus on virheellinen.</string>
+    <string name="adb_pairing_tutorial_content_finish">Takaisin Shizukuun ja aloitetaan Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizukun täytyy päästä paikalliseen verkkoon. Sitä ohjaa verkon käyttöoikeus.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Jotkut järjestelmät (kuten MIUI) kieltävät sovellusten pääsyn verkkoon, kun ne eivät ole näkyvissä, vaikka sovellus käyttäisi etualan palvelua vakiona. Poista käytöstä akun optimointiominaisuudet Shizukulta tällaisissa järjestelmissä.</string>
+    <!-- Home - Root -->
+    <string name="home_root_title"><![CDATA[Start (rootatuille laitteille)]]></string>
+    <string name="home_root_description"><![CDATA[Lisäksi Shizuku voidaan käynnistää automaattisesti käynnistyksen yhteydessä. Jos ei, tarkista, onko järjestelmäsi tai kolmannen osapuolen työkalut rajoittaneet Shizukua.<br>Voit viitata seuraaviin %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Jos käytät Magiskia, voit kokeilla %1$s. Root-käyttäjille se korvaa lopulta Shizukun. Huomaa, että olemassa olevien sovellusten täytyy muuttua hieman niiden käyttöön %2$s.]]></string>
+    <string name="home_root_button_start">Aloittaa</string>
+    <string name="home_root_button_restart">Käynnistää uudelleen</string>
+    <!-- Home - Application management -->
+    <string name="home_app_management_title">Sovellusten hallinta</string>
+    <plurals name="home_app_management_authorized_apps_count">
+        <item quantity="one"><![CDATA[Valtuutettu %d sovellus]]></item>
+        <item quantity="other"><![CDATA[Valtuutettu %d Sovelluksia]]></item>
+    </plurals>
+    <string name="home_app_management_view_authorized_apps"><![CDATA[Napauta hallitaksesi valtuutettuja sovelluksia]]></string>
+    <string name="home_app_management_empty">Sovellukset, jotka ovat pyytäneet tai ilmoittaneet Shizuku-luvan, näkyvät tässä.</string>
+    <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Opettele Shizuku</string>
+    <string name="home_learn_more_description">Opi kehittymään Shizukun kanssa</string>
+    <!-- Home - Adb permissions limited -->
+    <string name="home_adb_is_limited_title">Sinun täytyy ottaa ylimääräinen askel</string>
+    <string name="home_adb_is_limited_description">Laitevalmistajasi on rajoittanut adb-oikeuksia, eikä Shizukua käyttävät sovellukset toimi kunnolla.\n\nYleensä tämä rajoitus voidaan poistaa säätämällä joitakin asetuksia \"Kehittäjävaihtoehdot\" -osiossa. Lue ohjeet ohjeista, miten tämä tehdään.\n\nSaatat joutua käynnistämään Shizukun uudelleen, jotta operaatio alkaa vaikuttaa.</string>
+    <!-- Application management -->
+    <string name="app_management_dialog_adb_is_limited_title">adb:n lupa on rajoitettu</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[On hyvin mahdollista, että laitevalmistajasi rajoittaa adb:n käyttöoikeuksia.<p>Järjestelmällesi saattaa olla ratkaisu <b><a href=\"%1$s\">Tämä asiakirja</a></b>.]]></string>
+    <string name="app_management_item_summary_requires_root">* vaatii Shizukun juoksuja rootilla</string>
+    <string name="app_management_toggle_all">Kytke kaikki päälle</string>
+    <!-- Terminal -->
+    <string name="home_terminal_title">Käytä Shizukua terminaalisovelluksissa</string>
+    <string name="home_terminal_description">Suorita komentoja Shizukun kautta terminaalisovelluksissa, joista pidät.</string>
+    <string name="terminal_tutorial_1">Ensiksi, vie tiedostot minne tahansa haluat. Löydät kaksi tiedostoa, %1$s ja %2$s.</string>
+    <string name="terminal_tutorial_1_description">Jos valitussa kansiossa on samannimisiä tiedostoja, ne poistetaan.\n\nVientitoiminto käyttää SAF:ia (Storage Access Framework). Raporttien mukaan MIUI rikkoo SAF:n toimintoja. Jos käytät MIUI:ta, saatat joutua purkamaan tiedoston Shizukun apk:sta tai lataamaan GitHubista.</string>
+    <string name="terminal_export_files">Tiedostojen vienti</string>
+    <string name="terminal_tutorial_2">Sitten käytä mitä tahansa tekstieditoria avataksesi ja muokataksesi %1$s.</string>
+    <string name="terminal_tutorial_2_description">Esimerkiksi, jos haluat käyttää Shizukua %1$s, sinun pitäisi korvata %2$s kanssa %3$s (%4$s on paketin nimi %1$s).</string>
+    <string name="terminal_tutorial_3">Lopuksi, siirrä tiedostot paikkaan, johon päätelaitteesi pääsee käsiksi, voit käyttää niitä %1$s käskyjen suorittamiseen Shizukun kautta.</string>
+    <string name="terminal_tutorial_3_description">Vinkkejä: anna suorituslupa %1$s ja lisää se %2$s, voit käyttää %1$s suoraan.</string>
+    <string name="rish_description"><![CDATA[Kanssa %1$s, missä tahansa terminaalisovelluksessa voit yhdistää ja olla vuorovaikutuksessa Shizukun ylläpitämään shelliin.
+<p>Yksityiskohtaisesta käytöstä %1$s, napauta nähdäksesi dokumentin.
+    ]]></string>
+    <!-- Settings -->
+    <string name="settings_title">Asetukset</string>
+    <string name="settings_behavior">Käyttäytyminen</string>
+    <string name="settings_start_on_boot">Aloita käynnistyksestä</string>
+    <string name="settings_start_on_boot_summary">Vaatii Android 11+:n tai rootin</string>
+    <string name="settings_use_system_color">Käytä järjestelmän teemaväriä</string>
+    <string name="settings_watchdog">Vahtikoira</string>
+    <string name="settings_watchdog_summary">Käynnistä Shizuku automaattisesti uudelleen, jos se pysähtyy</string>
+    <string name="settings_tcp_mode">TCP-tila</string>
+    <string name="settings_tcp_mode_summary">"Sallii Shizukun aloittaa uudelleen ilman Wi-Fiä. (Shizuku on varmaan aloittanut kerran uudelleenkäynnistyksen jälkeen)"</string>
+    <string name="settings_tcp_mode_dialog_title">Vaaditaan uudelleenkäynnistys</string>
+    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizukun täytyy aloittaa alusta, jotta tämä asetus voidaan ottaa käyttöön.<br><br><b>Shizuku jatkaa toimintaansa ja odottaa Wi-Fi-yhteyttä ennen uudelleenkäynnistystä.</b>]]></string>
+    <string name="settings_tcp_port">TCP-portti</string>
+    <string name="settings_tcp_port_deafult">Oletus (5555)</string>
+    <string name="settings_tcp_port_hint">Jätä tyhjä oletus (5555)</string>
+    <string name="settings_tcp_learn_more">Lue lisää automaatiosovellusten käytöstä Shizukun ohjaamiseen</string>
+    <string name="settings_language">Kieli</string>
+    <string name="settings_translation_contributors">Käännösavustajat</string>
+    <string name="settings_translation">Osallistu käännöksiin</string>
+    <string name="settings_translation_summary">Auta meitä kääntämään %s kielellesi</string>
+    <string name="settings_user_interface">Ulkonäkö</string>
+    <string name="settings_black_night_theme">Mustan yön teema</string>
+    <string name="settings_black_night_theme_summary">Käytä puhdasta mustaa teemaa, jos yötila on päällä</string>
+    <string name="settings_support">Tuki</string>
+    <string name="settings_help">Apua</string>
+    <string name="settings_report_bug">Ilmoita bugi</string>
+    <string name="settings_advanced">Edistynyt</string>
+    <string name="settings_legacy_pairing">Perintöpari</string>
+    <string name="settings_legacy_pairing_summary">Syötä parituskoodi dialogiin ilmoituksen sijaan</string>
+    <!-- Snackbar -->
+    <string name="snackbar_invalid_port">Portin tulee olla välillä 1–65535</string>
+    <string name="snackbar_battery_optimization_home">Akun optimointi täytyy olla pois päältä, jotta käynnistys käynnistyksellä/watchdogilla toimisi kunnolla.</string>
+    <string name="snackbar_battery_optimization_settings">Ole hyvä ja poista akun optimointi käytöstä tämän ominaisuuden käyttämiseksi.</string>
+    <string name="snackbar_action_fix">Kiinnittää</string>
+    <!-- Toast -->
+    <string name="toast_no_email_app">Sähköpostisovellusta ei löytynyt</string>
+    <string name="toast_shizuku_already_starting">Shizuku aloittaa jo taustalla</string>
+    <!-- Dark Mode Setting Override -->
+    <string name="dark_theme">Teema</string>
+    <string name="dark_theme_off">Aina kevyt</string>
+    <string name="dark_theme_on">Aina synkkä</string>
+    <!-- About -->
+    <string name="action_about">Noin</string>
+    <string name="about_dialog_button_close">Sulkea</string>
+    <string name="about_view_source_code"><![CDATA[Katso lähdekoodi osoitteesta %s]]></string>
+    <!-- Stop -->
+    <string name="action_stop">Pysäyttäkää Shizuku</string>
+    <string name="dialog_stop_message">Shizukun palvelu lopetetaan.</string>
+    <!-- Notification -->
+    <string name="notification_channel_service_status">Palvelun aloitustila</string>
+    <string name="notification_service_starting">Shizukun palvelu alkaa…</string>
+    <string name="notification_service_start_failed">Käynnistä Shizuku-palvelu epäonnistui.</string>
+    <string name="notification_service_start_no_root">Root-luvan pyytäminen epäonnistui.</string>
+    <string name="notification_working">Toimiva…</string>
+    <string name="notification_channel_adb_pairing">Langaton debuggausparitus</string>
+    <string name="notification_adb_pairing_input_paring_code">Syötä parituskoodi</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Etsitään parituspalvelua</string>
+    <string name="notification_adb_pairing_service_found_title">Parituspalvelu löytynyt</string>
+    <string name="notification_adb_pairing_stop_searching">Lopeta etsintä</string>
+    <string name="notification_adb_pairing_working_title">Parittaminen käynnissä</string>
+    <string name="notification_adb_pairing_succeed_title">Paritus onnistui</string>
+    <string name="notification_adb_pairing_succeed_text">Voit aloittaa Shizuku-palvelun nyt.</string>
+    <string name="notification_adb_pairing_failed_title">Paritus epäonnistui</string>
+    <string name="notification_adb_pairing_retry">Yritä</string>
+    <!-- Permission related, appears in system permission UI -->
+    <string name="permission_label">pääsy Shizukuun</string>
+    <string name="permission_description">Salli sovelluksen käyttää Shizukua.</string>
+    <string name="permission_warning_template"><![CDATA[Sallia <b>%1$s</b> jotta %2$s?]]></string>
+    <string name="grant_dialog_button_allow_always">Anna koko ajan</string>
+    <string name="grant_dialog_button_deny">"Kieltää"</string>
+    <!-- Starter -->
+    <string name="starter">Käynnistin</string>
+    <string name="start_with_root_failed">Palvelua ei voi käynnistää, koska root-oikeutta ei myönnetä tai laite ei ole rootattu.</string>
+    <!-- WADB Starter -->
+    <string name="wadb_notification_title">Shizukun aloittaminen…</string>
+    <string name="wadb_notification_wifi_required">Odotan Wi-Fi-yhteyttä ennen kuin jatkan</string>
+    <string name="wadb_notification_wifi_found">Wi-Fi löytyi. Toimenpide</string>
+    <string name="wadb_error_title">Virhe käynnistyksen yhteydessä</string>
+    <string name="wadb_error_notify_dev">Napauta ilmoittaaksesi kehittäjälle.</string>
+    <string name="wadb_error_send_email">Lähetä sähköpostia osoitteeseen</string>
+    <string name="wadb_permission_error_notification_title">Lupavirhe</string>
+    <string name="wadb_permission_error_notification_content">Shizukun täytyy WRITE_SECURE_SETTINGS käynnistyäkseen. Napauta oppiaksesi, miten se myönnetään.</string>
+    <string name="wadb_notification_channel">ADB:n automaattinen käynnistyspalvelu</string>
+    <!-- Watchdog -->
+    <string name="watchdog_running">Vahtikoira on juoksemassa</string>
+    <string name="watchdog_shizuku_crashed_title">Shizuku kaatui äskettäin</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog käynnisti palvelun uudelleen. Napauta oppiaksesi mahdollisista korjauksista tulevien kaatumisten estämiseksi.</string>
+    <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Sammuta hälytykset</string>
+    <!-- Misc -->
+    <string name="dialog_cannot_open_browser_title">Selainta ei voi käynnistää</string>
+    <string name="toast_copied_to_clipboard">%s\non kopioitu lehtiöön.</string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> on kopioitu lehtiöön.]]></string>
+    <string name="accessibility_service_description">Tarjoaa paritustuen laitteille (esim. Android 14+ -televisioille), joissa ilmoituksia tai jaettua näyttöä ei voi käyttää.\n\nMahdollistaa Shizukun poimia parituskoodin langattoman debuggauksen paritusnäytöltä. Se poistuu käytöstä, kun parituskoodi löytyy.</string>
+    <!-- Messages for legacy -->
+    <string name="dialog_legacy_not_support_title">%1$s ei tue nykyaikaista Shizukua</string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Legacy Shizuku on ollut vanhentunut maaliskuusta 2019 lähtien. Lisäksi vanha Shizuku ei toimi uudemmissa Android-järjestelmissä.<p>Kysy kehittäjältä <b>%1$s</b> Päivitys.]]></string>
+    <string name="dialog_requesting_legacy_title">%1$s pyytää perintöä Shizukua</string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> Siinä on moderni Shizuku-tuki, mutta se pyytää perinteistä Shizukua. Tämä voi johtua siitä, että Shizuku ei ole käynnissä, tarkista Shizuku-sovelluksesta.<p>Legacy Shizuku on ollut vanhentunut maaliskuusta 2019 lähtien.]]></string>
+    <string name="dialog_requesting_legacy_button_open_shizuku">Avaa Shizuku</string>
+    <string name="wadb_notification_attempt_now">Yritä nyt</string>
+</resources>
