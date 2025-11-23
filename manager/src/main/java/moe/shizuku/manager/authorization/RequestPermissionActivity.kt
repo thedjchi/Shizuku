@@ -8,21 +8,22 @@ import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
+import kotlinx.coroutines.TimeoutCancellationException
 import moe.shizuku.manager.Helps
 import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppActivity
 import moe.shizuku.manager.databinding.ConfirmationDialogBinding
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.utils.Logger.LOGGER
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.res.resolveColor
 import rikka.html.text.HtmlCompat
 import rikka.shizuku.Shizuku
 import rikka.shizuku.ShizukuApiConstants.REQUEST_PERMISSION_REPLY_ALLOWED
 import rikka.shizuku.ShizukuApiConstants.REQUEST_PERMISSION_REPLY_IS_ONETIME
-import rikka.shizuku.server.ktx.workerHandler
-import java.util.concurrent.CountDownLatch
-import java.util.concurrent.TimeUnit
-import java.util.concurrent.TimeoutException
 
 class RequestPermissionActivity : AppActivity() {
 
@@ -64,23 +65,16 @@ class RequestPermissionActivity : AppActivity() {
     }
 
     private fun waitForBinder(): Boolean {
-        val countDownLatch = CountDownLatch(1)
-
-        val listener = object : Shizuku.OnBinderReceivedListener {
-            override fun onBinderReceived() {
-                countDownLatch.countDown()
-                Shizuku.removeBinderReceivedListener(this)
+        return runBlocking {
+            try { 
+                withTimeout(5000) {
+                    ShizukuStateMachine.asFlow().first { it == ShizukuStateMachine.State.RUNNING }
+                }
+                true
+            } catch (e: TimeoutCancellationException) {
+                LOGGER.e(e, "Binder not received in 5s")
+                false
             }
-        }
-
-        Shizuku.addBinderReceivedListenerSticky(listener, workerHandler)
-
-        return try {
-            countDownLatch.await(5, TimeUnit.SECONDS)
-            true
-        } catch (e: TimeoutException) {
-            LOGGER.e(e, "Binder not received in 5s")
-            false
         }
     }
 
