@@ -38,8 +38,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Si us plau, activa el servei d\'accessibilitat perquè iniciï el procés d\'aparellament. Això permet a la Shizuku detectar el codi d\'aparellament.\n\nEl servei d\'accessibilitat s\'apagarà quan es trobi el codi o després d\'un minut per estalviar energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Si us plau, navegueu a \"Opcions per a desenvolupadors\" &gt; \"Depuració sense fils\" &gt; \"Emparella el dispositiu amb el codi d\'aparellament.\" La Shizuku detectarà automàticament el codi d\'aparellament.</string>
     <string name="adb_pairing_requires_multi_window">Si us plau, entra primer en mode pantalla dividida (amb múltiples finestres).</string>
-    <string name="adb_pairing_requires_multi_window_reason">El sistema requereix que el diàleg d\'aparellament sigui sempre visible; utilitzar el mode pantalla partida és l\'única manera de fer que aquesta aplicació i el diàleg del sistema siguin visibles al mateix temps.</string>
-    <string name="adb_error_key_store">No es pot generar clau per a la depuració sense fils.\nAixò pot ser perquè el mecanisme KeyStore d\'aquest dispositiu està trencat.</string>
     <string name="adb_error_stop_tcp">No s\'ha pogut aturar l\'ADB a través de TCP</string>
     <string name="adb_pair_required">Si us plau, segueix primer el pas d\'emparellament.</string>
     <string name="enable">Habilitar</string>
@@ -51,15 +49,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Introdueix el codi a la notificació per completar l\'aparellament.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">El procés d\'aparellament requereix que interactuïs amb una notificació de la Shizuku. Si us plau, permeteu que la Shizuku publiqui notificacions.</string>
     <string name="adb_pairing_tutorial_content_miui">Els usuaris de MIUI poden haver de canviar l\'estil de notificació a \"Android\" des de \"Notificació\" a \"Notificació\" a la configuració del sistema.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">En cas contrari, potser no podràs introduir el codi de paratge des de la notificació.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Tingues en compte que la part esquerra de l\'opció \"Depuració sense fils\" es pot clicar; tocar-la s\'obre una nova pàgina. Només el Turing a l\'interruptor de la dreta és incorrecte.</string>
-    <string name="adb_pairing_tutorial_content_finish">Tornem a la Shizuku i comencem la Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">La Shizuku necessita accedir a la xarxa local. Està controlada pel permís de la xarxa.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alguns sistemes (com MIUI) impedeixen que les aplicacions accedeixin a la xarxa quan no són visibles, fins i tot si l\'aplicació utilitza el servei de primer pla com a estàndard. Si us plau, desactiva les funcions d\'optimització de bateria per a Shizuku en aquests sistemes.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (per a dispositius rootejats)]]></string>
     <string name="home_root_description"><![CDATA[A més, Shizuku es pot iniciar automàticament en arrencar. Si no, comprova si el teu sistema o eines de tercers han restringit Shizuku.<br>Pots consultar %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Si utilitzes Magisk, pots provar-ho %1$s. Per als usuaris root, eventualment substituirà Shizuku. Cal tenir en compte que les aplicacions existents han de canviar una mica per poder utilitzar-les %2$s.]]></string>
     <string name="home_root_button_start">Començar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
