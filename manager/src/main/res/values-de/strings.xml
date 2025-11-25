@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Bitte aktivieren Sie den Barrierefreiheitsdienst, um den Paarungsprozess zu starten. Dadurch kann Shizuku den Paarungscode erkennen.\n\nDer Barrierefreiheitsdienst wird abgeschaltet, sobald der Code gefunden wird oder nach einer Minute, um Energie zu sparen.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Bitte navigiere zu \"Entwickleroptionen\" &gt; \"Drahtloses Debugging\" &gt; \"Gerät mit Kopplungscode koppeln.\" Shizuku erkennt automatisch den Paarungscode.</string>
     <string name="adb_pairing_requires_multi_window">Bitte zuerst in den Modus \"Geteilter Bildschirm\" (Mehrfenster) gehen.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Der Kopplungsdialog muss immer sichtbar sein. Den Split-Screen Modus zu benutzen, ist der einzige Weg diese App und den Systemdialog zur selben Zeit sichtbar zu lassen.</string>
-    <string name="adb_error_key_store">Schlüssel für kabelloses Debugging kann nicht generiert werden.
-\nDies kann daran liegen, dass der KeyStore-Mechanismus dieses Geräts defekt ist.</string>
     <string name="adb_error_stop_tcp">ADB über TCP nicht gestoppt</string>
     <string name="adb_pair_required">Bitte zuerst den Kopplungschritt durchführen.</string>
     <string name="enable">Ermöglichen</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Code aus der Benachrichtigung eingeben, um die Kopplung abzuschließen.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Für den Kopplungssprozess müssen Sie mit einer Benachrichtigung von Shizuku interagieren. Bitte Shizuku erlauben, Benachrichtigungen zu posten.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-Nutzer müssen in den Systemeinstellungen unter \"Benachrichtigung\" - \"Benachrichtigungsleiste\" möglicherweise den Benachrichtigungsstil auf \"Android\" umstellen.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Andernfalls können Sie den Kopplungscode möglicherweise nicht über die Meldung eingeben.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Bitte beachte, dass der linke Teil der \"Wireless debugging\"-Option anklickbar ist; wird es angetippt öffnet es eine neue Seite. Lediglich den Schalter auf der rechten Seite umzulegen ist falsch.</string>
-    <string name="adb_pairing_tutorial_content_finish">Zurück zu Shizuku und Shizuku starten.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku muss auf das lokale Netzwerk zugreifen. Dies wird durch die Netzwerkberechtigung gesteuert.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Einige Systeme (z. B. MIUI) verbieten Apps den Netzwerkzugriff, wenn sie nicht sichtbar sind, selbst wenn die App standardmäßig einen Vordergrunddienst verwendet. Bitte auf solchen Systemen die Akku-Optimierungsfunktionen für Shizuku deaktivieren.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (für gerootete Geräte)]]></string>
     <string name="home_root_description"><![CDATA[Außerdem kann Shizuku beim Booten automatisch gestartet werden. Wenn nicht, überprüfen Sie bitte, ob Ihr System oder Tools von Drittanbietern Shizuku eingeschränkt haben.&lt;br&gt;Sie können auf %s verweisen.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Wenn Sie Magisk verwenden, können Sie %1$s ausprobieren. Für Root-Nutzer wird es irgendwann Shizuku ersetzen. Beachten Sie, dass bestehende Apps ein wenig geändert werden müssen, um %2$s zu verwenden.]]></string>
     <string name="home_root_button_start">Anfangen</string>
     <string name="home_root_button_restart">Neustart</string>
     <!-- Home - Application management -->
