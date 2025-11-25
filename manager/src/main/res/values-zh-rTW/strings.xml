@@ -104,6 +104,7 @@
     <string name="settings_behavior">態度</string>
     <string name="settings_start_on_boot">開機時開始</string>
     <string name="settings_start_on_boot_summary">需要 Android 11+ 或 root 權限</string>
+    <string name="settings_start_on_boot_bug">由於 Android 11-12 的一個錯誤，無線除錯無法記住任何授權網路。\n\n每次重啟時，當授權對話框跳出時，點擊「允許」重新授權網路。</string>
     <string name="settings_use_system_color">使用系統主題色彩</string>
     <string name="settings_watchdog">看門狗</string>
     <string name="settings_watchdog_summary">如果停止，請自動重新啟動雫</string>
