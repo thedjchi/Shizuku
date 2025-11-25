@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Vui lòng bật dịch vụ trợ năng để bắt đầu quá trình ghép nối. Thao tác này cho phép Shizuku phát hiện mã ghép nối.\n\nDịch vụ trợ năng sẽ bị tắt khi tìm thấy mã hoặc sau 1 phút để tiết kiệm pin.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Vui lòng điều hướng đến \"Tùy chọn nhà phát triển\" &gt; \"Gỡ lỗi không dây\" &gt; \"Ghép nối thiết bị bằng mã ghép nối\". Shizuku sẽ tự động phát hiện mã ghép nối.</string>
     <string name="adb_pairing_requires_multi_window">Vui lòng vào chế độ chia đôi màn hình (đa cửa sổ) trước.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Hệ thống yêu cầu hộp thoại ghép nối luôn hiển thị, sử dụng chế độ chia đôi màn hình là cách duy nhất để cho phép ứng dụng này và hộp thoại hệ thống hiển thị cùng một lúc.</string>
-    <string name="adb_error_key_store">Không thể tạo khóa để gỡ lỗi không dây.
-\nĐiều này có thể do cơ chế KeyStore của thiết bị này bị hỏng.</string>
     <string name="adb_error_stop_tcp">Không dừng được ADB qua TCP</string>
     <string name="adb_pair_required">Vui lòng thực hiện bước ghép nối trước.</string>
     <string name="enable">Cho phép</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Nhập mã vào thông báo để hoàn tất quá trình ghép nối.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Quá trình ghép nối cần bạn tương tác với thông báo từ Shizuku. Vui lòng cho phép Shizuku đăng thông báo.</string>
     <string name="adb_pairing_tutorial_content_miui">Người dùng MIUI có thể cần chuyển kiểu thông báo sang \"Android\" từ \"Thông báo\" - \"Bóng thông báo\" trong cài đặt hệ thống.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Nếu không, bạn có thể không nhập được mã ghép nối từ thông báo.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Xin lưu ý, phần bên trái của tùy chọn \"Gỡ lỗi không dây\" có thể nhấn được, nhấn vào nó sẽ mở ra một trang mới. Chỉ điều chỉnh công tắc ở bên phải là không chính xác.</string>
-    <string name="adb_pairing_tutorial_content_finish">Quay lại với Shizuku và khởi động Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku cần truy cập mạng cục bộ. Nó được kiểm soát bởi sự cho phép của mạng.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Một số hệ thống (chẳng hạn như MIUI) không cho phép ứng dụng truy cập mạng khi chúng không hiển thị, ngay cả khi ứng dụng sử dụng dịch vụ nền trước làm tiêu chuẩn. Vui lòng tắt các tính năng tối ưu hóa pin cho Shizuku trên các hệ thống như vậy.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Bắt đầu (cho các thiết bị đã root)]]></string>
     <string name="home_root_description"><![CDATA[Ngoài ra, Shizuku có thể được khởi động tự động khi khởi động. Nếu không, vui lòng kiểm tra xem hệ thống của bạn hoặc các công cụ của bên thứ ba có hạn chế Shizuku hay không.&lt;br&gt;Bạn có thể tham khảo %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Nếu bạn đang sử dụng Magisk, bạn có thể thử %1$s. Đối với người dùng root, nó cuối cùng sẽ thay thế Shizuku. Lưu ý, các ứng dụng hiện có cần thay đổi một chút để sử dụng %2$s.]]></string>
     <string name="home_root_button_start">Bắt đầu</string>
     <string name="home_root_button_restart">Khởi động lại</string>
     <!-- Home - Application management -->
