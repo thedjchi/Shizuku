@@ -32,6 +32,7 @@
     <string name="dialog_adb_pairing_discovery">Eşleştirme servisi aranıyor</string>
     <string name="dialog_adb_pairing_paring_code">Eşleşme kodu</string>
     <string name="paring_code_is_wrong">Eşleme kodu yanlış.</string>
+    <string name="cannot_connect_port">Kablosuz hata ayıklama servisine bağlanamıyorum.\n\nLütfen Shizuku\'nun ağ erişimini kısıtlayabilen tüm güvenlik duvarı, reklam engelleme, VPN veya benzeri uygulamalarda beyaz listeye alındığından emin olun.</string>
     <string name="dialog_wireless_adb_not_enabled">Kablosuz hata ayıklama etkin değil.
 \nNot, Android 11’den önce kablosuz hata ayıklamayı etkinleştirmek için bilgisayar bağlantısının şart olduğunu unutmayın.</string>
     <string name="dialog_usb_debugging_not_enabled">USB hata ayıklama etkin değil.\nLütfen \"Geliştirici Seçenekleri\"nde etkinleştirin.</string>
@@ -39,6 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">Eşleştirme işlemini başlatmak için lütfen erişilebilirlik hizmetini etkinleştirin. Bu, Shizuku\'nun eşleştirme kodunu algılamasını sağlar.\n\nKod bulunduğunda veya enerji tasarrufu için 1 dakika sonra erişilebilirlik hizmeti kapatılacaktır.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Lütfen \"Geliştirici Seçenekleri\" &gt; \"Kablosuz hata ayıklama\" &gt; \"Cihazı eşleştirme koduyla eşleştir\" seçeneğine gidin. Shizuku eşleştirme kodunu otomatik olarak algılayacaktır.</string>
     <string name="adb_pairing_requires_multi_window">Lütfen önce bölünmüş ekran (çoklu pencere) moduna girin.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Sistem, eşleştirme diyalogunun her zaman görünür olmasını gerektirir. Bölünmüş ekran modu kullanmak, bu uygulama ve sistem diyalogunun aynı anda görünmesini sağlamanın tek yoludur.</string>
+    <string name="adb_error_key_store">Kablosuz hata ayıklama için anahtar oluşturulamıyor.\nBunun nedeni, bu cihazın KeyStore mekanizmasının bozulmuş olmasından kaynaklanıyor olabilir.</string>
     <string name="adb_error_stop_tcp">TCP üzerinden ADB durdurulamadı</string>
     <string name="adb_pair_required">Lütfen önce eşleştirme adımını uygulayın.</string>
     <string name="enable">Olanak vermek</string>
@@ -50,9 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Eşleştirmeyi tamamlamak için kodu bildirime girin.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Eşleştirme işlemi, Shizuku\'dan gelen bir bildirimle etkileşim kurmanızı gerektirir. Lütfen Shizuku\'nun bildirim göndermesine izin verin.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI kullanıcılarının sistem ayarlarında \"Bildirim\" - \"Bildirim gölgesi\"nden bildirim stilini \"Android\" olarak değiştirmeleri gerekebilir.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Aksi takdirde, bildirimden eşleştirme kodunu giremeyebilirsiniz.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Lütfen \"Kablosuz hata ayıklama\" seçeneğinin sol kısmına tıklanabilir, ona dokunmak yeni bir sayfa açacak. Sadece sağdaki anahtarı açmak yanlış.</string>
+    <string name="adb_pairing_tutorial_content_finish">Shizuku\'ya geri dön ve Shizuku\'yu başlat.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku\'nun yerel ağa erişmesi gerekiyor. Ağ izniyle kontrol edilir.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bazı sistemler (örneğin MIUI), uygulamaların görünmediği durumlarda ağa erişmesini yasaklar, uygulama ön plan hizmeti kullansa bile. Lütfen bu tür sistemlerde Shizuku için pil optimizasyon özelliklerini devre dışı bırakın.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (rootlu cihazlar için)]]></string>
     <string name="home_root_description"><![CDATA[Buna ek olarak, Shizuku otomatik olarak açılışta başlatılabilir. Aksi durumda ise, lütfen sisteminizin veya üçüncü taraf araçlarınızın Shizuku\'yu kısıtlayıp kısıtlamadığını kontrol edin. &lt;br&gt;%s \'ye başvurabilirsiniz.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Magisk kullanıyorsan deneyebilirsin %1$s. Root kullanıcıları için ise sonunda Shizuku'nun yerini alacak. Mevcut uygulamaların biraz değişmesi gerektiğini unutmayın %2$s.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yeniden başlat</string>
     <!-- Home - Application management -->
@@ -96,12 +105,17 @@
     <string name="settings_behavior">Davranış</string>
     <string name="settings_start_on_boot">Önyüklemede başla</string>
     <string name="settings_start_on_boot_summary">Android 11+ veya root gerektirir</string>
+    <string name="settings_start_on_boot_bug">Android 11-12\'deki bir hata nedeniyle, kablosuz hata ayıklama yetkili ağları hatırlamıyor.\n\nHer yeniden başlatmada yetkilendirme diyalogu açıldığında \"İzin ver\" tuşuna tıklayarak ağı yeniden yetkilendirmeniz gerekecek.</string>
     <string name="settings_use_system_color">Sistem tema rengini kullan</string>
     <string name="settings_watchdog">Bekçi köpeği</string>
     <string name="settings_watchdog_summary">Durduğunda Shizuku\'yu otomatik olarak yeniden başlat</string>
     <string name="settings_tcp_mode">TCP modu</string>
     <string name="settings_tcp_mode_summary">"Shizuku'nun Wi-Fi olmadan yeniden başlatılmasına izin verir. (Shizuku'nun yeniden başlatıldıktan sonra bir kez başlatılmış olması gerekir)"</string>
+    <string name="settings_restart_dialog_title">Yeniden Başlatma Gerekli</string>
+    <string name="settings_restart_dialog_message">Shizuku\'nun bu ayarı uygulayabilmesi için yeniden başlatması gerekiyor.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi zorunlu. Shizuku çalışmaya devam edecek ve Wi-Fi bağlantısını bekleyecek, sonra arka planda yeniden başlatacak.</b>]]></string>
     <string name="settings_tcp_port">TCP bağlantı noktası</string>
+    <string name="settings_tcp_port_default">Varsayılan (5555)</string>
     <string name="settings_tcp_port_hint">Varsayılanı (5555) kullanmak için boş bırakın</string>
     <string name="settings_tcp_learn_more">Shizuku\'yu kontrol etmek için otomasyon uygulamalarının kullanımı hakkında daha fazla bilgi edinin</string>
     <string name="settings_language">Dil</string>
@@ -125,6 +139,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">E-posta uygulaması bulunamadı</string>
     <string name="toast_shizuku_already_starting">Shizuku arka planda zaten başlıyor</string>
+    <string name="toast_accessibility_tv_only">Bu hizmet yalnızca TV cihazlarında desteklenmektedir.</string>
+    <string name="toast_accessibility_timed_out">Shizuku eşleştirme servisi zaman doldu.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Her zaman hafif</string>
@@ -173,6 +189,7 @@
     <string name="wadb_notification_channel">ADB otomatik başlatma hizmeti</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Bekçi köpeği çalışıyor</string>
+    <string name="watchdog_turn_off">Devre Dışı Bırak</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku yakın zamanda çöktü</string>
     <string name="watchdog_shizuku_crashed_text">Bekçi köpeği hizmeti yeniden başlattı. Gelecekteki çökmeleri önlemek için olası çözümler hakkında bilgi edinmek için dokunun.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Uyarıları Kapat</string>
