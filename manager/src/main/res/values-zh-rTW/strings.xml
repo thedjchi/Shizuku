@@ -32,6 +32,7 @@
     <string name="dialog_adb_pairing_discovery">正在尋找配對服務</string>
     <string name="dialog_adb_pairing_paring_code">配對碼</string>
     <string name="paring_code_is_wrong">配對碼錯誤。</string>
+    <string name="cannot_connect_port">無法連接到無線調試服務。\n\n請確保將 Shizuku 新增至所有防火牆、廣告攔截器、VPN 或類似可能限製網路存取的應用程式中的白名單。</string>
     <string name="dialog_wireless_adb_not_enabled">無線偵錯未啟用。
 \n請注意，在 Android 11 之前，要啟用無線偵錯必須先與電腦連線。</string>
     <string name="dialog_usb_debugging_not_enabled">USB 除錯功能未啟用。\n請在「開發者選項」中啟用它。</string>
@@ -39,9 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">請啟用無障礙服務以開始配對流程。這讓雫能偵測到配對代碼。\n\n無障礙服務會在找到代碼後或1分鐘後關閉以節省能源。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">請前往「開發者選項」 &gt; 「無線除錯」 &gt; 「用配對碼配對裝置。」雫會自動偵測配對碼。</string>
     <string name="adb_pairing_requires_multi_window">請先進入「分割畫面」(多視窗) 模式。</string>
-    <string name="adb_pairing_requires_multi_window_reason">系統要求配對對話方塊始終可見，使用「分割畫面」模式是使此應用程式和系統對話方塊同時可見的唯一方法。</string>
-    <string name="adb_error_key_store">無法為無線偵錯產生金鑰。
-\n這可能是因為此裝置上的 KeyStore 機制已損壞。</string>
+    <string name="adb_pairing_requires_multi_window_reason">系統需求配對對話框始終可見。只有使用分割畫面模式才能讓此應用程式和系統對話方塊同時可見。</string>
+    <string name="adb_error_key_store">無法產生無線調試密鑰。\n這可能是因為此裝置的金鑰庫機制已損壞。</string>
     <string name="adb_error_stop_tcp">未能阻止 ADB 透過 TCP 傳輸</string>
     <string name="adb_pair_required">請先進行配對步驟。</string>
     <string name="enable">啟用</string>
@@ -53,15 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">在通知中輸入代碼來完成配對。</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">配對過程需要您與 Shizuku 的通知互動。請允許 Shizuku 發布通知。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 使用者可能需要在系統設定中從「通知管理」-「通知顯示設定」將通知樣式切換為「原生樣式」。</string>
-    <string name="adb_pairing_tutorial_content_miui_2">否則，您可能會無法從通知輸入配對碼。</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">請注意，「無線偵錯」選項的左側是可點選的，輕觸它將開啟一個新的頁面。僅開啟右側的開關是錯誤的。</string>
-    <string name="adb_pairing_tutorial_content_finish">回到 Shizuku 並啟動 Shizuku。</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku 需要存取本機網路。它由網路權限控制。</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系統 (例如 MIUI) 不允許應用程式在不可見時存取網路，即使應用程式已按標準使用前景服務。請在此類系統上為 Shizuku 停用電池效能最佳化功能。</string>
+    <string name="adb_pairing_tutorial_content_miui_2">否則，您可能無法輸入通知中的配對碼。</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">請注意，「無線偵錯」選項左側的部分是可以點擊的，點擊後會開啟一個新頁面。只打開右側的開關是錯誤的。</string>
+    <string name="adb_pairing_tutorial_content_finish">回到雫並開始雫。</string>
+    <string name="adb_pairing_tutorial_content_network">雫需要存取本地網路。這受網路權限控制。</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系統（例如 MIUI）會禁止應用在不可見時存取網絡，即使該應用程式使用了前台服務。請在這些系統上為 Shizuku 關閉電池優化功能。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[啟動 (針對已 Root 裝置)]]></string>
     <string name="home_root_description"><![CDATA[另外，Shizuku 可以在開機時自動啟動。如果沒有啟動，請檢查 Shizuku 是否被您的系統或是第三方工具限制。&lt;br&gt;你可以參考 %s。]]></string>
-    <string name="home_root_description_sui"><![CDATA[如果您正在使用 Magisk，可以嘗試 %1$s。對於 Root 使用者，它將最終取代 Shizuku。注意，已有的應用程式需要一點點修改來使用 %2$s。]]></string>
+    <string name="home_root_description_sui"><![CDATA[如果您正在使用 Magisk，可以嘗試使用 %1$s。對於 root 用戶，它最終會取代 Shizuku。請注意，現有應用程式需要稍作修改才能使用 %2$s。]]></string>
     <string name="home_root_button_start">啟動</string>
     <string name="home_root_button_restart">重新啟動</string>
     <!-- Home - Application management -->
@@ -109,7 +109,11 @@
     <string name="settings_watchdog_summary">如果停止，請自動重新啟動雫</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"讓雫能在沒有 Wi-Fi 的情況下重新開始。（雫自重啟後應該開始過一次）"</string>
+    <string name="settings_restart_dialog_title">需要重啟</string>
+    <string name="settings_restart_dialog_message">雫需要重啟才能套用此設定。</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>需要 Wi-Fi。雫會在後台繼續運作並等待 Wi-Fi 連接，連線成功後才會重新啟動。</b>]]></string>
     <string name="settings_tcp_port">TCP 埠</string>
+    <string name="settings_tcp_port_default">預設值 (5555)</string>
     <string name="settings_tcp_port_hint">使用預設欄位時留空（5555）</string>
     <string name="settings_tcp_learn_more">了解更多關於使用自動化應用程式控制雫的方法</string>
     <string name="settings_language">語言</string>
@@ -133,6 +137,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">找不到電子郵件應用程式</string>
     <string name="toast_shizuku_already_starting">雫已經在後面開始了</string>
+    <string name="toast_accessibility_tv_only">此服務僅支援電視設備。</string>
+    <string name="toast_accessibility_timed_out">雫配對服務逾時。</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">題</string>
     <string name="dark_theme_off">永遠輕盈</string>
@@ -181,6 +187,7 @@
     <string name="wadb_notification_channel">ADB 自動啟動服務</string>
     <!-- Watchdog -->
     <string name="watchdog_running">看門狗正在執行</string>
+    <string name="watchdog_turn_off">關</string>
     <string name="watchdog_shizuku_crashed_title">雫最近崩潰了</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog 重新啟動了這項服務。點擊以了解防止未來當機的潛在修復方法。</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">關閉警報</string>
