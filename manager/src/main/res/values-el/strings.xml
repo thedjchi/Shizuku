@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Ενεργοποιήστε την υπηρεσία προσβασιμότητας για να ξεκινήσει η διαδικασία σύζευξης. Αυτό επιτρέπει στο Shizuku να εντοπίσει τον κωδικό σύζευξης.\n\nΗ υπηρεσία προσβασιμότητας θα απενεργοποιηθεί όταν βρεθεί ο κωδικός ή μετά από 1 λεπτό για εξοικονόμηση ενέργειας.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Μεταβείτε στις \"Επιλογές προγραμματιστή\" &gt; \"Ασύρματη διόρθωση σφαλμάτων\" &gt; \"Σύζευξη συσκευής με κωδικό σύζευξης\". Το Shizuku θα εντοπίσει αυτόματα τον κωδικό σύζευξης.</string>
     <string name="adb_pairing_requires_multi_window">Παρακαλώ, μεταβείτε πρώτα σε λειτουργία διαιρεμένης οθόνης (πολλαπλών παραθύρων).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Το σύστημα απαιτεί το παράθυρο διαλόγου σύζευξης να είναι πάντα ορατό. Η χρήση της λειτουργίας διαιρεμένης οθόνης είναι ο μόνος τρόπος για να είναι ορατά ταυτόχρονα αυτή η εφαρμογή και το παράθυρο διαλόγου συστήματος.</string>
-    <string name="adb_error_key_store">Δεν είναι δυνατή η δημιουργία κλειδιού για ασύρματο εντοπισμό σφαλμάτων.\nΑυτό μπορεί να οφείλεται στο ότι ο μηχανισμός KeyStore αυτής της συσκευής είναι κατεστραμμένος.</string>
     <string name="adb_error_stop_tcp">Απέτυχε η διακοπή του ADB μέσω TCP</string>
     <string name="adb_pair_required">Παρακαλούμε ακολουθήστε πρώτα το βήμα σύζευξης.</string>
     <string name="enable">Ενεργοποιώ</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Εισαγάγετε τον κωδικό στην ειδοποίηση για να ολοκληρώσετε τη σύζευξη.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Η διαδικασία σύζευξης απαιτεί να αλληλεπιδράσετε με μια ειδοποίηση από το Shizuku. Επιτρέψτε στο Shizuku να δημοσιεύει ειδοποιήσεις.</string>
     <string name="adb_pairing_tutorial_content_miui">Οι χρήστες MIUI ίσως χρειαστεί να αλλάξουν το στυλ ειδοποιήσεων σε \"Android\" από \"Ειδοποίηση\" - \"Σκιά ειδοποιήσεων\" στις ρυθμίσεις συστήματος.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Διαφορετικά, ενδέχεται να μην μπορείτε να εισαγάγετε τον κωδικό ζεύξης από την ειδοποίηση.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Λάβετε υπόψη ότι το αριστερό μέρος της επιλογής \"Ασύρματη αποσφαλμάτωση\" είναι δυνατό με κλικ. Αν το πατήσετε, θα ανοίξει μια νέα σελίδα. Η ενεργοποίηση μόνο του διακόπτη στα δεξιά είναι λανθασμένη.</string>
-    <string name="adb_pairing_tutorial_content_finish">Επιστρέψτε στο Shizuku και ξεκινήστε το Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Το Shizuku χρειάζεται πρόσβαση στο τοπικό δίκτυο. Ελέγχεται από τα δικαιώματα δικτύου.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Ορισμένα συστήματα (όπως το MIUI) δεν επιτρέπουν στις εφαρμογές να έχουν πρόσβαση στο δίκτυο όταν δεν είναι ορατές, ακόμα κι αν η εφαρμογή χρησιμοποιεί την υπηρεσία foreground ως στάνταρ. Απενεργοποιήστε τις λειτουργίες βελτιστοποίησης μπαταρίας για το Shizuku σε τέτοια συστήματα.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Έναρξη (για συσκευές με root)]]></string>
     <string name="home_root_description"><![CDATA[Επιπλέον, το Shizuku μπορεί να ξεκινήσει αυτόματα κατά την εκκίνηση. Εάν όχι, ελέγξτε εάν το σύστημά σας ή εργαλεία τρίτων έχουν περιορίσει το Shizuku.<br>Μπορείτε να ανατρέξετε στο %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Αν χρησιμοποιείτε Magisk, μπορείτε να δοκιμάσετε το %1$s. Για τους χρήστες root, τελικά θα αντικαταστήσει το Shizuku. Σημειώστε ότι οι υπάρχουσες εφαρμογές πρέπει να αλλάξουν λίγο για να χρησιμοποιήσουν το %2$s.]]></string>
     <string name="home_root_button_start">Αρχή</string>
     <string name="home_root_button_restart">Επανεκκίνηση</string>
     <!-- Home - Application management -->
