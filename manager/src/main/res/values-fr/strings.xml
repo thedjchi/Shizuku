@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Veuillez activer le service d’accessibilité pour lancer le processus d’appairage. Cela permet à Shizuku de détecter le code d’appairage.\n\nLe service d’accessibilité sera désactivé dès que le code sera trouvé ou après 1 minute pour économiser de l’énergie.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Veuillez naviguer dans « Options développeurs » &gt; « Débogage sans fil » &gt; « Appairer l’appareil avec le code d’appairage. » Shizuku détectera automatiquement le code d’appairage.</string>
     <string name="adb_pairing_requires_multi_window">Merci d\'activer le mode écran partagé (mode multi-fenêtres) d\'abord.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Le système nécessite que la fenêtre d\'association soit toujours visible, l\'utilisation du mode écran partagé est la seule manière de laisser cette appli et la fenêtre système visibles au même moment.</string>
-    <string name="adb_error_key_store">Impossible de générer une clé pour le débogage sans fil.\nCela peut être dû au fait que le mécanisme du magasin de clés de l\'appareil est cassé.</string>
     <string name="adb_error_stop_tcp">Échec à arrêter ADB via TCP</string>
     <string name="adb_pair_required">Merci d\'aller à l\'étape d\'association d\'abord.</string>
     <string name="enable">Activer</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Entrez le code dans la notification pour compléter l\'association.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Le processus d\'association requiert que vous interagissez avec une notification de Shizuku. Merci d\'autoriser Shizuku à envoyer les notifications.</string>
     <string name="adb_pairing_tutorial_content_miui">Les utilisateurs de MIUI pourraient devoir changer le style de notifications vers \"Android\" dans \"Notifications\" - \"Style de notification\" dans les paramètres système.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Sinon, vous ne pourrez peut-être pas saisir le code d\'association depuis la notification.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Veuillez noter que la partie gauche de l\'option \"Débogage sans fil\" est clickable, la tapper va ouvrir une nouvelle page. Seulement activer le commutateur à droite est incorrect.</string>
-    <string name="adb_pairing_tutorial_content_finish">Retournez dans Shizuku et lancez le.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku requiert l\'accès au réseau local. C\'est contrôlé par l\'autorisation réseau.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Certains systèmes (tels que MIUI) interdisent aux applis d\'accéder au réseau quand elles ne sont pas visibles, même si l\'appli utilise un service de premier plan comme standard. Merci de désactiver l\'optimisation de la batterie pour Shizuku sur de tels systèmes.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Démarrer (pour les appareils rootés)]]></string>
     <string name="home_root_description"><![CDATA[De plus, Shizuku peut être démarré automatiquement au démarrage. Si non, merci de vérifier si votre système ou un outil tiers a restreint Shizuku. &lt;br&gt;Vous pouvez vous référer à %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Si vous utilisez Magisk, vous pouvez essayer %1$s. Pour les utilisateurs root, il pourrait éventuellement remplacer Shizuku. Note, les applications existantes nécessiteraient de changer un petit peu pour utiliser %2$s.]]></string>
     <string name="home_root_button_start">Démarrer</string>
     <string name="home_root_button_restart">Redémarrer</string>
     <!-- Home - Application management -->
