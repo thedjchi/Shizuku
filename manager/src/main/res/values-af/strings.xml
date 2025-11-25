@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Aktiveer asseblief die toeganklikheidsdiens om die paringsproses te begin. Dit laat Shizuku toe om die paringskode op te spoor.\n\nDie toeganklikheidsdiens sal afgeskakel word wanneer die kode gevind word of na 1 minuut om energie te bespaar.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Navigeer asseblief na \"Ontwikkelaaropsies\" &gt; \"Draadlose ontfouting\" &gt; \"Koppel toestel met koppelkode.\" Shizuku sal outomaties die koppelkode opspoor.</string>
     <string name="adb_pairing_requires_multi_window">Gaan asseblief eers na die verdeelskerm-modus (multivenstermodus).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Die stelsel vereis dat die paringsdialoog altyd sigbaar is; die gebruik van verdeelskermmodus is die enigste manier om hierdie toepassing en stelseldialoog gelyktydig sigbaar te maak.</string>
-    <string name="adb_error_key_store">Kon nie sleutel vir draadlose ontfouting genereer nie.\nDit mag wees omdat die KeyStore-meganisme van hierdie toestel gebreek is.</string>
     <string name="adb_error_stop_tcp">Kon nie ADB oor TCP stop nie</string>
     <string name="adb_pair_required">Gaan asseblief eers deur die paringsstap.</string>
     <string name="enable">Aktiveer</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Voer die kode in die kennisgewing in om die paring te voltooi.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Die paringsproses vereis dat jy met \'n kennisgewing van Shizuku interaksie het. Laat asseblief Shizuku toe om kennisgewings te plaas.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moet dalk die kennisgewingstyl na \"Android\" oorskakel vanaf \"Kennisgewing\" - \"Kennisgewingskerm\" in stelselinstellings.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Andersins kan jy dalk nie die paringskode vanaf die kennisgewing invoer nie.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Let asseblief daarop dat die linker gedeelte van die \"Draadlose ontfouting\"-opsie klikbaar is. As jy daarop tik, sal \'n nuwe bladsy oopmaak. Slegs die aanskakel van die skakelaar aan die regterkant is verkeerd.</string>
-    <string name="adb_pairing_tutorial_content_finish">Terug na Shizuku en begin Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku benodig toegang tot die plaaslike netwerk. Dit word beheer deur die netwerktoestemming.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar is nie, selfs al gebruik die program standaard voorgronddiens. Deaktiveer asseblief batteryoptimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
     <string name="home_root_description"><![CDATA[Daarbenewens kan Shizuku outomaties met opstart begin word. Indien nie, kyk asseblief of jou stelsel of derdeparty-instrumente Shizuku beperk het.<br>Jy kan verwys na %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet \'n bietjie verander om %2$ste gebruik.]]></string>
     <string name="home_root_button_start">Begin</string>
     <string name="home_root_button_restart">Herbegin</string>
     <!-- Home - Application management -->
