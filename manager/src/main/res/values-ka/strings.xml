@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">დაწყვილების სერვისის ძიება</string>
     <string name="dialog_adb_pairing_paring_code">დაწყვილების კოდი</string>
     <string name="paring_code_is_wrong">დაწყვილების კოდი არასწორია.</string>
-    <string name="cannot_connect_port">უკაბელო გამართვის სერვისთან დაკავშირება შეუძლებელია.</string>
     <string name="dialog_wireless_adb_not_enabled">უსადენო გამართვა არ არის ჩართული.\nგაითვალისწინეთ, Android 11-მდე, უკაბელო გამართვის გასააქტიურებლად, კომპიუტერის კავშირი აუცილებელია.</string>
     <string name="dialog_usb_debugging_not_enabled">USB გამართვა არ არის ჩართული.\nგთხოვთ, ჩართოთ იგი \"დეველოპერის ოფციებში\".</string>
     <string name="dialog_adb_pairing_message">გთხოვთ, დაიწყოთ დაწყვილება შემდეგი ნაბიჯების შესრულებით: \"დეველოპერის პარამეტრები\" - \"უკაბელო გამართვა\" - \"მოწყობილობის დაწყვილება დაწყვილების კოდთან\".\n\nდაწყვილების პროცესის დაწყების შემდეგ, თქვენ შეძლებთ შეიყვანოთ დაწყვილების კოდი.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">ავტომატურად გადატვირთეთ Shizuku, თუ ის შეჩერდება</string>
     <string name="settings_tcp_mode">TCP რეჟიმი</string>
     <string name="settings_tcp_mode_summary">"საშუალებას აძლევს Shizuku-ს გადატვირთოს Wi-Fi-ის გარეშე. (შიზუკუ გადატვირთვის შემდეგ ერთხელ უნდა დაიწყოს)"</string>
-    <string name="settings_tcp_mode_dialog_title">საჭიროა გადატვირთვა</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku-ს სჭირდება გადატვირთვა ამ პარამეტრის გამოსაყენებლად.<br><br><b>Shizuku გააგრძელებს მუშაობას და დაელოდება Wi-Fi კავშირს გადატვირთვამდე.</b>]]></string>
     <string name="settings_tcp_port">TCP პორტი</string>
-    <string name="settings_tcp_port_deafult">ნაგულისხმევი (5555)</string>
     <string name="settings_tcp_port_hint">დატოვე ცარიელი ნაგულისხმევი გამოსაყენებლად (5555)</string>
     <string name="settings_tcp_learn_more">შეიტყვეთ მეტი ავტომატიზაციის აპლიკაციების გამოყენების შესახებ Shizuku-ს გასაკონტროლებლად</string>
     <string name="settings_language">ენა</string>
