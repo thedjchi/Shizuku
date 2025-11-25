@@ -31,7 +31,6 @@
     <string name="dialog_adb_pairing_discovery">Buscando servicio de emparejamiento</string>
     <string name="dialog_adb_pairing_paring_code">Código de emparejamiento</string>
     <string name="paring_code_is_wrong">El código de emparejamiento es incorrecto.</string>
-    <string name="cannot_connect_port">No se puede conectar al servicio de depuración inalámbrico.</string>
     <string name="dialog_wireless_adb_not_enabled">La depuración inalámbrica no está habilitada.
 \nTenga en cuenta que antes de Android 11, para habilitar la depuración inalámbrica, la conexión a la computadora es imprescindible.</string>
     <string name="adb_pairing_requires_multi_window">Ingrese primero al modo de pantalla dividida (ventanas múltiples).</string>
