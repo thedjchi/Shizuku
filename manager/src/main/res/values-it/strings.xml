@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Ricerca del servizio di accoppiamento</string>
     <string name="dialog_adb_pairing_paring_code">Codice di accoppiamento</string>
     <string name="paring_code_is_wrong">Il codice di accoppiamento è sbagliato.</string>
-    <string name="cannot_connect_port">Impossibile connettersi al servizio di debug wireless.</string>
     <string name="dialog_wireless_adb_not_enabled">Il debug wireless non è abilitato.
 \nNota, per versioni precedenti ad Android 11, per abilitare il debug wireless, è necessaria la connessione al computer.</string>
     <string name="dialog_usb_debugging_not_enabled">Il debug USB non è abilitato.\nAbilitalo in \"Opzioni sviluppatore\".</string>
@@ -111,10 +110,7 @@
     <string name="settings_watchdog_summary">Riavvia automaticamente Shizuku se si ferma</string>
     <string name="settings_tcp_mode">Modalità TCP</string>
     <string name="settings_tcp_mode_summary">"Permette a Shizuku di riavviarsi senza Wi-Fi. (Shizuku deve essere stato avviato una volta dopo il riavvio)"</string>
-    <string name="settings_tcp_mode_dialog_title">Riavvio richiesto</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku deve riavviarsi per applicare questa impostazione.<br><br><b>Shizuku continuerà a funzionare e attenderà una connessione Wi-Fi prima di riavviarsi.</b>]]></string>
     <string name="settings_tcp_port">porta TCP</string>
-    <string name="settings_tcp_port_deafult">Predefinito (5555)</string>
     <string name="settings_tcp_port_hint">Lasciare vuoto per utilizzare il valore predefinito (5555)</string>
     <string name="settings_tcp_learn_more">Scopri di più sull\'utilizzo delle app di automazione per controllare Shizuku</string>
     <string name="settings_language">Lingua</string>
