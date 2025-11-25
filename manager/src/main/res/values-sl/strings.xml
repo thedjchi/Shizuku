@@ -39,8 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Za začetek postopka seznanjanja omogočite storitev dostopnosti. To bo Shizuku omogočilo zaznavanje kode za seznanjanje.\n\nStoritev dostopnosti se bo izklopila, ko bo koda najdena, ali po 1 minuti, da se prihrani energija.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Pojdite na »Možnosti za razvijalce« &gt; »Odpravljanje napak brezžičnega omrežja« &gt; »Seznani napravo s kodo za seznanjanje.« Shizuku bo samodejno zaznal kodo za seznanjanje.</string>
     <string name="adb_pairing_requires_multi_window">Najprej vklopite način deljenega zaslona (več oken).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Sistem zahteva, da je pogovorno okno za seznanjanje vedno vidno, zato je način deljenega zaslona edini način, da sta to pogovorno okno aplikacije in sistemsko pogovorno okno vidna hkrati.</string>
-    <string name="adb_error_key_store">Ključa za brezžično odpravljanje napak ni mogoče ustvariti.\nTo je morda zato, ker mehanizem KeyStore te naprave ne deluje.</string>
     <string name="adb_error_stop_tcp">Ustavitev ADB prek TCP ni uspela</string>
     <string name="adb_pair_required">Najprej sledite koraku seznanjanja.</string>
     <string name="enable">Omogoči</string>
@@ -52,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Vnesite kodo iz obvestila, da dokončate seznanjanje.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Postopek seznanjanja zahteva interakcijo z obvestilom Shizuku. Dovolite Shizuku objavljanje obvestil.</string>
     <string name="adb_pairing_tutorial_content_miui">Uporabniki MIUI bodo morda morali v sistemskih nastavitvah preklopiti način obveščanja iz »Obvestilo« – »Obvestilna senca« na »Android«.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">V nasprotnem primeru morda ne boste mogli vnesti kode za seznanjanje iz obvestila.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Upoštevajte, da je levi del možnosti »Brezžično odpravljanje napak« klikljiv, s pritiskom nanj se odpre nova stran. Samo vklop stikala na desni je napačen.</string>
-    <string name="adb_pairing_tutorial_content_finish">Nazaj v Shizuku in začni Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku potrebuje dostop do lokalnega omrežja. Nadzoruje ga omrežno dovoljenje.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nekateri sistemi (na primer MIUI) aplikacijam ne dovoljujejo dostopa do omrežja, ko niso vidne, tudi če aplikacija standardno uporablja storitev v ospredju. V takih sistemih onemogočite funkcije optimizacije baterije za Shizuku.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Začni (za naprave s korenskim dostopom)]]></string>
     <string name="home_root_description"><![CDATA[Poleg tega se lahko Shizuku samodejno zažene ob zagonu. Če ne, preverite, ali je vaš sistem ali orodja drugih proizvajalcev omejila Shizuku.<br>Glejte %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Če uporabljate Magisk, lahko poskusite %1$s. Za uporabnike root bo sčasoma nadomestil Shizuku. Upoštevajte, da se morajo obstoječe aplikacije nekoliko spremeniti, da bodo lahko uporabljale %2$s.]]></string>
     <string name="home_root_button_start">Začni</string>
     <string name="home_root_button_restart">Ponovni zagon</string>
     <!-- Home - Application management -->
