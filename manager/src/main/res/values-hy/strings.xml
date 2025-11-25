@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Խնդրում ենք միացնել մատչելիության ծառայությունը՝ զուգավորման գործընթացը սկսելու համար: Սա թույլ է տալիս Շիզուկուին հայտնաբերել զույգավորման կոդը։\n\nՄատչելիության ծառայությունն անջատվելու է, երբ կոդը գտնվի կամ 1 րոպե անց՝ էներգիան խնայելու համար:</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Խնդրում ենք նավարկել դեպի «Մշակողի ընտրանքներ» &gt; «Անլար կարգաբերում» &gt; «Զուգակցել սարքը զուգակցման կոդով»: Shizuku-ն ավտոմատ կերպով կհայտնաբերի զույգավորման կոդը:</string>
     <string name="adb_pairing_requires_multi_window">Սկզբում միացրեք էկրանի կիսման ռեժիմը։</string>
-    <string name="adb_pairing_requires_multi_window_reason">Համակարգին անհրաժեշտ է որ զուգման պատուհանը միշտ երևա։ Էկրանի կիսման ռեժիմը միակ միջոցն է որ այս ծրագիրը և զուգման պատուհանը միաժամանակ երևան։</string>
-    <string name="adb_error_key_store">Չստացվեց բանակի ստանալ անլար կարգաբերման համար։
-\nՀնարավոր է, որ այս սարքի KeyStore մեխանիզմը փչացել է։</string>
     <string name="adb_error_stop_tcp">Ձախողվեց ADB-ի կանգնեցումը TCP-ի միջոցով</string>
     <string name="adb_pair_required">Խնդրում ենք սկզբում կատարել զուգելու քայլերը։</string>
     <string name="enable">Թույլատրել</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Մուտքագրեք ծանուցման մեջ նշված կոդը՝ զուգավորումն ավարտելու համար։</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Զուգավորման գործընթացը պահանջում է, որ դուք փոխազդեք Shizuku-ի ծանուցման հետ: Խնդրում ենք թույլատրել Shizuku-ին հրապարակել ծանուցումներ:</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI օգտատերերը կարող են ստիպված լինել համակարգի կարգավորումներում «Ծանուցում»-ից «Ծանուցման ստվեր» բաժնից փոխել ծանուցման ոճը «Android»-ի։</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Հակառակ դեպքում, դուք կարող է չկարողանաք մուտքագրել ծանուցումից զուգավորման կոդը։</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Խնդրում ենք նկատի ունենալ, որ «Անլար կարգաբերում» տարբերակի ձախ մասը կարելի է սեղմել, դրա վրա սեղմելը կբացի նոր էջ: Միայն աջ կողմում գտնվող անջատիչը միացնելը սխալ է:</string>
-    <string name="adb_pairing_tutorial_content_finish">Վերադարձ դեպի Շիզուկու և սկսիր Շիզուկուն։</string>
-    <string name="adb_pairing_tutorial_content_network">Շիզուկուն պետք է մուտք գործի տեղական ցանց: Այն կառավարվում է ցանցի թույլտվությամբ:</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Որոշ համակարգեր (օրինակ՝ MIUI-ը) թույլ չեն տալիս հավելվածներին մուտք գործել ցանց, երբ դրանք տեսանելի չեն, նույնիսկ եթե հավելվածն օգտագործում է առաջին պլանի ծառայությունը որպես ստանդարտ: Խնդրում ենք անջատել Shizuku-ի մարտկոցի օպտիմալացման գործառույթները նման համակարգերի վրա:</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Միացնել (root արած սարքերի համար)]]></string>
     <string name="home_root_description"><![CDATA[Բացի այդ, Shizuku-ն կարող է ավտոմատ կերպով մեկնարկվել բեռնման ժամանակ։ Հակառակ դեպքում, խնդրում ենք ստուգել, թե արդյոք ձեր համակարգը կամ երրորդ կողմի գործիքները սահմանափակել են Shizuku-ն։<br>Կարող եք դիմել %s-ին։]]></string>
-    <string name="home_root_description_sui"><![CDATA[Եթե օգտագործում եք Magisk, կարող եք փորձել %1$s-ը։ Root օգտատերերի համար այն ի վերջո կփոխարինի Shizuku-ին։ Նշենք, որ առկա ծրագրերը պետք է մի փոքր փոփոխվեն՝ %2$s-ն օգտագործելու համար։]]></string>
     <string name="home_root_button_start">Միացնել</string>
     <string name="home_root_button_restart">Վերաբեռնել</string>
     <!-- Home - Application management -->
