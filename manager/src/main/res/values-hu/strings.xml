@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Kérjük, engedélyezze az akadálymentesítési szolgáltatást a párosítási folyamat megkezdéséhez. Ez lehetővé teszi a Shizuku számára a párosítási kód észlelését.\n\nAz akadálymentesítési szolgáltatás kikapcsol, amikor a kód megtalálható, vagy 1 perc elteltével az energiatakarékosság érdekében.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Kérjük, navigáljon a „Fejlesztői beállítások” &gt; „Vezeték nélküli hibakeresés” &gt; „Eszköz párosítása párosító kóddal” menüpontra. A Shizuku automatikusan felismeri a párosító kódot.</string>
     <string name="adb_pairing_requires_multi_window">Kérjük, először lépjen az osztott képernyős (több ablakos) módba.</string>
-    <string name="adb_pairing_requires_multi_window_reason">A rendszer megköveteli, hogy a párosítási párbeszédpanel mindig látható legyen, az osztott képernyős mód az egyetlen módja annak, hogy ez az alkalmazás és a rendszer párbeszédpanel egyszerre látható legyen.</string>
-    <string name="adb_error_key_store">Nem sikerült létrehozni a kulcsot a vezeték nélküli hibakereséshez.\nEz azért lehet, mert az eszköz KeyStore mechanizmusa meghibásodott.</string>
     <string name="adb_error_stop_tcp">Nem sikerült leállítani az ADB-t TCP-n keresztül.</string>
     <string name="adb_pair_required">Kérjük először végezze el a párosítási lépést.</string>
     <string name="enable">Engedélyezés</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">A párosítás befejezéséhez írja be az értesítésben lévő kódot.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">A párosítási folyamat során kapcsolatba kell lépni Shizuku értesítésével. Kérjük, engedélyezze a Shizukunak, hogy értesítéseket tegyen közzé.</string>
     <string name="adb_pairing_tutorial_content_miui">Előfordulhat, hogy a MIUI-felhasználóknak át kell váltaniuk az értesítési stílust \"Android\"-ra a \"Értesítés\" - \"Értesítési árnyék\" lehetőségről a rendszerbeállításokban.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Ellenkező esetben előfordulhat, hogy nem tudja megadni a párosítási kódot az értesítésből.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Felhívjuk figyelmét, hogy a \"Vezeték nélküli hibakeresés\" opció bal oldali része kattintható, rákattintva egy új oldal nyílik meg. A jobb oldali kapcsoló bekapcsolása helytelen.</string>
-    <string name="adb_pairing_tutorial_content_finish">Vissza és Shizuku elindítása.</string>
-    <string name="adb_pairing_tutorial_content_network">A Shizukunak hozzá kell férnie a helyi hálózathoz. A hálózati engedély vezérli.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Egyes rendszerek (például a MIUI) nem engedélyezik az alkalmazások számára, hogy hozzáférjenek a hálózathoz ha nem láthatók, még akkor sem, ha az alkalmazás alapértelmezés szerint előtérbeli szolgáltatást használ. Kapcsolja ki a Shizuku akku optimalizálási funkcióit az ilyen rendszereken.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Indítás (rootolt eszközökhöz)]]></string>
     <string name="home_root_description"><![CDATA[Ezenkívül a Shizuku automatikusan elindítható rendszerindításkor. Ha nem, ellenőrizze, hogy rendszere vagy harmadik féltől származó eszközei nem korlátozták-e a Shizukut.<br>A következőre hivatkozhat: %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Ha Magisk-et használ, megpróbálhatja a %1$s-t. A root felhasználók számára végül felváltja a Shizukut. Megj.: a meglévő alkalmazásokat kissé módosítani kell a %2$s használatához.]]></string>
     <string name="home_root_button_start">Indítás</string>
     <string name="home_root_button_restart">Újraindítás</string>
     <!-- Home - Application management -->
