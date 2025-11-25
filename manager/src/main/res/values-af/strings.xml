@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Soek tans na paringsdiens</string>
     <string name="dialog_adb_pairing_paring_code">Koppelkode</string>
     <string name="paring_code_is_wrong">Paringskode is verkeerd.</string>
-    <string name="cannot_connect_port">Kan nie aan draadlose ontfoutingsdiens koppel nie.</string>
     <string name="dialog_wireless_adb_not_enabled">Draadlose ontfouting is nie geaktiveer nie.\nLet wel, voor Android 11, om draadlose ontfouting te aktiveer, is rekenaarverbinding \'n vereiste.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-ontfouting is nie geaktiveer nie.\nAktiveer dit asseblief in \"Ontwikkelaaropsies\".</string>
     <string name="dialog_adb_pairing_message">Begin asseblief met paring deur die volgende stappe uit te voer: \"Ontwikkelaaropsies\" - \"Draadlose ontfouting\" - \"Koppel toestel met paringskode.\"\n\nNadat die paringsproses begin het, sal jy die paringskode kan invoer.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">Herbegin Shizuku outomaties as dit stop</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku moes een keer sedert herbegin begin het)"</string>
-    <string name="settings_tcp_mode_dialog_title">Herbegin Vereis</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku moet herbegin om hierdie instelling toe te pas.<br><br><b>Shizuku sal aanhou loop en wag vir \'n Wi-Fi-verbinding voordat dit herbegin.</b>]]></string>
     <string name="settings_tcp_port">TCP-poort</string>
-    <string name="settings_tcp_port_deafult">Standaard (5555)</string>
     <string name="settings_tcp_port_hint">Los leeg om verstekwaarde (5555) te gebruik</string>
     <string name="settings_tcp_learn_more">Leer meer oor die gebruik van outomatiseringsprogramme om Shizuku te beheer</string>
     <string name="settings_language">Taal</string>
