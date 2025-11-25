@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Cütləşdirmə servisi axtarılır</string>
     <string name="dialog_adb_pairing_paring_code">Cütləşmə kodu</string>
     <string name="paring_code_is_wrong">Cütləşmə kodu yanlışdır</string>
-    <string name="cannot_connect_port">Simsiz debaq cihazına qoşulmaq mümkün olmadı</string>
     <string name="dialog_wireless_adb_not_enabled">Simsiz debaq aktiv edilməyib.
 \nQeyd edək ki, Android 11-dən əvvəl simsiz debaqı aktivləşdirmək üçün kompüter bağlantısı mütləqdir.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging aktiv deyil.\nZəhmət olmasa, onu \"İnkişaf etdirici seçimləri\" bölməsində aktiv edin.</string>
@@ -107,10 +106,7 @@
     <string name="settings_watchdog_summary">Əgər dayansa, Shizuku avtomatik olaraq yenidən başlayır</string>
     <string name="settings_tcp_mode">TCP rejimi</string>
     <string name="settings_tcp_mode_summary">"Bu, Shizuku-nun Wi-Fi olmadan yenidən başlamasına imkan verir. (Shizuku yenidən başladıqdan sonra bir dəfə başlamış olmalıdır)"</string>
-    <string name="settings_tcp_mode_dialog_title">Yenidən başlatma tələb olunur</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku bu parametri tətbiq etmək üçün yenidən başlamalıdır.<br><br><b>Shizuku işləməyə davam edəcək və Wi-Fi bağlantısını gözləyəcək, sonra yenidən başlayacaq.</b>]]></string>
     <string name="settings_tcp_port">TCP portu</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
     <string name="settings_tcp_port_hint">Default (5555) istifadə etmək üçün boş buraxın</string>
     <string name="settings_tcp_learn_more">Shizuku-nu idarə etmək üçün avtomatlaşdırma tətbiqlərindən istifadə haqqında daha çox məlumat əldə edin</string>
     <string name="settings_language">Dil</string>
