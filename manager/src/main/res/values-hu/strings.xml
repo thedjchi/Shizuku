@@ -30,12 +30,15 @@
     <string name="dialog_adb_pairing_discovery">Párosítási szolgáltatás keresése</string>
     <string name="dialog_adb_pairing_paring_code">Párosítási kód</string>
     <string name="paring_code_is_wrong">Hibás a párosítási kód.</string>
+    <string name="cannot_connect_port">Nem lehet csatlakozni a vezeték nélküli hibakereső szolgáltatáshoz.\n\nKérjük, győződjön meg arról, hogy a Shizuku szerepel az összes olyan tűzfal-, hirdetésblokkoló-, VPN- vagy hasonló alkalmazás fehérlistáján, amely korlátozhatja a hálózati hozzáférést.</string>
     <string name="dialog_wireless_adb_not_enabled">Vezeték nélküli hibakeresés nincs engedélyezve.\nNe feledje, hogy az Android 11 előtt a vezeték nélküli hibakeresés engedélyezéséhez számítógépes csatlakozásra van szükség.</string>
     <string name="dialog_usb_debugging_not_enabled">Az USB hibakeresés nincs engedélyezve.\nKérjük, engedélyezze a „Fejlesztői beállítások” között.</string>
     <string name="dialog_adb_pairing_message">Kérjük, kezdje el a párosítást a következő lépések végrehajtásával: „Fejlesztői beállítások” - „Vezeték nélküli hibakeresés” - „Eszköz párosítása párosító kóddal”.\n\nA párosítási folyamat megkezdése után megadhatja a párosító kódot.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Kérjük, engedélyezze az akadálymentesítési szolgáltatást a párosítási folyamat megkezdéséhez. Ez lehetővé teszi a Shizuku számára a párosítási kód észlelését.\n\nAz akadálymentesítési szolgáltatás kikapcsol, amikor a kód megtalálható, vagy 1 perc elteltével az energiatakarékosság érdekében.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Kérjük, navigáljon a „Fejlesztői beállítások” &gt; „Vezeték nélküli hibakeresés” &gt; „Eszköz párosítása párosító kóddal” menüpontra. A Shizuku automatikusan felismeri a párosító kódot.</string>
     <string name="adb_pairing_requires_multi_window">Kérjük, először lépjen az osztott képernyős (több ablakos) módba.</string>
+    <string name="adb_pairing_requires_multi_window_reason">A rendszer megköveteli, hogy a párosítási párbeszédpanel mindig látható legyen. Az osztott képernyős mód használata az egyetlen módja annak, hogy ez az alkalmazás és a rendszerpárbeszédpanel egyszerre látható legyen.</string>
+    <string name="adb_error_key_store">Nem sikerült kulcsot generálni a vezeték nélküli hibakereséshez.\nEnnek oka lehet, hogy az eszköz KeyStore mechanizmusa hibás.</string>
     <string name="adb_error_stop_tcp">Nem sikerült leállítani az ADB-t TCP-n keresztül.</string>
     <string name="adb_pair_required">Kérjük először végezze el a párosítási lépést.</string>
     <string name="enable">Engedélyezés</string>
@@ -47,9 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">A párosítás befejezéséhez írja be az értesítésben lévő kódot.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">A párosítási folyamat során kapcsolatba kell lépni Shizuku értesítésével. Kérjük, engedélyezze a Shizukunak, hogy értesítéseket tegyen közzé.</string>
     <string name="adb_pairing_tutorial_content_miui">Előfordulhat, hogy a MIUI-felhasználóknak át kell váltaniuk az értesítési stílust \"Android\"-ra a \"Értesítés\" - \"Értesítési árnyék\" lehetőségről a rendszerbeállításokban.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Ellenkező esetben előfordulhat, hogy nem tudja megadni az értesítésben szereplő párosítási kódot.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Felhívjuk figyelmét, hogy a „Vezeték nélküli hibakeresés” opció bal oldali része kattintható, rákoppintva új oldal nyílik meg. Csak a jobb oldali kapcsoló bekapcsolása helytelen.</string>
+    <string name="adb_pairing_tutorial_content_finish">Menj vissza Shizukuba és indítsd el a Shizukut.</string>
+    <string name="adb_pairing_tutorial_content_network">A Shizukunak hozzá kell férnie a helyi hálózathoz. Ezt a hálózati engedély szabályozza.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Néhány rendszer (például az MIUI) nem engedélyezi az alkalmazásoknak a hálózathoz való hozzáférést, amikor azok nem láthatók, még akkor sem, ha az alkalmazás előtérben lévő szolgáltatást használ. Kérjük, tiltsa le a Shizuku akkumulátoroptimalizálási funkcióit az ilyen rendszereken.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Indítás (rootolt eszközökhöz)]]></string>
     <string name="home_root_description"><![CDATA[Ezenkívül a Shizuku automatikusan elindítható rendszerindításkor. Ha nem, ellenőrizze, hogy rendszere vagy harmadik féltől származó eszközei nem korlátozták-e a Shizukut.<br>A következőre hivatkozhat: %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Ha Magisk-et használsz, próbáld ki a %1$s-t. Root felhasználók számára ez végül felváltja a Shizuku-t. Fontos megjegyezni, hogy a meglévő alkalmazásoknak kicsit módosítaniuk kell a %2$shasználatához.]]></string>
     <string name="home_root_button_start">Indítás</string>
     <string name="home_root_button_restart">Újraindítás</string>
     <!-- Home - Application management -->
@@ -89,12 +98,17 @@
     <string name="settings_behavior">Viselkedés</string>
     <string name="settings_start_on_boot">Indítás rendszerindításkor</string>
     <string name="settings_start_on_boot_summary">Android 11+ vagy root szükséges</string>
+    <string name="settings_start_on_boot_bug">Az Android 11-12-es verziójában található hiba miatt a vezeték nélküli hibakeresés nem emlékszik a jogosult hálózatokra.\n\nMinden újraindításkor újra engedélyezned kell a hálózatot az „Engedélyezés” gombra koppintva, amikor a hitelesítési párbeszédpanel felugrik.</string>
     <string name="settings_use_system_color">Használja a rendszertéma színét</string>
     <string name="settings_watchdog">Őrzőkutya</string>
     <string name="settings_watchdog_summary">Shizuku automatikus újraindítása leállás esetén</string>
     <string name="settings_tcp_mode">TCP mód</string>
     <string name="settings_tcp_mode_summary">"Lehetővé teszi a Shizuku újraindítását Wi-Fi nélkül. (A Shizukunak egyszer el kellett indulnia az újraindítás óta.)"</string>
+    <string name="settings_restart_dialog_title">Újraindítás szükséges</string>
+    <string name="settings_restart_dialog_message">A beállítás alkalmazásához újra kell indítani a Shizuku-t.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi szükséges. A Shizuku továbbra is fut, és Wi-Fi kapcsolatra vár, mielőtt újraindulna a háttérben.</b>]]></string>
     <string name="settings_tcp_port">TCP-port</string>
+    <string name="settings_tcp_port_default">Alapértelmezett (5555)</string>
     <string name="settings_tcp_port_hint">Hagyja üresen az alapértelmezett érték (5555) használatához</string>
     <string name="settings_tcp_learn_more">Tudjon meg többet az automatizálási alkalmazások használatáról a Shizuku vezérléséhez</string>
     <string name="settings_language">Nyelv</string>
@@ -118,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nem található e-mail alkalmazás</string>
     <string name="toast_shizuku_already_starting">A Shizuku már elindul a háttérben</string>
+    <string name="toast_accessibility_tv_only">Ez a szolgáltatás csak TV-eszközökön támogatott.</string>
+    <string name="toast_accessibility_timed_out">A Shizuku párosítási szolgáltatás időtúllépést okozott.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Téma</string>
     <string name="dark_theme_off">Mindig könnyű</string>
@@ -166,6 +182,7 @@
     <string name="wadb_notification_channel">ADB automatikus indítási szolgáltatás</string>
     <!-- Watchdog -->
     <string name="watchdog_running">A felügyeleti szerv fut</string>
+    <string name="watchdog_turn_off">Kikapcsolás</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku nemrég lezuhant</string>
     <string name="watchdog_shizuku_crashed_text">A Watchdog újraindította a szolgáltatást. Koppintson a lehetséges javításokról a jövőbeli összeomlások megelőzése érdekében.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Kapcsolja ki a riasztásokat</string>
