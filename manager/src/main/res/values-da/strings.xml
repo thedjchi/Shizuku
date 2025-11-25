@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Aktivér venligst tilgængelighedstjenesten for at starte parringsprocessen. Dette gør det muligt for Shizuku at opdage parringskoden.\n\nTilgængelighedstjenesten vil blive slukket, når koden er fundet eller efter 1 minut for at spare energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Gå venligst til \"Udviklerindstillinger\" &gt; \"Trådløs fejlfinding\" &gt; \"Parr enhed med parringskode.\" Shizuku vil automatisk opdage parringskoden.</string>
     <string name="adb_pairing_requires_multi_window">Gå venligst ind i split-screen (multi-vindue) tilstand først.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Systemet kræver, at parringsdialogen altid er synlig, og at bruge split-screen tilstand er den eneste måde at gøre både appen og systemdialogen synlig samtidig.</string>
-    <string name="adb_error_key_store">Kan ikke generere nøglen til trådløs fejlfinding.\nDette kan skyldes, at KeyStore-mekanismen i denne enhed er defekt.</string>
     <string name="adb_error_stop_tcp">Mislykkedes i at stoppe ADB over TCP</string>
     <string name="adb_pair_required">Gå venligst igennem parringstrinnet først.</string>
     <string name="enable">Muliggøre</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Indtast koden i notifikationen for at fuldføre parringen.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Parringsprocessen kræver, at du interagerer med en notifikation fra Shizuku. Lad venligst Shizuku poste notifikationer.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-brugere kan være nødt til at skifte notifikationsstil til \"Android\" fra \"Notifikation\" - \"Notifikationsskygge\" i systemindstillingerne.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Ellers kan du måske ikke indtaste paring-koden fra notifikationen.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Bemærk venligst, at venstre del af \"Wireless debugging\"-muligheden er klikbar, og tryk på den åbner en ny side. Kun turing på kontakten til højre er forkert.</string>
-    <string name="adb_pairing_tutorial_content_finish">Tilbage til Shizuku og start Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku skal have adgang til det lokale netværk. Det styres af netværkstilladelsen.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nogle systemer (såsom MIUI) tillader ikke apps adgang til netværket, når de ikke er synlige, selvom appen bruger forgrundsservice som standard. Venligst deaktiver batterioptimeringsfunktioner for Shizuku på sådanne systemer.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (for rootede enheder)]]></string>
     <string name="home_root_description"><![CDATA[Derudover kan Shizuku startes automatisk ved opstart. Hvis ikke, så tjek venligst, om dit system eller tredjepartsværktøjer har begrænset Shizuku.<br>Du kan henvise til %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Hvis du bruger Magisk, kan du prøve %1$s. For root-brugere vil det til sidst erstatte Shizuku. Bemærk, at eksisterende applikationer skal ændres lidt for at kunne bruges %2$s.]]></string>
     <string name="home_root_button_start">Begynde</string>
     <string name="home_root_button_restart">Genstarte</string>
     <!-- Home - Application management -->
