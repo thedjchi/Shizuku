@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Включите службу специальных возможностей, чтобы начать процесс сопряжения. Это позволит Shizuku обнаружить код сопряжения.\n\nСлужба специальных возможностей будет отключена после обнаружения кода или через 1 минуту для экономии энергии.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Перейдите в «Параметры разработчика» &gt; «Отладка по беспроводной сети» &gt; «Связать устройство с кодом сопряжения». Shizuku автоматически определит код сопряжения.</string>
     <string name="adb_pairing_requires_multi_window">Пожалуйста, сначала активируйте режим разделения экрана (многооконный режим).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Системе нужно постоянно видеть диалоговое окно сопряжения, и многооконный режим – это единственный способ вывести на экран и это приложение, и системное окно одновременно.</string>
-    <string name="adb_error_key_store">Не удалось сгенерировать ключ для отладки по Wi-Fi.
-\nВозможно, что механизм KeyStore у данного устройства нерабочий.</string>
     <string name="adb_error_stop_tcp">Не удалось остановить ADB через TCP</string>
     <string name="adb_pair_required">Пожалуйста, сперва пройдите процедуру сопряжения.</string>
     <string name="enable">Давать возможность</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Введите код в уведомление для завершения процедуры сопряжения.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процедура сопряжения подразумевает взаимодействие с уведомлением от Shizuku. Для продолжения выдайте Shizuku разрешение на показ уведомлений.</string>
     <string name="adb_pairing_tutorial_content_miui">На оболочке MIUI может потребоваться сменить параметр в пункте системных настроек «Уведомления» – «Стиль уведомлений» на «Android».</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Иначе вы, вероятнее всего, не сможете ввести код сопряжения из уведомления.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Обратите внимание, что левая часть опции \"Беспроводная отладка\" является кликабельной, нажатие на нее открывает новую страницу. Нажатие только на переключатель (справа) является неправильным.</string>
-    <string name="adb_pairing_tutorial_content_finish">Вернитесь в приложение Shizuku и запустите его.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku требуется доступ к локальной сети. Он управляется сетевым разрешением.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Некоторые системы (та же MIUI) не разрешают приложениям доступ к сети, когда они не на экране, даже если те в основе задействуют службу переднего плана. Пожалуйста, добавьте Shizuku в исключения алгоритмов оптимизации заряда батареи на таких системах.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Запуск (для устройств с root правами)]]></string>
     <string name="home_root_description"><![CDATA[В дополнение, Shizuku может запускаться сразу после загрузки системы. Если этого не происходит, проверьте, нет ли ограничений со стороны вашей системы или сторонних инструментов.&lt;br&gt;Вы можете обратиться в %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Если вы пользуетесь Magisk, можете попробовать %1$s. Для пользователей с root правами он в конечном итоге заменит Shizuku. Обратите внимание, что в уже вышедшие приложения должны внести небольшие изменения, чтобы они заработали с %2$s.]]></string>
     <string name="home_root_button_start">Запустить</string>
     <string name="home_root_button_restart">Перезапустить</string>
     <!-- Home - Application management -->
