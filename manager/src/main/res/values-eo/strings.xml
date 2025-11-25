@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Bonvolu ebligi la alireblecan servon por komenci la parigan procezon. Tio permesas al Ŝizuku detekti la parigan kodon.\n\nLa alirebleca servo estos malŝaltita kiam la kodo estos trovita aŭ post 1 minuto por ŝpari energion.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Bonvolu navigi al \"Opcioj por programistoj\" &gt; \"Sendrata sencimigado\" &gt; \"Kunligi aparaton per kuniga kodo.\" Shizuku aŭtomate detektos la kunigan kodon.</string>
     <string name="adb_pairing_requires_multi_window">Bonvolu unue eniri dividitan ekranan (plurfenestran) reĝimon.</string>
-    <string name="adb_pairing_requires_multi_window_reason">La sistemo postulas, ke la pariĝa dialogo estu ĉiam videbla, kaj la sola maniero por samtempe videbligi ĉi tiun aplikaĵan kaj sisteman dialogon estas uzi dividitan ekranan reĝimon.</string>
-    <string name="adb_error_key_store">Ne eblas generi ŝlosilon por sendrata sencimigado.\nTio eble estas ĉar la KeyStore-mekanismo de ĉi tiu aparato estas difektita.</string>
     <string name="adb_error_stop_tcp">Malsukcesis haltigi ADB per TCP</string>
     <string name="adb_pair_required">Bonvolu unue trairi la parigan paŝon.</string>
     <string name="enable">Ebligi</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Enigu la kodon en la sciigo por kompletigi la parigon.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">La pariĝa procezo bezonas, ke vi interagu kun sciigo de Ŝizuku. Bonvolu permesi al Ŝizuku afiŝi sciigojn.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-uzantoj eble bezonos ŝanĝi sciigstilon al \"Android\" de \"Sciigo\" - \"Sciiga nuanco\" en sistemaj agordoj.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Alie, vi eble ne povos enigi parigan kodon el la sciigo.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Bonvolu noti, ke la maldekstra parto de la opcio \"Sendrata sencimigado\" estas alklakebla, frapetante ĝin malfermos novan paĝon. Nur ŝalti la ŝaltilon dekstre estas malĝuste.</string>
-    <string name="adb_pairing_tutorial_content_finish">Reen al Shizuku kaj komencu Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Ŝizuku bezonas aliri la lokan reton. Ĝi estas kontrolata de la retpermeso.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Iuj sistemoj (kiel MIUI) malpermesas al aplikaĵoj aliri la reton kiam ili ne estas videblaj, eĉ se la aplikaĵo uzas malfonan servon kiel normon. Bonvolu malŝalti bateriajn optimumigajn funkciojn por Shizuku en tiaj sistemoj.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Komencu (por enradikiĝintaj aparatoj)]]></string>
     <string name="home_root_description"><![CDATA[Krome, Shizuku povas esti aŭtomate lanĉata ĉe starto. Se ne, bonvolu kontroli ĉu via sistemo aŭ triapartaj iloj limigis Shizuku-on.<br>Vi povas rilati al %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Se vi uzas Magisk, vi povas provi %1$s. Por administraj uzantoj, ĝi poste anstataŭigos Shizuku. Notu, ke ekzistantaj aplikaĵoj bezonas iom ŝanĝiĝi por uzi %2$s.]]></string>
     <string name="home_root_button_start">Komenci</string>
     <string name="home_root_button_restart">Rekomenci</string>
     <!-- Home - Application management -->
@@ -102,7 +94,9 @@
     <string name="settings_watchdog_summary">Aŭtomate rekomencu Ŝizuku-on se ĝi haltas</string>
     <string name="settings_tcp_mode">TCP-reĝimo</string>
     <string name="settings_tcp_mode_summary">"Permesas al Ŝizuku rekomenci sen Wi-Fi. (Ŝizuku devas esti rekomencinta unufoje post la rekomenco)"</string>
+    <string name="settings_restart_dialog_title">Rekomenco necesa</string>
     <string name="settings_tcp_port">TCP-pordo</string>
+    <string name="settings_tcp_port_default">Defaŭlta (5555)</string>
     <string name="settings_tcp_port_hint">Lasu malplena por uzi la defaŭltan (5555)</string>
     <string name="settings_tcp_learn_more">Lernu pli pri uzado de aŭtomatigaj aplikaĵoj por kontroli Shizuku-on</string>
     <string name="settings_language">Lingvo</string>
