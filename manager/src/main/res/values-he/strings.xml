@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">מחפש שירות צימוד</string>
     <string name="dialog_adb_pairing_paring_code">קוד צימוד</string>
     <string name="paring_code_is_wrong">קוד הצימוד שגוי.</string>
-    <string name="cannot_connect_port">לא ניתן להתחבר לשירות ניפוי שגיאות אלחוטי.</string>
     <string name="dialog_wireless_adb_not_enabled">ניפוי שגיאות אלחוטי אינו מופעל.\nשימו לב, לפני אנדרואיד 11, כדי לאפשר ניפוי שגיאות אלחוטי, נדרש חיבור למחשב.</string>
     <string name="dialog_usb_debugging_not_enabled">ניפוי שגיאות USB אינו מופעל.\nאנא הפעל אותו ב\"אפשרויות למפתחים\".</string>
     <string name="dialog_adb_pairing_message">אנא התחל את הצימוד על ידי ביצוע השלבים הבאים: \"אפשרויות למפתחים\" - \"ניפוי שגיאות אלחוטי\" - \"צימוד מכשיר עם קוד צימוד.\"\n\nלאחר תחילת תהליך הצימוד, תוכל להזין את קוד הצימוד.</string>
@@ -105,10 +104,7 @@
     <string name="settings_watchdog_summary">הפעל מחדש את שיזוקו באופן אוטומטי אם הוא נעצר</string>
     <string name="settings_tcp_mode">מצב TCP</string>
     <string name="settings_tcp_mode_summary">"מאפשר לשיזוקו להפעיל מחדש ללא Wi-Fi. (שיזוקו חייבת להיות מופעלת פעם אחת מאז האתחול מחדש)"</string>
-    <string name="settings_tcp_mode_dialog_title">נדרש הפעלה מחדש</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[יש להפעיל מחדש את Shizuku כדי להחיל הגדרה זו.<br><br><b>Shizuku ימשיך לפעול וימתין לחיבור Wi-Fi לפני ההפעלה מחדש.</b>]]></string>
     <string name="settings_tcp_port">יציאת TCP</string>
-    <string name="settings_tcp_port_deafult">ברירת מחדל (5555)</string>
     <string name="settings_tcp_port_hint">השאר ריק כדי להשתמש בשדה ברירת המחדל (5555)</string>
     <string name="settings_tcp_learn_more">למידע נוסף על שימוש באפליקציות אוטומציה לשליטה ב-Shizuku</string>
     <string name="settings_language">שָׂפָה</string>
