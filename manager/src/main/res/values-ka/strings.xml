@@ -30,12 +30,15 @@
     <string name="dialog_adb_pairing_discovery">დაწყვილების სერვისის ძიება</string>
     <string name="dialog_adb_pairing_paring_code">დაწყვილების კოდი</string>
     <string name="paring_code_is_wrong">დაწყვილების კოდი არასწორია.</string>
+    <string name="cannot_connect_port">უსადენო გამართვის სერვისთან დაკავშირება შეუძლებელია.\n\nგთხოვთ, დარწმუნდეთ, რომ Shizuku შეტანილია ყველა firewall-ში, რეკლამის ბლოკირების, VPN-ის ან მსგავსი აპლიკაციის თეთრ სიაში, რომელსაც შეუძლია ქსელზე წვდომის შეზღუდვა.</string>
     <string name="dialog_wireless_adb_not_enabled">უსადენო გამართვა არ არის ჩართული.\nგაითვალისწინეთ, Android 11-მდე, უკაბელო გამართვის გასააქტიურებლად, კომპიუტერის კავშირი აუცილებელია.</string>
     <string name="dialog_usb_debugging_not_enabled">USB გამართვა არ არის ჩართული.\nგთხოვთ, ჩართოთ იგი \"დეველოპერის ოფციებში\".</string>
     <string name="dialog_adb_pairing_message">გთხოვთ, დაიწყოთ დაწყვილება შემდეგი ნაბიჯების შესრულებით: \"დეველოპერის პარამეტრები\" - \"უკაბელო გამართვა\" - \"მოწყობილობის დაწყვილება დაწყვილების კოდთან\".\n\nდაწყვილების პროცესის დაწყების შემდეგ, თქვენ შეძლებთ შეიყვანოთ დაწყვილების კოდი.</string>
     <string name="dialog_adb_pairing_accessibility_enable">გთხოვთ, ჩართოთ ხელმისაწვდომობის სერვისი დაწყვილების პროცესის დასაწყებად. ეს საშუალებას აძლევს Shizuku-ს აღმოაჩინოს დაწყვილების კოდი.\n\nხელმისაწვდომობის სერვისი გამორთულია კოდის პოვნისას ან 1 წუთის შემდეგ ენერგიის დაზოგვის მიზნით.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">გთხოვთ, გადახვიდეთ \"დეველოპერის ოფციებზე\" &gt; \"უსადენო გამართვა\" &gt; \"დააწყვილეთ მოწყობილობა დაწყვილების კოდთან.\" Shizuku ავტომატურად აღმოაჩენს დაწყვილების კოდს.</string>
     <string name="adb_pairing_requires_multi_window">გთხოვთ, ჯერ შეხვიდეთ გაყოფილი ეკრანის (მრავალფანჯრის) რეჟიმში.</string>
+    <string name="adb_pairing_requires_multi_window_reason">სისტემა მოითხოვს, რომ დაწყვილების დიალოგური ფანჯარა ყოველთვის ხილული იყოს. გაყოფილი ეკრანის რეჟიმის გამოყენება ერთადერთი გზაა, რომ ეს აპლიკაცია და სისტემის დიალოგური ფანჯარა ერთდროულად იყოს ხილული.</string>
+    <string name="adb_error_key_store">უკაბელო გამართვის გასაღების გენერირება შეუძლებელია.\nშესაძლოა, ეს გამოწვეულია ამ მოწყობილობის KeyStore მექანიზმის გაუმართაობით.</string>
     <string name="adb_error_stop_tcp">ADB-ის შეჩერება ვერ მოხერხდა TCP-ზე</string>
     <string name="adb_pair_required">გთხოვთ, ჯერ გაიაროთ დაწყვილების ნაბიჯი.</string>
     <string name="enable">ჩართვა</string>
@@ -47,9 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">შეიყვანეთ კოდი შეტყობინებაში დაწყვილების დასასრულებლად.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">დაწყვილების პროცესს სჭირდება ურთიერთობა შიზუკუს შეტყობინებასთან. გთხოვთ, ნება მიეცით Shizuku-ს გამოაქვეყნოს შეტყობინებები.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-ის მომხმარებლებს შეიძლება დასჭირდეთ შეტყობინების სტილის გადართვა \"Android\"-ზე \"შეტყობინებიდან\" - \"შეტყობინებების ჩრდილიდან\" სისტემის პარამეტრებში.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">წინააღმდეგ შემთხვევაში, შესაძლოა ვერ შეძლოთ შეტყობინებიდან დაკავშირების კოდის შეყვანა.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">გთხოვთ გაითვალისწინოთ, რომ „უკაბელო გამართვის“ ოფციის მარცხენა მხარეს დაწკაპუნება შესაძლებელია, მასზე შეხებით ახალი გვერდი გაიხსნება. მხოლოდ მარჯვენა მხარეს გადამრთველის ჩართვა არასწორია.</string>
+    <string name="adb_pairing_tutorial_content_finish">დაბრუნდით შიზუკუში და დაიწყეთ შიზუკუ.</string>
+    <string name="adb_pairing_tutorial_content_network">შიზუკუს ლოკალურ ქსელზე წვდომა სჭირდება. ის ქსელის ნებართვით კონტროლდება.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">ზოგიერთი სისტემა (მაგალითად, MIUI) კრძალავს აპლიკაციებს ქსელზე წვდომას, როდესაც ისინი არ არიან ხილული, მაშინაც კი, თუ აპლიკაცია იყენებს წინა პლანის სერვისს. გთხოვთ, გამორთოთ ბატარეის ოპტიმიზაციის ფუნქციები Shizuku-სთვის ასეთ სისტემებზე.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[დაწყება (rooted მოწყობილობებისთვის)]]></string>
     <string name="home_root_description"><![CDATA[გარდა ამისა, Shizuku შეიძლება ავტომატურად დაიწყოს ჩატვირთვისას. თუ არა, გთხოვთ, შეამოწმოთ, შეზღუდა თუ არა თქვენმა სისტემამ ან მესამე მხარის ინსტრუმენტებმა Shizuku.<br>შეგიძლიათ მიმართოთ %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[თუ Magisk-ს იყენებთ, შეგიძლიათ სცადოთ %1$s. root მომხმარებლებისთვის ის საბოლოოდ ჩაანაცვლებს Shizuku-ს. გაითვალისწინეთ, რომ არსებული აპლიკაციები %2$s-ის გამოსაყენებლად ცოტა უნდა შეიცვალოს.]]></string>
     <string name="home_root_button_start">დაწყება</string>
     <string name="home_root_button_restart">გადატვირთვა</string>
     <!-- Home - Application management -->
@@ -89,12 +98,17 @@
     <string name="settings_behavior">ქცევა</string>
     <string name="settings_start_on_boot">ჩატვირთვისას დაწყება</string>
     <string name="settings_start_on_boot_summary">მოითხოვს Android 11+ ან root</string>
+    <string name="settings_start_on_boot_bug">Android 11-12-ში არსებული შეცდომის გამო, უკაბელო გამართვა არ იმახსოვრებს არცერთ ავტორიზებულ ქსელს.\n\nთქვენ დაგჭირდებათ ქსელის ხელახლა ავტორიზაცია ყოველი გადატვირთვისას „დაშვებაზე“ შეხებით, როდესაც ავტორიზაციის დიალოგური ფანჯარა გამოჩნდება.</string>
     <string name="settings_use_system_color">გამოიყენეთ სისტემის თემის ფერი</string>
     <string name="settings_watchdog">მაკონტროლებელი</string>
     <string name="settings_watchdog_summary">ავტომატურად გადატვირთეთ Shizuku, თუ ის შეჩერდება</string>
     <string name="settings_tcp_mode">TCP რეჟიმი</string>
     <string name="settings_tcp_mode_summary">"საშუალებას აძლევს Shizuku-ს გადატვირთოს Wi-Fi-ის გარეშე. (შიზუკუ გადატვირთვის შემდეგ ერთხელ უნდა დაიწყოს)"</string>
+    <string name="settings_restart_dialog_title">გადატვირთვა აუცილებელია</string>
+    <string name="settings_restart_dialog_message">ამ პარამეტრის გამოსაყენებლად Shizuku-ს გადატვირთვაა საჭირო.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>საჭიროა Wi-Fi. Shizuku გააგრძელებს მუშაობას და დაელოდება Wi-Fi კავშირს, სანამ ფონურ რეჟიმში გადაიტვირთება.</b>]]></string>
     <string name="settings_tcp_port">TCP პორტი</string>
+    <string name="settings_tcp_port_default">ნაგულისხმევი (5555)</string>
     <string name="settings_tcp_port_hint">დატოვე ცარიელი ნაგულისხმევი გამოსაყენებლად (5555)</string>
     <string name="settings_tcp_learn_more">შეიტყვეთ მეტი ავტომატიზაციის აპლიკაციების გამოყენების შესახებ Shizuku-ს გასაკონტროლებლად</string>
     <string name="settings_language">ენა</string>
@@ -118,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">ელ.ფოსტის აპი ვერ მოიძებნა</string>
     <string name="toast_shizuku_already_starting">Shizuku უკვე იწყება ფონზე</string>
+    <string name="toast_accessibility_tv_only">ეს სერვისი მხოლოდ ტელევიზორის მოწყობილობებზეა მხარდაჭერილი.</string>
+    <string name="toast_accessibility_timed_out">შიზუკუს დაწყვილების სერვისს ვადა ამოეწურა.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">თემა</string>
     <string name="dark_theme_off">ყოველთვის მსუბუქი</string>
@@ -166,6 +182,7 @@
     <string name="wadb_notification_channel">ADB-ის ავტომატური გაშვების სერვისი</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Watchdog მუშაობს</string>
+    <string name="watchdog_turn_off">გამორთვა</string>
     <string name="watchdog_shizuku_crashed_title">შიზუკუ ცოტა ხნის წინ ჩამოვარდა</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog-მა განაახლა სერვისი. შეეხეთ პოტენციურ გამოსწორებებს, რათა თავიდან აიცილოთ მომავალი ავარიები.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">გამორთეთ შეტყობინებები</string>
