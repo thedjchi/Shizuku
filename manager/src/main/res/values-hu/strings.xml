@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Párosítási szolgáltatás keresése</string>
     <string name="dialog_adb_pairing_paring_code">Párosítási kód</string>
     <string name="paring_code_is_wrong">Hibás a párosítási kód.</string>
-    <string name="cannot_connect_port">Nem lehet csatlakozni a vezeték nélküli hibakereső szolgáltatáshoz.</string>
     <string name="dialog_wireless_adb_not_enabled">Vezeték nélküli hibakeresés nincs engedélyezve.\nNe feledje, hogy az Android 11 előtt a vezeték nélküli hibakeresés engedélyezéséhez számítógépes csatlakozásra van szükség.</string>
     <string name="dialog_usb_debugging_not_enabled">Az USB hibakeresés nincs engedélyezve.\nKérjük, engedélyezze a „Fejlesztői beállítások” között.</string>
     <string name="dialog_adb_pairing_message">Kérjük, kezdje el a párosítást a következő lépések végrehajtásával: „Fejlesztői beállítások” - „Vezeték nélküli hibakeresés” - „Eszköz párosítása párosító kóddal”.\n\nA párosítási folyamat megkezdése után megadhatja a párosító kódot.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">Shizuku automatikus újraindítása leállás esetén</string>
     <string name="settings_tcp_mode">TCP mód</string>
     <string name="settings_tcp_mode_summary">"Lehetővé teszi a Shizuku újraindítását Wi-Fi nélkül. (A Shizukunak egyszer el kellett indulnia az újraindítás óta.)"</string>
-    <string name="settings_tcp_mode_dialog_title">Újraindítás szükséges</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[A beállítás alkalmazásához újra kell indítani a Shizuku programot.<br><br><b>A Shizuku továbbra is fut, és Wi-Fi kapcsolatra vár, mielőtt újraindulna.</b>]]></string>
     <string name="settings_tcp_port">TCP-port</string>
-    <string name="settings_tcp_port_deafult">Alapértelmezett (5555)</string>
     <string name="settings_tcp_port_hint">Hagyja üresen az alapértelmezett érték (5555) használatához</string>
     <string name="settings_tcp_learn_more">Tudjon meg többet az automatizálási alkalmazások használatáról a Shizuku vezérléséhez</string>
     <string name="settings_language">Nyelv</string>
