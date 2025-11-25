@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Por favor, habilite o serviço de acessibilidade para iniciar o processo de emparelhamento. Isso permite que Shizuku detecte o código de emparelhamento.\n\nO serviço de acessibilidade será desativado quando o código for encontrado ou após 1 minuto para economizar energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Por favor, acesse \"Opções do desenvolvedor\" &gt; \"Depuração sem fio\" &gt; \"Emparelhar dispositivo com código de emparelhamento\". O Shizuku detectará automaticamente o código de emparelhamento.</string>
     <string name="adb_pairing_requires_multi_window">Primeiramente, ative o modo de janela dividida, por favor.</string>
-    <string name="adb_pairing_requires_multi_window_reason">O sistema necessita da caixa de diálogo de pareamento sempre visível. Usar o modo de tela dividida é a única maneira de deixar este aplicativo e a caixa de diálogo do sistema visíveis ao mesmo tempo.</string>
-    <string name="adb_error_key_store">Incapaz de gerar a chave para a Depuração via Wireless.
-\nIsso pode ocorrer porque o mecanismo que armazena as chaves deste aparelho está quebrado.</string>
     <string name="adb_error_stop_tcp">Falha ao interromper o ADB sobre TCP</string>
     <string name="adb_pair_required">Execute o primeiro passo de pareamento.</string>
     <string name="enable">Habilitar</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Digite o código de 6 dígitos na notificação para concluir o pareamento.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">O processo de pareamento precisa que você interaja com uma notificação do Shizuku. Por favor, permita que o Shizuku envie notificações.</string>
     <string name="adb_pairing_tutorial_content_miui">Os usuários da MIUI podem precisar mudar o estilo de notificação de \"MIUI\" para \"Android\". Para isso, acesse \"Configurações\", em seguida toque em \"Notificações\", em seguida toque em \"Área de Notificação\". Se você não usa MIUI, ignore isso.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">‎Caso contrário, você pode não conseguir inserir o código de paring a partir da notificação.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">‎Por favor, note que a parte esquerda da opção \"Depuração sem fio\" é clicável, tocando nela abrirá uma nova página. Apenas ligar o interruptor à direita está incorreto.</string>
-    <string name="adb_pairing_tutorial_content_finish">Volte para Shizuku e inicie o Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku precisa acessar a rede local. É controlado pela permissão da rede.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">‎Alguns sistemas (como a MIUI) não permitem que aplicativos acessem a rede quando não estão visíveis, mesmo que o aplicativo use o serviço em primeiro plano como padrão. Por favor, desabilitar os recursos de otimização da bateria para o Shizuku em tais sistemas.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Começar (para aparelhos rooteados)]]></string>
     <string name="home_root_description"><![CDATA[Além disso, o Shizuku pode ser iniciado automaticamente ao ligar o aparelho. Caso contrário, verifique se o seu sistema ou ferramentas de terceiros restringem Shizuku.&lt;br&gt;Você pode se referir a %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Se você estiver usando Magisk, você pode tentar %1$s. Para usuários rooteados, ele eventualmente substituirá Shizuku. Observe: os aplicativos existentes precisam mudar um pouco para usar %2$s.]]></string>
     <string name="home_root_button_start">Começar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
