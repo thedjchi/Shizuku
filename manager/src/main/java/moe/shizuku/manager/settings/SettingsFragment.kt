@@ -173,7 +173,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                             icon = maybeGetRestartIcon(KEY_TCP_MODE)
                             tcpPortPreference.isVisible = newValue
                         }
-                        maybePromptRestart (KEY_TCP_MODE) { applyChange() }
+                        maybePromptRestart (KEY_TCP_MODE, newValue) { applyChange() }
                     }
                     false
                 }
@@ -202,14 +202,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
             setOnPreferenceChangeListener { _, newValue ->
                 val port = (newValue as? String)?.toIntOrNull()
-                if ((port ?: 5555) == ShizukuSettings.getTcpPort()) return@setOnPreferenceChangeListener true
                 if (port == null || port in 1..65535) {
                     val applyChange: () -> Unit = {
                         ShizukuSettings.setTcpPort(port)
                         text = port?.toString()
                         icon = maybeGetRestartIcon(KEY_TCP_PORT)
                     }
-                    maybePromptRestart (KEY_TCP_PORT) { applyChange() }
+                    maybePromptRestart (KEY_TCP_PORT, port ?: 5555) { applyChange() }
                 } else {
                     SnackbarHelper.show(context, requireView(), context.getString(R.string.snackbar_invalid_port))
                 }
@@ -340,13 +339,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
         return recyclerView
     }
 
-    private fun needsRestart(setting: String): Boolean {
+    private fun needsRestart(setting: String, newValue: Any? = null): Boolean {
         val currentPort = EnvironmentUtils.getAdbTcpPort()
-        val savedPort = ShizukuSettings.getTcpPort()
         return when (setting) {
-            KEY_TCP_MODE -> (currentPort > 0) != ShizukuSettings.getTcpMode()
-            KEY_TCP_PORT -> ( (currentPort > 0) && (currentPort != savedPort) ) ||
-                ( (currentPort == 5555) && (savedPort == null) )
+            KEY_TCP_MODE -> {
+                val newMode = newValue as? Boolean ?: ShizukuSettings.getTcpMode()
+                (currentPort > 0) != newMode
+            }
+            KEY_TCP_PORT -> {
+                val newPort = newValue as? Int ?: ShizukuSettings.getTcpPort()
+                (currentPort > 0) && (currentPort != newPort)
+            }
             else -> false
         }
     }
@@ -367,9 +370,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
         return icon
     }
 
-    private fun maybePromptRestart (setting: String, applyChange: () -> Unit) {
+    private fun maybePromptRestart (setting: String, newValue: Any? = null, applyChange: () -> Unit) {
         val context = requireContext()
-        if (!ShizukuStateMachine.isRunning() || needsRestart(setting)) {
+        if (!ShizukuStateMachine.isRunning() || !needsRestart(setting, newValue)) {
             applyChange()
             context.sendBroadcast(Intent(context, NotifCancelReceiver::class.java))
         } else MaterialAlertDialogBuilder(context)
