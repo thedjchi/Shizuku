@@ -108,13 +108,25 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean) {
-                        val shouldToggle = shouldToggleBatterySensitiveSetting(newValue) { result ->
-                            if (result) {
-                                ShizukuSettings.setStartOnBoot(context, newValue)
-                                isChecked = newValue
+                        val doToggle = {
+                            shouldToggleBatterySensitiveSetting(newValue) { result ->
+                                if (result) {
+                                    ShizukuSettings.setStartOnBoot(context, newValue)
+                                    isChecked = newValue
+                                }
                             }
                         }
-                        return@setOnPreferenceChangeListener shouldToggle
+
+                        // https://r.android.com/2128832
+                        if (newValue && Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                            MaterialAlertDialogBuilder(context)
+                                .setTitle(android.R.string.dialog_alert_title)
+                                .setMessage(R.string.settings_start_on_boot_bug)
+                                .setPositiveButton(android.R.string.ok) { _, _ -> doToggle() }
+                                .setNegativeButton(android.R.string.cancel) { _, _ -> isChecked = !newValue }
+                                .show()
+                        } else { doToggle() }
+                        return@setOnPreferenceChangeListener false
                     } else false
                 }
             } else {
