@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">جستجوی خدمات مرتبط کردن</string>
     <string name="dialog_adb_pairing_paring_code">رمز مرتبط کردن</string>
     <string name="paring_code_is_wrong">رمز مرتبط کردن اشتباه است.</string>
-    <string name="cannot_connect_port">نمی توان به خدمات اشکال زدایی بی‌سیم متصل شد.</string>
     <string name="dialog_wireless_adb_not_enabled">اشکال‌زدایی بی‌سیم فعال نیست.\nتوجه داشته باشید، قبل از اندروید ۱۱، برای فعال کردن اشکال‌زدایی بی‌سیم، اتصال به رایانه ضروری است.</string>
     <string name="dialog_usb_debugging_not_enabled">اشکال‌زدایی USB فعال نیست.\nلطفاً آن را در «گزینه‌های توسعه‌دهنده» فعال کنید.</string>
     <string name="dialog_adb_pairing_message">لطفاً با انجام مراحل زیر، جفت‌سازی را شروع کنید: «گزینه‌های توسعه‌دهنده» - «اشکال‌زدایی بی‌سیم» - «جفت‌سازی دستگاه با کد جفت‌سازی.»\n\nپس از شروع فرآیند جفت‌سازی، می‌توانید کد جفت‌سازی را وارد کنید.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">اگر Shizuku متوقف شود، آن را به طور خودکار مجدداً راه اندازی کنید</string>
     <string name="settings_tcp_mode">حالت TCP</string>
     <string name="settings_tcp_mode_summary">"به Shizuku اجازه می‌دهد بدون Wi-Fi دوباره راه‌اندازی شود. (Shizuku باید یک بار از زمان راه‌اندازی مجدد شروع شده باشد)"</string>
-    <string name="settings_tcp_mode_dialog_title">راه اندازی مجدد مورد نیاز است</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[برای اعمال این تنظیم، Shizuku باید مجدداً راه‌اندازی شود.<br><br><b>Shizuku به اجرای خود ادامه می‌دهد و قبل از راه‌اندازی مجدد، منتظر اتصال Wi-Fi می‌ماند.</b>]]></string>
     <string name="settings_tcp_port">پورت TCP</string>
-    <string name="settings_tcp_port_deafult">پیش‌فرض (۵۵۵۵)</string>
     <string name="settings_tcp_port_hint">برای استفاده از مقدار پیش‌فرض (۵۵۵۵) خالی بگذارید.</string>
     <string name="settings_tcp_learn_more">درباره استفاده از برنامه‌های اتوماسیون برای کنترل شیزوکو بیشتر بدانید</string>
     <string name="settings_language">زبان</string>
