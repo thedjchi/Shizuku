@@ -34,9 +34,6 @@
     <string name="dialog_wireless_adb_not_enabled">La depuración inalámbrica no está habilitada.
 \nTenga en cuenta que antes de Android 11, para habilitar la depuración inalámbrica, la conexión a la computadora es imprescindible.</string>
     <string name="adb_pairing_requires_multi_window">Ingrese primero al modo de pantalla dividida (ventanas múltiples).</string>
-    <string name="adb_pairing_requires_multi_window_reason">El sistema requiere que el cuadro de diálogo de emparejamiento esté siempre visible, el uso del modo de pantalla dividida es la única forma de permitir que esta aplicación y el cuadro de diálogo del sistema estén visibles al mismo tiempo.</string>
-    <string name="adb_error_key_store">No se puede generar la clave para la depuración inalámbrica.
-\nEsto puede deberse a que el mecanismo KeyStore de este dispositivo está roto.</string>
     <string name="adb_pair_required">Primero, realice el paso de emparejamiento.</string>
     <string name="development_settings">Opciones de desarrollador</string>
     <string name="notification_settings">Opciones de Notificacion</string>
@@ -47,7 +44,6 @@
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Iniciar (para dispositivos root)]]></string>
     <string name="home_root_description"><![CDATA[Además, Shizuku puede iniciarse automáticamente al arrancar. Si no es así, por favor compruebe si su sistema o herramientas de terceros han restringido Shizuku.&lt;br&gt;Puede consultar %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Si estás usando Magisk, puedes probar %1$s. Para los usuarios root, eventualmente reemplazará a Shizuku. Tenga en cuenta que las aplicaciones existentes deben cambiar un poco para utilizar %2$s.]]></string>
     <string name="home_root_button_start">Iniciar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
