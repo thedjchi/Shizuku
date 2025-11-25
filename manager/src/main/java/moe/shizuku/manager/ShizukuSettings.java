@@ -116,6 +116,7 @@ public class ShizukuSettings {
             enable ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
             PackageManager.DONT_KILL_APP
         );
+        getPreferences().edit().putBoolean(Keys.KEY_START_ON_BOOT, enable).apply();
     }
     
     public static boolean getWatchdog() {
@@ -132,6 +133,7 @@ public class ShizukuSettings {
         } else {
             WatchdogService.stop(context);
         }
+        getPreferences().edit().putBoolean(Keys.KEY_WATCHDOG, enable).apply();
         return;
     }
 

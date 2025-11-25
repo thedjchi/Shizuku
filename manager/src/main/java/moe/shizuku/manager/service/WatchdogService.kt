@@ -16,6 +16,7 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import moe.shizuku.manager.R
 import moe.shizuku.manager.MainActivity
+import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import java.util.concurrent.atomic.AtomicBoolean
@@ -36,6 +37,10 @@ class WatchdogService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        if (intent?.action == "ACTION_STOP_SERVICE") {
+            stopSelf()
+            return START_NOT_STICKY
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             startForeground(
                 NOTIFICATION_ID_WATCHDOG,
@@ -54,6 +59,7 @@ class WatchdogService : Service() {
     override fun onDestroy() {
         ShizukuStateMachine.removeListener(stateListener)
         isRunning.set(false)
+        ShizukuSettings.setWatchdog(applicationContext, false)
         super.onDestroy()
     }
 
@@ -71,18 +77,29 @@ class WatchdogService : Service() {
         val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         manager.createNotificationChannel(channel)
 
-        val intent = Intent(this, MainActivity::class.java).apply {
+        val launchIntent = Intent(this, MainActivity::class.java).apply {
             setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
+        val launchPendingIntent = PendingIntent.getActivity(
+            this, 0, launchIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
 
-        val pendingIntent = PendingIntent.getActivity(
-            this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        val stopIntent = Intent(this, WatchdogService::class.java).apply {
+            action = "ACTION_STOP_SERVICE"
+        }
+        val stopPendingIntent = PendingIntent.getService(
+            this, 1, stopIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
         return NotificationCompat.Builder(this, channelId)
             .setContentTitle(getString(R.string.watchdog_running))
             .setSmallIcon(R.drawable.ic_system_icon)
-            .setContentIntent(pendingIntent)
+            .setContentIntent(launchPendingIntent)
+            .addAction(
+                R.drawable.ic_close_24,
+                getString(R.string.watchdog_turn_off),
+                stopPendingIntent
+            )
             .setOngoing(true)
             .build()
     }

@@ -58,7 +58,7 @@ import rikka.shizuku.manager.ShizukuLocales
 import rikka.widget.borderview.BorderRecyclerView
 import java.util.*
 
-class SettingsFragment : PreferenceFragmentCompat() {
+class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
 
     private lateinit var startOnBootPreference: TwoStatePreference
     private lateinit var watchdogPreference: TwoStatePreference
@@ -118,10 +118,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean) {
                         val doToggle = {
-                            shouldToggleBatterySensitiveSetting(newValue) { result ->
+                            maybeToggleBatterySensitiveSetting(newValue) { result ->
                                 if (result) {
                                     ShizukuSettings.setStartOnBoot(context, newValue)
-                                    isChecked = newValue
+                                    isChecked = ShizukuSettings.getStartOnBoot(context)
                                 }
                             }
                         }
@@ -135,8 +135,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
                                 .setNegativeButton(android.R.string.cancel) { _, _ -> isChecked = !newValue }
                                 .show()
                         } else { doToggle() }
-                        return@setOnPreferenceChangeListener false
-                    } else false
+                    }
+                    false
                 }
             } else {
                 isEnabled = false
@@ -150,14 +150,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
             setOnPreferenceChangeListener { _, newValue ->
                 if (newValue is Boolean) {
-                    val shouldToggle = shouldToggleBatterySensitiveSetting(newValue) { result ->
+                    maybeToggleBatterySensitiveSetting(newValue) { result ->
                         if (result) {
                             ShizukuSettings.setWatchdog(context, newValue)
                             isChecked = newValue
                         }
                     }
-                    return@setOnPreferenceChangeListener shouldToggle
-                } else false
+                }
+                false
             }
         }
 
@@ -313,12 +313,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onResume() {
         super.onResume()
+        preferenceScreen.sharedPreferences?.registerOnSharedPreferenceChangeListener(this)
         ShizukuStateMachine.addListener(stateListener)
     }
 
     override fun onPause() {
         ShizukuStateMachine.removeListener(stateListener)
+        preferenceScreen.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(this)
         super.onPause()
+    }
+
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
+        when (key) {
+            KEY_WATCHDOG -> watchdogPreference.isChecked = ShizukuSettings.isWatchdogRunning()
+        }
     }
 
     override fun onCreateRecyclerView(
@@ -388,14 +396,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
             .show()
     }
 
-    private fun shouldToggleBatterySensitiveSetting (
+    private fun maybeToggleBatterySensitiveSetting (
         newValue: Boolean,
         onResult: (Boolean) -> Unit
-    ): Boolean {
+    ) {
         val context = requireContext()
         if (!newValue || ShizukuSettings.isIgnoringBatteryOptimizations(context) || EnvironmentUtils.isTelevision()) {
             onResult(true)
-            return true
+            return
         }
             
         lifecycleScope.launch {
@@ -416,7 +424,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
             onResult(result)
         }
-        return false
     }
 
     private fun setupLocalePreference(languagePreference: ListPreference) {
