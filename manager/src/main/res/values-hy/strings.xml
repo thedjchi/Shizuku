@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Որոնվում է զուգելու ծառայությունը</string>
     <string name="dialog_adb_pairing_paring_code">Զուգելու կոդ</string>
     <string name="paring_code_is_wrong">Զուգելու կոդը սխալ է։</string>
-    <string name="cannot_connect_port">Հնարավոր չէ կպնել անլար կարգաբերման ծառայությանը։</string>
     <string name="dialog_wireless_adb_not_enabled">Անլար կարգաբերումը միացված չէ։
 \nAndroid 11-ից առաջ անլար կարգաբերման համար անհրաժեշտ է համակարգչային կապ։</string>
     <string name="dialog_usb_debugging_not_enabled">USB կարգաբերումը թույլատրված չէ:\nԽնդրում ենք միացնել այն «Մշակողի ընտրանքներ» բաժնում:</string>
@@ -107,10 +106,7 @@
     <string name="settings_watchdog_summary">Ավտոմատ վերագործարկել Shizuku, եթե այն կանգ է առնում</string>
     <string name="settings_tcp_mode">TCP ռեժիմ</string>
     <string name="settings_tcp_mode_summary">"Թույլ է տալիս Shizuku-ին վերագործարկել առանց Wi-Fi-ի: (Shizuku-ն պետք է որ մեկ անգամ սկսել է վերագործարկումից հետո)"</string>
-    <string name="settings_tcp_mode_dialog_title">Վերամեկնարկ պահանջվում է</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Այս կարգավորումը կիրառելու համար Shizuku-ն պետք է վերագործարկվի։<br><br><b>Shizuku-ն կշարունակի աշխատել եւ սպասել Wi-Fi կապին նախքան վերսկսելը։</b>]]></string>
     <string name="settings_tcp_port">TCP նավահանգիստ</string>
-    <string name="settings_tcp_port_deafult">Լռելյայն (5555)</string>
     <string name="settings_tcp_port_hint">Թողնել դատարկ՝ լռելյայն օգտագործելու համար (5555)</string>
     <string name="settings_tcp_learn_more">Իմացեք ավելին ավտոմատացման հավելվածների օգտագործման մասին՝ Shizuku-ն վերահսկելու համար</string>
     <string name="settings_language">Լեզու</string>
