@@ -14,6 +14,5 @@ class NotifCancelReceiver : BroadcastReceiver() {
         WorkManager.getInstance(context).cancelUniqueWork("adb_start_worker")
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         nm.cancel(ShizukuReceiverStarter.NOTIFICATION_ID)
-        ShizukuSettings.setTcpMode(EnvironmentUtils.getAdbTcpPort() > 0)
     }
 }

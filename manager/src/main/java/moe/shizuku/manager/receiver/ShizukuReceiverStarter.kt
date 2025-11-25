@@ -58,9 +58,7 @@ object ShizukuReceiverStarter {
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         nm.createNotificationChannel(channel)
 
-        val cancelIntent = Intent(context, NotifCancelReceiver::class.java).apply {
-            putExtra("notification_id", NOTIFICATION_ID)
-        }
+        val cancelIntent = Intent(context, NotifCancelReceiver::class.java)
         val cancelPendingIntent = PendingIntent.getBroadcast(
             context, 0, cancelIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )

@@ -26,6 +26,7 @@ import moe.shizuku.manager.adb.AdbPairingTutorialActivity
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeStartWirelessAdbBinding
 import moe.shizuku.manager.ktx.toHtml
+import moe.shizuku.manager.receiver.NotifCancelReceiver
 import moe.shizuku.manager.starter.StarterActivity
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
@@ -81,7 +82,7 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
             return
         }
 
-        WorkManager.getInstance(context).cancelUniqueWork("adb_start_worker")
+        context.sendBroadcast(Intent(context, NotifCancelReceiver::class.java))
 
         val cr = context.contentResolver
         if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
