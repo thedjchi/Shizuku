@@ -30,12 +30,15 @@
     <string name="dialog_adb_pairing_discovery">Mencari perkhidmatan berpasangan</string>
     <string name="dialog_adb_pairing_paring_code">Kod berpasangan</string>
     <string name="paring_code_is_wrong">Memadankan kod adalah salah.</string>
+    <string name="cannot_connect_port">Tidak boleh menyambung ke perkhidmatan penyahpepijatan wayarles.\n\nSila pastikan Shizuku disenaraikan putih dalam semua firewall, blok iklan, VPN atau apl serupa yang boleh menyekat akses rangkaian.</string>
     <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer adalah satu kemestian.</string>
     <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila dayakannya dalam \"Pilihan Pembangun\".</string>
     <string name="dialog_adb_pairing_message">Sila mulakan berpasangan dengan melakukan langkah berikut: \"Pilihan Pembangun\" - \"Penyahpepijatan wayarles\" - \"Gandingkan peranti dengan kod berpasangan.\"\n\nSelepas proses berpasangan bermula, anda akan dapat memasukkan kod berpasangan.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Sila dayakan perkhidmatan kebolehaksesan untuk memulakan proses berpasangan. Ini membolehkan Shizuku mengesan kod berpasangan.\n\nPerkhidmatan kebolehaksesan akan dimatikan apabila kod ditemui atau selepas 1 minit untuk menjimatkan tenaga.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Sila navigasi ke \"Pilihan Pembangun\" &gt; \"Penyahpepijatan wayarles\" &gt; \"Gandingkan peranti dengan kod berpasangan.\" Shizuku akan mengesan kod pasangan secara automatik.</string>
     <string name="adb_pairing_requires_multi_window">Sila masukkan mod skrin belah (berbilang tetingkap) dahulu.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Sistem memerlukan dialog berpasangan untuk sentiasa kelihatan. Menggunakan mod skrin belah ialah satu-satunya cara untuk membolehkan apl ini dan dialog sistem kelihatan pada masa yang sama.</string>
+    <string name="adb_error_key_store">Tidak dapat menjana kunci untuk penyahpepijatan wayarles.\nIni mungkin kerana mekanisme KeyStore peranti ini rosak.</string>
     <string name="adb_error_stop_tcp">Gagal menghentikan ADB melalui TCP</string>
     <string name="adb_pair_required">Sila lalui langkah berpasangan terlebih dahulu.</string>
     <string name="enable">Dayakan</string>
@@ -47,9 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Masukkan kod dalam pemberitahuan untuk melengkapkan gandingan.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proses berpasangan memerlukan anda berinteraksi dengan pemberitahuan daripada Shizuku. Sila benarkan Shizuku menyiarkan pemberitahuan.</string>
     <string name="adb_pairing_tutorial_content_miui">Pengguna MIUI mungkin perlu menukar gaya pemberitahuan kepada \"Android\" daripada \"Pemberitahuan\" - \"Teduhan pemberitahuan\" dalam tetapan sistem.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Jika tidak, anda mungkin tidak dapat memasukkan kod berpasangan daripada pemberitahuan.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Sila ambil perhatian, bahagian kiri pilihan \"Penyahpepijatan tanpa wayar\" boleh diklik, mengetiknya akan membuka halaman baharu. Hanya menghidupkan suis di sebelah kanan adalah tidak betul.</string>
+    <string name="adb_pairing_tutorial_content_finish">Kembali ke Shizuku dan mulakan Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku perlu mengakses rangkaian tempatan. Ia dikawal oleh kebenaran rangkaian.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sesetengah sistem (seperti MIUI) tidak membenarkan apl mengakses rangkaian apabila ia tidak kelihatan, walaupun apl menggunakan perkhidmatan latar depan. Sila lumpuhkan ciri pengoptimuman bateri untuk Shizuku pada sistem sedemikian.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Mula (untuk peranti berakar)]]></string>
     <string name="home_root_description"><![CDATA[Selain itu, Shizuku boleh dimulakan secara automatik semasa but. Jika tidak, sila semak sama ada sistem atau alat pihak ketiga anda telah menyekat Shizuku.<br>Anda boleh rujuk %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Jika anda menggunakan Magisk, anda boleh mencuba %1$s. Bagi pengguna root, ia akhirnya akan menggantikan Shizuku. Ambil perhatian, aplikasi sedia ada perlu berubah sedikit untuk digunakan %2$s.]]></string>
     <string name="home_root_button_start">Mulakan</string>
     <string name="home_root_button_restart">Mulakan semula</string>
     <!-- Home - Application management -->
@@ -88,12 +97,17 @@
     <string name="settings_behavior">Tingkah laku</string>
     <string name="settings_start_on_boot">Mulakan semasa but</string>
     <string name="settings_start_on_boot_summary">Memerlukan Android 11+ atau root</string>
+    <string name="settings_start_on_boot_bug">Disebabkan oleh pepijat dalam Android 11-12, penyahpepijatan wayarles tidak mengingati mana-mana rangkaian yang dibenarkan.\n\nAnda perlu membenarkan semula rangkaian pada setiap but semula dengan mengetik \"Benarkan\" apabila dialog kebenaran muncul.</string>
     <string name="settings_use_system_color">Gunakan warna tema sistem</string>
     <string name="settings_watchdog">Pengawas</string>
     <string name="settings_watchdog_summary">Mulakan semula Shizuku secara automatik jika ia berhenti</string>
     <string name="settings_tcp_mode">mod TCP</string>
     <string name="settings_tcp_mode_summary">"Membenarkan Shizuku memulakan semula tanpa Wi-Fi. (Shizuku mesti bermula sekali sejak but semula)"</string>
+    <string name="settings_restart_dialog_title">Mulakan semula Diperlukan</string>
+    <string name="settings_restart_dialog_message">Shizuku perlu memulakan semula untuk menggunakan tetapan ini.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi diperlukan. Shizuku akan terus berjalan dan menunggu sambungan Wi-Fi sebelum dimulakan semula di latar belakang.</b>]]></string>
     <string name="settings_tcp_port">port TCP</string>
+    <string name="settings_tcp_port_default">Lalai (5555)</string>
     <string name="settings_tcp_port_hint">Biarkan kosong untuk menggunakan lalai (5555)</string>
     <string name="settings_tcp_learn_more">Ketahui lebih lanjut tentang menggunakan apl automasi untuk mengawal Shizuku</string>
     <string name="settings_language">Bahasa</string>
@@ -117,6 +131,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Tiada apl e-mel ditemui</string>
     <string name="toast_shizuku_already_starting">Shizuku sudah bermula di latar belakang</string>
+    <string name="toast_accessibility_tv_only">Perkhidmatan ini hanya disokong pada peranti TV.</string>
+    <string name="toast_accessibility_timed_out">Perkhidmatan gandingan Shizuku tamat masa.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Sentiasa ringan</string>
@@ -165,6 +181,7 @@
     <string name="wadb_notification_channel">Perkhidmatan automula ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Anjing pengawas sedang berjalan</string>
+    <string name="watchdog_turn_off">Mati</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku terhempas baru-baru ini</string>
     <string name="watchdog_shizuku_crashed_text">Pengawas memulakan semula perkhidmatan. Ketik untuk mengetahui tentang kemungkinan pembetulan untuk mengelakkan ranap masa hadapan.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Matikan Makluman</string>
