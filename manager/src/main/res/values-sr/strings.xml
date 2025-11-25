@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Traženje uređaja za uparivanje</string>
     <string name="dialog_adb_pairing_paring_code">Kód za uparivanje</string>
     <string name="paring_code_is_wrong">Kód za uparivanje je pogrešan.</string>
-    <string name="cannot_connect_port">Nemoguće je povezivanje sa uslugom bežičnog otklanjanje grešaka.</string>
     <string name="dialog_wireless_adb_not_enabled">Bežično otklanjanje grešaka nije omogućeno.
 \nPrimedba: Pre Android-a 11, omogućavanje bežičnog otklanjanja grešaka bilo je uslovljeno postojanjem konekcije sa računarom.</string>
     <string name="dialog_usb_debugging_not_enabled">Отклањање грешака преко USB-а није омогућено.\nОмогућите га у „Опцијама за програмере“.</string>
@@ -108,10 +107,7 @@
     <string name="settings_watchdog_summary">Аутоматски поново покрените Шизуку ако се заустави</string>
     <string name="settings_tcp_mode">TCP режим</string>
     <string name="settings_tcp_mode_summary">"Омогућава Шизукуу да се поново покрене без Wi-Fi-ја. (Шизуку се морао једном покренути од поновног покретања)"</string>
-    <string name="settings_tcp_mode_dialog_title">Потребно је поновно покретање</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Шизуку треба поново покренути да би се применило ово подешавање.<br><br><b>Шизуку ће наставити да ради и чекати на Wi-Fi везу пре поновног покретања.</b>]]></string>
     <string name="settings_tcp_port">ТЦП порт</string>
-    <string name="settings_tcp_port_deafult">Подразумевано (5555)</string>
     <string name="settings_tcp_port_hint">Оставите празно да бисте користили подразумевано (5555)</string>
     <string name="settings_tcp_learn_more">Сазнајте више о коришћењу апликација за аутоматизацију за контролу Шизукуа</string>
     <string name="settings_language">Језик</string>
