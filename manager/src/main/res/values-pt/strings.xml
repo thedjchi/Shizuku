@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Procurando serviço de pareamento</string>
     <string name="dialog_adb_pairing_paring_code">Código de pareamento</string>
     <string name="paring_code_is_wrong">O código de emparelhamento está errado.</string>
-    <string name="cannot_connect_port">Não é possível conectar ao serviço de depuração sem fio.</string>
     <string name="dialog_wireless_adb_not_enabled">A depuração sem fio não está habilitada.
 \nObserve que, antes do Android 11, para habilitar a depuração sem fio, a conexão com o computador é obrigatória.</string>
     <string name="dialog_usb_debugging_not_enabled">A depuração USB não está ativada.\nAtive-a nas \"Opções do programador\".</string>
@@ -111,10 +110,7 @@
     <string name="settings_watchdog_summary">Reiniciar Shizuku automaticamente se parar</string>
     <string name="settings_tcp_mode">Modo TCP</string>
     <string name="settings_tcp_mode_summary">"Permite que o Shizuku reinicie sem Wi-Fi. (O Shizuku deve ter sido iniciado pelo menos uma vez desde o reinício)"</string>
-    <string name="settings_tcp_mode_dialog_title">É necessário reiniciar.</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku precisa de reiniciar para que esta configuração seja aplicada.<br><br><b>O Shizuku continuará a ser executado e aguardará por uma ligação Wi-Fi antes de reiniciar.</b>]]></string>
     <string name="settings_tcp_port">porta TCP</string>
-    <string name="settings_tcp_port_deafult">Padrão (5555)</string>
     <string name="settings_tcp_port_hint">Deixe em branco para utilizar o padrão (5555)</string>
     <string name="settings_tcp_learn_more">Saiba mais sobre como utilizar aplicações de automação para controlar o Shizuku.</string>
     <string name="settings_language">Idioma</string>
