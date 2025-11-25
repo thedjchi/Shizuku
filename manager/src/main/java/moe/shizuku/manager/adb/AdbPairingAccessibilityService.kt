@@ -33,7 +33,7 @@ class AdbPairingAccessibilityService : AccessibilityService() {
         super.onServiceConnected()
         
         if (!(EnvironmentUtils.isTelevision() && EnvironmentUtils.isTlsSupported())) {
-            Toast.makeText(this, "This service is only supported on TV devices.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_accessibility_tv_only), Toast.LENGTH_SHORT).show()
             disableSelf()
             return
         }
@@ -45,7 +45,7 @@ class AdbPairingAccessibilityService : AccessibilityService() {
         startActivity(intent)
 
         handler.postDelayed({
-            Toast.makeText(this, "Shizuku pairing service timed out.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.toast_accessibility_timed_out), Toast.LENGTH_LONG).show()
             disableSelf()
         }, 60_000)
     }
