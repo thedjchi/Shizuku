@@ -30,12 +30,15 @@
     <string name="dialog_adb_pairing_discovery">Soek tans na paringsdiens</string>
     <string name="dialog_adb_pairing_paring_code">Koppelkode</string>
     <string name="paring_code_is_wrong">Paringskode is verkeerd.</string>
+    <string name="cannot_connect_port">Kan nie aan draadlose ontfoutingsdiens koppel nie.\n\nMaak asseblief seker dat Shizuku op die witlys is in alle firewall-, advertensieblokkerings-, VPN- of soortgelyke programme wat netwerktoegang kan beperk.</string>
     <string name="dialog_wireless_adb_not_enabled">Draadlose ontfouting is nie geaktiveer nie.\nLet wel, voor Android 11, om draadlose ontfouting te aktiveer, is rekenaarverbinding \'n vereiste.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-ontfouting is nie geaktiveer nie.\nAktiveer dit asseblief in \"Ontwikkelaaropsies\".</string>
     <string name="dialog_adb_pairing_message">Begin asseblief met paring deur die volgende stappe uit te voer: \"Ontwikkelaaropsies\" - \"Draadlose ontfouting\" - \"Koppel toestel met paringskode.\"\n\nNadat die paringsproses begin het, sal jy die paringskode kan invoer.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Aktiveer asseblief die toeganklikheidsdiens om die paringsproses te begin. Dit laat Shizuku toe om die paringskode op te spoor.\n\nDie toeganklikheidsdiens sal afgeskakel word wanneer die kode gevind word of na 1 minuut om energie te bespaar.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Navigeer asseblief na \"Ontwikkelaaropsies\" &gt; \"Draadlose ontfouting\" &gt; \"Koppel toestel met koppelkode.\" Shizuku sal outomaties die koppelkode opspoor.</string>
     <string name="adb_pairing_requires_multi_window">Gaan asseblief eers na die verdeelskerm-modus (multivenstermodus).</string>
+    <string name="adb_pairing_requires_multi_window_reason">Die stelsel vereis dat die paringsdialoog altyd sigbaar moet wees. Die gebruik van verdeelskermmodus is die enigste manier om hierdie toepassing en die stelseldialoog gelyktydig sigbaar te laat wees.</string>
+    <string name="adb_error_key_store">Kan nie sleutel vir draadlose ontfouting genereer nie.\nDit mag wees omdat die KeyStore-meganisme van hierdie toestel gebreek is.</string>
     <string name="adb_error_stop_tcp">Kon nie ADB oor TCP stop nie</string>
     <string name="adb_pair_required">Gaan asseblief eers deur die paringsstap.</string>
     <string name="enable">Aktiveer</string>
@@ -47,9 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Voer die kode in die kennisgewing in om die paring te voltooi.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Die paringsproses vereis dat jy met \'n kennisgewing van Shizuku interaksie het. Laat asseblief Shizuku toe om kennisgewings te plaas.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moet dalk die kennisgewingstyl na \"Android\" oorskakel vanaf \"Kennisgewing\" - \"Kennisgewingskerm\" in stelselinstellings.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Andersins kan jy dalk nie die paringskode vanaf die kennisgewing invoer nie.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Let asseblief daarop dat die linker gedeelte van die \"Draadlose ontfouting\"-opsie klikbaar is. As jy daarop tik, sal \'n nuwe bladsy oopmaak. Slegs die skakelaar aan die regterkant aanskakel, is verkeerd.</string>
+    <string name="adb_pairing_tutorial_content_finish">Gaan terug na Shizuku en begin Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku benodig toegang tot die plaaslike netwerk. Dit word beheer deur die netwerktoestemming.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar is nie, selfs al gebruik die program \'n voorgronddiens. Deaktiveer asseblief battery-optimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
     <string name="home_root_description"><![CDATA[Daarbenewens kan Shizuku outomaties met opstart begin word. Indien nie, kyk asseblief of jou stelsel of derdeparty-instrumente Shizuku beperk het.<br>Jy kan verwys na %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet 'n bietjie verander om %2$ste gebruik.]]></string>
     <string name="home_root_button_start">Begin</string>
     <string name="home_root_button_restart">Herbegin</string>
     <!-- Home - Application management -->
@@ -89,12 +98,17 @@
     <string name="settings_behavior">Gedrag</string>
     <string name="settings_start_on_boot">Begin met opstart</string>
     <string name="settings_start_on_boot_summary">Vereis Android 11+ of root</string>
+    <string name="settings_start_on_boot_bug">As gevolg van \'n fout in Android 11-12, onthou draadlose ontfouting geen gemagtigde netwerke nie.\n\nJy sal die netwerk met elke herbegin moet hermagtig deur op \"Laat toe\" te tik wanneer die magtigingsdialoog verskyn.</string>
     <string name="settings_use_system_color">Gebruik stelseltemakleur</string>
     <string name="settings_watchdog">Waghond</string>
     <string name="settings_watchdog_summary">Herbegin Shizuku outomaties as dit stop</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku moes een keer sedert herbegin begin het)"</string>
+    <string name="settings_restart_dialog_title">Herbegin Vereis</string>
+    <string name="settings_restart_dialog_message">Shizuku moet herbegin om hierdie instelling toe te pas.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi word vereis. Shizuku sal aanhou loop en wag vir 'n Wi-Fi-verbinding voordat dit in die agtergrond herbegin.</b>]]></string>
     <string name="settings_tcp_port">TCP-poort</string>
+    <string name="settings_tcp_port_default">Standaard (5555)</string>
     <string name="settings_tcp_port_hint">Los leeg om verstekwaarde (5555) te gebruik</string>
     <string name="settings_tcp_learn_more">Leer meer oor die gebruik van outomatiseringsprogramme om Shizuku te beheer</string>
     <string name="settings_language">Taal</string>
@@ -118,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Geen e-posprogram gevind nie</string>
     <string name="toast_shizuku_already_starting">Shizuku begin reeds in die agtergrond</string>
+    <string name="toast_accessibility_tv_only">Hierdie diens word slegs op TV-toestelle ondersteun.</string>
+    <string name="toast_accessibility_timed_out">Shizuku-paringsdiens het \'n tydsverloop gehad.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Altyd lig</string>
@@ -166,6 +182,7 @@
     <string name="wadb_notification_channel">ADB outomatiese begindiens</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Waghond loop</string>
+    <string name="watchdog_turn_off">Skakel Af</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku het onlangs neergestort</string>
     <string name="watchdog_shizuku_crashed_text">Waghond het die diens herbegin. Tik om meer te wete te kom oor moontlike oplossings om toekomstige ineenstortings te voorkom.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Skakel waarskuwings af</string>
