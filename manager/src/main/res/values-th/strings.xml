@@ -32,7 +32,7 @@
     <string name="dialog_adb_pairing_discovery">กำลังค้นหาบริการจับคู่</string>
     <string name="dialog_adb_pairing_paring_code">รหัสการจับคู่</string>
     <string name="paring_code_is_wrong">รหัสการจับคู่ไม่ถูกต้อง</string>
-    <string name="cannot_connect_port">ไม่สามารถเชื่อมต่อกับบริการการแก้ไขข้อบกพร่องผ่าน Wi-Fi</string>
+    <string name="cannot_connect_port">ไม่สามารถเชื่อมต่อกับบริการดีบักแบบไร้สาย\n\nโปรดตรวจสอบให้แน่ใจว่า Shizuku อยู่ในรายการที่อนุญาตพิเศษในไฟร์วอลล์ บล็อกโฆษณา VPN หรือแอปที่คล้ายกันทั้งหมดที่สามารถจํากัดการเข้าถึงเครือข่ายได้</string>
     <string name="dialog_wireless_adb_not_enabled">การแก้ไขข้อบกพร่องผ่าน Wi-Fi ไม่ถูกเปิดไว้
 \nหมายเหตุ หาก Android เป็นรุ่นที่เก่ากว่า 11 การจะเปิดการแก้ไขข้อบกพร่องผ่าน Wi-Fi จำเป็นต้องมีการเชื่อมต่อกับคอมพิวเตอร์</string>
     <string name="dialog_usb_debugging_not_enabled">การดีบัก USB ไม่ได้เปิดใช้งาน\nโปรดเปิดใช้งานใน \"ตัวเลือกสำหรับนักพัฒนา\"</string>
@@ -40,9 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">กรุณาเปิดใช้งานบริการการเข้าถึงเพื่อเริ่มขั้นตอนการจับคู่ ซึ่งจะทำให้ Shizuku สามารถตรวจจับรหัสการจับคู่ได้\n\nบริการการเข้าถึงจะถูกปิดเมื่อพบรหัส หรือหลังจาก 1 นาที เพื่อประหยัดพลังงาน</string>
     <string name="dialog_adb_pairing_accessibility_navigate">กรุณาไปที่ \"ตัวเลือกสำหรับนักพัฒนา\" &gt; \"การดีบักไร้สาย\" &gt; \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" Shizuku จะตรวจจับรหัสจับคู่โดยอัตโนมัติ</string>
     <string name="adb_pairing_requires_multi_window">โปรดเข้าสู่โหมดแยกหน้าจอ (หลายหน้าต่าง) ก่อน</string>
-    <string name="adb_pairing_requires_multi_window_reason">ระบบจำเป็นจะต้องให้มีหน้าต่างรหัสการจับคู่แสดงอยู่ตลอดเวลา ใช้โหมดแนกหน้าจอเป็นหนทางเดียวที่จะปล่อยแอปและหน้าต่างของระบบแสดงพร้อมกันในเวลาเดียวกัน</string>
-    <string name="adb_error_key_store">ไม่สามารถสร้างรหัสเพื่อเชื่อมต่อการแก้ไขข้อบกพร่องผ่าน Wi-Fi
-\nอาจเป็นเพราะกลไกการจัดเก็บรหัสของอุปกรณ์เสียหาย</string>
+    <string name="adb_pairing_requires_multi_window_reason">ระบบต้องการกล่องโต้ตอบการจับคู่เพื่อให้มองเห็นได้ตลอดเวลา การใช้โหมดแบ่งหน้าจอเป็นวิธีเดียวที่จะทําให้แอปนี้และกล่องโต้ตอบระบบมองเห็นได้พร้อมกัน</string>
+    <string name="adb_error_key_store">ไม่สามารถสร้างคีย์สําหรับการดีบักแบบไร้สาย\nอาจเป็นเพราะกลไก KeyStore ของอุปกรณ์นี้เสีย</string>
     <string name="adb_error_stop_tcp">ไม่สามารถหยุด ADB ผ่าน TCP ได้</string>
     <string name="adb_pair_required">โปรดทำขั้นตอนการจับคู่ก่อน</string>
     <string name="enable">เปิดใช้งาน</string>
@@ -54,15 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">ป้อนรหัสลงไปในการแจ้งเตือนเพื่อเสร็จสิ้นการจับคู่</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">กระบวนการจับคู่จำเป็นต้องมีการป้อนข้อมูลลงในการแจ้งเตือนของ Shizuku โปรดอนุญาตให้ Shizuku ส่งการแจ้งเตือน</string>
     <string name="adb_pairing_tutorial_content_miui">ผู้ใช้ MIUI อาจจำเป็นต้องเปลี่ยนสไตล์การแจ้งเตือนเป็น \"Android\" ใน \"การแจ้งเตือน\" -\"เฉดการแจ้งเตือน\" ในการตั้งค่าของระบบ</string>
-    <string name="adb_pairing_tutorial_content_miui_2">ไม่เช่นนั้นจะไม่สามารถป้อนรหัสการจับคู่ลงในการแจ้งเตือน</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">โปรดให้ทราบว่า ส่วนด้านซ้ายของตัวเลือก \"การแก้ไขข้อบกพร่องผ่าน Wi-Fi\" สามารถกดได้ เมื่อแตะแล้วจะเปิดหน้าใหม่ขึ้นมา การแค่เปิดสวิตช์ที่ด้านขวาอย่างเดียวนั้นไม่ถูกต้อง</string>
-    <string name="adb_pairing_tutorial_content_finish">กลับไปที่ Shizuku เพื่อเริ่ม Shizuku</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku จำเป็นต้องเข้าถึงเครือข่ายท้องถิ่น ซึ่งกำลังควบคุมอยู่โดยการอนุญาตเครือข่าย</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">บางระบบ (เช่น MIUI) จะไม่อนุญาตให้แอปเข้าถึงเครือข่ายเมื่อไม่แสดง แม้แอปจะใช้บริการเบื้องหน้าตามปกติ โปรดเปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่ของ Shizuku บนระบบที่เป็นเช่นนั้น</string>
+    <string name="adb_pairing_tutorial_content_miui_2">มิฉะนั้น คุณอาจไม่สามารถป้อนรหัสการจับคู่จากการแจ้งเตือนได้</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">โปรดทราบว่าส่วนด้านซ้ายของตัวเลือก \"การดีบักแบบไร้สาย\" สามารถคลิกได้ การเปิดสวิตช์ทางด้านขวาเท่านั้นไม่ถูกต้อง</string>
+    <string name="adb_pairing_tutorial_content_finish">กลับไปที่ Shizuku และเริ่ม Shizuku</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku จําเป็นต้องเข้าถึงเครือข่ายท้องถิ่น มันถูกควบคุมโดยการอนุญาตเครือข่าย</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">บางระบบ (เช่น MIUI) ไม่อนุญาตให้แอปเข้าถึงเครือข่ายเมื่อมองไม่เห็น แม้ว่าแอปจะใช้บริการเบื้องหน้าก็ตาม โปรดปิดใช้งานคุณสมบัติการเพิ่มประสิทธิภาพแบตเตอรี่สําหรับ Shizuku ในระบบดังกล่าว</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[เริ่ม (สำหรับอุปกรณ์ที่รูทแล้ว)]]></string>
     <string name="home_root_description"><![CDATA[นอกจากนี้ Shizuku ยังสามารถเริ่มอัตโนมัติเมื่ออุปกรณ์ถูกเปิด หากไม่ โปรดตรวจสอบอุปกรณ์หรือเครื่องมือภายนอกที่จำกัดการเข้าถึงของ Shizuku&lt;br&gt;หรือดูตาม %s]]></string>
-    <string name="home_root_description_sui"><![CDATA[หากคุณกำลังใช้ Magisk สามารถลองใช้ %1$s สำหรับผู้ใช้งานรูท จะเป็นตัวที่ใช้แทนที่ Shizuku แต่โปรดทราบว่า แอปพลิเคชันที่มีอยู่จำเป็นต้องเปลี่ยนเล็กน้อยให้ไปใช้ %2$s]]></string>
+    <string name="home_root_description_sui"><![CDATA[หากคุณใช้ Magisk คุณสามารถลอง %1$s. สําหรับผู้ใช้รูท มันจะเข้ามาแทนที่ Shizuku ในที่สุด หมายเหตุ แอปพลิเคชันที่มีอยู่จําเป็นต้องเปลี่ยนแปลงเล็กน้อยเพื่อใช้งาน %2$s.]]></string>
     <string name="home_root_button_start">เริ่ม</string>
     <string name="home_root_button_restart">เริ่มใหม่</string>
     <!-- Home - Application management -->
@@ -105,15 +104,17 @@
     <string name="settings_behavior">พฤติกรรม</string>
     <string name="settings_start_on_boot">เริ่มต้นเมื่อบูตเครื่อง</string>
     <string name="settings_start_on_boot_summary">ต้องใช้ Android 11+ หรือรูท</string>
+    <string name="settings_start_on_boot_bug">เนื่องจากข้อบกพร่องใน Android 11-12 การดีบักแบบไร้สายจึงไม่จดจําเครือข่ายที่ได้รับอนุญาต\n\nคุณจะต้องอนุญาตเครือข่ายอีกครั้งในการรีบูตแต่ละครั้งโดยแตะ \"อนุญาต\" เมื่อกล่องโต้ตอบการอนุญาตปรากฏขึ้น</string>
     <string name="settings_use_system_color">ใช้สีของธีมระบบ</string>
     <string name="settings_watchdog">สุนัขเฝ้าบ้าน</string>
     <string name="settings_watchdog_summary">รีสตาร์ทชิซึกุโดยอัตโนมัติหากหยุด</string>
     <string name="settings_tcp_mode">โหมด TCP</string>
     <string name="settings_tcp_mode_summary">"ช่วยให้ชิซึกุสามารถรีสตาร์ทได้โดยไม่ต้องใช้ Wi-Fi (ชิซึกุต้องเริ่มใหม่ครั้งหนึ่งหลังจากรีบูต)"</string>
-    <string name="settings_tcp_mode_dialog_title">จำเป็นต้องรีสตาร์ท</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[ชิซึกุจำเป็นต้องรีสตาร์ทเพื่อใช้การตั้งค่านี้<br><br><b>ชิซึกุจะยังคงทำงานต่อไปและรอการเชื่อมต่อ Wi-Fi ก่อนที่จะรีสตาร์ท</b>]]></string>
+    <string name="settings_restart_dialog_title">จำเป็นต้องรีสตาร์ท</string>
+    <string name="settings_restart_dialog_message">Shizuku ต้องรีสตาร์ทเพื่อใช้การตั้งค่านี้</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>จําเป็นต้องใช้ Wi-Fi Shizuku จะทํางานต่อไปและรอการเชื่อมต่อ Wi-Fi ก่อนที่จะรีสตาร์ทในพื้นหลัง</b>]]></string>
     <string name="settings_tcp_port">พอร์ต TCP</string>
-    <string name="settings_tcp_port_deafult">ค่าเริ่มต้น (5555)</string>
+    <string name="settings_tcp_port_default">ค่าเริ่มต้น (5555)</string>
     <string name="settings_tcp_port_hint">เว้นว่างไว้เพื่อใช้ค่าเริ่มต้น (5555)</string>
     <string name="settings_tcp_learn_more">เรียนรู้เพิ่มเติมเกี่ยวกับการใช้แอปอัตโนมัติเพื่อควบคุมชิซูกุ</string>
     <string name="settings_language">ภาษา</string>
@@ -137,6 +138,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">ไม่พบแอปอีเมล</string>
     <string name="toast_shizuku_already_starting">ชิซึกุเริ่มอยู่ด้านหลังแล้ว</string>
+    <string name="toast_accessibility_tv_only">บริการนี้รองรับเฉพาะบนอุปกรณ์ทีวีเท่านั้น</string>
+    <string name="toast_accessibility_timed_out">บริการจับคู่ Shizuku หมดเวลา</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">ธีม</string>
     <string name="dark_theme_off">สว่างเสมอ</string>
@@ -185,6 +188,7 @@
     <string name="wadb_notification_channel">บริการเริ่มต้นอัตโนมัติของ ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">วอทช์ด็อกกำลังทำงาน</string>
+    <string name="watchdog_turn_off">ปิด</string>
     <string name="watchdog_shizuku_crashed_title">ชิซึกุเพิ่งประสบอุบัติเหตุเมื่อเร็วๆ นี้</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog ได้รีสตาร์ทบริการแล้ว แตะเพื่อดูวิธีแก้ไขที่อาจเกิดขึ้นเพื่อป้องกันปัญหาขัดข้องในอนาคต</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">ปิดการแจ้งเตือน</string>

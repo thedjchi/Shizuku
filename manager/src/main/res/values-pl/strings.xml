@@ -30,15 +30,15 @@
     <string name="dialog_adb_pairing_discovery">Szukanie usługi parowania</string>
     <string name="dialog_adb_pairing_paring_code">Kod parowania</string>
     <string name="paring_code_is_wrong">Kod parowania jest nieprawidłowy.</string>
-    <string name="cannot_connect_port">Nie można połączyć się z usługą debugowania bezprzewodowego.</string>
+    <string name="cannot_connect_port">Nie mogę połączyć się z bezprzewodową usługą debugowania.\n\nProsimy upewnić się, że Shizuku jest na białej liście we wszystkich aplikacjach firewall, ad-block, VPN lub podobnych, które mogą ograniczać dostęp do sieci.</string>
     <string name="dialog_wireless_adb_not_enabled">Debugowanie bezprzewodowe nie jest włączone.\nUwaga: w wersjach starszych niż Android 11, włączenie debugowania bezprzewodowego wymaga połączenia z komputerem.</string>
     <string name="dialog_usb_debugging_not_enabled">Debugowanie USB nie jest włączone.\nWłącz je w \"Opcjach programisty\".</string>
-    <string name="dialog_adb_pairing_message">Rozpocznij parowanie, wykonując następujące kroki: \"Opcje programisty\" -> \"Debugowanie bezprzewodowe\" -> \"Sparuj urządzenie przy pomocy kodu parowania\".\n\nGdy proces parowania się rozpocznie, będziesz mógł wpisać kod.</string>
+    <string name="dialog_adb_pairing_message">Rozpocznij parowanie, wykonując następujące kroki: \"Opcje programisty\" -&gt; \"Debugowanie bezprzewodowe\" -&gt; \"Sparuj urządzenie przy pomocy kodu parowania\".\n\nGdy proces parowania się rozpocznie, będziesz mógł wpisać kod.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Włącz usługę ułatwień dostępu, aby rozpocząć proces parowania. Pozwoli to Shizuku wykryć kod parowania.\n\nUsługa zostanie wyłączona po znalezieniu kodu lub po minucie, aby oszczędzać energię.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Przejdź do \"Opcje programisty\" &gt; \"Debugowanie bezprzewodowe\" &gt; \"Sparuj urządzenie przy pomocy kodu parowania\". Shizuku automatycznie wykryje kod parowania.</string>
     <string name="adb_pairing_requires_multi_window">Najpierw uruchom tryb podzielonego ekranu.</string>
-    <string name="adb_pairing_requires_multi_window_reason">System wymaga, aby okno parowania było cały czas widoczne. Użycie trybu podzielonego ekranu to jedyny sposób, aby ta aplikacja i okno systemowe były widoczne jednocześnie.</string>
-    <string name="adb_error_key_store">Nie można wygenerować klucza do debugowania bezprzewodowego.\nMoże to wynikać z uszkodzenia mechanizmu KeyStore na tym urządzeniu.</string>
+    <string name="adb_pairing_requires_multi_window_reason">System wymaga, aby dialog parowania był zawsze widoczny. Użycie trybu podzielonego ekranu to jedyny sposób, by ta aplikacja i dialog systemu były widoczne jednocześnie.</string>
+    <string name="adb_error_key_store">Nie mogę wygenerować klucza do bezprzewodowego debugowania.\nMoże to wynikać z awarii mechanizmu KeyStore tego urządzenia.</string>
     <string name="adb_error_stop_tcp">Nie udało się zatrzymać ADB przez TCP</string>
     <string name="adb_pair_required">Najpierw przeprowadź parowanie.</string>
     <string name="enable">Włącz</string>
@@ -46,19 +46,19 @@
     <string name="notification_settings">Opcje powiadomień</string>
     <string name="adb_pairing_tutorial_title">Sparuj Shizuku z urządzeniem</string>
     <string name="adb_pairing_tutorial_content_notification">Powiadomienie od Shizuku pomoże ci ukończyć parowanie.</string>
-    <string name="adb_pairing_tutorial_content_steps">Wejdź w \"Opcje programisty\" -> \"Debugowanie bezprzewodowe\". Dotknij \"Sparuj urządzenie przy pomocy kodu parowania\", a zobaczysz 6-cyfrowy kod.</string>
+    <string name="adb_pairing_tutorial_content_steps">Wejdź w \"Opcje programisty\" -&gt; \"Debugowanie bezprzewodowe\". Dotknij \"Sparuj urządzenie przy pomocy kodu parowania\", a zobaczysz 6-cyfrowy kod.</string>
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Wpisz kod w powiadomieniu, aby zakończyć parowanie.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proces parowania wymaga interakcji z powiadomieniem od Shizuku. Zezwol Shizuku na wyświetlanie powiadomień.</string>
-    <string name="adb_pairing_tutorial_content_miui">Użytkownicy MIUI mogą potrzebować zmiany stylu powiadomień na \"Android\" w ustawieniach systemu (Powiadomienia -> Styl powiadomień).</string>
-    <string name="adb_pairing_tutorial_content_miui_2">W przeciwnym razie wpisanie kodu parowania z powiadomienia może nie być możliwe.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Pamiętaj, że lewa część opcji \"Debugowanie bezprzewodowe\" jest klikalna, dotknięcie jej otworzy nową stronę. Samo włączenie przełącznika po prawej stronie jest nieprawidłowe.</string>
-    <string name="adb_pairing_tutorial_content_finish">Wróć do Shizuku i uruchom usługę.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku wymaga dostępu do sieci lokalnej. Jest to kontrolowane przez uprawnienia sieciowe.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Niektóre systemy (np. MIUI) blokują aplikacjom dostęp do sieci, gdy te nie są widoczne, nawet jeśli korzystają ze standardowej usługi pierwszoplanowej. Wyłącz optymalizację baterii dla Shizuku w takich systemach.</string>
+    <string name="adb_pairing_tutorial_content_miui">Użytkownicy MIUI mogą potrzebować zmiany stylu powiadomień na \"Android\" w ustawieniach systemu (Powiadomienia -&gt; Styl powiadomień).</string>
+    <string name="adb_pairing_tutorial_content_miui_2">W przeciwnym razie możesz nie móc wpisać kodu parowania z powiadomienia.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Proszę zauważyć, że lewa część opcji \"Bezprzewodowe debugowanie\" jest klikalna, a jej stuknięcie otwiera nową stronę. Włączanie tylko przełącznika po prawej stronie jest nieprawidłowe.</string>
+    <string name="adb_pairing_tutorial_content_finish">Wróć do Shizuku i zacznij Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku musi uzyskać dostęp do lokalnej sieci. Jest kontrolowany przez uprawnienia sieciowe.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Niektóre systemy (takie jak MIUI) nie pozwalają aplikacjom na dostęp do sieci, gdy nie są widoczne, nawet jeśli aplikacja korzysta z usługi na pierwszym planie. Proszę wyłączyć funkcje optymalizacji baterii dla Shizuku na takich systemach.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Uruchom (dla urządzeń z rootem)]]></string>
     <string name="home_root_description"><![CDATA[Ponadto Shizuku może uruchamiać się automatycznie przy starcie systemu. Jeśli tak się nie dzieje, sprawdź, czy system lub zewnętrzne narzędzia nie ograniczają działania Shizuku.<br>Możesz zajrzeć do %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Jeśli korzystasz z Magiska, możesz wypróbować %1$s. W przypadku użytkowników z rootem docelowo zastąpi on Shizuku. Uwaga: istniejące aplikacje wymagają drobnego dostosowania, aby korzystać z %2$s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Jeśli używasz Magiska, możesz spróbować %1$s. Dla użytkowników root ostatecznie zastąpi Shizuku. Zwróć uwagę, że istniejące aplikacje muszą się trochę zmienić, aby mogły korzystać %2$s.]]></string>
     <string name="home_root_button_start">Uruchom</string>
     <string name="home_root_button_restart">Uruchom ponownie</string>
     <!-- Home - Application management -->
@@ -100,15 +100,17 @@
     <string name="settings_behavior">Zachowanie</string>
     <string name="settings_start_on_boot">Uruchamiaj przy starcie</string>
     <string name="settings_start_on_boot_summary">Wymaga Androida 11+ lub roota</string>
+    <string name="settings_start_on_boot_bug">Z powodu błędu w systemie Android 11-12 debugowanie bezprzewodowe nie zapamiętuje autoryzowanych sieci.\n\nBędziesz musiał ponownie autoryzować sieć przy każdym ponownym uruchomieniu, dotykając \"Zezwól\", gdy pojawi się okno autoryzacji.</string>
     <string name="settings_use_system_color">Użyj koloru motywu systemowego</string>
     <string name="settings_watchdog">Nadzorowanie</string>
     <string name="settings_watchdog_summary">Automatycznie uruchamia Shizuku ponownie, jeśli usługa się zatrzyma</string>
     <string name="settings_tcp_mode">Tryb TCP</string>
     <string name="settings_tcp_mode_summary">"Pozwala zrestartować Shizuku bez Wi-Fi (Shizuku musi zostać uruchomione przynajmniej raz po restarcie urządzenia)."</string>
-    <string name="settings_tcp_mode_dialog_title">Wymagany restart</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku musi zostać uruchomione ponownie, aby zastosować to ustawienie.<br><br><b>Shizuku będzie nadal działać i poczeka na połączenie Wi-Fi przed restartem.</b>]]></string>
+    <string name="settings_restart_dialog_title">Wymagane ponowne uruchomienie</string>
+    <string name="settings_restart_dialog_message">Shizuku musi zacząć od nowa, żeby zastosować to ustawienie.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi jest wymagane. Shizuku będzie dalej działać i czekać na połączenie Wi-Fi, zanim zrestartuje się w tle.</b>]]></string>
     <string name="settings_tcp_port">Port TCP</string>
-    <string name="settings_tcp_port_deafult">Domyślny (5555)</string>
+    <string name="settings_tcp_port_default">Domyślne (5555)</string>
     <string name="settings_tcp_port_hint">Zostaw puste, aby użyć domyślnego (5555)</string>
     <string name="settings_tcp_learn_more">Dowiedz się więcej o sterowaniu Shizuku za pomocą aplikacji do automatyzacji</string>
     <string name="settings_language">Język</string>
@@ -132,6 +134,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nie znaleziono aplikacji pocztowej</string>
     <string name="toast_shizuku_already_starting">Shizuku już uruchamia się w tle</string>
+    <string name="toast_accessibility_tv_only">Ta usługa jest obsługiwana tylko na urządzeniach TV.</string>
+    <string name="toast_accessibility_timed_out">Upłynął limit czasu usługi parowania Shizuku.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Motyw</string>
     <string name="dark_theme_off">Zawsze jasny</string>
@@ -180,6 +184,7 @@
     <string name="wadb_notification_channel">Usługa autostartu ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Nadzorowanie działa</string>
+    <string name="watchdog_turn_off">Wyłącz</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku niedawno uległo awarii</string>
     <string name="watchdog_shizuku_crashed_text">Nadzorowanie zrestartowało usługę. Dotknij, aby poznać rozwiązania, które mogą zapobiec awariom w przyszłości.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Wyłącz alerty</string>

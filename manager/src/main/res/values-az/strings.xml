@@ -32,7 +32,7 @@
     <string name="dialog_adb_pairing_discovery">Cütləşdirmə servisi axtarılır</string>
     <string name="dialog_adb_pairing_paring_code">Cütləşmə kodu</string>
     <string name="paring_code_is_wrong">Cütləşmə kodu yanlışdır</string>
-    <string name="cannot_connect_port">Simsiz debaq cihazına qoşulmaq mümkün olmadı</string>
+    <string name="cannot_connect_port">Simsiz sazlama xidmətinə qoşulmaq mümkün deyil.\n\nŞəbəkəyə girişi məhdudlaşdıra bilən bütün firewall, reklam bloku, VPN və ya oxşar tətbiqlərdə Shizuku-nun ağ siyahıya salındığından əmin olun.</string>
     <string name="dialog_wireless_adb_not_enabled">Simsiz debaq aktiv edilməyib.
 \nQeyd edək ki, Android 11-dən əvvəl simsiz debaqı aktivləşdirmək üçün kompüter bağlantısı mütləqdir.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging aktiv deyil.\nZəhmət olmasa, onu \"İnkişaf etdirici seçimləri\" bölməsində aktiv edin.</string>
@@ -40,9 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">Zəhmət olmasa, cütləşdirmə prosesini başlatmaq üçün əlçatanlıq xidmətini aktiv edin. Bu, Shizukuya cütləşdirmə kodunu aşkar etməyə imkan verir.\n\nƏlçatanlıq xidməti kod tapıldıqda və ya enerji qənaəti üçün 1 dəqiqə sonra söndürüləcək.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Zəhmət olmasa \"İnkişaf etdirici Seçimləri\" bölməsinə keçin &gt; \"Simsiz debugging\" &gt; \"Cihazı cütləşdirmə kodu ilə qoş.\" Shizuku cütləşdirmə kodunu avtomatik aşkar edəcək.</string>
     <string name="adb_pairing_requires_multi_window">Əvvəlcə bölünmüş ekran (çoxu pəncərə) rejiminə daxil olun.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Sistem cütləşmə dialoqunun həmişə görünməsini tələb edir, bölünmüş ekran rejimindən istifadə bu proqram və sistem dialoqunun eyni vaxtda görünməsinə imkan verən yeganə yoldur.</string>
-    <string name="adb_error_key_store">Simsiz debaq üçün açar yaratmaq mümkün deyil.
-\nBunun səbəbi bu cihazın KeyStore mexanizminin xarab olması ola bilər.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Sistem cütləşdirmə dialoqunun həmişə görünməsini tələb edir. Split ekran rejimindən istifadə bu tətbiqin və sistem dialoqunun eyni vaxtda görünməsinə imkan verməyin yeganə yoludur.</string>
+    <string name="adb_error_key_store">Simsiz sazlama üçün açar yaratmaq mümkün deyil.\nBunun səbəbi bu cihazın KeyStore mexanizminin xarab olması ola bilər.</string>
     <string name="adb_error_stop_tcp">ADB-ni TCP üzərindən dayandırmaq uğursuz oldu</string>
     <string name="adb_pair_required">Lütfən, əvvəlcə cütləşmə mərhələsini keçin.</string>
     <string name="enable">Aktiv et</string>
@@ -54,15 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Cütləşdirməni tamamlamaq üçün bildirişdəki kodu daxil edin</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Cütləşmə prosesi Shizukudan gələn bildirişi görməyinizi tələb edir. Zəhmət olmasa, Shizuku-ya bildirişlər göndərməyə icazə verin.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI istifadəçiləri sistem parametrlərində bildiriş tərzini \"Bildiriş\" - \"Bildiriş kölgəsi\"ndən \"Android\"ə keçirməli ola bilərlər</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Əks təqdirdə siz bildirişdə olan cütləşdirmə kodunu daxil edə bilməyəcəksiniz</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Nəzərə alın ki, \"Simsiz debaq\" seçiminin sol hissəsi tıklana bilər, ona toxunmaq yeni səhifə açacaq. Yalnız sağdakı açara basmaq düzgün deyil.</string>
-    <string name="adb_pairing_tutorial_content_finish">Shizikuya geri dön və Shizikunu başlat</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku lokal şəbəkəyə daxil olmalıdır. Şəbəkə icazəsi ilə idarə olunur.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bəzi sistemlər (məsələn, MIUI) proqramlar görünmədikdə şəbəkəyə daxil olmağa icazə vermir, hətta proqram standart olaraq ön plan xidmətindən istifadə edir. Zəhmət olmasa Shizuku üçün batareyanın optimallaşdırılması xüsusiyyətlərini deaktiv edin</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Əks halda, siz bildirişdəki cütləşdirmə kodunu daxil edə bilməyəcəksiniz.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Nəzərə alın ki, \"Simsiz sazlama\" seçiminin sol hissəsi tıklanabilir, ona toxunmaq yeni səhifə açacaq. Yalnız sağdakı açarı açmaq düzgün deyil.</string>
+    <string name="adb_pairing_tutorial_content_finish">Şizukuya qayıdın və Şizukuya başlayın.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku yerli şəbəkəyə daxil olmalıdır. Şəbəkə icazəsi ilə idarə olunur.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bəzi sistemlər (məsələn, MIUI) proqramlar görünmədikdə, hətta proqram ön planda xidmətdən istifadə etsə belə, onların şəbəkəyə daxil olmasına icazə vermir. Zəhmət olmasa belə sistemlərdə Shizuku üçün batareyanın optimallaşdırılması funksiyalarını söndürün.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (root edilmiş cihazlar üçün)]]></string>
     <string name="home_root_description"><![CDATA[Bundan əlavə, Shizuku yüklənərkən avtomatik olaraq işə salına bilər. Əks-təqdirdə , sisteminizin və ya üçüncü tərəf alətlərin Shizuku-nu məhdudlaşdırıb-məhdudlaşdırdığını yoxlayın.&lt;br&gt;Siz %s-ə müraciət edə bilərsiniz.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magisk istifadə edirsinizsə, %1$s istifadə edə bilərsiniz. Root istifadəçiləri üçün o, nəticədə Shizuku əvəz edəcək. Qeyd edək ki, %2$s-dan istifadə etmək üçün mövcud proqramlar bir az dəyişməlidir.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Magisk istifadə edirsinizsə, cəhd edə bilərsiniz %1$s. Kök istifadəçiləri üçün o, nəticədə Shizuku-nu əvəz edəcək. Qeyd edək ki, %2$sistifadə etmək üçün mövcud proqramlar bir az dəyişməlidir.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yenidən Başlat</string>
     <!-- Home - Application management -->
@@ -102,15 +101,17 @@
     <string name="settings_behavior">Davranış</string>
     <string name="settings_start_on_boot">Bootda başla</string>
     <string name="settings_start_on_boot_summary">Android 11+ və ya root tələb edir</string>
+    <string name="settings_start_on_boot_bug">Android 11-12-də bir səhvə görə, simsiz sazlama heç bir səlahiyyətli şəbəkəni xatırlamır.\n\nAvtorizasiya dialoqu açıldıqda \"İcazə verin\" üzərinə klikləməklə, hər bir yenidən yükləmədə şəbəkəyə yenidən icazə verməli olacaqsınız.</string>
     <string name="settings_use_system_color">Sistem teması rəngindən istifadə edin</string>
     <string name="settings_watchdog">Nəzarətçi</string>
     <string name="settings_watchdog_summary">Əgər dayansa, Shizuku avtomatik olaraq yenidən başlayır</string>
     <string name="settings_tcp_mode">TCP rejimi</string>
     <string name="settings_tcp_mode_summary">"Bu, Shizuku-nun Wi-Fi olmadan yenidən başlamasına imkan verir. (Shizuku yenidən başladıqdan sonra bir dəfə başlamış olmalıdır)"</string>
-    <string name="settings_tcp_mode_dialog_title">Yenidən başlatma tələb olunur</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku bu parametri tətbiq etmək üçün yenidən başlamalıdır.<br><br><b>Shizuku işləməyə davam edəcək və Wi-Fi bağlantısını gözləyəcək, sonra yenidən başlayacaq.</b>]]></string>
+    <string name="settings_restart_dialog_title">Yenidən başladın Tələb olunur</string>
+    <string name="settings_restart_dialog_message">Bu ayarı tətbiq etmək üçün Shizuku yenidən başlamalıdır.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi tələb olunur. Shizuku işləməyə davam edəcək və arxa fonda yenidən başlamazdan əvvəl Wi-Fi bağlantısını gözləyəcək.</b>]]></string>
     <string name="settings_tcp_port">TCP portu</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
+    <string name="settings_tcp_port_default">Defolt (5555)</string>
     <string name="settings_tcp_port_hint">Default (5555) istifadə etmək üçün boş buraxın</string>
     <string name="settings_tcp_learn_more">Shizuku-nu idarə etmək üçün avtomatlaşdırma tətbiqlərindən istifadə haqqında daha çox məlumat əldə edin</string>
     <string name="settings_language">Dil</string>
@@ -134,6 +135,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Heç bir e-poçt tətbiqi tapılmadı</string>
     <string name="toast_shizuku_already_starting">Shizuku artıq arxa planda başlayır</string>
+    <string name="toast_accessibility_tv_only">Bu xidmət yalnız TV cihazlarında dəstəklənir.</string>
+    <string name="toast_accessibility_timed_out">Shizuku cütləşdirmə xidmətinin vaxtı bitdi.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Mövzu</string>
     <string name="dark_theme_off">Həmişə yüngül</string>
@@ -182,6 +185,7 @@
     <string name="wadb_notification_channel">ADB avtomatik işə salma xidməti</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Watchdog qaçır</string>
+    <string name="watchdog_turn_off">Söndürün</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku yaxınlarda çökdü</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog xidməti yenidən başladıb. Gələcək çöküşlərin qarşısını almaq üçün mümkün düzəlişlər barədə məlumat almaq üçün toxunun.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Siqnalları Söndür</string>

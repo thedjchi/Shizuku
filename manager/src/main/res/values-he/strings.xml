@@ -30,14 +30,14 @@
     <string name="dialog_adb_pairing_discovery">מחפש שירות צימוד</string>
     <string name="dialog_adb_pairing_paring_code">קוד צימוד</string>
     <string name="paring_code_is_wrong">קוד הצימוד שגוי.</string>
-    <string name="cannot_connect_port">לא ניתן להתחבר לשירות ניפוי שגיאות אלחוטי.</string>
+    <string name="cannot_connect_port">לא ניתן להתחבר לשירות ניפוי שגיאות אלחוטי.\n\nאנא ודא ש-Shizuku נמצא ברשימה הלבנה בכל אפליקציות חומת האש, חסימת הפרסומות, VPN או אפליקציות דומות שיכולות להגביל את הגישה לרשת.</string>
     <string name="dialog_wireless_adb_not_enabled">ניפוי שגיאות אלחוטי אינו מופעל.\nשימו לב, לפני אנדרואיד 11, כדי לאפשר ניפוי שגיאות אלחוטי, נדרש חיבור למחשב.</string>
     <string name="dialog_usb_debugging_not_enabled">ניפוי שגיאות USB אינו מופעל.\nאנא הפעל אותו ב\"אפשרויות למפתחים\".</string>
     <string name="dialog_adb_pairing_message">אנא התחל את הצימוד על ידי ביצוע השלבים הבאים: \"אפשרויות למפתחים\" - \"ניפוי שגיאות אלחוטי\" - \"צימוד מכשיר עם קוד צימוד.\"\n\nלאחר תחילת תהליך הצימוד, תוכל להזין את קוד הצימוד.</string>
     <string name="dialog_adb_pairing_accessibility_enable">אנא הפעל את שירות הנגישות כדי להתחיל בתהליך הצימוד. זה מאפשר לשיזוקו לזהות את קוד הצימוד.\n\nשירות הנגישות יכבה כאשר הקוד יימצא או לאחר דקה כדי לחסוך באנרגיה.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">אנא נווט אל \"אפשרויות למפתחים\" &gt; \"ניפוי שגיאות אלחוטי\" &gt; \"התאמת מכשיר עם קוד התאמת קוד\". Shizuku יזהה את קוד התאמת המכשיר באופן אוטומטי.</string>
     <string name="adb_pairing_requires_multi_window">אנא היכנס תחילה למצב מסך מפוצל (חלונות מרובים).</string>
-    <string name="adb_pairing_requires_multi_window_reason">המערכת דורשת שתיבת הדו-שיח של הצימוד תהיה גלויה תמיד, שימוש במצב מסך מפוצל היא הדרך היחידה לאפשר לאפליקציה זו ולתיבת הדו-שיח של המערכת להיות גלויות בו זמנית.</string>
+    <string name="adb_pairing_requires_multi_window_reason">המערכת דורשת שתיבת הדו-שיח של ההתאמה תהיה גלויה תמיד. שימוש במצב מסך מפוצל היא הדרך היחידה לאפשר לאפליקציה הזו ולתיבת הדו-שיח של המערכת להיות גלויות בו זמנית.</string>
     <string name="adb_error_key_store">לא ניתן ליצור מפתח עבור ניפוי שגיאות אלחוטי.\nייתכן שהסיבה לכך היא שמנגנון KeyStore של מכשיר זה מקולקל.</string>
     <string name="adb_error_stop_tcp">נכשלה עצירת ADB דרך TCP</string>
     <string name="adb_pair_required">אנא עברו תחילה על שלב הצימוד.</string>
@@ -50,15 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">הזן את הקוד בהודעה כדי להשלים את הצימוד.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">תהליך הצימוד דורש אינטראקציה עם הודעה משיזוקו. אנא אפשר לשיזוקו לפרסם התראות.</string>
     <string name="adb_pairing_tutorial_content_miui">ייתכן שמשתמשי MIUI יצטרכו לשנות את סגנון ההתראות ל\"אנדרואיד\" מ\"התראות\" - \"צללית התראות\" בהגדרות המערכת.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">אחרת, ייתכן שלא תוכלו להזין קוד התאמה מההודעה.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">אחרת, ייתכן שלא תוכלו להזין את קוד ההתאמה מההתראה.</string>
     <string name="adb_pairing_tutorial_content_left_is_clickable">שימו לב, החלק השמאלי של האפשרות \"ניפוי שגיאות אלחוטי\" ניתן ללחיצה, לחיצה עליו תפתח דף חדש. רק הפעלת המתג מימין אינה נכונה.</string>
-    <string name="adb_pairing_tutorial_content_finish">חזרה לשיזוקו והתחל את שיזוקו.</string>
+    <string name="adb_pairing_tutorial_content_finish">חזור אל Shizuku והתחל Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">שיזוקו צריך גישה לרשת המקומית. זה נשלט על ידי הרשאת הרשת.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">מערכות מסוימות (כגון MIUI) אוסרות גישה לאפליקציות לרשת כאשר הן אינן גלויות, גם אם האפליקציה משתמשת בשירות קדמי כסטנדרט. אנא השבת את תכונות אופטימיזציית הסוללה עבור Shizuku במערכות כאלה.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">מערכות מסוימות (כגון MIUI) אוסרות גישה לאפליקציות לרשת כאשר הן אינן גלויות, גם אם האפליקציה משתמשת בשירות קדמי. אנא השבת את תכונות אופטימיזציית הסוללה עבור Shizuku במערכות כאלה.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[התחל (למכשירים עם הרשאות מקור)]]></string>
     <string name="home_root_description"><![CDATA[בנוסף, ניתן להפעיל את Shizuku באופן אוטומטי בעת האתחול. אם לא, אנא בדוק אם המערכת שלך או כלי צד שלישי הגבילו את Shizuku.<br>ניתן לעיין ב- %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[אם אתם משתמשים ב-Magisk, תוכלו לנסות את %1$s. עבור משתמשי רוט, הוא יחליף בסופו של דבר את Shizuku. שימו לב, אפליקציות קיימות צריכות להשתנות מעט כדי להשתמש ב- %2$s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[אם אתם משתמשים ב-Magisk, תוכלו לנסות את %1$s. עבור משתמשי רוט, הוא יחליף בסופו של דבר את Shizuku. שימו לב, יישומים קיימים צריכים להשתנות מעט כדי להשתמש ב- %2$s.]]></string>
     <string name="home_root_button_start">הַתחָלָה</string>
     <string name="home_root_button_restart">הפעלה מחדש</string>
     <!-- Home - Application management -->
@@ -100,15 +100,17 @@
     <string name="settings_behavior">הִתְנַהֲגוּת</string>
     <string name="settings_start_on_boot">התחל באתחול</string>
     <string name="settings_start_on_boot_summary">דורש אנדרואיד 11+ או רוט</string>
+    <string name="settings_start_on_boot_bug">עקב באג באנדרואיד 11-12, ניפוי שגיאות אלחוטי אינו זוכר רשתות מורשות.\n\nתצטרך לאשר מחדש את הרשת בכל אתחול מחדש על ידי לחיצה על \"אפשר\" כאשר תיבת הדו-שיח של ההרשאה תופיע.</string>
     <string name="settings_use_system_color">השתמש בצבע ערכת הנושא של המערכת</string>
     <string name="settings_watchdog">כֶּלֶב שְׁמִירָה</string>
     <string name="settings_watchdog_summary">הפעל מחדש את שיזוקו באופן אוטומטי אם הוא נעצר</string>
     <string name="settings_tcp_mode">מצב TCP</string>
     <string name="settings_tcp_mode_summary">"מאפשר לשיזוקו להפעיל מחדש ללא Wi-Fi. (שיזוקו חייבת להיות מופעלת פעם אחת מאז האתחול מחדש)"</string>
-    <string name="settings_tcp_mode_dialog_title">נדרש הפעלה מחדש</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[יש להפעיל מחדש את Shizuku כדי להחיל הגדרה זו.<br><br><b>Shizuku ימשיך לפעול וימתין לחיבור Wi-Fi לפני ההפעלה מחדש.</b>]]></string>
+    <string name="settings_restart_dialog_title">נדרש הפעלה מחדש</string>
+    <string name="settings_restart_dialog_message">יש להפעיל מחדש את Shizuku כדי להחיל הגדרה זו.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>נדרש Wi-Fi. Shizuku ימשיך לפעול וימתין לחיבור Wi-Fi לפני שיופעל מחדש ברקע.</b>]]></string>
     <string name="settings_tcp_port">יציאת TCP</string>
-    <string name="settings_tcp_port_deafult">ברירת מחדל (5555)</string>
+    <string name="settings_tcp_port_default">ברירת מחדל (5555)</string>
     <string name="settings_tcp_port_hint">השאר ריק כדי להשתמש בשדה ברירת המחדל (5555)</string>
     <string name="settings_tcp_learn_more">למידע נוסף על שימוש באפליקציות אוטומציה לשליטה ב-Shizuku</string>
     <string name="settings_language">שָׂפָה</string>
@@ -132,6 +134,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">לא נמצאה אפליקציית דוא\"ל</string>
     <string name="toast_shizuku_already_starting">שיזוקו כבר מתחיל ברקע</string>
+    <string name="toast_accessibility_tv_only">שירות זה נתמך רק במכשירי טלוויזיה.</string>
+    <string name="toast_accessibility_timed_out">שירות הצימוד של Shizuku הסתיים.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">נוֹשֵׂא</string>
     <string name="dark_theme_off">תמיד קל</string>
@@ -180,6 +184,7 @@
     <string name="wadb_notification_channel">שירות הפעלה אוטומטית של ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">כלב השמירה פועל</string>
+    <string name="watchdog_turn_off">לְכַבּוֹת</string>
     <string name="watchdog_shizuku_crashed_title">שיזוקו התרסקה לאחרונה</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog הפעיל מחדש את השירות. הקש כדי ללמוד על תיקונים אפשריים למניעת קריסות עתידיות.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">כבה התראות</string>

@@ -32,15 +32,15 @@
     <string name="dialog_adb_pairing_discovery">S\'està buscant el servei d\'aparellament</string>
     <string name="dialog_adb_pairing_paring_code">Codi d\'aparellament</string>
     <string name="paring_code_is_wrong">El codi de vinculació és incorrecte.</string>
-    <string name="cannot_connect_port">No es pot connectar al servei de depuració sense fils.</string>
+    <string name="cannot_connect_port">No es pot connectar al servei de depuració sense fil.\n\nAssegureu-vos que Shizuku estigui a la llista blanca de tots els tallafocs, bloquejadors d\'anuncis, VPN o aplicacions similars que puguin restringir l\'accés a la xarxa.</string>
     <string name="dialog_wireless_adb_not_enabled">La depuració sense fils no està activada.\nTingues en compte que, abans d\'Android 11, per activar la depuració sense fils, la connexió a l\'ordinador era imprescindible.</string>
     <string name="dialog_usb_debugging_not_enabled">La depuració USB no està activada.\nSi us plau, activa\'l a \"Opcions de desenvolupador\".</string>
     <string name="dialog_adb_pairing_message">Si us plau, comença a emparellar fent els següents passos: \"Opcions de desenvolupador\" - \"Depuració sense fils\" - \"Aparella dispositiu amb codi d\'aparellament.\"\n\nUn cop comenci el procés d\'aparellament, podràs introduir el codi d\'aparellament.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Si us plau, activa el servei d\'accessibilitat perquè iniciï el procés d\'aparellament. Això permet a la Shizuku detectar el codi d\'aparellament.\n\nEl servei d\'accessibilitat s\'apagarà quan es trobi el codi o després d\'un minut per estalviar energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Si us plau, navegueu a \"Opcions per a desenvolupadors\" &gt; \"Depuració sense fils\" &gt; \"Emparella el dispositiu amb el codi d\'aparellament.\" La Shizuku detectarà automàticament el codi d\'aparellament.</string>
     <string name="adb_pairing_requires_multi_window">Si us plau, entra primer en mode pantalla dividida (amb múltiples finestres).</string>
-    <string name="adb_pairing_requires_multi_window_reason">El sistema requereix que el diàleg d\'aparellament sigui sempre visible; utilitzar el mode pantalla partida és l\'única manera de fer que aquesta aplicació i el diàleg del sistema siguin visibles al mateix temps.</string>
-    <string name="adb_error_key_store">No es pot generar clau per a la depuració sense fils.\nAixò pot ser perquè el mecanisme KeyStore d\'aquest dispositiu està trencat.</string>
+    <string name="adb_pairing_requires_multi_window_reason">El sistema requereix que el quadre de diàleg d\'emparellament sigui sempre visible. L\'ús del mode de pantalla dividida és l\'única manera de permetre que aquesta aplicació i el quadre de diàleg del sistema siguin visibles alhora.</string>
+    <string name="adb_error_key_store">No s\'ha pogut generar la clau per a la depuració sense fil.\nAixò pot ser degut a que el mecanisme KeyStore d\'aquest dispositiu està trencat.</string>
     <string name="adb_error_stop_tcp">No s\'ha pogut aturar l\'ADB a través de TCP</string>
     <string name="adb_pair_required">Si us plau, segueix primer el pas d\'emparellament.</string>
     <string name="enable">Habilitar</string>
@@ -52,15 +52,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Introdueix el codi a la notificació per completar l\'aparellament.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">El procés d\'aparellament requereix que interactuïs amb una notificació de la Shizuku. Si us plau, permeteu que la Shizuku publiqui notificacions.</string>
     <string name="adb_pairing_tutorial_content_miui">Els usuaris de MIUI poden haver de canviar l\'estil de notificació a \"Android\" des de \"Notificació\" a \"Notificació\" a la configuració del sistema.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">En cas contrari, potser no podràs introduir el codi de paratge des de la notificació.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Tingues en compte que la part esquerra de l\'opció \"Depuració sense fils\" es pot clicar; tocar-la s\'obre una nova pàgina. Només el Turing a l\'interruptor de la dreta és incorrecte.</string>
-    <string name="adb_pairing_tutorial_content_finish">Tornem a la Shizuku i comencem la Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">La Shizuku necessita accedir a la xarxa local. Està controlada pel permís de la xarxa.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alguns sistemes (com MIUI) impedeixen que les aplicacions accedeixin a la xarxa quan no són visibles, fins i tot si l\'aplicació utilitza el servei de primer pla com a estàndard. Si us plau, desactiva les funcions d\'optimització de bateria per a Shizuku en aquests sistemes.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Altrament, és possible que no puguis introduir el codi d\'emparellament de la notificació.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Tingueu en compte que es pot fer clic a la part esquerra de l\'opció \"Depuració sense fil\", i si hi toqueu, s\'obrirà una pàgina nova. Només activar l\'interruptor de la dreta és incorrecte.</string>
+    <string name="adb_pairing_tutorial_content_finish">Torna a Shizuku i comença Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">La Shizuku necessita accedir a la xarxa local. Està controlada pel permís de xarxa.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alguns sistemes (com ara MIUI) no permeten que les aplicacions accedeixin a la xarxa quan no són visibles, fins i tot si l\'aplicació utilitza un servei en primer pla. Si us plau, desactiveu les funcions d\'optimització de la bateria per a Shizuku en aquests sistemes.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (per a dispositius rootejats)]]></string>
     <string name="home_root_description"><![CDATA[A més, Shizuku es pot iniciar automàticament en arrencar. Si no, comprova si el teu sistema o eines de tercers han restringit Shizuku.<br>Pots consultar %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Si utilitzes Magisk, pots provar-ho %1$s. Per als usuaris root, eventualment substituirà Shizuku. Cal tenir en compte que les aplicacions existents han de canviar una mica per poder utilitzar-les %2$s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Si feu servir Magisk, podeu provar %1$s. Per als usuaris root, acabarà substituint Shizuku. Tingueu en compte que les aplicacions existents han de canviar una mica per poder utilitzar %2$s.]]></string>
     <string name="home_root_button_start">Començar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
@@ -100,15 +100,17 @@
     <string name="settings_behavior">Comportament</string>
     <string name="settings_start_on_boot">Comença amb l\'arrencada</string>
     <string name="settings_start_on_boot_summary">Requereix Android 11+ o root</string>
+    <string name="settings_start_on_boot_bug">A causa d\'un error a Android 11-12, la depuració sense fil no recorda cap xarxa autoritzada.\n\nHaureu de tornar a autoritzar la xarxa a cada reinici tocant \"Permet\" quan aparegui el quadre de diàleg d\'autorització.</string>
     <string name="settings_use_system_color">Utilitza el color del tema del sistema</string>
     <string name="settings_watchdog">Vigilant</string>
     <string name="settings_watchdog_summary">Reinicia automàticament la Shizuku si s\'atura</string>
     <string name="settings_tcp_mode">Mode TCP</string>
     <string name="settings_tcp_mode_summary">"Permet a la Shizuku reiniciar sense Wi-Fi. (La Shizuku deu haver començat una vegada des del reinici)"</string>
-    <string name="settings_tcp_mode_dialog_title">Cal reiniciar</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[La Shizuku ha de reiniciar per poder aplicar aquesta configuració.<br><br><b>La Shizuku continuarà funcionant i esperarà una connexió Wi-Fi abans de reiniciar.</b>]]></string>
+    <string name="settings_restart_dialog_title">Cal reiniciar</string>
+    <string name="settings_restart_dialog_message">Cal reiniciar la Shizuku per aplicar aquesta configuració.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Cal connexió Wi-Fi. Shizuku continuarà funcionant i esperarà una connexió Wi-Fi abans de reiniciar-se en segon pla.</b>]]></string>
     <string name="settings_tcp_port">Port TCP</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
+    <string name="settings_tcp_port_default">Per defecte (5555)</string>
     <string name="settings_tcp_port_hint">Deixa en blanc per utilitzar el valor per defecte (5555)</string>
     <string name="settings_tcp_learn_more">Aprèn més sobre l\'ús d\'aplicacions d\'automatització per controlar Shizuku</string>
     <string name="settings_language">Llengua</string>
@@ -132,6 +134,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">No s\'ha trobat cap aplicació de correu electrònic</string>
     <string name="toast_shizuku_already_starting">La Shizuku ja comença en segon pla</string>
+    <string name="toast_accessibility_tv_only">Aquest servei només és compatible amb dispositius de televisió.</string>
+    <string name="toast_accessibility_timed_out">S\'ha esgotat el temps d\'espera del servei d\'emparellament Shizuku.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Sempre lleuger</string>
@@ -180,6 +184,7 @@
     <string name="wadb_notification_channel">Servei d\'arrencada automàtica de l\'ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Watchdog està funcionant</string>
+    <string name="watchdog_turn_off">Desactiva</string>
     <string name="watchdog_shizuku_crashed_title">La Shizuku s\'ha estavellat recentment</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog va reiniciar el servei. Toca per conèixer possibles solucions per evitar futurs bloquejos.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Desactiva les alertes</string>

@@ -30,15 +30,15 @@
     <string name="dialog_adb_pairing_discovery">Etsitään parituspalvelua</string>
     <string name="dialog_adb_pairing_paring_code">Parituskoodi</string>
     <string name="paring_code_is_wrong">Parituskoodi on väärä.</string>
-    <string name="cannot_connect_port">En pysty yhdistämään langattomaan virheenkorjauspalveluun.</string>
+    <string name="cannot_connect_port">Langattomaan virheenkorjauspalveluun ei saada yhteyttä.\n\nVarmista, että Shizuku on sallittu kaikissa palomuuri-, mainostenesto-, VPN- tai vastaavissa sovelluksissa, jotka voivat rajoittaa verkkoyhteyttä.</string>
     <string name="dialog_wireless_adb_not_enabled">Langaton virheenkorjaus ei ole käytössä.\nHuomaa, että ennen Android 11:tä, langattoman virheenkorjauksen mahdollistamiseksi tietokoneyhteys oli välttämätön.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-virheenkorjaus ei ole käytössä.\nOta se käyttöön kohdassa \"Kehittäjäasetukset\".</string>
     <string name="dialog_adb_pairing_message">Aloita parittaminen suorittamalla seuraavat vaiheet: \"Kehittäjäasetukset\" - \"Langaton debugging\" - \"Yhdistä laite parituskoodilla.\"\n\nKun paritusprosessi alkaa, voit syöttää parituskoodin.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Ole hyvä ja ota saavutettavuuspalvelu käyttöön aloittaaksesi paritusprosessin. Tämä mahdollistaa Shizukun tunnistaa parituskoodin.\n\nEsteettömyyspalvelu kytketään pois päältä, kun koodi löytyy, tai minuutin kuluttua energian säästämiseksi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Siirry kohtaan \"Kehittäjävaihtoehdot\" &gt; \"Langaton virheenkorjaus\" &gt; \"Yhdistä laite parituskoodiin.\" Shizuku tunnistaa automaattisesti parituskoodin.</string>
     <string name="adb_pairing_requires_multi_window">Siirry ensin jaetun ruudun (moniikkuna) tilaan.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Järjestelmä vaatii, että paritusdialogi on aina näkyvissä, ja jaettu ruututila on ainoa tapa saada tämä sovellus ja järjestelmädialogi näkyviksi samanaikaisesti.</string>
-    <string name="adb_error_key_store">Langattoman virheenkorjauksen avainta ei pysty generoimaan.\nTämä voi johtua siitä, että laitteen KeyStore-mekanismi on rikki.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Järjestelmä vaatii, että pariliitosvalintaikkuna on aina näkyvissä. Jaetun näytön tilan käyttö on ainoa tapa, jolla tämä sovellus ja järjestelmävalintaikkuna voivat olla näkyvissä samanaikaisesti.</string>
+    <string name="adb_error_key_store">Langattoman virheenkorjauksen avaimen luominen epäonnistui.\nTämä voi johtua siitä, että laitteen KeyStore-mekanismi on rikki.</string>
     <string name="adb_error_stop_tcp">ADB:n pysäyttäminen TCP:n kautta epäonnistui</string>
     <string name="adb_pair_required">Käy ensin läpi paritusvaihe.</string>
     <string name="enable">Ottaa käyttöön</string>
@@ -50,15 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Syötä koodi ilmoitukseen parittelun saamiseksi päätökseen.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Paritusprosessi vaatii, että olet vuorovaikutuksessa Shizukun ilmoituksen kanssa. Sallithan Shizukun lähettää ilmoituksia.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI:n käyttäjät saattavat joutua vaihtamaan ilmoitustyylin \"Android\"-muotoon \"Notification\" - \"Notification shade\" -asetuksista järjestelmäasetuksista.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Muuten et välttämättä pysty syöttämään paring-koodia ilmoituksesta.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Huomaa, että vasen osa \"Langaton debuggaus\" -vaihtoehdosta on klikattavissa, ja sen napauttaminen avaa uuden sivun. Vain oikeanpuoleisen kytkimen turlaus on virheellinen.</string>
-    <string name="adb_pairing_tutorial_content_finish">Takaisin Shizukuun ja aloitetaan Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizukun täytyy päästä paikalliseen verkkoon. Sitä ohjaa verkon käyttöoikeus.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Jotkut järjestelmät (kuten MIUI) kieltävät sovellusten pääsyn verkkoon, kun ne eivät ole näkyvissä, vaikka sovellus käyttäisi etualan palvelua vakiona. Poista käytöstä akun optimointiominaisuudet Shizukulta tällaisissa järjestelmissä.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Muussa tapauksessa et ehkä pysty syöttämään ilmoituksessa näkyvää pariliitoskoodia.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Huomaa, että \"Langattoman virheenkorjaus\" -vaihtoehdon vasenta puolta voi klikata. Sen napauttaminen avaa uuden sivun. Vain oikeanpuoleisen kytkimen kytkeminen päälle on virheellinen.</string>
+    <string name="adb_pairing_tutorial_content_finish">Mene takaisin Shizukuun ja aloita Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizukun on käytettävä paikallisverkkoa. Sitä hallitsee verkkokäyttöoikeus.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Jotkin järjestelmät (kuten MIUI) estävät sovelluksia käyttämästä verkkoa, kun ne eivät ole näkyvissä, vaikka sovellus käyttäisi etualalla olevaa palvelua. Poista Shizukun akun optimointiominaisuudet käytöstä tällaisissa järjestelmissä.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (rootatuille laitteille)]]></string>
     <string name="home_root_description"><![CDATA[Lisäksi Shizuku voidaan käynnistää automaattisesti käynnistyksen yhteydessä. Jos ei, tarkista, onko järjestelmäsi tai kolmannen osapuolen työkalut rajoittaneet Shizukua.<br>Voit viitata seuraaviin %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Jos käytät Magiskia, voit kokeilla %1$s. Root-käyttäjille se korvaa lopulta Shizukun. Huomaa, että olemassa olevien sovellusten täytyy muuttua hieman niiden käyttöön %2$s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Jos käytät Magiskia, voit kokeilla %1$s. Pääkäyttäjille se korvaa lopulta Shizukun. Huomaa, että olemassa olevia sovelluksia on muutettava hieman, jotta ne voivat käyttää %2$s.]]></string>
     <string name="home_root_button_start">Aloittaa</string>
     <string name="home_root_button_restart">Käynnistää uudelleen</string>
     <!-- Home - Application management -->
@@ -98,15 +98,17 @@
     <string name="settings_behavior">Käyttäytyminen</string>
     <string name="settings_start_on_boot">Aloita käynnistyksestä</string>
     <string name="settings_start_on_boot_summary">Vaatii Android 11+:n tai rootin</string>
+    <string name="settings_start_on_boot_bug">Android 11-12 -versioiden virheen vuoksi langaton virheenkorjaus ei muista valtuutettuja verkkoja.\n\nSinun on valtuutettava verkko uudelleen jokaisen uudelleenkäynnistyksen yhteydessä napauttamalla \"Salli\", kun valtuutusikkuna ponnahtaa esiin.</string>
     <string name="settings_use_system_color">Käytä järjestelmän teemaväriä</string>
     <string name="settings_watchdog">Vahtikoira</string>
     <string name="settings_watchdog_summary">Käynnistä Shizuku automaattisesti uudelleen, jos se pysähtyy</string>
     <string name="settings_tcp_mode">TCP-tila</string>
     <string name="settings_tcp_mode_summary">"Sallii Shizukun aloittaa uudelleen ilman Wi-Fiä. (Shizuku on varmaan aloittanut kerran uudelleenkäynnistyksen jälkeen)"</string>
-    <string name="settings_tcp_mode_dialog_title">Vaaditaan uudelleenkäynnistys</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizukun täytyy aloittaa alusta, jotta tämä asetus voidaan ottaa käyttöön.<br><br><b>Shizuku jatkaa toimintaansa ja odottaa Wi-Fi-yhteyttä ennen uudelleenkäynnistystä.</b>]]></string>
+    <string name="settings_restart_dialog_title">Uudelleenkäynnistys vaaditaan</string>
+    <string name="settings_restart_dialog_message">Shizuku on käynnistettävä uudelleen, jotta tämä asetus otetaan käyttöön.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi-yhteys vaaditaan. Shizuku jatkaa toimintaansa ja odottaa Wi-Fi-yhteyttä ennen uudelleenkäynnistystä taustalla.</b>]]></string>
     <string name="settings_tcp_port">TCP-portti</string>
-    <string name="settings_tcp_port_deafult">Oletus (5555)</string>
+    <string name="settings_tcp_port_default">Oletusarvo (5555)</string>
     <string name="settings_tcp_port_hint">Jätä tyhjä oletus (5555)</string>
     <string name="settings_tcp_learn_more">Lue lisää automaatiosovellusten käytöstä Shizukun ohjaamiseen</string>
     <string name="settings_language">Kieli</string>
@@ -130,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Sähköpostisovellusta ei löytynyt</string>
     <string name="toast_shizuku_already_starting">Shizuku aloittaa jo taustalla</string>
+    <string name="toast_accessibility_tv_only">Tätä palvelua tuetaan vain TV-laitteissa.</string>
+    <string name="toast_accessibility_timed_out">Shizukun pariliitospalvelu aikakatkaistiin.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Teema</string>
     <string name="dark_theme_off">Aina kevyt</string>
@@ -178,6 +182,7 @@
     <string name="wadb_notification_channel">ADB:n automaattinen käynnistyspalvelu</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Vahtikoira on juoksemassa</string>
+    <string name="watchdog_turn_off">Sammuta</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku kaatui äskettäin</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog käynnisti palvelun uudelleen. Napauta oppiaksesi mahdollisista korjauksista tulevien kaatumisten estämiseksi.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Sammuta hälytykset</string>
