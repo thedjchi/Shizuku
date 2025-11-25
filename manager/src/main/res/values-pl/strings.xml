@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Włącz usługę ułatwień dostępu, aby rozpocząć proces parowania. Pozwoli to Shizuku wykryć kod parowania.\n\nUsługa zostanie wyłączona po znalezieniu kodu lub po minucie, aby oszczędzać energię.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Przejdź do \"Opcje programisty\" &gt; \"Debugowanie bezprzewodowe\" &gt; \"Sparuj urządzenie przy pomocy kodu parowania\". Shizuku automatycznie wykryje kod parowania.</string>
     <string name="adb_pairing_requires_multi_window">Najpierw uruchom tryb podzielonego ekranu.</string>
-    <string name="adb_pairing_requires_multi_window_reason">System wymaga, aby okno parowania było cały czas widoczne. Użycie trybu podzielonego ekranu to jedyny sposób, aby ta aplikacja i okno systemowe były widoczne jednocześnie.</string>
-    <string name="adb_error_key_store">Nie można wygenerować klucza do debugowania bezprzewodowego.\nMoże to wynikać z uszkodzenia mechanizmu KeyStore na tym urządzeniu.</string>
     <string name="adb_error_stop_tcp">Nie udało się zatrzymać ADB przez TCP</string>
     <string name="adb_pair_required">Najpierw przeprowadź parowanie.</string>
     <string name="enable">Włącz</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Wpisz kod w powiadomieniu, aby zakończyć parowanie.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proces parowania wymaga interakcji z powiadomieniem od Shizuku. Zezwol Shizuku na wyświetlanie powiadomień.</string>
     <string name="adb_pairing_tutorial_content_miui">Użytkownicy MIUI mogą potrzebować zmiany stylu powiadomień na \"Android\" w ustawieniach systemu (Powiadomienia -&gt; Styl powiadomień).</string>
-    <string name="adb_pairing_tutorial_content_miui_2">W przeciwnym razie wpisanie kodu parowania z powiadomienia może nie być możliwe.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Pamiętaj, że lewa część opcji \"Debugowanie bezprzewodowe\" jest klikalna, dotknięcie jej otworzy nową stronę. Samo włączenie przełącznika po prawej stronie jest nieprawidłowe.</string>
-    <string name="adb_pairing_tutorial_content_finish">Wróć do Shizuku i uruchom usługę.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku wymaga dostępu do sieci lokalnej. Jest to kontrolowane przez uprawnienia sieciowe.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Niektóre systemy (np. MIUI) blokują aplikacjom dostęp do sieci, gdy te nie są widoczne, nawet jeśli korzystają ze standardowej usługi pierwszoplanowej. Wyłącz optymalizację baterii dla Shizuku w takich systemach.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Uruchom (dla urządzeń z rootem)]]></string>
     <string name="home_root_description"><![CDATA[Ponadto Shizuku może uruchamiać się automatycznie przy starcie systemu. Jeśli tak się nie dzieje, sprawdź, czy system lub zewnętrzne narzędzia nie ograniczają działania Shizuku.<br>Możesz zajrzeć do %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Jeśli korzystasz z Magiska, możesz wypróbować %1$s. W przypadku użytkowników z rootem docelowo zastąpi on Shizuku. Uwaga: istniejące aplikacje wymagają drobnego dostosowania, aby korzystać z %2$s.]]></string>
     <string name="home_root_button_start">Uruchom</string>
     <string name="home_root_button_restart">Uruchom ponownie</string>
     <!-- Home - Application management -->
