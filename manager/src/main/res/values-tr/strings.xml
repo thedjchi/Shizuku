@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Eşleştirme işlemini başlatmak için lütfen erişilebilirlik hizmetini etkinleştirin. Bu, Shizuku\'nun eşleştirme kodunu algılamasını sağlar.\n\nKod bulunduğunda veya enerji tasarrufu için 1 dakika sonra erişilebilirlik hizmeti kapatılacaktır.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Lütfen \"Geliştirici Seçenekleri\" &gt; \"Kablosuz hata ayıklama\" &gt; \"Cihazı eşleştirme koduyla eşleştir\" seçeneğine gidin. Shizuku eşleştirme kodunu otomatik olarak algılayacaktır.</string>
     <string name="adb_pairing_requires_multi_window">Lütfen önce bölünmüş ekran (çoklu pencere) moduna girin.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Sistem, eşleştirme iletişim kutusunun her zaman görünür olmasını zorunda kılıyor; bölünmüş ekran modunu kullanmak, bu uygulamanın ve sistem iletişim kutusunun aynı anda görünür olmasını sağlamanın tek yoludur.</string>
-    <string name="adb_error_key_store">Kablosuz hata ayıklama için anahtar üretilemiyor.
-\nBunun nedeni, bu aygıtın KeyStore mekanizmasının bozuk olması olabilir.</string>
     <string name="adb_error_stop_tcp">TCP üzerinden ADB durdurulamadı</string>
     <string name="adb_pair_required">Lütfen önce eşleştirme adımını uygulayın.</string>
     <string name="enable">Olanak vermek</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Eşleştirmeyi tamamlamak için kodu bildirime girin.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Eşleştirme işlemi, Shizuku\'dan gelen bir bildirimle etkileşim kurmanızı gerektirir. Lütfen Shizuku\'nun bildirim göndermesine izin verin.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI kullanıcılarının sistem ayarlarında \"Bildirim\" - \"Bildirim gölgesi\"nden bildirim stilini \"Android\" olarak değiştirmeleri gerekebilir.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Aksi takdirde, bildirimden eşleştirme kodunu giremeyebilirsiniz.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Lütfen, \"Kablosuz hata ayıklama\" seçeneğinin sol kısmının tıklanabilir olduğunu, dokunulduğunda yeni bir sayfa açılacağını unutmayın. Yalnızca sağdaki düğmeyi açmak yanlıştır.</string>
-    <string name="adb_pairing_tutorial_content_finish">Shizuku\'ya geri dönün ve Shizuku\'yu başlatın.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku’nun yerel ağa erişmesi gerekiyor. Ağ izni tarafından kontrol edilir.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bazı sistemler (MIUI gibi), uygulama standart olarak ön plan hizmetini kullansa bile, arka planda çalıştıklarında ağa erişmesine izin vermez. Lütfen bu tür sistemlerde Shizuku için pil optimizasyon özelliklerini devre dışı bırakın.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (rootlu cihazlar için)]]></string>
     <string name="home_root_description"><![CDATA[Buna ek olarak, Shizuku otomatik olarak açılışta başlatılabilir. Aksi durumda ise, lütfen sisteminizin veya üçüncü taraf araçlarınızın Shizuku\'yu kısıtlayıp kısıtlamadığını kontrol edin. &lt;br&gt;%s \'ye başvurabilirsiniz.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magisk kullanıyorsanız, %1$s’yi deneyebilirsiniz. Kök kullanıcıları için sonunda Shizuku’nun yerini alacak. %2$s’yi kullanmak için mevcut uygulamaların biraz değişmesi gerektiğini unutmayın.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yeniden başlat</string>
     <!-- Home - Application management -->
