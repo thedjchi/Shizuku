@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">S\'està buscant el servei d\'aparellament</string>
     <string name="dialog_adb_pairing_paring_code">Codi d\'aparellament</string>
     <string name="paring_code_is_wrong">El codi de vinculació és incorrecte.</string>
-    <string name="cannot_connect_port">No es pot connectar al servei de depuració sense fils.</string>
     <string name="dialog_wireless_adb_not_enabled">La depuració sense fils no està activada.\nTingues en compte que, abans d\'Android 11, per activar la depuració sense fils, la connexió a l\'ordinador era imprescindible.</string>
     <string name="dialog_usb_debugging_not_enabled">La depuració USB no està activada.\nSi us plau, activa\'l a \"Opcions de desenvolupador\".</string>
     <string name="dialog_adb_pairing_message">Si us plau, comença a emparellar fent els següents passos: \"Opcions de desenvolupador\" - \"Depuració sense fils\" - \"Aparella dispositiu amb codi d\'aparellament.\"\n\nUn cop comenci el procés d\'aparellament, podràs introduir el codi d\'aparellament.</string>
@@ -105,10 +104,7 @@
     <string name="settings_watchdog_summary">Reinicia automàticament la Shizuku si s\'atura</string>
     <string name="settings_tcp_mode">Mode TCP</string>
     <string name="settings_tcp_mode_summary">"Permet a la Shizuku reiniciar sense Wi-Fi. (La Shizuku deu haver començat una vegada des del reinici)"</string>
-    <string name="settings_tcp_mode_dialog_title">Cal reiniciar</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[La Shizuku ha de reiniciar per poder aplicar aquesta configuració.<br><br><b>La Shizuku continuarà funcionant i esperarà una connexió Wi-Fi abans de reiniciar.</b>]]></string>
     <string name="settings_tcp_port">Port TCP</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
     <string name="settings_tcp_port_hint">Deixa en blanc per utilitzar el valor per defecte (5555)</string>
     <string name="settings_tcp_learn_more">Aprèn més sobre l\'ús d\'aplicacions d\'automatització per controlar Shizuku</string>
     <string name="settings_language">Llengua</string>
