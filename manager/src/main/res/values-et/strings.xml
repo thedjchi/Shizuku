@@ -30,12 +30,15 @@
     <string name="dialog_adb_pairing_discovery">Otsing sidumisteenuse kohta</string>
     <string name="dialog_adb_pairing_paring_code">Sidumiskood</string>
     <string name="paring_code_is_wrong">Sidumiskood on vale.</string>
+    <string name="cannot_connect_port">Ei saa ühendust traadita silumisteenusega.\n\nPalun veenduge, et Shizuku oleks valges nimekirjas kõigis tulemüürides, reklaamiblokeerijates, VPN-ides või sarnastes rakendustes, mis võivad võrgule juurdepääsu piirata.</string>
     <string name="dialog_wireless_adb_not_enabled">Juhtmevaba silumine ei ole lubatud.\nPane tähele, et enne Android 11-d on juhtmevaba silumise võimaldamiseks arvutiühendus hädavajalik.</string>
     <string name="dialog_usb_debugging_not_enabled">USB silumine ei ole lubatud.\nPalun luba see \"Arendaja valikud\" sektsioonis.</string>
     <string name="dialog_adb_pairing_message">Palun alusta paaritamist, tehes järgmised sammud: \"Arendaja valikud\" - \"Juhtmevaba silumine\" - \"Seade sidumine sidumiskoodiga.\"\n\nPärast sidumisprotsessi algust saad sisestada sidumiskoodi.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Palun lubage ligipääsetavuse teenus, et alustada sidumisprotsessi. See võimaldab Shizukul tuvastada paarituskoodi.\n\nLigipääsetavuse teenus lülitatakse välja, kui kood leitakse, või pärast 1 minutit, et energiat säästa.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Palun liikuge \"Arendaja valikud\" lehele &gt; \"Juhtmevaba silumine\" &gt; \"Ühenda seade sidumiskoodiga.\" Shizuku tuvastab automaatselt sidumiskoodi.</string>
     <string name="adb_pairing_requires_multi_window">Palun sisene esmalt jagatud ekraani (mitme akna) režiimi.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Süsteem nõuab, et sidumisdialoog oleks alati nähtav. Jagatud ekraani režiimi kasutamine on ainus viis, kuidas see rakendus ja süsteemidialoog korraga nähtavad olla.</string>
+    <string name="adb_error_key_store">Traadita silumise võtit ei õnnestunud genereerida.\nSee võib olla tingitud seadme KeyStore\'i mehhanismi katkisest toimimisest.</string>
     <string name="adb_error_stop_tcp">ADB peatamine TCP kaudu ebaõnnestus</string>
     <string name="adb_pair_required">Palun läbige esmalt paarisetapp.</string>
     <string name="enable">Luba</string>
@@ -47,9 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Sisesta teavitusesse kood, et sidumine lõpetada.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Sidumisprotsess nõuab, et sa suhtleksid Shizuku teavitusega. Palun lubage Shizukul teavitusi postitada.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI kasutajad võivad vajada teavitusstiili vahetamist \"Androidiks\" süsteemiseadetes \"Notification shade\" asemel \"Notification shade\".</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Vastasel juhul ei pruugi te teavituses kuvatud sidumiskoodi sisestada.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Pane tähele, et valiku „Traadita ühenduse silumine” vasakpoolne osa on klõpsatav ja selle puudutamisel avaneb uus leht. Ainult parempoolse lüliti sisselülitamine on vale.</string>
+    <string name="adb_pairing_tutorial_content_finish">Minge tagasi Shizukusse ja alustage Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku vajab juurdepääsu kohalikule võrgule. Seda kontrollib võrguluba.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Mõned süsteemid (näiteks MIUI) keelavad rakendustel võrgule juurdepääsu, kui need pole nähtavad, isegi kui rakendus kasutab esiplaanil olevat teenust. Sellistes süsteemides keelake Shizuku aku optimeerimise funktsioonid.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (rootitud seadmete jaoks)]]></string>
     <string name="home_root_description"><![CDATA[Lisaks saab Shizuku käivitamisel automaatselt käivituda. Kui ei, siis palun kontrolli, kas sinu süsteem või kolmandate osapoolte tööriistad on Shizukut piiranud.<br>Võite viidata %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Kui kasutate Magiski, võite proovida %1$s. Juurkasutajate jaoks asendab see lõpuks Shizuku. Pane tähele, et olemasolevad rakendused peavad %2$skasutamiseks veidi muutuma.]]></string>
     <string name="home_root_button_start">Alustama</string>
     <string name="home_root_button_restart">Taaskäivitage</string>
     <!-- Home - Application management -->
@@ -89,12 +98,17 @@
     <string name="settings_behavior">Käitumine</string>
     <string name="settings_start_on_boot">Alusta käivitamisest</string>
     <string name="settings_start_on_boot_summary">Vajab Android 11+ või rooti</string>
+    <string name="settings_start_on_boot_bug">Android 11-12 vea tõttu ei mäleta traadita ühenduse silumine ühtegi volitatud võrku.\n\nPeate võrgu iga taaskäivitamise ajal uuesti autoriseerima, puudutades autoriseerimisdialoogi hüpikaknas nuppu „Luba”.</string>
     <string name="settings_use_system_color">Kasuta süsteemi teemavärvi</string>
     <string name="settings_watchdog">Valvekoer</string>
     <string name="settings_watchdog_summary">Taaskäivita Shizuku automaatselt, kui see peatub</string>
     <string name="settings_tcp_mode">TCP režiim</string>
     <string name="settings_tcp_mode_summary">"Võimaldab Shizukul taaskäivitada ilma Wi-Fita. (Shizuku pidi pärast taaskäivitust kord alustama)"</string>
+    <string name="settings_restart_dialog_title">Taaskäivitamine on vajalik</string>
+    <string name="settings_restart_dialog_message">Selle sätte rakendamiseks tuleb Shizuku taaskäivitada.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Vajalik on WiFi. Shizuku jätkab töötamist ja ootab WiFi-ühendust enne taustal taaskäivitamist.</b>]]></string>
     <string name="settings_tcp_port">TCP port</string>
+    <string name="settings_tcp_port_default">Vaikimisi (5555)</string>
     <string name="settings_tcp_port_hint">Jäta tühjaks, et kasutada vaikimisi (5555)</string>
     <string name="settings_tcp_learn_more">Loe lähemalt, kuidas kasutada automatiseerimisrakendusi Shizuku juhtimiseks</string>
     <string name="settings_language">Keel</string>
@@ -118,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">E-posti rakendust ei leitud</string>
     <string name="toast_shizuku_already_starting">Shizuku alustab juba taustal</string>
+    <string name="toast_accessibility_tv_only">Seda teenust toetatakse ainult telerites.</string>
+    <string name="toast_accessibility_timed_out">Shizuku sidumisteenuse ajalõpp.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Theme</string>
     <string name="dark_theme_off">Alati kerge</string>
@@ -166,6 +182,7 @@
     <string name="wadb_notification_channel">ADB automaatse käivituse teenus</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Valvedog jookseb</string>
+    <string name="watchdog_turn_off">Lülita välja</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku kukkus hiljuti kokku</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog taaskäivitas teenuse. Puuduta, et saada teada võimalikest lahendustest tulevaste krahhide vältimiseks.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Lülita teavitused välja</string>
