@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Mangyaring paganahin ang serbisyo ng pag-access upang simulan ang proseso ng pagpapares. Pinapayagan nito si Shizuku na makita ang code ng pagpapares.\n\nAng serbisyo sa pag-access ay papatayin kapag natagpuan ang code o pagkatapos ng 1 minuto upang makatipid ng enerhiya.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Mangyaring mag-navigate sa \"Mga Pagpipilian sa Developer\" &gt; \"Wireless na pag-debug\" &gt; \"Ipares ang aparato na may code ng pagpapares.\" Awtomatikong matutukoy ni Shizuku ang code ng pagpapares.</string>
     <string name="adb_pairing_requires_multi_window">Pumunta muna sa split-screen (multi-window) mode.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Kailangan ng sistemang laging makita ang diyalogo ng pagpapares, kaya split-screen mode lang ang paraan para makita ang app na ito at ang diyalogo ng sistema nang sabay.</string>
-    <string name="adb_error_key_store">Hindi makagawa ng susi para sa wireless na pag-debug.
-\nMaaaring sira ang mekanismo ng KeyStore ng device na ito.</string>
     <string name="adb_error_stop_tcp">Nabigo na pigilan ang ADB sa TCP</string>
     <string name="adb_pair_required">Sundin muna ang mga hakbang sa pagpapares.</string>
     <string name="enable">Paganahin</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Ilagay ang code sa notipikasyon para makumpleto ang pagpapares.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Kailangan mong makisalamuha sa isang notipikasyon mula sa Shizuku para makumpleto ang proseso sa pagpapares. Mangyaring payagan ang Shizuku na magpadala ng mga notipikasyon.</string>
     <string name="adb_pairing_tutorial_content_miui">Maaaring kailangan ng mga gumagamit ng MIUI na gawing \"Android\" ang estilo ng notipikasyon sa \"Notification\" - \"Notification shade\" sa system settings.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Kung hindi mo ito gagawin, maaaring hindi mo mailalagay ang code ng pagpapares sa notipikasyon.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Tandaan, ang kaliwang bahagi ng \"Wireless na pag-debug\" ay napipindot, nagbubukas ito ng bagong pahina. Mali kung pipindutin mo lang ang switch sa kanan.</string>
-    <string name="adb_pairing_tutorial_content_finish">Bumalik sa Shizuku at simulan ang Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Kailangang ma-access ng Shizuku ang lokal na network. Kinokontrol ito ng pahintulot sa network.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sa ilang sistema (tulad ng MIUI), hindi maa-access ng mga app ang network kapag hindi sila nakikita, kahit gumagamit ang app ng pangkaraniwang foreground na serbisyo. Patayin ang pag-optimize ng baterya para sa Shizuku sa mga sistemang iyon.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Simulan (para sa mga device na may root)]]></string>
     <string name="home_root_description"><![CDATA[Pwede ring awtomatikong masimulan ang Shizuku pagka-boot. Kung hindi, maaaring nilimitahan ng iyong sistema o ng third-party na kagamitan ang Shizuku.&lt;br&gt;Sumangguni sa %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Kung gumagamit ka ng Magisk, subukan mo ang %1$s. Para sa mga may root, dahan-dahan nitong papalitan ang Shizuku. Tandaan, may kaunting pagbabagong kakailanganin ang mga kasalukuyang app para gamitin ang %2$s.]]></string>
     <string name="home_root_button_start">Simulan</string>
     <string name="home_root_button_restart">Simulan muli</string>
     <!-- Home - Application management -->
