@@ -32,6 +32,7 @@
     <string name="dialog_adb_pairing_discovery">ペアリングサービスの検索</string>
     <string name="dialog_adb_pairing_paring_code">ペアリングコード</string>
     <string name="paring_code_is_wrong">ペアリングコードが間違っています。</string>
+    <string name="cannot_connect_port">ワイヤレスデバッグサービスに接続できません。\n\nShizukuがすべてのファイアウォール、広告ブロック、VPNなどネットワークアクセスを制限できるアプリでホワイトリストに登録されていることを必ず確認してください。</string>
     <string name="dialog_wireless_adb_not_enabled">ワイヤレスデバッグが有効になっていません。
 \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
     <string name="dialog_usb_debugging_not_enabled">USBデバッグが有効になっていません。\n「開発者向けオプション」で有効にしてください。</string>
@@ -39,6 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">「開発者向けオプション」 &gt; 「ワイヤレスデバッグ」 &gt; 「ペアリングコードでデバイスをペアリング」に移動してください。Shizukuはペアリングコードを自動的に検出します。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
+    <string name="adb_pairing_requires_multi_window_reason">このシステムはペアリングダイアログが常に見えることを求めています。分割画面モードを使うことが、このアプリとシステムのダイアログを同時に表示する唯一の方法です。</string>
+    <string name="adb_error_key_store">ワイヤレスデバッグ用のキーを生成できません。\nこれはこのデバイスのKeyStore機構が故障しているためかもしれません。</string>
     <string name="adb_error_stop_tcp">TCP経由のADBを停止できませんでした</string>
     <string name="adb_pair_required">まずはペアリングの手順を行ってください。</string>
     <string name="enable">有効にする</string>
@@ -50,9 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">通知にコードを入力してペアリングします。</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">ペアリング手順はShizukuからの通知を操作する必要があります。Shizukuからの通知を許可してください。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUIユーザーはシステムの設定から「通知」→「通知のシェード」から通知スタイルを「Android」に変更する必要がある場合があります。</string>
+    <string name="adb_pairing_tutorial_content_miui_2">そうでなければ、通知からペアリングコードを入力できない可能性があります。</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">「ワイヤレスデバッグ」オプションの左側はクリック可能で、タップすると新しいページが開きます。右側のスイッチだけが正しくありません。</string>
+    <string name="adb_pairing_tutorial_content_finish">雫に戻って雫を始めろ。</string>
+    <string name="adb_pairing_tutorial_content_network">雫はローカルネットワークにアクセスする必要がある。ネットワークの許可によって制御されます。</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">一部のシステム(MIUIなど)は、アプリがフォアグラウンドサービスを使っていても、見えないアプリがネットワークにアクセスすることを許可しません。そのようなシステムでは、しずくのバッテリー最適化機能を無効にしてください。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[開始(Root化された端末の場合のみ)]]></string>
     <string name="home_root_description"><![CDATA[また、起動時にShizukuを自動的に起動することもできます。もし、起動しない場合は、システムやサードパーティのツールがShizukuを制限していないか確認してください。&lt;br&gt;一部古い情報ですが%sを参考にしてください。]]></string>
+    <string name="home_root_description_sui"><![CDATA[Magiskを使っているなら試してみてはどうでしょうか %1$s.ルートユーザーにとっては、いずれ雫の代わりになるでしょう。既存のアプリケーションは少し変更が必要ですが、使うには少し変更が必要です %2$s.]]></string>
     <string name="home_root_button_start">開始</string>
     <string name="home_root_button_restart">再起動</string>
     <!-- Home - Application management -->
@@ -95,12 +104,17 @@
     <string name="settings_behavior">行動</string>
     <string name="settings_start_on_boot">起動時にスタート</string>
     <string name="settings_start_on_boot_summary">Android 11以降またはルート権限が必要です</string>
+    <string name="settings_start_on_boot_bug">Android 11-12のバグにより、無線デバッグは認可されたネットワークを記憶しません。\n\n再開のたびに、認証ダイアログが表示されたら「許可」をタップしてネットワークを再認証する必要があります。</string>
     <string name="settings_use_system_color">システムテーマカラー</string>
     <string name="settings_watchdog">ウォッチドッグ</string>
     <string name="settings_watchdog_summary">Shizukuが停止した場合は自動的に再起動します</string>
     <string name="settings_tcp_mode">TCPモード</string>
     <string name="settings_tcp_mode_summary">"Wi-FiなしでShizukuを再起動できるようにします。（再起動後、Shizukuが一度起動している必要があります）"</string>
+    <string name="settings_restart_dialog_title">再起動が必要です</string>
+    <string name="settings_restart_dialog_message">雫はこの設定を適用するために再起動が必要です。</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fiは必須です。雫は走り続け、Wi-Fi接続を待ってからバックグラウンドで再起動する。</b>]]></string>
     <string name="settings_tcp_port">TCPポート</string>
+    <string name="settings_tcp_port_default">デフォルト(5555)</string>
     <string name="settings_tcp_port_hint">デフォルト（5555）を使用するには空白のままにしてください</string>
     <string name="settings_tcp_learn_more">自動化アプリを使用してShizukuを制御する方法について詳しくは、こちらをご覧ください。</string>
     <string name="settings_language">言語</string>
@@ -124,6 +138,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">メールアプリが見つかりません</string>
     <string name="toast_shizuku_already_starting">バックグラウンドではすでに雫が起動しています</string>
+    <string name="toast_accessibility_tv_only">このサービスはテレビ機器のみでサポートされています。</string>
+    <string name="toast_accessibility_timed_out">雫のペアリングサービスがタイムアウトした。</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">テーマ</string>
     <string name="dark_theme_off">常に軽い</string>
@@ -172,6 +188,7 @@
     <string name="wadb_notification_channel">ADB自動起動サービス</string>
     <!-- Watchdog -->
     <string name="watchdog_running">ウォッチドッグが稼働中</string>
+    <string name="watchdog_turn_off">無効にする</string>
     <string name="watchdog_shizuku_crashed_title">雫は最近墜落した</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog がサービスを再起動しました。タップすると、今後のクラッシュを防ぐための潜在的な修正内容を確認できます。</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">アラートをオフにする</string>
