@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Harap aktifkan layanan aksesibilitas untuk memulai proses pemasangan. Ini memungkinkan Shizuku mendeteksi kode pemasangan.\n\nLayanan aksesibilitas akan dinonaktifkan ketika kode ditemukan atau setelah 1 menit untuk menghemat energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Silakan buka \"Opsi Pengembang\" &gt; \"Debugging Nirkabel\" &gt; \"Pasangkan perangkat dengan kode pemasangan.\" Shizuku akan mendeteksi kode pemasangan secara otomatis.</string>
     <string name="adb_pairing_requires_multi_window">Harap pindah ke mode layar pisah (split-screen) terlebih dahulu.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Sistem mengharuskan dialog penyambungan untuk selalu terlihat, hal ini hanya bisa diakali dengan mode layar pisah (split-screen) untuk membuat Shizuku dan dialog sistem muncul secara bersamaan.</string>
-    <string name="adb_error_key_store">Gagal membuat kunci untuk debug nirkabel.
-\nHal ini bisa terjadi karena mekanisme KeyStore pada perangkat ini mengalami kerusakan.</string>
     <string name="adb_error_stop_tcp">Gagal menghentikan ADB melalui TCP</string>
     <string name="adb_pair_required">Harap lakukan penyambungan terlebih dahulu.</string>
     <string name="enable">Memungkinkan</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Masukkan kode pada notifikasi untuk menyelesaikan penyambungan.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proses penyambungan membutuhkan Anda untuk berinteraksi dengan notifikasi dari Shizuku. Mohon izinkan Shizuku untuk mengirim pemberitahuan.</string>
     <string name="adb_pairing_tutorial_content_miui">Pengguna MIUI mungkin perlu mengubah gaya pemberitahuan ke \"Android\" dari \"Pemberitahuan\" - \"Bayangan pemberitahuan\" di pengaturan sistem.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Jika tidak, Anda mungkin tidak dapat memasukan kode penyandingan dari notifikasi.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Harap dicatat, bagian kiri dari opsi \"Debug nirkabel \" dapat diklik, mengetuknya akan membuka halaman baru. Hanya menyalakan sakelar di sebelah kanan yang salah.</string>
-    <string name="adb_pairing_tutorial_content_finish">Kembali ke Shizuku dan mulai Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku membutuhkan akses ke jaringan lokal. Itu dikontrol oleh izin jaringan.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Beberapa sistem (seperti MIUI) melarang aplikasi untuk mengakses jaringan ketika tidak terlihat, bahkan jika aplikasi berjalan dilatar depan. Tolong matikan fitur optimisasi baterai untuk Shizuku pada sistem tersebut.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Mulai (untuk perangkat dengan root)]]></string>
     <string name="home_root_description"><![CDATA[Sebagai tambahan, Shizuku bisa dimulai secara otomatis saat perangkat dimulai. Kalau hal ini tak bisa dilakukan, harap cek apakah sistem Anda atau aplikasi pihak-ketiga telah membatasi Shizuku.&lt;br&gt;Lebih lanjut, cek %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Jika Anda menggunakan Magisk, Anda bisa coba %1$s. Untuk pengguna root, hal ini perlahan akan menggantikan Shizuku. Sebagai catatan, aplikasi yang sudah ada harus disesuaikan sedikit untuk menggunakan %2$s.]]></string>
     <string name="home_root_button_start">Mulai</string>
     <string name="home_root_button_restart">Mulai ulang</string>
     <!-- Home - Application management -->
