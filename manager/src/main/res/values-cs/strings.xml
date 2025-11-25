@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Hledání zařízení pro párování</string>
     <string name="dialog_adb_pairing_paring_code">Kód pro párování</string>
     <string name="paring_code_is_wrong">Chybný kód pro párování.</string>
-    <string name="cannot_connect_port">Nelze se připojit k bezdrátové ladicí službě.</string>
     <string name="dialog_wireless_adb_not_enabled">Bezdrátové ladění není povoleno.
 \nPřed povolením systému Android 11 je pro povolení bezdrátového ladění nutné připojení k počítači.</string>
     <string name="dialog_usb_debugging_not_enabled">Ladění přes USB není povolené.\nProsím, povolte to v \"Možnostech vývojářů\".</string>
@@ -115,10 +114,7 @@
     <string name="settings_watchdog_summary">Automaticky restartujte Shizuku, pokud se zastaví</string>
     <string name="settings_tcp_mode">TCP režim</string>
     <string name="settings_tcp_mode_summary">"Umožňuje Shizuku restartovat bez Wi-Fi. (Shizuku musela od restartu začít jednou)"</string>
-    <string name="settings_tcp_mode_dialog_title">Restart je nutný</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku musí restartovat, aby mohla toto nastavení použít.<br><br><b>Shizuku bude pokračovat v provozu a počká na Wi-Fi připojení, než se restartuje.</b>]]></string>
     <string name="settings_tcp_port">TCP port</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
     <string name="settings_tcp_port_hint">Nechat prázdné pole pro výchozí použití (5555)</string>
     <string name="settings_tcp_learn_more">Zjistěte více o využití automatizačních aplikací k ovládání Shizuku</string>
     <string name="settings_language">Jazyk</string>
