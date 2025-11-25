@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">페어링 과정을 시작하려면 접근성 서비스를 활성화하세요. 이렇게 하면 Shizuku가 페어링 코드를 감지할 수 있습니다.\n\n코드를 찾거나 1분 후에 에너지 절약을 위해 접근성 서비스가 꺼집니다.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">\"개발자 옵션\" &gt; \"무선 디버깅\" &gt; \"페어링 코드로 기기 페어링\"으로 이동하세요. Shizuku가 자동으로 페어링 코드를 감지합니다.</string>
     <string name="adb_pairing_requires_multi_window">먼저 화면 분할 (멀티 윈도우) 모드로 진입하세요.</string>
-    <string name="adb_pairing_requires_multi_window_reason">시스템에서 페어링 대화 상자를 항상 표시하도록 해야합니다. 화면 분할을 사용하는 것이 앱과 시스템 대화 상자를 동시에 표시할 수 있는 유일한 방법입니다.</string>
-    <string name="adb_error_key_store">무선 디버깅을 위한 키를 생성할 수 없습니다.
-\n기기의 KeyStore 메커니즘 손상이 원인일 수 있습니다.</string>
     <string name="adb_error_stop_tcp">TCP를 통한 ADB를 중지하지 못했습니다.</string>
     <string name="adb_pair_required">페어링 단계를 먼저 진행하세요.</string>
     <string name="enable">할 수 있게 하다</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">알림에 코드를 입력하면 페어링이 완료됩니다.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">페어링 프로세스에서는 Shizuku의 알림과 상호 작용해야 합니다. Shizuku가 알림을 게시하도록 허용하십시오.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 사용자는 시스템 설정의 \"알림\" - \"알림 창\"에서 알림 스타일을 \"Android\"로 전환해야 합니다.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">그렇지 않으면 알림에서 페어링 코드를 입력하지 못할 수 있습니다.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">\"무선 디버깅\" 옵션의 왼쪽 부분을 클릭할 수 있으며, 탭하면 새 페이지가 열립니다. 오른쪽의 스위치를 켜는 것만으로는 올바르지 않습니다.</string>
-    <string name="adb_pairing_tutorial_content_finish">Shizuku로 돌아가서 Shizuku를 시작하세요.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku는 로컬 네트워크에 액세스해야 합니다. 네트워크 권한에 의해 제어됩니다.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">일부 시스템(예: MIUI)은 앱이 포그라운드 서비스를 표준으로 사용하더라도 앱이 보이지 않을 때 네트워크에 액세스하는 것을 허용하지 않습니다. 이러한 시스템에서 Shizuku의 배터리 최적화 기능을 비활성화하세요.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[시작 (루팅된 기기용)]]></string>
     <string name="home_root_description"><![CDATA[Shizuku는 부팅 시 자동으로 시작됩니다. 그렇지 않을 경우, 시스템 또는 제 3자 도구에서 Shizuku를 제한하고 있는지 확인하세요.&lt;br&gt;%s를 참조할 수 있습니다.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magisk를 사용하는 경우 %1$s 을 사용해 볼 수 있습니다. 루팅 사용자의 경우 결국 Shizuku를 대체하게 됩니다. %2$s를 사용하려면 기존 어플리케이션을 약간 변경해야 합니다.]]></string>
     <string name="home_root_button_start">시작</string>
     <string name="home_root_button_restart">재시작</string>
     <!-- Home - Application management -->
