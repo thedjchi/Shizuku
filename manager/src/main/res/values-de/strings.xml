@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Nach Kopplungsdienst suchen</string>
     <string name="dialog_adb_pairing_paring_code">Kopplungscode</string>
     <string name="paring_code_is_wrong">Kopplungscode ist falsch.</string>
-    <string name="cannot_connect_port">Verbindung zum kabellosen Debugging-Dienst nicht möglich.</string>
     <string name="dialog_wireless_adb_not_enabled">Kabelloses Debugging ist nicht aktiviert.
 \nHinweis: Vor Android 11 ist für die Aktivierung des kabellosen Debugging eine Computerverbindung erforderlich.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-Debugging ist nicht aktiviert.\nBitte aktivieren Sie es in \"Entwickleroptionen\".</string>
@@ -111,10 +110,7 @@
     <string name="settings_watchdog_summary">Shizuku wird automatisch neu gestartet, wenn es aufhört.</string>
     <string name="settings_tcp_mode">TCP-Modus</string>
     <string name="settings_tcp_mode_summary">"Ermöglicht es Shizuku, ohne WLAN neu zu starten. (Shizuku muss seit dem Reboot einmal angefangen haben)"</string>
-    <string name="settings_tcp_mode_dialog_title">Neustart erforderlich</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku muss neu starten, um diese Einstellung anzuwenden.<br><br><b>Shizuku läuft weiter und wartet auf eine WLAN-Verbindung, bevor er neu startet.</b>]]></string>
     <string name="settings_tcp_port">TCP-Port</string>
-    <string name="settings_tcp_port_deafult">Standard (5555)</string>
     <string name="settings_tcp_port_hint">Lassen Sie die Standardeinstellung (5555) leer, um sie zu verwenden</string>
     <string name="settings_tcp_learn_more">Erfahren Sie mehr über die Nutzung von Automatisierungs-Apps zur Steuerung von Shizuku</string>
     <string name="settings_language">Sprache</string>
