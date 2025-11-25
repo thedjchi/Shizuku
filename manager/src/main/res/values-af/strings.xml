@@ -58,7 +58,7 @@
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
     <string name="home_root_description"><![CDATA[Daarbenewens kan Shizuku outomaties met opstart begin word. Indien nie, kyk asseblief of jou stelsel of derdeparty-instrumente Shizuku beperk het.<br>Jy kan verwys na %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet \'n bietjie verander om %2$ste gebruik.]]></string>
+    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet 'n bietjie verander om %2$ste gebruik.]]></string>
     <string name="home_root_button_start">Begin</string>
     <string name="home_root_button_restart">Herbegin</string>
     <!-- Home - Application management -->
@@ -106,7 +106,7 @@
     <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku moes een keer sedert herbegin begin het)"</string>
     <string name="settings_restart_dialog_title">Herbegin Vereis</string>
     <string name="settings_restart_dialog_message">Shizuku moet herbegin om hierdie instelling toe te pas.</string>
-    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi word vereis. Shizuku sal aanhou loop en wag vir \'n Wi-Fi-verbinding voordat dit in die agtergrond herbegin.</b>]]></string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi word vereis. Shizuku sal aanhou loop en wag vir 'n Wi-Fi-verbinding voordat dit in die agtergrond herbegin.</b>]]></string>
     <string name="settings_tcp_port">TCP-poort</string>
     <string name="settings_tcp_port_default">Standaard (5555)</string>
     <string name="settings_tcp_port_hint">Los leeg om verstekwaarde (5555) te gebruik</string>
