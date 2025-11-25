@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">لطفاً برای شروع فرآیند جفت‌سازی، سرویس دسترسی را فعال کنید. این به شیزوکو اجازه می‌دهد تا کد جفت‌سازی را تشخیص دهد.\n\nسرویس دسترسی هنگام یافتن کد یا پس از ۱ دقیقه برای صرفه‌جویی در مصرف انرژی خاموش می‌شود.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">لطفاً به «گزینه‌های توسعه‌دهنده» &gt; «اشکال‌زدایی بی‌سیم» &gt; «جفت کردن دستگاه با کد جفت‌سازی» بروید. شیزوکو به‌طور خودکار کد جفت‌سازی را تشخیص می‌دهد.</string>
     <string name="adb_pairing_requires_multi_window">لطفاً ابتدا وارد حالت تقسیم صفحه (چند پنجره) شوید.</string>
-    <string name="adb_pairing_requires_multi_window_reason">دستگاه نیاز دارد گفتگوی جفت‌سازی همیشه قابل مشاهده باشد، استفاده از حالت تقسیم صفحه تنها راهی است که به این برنامه و گفتگوی دستگاه اجازه می‌دهد همزمان قابل مشاهده باشند.</string>
-    <string name="adb_error_key_store">قادر به تولید کلید برای اشکال زدایی بی‌سیم نیست.\nاین ممکن است به این دلیل باشد که ساز و برگ KeyStore این دستگاه خراب است.</string>
     <string name="adb_error_stop_tcp">متوقف کردن ADB روی TCP ناموفق بود</string>
     <string name="adb_pair_required">لطفاً ابتدا مرحله مرتبط کردن را طی کنید.</string>
     <string name="enable">فعال کردن</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">برای تکمیل مرتبط سازی، رمز شش رقمی را در اعلان وارد کنید.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">فرآیند مرتبط شدن به شما نیاز دارد که با اعلان Shizuku تعامل داشته باشید. لطفاً به Shizuku اجازه دهید تا اعلان‌ها را ارسال کند.</string>
     <string name="adb_pairing_tutorial_content_miui">کاربران MIUI ممکن است نیاز داشته باشند که در تنظیمات دستگاه، سبک اعلان را به \"اندروید\" از \"اعلان ها\" - \"سایه اعلان\" تغییر دهند.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">در غیر این صورت، ممکن است نتوانید رمز مرتبط سازی را از اعلان وارد کنید.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">لطفاً توجه داشته باشید، قسمت سمت راست گزینه \"اشکال زدایی بی‌سیم\" قابل لمس است، با ضربه زدن روی آن صفحه جدیدی باز می شود. فقط روشن کردن دکمه سمت چپ کافی نیست.</string>
-    <string name="adb_pairing_tutorial_content_finish">به Shizuku برگردید و Shizuku را راه‌اندازی کنید.</string>
-    <string name="adb_pairing_tutorial_content_network">برنامه Shizuku نیاز به دسترسی به شبکه محلی دارد. زیرا توسط مجوز شبکه مدیریت می شود.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">برخی از دستگاه ها (مانند MIUI) به برنامه‌ها اجازه دسترسی به شبکه را زمانی که قابل مشاهده نیستند، نمی‌دهند، حتی اگر برنامه از خدمات پیش‌زمینه به‌عنوان استاندارد استفاده کند. لطفاً ویژگی‌های بهینه‌سازی باتری را برای Shizuku در چنین دستگاه‌هایی غیرفعال کنید.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[راه‌اندازی (برای دستگاه‌هایی با دسترسی ریشه)]]></string>
     <string name="home_root_description"><![CDATA[علاوه بر این، Shizuku می تواند به طور خودکار هنگام راه‌اندازی دستگاه راه اندازی شود. اگر نه، لطفاً بررسی کنید که آیا سیستم شما یا ابزارهای شخص ثالث Shizuku را محدود کرده است.<br>می توانید به %s مراجعه کنید.]]></string>
-    <string name="home_root_description_sui"><![CDATA[اگر از Magisk استفاده می‌کنید، می‌توانید %1$s را امتحان کنید. برای کاربران دارای امتیازات ریشه، در نهایت جایگزین Shizuku خواهد شد. توجه داشته باشید، برنامه‌های موجود برای استفاده از %2$s باید کمی تغییر کنند.]]></string>
     <string name="home_root_button_start">راه‌اندازی</string>
     <string name="home_root_button_restart">راه‌اندازی مجدد</string>
     <!-- Home - Application management -->
