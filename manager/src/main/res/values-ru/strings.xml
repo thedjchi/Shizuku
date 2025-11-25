@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Поиск службы соединения</string>
     <string name="dialog_adb_pairing_paring_code">Код сопряжения</string>
     <string name="paring_code_is_wrong">Неверный код сопряжения.</string>
-    <string name="cannot_connect_port">Не удается подключиться к службе отладки по Wi-Fi.</string>
     <string name="dialog_wireless_adb_not_enabled">Отладка по Wi-Fi не включена.
 \nВнимание: на системах старше Android 11 для включения этой отладки необходимо соединение с компьютером.</string>
     <string name="dialog_usb_debugging_not_enabled">Отладка по USB не включена.\nВключите её в «Параметрах разработчика».</string>
@@ -113,10 +112,7 @@
     <string name="settings_watchdog_summary">Автоматически перезапустить Shizuku, если он остановится</string>
     <string name="settings_tcp_mode">TCP-режим</string>
     <string name="settings_tcp_mode_summary">"Позволяет Shizuku перезапуститься без Wi-Fi. (Shizuku должен был запуститься один раз после перезагрузки)"</string>
-    <string name="settings_tcp_mode_dialog_title">Требуется перезагрузка</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Чтобы применить эту настройку, необходимо перезапустить Shizuku.<br><br><b>Shizuku продолжит работу и дождется подключения к Wi-Fi перед перезапуском.</b>]]></string>
     <string name="settings_tcp_port">TCP-порт</string>
-    <string name="settings_tcp_port_deafult">По умолчанию (5555)</string>
     <string name="settings_tcp_port_hint">Оставьте поле пустым, чтобы использовать значение по умолчанию (5555)</string>
     <string name="settings_tcp_learn_more">Узнайте больше об использовании приложений автоматизации для управления Сидзуку</string>
     <string name="settings_language">Язык</string>
