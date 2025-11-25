@@ -197,7 +197,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
             summaryProvider = SummaryProvider<EditTextPreference> { pref ->
                 val text = pref.text
-                if (text.isNullOrEmpty()) context.getString(R.string.settings_tcp_port_deafult) else text
+                if (text.isNullOrEmpty()) context.getString(R.string.settings_tcp_port_default) else text
             }
 
             setOnPreferenceChangeListener { _, newValue ->
@@ -383,17 +383,23 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         if (!ShizukuStateMachine.isRunning() || !needsRestart(setting, newValue)) {
             applyChange()
             context.sendBroadcast(Intent(context, NotifCancelReceiver::class.java))
-        } else MaterialAlertDialogBuilder(context)
-            .setTitle(R.string.settings_tcp_mode_dialog_title)
-            .setMessage(HtmlCompat.fromHtml(
-                context.getString(R.string.settings_tcp_mode_dialog_message)
-            ))
+        } else {
+            val message = buildString {
+                append(context.getString(R.string.settings_restart_dialog_message))
+                if (setting == KEY_TCP_MODE)
+                    append(context.getString(R.string.settings_restart_dialog_message_wifi_required))
+            }
+
+            MaterialAlertDialogBuilder(context)
+            .setTitle(R.string.settings_restart_dialog_title)
+            .setMessage(HtmlCompat.fromHtml(message))
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 applyChange()
                 ShizukuReceiverStarter.start(context, true)
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
+        }
     }
 
     private fun maybeToggleBatterySensitiveSetting (
