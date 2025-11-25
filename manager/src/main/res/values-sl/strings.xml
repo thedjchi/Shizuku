@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Iskanje storitve za seznanjanje</string>
     <string name="dialog_adb_pairing_paring_code">Koda za seznanitev</string>
     <string name="paring_code_is_wrong">Koda za seznanitev je napačna.</string>
-    <string name="cannot_connect_port">Povezava z storitvijo za brezžično razhroščevanje se ne more vzpostaviti.</string>
     <string name="dialog_wireless_adb_not_enabled">Brezžično razhroščevanje ni omogočeno.
 \nPozor! Pred Androidom 11, je za omogočanje brezžičnega razhroščevanja potreben računalnik.</string>
     <string name="dialog_usb_debugging_not_enabled">Odpravljanje napak prek USB-ja ni omogočeno.\nOmogočite ga v »Možnostih za razvijalce«.</string>
@@ -108,10 +107,7 @@
     <string name="settings_watchdog_summary">Samodejno znova zaženite Shizuku, če se ustavi</string>
     <string name="settings_tcp_mode">Način TCP</string>
     <string name="settings_tcp_mode_summary">"Omogoča Shizuku, da se ponovno zažene brez Wi-Fi-ja. (Shizuku je morala enkrat začeti od ponovnega zagona)"</string>
-    <string name="settings_tcp_mode_dialog_title">Potreben je ponovni zagon</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Za uporabo te nastavitve je treba Shizuku znova zagnati.<br><br><b>Shizuku bo še naprej deloval in pred ponovnim zagonom počakal na povezavo Wi-Fi.</b>]]></string>
     <string name="settings_tcp_port">TCP priključek</string>
-    <string name="settings_tcp_port_deafult">Privzeto (5555)</string>
     <string name="settings_tcp_port_hint">Pustite prazno za privzeto (5555)</string>
     <string name="settings_tcp_learn_more">Izvedite več o uporabi avtomatizacijskih aplikacij za upravljanje Shizuku</string>
     <string name="settings_language">Jezik</string>
