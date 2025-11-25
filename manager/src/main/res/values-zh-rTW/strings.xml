@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">正在尋找配對服務</string>
     <string name="dialog_adb_pairing_paring_code">配對碼</string>
     <string name="paring_code_is_wrong">配對碼錯誤。</string>
-    <string name="cannot_connect_port">無法連線至無線偵錯服務。</string>
     <string name="dialog_wireless_adb_not_enabled">無線偵錯未啟用。
 \n請注意，在 Android 11 之前，要啟用無線偵錯必須先與電腦連線。</string>
     <string name="dialog_usb_debugging_not_enabled">USB 除錯功能未啟用。\n請在「開發者選項」中啟用它。</string>
@@ -110,10 +109,7 @@
     <string name="settings_watchdog_summary">如果停止，請自動重新啟動雫</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"讓雫能在沒有 Wi-Fi 的情況下重新開始。（雫自重啟後應該開始過一次）"</string>
-    <string name="settings_tcp_mode_dialog_title">需要重新開始</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[雫需要重新開始才能套用這個設定。<br><br><b>雫會繼續跑步，等待Wi-Fi連線後再重新啟動。</b>]]></string>
     <string name="settings_tcp_port">TCP 埠</string>
-    <string name="settings_tcp_port_deafult">預設（5555）</string>
     <string name="settings_tcp_port_hint">使用預設欄位時留空（5555）</string>
     <string name="settings_tcp_learn_more">了解更多關於使用自動化應用程式控制雫的方法</string>
     <string name="settings_language">語言</string>
