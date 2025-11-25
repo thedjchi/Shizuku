@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">இணைத்தல் செயல்முறையைத் தொடங்க அணுகல் சேவையை இயக்கவும். இது ஷிசுகுவை இணைத்தல் குறியீட்டைக் கண்டறிய அனுமதிக்கிறது.\n\nகுறியீடு கண்டுபிடிக்கப்பட்டதும் அல்லது 1 நிமிடத்திற்குப் பிறகு ஆற்றலைச் சேமிக்க அணுகல் சேவை முடக்கப்படும்.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">\"டெவலப்பர் விருப்பங்கள்\" &gt; \"வயர்லெஸ் பிழைத்திருத்தம்\" &gt; \"இணைத்தல் குறியீட்டுடன் சாதனத்தை இணைக்கவும்\" என்பதற்குச் செல்லவும். ஷிசுகு தானாகவே இணைத்தல் குறியீட்டைக் கண்டறியும்.</string>
     <string name="adb_pairing_requires_multi_window">முதலில் பிளவு-திரை (பல-சாளர) பயன்முறையை உள்ளிடவும்.</string>
-    <string name="adb_pairing_requires_multi_window_reason">இந்த அமைப்பு, இணைத்தல் உரையாடலை எப்போதும் காணும்படி கோருகிறது, ஸ்பிளிட்-ஸ்கிரீன் பயன்முறையைப் பயன்படுத்துவதுதான் இந்த செயலியையும் கணினி உரையாடலையும் ஒரே நேரத்தில் காண அனுமதிக்கும் ஒரே வழி.</string>
-    <string name="adb_error_key_store">வயர்லெஸ் பிழைத்திருத்தத்திற்கான விசையை உருவாக்க முடியவில்லை.\nஇந்த சாதனத்தின் கீஸ்டோர் பொறிமுறை உடைந்திருப்பதால் இது ஏற்பட்டிருக்கலாம்.</string>
     <string name="adb_error_stop_tcp">TCP வழியாக ADB ஐ நிறுத்த முடியவில்லை.</string>
     <string name="adb_pair_required">முதலில் இணைத்தல் படிக்குச் செல்லவும்.</string>
     <string name="enable">இயக்கு</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">இணைப்பதை முடிக்க அறிவிப்பில் குறியீட்டை உள்ளிடவும்.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">இணைத்தல் செயல்முறைக்கு ஷிசுகுவிலிருந்து வரும் அறிவிப்புடன் நீங்கள் தொடர்பு கொள்ள வேண்டும். அறிவிப்புகளை இடுகையிட ஷிசுகுவை அனுமதிக்கவும்.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI பயனர்கள் கணினி அமைப்புகளில் \"அறிவிப்பு\" - \"அறிவிப்பு நிழல்\" என்பதிலிருந்து அறிவிப்பு பாணியை \"Android\" க்கு மாற்ற வேண்டியிருக்கலாம்.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">இல்லையெனில், அறிவிப்பிலிருந்து பாரிங் குறியீட்டை உள்ளிட முடியாமல் போகலாம்.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">\"வயர்லெஸ் பிழைத்திருத்தம்\" விருப்பத்தின் இடது பகுதி கிளிக் செய்யக்கூடியது என்பதை நினைவில் கொள்க, அதைத் தட்டினால் ஒரு புதிய பக்கம் திறக்கும். வலதுபுறத்தில் உள்ள சுவிட்சை டியூரிங் செய்வது மட்டுமே தவறானது.</string>
-    <string name="adb_pairing_tutorial_content_finish">ஷிசுகுக்குத் திரும்பி ஷிசுகுவைத் தொடங்குங்கள்.</string>
-    <string name="adb_pairing_tutorial_content_network">ஷிசுகு உள்ளூர் நெட்வொர்க்கை அணுக வேண்டும். இது நெட்வொர்க் அனுமதியால் கட்டுப்படுத்தப்படுகிறது.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">சில அமைப்புகள் (MIUI போன்றவை) பயன்பாடுகள் முன்புற சேவையை தரநிலையாகப் பயன்படுத்தினாலும், அவை தெரியாதபோது நெட்வொர்க்கை அணுக அனுமதிக்காது. அத்தகைய அமைப்புகளில் ஷிசுகுவிற்கான பேட்டரி உகப்பாக்க அம்சங்களை முடக்கவும்.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[தொடங்கு (ரூட் செய்யப்பட்ட சாதனங்களுக்கு)]]></string>
     <string name="home_root_description"><![CDATA[கூடுதலாக, ஷிசுகுவை துவக்கும்போது தானாகவே தொடங்கலாம். இல்லையென்றால், உங்கள் கணினி அல்லது மூன்றாம் தரப்பு கருவிகள் ஷிசுகுவை கட்டுப்படுத்தியுள்ளதா எனச் சரிபார்க்கவும்.<br>நீங்கள் %sஐப் பார்க்கலாம்.]]></string>
-    <string name="home_root_description_sui"><![CDATA[நீங்கள் Magisk ஐப் பயன்படுத்துகிறீர்கள் என்றால், %1$sஐ முயற்சி செய்யலாம். ரூட் பயனர்களுக்கு, இது இறுதியில் Shizuku ஐ மாற்றும். குறிப்பு, %2$sஐப் பயன்படுத்த ஏற்கனவே உள்ள பயன்பாடுகள் சிறிது மாற வேண்டும்.]]></string>
     <string name="home_root_button_start">தொடங்கு</string>
     <string name="home_root_button_restart">மறுதொடக்கம்</string>
     <!-- Home - Application management -->
