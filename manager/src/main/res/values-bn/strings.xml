@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">জোড় বাঁধার পরিষেবা অনুসন্ধান করা হচ্ছে</string>
     <string name="dialog_adb_pairing_paring_code">জোড় বাঁধা কোড</string>
     <string name="paring_code_is_wrong">জোড় বাঁধার কোড ভুল।</string>
-    <string name="cannot_connect_port">ওয়্যারলেস ডিবাগিং পরিষেবাতে সংযোগ করা যাচ্ছে না।</string>
     <string name="dialog_wireless_adb_not_enabled">ওয়্যারলেস ডিবাগিং সক্ষম নেই।\nনোট করুন, অ্যান্ড্রয়েড 11 এর আগে, ওয়্যারলেস ডিবাগিং সক্ষম করার জন্য, কম্পিউটার সংযোগ আবশ্যক।</string>
     <string name="dialog_usb_debugging_not_enabled">ইউএসবি ডিবাগিং সক্ষম নেই।\nদয়া করে এটি \"বিকাশকারী বিকল্পগুলিতে\" সক্ষম করুন।</string>
     <string name="dialog_adb_pairing_message">অনুগ্রহ করে নিম্নলিখিত পদক্ষেপগুলি সম্পাদন করে জোড় বাঁধা শুরু করুন: \"বিকাশকারী বিকল্পগুলি\" - \"ওয়্যারলেস ডিবাগিং\" - \"জোড় বাঁধার কোডের সাথে ডিভাইসটি জোড় বাড়ান\"।\n\nজোড় বাঁধার প্রক্রিয়া শুরু হওয়ার পরে, আপনি জোড় বাঁধার কোডটি ইনপুট করতে সক্ষম হবেন।</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">শিজুকু বন্ধ হয়ে গেলে স্বয়ংক্রিয়ভাবে এটি পুনরায় চালু করুন</string>
     <string name="settings_tcp_mode">টিসিপি মোড</string>
     <string name="settings_tcp_mode_summary">"ওয়াই-ফাই ছাড়াই শিজুকুকে পুনঃশুরু করার অনুমতি দেয়। (শিজুকু অবশ্যই রিবুট হওয়ার পর থেকে একবার শুরু করেছে)"</string>
-    <string name="settings_tcp_mode_dialog_title">পুনরায় শুরু করা আবশ্যক</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[এই সেটিংটি প্রয়োগ করার জন্য শিজুকুকে পুনরায় চালু করতে হবে।<br><br><b>শিজুকু চলমান অবিরত থাকবে এবং পুনঃশুরু করার আগে একটি Wi-Fi সংযোগের জন্য অপেক্ষা করবে।</b>]]></string>
     <string name="settings_tcp_port">TCP পোর্ট</string>
-    <string name="settings_tcp_port_deafult">ডিফল্ট (5555)</string>
     <string name="settings_tcp_port_hint">ডিফল্ট ব্যবহার করতে ফাঁকা রাখুন (5555)</string>
     <string name="settings_tcp_learn_more">শিজুকু নিয়ন্ত্রণ করতে অটোমেশন অ্যাপগুলি ব্যবহার করা সম্পর্কে আরও জানুন</string>
     <string name="settings_language">ভাষা</string>
