@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Se caută serviciul de asociere</string>
     <string name="dialog_adb_pairing_paring_code">Cod de asociere</string>
     <string name="paring_code_is_wrong">Codul de asociere este greșit.</string>
-    <string name="cannot_connect_port">Nu se poate conecta la serviciul de depanare wireless.</string>
     <string name="dialog_wireless_adb_not_enabled">Depanarea wireless nu este activată.
 \nReține că înainte de Android 11, pentru a activa depanarea wireless, conexiunea la computer este o necesitate.</string>
     <string name="dialog_usb_debugging_not_enabled">Depanarea USB nu este activată.\nVă rugăm să o activați în „Opțiuni pentru dezvoltatori”.</string>
@@ -112,10 +111,7 @@
     <string name="settings_watchdog_summary">Repornește automat Shizuku dacă se oprește</string>
     <string name="settings_tcp_mode">Mod TCP</string>
     <string name="settings_tcp_mode_summary">"Permite repornirea sistemului Shizuku fără Wi-Fi. (Shizuku trebuie să fi pornit o dată de la repornire)"</string>
-    <string name="settings_tcp_mode_dialog_title">Repornire necesară</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku trebuie să repornească pentru a aplica această setare.<br><br><b>Shizuku va continua să ruleze și va aștepta o conexiune Wi-Fi înainte de a reporni.</b>]]></string>
     <string name="settings_tcp_port">Port TCP</string>
-    <string name="settings_tcp_port_deafult">Implicit (5555)</string>
     <string name="settings_tcp_port_hint">Lăsați necompletat pentru a utiliza valoarea implicită (5555)</string>
     <string name="settings_tcp_learn_more">Află mai multe despre utilizarea aplicațiilor de automatizare pentru a controla Shizuku</string>
     <string name="settings_language">Limba</string>
