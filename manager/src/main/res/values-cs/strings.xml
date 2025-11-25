@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Prosím, povolte službu přístupnosti pro zahájení procesu párování. To umožňuje Shizuku detekovat párovací kód.\n\nSlužba přístupnosti bude vypnuta po nalezení kódu nebo po 1 minutě, aby se šetřila energie.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Přejděte prosím na \"Možnosti vývojářů\" &gt; \"Bezdrátové ladění\" &gt; \"Spoj zařízení s párovacím kódem.\" Shizuku automaticky rozpozná párovací kód.</string>
     <string name="adb_pairing_requires_multi_window">Nejprve prosím přejděte do režimu rozdělené obrazovky (více oken).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Systém vyžaduje, aby bylo dialogové okno párování vždy viditelné, použití režimu rozdělené obrazovky je jediný způsob, jak nechat tuto aplikaci a systémový dialog viditelný současně.</string>
-    <string name="adb_error_key_store">Nelze vygenerovat klíč pro bezdrátové ladění.
-\nMůže to být proto, že je narušen mechanismus úložiště klíčů tohoto zařízení.</string>
     <string name="adb_error_stop_tcp">Nepodařilo se zastavit ADB přes TCP</string>
     <string name="adb_pair_required">Nejprve projděte krok párování.</string>
     <string name="enable">Zapnout</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Zadejte ten kód do oznámení aby jste dokončili párování.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proces párování vyžaduje interakci s oznámením od Shizuku. Prosím povolte Shizuku posílat oznámení.</string>
     <string name="adb_pairing_tutorial_content_miui">Uživatelé MIUI možná budou muset přepnout styl oznámení na \"Android\" z \"Oznámení\" - \"Lišta Oznámení\" v nastavení systému.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Jinak, možná nebudete moct zadat párovací kód do oznámení.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Prosím pamatujte, levá strana možnosti \"Bezdrátové ladění\" se dá rozkliknout, což otevře novou stranu. Pouhé přepnutí přepínače napravo je nesprávné.</string>
-    <string name="adb_pairing_tutorial_content_finish">Běžte zpátky do Shizuku a spusťte Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku potřebuje přístup k lokální síti, který je spravován oprávněním k síti.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Některé systémy (například MIUI) nepovolují aplikacím přístup k síti když nejsou viditelné, i když používají služby na popředí. Prosím zakažte optimalizace baterie na takových systémech.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (pro rootovaná zařízení)]]></string>
     <string name="home_root_description"><![CDATA[Kromě toho lze Shizuku spustit automaticky při spuštění. Pokud ne, zkontrolujte, zda váš systém nebo nástroje třetích stran neomezují Shizuku. &lt;br&gt; Můžete se podívat na %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Pokud používáte Magisk můžete zkusit %1$s. Pro uživatele s rootem to eventuálně nahradí Shizuku. Existující aplikace musí být trochu změněny aby mohly používat %2$s.]]></string>
     <string name="home_root_button_start">Spustit</string>
     <string name="home_root_button_restart">Restartovat</string>
     <!-- Home - Application management -->
