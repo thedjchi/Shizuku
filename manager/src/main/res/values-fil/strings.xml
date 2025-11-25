@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Hinahanap ang serbisyo ng pagpapares</string>
     <string name="dialog_adb_pairing_paring_code">Code ng pagpapares</string>
     <string name="paring_code_is_wrong">Mali ang code ng pagpapares.</string>
-    <string name="cannot_connect_port">Hindi makakonekta sa serbisyo ng wireless na pag-debug.</string>
     <string name="dialog_wireless_adb_not_enabled">Hindi nakabukas ang wireless na pag-debug.
 \nTandaan, kailangang kumonekta sa kompyuter para mabuksan ang wireless na pag-debug sa Android 10 pababa.</string>
     <string name="dialog_usb_debugging_not_enabled">Hindi pinagana ang pag-debug ng USB.\nMangyaring paganahin ito sa \"Mga Pagpipilian sa Developer\".</string>
@@ -111,10 +110,7 @@
     <string name="settings_watchdog_summary">Awtomatikong i-restart ang Shizuku kung titigil ito</string>
     <string name="settings_tcp_mode">TCP mode</string>
     <string name="settings_tcp_mode_summary">"Pinapayagan ang Shizuku na mag-restart nang walang Wi-Fi. (Siguro minsan nang nagsimula si Shizuku mula nang mag-reboot)"</string>
-    <string name="settings_tcp_mode_dialog_title">Kinakailangan ang Pag-restart</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Kailangang mag-restart si Shizuku para magamit ang setting na ito.<br><br><b>Patuloy na tumatakbo si Shizuku at maghihintay para sa koneksyon sa Wi-Fi bago mag-restart.</b>]]></string>
     <string name="settings_tcp_port">TCP port</string>
-    <string name="settings_tcp_port_deafult">Default (5555)</string>
     <string name="settings_tcp_port_hint">Mag-iwan ng blangko upang magamit ang default (5555)</string>
     <string name="settings_tcp_learn_more">Matuto nang higit pa tungkol sa paggamit ng mga automation app upang makontrol ang Shizuku</string>
     <string name="settings_language">Wika</string>
