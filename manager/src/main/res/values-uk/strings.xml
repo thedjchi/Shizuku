@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Пошук сервісу парування</string>
     <string name="dialog_adb_pairing_paring_code">Код парування</string>
     <string name="paring_code_is_wrong">Код парування неправильний.</string>
-    <string name="cannot_connect_port">Неможливо під\'\'єднатися до сервісу бездротового налагодження.</string>
     <string name="dialog_wireless_adb_not_enabled">Налагодження через Wi-Fi не ввімкнено.
 \nЗверніть увагу, до Android 11, щоб увімкнути налагодження через Wi-Fi, під\'\'єднання до ПК обов\'\'язкове.</string>
     <string name="dialog_usb_debugging_not_enabled">Налагодження через USB не ввімкнено.\nБудь ласка, увімкніть його в розділі «Параметри розробника».</string>
@@ -113,10 +112,7 @@
     <string name="settings_watchdog_summary">Автоматично перезапускати Shizuku, якщо він зупиняється</string>
     <string name="settings_tcp_mode">Режим TCP</string>
     <string name="settings_tcp_mode_summary">"Дозволяє перезавантажити Shizuku без Wi-Fi. (Shizuku мала запуститися один раз після перезавантаження)"</string>
-    <string name="settings_tcp_mode_dialog_title">Потрібно перезавантажити</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Щоб застосувати це налаштування, Shizuku потрібно перезавантажити.<br><br><b>Shizuku продовжить роботу та чекатиме на з’єднання Wi-Fi перед перезапуском.</b>]]></string>
     <string name="settings_tcp_port">TCP-порт</string>
-    <string name="settings_tcp_port_deafult">За замовчуванням (5555)</string>
     <string name="settings_tcp_port_hint">Залиште порожнім, щоб використовувати значення за замовчуванням (5555)</string>
     <string name="settings_tcp_learn_more">Дізнайтеся більше про використання програм автоматизації для керування Shizuku</string>
     <string name="settings_language">Мова</string>
