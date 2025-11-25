@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Ole hyvä ja ota saavutettavuuspalvelu käyttöön aloittaaksesi paritusprosessin. Tämä mahdollistaa Shizukun tunnistaa parituskoodin.\n\nEsteettömyyspalvelu kytketään pois päältä, kun koodi löytyy, tai minuutin kuluttua energian säästämiseksi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Siirry kohtaan \"Kehittäjävaihtoehdot\" &gt; \"Langaton virheenkorjaus\" &gt; \"Yhdistä laite parituskoodiin.\" Shizuku tunnistaa automaattisesti parituskoodin.</string>
     <string name="adb_pairing_requires_multi_window">Siirry ensin jaetun ruudun (moniikkuna) tilaan.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Järjestelmä vaatii, että paritusdialogi on aina näkyvissä, ja jaettu ruututila on ainoa tapa saada tämä sovellus ja järjestelmädialogi näkyviksi samanaikaisesti.</string>
-    <string name="adb_error_key_store">Langattoman virheenkorjauksen avainta ei pysty generoimaan.\nTämä voi johtua siitä, että laitteen KeyStore-mekanismi on rikki.</string>
     <string name="adb_error_stop_tcp">ADB:n pysäyttäminen TCP:n kautta epäonnistui</string>
     <string name="adb_pair_required">Käy ensin läpi paritusvaihe.</string>
     <string name="enable">Ottaa käyttöön</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Syötä koodi ilmoitukseen parittelun saamiseksi päätökseen.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Paritusprosessi vaatii, että olet vuorovaikutuksessa Shizukun ilmoituksen kanssa. Sallithan Shizukun lähettää ilmoituksia.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI:n käyttäjät saattavat joutua vaihtamaan ilmoitustyylin \"Android\"-muotoon \"Notification\" - \"Notification shade\" -asetuksista järjestelmäasetuksista.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Muuten et välttämättä pysty syöttämään paring-koodia ilmoituksesta.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Huomaa, että vasen osa \"Langaton debuggaus\" -vaihtoehdosta on klikattavissa, ja sen napauttaminen avaa uuden sivun. Vain oikeanpuoleisen kytkimen turlaus on virheellinen.</string>
-    <string name="adb_pairing_tutorial_content_finish">Takaisin Shizukuun ja aloitetaan Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizukun täytyy päästä paikalliseen verkkoon. Sitä ohjaa verkon käyttöoikeus.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Jotkut järjestelmät (kuten MIUI) kieltävät sovellusten pääsyn verkkoon, kun ne eivät ole näkyvissä, vaikka sovellus käyttäisi etualan palvelua vakiona. Poista käytöstä akun optimointiominaisuudet Shizukulta tällaisissa järjestelmissä.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (rootatuille laitteille)]]></string>
     <string name="home_root_description"><![CDATA[Lisäksi Shizuku voidaan käynnistää automaattisesti käynnistyksen yhteydessä. Jos ei, tarkista, onko järjestelmäsi tai kolmannen osapuolen työkalut rajoittaneet Shizukua.<br>Voit viitata seuraaviin %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Jos käytät Magiskia, voit kokeilla %1$s. Root-käyttäjille se korvaa lopulta Shizukun. Huomaa, että olemassa olevien sovellusten täytyy muuttua hieman niiden käyttöön %2$s.]]></string>
     <string name="home_root_button_start">Aloittaa</string>
     <string name="home_root_button_restart">Käynnistää uudelleen</string>
     <!-- Home - Application management -->
