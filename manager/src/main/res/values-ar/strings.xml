@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">جاري البحث على جهاز للإتصال</string>
     <string name="dialog_adb_pairing_paring_code">كود الاقتران</string>
     <string name="paring_code_is_wrong">رمز الاقتران خاطئ.</string>
-    <string name="cannot_connect_port">لا يمكن الاتصال بخدمة تصحيح الأخطاء اللاسلكية.</string>
     <string name="dialog_wireless_adb_not_enabled">التصحيح اللاسلكي غير ممكّن.
 \nملاحظة ، قبل Android 11 ، لتمكين التصحيح اللاسلكي ، يجب أن يكون الاتصال بالكمبيوتر أمرًا ضروريًا.</string>
     <string name="dialog_usb_debugging_not_enabled">لم يتم تمكين تصحيح أخطاء USB.\nيرجى تمكينه في \"خيارات المطور\".</string>
@@ -116,10 +115,7 @@
     <string name="settings_watchdog_summary">إعادة تشغيل Shizuku تلقائيًا إذا توقفت</string>
     <string name="settings_tcp_mode">وضع TCP</string>
     <string name="settings_tcp_mode_summary">"يسمح لـ Shizuku بإعادة التشغيل دون اتصال Wi-Fi. (يجب أن يكون Shizuku قد بدأ مرة واحدة بعد إعادة التشغيل)"</string>
-    <string name="settings_tcp_mode_dialog_title">مطلوب إعادة التشغيل</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[يحتاج Shizuku إلى إعادة التشغيل لتطبيق هذا الإعداد.<br><br><b>سيستمر Shizuku في العمل وينتظر اتصال Wi-Fi قبل إعادة التشغيل.</b>]]></string>
     <string name="settings_tcp_port">منفذ TCP</string>
-    <string name="settings_tcp_port_deafult">افتراضي (5555)</string>
     <string name="settings_tcp_port_hint">اتركه فارغًا لاستخدام الإعداد الافتراضي (5555)</string>
     <string name="settings_tcp_learn_more">تعرف على المزيد حول استخدام تطبيقات الأتمتة للتحكم في Shizuku</string>
     <string name="settings_language">اللغة</string>
