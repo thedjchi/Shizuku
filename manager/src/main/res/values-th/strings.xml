@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">กรุณาเปิดใช้งานบริการการเข้าถึงเพื่อเริ่มขั้นตอนการจับคู่ ซึ่งจะทำให้ Shizuku สามารถตรวจจับรหัสการจับคู่ได้\n\nบริการการเข้าถึงจะถูกปิดเมื่อพบรหัส หรือหลังจาก 1 นาที เพื่อประหยัดพลังงาน</string>
     <string name="dialog_adb_pairing_accessibility_navigate">กรุณาไปที่ \"ตัวเลือกสำหรับนักพัฒนา\" &gt; \"การดีบักไร้สาย\" &gt; \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" Shizuku จะตรวจจับรหัสจับคู่โดยอัตโนมัติ</string>
     <string name="adb_pairing_requires_multi_window">โปรดเข้าสู่โหมดแยกหน้าจอ (หลายหน้าต่าง) ก่อน</string>
-    <string name="adb_pairing_requires_multi_window_reason">ระบบจำเป็นจะต้องให้มีหน้าต่างรหัสการจับคู่แสดงอยู่ตลอดเวลา ใช้โหมดแนกหน้าจอเป็นหนทางเดียวที่จะปล่อยแอปและหน้าต่างของระบบแสดงพร้อมกันในเวลาเดียวกัน</string>
-    <string name="adb_error_key_store">ไม่สามารถสร้างรหัสเพื่อเชื่อมต่อการแก้ไขข้อบกพร่องผ่าน Wi-Fi
-\nอาจเป็นเพราะกลไกการจัดเก็บรหัสของอุปกรณ์เสียหาย</string>
     <string name="adb_error_stop_tcp">ไม่สามารถหยุด ADB ผ่าน TCP ได้</string>
     <string name="adb_pair_required">โปรดทำขั้นตอนการจับคู่ก่อน</string>
     <string name="enable">เปิดใช้งาน</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">ป้อนรหัสลงไปในการแจ้งเตือนเพื่อเสร็จสิ้นการจับคู่</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">กระบวนการจับคู่จำเป็นต้องมีการป้อนข้อมูลลงในการแจ้งเตือนของ Shizuku โปรดอนุญาตให้ Shizuku ส่งการแจ้งเตือน</string>
     <string name="adb_pairing_tutorial_content_miui">ผู้ใช้ MIUI อาจจำเป็นต้องเปลี่ยนสไตล์การแจ้งเตือนเป็น \"Android\" ใน \"การแจ้งเตือน\" -\"เฉดการแจ้งเตือน\" ในการตั้งค่าของระบบ</string>
-    <string name="adb_pairing_tutorial_content_miui_2">ไม่เช่นนั้นจะไม่สามารถป้อนรหัสการจับคู่ลงในการแจ้งเตือน</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">โปรดให้ทราบว่า ส่วนด้านซ้ายของตัวเลือก \"การแก้ไขข้อบกพร่องผ่าน Wi-Fi\" สามารถกดได้ เมื่อแตะแล้วจะเปิดหน้าใหม่ขึ้นมา การแค่เปิดสวิตช์ที่ด้านขวาอย่างเดียวนั้นไม่ถูกต้อง</string>
-    <string name="adb_pairing_tutorial_content_finish">กลับไปที่ Shizuku เพื่อเริ่ม Shizuku</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku จำเป็นต้องเข้าถึงเครือข่ายท้องถิ่น ซึ่งกำลังควบคุมอยู่โดยการอนุญาตเครือข่าย</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">บางระบบ (เช่น MIUI) จะไม่อนุญาตให้แอปเข้าถึงเครือข่ายเมื่อไม่แสดง แม้แอปจะใช้บริการเบื้องหน้าตามปกติ โปรดเปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่ของ Shizuku บนระบบที่เป็นเช่นนั้น</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[เริ่ม (สำหรับอุปกรณ์ที่รูทแล้ว)]]></string>
     <string name="home_root_description"><![CDATA[นอกจากนี้ Shizuku ยังสามารถเริ่มอัตโนมัติเมื่ออุปกรณ์ถูกเปิด หากไม่ โปรดตรวจสอบอุปกรณ์หรือเครื่องมือภายนอกที่จำกัดการเข้าถึงของ Shizuku&lt;br&gt;หรือดูตาม %s]]></string>
-    <string name="home_root_description_sui"><![CDATA[หากคุณกำลังใช้ Magisk สามารถลองใช้ %1$s สำหรับผู้ใช้งานรูท จะเป็นตัวที่ใช้แทนที่ Shizuku แต่โปรดทราบว่า แอปพลิเคชันที่มีอยู่จำเป็นต้องเปลี่ยนเล็กน้อยให้ไปใช้ %2$s]]></string>
     <string name="home_root_button_start">เริ่ม</string>
     <string name="home_root_button_restart">เริ่มใหม่</string>
     <!-- Home - Application management -->
