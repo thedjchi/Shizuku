@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">אנא הפעל את שירות הנגישות כדי להתחיל בתהליך הצימוד. זה מאפשר לשיזוקו לזהות את קוד הצימוד.\n\nשירות הנגישות יכבה כאשר הקוד יימצא או לאחר דקה כדי לחסוך באנרגיה.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">אנא נווט אל \"אפשרויות למפתחים\" &gt; \"ניפוי שגיאות אלחוטי\" &gt; \"התאמת מכשיר עם קוד התאמת קוד\". Shizuku יזהה את קוד התאמת המכשיר באופן אוטומטי.</string>
     <string name="adb_pairing_requires_multi_window">אנא היכנס תחילה למצב מסך מפוצל (חלונות מרובים).</string>
-    <string name="adb_pairing_requires_multi_window_reason">המערכת דורשת שתיבת הדו-שיח של הצימוד תהיה גלויה תמיד, שימוש במצב מסך מפוצל היא הדרך היחידה לאפשר לאפליקציה זו ולתיבת הדו-שיח של המערכת להיות גלויות בו זמנית.</string>
-    <string name="adb_error_key_store">לא ניתן ליצור מפתח עבור ניפוי שגיאות אלחוטי.\nייתכן שהסיבה לכך היא שמנגנון KeyStore של מכשיר זה מקולקל.</string>
     <string name="adb_error_stop_tcp">נכשלה עצירת ADB דרך TCP</string>
     <string name="adb_pair_required">אנא עברו תחילה על שלב הצימוד.</string>
     <string name="enable">לְאַפשֵׁר</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">הזן את הקוד בהודעה כדי להשלים את הצימוד.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">תהליך הצימוד דורש אינטראקציה עם הודעה משיזוקו. אנא אפשר לשיזוקו לפרסם התראות.</string>
     <string name="adb_pairing_tutorial_content_miui">ייתכן שמשתמשי MIUI יצטרכו לשנות את סגנון ההתראות ל\"אנדרואיד\" מ\"התראות\" - \"צללית התראות\" בהגדרות המערכת.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">אחרת, ייתכן שלא תוכלו להזין קוד התאמה מההודעה.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">שימו לב, החלק השמאלי של האפשרות \"ניפוי שגיאות אלחוטי\" ניתן ללחיצה, לחיצה עליו תפתח דף חדש. רק הפעלת המתג מימין אינה נכונה.</string>
-    <string name="adb_pairing_tutorial_content_finish">חזרה לשיזוקו והתחל את שיזוקו.</string>
-    <string name="adb_pairing_tutorial_content_network">שיזוקו צריך גישה לרשת המקומית. זה נשלט על ידי הרשאת הרשת.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">מערכות מסוימות (כגון MIUI) אוסרות גישה לאפליקציות לרשת כאשר הן אינן גלויות, גם אם האפליקציה משתמשת בשירות קדמי כסטנדרט. אנא השבת את תכונות אופטימיזציית הסוללה עבור Shizuku במערכות כאלה.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[התחל (למכשירים עם הרשאות מקור)]]></string>
     <string name="home_root_description"><![CDATA[בנוסף, ניתן להפעיל את Shizuku באופן אוטומטי בעת האתחול. אם לא, אנא בדוק אם המערכת שלך או כלי צד שלישי הגבילו את Shizuku.<br>ניתן לעיין ב- %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[אם אתם משתמשים ב-Magisk, תוכלו לנסות את %1$s. עבור משתמשי רוט, הוא יחליף בסופו של דבר את Shizuku. שימו לב, אפליקציות קיימות צריכות להשתנות מעט כדי להשתמש ב- %2$s.]]></string>
     <string name="home_root_button_start">הַתחָלָה</string>
     <string name="home_root_button_restart">הפעלה מחדש</string>
     <!-- Home - Application management -->
