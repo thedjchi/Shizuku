@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Palun lubage ligipääsetavuse teenus, et alustada sidumisprotsessi. See võimaldab Shizukul tuvastada paarituskoodi.\n\nLigipääsetavuse teenus lülitatakse välja, kui kood leitakse, või pärast 1 minutit, et energiat säästa.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Palun liikuge \"Arendaja valikud\" lehele &gt; \"Juhtmevaba silumine\" &gt; \"Ühenda seade sidumiskoodiga.\" Shizuku tuvastab automaatselt sidumiskoodi.</string>
     <string name="adb_pairing_requires_multi_window">Palun sisene esmalt jagatud ekraani (mitme akna) režiimi.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Süsteem nõuab, et sidumisdialoog oleks alati nähtav, jagatud ekraani režiim on ainus viis, kuidas see rakendus ja süsteemi dialoog oleksid samaaegselt nähtavad.</string>
-    <string name="adb_error_key_store">Juhtmevaba silumise võtit ei saa genereerida.\nSee võib olla tingitud sellest, et selle seadme KeyStore mehhanism on katki.</string>
     <string name="adb_error_stop_tcp">ADB peatamine TCP kaudu ebaõnnestus</string>
     <string name="adb_pair_required">Palun läbige esmalt paarisetapp.</string>
     <string name="enable">Luba</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Sisesta teavitusesse kood, et sidumine lõpetada.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Sidumisprotsess nõuab, et sa suhtleksid Shizuku teavitusega. Palun lubage Shizukul teavitusi postitada.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI kasutajad võivad vajada teavitusstiili vahetamist \"Androidiks\" süsteemiseadetes \"Notification shade\" asemel \"Notification shade\".</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Vastasel juhul ei pruugi sa teavitusest paringukoodi sisestada.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Palun pange tähele, et vasakpoolne osa \"Juhtmevaba silumine\" valikust on klõpsatav, selle puudutamine avab uue lehe. Ainult paremal oleva lüliti turnimine on vale.</string>
-    <string name="adb_pairing_tutorial_content_finish">Tagasi Shizuku juurde ja alusta Shizukut.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku peab pääsema kohalikku võrku. Seda juhib võrguluba.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Mõned süsteemid (näiteks MIUI) keelavad rakendustel võrgule ligipääsu, kui need pole nähtavad, isegi kui rakendus kasutab standardvarustuses esiplaani teenust. Palun lülitage sellistes süsteemides Shizuku aku optimeerimise funktsioonid välja.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (rootitud seadmete jaoks)]]></string>
     <string name="home_root_description"><![CDATA[Lisaks saab Shizuku käivitamisel automaatselt käivituda. Kui ei, siis palun kontrolli, kas sinu süsteem või kolmandate osapoolte tööriistad on Shizukut piiranud.<br>Võite viidata %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Kui kasutad Magiskit, võid proovida %1$s. Root-kasutajatele asendab see lõpuks Shizuku. Pane tähele, et olemasolevad rakendused vajavad veidi muutumist, et neid kasutada %2$s.]]></string>
     <string name="home_root_button_start">Alustama</string>
     <string name="home_root_button_restart">Taaskäivitage</string>
     <!-- Home - Application management -->
