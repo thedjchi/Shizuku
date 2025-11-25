@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">페어링 서비스 검색 중</string>
     <string name="dialog_adb_pairing_paring_code">페어링 코드</string>
     <string name="paring_code_is_wrong">페어링 코드가 올바르지 않습니다.</string>
-    <string name="cannot_connect_port">무선 디버깅 서비스에 연결할 수 없습니다.</string>
     <string name="dialog_wireless_adb_not_enabled">무선 디버깅을 사용하고 있지 않습니다.
 \n안드로이드 11 이전은 무선 디버깅을 사용하기 위해서 컴퓨터 연결을 필수로 해야 합니다.</string>
     <string name="dialog_usb_debugging_not_enabled">USB 디버깅이 활성화되어 있지 않습니다.\n\"개발자 옵션\"에서 활성화해 주세요.</string>
@@ -110,10 +109,7 @@
     <string name="settings_watchdog_summary">시즈쿠가 멈추면 자동으로 재시작합니다.</string>
     <string name="settings_tcp_mode">TCP 모드</string>
     <string name="settings_tcp_mode_summary">"Shizuku가 Wi-Fi 없이 재시작할 수 있도록 합니다. (Shizuku는 재부팅 후 한 번 시작되어야 합니다.)"</string>
-    <string name="settings_tcp_mode_dialog_title">재시작 필요</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[이 설정을 적용하려면 Shizuku를 다시 시작해야 합니다.<br><br><b>Shizuku는 계속 실행되며 Wi-Fi 연결을 기다린 후 다시 시작합니다.</b>]]></string>
     <string name="settings_tcp_port">TCP 포트</string>
-    <string name="settings_tcp_port_deafult">기본값(5555)</string>
     <string name="settings_tcp_port_hint">기본값(5555)을 사용하려면 비워두세요.</string>
     <string name="settings_tcp_learn_more">자동화 앱을 사용하여 Shizuku를 제어하는 방법에 대해 자세히 알아보세요.</string>
     <string name="settings_language">언어</string>
