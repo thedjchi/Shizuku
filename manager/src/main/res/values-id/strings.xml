@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Mencari layanan penyambung</string>
     <string name="dialog_adb_pairing_paring_code">Kode penghubung</string>
     <string name="paring_code_is_wrong">Kode penghubung tidak sesuai.</string>
-    <string name="cannot_connect_port">Gagal menyambungkan ke layanan debug nirkabel.</string>
     <string name="dialog_wireless_adb_not_enabled">Debug nirkabel belum diaktifkan.
 \nSebagai catatan, Anda harus terhubung ke komputer untuk mengaktifkan debug nirkabel pada perangkat sebelum Android 11.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging tidak diaktifkan.\nHarap aktifkan di \"Opsi Pengembang\".</string>
@@ -110,10 +109,7 @@
     <string name="settings_watchdog_summary">Mulai ulang Shizuku secara otomatis jika berhenti</string>
     <string name="settings_tcp_mode">modus TCP</string>
     <string name="settings_tcp_mode_summary">"Memungkinkan Shizuku untuk memulai ulang tanpa Wi-Fi. (Shizuku harus sudah memulai sekali sejak di-reboot)"</string>
-    <string name="settings_tcp_mode_dialog_title">Diperlukan Restart</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku perlu memulai ulang agar pengaturan ini dapat diterapkan.<br><br><b>Shizuku akan terus berjalan dan menunggu koneksi Wi-Fi sebelum memulai ulang.</b>]]></string>
     <string name="settings_tcp_port">Pelabuhan TCP</string>
-    <string name="settings_tcp_port_deafult">Standar (5555)</string>
     <string name="settings_tcp_port_hint">Biarkan kosong untuk menggunakan default (5555)</string>
     <string name="settings_tcp_learn_more">Pelajari lebih lanjut tentang penggunaan aplikasi otomatisasi untuk mengontrol Shizuku</string>
     <string name="settings_language">Bahasa</string>
