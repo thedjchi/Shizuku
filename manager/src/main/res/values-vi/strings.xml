@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Đang tìm kiếm dịch vụ ghép nối</string>
     <string name="dialog_adb_pairing_paring_code">Mã ghép nối</string>
     <string name="paring_code_is_wrong">Mã ghép nối sai.</string>
-    <string name="cannot_connect_port">Không thể kết nối với dịch vụ gỡ lỗi không dây.</string>
     <string name="dialog_wireless_adb_not_enabled">Gỡ lỗi không dây không được kích hoạt.
 \nLưu ý, trước Android 11, để kích hoạt tính năng gỡ lỗi không dây, kết nối máy tính là điều bắt buộc.</string>
     <string name="dialog_usb_debugging_not_enabled">Chưa bật tính năng gỡ lỗi USB.\nVui lòng bật tính năng này trong \"Tùy chọn nhà phát triển\".</string>
@@ -106,10 +105,7 @@
     <string name="settings_watchdog_summary">Tự động khởi động lại Shizuku nếu nó dừng lại</string>
     <string name="settings_tcp_mode">Chế độ TCP</string>
     <string name="settings_tcp_mode_summary">"Cho phép Shizuku khởi động lại mà không cần Wi-Fi. (Shizuku phải khởi động lại một lần kể từ khi khởi động lại)"</string>
-    <string name="settings_tcp_mode_dialog_title">Cần khởi động lại</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku cần khởi động lại để áp dụng cài đặt này.<br><br><b>Shizuku sẽ tiếp tục chạy và đợi kết nối Wi-Fi trước khi khởi động lại.</b>]]></string>
     <string name="settings_tcp_port">Cổng TCP</string>
-    <string name="settings_tcp_port_deafult">Mặc định (5555)</string>
     <string name="settings_tcp_port_hint">Để trống để sử dụng mặc định (5555)</string>
     <string name="settings_tcp_learn_more">Tìm hiểu thêm về cách sử dụng ứng dụng tự động hóa để kiểm soát Shizuku</string>
     <string name="settings_language">Ngôn ngữ</string>
