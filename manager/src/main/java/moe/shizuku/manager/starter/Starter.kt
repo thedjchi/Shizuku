@@ -18,6 +18,8 @@ object Starter {
 
     val internalCommand = "$userCommand --apk=${application.applicationInfo.sourceDir}"
 
+    val serviceStartedMessage = "Service started, this window will be automatically closed in 3 seconds"
+
     private class BinderTimeoutException:
         Exception("Failed to receive binder within 10 seconds")
 
@@ -28,7 +30,7 @@ object Starter {
                 ShizukuStateMachine.asFlow()
                     .first { it == ShizukuStateMachine.State.RUNNING }
             }
-            log?.invoke("Service started, this window will be automatically closed in 3 seconds")
+            log?.invoke(serviceStartedMessage)
         } catch (e: TimeoutCancellationException) {
             throw BinderTimeoutException()
         }

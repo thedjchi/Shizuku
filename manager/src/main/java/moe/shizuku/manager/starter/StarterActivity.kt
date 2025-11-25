@@ -52,7 +52,7 @@ class StarterActivity : AppBarActivity() {
 
         viewModel.output.observe(this) {
             val output = it.data!!.trim()
-            if (output.endsWith("Service started, this window will be automatically closed in 3 seconds")) {
+            if (output.endsWith(Starter.serviceStartedMessage)) {
                 window?.decorView?.postDelayed({
                     if (!isFinishing) finish()
                 }, 3000)
