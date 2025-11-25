@@ -22,6 +22,7 @@ import java.io.DataOutputStream
 import java.net.Socket
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+import java.net.InetSocketAddress
 import javax.net.ssl.SSLSocket
 
 private const val TAG = "AdbClient"
@@ -42,7 +43,10 @@ class AdbClient(private val host: String, private val port: Int, private val key
     private val outputStream get() = if (useTls) tlsOutputStream else plainOutputStream
 
     fun connect() {
-        socket = Socket(host, port)
+        val socket = Socket()
+        val address = InetSocketAddress(host, port)
+        socket.connect(address, 5000)
+
         socket.tcpNoDelay = true
         plainInputStream = DataInputStream(socket.getInputStream())
         plainOutputStream = DataOutputStream(socket.getOutputStream())

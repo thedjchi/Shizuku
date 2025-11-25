@@ -36,7 +36,7 @@
     <string name="dialog_adb_pairing_discovery">Searching for pairing service</string>
     <string name="dialog_adb_pairing_paring_code">Pairing code</string>
     <string name="paring_code_is_wrong">Pairing code is wrong.</string>
-    <string name="cannot_connect_port">Can\'t connect to wireless debugging service.</string>
+    <string name="cannot_connect_port">Can\'t connect to wireless debugging service.\n\nPlease ensure that Shizuku is whitelisted in all firewall, ad-block, VPN, or similar apps that can restrict network access.</string>
     <string name="dialog_wireless_adb_not_enabled">Wireless debugging is not enabled.\nNote, before Android 11, to enable wireless debugging, computer connection is a must.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging is not enabled.\nPlease enable it in \"Developer Options\".</string>
     <string name="dialog_adb_pairing_message">Please start pairing by performing the following steps: \"Developer Options\" - \"Wireless debugging\" - \"Pair device with pairing code.\"\n\nAfter the pairing process starts, you will able to input the pairing code.</string>

@@ -7,6 +7,7 @@ import android.provider.Settings
 import android.widget.Toast
 import java.io.EOFException
 import java.net.SocketException
+import java.net.SocketTimeoutException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -66,8 +67,7 @@ object AdbStarter {
                         client.connect()
                         break
                     } catch (e: Exception) {
-                        if (attempt == maxAttempts || e is CancellationException) {
-                            log?.invoke("Failed to connect on port $activePort...\n")
+                        if (attempt == maxAttempts || e is CancellationException || e is SocketTimeoutException) {
                             throw e
                         }
                         delayTime += 1000
