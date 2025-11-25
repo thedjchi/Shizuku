@@ -32,6 +32,7 @@
     <string name="dialog_adb_pairing_discovery">Buscando servicio de emparejamiento</string>
     <string name="dialog_adb_pairing_paring_code">Clave de emparejamiento</string>
     <string name="paring_code_is_wrong">Clave de emparejamiento errónea.</string>
+    <string name="cannot_connect_port">No puedo conectarme al servicio de depuración inalámbrica.\n\nPor favor, asegúrate de que Shizuku esté en la lista blanca de todas las aplicaciones de firewall, bloqueador de anuncios, VPN u similares que puedan restringir el acceso a la red.</string>
     <string name="dialog_wireless_adb_not_enabled">La Depuración inalámbrica no esta habilitada.
 \nNota, versiones anteriores a Android 11, para habilitar depuración inalámbrica, la conexión a una computadora es requerida.</string>
     <string name="dialog_usb_debugging_not_enabled">La depuración USB no está habilitada.\nHabilítela en \"Opciones de desarrollador\".</string>
@@ -39,6 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">Habilita el servicio de accesibilidad para iniciar el proceso de emparejamiento. Esto permite que Shizuku detecte el código de emparejamiento.\n\nEl servicio de accesibilidad se desactivará cuando se encuentre el código o después de 1 minuto para ahorrar energía.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Vaya a \"Opciones de desarrollador\" &gt; \"Depuración inalámbrica\" &gt; \"Emparejar dispositivo con código de emparejamiento\". Shizuku detectará automáticamente el código de emparejamiento.</string>
     <string name="adb_pairing_requires_multi_window">Favor entre en modo de pantalla dividida (multiventana) primero.</string>
+    <string name="adb_pairing_requires_multi_window_reason">El sistema requiere que el diálogo de emparejamiento sea siempre visible. Usar el modo pantalla dividida es la única forma de que esta app y el diálogo del sistema sean visibles al mismo tiempo.</string>
+    <string name="adb_error_key_store">No se puede generar clave para la depuración inalámbrica.\nEsto puede deberse a que el mecanismo KeyStore de este dispositivo está roto.</string>
     <string name="adb_error_stop_tcp">No se pudo detener ADB sobre TCP</string>
     <string name="adb_pair_required">Por favor, ve al paso de emparejamiento primero.</string>
     <string name="enable">Permitir</string>
@@ -50,9 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Introduzca el código para completar el emparejamiento.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">El proceso de vinculación requiere que usted interactúe con las notificaciones de Shizuku. Por favor, permita que Shizuku pueda lanzar notificaciones.</string>
     <string name="adb_pairing_tutorial_content_miui">Usuarios de MIUI podrían necesitar cambiar el estilo de notificaciones por \"Android\" en \"Notificaciones\" - \"Barra de notificaciones\" dentro de los ajustes de sistema.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">De lo contrario, puede que no puedas introducir el código de emparejamiento desde la notificación.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Ten en cuenta que la parte izquierda de la opción \"Depuración inalámbrica\" es pulsable; al tocarla se abrirá una nueva página. Solo encender el interruptor de la derecha es incorrecto.</string>
+    <string name="adb_pairing_tutorial_content_finish">Vuelve con Shizuku y empieza con Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku necesita acceder a la red local. Está controlada por el permiso de la red.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Algunos sistemas (como MIUI) impiden que las aplicaciones accedan a la red cuando no son visibles, incluso si la app utiliza un servicio en primer plano. Por favor, desactiva las funciones de optimización de batería para Shizuku en estos sistemas.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Iniciar (dispositivo rooteado)]]></string>
     <string name="home_root_description"><![CDATA[Además, Shizuku puede iniciarse automáticamente al arrancar el sistema. Si no es así, por favor compruebe si su sistema o si herramientas de terceros no han restringido Shizuku. &lt;br&gt;Puede consultar en %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Si usas Magisk, puedes probar %1$s. Para los usuarios root, eventualmente reemplazará a Shizuku. Ten en cuenta que las aplicaciones existentes necesitan cambiar un poco para poder usarlas %2$s.]]></string>
     <string name="home_root_button_start">Iniciar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
@@ -95,12 +104,17 @@
     <string name="settings_behavior">Comportamiento</string>
     <string name="settings_start_on_boot">Iniciar al arrancar</string>
     <string name="settings_start_on_boot_summary">Requiere Android 11 o superior, o acceso root.</string>
+    <string name="settings_start_on_boot_bug">Debido a un error en Android 11-12, la depuración inalámbrica no recuerda ninguna red autorizada.\n\nTendrás que reautorizar la red en cada reinicio pulsando \"Permitir\" cuando aparezca el cuadro de autorización.</string>
     <string name="settings_use_system_color">Usar el color del tema del sistema</string>
     <string name="settings_watchdog">Perro guardián</string>
     <string name="settings_watchdog_summary">Reiniciar automáticamente Shizuku si se detiene</string>
     <string name="settings_tcp_mode">Modo TCP</string>
     <string name="settings_tcp_mode_summary">"Permite que Shizuku se reinicie sin Wi-Fi. (Shizuku debe haberse iniciado una vez desde el reinicio)."</string>
+    <string name="settings_restart_dialog_title">Reinicio necesario</string>
+    <string name="settings_restart_dialog_message">Shizuku necesita reiniciar para poder aplicar esta configuración.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Se requiere Wi-Fi. Shizuku seguirá funcionando y esperará a que se conecte Wi-Fi antes de reiniciar en segundo plano.</b>]]></string>
     <string name="settings_tcp_port">Puerto TCP</string>
+    <string name="settings_tcp_port_default">Predeterminado (5555)</string>
     <string name="settings_tcp_port_hint">Déjelo en blanco para usar el valor predeterminado (5555)</string>
     <string name="settings_tcp_learn_more">Obtenga más información sobre el uso de aplicaciones de automatización para controlar Shizuku</string>
     <string name="settings_language">Idioma</string>
@@ -124,6 +138,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">No se encontró ninguna aplicación de correo electrónico</string>
     <string name="toast_shizuku_already_starting">Shizuku ya está empezando en segundo plano.</string>
+    <string name="toast_accessibility_tv_only">Este servicio solo es compatible con dispositivos de televisión.</string>
+    <string name="toast_accessibility_timed_out">El servicio de emparejamiento de Shizuku se agotó.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Siempre ligero</string>
@@ -172,6 +188,7 @@
     <string name="wadb_notification_channel">Servicio de inicio automático de ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">El perro guardián está en marcha</string>
+    <string name="watchdog_turn_off">Apaga</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku se estrelló recientemente</string>
     <string name="watchdog_shizuku_crashed_text">El servicio de vigilancia se reinició. Toca para conocer posibles soluciones para evitar futuras fallas.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Desactivar alertas</string>
