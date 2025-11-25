@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">გთხოვთ, ჩართოთ ხელმისაწვდომობის სერვისი დაწყვილების პროცესის დასაწყებად. ეს საშუალებას აძლევს Shizuku-ს აღმოაჩინოს დაწყვილების კოდი.\n\nხელმისაწვდომობის სერვისი გამორთულია კოდის პოვნისას ან 1 წუთის შემდეგ ენერგიის დაზოგვის მიზნით.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">გთხოვთ, გადახვიდეთ \"დეველოპერის ოფციებზე\" &gt; \"უსადენო გამართვა\" &gt; \"დააწყვილეთ მოწყობილობა დაწყვილების კოდთან.\" Shizuku ავტომატურად აღმოაჩენს დაწყვილების კოდს.</string>
     <string name="adb_pairing_requires_multi_window">გთხოვთ, ჯერ შეხვიდეთ გაყოფილი ეკრანის (მრავალფანჯრის) რეჟიმში.</string>
-    <string name="adb_pairing_requires_multi_window_reason">სისტემა მოითხოვს დაწყვილების დიალოგს, რომელიც ყოველთვის ჩანს, გაყოფილი ეკრანის რეჟიმის გამოყენება ერთადერთი გზაა ამ აპისა და სისტემის დიალოგის ერთდროულად ხილვის მიზნით.</string>
-    <string name="adb_error_key_store">შეუძლებელია გასაღების გენერირება უსადენო გამართვის მიზნით.\nეს შეიძლება იყოს იმის გამო, რომ ამ მოწყობილობის KeyStore მექანიზმი გატეხილია.</string>
     <string name="adb_error_stop_tcp">ADB-ის შეჩერება ვერ მოხერხდა TCP-ზე</string>
     <string name="adb_pair_required">გთხოვთ, ჯერ გაიაროთ დაწყვილების ნაბიჯი.</string>
     <string name="enable">ჩართვა</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">შეიყვანეთ კოდი შეტყობინებაში დაწყვილების დასასრულებლად.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">დაწყვილების პროცესს სჭირდება ურთიერთობა შიზუკუს შეტყობინებასთან. გთხოვთ, ნება მიეცით Shizuku-ს გამოაქვეყნოს შეტყობინებები.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-ის მომხმარებლებს შეიძლება დასჭირდეთ შეტყობინების სტილის გადართვა \"Android\"-ზე \"შეტყობინებიდან\" - \"შეტყობინებების ჩრდილიდან\" სისტემის პარამეტრებში.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">წინააღმდეგ შემთხვევაში, თქვენ ვერ შეძლებთ შეტყობინების კოდის შეყვანას.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">გთხოვთ გაითვალისწინოთ, რომ \"უსადენო გამართვა\" ვარიანტის მარცხენა ნაწილი დაწკაპუნებულია, მასზე შეხება გაიხსნება ახალი გვერდი. მხოლოდ მარჯვნივ გადართვის ტურინგი არასწორია.</string>
-    <string name="adb_pairing_tutorial_content_finish">დაუბრუნდით შიზუკუს და დაიწყეთ შიზუკუ.</string>
-    <string name="adb_pairing_tutorial_content_network">შიზუკუს სჭირდება ლოკალურ ქსელში წვდომა. იგი კონტროლდება ქსელის ნებართვით.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">ზოგიერთი სისტემა (როგორიცაა MIUI) არ უშვებს აპებს ქსელში წვდომას, როდესაც ისინი არ ჩანს, მაშინაც კი, თუ აპლიკაცია იყენებს წინა პლანზე სერვისს, როგორც სტანდარტული. გთხოვთ, გამორთოთ ბატარეის ოპტიმიზაციის ფუნქციები Shizuku-სთვის ასეთ სისტემებზე.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[დაწყება (rooted მოწყობილობებისთვის)]]></string>
     <string name="home_root_description"><![CDATA[გარდა ამისა, Shizuku შეიძლება ავტომატურად დაიწყოს ჩატვირთვისას. თუ არა, გთხოვთ, შეამოწმოთ, შეზღუდა თუ არა თქვენმა სისტემამ ან მესამე მხარის ინსტრუმენტებმა Shizuku.<br>შეგიძლიათ მიმართოთ %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[თუ თქვენ იყენებთ Magisk-ს, შეგიძლიათ სცადოთ %1$s. ძირეული მომხმარებლებისთვის, ის საბოლოოდ ჩაანაცვლებს შიზუკუს. გაითვალისწინეთ, რომ არსებული აპლიკაციები ოდნავ უნდა შეიცვალოს გამოსაყენებლად %2$s.]]></string>
     <string name="home_root_button_start">დაწყება</string>
     <string name="home_root_button_restart">გადატვირთვა</string>
     <!-- Home - Application management -->
