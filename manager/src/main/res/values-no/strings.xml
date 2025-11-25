@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Søker etter paringstjeneste</string>
     <string name="dialog_adb_pairing_paring_code">Paringskode</string>
     <string name="paring_code_is_wrong">Paringskoden er feil.</string>
-    <string name="cannot_connect_port">Kan ikke koble til den trådløse feilsøkingstjenesten.</string>
     <string name="dialog_wireless_adb_not_enabled">Trådløs feilsøking er ikke aktivert.\nMerk at før Android 11 er det nødvendig med en datamaskintilkobling for å aktivere trådløs feilsøking.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-feilsøking er ikke aktivert.\nAktiver det i «Utvikleralternativer».</string>
     <string name="dialog_adb_pairing_message">Start paringen ved å utføre følgende trinn: «Utvikleralternativer» – «Trådløs feilsøking» – «Par enheten med paringskode.»\n\nEtter at paringsprosessen har startet, kan du legge inn paringskoden.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">Start Shizuku automatisk på nytt hvis det stopper</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Lar Shizuku starte på nytt uten Wi-Fi. (Shizuku må ha startet én gang siden omstarten)"</string>
-    <string name="settings_tcp_mode_dialog_title">Omstart kreves</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku må starte på nytt for å kunne bruke denne innstillingen.<br><br><b>Shizuku vil fortsette å kjøre og vente på en Wi-Fi-tilkobling før den starter på nytt.</b>]]></string>
     <string name="settings_tcp_port">TCP-port</string>
-    <string name="settings_tcp_port_deafult">Standard (5555)</string>
     <string name="settings_tcp_port_hint">La det stå tomt for å bruke standard (5555)</string>
     <string name="settings_tcp_learn_more">Lær mer om bruk av automatiseringsapper for å kontrollere Shizuku</string>
     <string name="settings_language">Språk</string>
