@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">「開発者向けオプション」 &gt; 「ワイヤレスデバッグ」 &gt; 「ペアリングコードでデバイスをペアリング」に移動してください。Shizukuはペアリングコードを自動的に検出します。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
-    <string name="adb_pairing_requires_multi_window_reason">システムではペアリングダイアログが常に表示されている必要があり、このアプリとシステムダイアログを同時に表示させるには、分割画面を使用するしかありません。</string>
-    <string name="adb_error_key_store">ワイヤレスデバッグ用のキーを生成できません。
-\nこれは、お使いのデバイスのキーストアの仕組みが壊れているためと思われます。</string>
     <string name="adb_error_stop_tcp">TCP経由のADBを停止できませんでした</string>
     <string name="adb_pair_required">まずはペアリングの手順を行ってください。</string>
     <string name="enable">有効にする</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">通知にコードを入力してペアリングします。</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">ペアリング手順はShizukuからの通知を操作する必要があります。Shizukuからの通知を許可してください。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUIユーザーはシステムの設定から「通知」→「通知のシェード」から通知スタイルを「Android」に変更する必要がある場合があります。</string>
-    <string name="adb_pairing_tutorial_content_miui_2">場合によっては、通知からペアリングコードを入力できないことがあります。</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">なお、「ワイヤレスデバッグ」オプションの左側はクリック可能で、タップすると新しいページが表示されます。右側のスイッチだけをオンにするのは誤りです。</string>
-    <string name="adb_pairing_tutorial_content_finish">Shizukuに戻り、スタートします。</string>
-    <string name="adb_pairing_tutorial_content_network">Shizukuはローカルネットワークにアクセスする必要があります。ネットワーク権限で管理されています。</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">一部のシステム（MIUIなど）では、アプリが標準でフォアグラウンドサービスを使用していても、アプリが表示されていないときはネットワークにアクセスすることを許可しないようになっています。そのようなシステムでは、Shizukuのバッテリー最適化機能を無効にしてください。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[開始(Root化された端末の場合のみ)]]></string>
     <string name="home_root_description"><![CDATA[また、起動時にShizukuを自動的に起動することもできます。もし、起動しない場合は、システムやサードパーティのツールがShizukuを制限していないか確認してください。&lt;br&gt;一部古い情報ですが%sを参考にしてください。]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magiskをお使いの方は、%1$sをお試しください。rootユーザにとっては、最終的にShizukuを置き換えることになるでしょう。なお、%2$sを使用するには、既存のアプリケーションを少し変更する必要があります。]]></string>
     <string name="home_root_button_start">開始</string>
     <string name="home_root_button_restart">再起動</string>
     <!-- Home - Application management -->
