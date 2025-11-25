@@ -6,6 +6,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -43,6 +44,7 @@ import moe.shizuku.manager.ktx.isComponentEnabled
 import moe.shizuku.manager.ktx.setComponentEnabled
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.BootCompleteReceiver
+import moe.shizuku.manager.receiver.NotifCancelReceiver
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
@@ -56,7 +58,7 @@ import rikka.shizuku.manager.ShizukuLocales
 import rikka.widget.borderview.BorderRecyclerView
 import java.util.*
 
-class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
+class SettingsFragment : PreferenceFragmentCompat() {
 
     private lateinit var startOnBootPreference: TwoStatePreference
     private lateinit var watchdogPreference: TwoStatePreference
@@ -74,6 +76,13 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
     private lateinit var batteryOptimizationListener: ActivityResultLauncher<Intent>
     private var batteryOptimizationContinuation: CancellableContinuation<Boolean>? = null
+
+    private val stateListener: (ShizukuStateMachine.State) -> Unit = {
+        if (ShizukuStateMachine.isRunning()) {
+            tcpModePreference.icon = maybeGetRestartIcon(KEY_TCP_MODE)
+            tcpPortPreference.icon = maybeGetRestartIcon(KEY_TCP_PORT)
+        }
+    }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         val context = requireContext()
@@ -155,22 +164,16 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         tcpModePreference.apply {
             if (EnvironmentUtils.isTlsSupported()) {
                 summary = context.getString(R.string.settings_tcp_mode_summary)
+                icon = maybeGetRestartIcon(KEY_TCP_MODE)
                 setOnPreferenceChangeListener { _, newValue ->
                     if (newValue is Boolean) {
-                        if (!ShizukuStateMachine.isRunning()) return@setOnPreferenceChangeListener true
-                        else MaterialAlertDialogBuilder(context)
-                            .setTitle(R.string.settings_tcp_mode_dialog_title)
-                            .setMessage(HtmlCompat.fromHtml(
-                                context.getString(R.string.settings_tcp_mode_dialog_message)
-                            ))
-                            .setPositiveButton(android.R.string.ok) { _, _ ->
-                                ShizukuSettings.setTcpMode(newValue)
-                                isChecked = newValue
-                                tcpPortPreference.isVisible = newValue
-                                ShizukuReceiverStarter.start(context)
-                            }
-                            .setNegativeButton(android.R.string.cancel, null)
-                            .show()
+                        val applyChange: () -> Unit = {
+                            ShizukuSettings.setTcpMode(newValue)
+                            isChecked = newValue
+                            icon = maybeGetRestartIcon(KEY_TCP_MODE)
+                            tcpPortPreference.isVisible = newValue
+                        }
+                        maybePromptRestart (KEY_TCP_MODE) { applyChange() }
                     }
                     false
                 }
@@ -184,6 +187,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
         tcpPortPreference.apply {
             isVisible = tcpModePreference.isVisible && tcpModePreference.isChecked
+            icon = maybeGetRestartIcon(KEY_TCP_PORT)
 
             setOnBindEditTextListener { editText ->
                 editText.hint = context.getString(R.string.settings_tcp_port_hint)
@@ -198,22 +202,24 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
             setOnPreferenceChangeListener { _, newValue ->
                 val port = (newValue as? String)?.toIntOrNull()
+                if ((port ?: 5555) == ShizukuSettings.getTcpPort()) return@setOnPreferenceChangeListener true
                 if (port == null || port in 1..65535) {
-                    true
+                    val applyChange: () -> Unit = {
+                        ShizukuSettings.setTcpPort(port)
+                        text = port?.toString()
+                        icon = maybeGetRestartIcon(KEY_TCP_PORT)
+                    }
+                    maybePromptRestart (KEY_TCP_PORT) { applyChange() }
                 } else {
                     SnackbarHelper.show(context, requireView(), context.getString(R.string.snackbar_invalid_port))
-                    false
                 }
+                false
             }
         }
 
         tcpLearnMorePreference.apply {
             isVisible = tcpModePreference.isVisible
-
-            val tintColor = TypedValue()
-            context.theme.resolveAttribute(R.attr.colorOnSurfaceVariant, tintColor, true)
-            icon?.mutate()?.setTint(tintColor.data)
-
+            tint(icon)
             setOnPreferenceClickListener {
                 CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.automation_apps_url))
                 true
@@ -308,21 +314,12 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
     override fun onResume() {
         super.onResume()
-        preferenceScreen.sharedPreferences?.registerOnSharedPreferenceChangeListener(this)
+        ShizukuStateMachine.addListener(stateListener)
     }
 
     override fun onPause() {
+        ShizukuStateMachine.removeListener(stateListener)
         super.onPause()
-        preferenceScreen.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(this)
-    }
-
-    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
-        when (key) {
-            KEY_TCP_MODE -> {
-                val newValue = ShizukuSettings.getTcpMode()
-                tcpModePreference.isChecked = newValue
-            }
-        }
     }
 
     override fun onCreateRecyclerView(
@@ -341,6 +338,51 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         }
 
         return recyclerView
+    }
+
+    private fun needsRestart(setting: String): Boolean {
+        val currentPort = EnvironmentUtils.getAdbTcpPort()
+        val savedPort = ShizukuSettings.getTcpPort()
+        return when (setting) {
+            KEY_TCP_MODE -> (currentPort > 0) != ShizukuSettings.getTcpMode()
+            KEY_TCP_PORT -> ( (currentPort > 0) && (currentPort != savedPort) ) ||
+                ( (currentPort == 5555) && (savedPort == null) )
+            else -> false
+        }
+    }
+
+    private fun maybeGetRestartIcon(setting: String): Drawable? {
+        val context = requireContext()
+        if (!needsRestart(setting)) return null
+        
+        val icon = context.getDrawable(R.drawable.ic_server_restart)
+        return tint(icon)
+    }
+
+    private fun tint(icon: Drawable?): Drawable? {
+        val context = requireContext()
+        val tintColor = TypedValue()
+        context.theme.resolveAttribute(R.attr.colorOnSurfaceVariant, tintColor, true)
+        icon?.mutate()?.setTint(tintColor.data)
+        return icon
+    }
+
+    private fun maybePromptRestart (setting: String, applyChange: () -> Unit) {
+        val context = requireContext()
+        if (!ShizukuStateMachine.isRunning() || needsRestart(setting)) {
+            applyChange()
+            context.sendBroadcast(Intent(context, NotifCancelReceiver::class.java))
+        } else MaterialAlertDialogBuilder(context)
+            .setTitle(R.string.settings_tcp_mode_dialog_title)
+            .setMessage(HtmlCompat.fromHtml(
+                context.getString(R.string.settings_tcp_mode_dialog_message)
+            ))
+            .setPositiveButton(android.R.string.ok) { _, _ ->
+                applyChange()
+                ShizukuReceiverStarter.start(context, true)
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun shouldToggleBatterySensitiveSetting (

@@ -151,6 +151,15 @@ public class ShizukuSettings {
         }
     }
 
+    public static void setTcpPort(@Nullable Integer port) {
+        if (port != null) {
+            getPreferences().edit().putString(Keys.KEY_TCP_PORT, Integer.toString(port)).apply();
+        } else {
+            getPreferences().edit().remove(Keys.KEY_TCP_PORT).apply();
+        }
+        
+    }
+
     public static boolean getLegacyPairing() {
         return getPreferences().getBoolean(Keys.KEY_LEGACY_PAIRING, false);
     }

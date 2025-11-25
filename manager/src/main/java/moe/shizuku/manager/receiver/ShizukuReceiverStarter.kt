@@ -29,9 +29,8 @@ object ShizukuReceiverStarter {
     const val NOTIFICATION_ID = 1447
     private const val CHANNEL_ID = "AdbStartWorker"
 
-    fun start(context: Context) {
-        val togglingTcpMode = (EnvironmentUtils.getAdbTcpPort() > 0) != ShizukuSettings.getTcpMode()
-        if (UserHandleCompat.myUserId() > 0 || (ShizukuStateMachine.isRunning() && !togglingTcpMode)) return
+    fun start(context: Context, forceStart: Boolean = false) {
+        if ((UserHandleCompat.myUserId() > 0 || ShizukuStateMachine.isRunning()) && !forceStart) return
 
         if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
             rootStart(context)
