@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">正在搜索配对服务</string>
     <string name="dialog_adb_pairing_paring_code">配对码</string>
     <string name="paring_code_is_wrong">配对码错误。</string>
-    <string name="cannot_connect_port">无法连接至无线调试服务。</string>
     <string name="dialog_wireless_adb_not_enabled">无线调试未启用。
 \n请注意，在 Android 11 之前，要启用无线调试必须连接电脑。</string>
     <string name="dialog_usb_debugging_not_enabled">USB调试未启用。\n请在“开发者选项”中启用它。</string>
@@ -104,10 +103,7 @@
     <string name="settings_watchdog_summary">Shizuku 停止时自动重启 Shizuku</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"允许 Shizuku 在没有 Wi-Fi 的情况下重启。（Shizuku 必须在重启后启动过一次）"</string>
-    <string name="settings_tcp_mode_dialog_title">需要重启</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku 需要重启才能应用此设置。<br><br><b>Shizuku 将继续运行并等待 Wi-Fi 连接，然后重启。</b>]]></string>
     <string name="settings_tcp_port">TCP 端口</string>
-    <string name="settings_tcp_port_deafult">默认值 (5555)</string>
     <string name="settings_tcp_port_hint">留空则使用默认值（5555）</string>
     <string name="settings_tcp_learn_more">了解更多关于如何使用自动化应用程序控制 Shizuku 的信息</string>
     <string name="settings_language">语言</string>
