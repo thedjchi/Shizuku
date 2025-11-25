@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Szukanie usługi parowania</string>
     <string name="dialog_adb_pairing_paring_code">Kod parowania</string>
     <string name="paring_code_is_wrong">Kod parowania jest nieprawidłowy.</string>
-    <string name="cannot_connect_port">Nie można połączyć się z usługą debugowania bezprzewodowego.</string>
     <string name="dialog_wireless_adb_not_enabled">Debugowanie bezprzewodowe nie jest włączone.\nUwaga: w wersjach starszych niż Android 11, włączenie debugowania bezprzewodowego wymaga połączenia z komputerem.</string>
     <string name="dialog_usb_debugging_not_enabled">Debugowanie USB nie jest włączone.\nWłącz je w \"Opcjach programisty\".</string>
     <string name="dialog_adb_pairing_message">Rozpocznij parowanie, wykonując następujące kroki: \"Opcje programisty\" -&gt; \"Debugowanie bezprzewodowe\" -&gt; \"Sparuj urządzenie przy pomocy kodu parowania\".\n\nGdy proces parowania się rozpocznie, będziesz mógł wpisać kod.</string>
@@ -100,15 +99,13 @@
     <string name="settings_behavior">Zachowanie</string>
     <string name="settings_start_on_boot">Uruchamiaj przy starcie</string>
     <string name="settings_start_on_boot_summary">Wymaga Androida 11+ lub roota</string>
+    <string name="settings_start_on_boot_bug">Z powodu błędu w systemie Android 11-12 debugowanie bezprzewodowe nie zapamiętuje autoryzowanych sieci.\n\nBędziesz musiał ponownie autoryzować sieć przy każdym ponownym uruchomieniu, dotykając \"Zezwól\", gdy pojawi się okno autoryzacji.</string>
     <string name="settings_use_system_color">Użyj koloru motywu systemowego</string>
     <string name="settings_watchdog">Nadzorowanie</string>
     <string name="settings_watchdog_summary">Automatycznie uruchamia Shizuku ponownie, jeśli usługa się zatrzyma</string>
     <string name="settings_tcp_mode">Tryb TCP</string>
     <string name="settings_tcp_mode_summary">"Pozwala zrestartować Shizuku bez Wi-Fi (Shizuku musi zostać uruchomione przynajmniej raz po restarcie urządzenia)."</string>
-    <string name="settings_tcp_mode_dialog_title">Wymagany restart</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku musi zostać uruchomione ponownie, aby zastosować to ustawienie.<br><br><b>Shizuku będzie nadal działać i poczeka na połączenie Wi-Fi przed restartem.</b>]]></string>
     <string name="settings_tcp_port">Port TCP</string>
-    <string name="settings_tcp_port_deafult">Domyślny (5555)</string>
     <string name="settings_tcp_port_hint">Zostaw puste, aby użyć domyślnego (5555)</string>
     <string name="settings_tcp_learn_more">Dowiedz się więcej o sterowaniu Shizuku za pomocą aplikacji do automatyzacji</string>
     <string name="settings_language">Język</string>
@@ -132,6 +129,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nie znaleziono aplikacji pocztowej</string>
     <string name="toast_shizuku_already_starting">Shizuku już uruchamia się w tle</string>
+    <string name="toast_accessibility_tv_only">Ta usługa jest obsługiwana tylko na urządzeniach TV.</string>
+    <string name="toast_accessibility_timed_out">Upłynął limit czasu usługi parowania Shizuku.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Motyw</string>
     <string name="dark_theme_off">Zawsze jasny</string>
