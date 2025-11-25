@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Recherche du service d\'association</string>
     <string name="dialog_adb_pairing_paring_code">Code d\'association</string>
     <string name="paring_code_is_wrong">Le code d\'association n\'est pas le bon.</string>
-    <string name="cannot_connect_port">Impossible de se connecter au service de débogage sans fil.</string>
     <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, pour activer le débogage sans fil, la connexion à un ordinateur est requise.</string>
     <string name="dialog_usb_debugging_not_enabled">Le débogage USB n’est pas activé.\nVeuillez l’activer dans « Options développeur ».</string>
     <string name="dialog_adb_pairing_message">Veuillez commencer l’appairage en effectuant les étapes suivantes : « Options développeur » - « Débogage sans fil » - « Appairer l’appareil avec le code d’appairage ».\n\nAprès le début du processus d’appariement, vous pourrez entrer le code d’appariement.</string>
@@ -107,10 +106,7 @@
     <string name="settings_watchdog_summary">Redémarre automatiquement Shizuku si ça s’arrête</string>
     <string name="settings_tcp_mode">Mode TCP</string>
     <string name="settings_tcp_mode_summary">"Permet à Shizuku de redémarrer sans Wi-Fi. (Shizuku a dû commencer une fois depuis le reboot)"</string>
-    <string name="settings_tcp_mode_dialog_title">Redémarrage nécessaire</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku doit recommencer pour appliquer ce réglage.<br><br><b>Shizuku continue de fonctionner et attend une connexion Wi-Fi avant de redémarrer.</b>]]></string>
     <string name="settings_tcp_port">Port TCP</string>
-    <string name="settings_tcp_port_deafult">Par défaut (5555)</string>
     <string name="settings_tcp_port_hint">Laisser vide pour utiliser par défaut (5555)</string>
     <string name="settings_tcp_learn_more">En savoir plus sur l’utilisation des applications d’automatisation pour contrôler Shizuku</string>
     <string name="settings_language">Langue</string>
