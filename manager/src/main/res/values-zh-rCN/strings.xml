@@ -32,6 +32,7 @@
     <string name="dialog_adb_pairing_discovery">正在搜索配对服务</string>
     <string name="dialog_adb_pairing_paring_code">配对码</string>
     <string name="paring_code_is_wrong">配对码错误。</string>
+    <string name="cannot_connect_port">无法连接到无线调试服务。\n\n请确保将 Shizuku 添加到所有防火墙、广告拦截器、VPN 或类似可能限制网络访问的应用程序中的白名单。</string>
     <string name="dialog_wireless_adb_not_enabled">无线调试未启用。
 \n请注意，在 Android 11 之前，要启用无线调试必须连接电脑。</string>
     <string name="dialog_usb_debugging_not_enabled">USB调试未启用。\n请在“开发者选项”中启用它。</string>
@@ -39,8 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">请启用辅助功能服务以开始配对过程。这将使 Shizuku 能够检测到配对码。\n\n辅助功能服务将在找到配对码后或1分钟后关闭以节省电量。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">请依次进入“开发者选项” &gt; “无线调试” &gt; “使用配对码配对设备”。Shizuku 将自动检测配对码。</string>
     <string name="adb_pairing_requires_multi_window">请先进入分屏（多窗口）模式。</string>
-    <string name="adb_pairing_requires_multi_window_reason">系统要求配对对话框始终可见，使用分屏模式是使此应用和系统对话框同时可见的唯一方法。</string>
-    <string name="adb_error_key_store">无法为无线调试生成密钥。\n这可能是因为此设备上的 KeyStore 机制已损坏。</string>
+    <string name="adb_pairing_requires_multi_window_reason">系统要求配对对话框始终可见。只有使用分屏模式才能让此应用和系统对话框同时可见。</string>
+    <string name="adb_error_key_store">无法生成无线调试密钥。\n这可能是因为此设备的密钥库机制已损坏。</string>
     <string name="adb_error_stop_tcp">通过 TCP 停止 ADB 失败</string>
     <string name="adb_pair_required">请先进行配对步骤。</string>
     <string name="enable">启用</string>
@@ -52,15 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">在通知中输入代码来完成配对。</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">配对过程需要您与 Shizuku 的通知交互。请允许 Shizuku 发布通知。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 用户可能需要在系统设置中从“通知管理”-“通知显示设置”将通知样式切换为“原生样式”。</string>
-    <string name="adb_pairing_tutorial_content_miui_2">否则，您可能会无法从通知输入配对码。</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">请注意，“无线调试”选项的左侧是可点击的，点按它将打开一个新的页面。仅打开右侧的开关是错误的。</string>
-    <string name="adb_pairing_tutorial_content_finish">返回到 Shizuku 并启动 Shizuku。</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku 需要访问本地网络。它由网络权限控制。</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系统（例如 MIUI）不允许应用在不可见时访问网络，即使应用已按标准使用前台服务。请在此类系统上为 Shizuku 禁用电池优化功能。</string>
+    <string name="adb_pairing_tutorial_content_miui_2">否则，您可能无法输入通知中的配对码。</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">请注意，“无线调试”选项左侧的部分是可以点击的，点击后会打开一个新页面。只打开右侧的开关是错误的。</string>
+    <string name="adb_pairing_tutorial_content_finish">回到雫并开始雫。</string>
+    <string name="adb_pairing_tutorial_content_network">雫需要访问本地网络。这受网络权限控制。</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系统（例如 MIUI）会禁止应用在不可见时访问网络，即使该应用使用了前台服务。请在这些系统上为 Shizuku 关闭电池优化功能。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[启动（针对已 root 设备）]]></string>
     <string name="home_root_description"><![CDATA[另外，Shizuku 可以在开机时自动启动。如果没有，请检查您的系统或是第三方工具是否限制了 Shizuku。<br>你可以参考 %s。]]></string>
-    <string name="home_root_description_sui"><![CDATA[如果您正在使用 Magisk，可以尝试 %1$s。对于 root 用户，它将最终取代 Shizuku。注意，已有的应用需要一点点修改来使用 %2$s。]]></string>
+    <string name="home_root_description_sui"><![CDATA[如果您正在使用 Magisk，可以尝试使用 %1$s。对于 root 用户，它最终会取代 Shizuku。请注意，现有应用程序需要稍作修改才能使用 %2$s。]]></string>
     <string name="home_root_button_start">启动</string>
     <string name="home_root_button_restart">重新启动</string>
     <!-- Home - Application management -->
@@ -103,7 +104,11 @@
     <string name="settings_watchdog_summary">Shizuku 停止时自动重启 Shizuku</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"允许 Shizuku 在没有 Wi-Fi 的情况下重启。（Shizuku 必须在重启后启动过一次）"</string>
+    <string name="settings_restart_dialog_title">需要重启</string>
+    <string name="settings_restart_dialog_message">雫需要重启才能应用此设置。</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>需要 Wi-Fi。雫会在后台继续运行并等待 Wi-Fi 连接，连接成功后才会重启。</b>]]></string>
     <string name="settings_tcp_port">TCP 端口</string>
+    <string name="settings_tcp_port_default">默认值 (5555)</string>
     <string name="settings_tcp_port_hint">留空则使用默认值（5555）</string>
     <string name="settings_tcp_learn_more">了解更多关于如何使用自动化应用程序控制 Shizuku 的信息</string>
     <string name="settings_language">语言</string>
@@ -127,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">未找到电子邮件应用</string>
     <string name="toast_shizuku_already_starting">Shizuku 已在后台启动</string>
+    <string name="toast_accessibility_tv_only">此服务仅支持电视设备。</string>
+    <string name="toast_accessibility_timed_out">雫配对服务超时。</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">主题</string>
     <string name="dark_theme_off">浅色主题</string>
@@ -175,6 +182,7 @@
     <string name="wadb_notification_channel">ADB 自动启动服务</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Watchdog 正在运行</string>
+    <string name="watchdog_turn_off">关</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku 最近崩溃了</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog 已重启服务。点击了解可防止未来崩溃的潜在修复方案。</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">关闭提醒</string>
