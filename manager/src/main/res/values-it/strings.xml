@@ -61,7 +61,7 @@
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Avvia (per dispositivi rootati)]]></string>
     <string name="home_root_description"><![CDATA[Inoltre, Shizuku può essere avviato automaticamente all\'avvio. In caso contrario, controlla se il tuo sistema o l\'opzione app esterne hanno limitato Shizuku.&lt;br&gt;Puoi fare riferimento a %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Se usi Magisk, puoi provare %1$s. Per gli utenti root, alla fine sostituirà Shizuku. Nota, le applicazioni esistenti devono cambiare un po' per poter essere utilizzate %2$s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Se usi Magisk, puoi provare %1$s. Per gli utenti root, alla fine sostituirà Shizuku. Nota, le applicazioni esistenti devono cambiare un po\' per poter essere utilizzate %2$s.]]></string>
     <string name="home_root_button_start">Avvia</string>
     <string name="home_root_button_restart">Riavvia</string>
     <!-- Home - Application management -->
