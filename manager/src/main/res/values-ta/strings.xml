@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">இணைத்தல் சேவையைத் தேடுகிறது</string>
     <string name="dialog_adb_pairing_paring_code">இணைத்தல் குறியீடு</string>
     <string name="paring_code_is_wrong">இணைத்தல் குறியீடு தவறானது.</string>
-    <string name="cannot_connect_port">வயர்லெஸ் பிழைத்திருத்த சேவையுடன் இணைக்க முடியவில்லை.</string>
     <string name="dialog_wireless_adb_not_enabled">வயர்லெஸ் பிழைத்திருத்தம் இயக்கப்படவில்லை.\nகுறிப்பு, Android 11 க்கு முன், வயர்லெஸ் பிழைத்திருத்தத்தை இயக்க, கணினி இணைப்பு அவசியம்.</string>
     <string name="dialog_usb_debugging_not_enabled">USB பிழைத்திருத்தம் இயக்கப்படவில்லை.\n\"டெவலப்பர் விருப்பங்கள்\" என்பதில் அதை இயக்கவும்.</string>
     <string name="dialog_adb_pairing_message">பின்வரும் படிகளைச் செய்வதன் மூலம் இணைக்கத் தொடங்குங்கள்: \"டெவலப்பர் விருப்பங்கள்\" - \"வயர்லெஸ் பிழைத்திருத்தம்\" - \"இணைப்பு குறியீட்டுடன் சாதனத்தை இணை.\"\n\nஇணைத்தல் செயல்முறை தொடங்கிய பிறகு, நீங்கள் இணைத்தல் குறியீட்டை உள்ளிட முடியும்.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">ஷிசுகு நின்றால் தானாகவே மறுதொடக்கம் செய்யுங்கள்</string>
     <string name="settings_tcp_mode">TCP பயன்முறை</string>
     <string name="settings_tcp_mode_summary">"Wi-Fi இல்லாமல் Shizukuவை மறுதொடக்கம் செய்ய அனுமதிக்கிறது. (மறுதொடக்கம் செய்யப்பட்டதிலிருந்து Shizuku ஒரு முறை தொடங்கியிருக்க வேண்டும்)"</string>
-    <string name="settings_tcp_mode_dialog_title">மறுதொடக்கம் அவசியம்</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[இந்த அமைப்பைப் பயன்படுத்த ஷிசுகுவை மறுதொடக்கம் செய்ய வேண்டும்.<br><br><b>ஷிசுகு தொடர்ந்து இயங்கும், மறுதொடக்கம் செய்வதற்கு முன்பு வைஃபை இணைப்புக்காகக் காத்திருக்கும்.</b>]]></string>
     <string name="settings_tcp_port">TCP போர்ட்</string>
-    <string name="settings_tcp_port_deafult">இயல்புநிலை (5555)</string>
     <string name="settings_tcp_port_hint">இயல்புநிலையைப் பயன்படுத்த காலியாக விடவும் (5555)</string>
     <string name="settings_tcp_learn_more">ஷிசுகுவை கட்டுப்படுத்த ஆட்டோமேஷன் பயன்பாடுகளைப் பயன்படுத்துவது பற்றி மேலும் அறிக.</string>
     <string name="settings_language">மொழி</string>
