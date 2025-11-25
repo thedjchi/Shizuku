@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Schakel alstublieft de toegankelijkheidsdienst in om het koppelingsproces te starten. Hierdoor kan Shizuku de koppelcode detecteren.\n\nDe toegankelijkheidsdienst wordt uitgeschakeld zodra de code is gevonden of na 1 minuut om energie te besparen.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Ga alstublieft naar \"Ontwikkelaarsopties\" &gt; \"Draadloos debuggen\" &gt; \"Koppel apparaat met koppelcode.\" Shizuku zal de koppelcode automatisch detecteren.</string>
     <string name="adb_pairing_requires_multi_window">Ga eerst in split-screen (multi-window) modus.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Het systeem vereist dat de koppelingsdialoog altijd zichtbaar is; splitscreen-modus is de enige manier om deze app en systeemdialoog tegelijkertijd zichtbaar te maken.</string>
-    <string name="adb_error_key_store">Kan geen sleutel genereren voor draadloos debuggen.\nDit kan komen doordat het KeyStore-mechanisme van dit apparaat kapot is.</string>
     <string name="adb_error_stop_tcp">Niet geslaagd om ADB via TCP te stoppen</string>
     <string name="adb_pair_required">Ga eerst door de koppelingsstap.</string>
     <string name="enable">Inschakelen</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Voer de code in de melding in om de koppeling te voltooien.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Het koppelproces vereist dat je reageert op een melding van Shizuku. Laat Shizuku alsjeblieft meldingen plaatsen.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moeten mogelijk de notificatiestijl wijzigen naar \"Android\" van \"Notification\" - \"Notification shade\" in de systeeminstellingen.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Anders kun je misschien geen paringcode invoeren vanuit de melding.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Let op, het linkerdeel van de optie \"Draadloos debuggen\" is klikbaar, en tikken opent een nieuwe pagina. Alleen turen op de schakelaar rechts is onjuist.</string>
-    <string name="adb_pairing_tutorial_content_finish">Terug naar Shizuku en Shizuku beginnen.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku moet toegang krijgen tot het lokale netwerk. Het wordt beheerst door de netwerkrecht.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige systemen (zoals MIUI) staan apps niet toe om toegang te krijgen tot het netwerk wanneer ze niet zichtbaar zijn, zelfs als de app standaard een voorgrondservice gebruikt. Schakel de batterijoptimalisatiefuncties voor Shizuku uit op zulke systemen.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (voor geroote apparaten)]]></string>
     <string name="home_root_description"><![CDATA[Daarnaast kan Shizuku automatisch worden gestart bij het opstarten. Zo niet, controleer dan of je systeem of externe tools Shizuku hebben beperkt.<br>Je kunt verwijzen naar %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Als je Magisk gebruikt, kun je het proberen %1$s. Voor rootgebruikers zal het uiteindelijk Shizuku vervangen. Let op: bestaande applicaties moeten een beetje veranderen om te kunnen gebruiken %2$s.]]></string>
     <string name="home_root_button_start">Beginnen</string>
     <string name="home_root_button_restart">Herstarten</string>
     <!-- Home - Application management -->
