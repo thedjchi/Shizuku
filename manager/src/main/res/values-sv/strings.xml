@@ -36,8 +36,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Aktivera tillgänglighetstjänsten för att starta parkopplingsprocessen. Detta gör att Shizuku kan upptäcka parkopplingskoden.\n\nTillgänglighetstjänsten stängs av när koden hittas eller efter 1 minut för att spara energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Gå till \"Utvecklaralternativ\" &gt; \"Trådlös felsökning\" &gt; \"Para ihop enhet med parningskod\". Shizuku kommer automatiskt att identifiera parningskoden.</string>
     <string name="adb_pairing_requires_multi_window">Vänligen aktivera delad skärm (flera fönster) först.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Systemet kräver att parkopplingsdialogrutan alltid är synlig. Delad skärm är det enda sättet att se appen och systemdialogrutan samtidigt.</string>
-    <string name="adb_error_key_store">Det gick inte att generera nyckel för trådlös felsökning.\nDetta kan bero på att enhetens KeyStore-mekanism är trasig.</string>
     <string name="adb_error_stop_tcp">Misslyckades med att stoppa ADB över TCP</string>
     <string name="adb_pair_required">Gå igenom parkopplingssteget först.</string>
     <string name="enable">Aktivera</string>
@@ -49,15 +47,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Ange koden i aviseringen för att slutföra parkopplingen.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Parningsprocessen kräver att du interagerar med en avisering från Shizuku. Vänligen tillåt Shizuku att publicera aviseringar.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-användare kan behöva byta aviseringsstil till \"Android\" från \"Avisering\" - \"Aviseringsskärm\" i systeminställningarna.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Annars kanske du inte kan ange parningskoden från aviseringen.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Observera att den vänstra delen av alternativet \"Trådlös felsökning\" är klickbar. Om du trycker på den öppnas en ny sida. Endast att slå på knappen till höger är fel.</string>
-    <string name="adb_pairing_tutorial_content_finish">Tillbaka till Shizuku och starta Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku behöver åtkomst till det lokala nätverket. Det styrs av nätverksbehörigheten.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Vissa system (som MIUI) hindrar appar från att komma åt nätverket när de inte är synliga, även om appen använder förgrundstjänster som standard. Vänligen inaktivera batterioptimeringsfunktioner för Shizuku på sådana system.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Starta (för rootade enheter)]]></string>
     <string name="home_root_description"><![CDATA[Dessutom kan Shizuku startas automatiskt vid uppstart. Om inte, kontrollera om ditt system eller tredjepartsverktyg har begränsat Shizuku.<br>Du kan se %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Om du använder Magisk kan du prova %1$s. För root-användare kommer det så småningom att ersätta Shizuku. Observera att befintliga applikationer behöver ändras lite för att kunna använda %2$s.]]></string>
     <string name="home_root_button_start">Start</string>
     <string name="home_root_button_restart">Starta om</string>
     <!-- Home - Application management -->
