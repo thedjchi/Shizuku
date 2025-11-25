@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Etsitään parituspalvelua</string>
     <string name="dialog_adb_pairing_paring_code">Parituskoodi</string>
     <string name="paring_code_is_wrong">Parituskoodi on väärä.</string>
-    <string name="cannot_connect_port">En pysty yhdistämään langattomaan virheenkorjauspalveluun.</string>
     <string name="dialog_wireless_adb_not_enabled">Langaton virheenkorjaus ei ole käytössä.\nHuomaa, että ennen Android 11:tä, langattoman virheenkorjauksen mahdollistamiseksi tietokoneyhteys oli välttämätön.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-virheenkorjaus ei ole käytössä.\nOta se käyttöön kohdassa \"Kehittäjäasetukset\".</string>
     <string name="dialog_adb_pairing_message">Aloita parittaminen suorittamalla seuraavat vaiheet: \"Kehittäjäasetukset\" - \"Langaton debugging\" - \"Yhdistä laite parituskoodilla.\"\n\nKun paritusprosessi alkaa, voit syöttää parituskoodin.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">Käynnistä Shizuku automaattisesti uudelleen, jos se pysähtyy</string>
     <string name="settings_tcp_mode">TCP-tila</string>
     <string name="settings_tcp_mode_summary">"Sallii Shizukun aloittaa uudelleen ilman Wi-Fiä. (Shizuku on varmaan aloittanut kerran uudelleenkäynnistyksen jälkeen)"</string>
-    <string name="settings_tcp_mode_dialog_title">Vaaditaan uudelleenkäynnistys</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizukun täytyy aloittaa alusta, jotta tämä asetus voidaan ottaa käyttöön.<br><br><b>Shizuku jatkaa toimintaansa ja odottaa Wi-Fi-yhteyttä ennen uudelleenkäynnistystä.</b>]]></string>
     <string name="settings_tcp_port">TCP-portti</string>
-    <string name="settings_tcp_port_deafult">Oletus (5555)</string>
     <string name="settings_tcp_port_hint">Jätä tyhjä oletus (5555)</string>
     <string name="settings_tcp_learn_more">Lue lisää automaatiosovellusten käytöstä Shizukun ohjaamiseen</string>
     <string name="settings_language">Kieli</string>
