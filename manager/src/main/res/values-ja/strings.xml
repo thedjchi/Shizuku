@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">ペアリングサービスの検索</string>
     <string name="dialog_adb_pairing_paring_code">ペアリングコード</string>
     <string name="paring_code_is_wrong">ペアリングコードが間違っています。</string>
-    <string name="cannot_connect_port">ワイヤレスデバッグサービスに接続することができません。</string>
     <string name="dialog_wireless_adb_not_enabled">ワイヤレスデバッグが有効になっていません。
 \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
     <string name="dialog_usb_debugging_not_enabled">USBデバッグが有効になっていません。\n「開発者向けオプション」で有効にしてください。</string>
@@ -110,10 +109,7 @@
     <string name="settings_watchdog_summary">Shizukuが停止した場合は自動的に再起動します</string>
     <string name="settings_tcp_mode">TCPモード</string>
     <string name="settings_tcp_mode_summary">"Wi-FiなしでShizukuを再起動できるようにします。（再起動後、Shizukuが一度起動している必要があります）"</string>
-    <string name="settings_tcp_mode_dialog_title">再起動が必要です</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[この設定を適用するには、Shizuku を再起動する必要があります。<br><br><b>Shizuku は引き続き実行され、再起動する前に Wi-Fi 接続を待機します。</b>]]></string>
     <string name="settings_tcp_port">TCPポート</string>
-    <string name="settings_tcp_port_deafult">デフォルト（5555）</string>
     <string name="settings_tcp_port_hint">デフォルト（5555）を使用するには空白のままにしてください</string>
     <string name="settings_tcp_learn_more">自動化アプリを使用してShizukuを制御する方法について詳しくは、こちらをご覧ください。</string>
     <string name="settings_language">言語</string>
