@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Mencari perkhidmatan berpasangan</string>
     <string name="dialog_adb_pairing_paring_code">Kod berpasangan</string>
     <string name="paring_code_is_wrong">Memadankan kod adalah salah.</string>
-    <string name="cannot_connect_port">Tidak dapat menyambung ke perkhidmatan penyahpepijatan wayarles.</string>
     <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer adalah satu kemestian.</string>
     <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila dayakannya dalam \"Pilihan Pembangun\".</string>
     <string name="dialog_adb_pairing_message">Sila mulakan berpasangan dengan melakukan langkah berikut: \"Pilihan Pembangun\" - \"Penyahpepijatan wayarles\" - \"Gandingkan peranti dengan kod berpasangan.\"\n\nSelepas proses berpasangan bermula, anda akan dapat memasukkan kod berpasangan.</string>
@@ -102,10 +101,7 @@
     <string name="settings_watchdog_summary">Mulakan semula Shizuku secara automatik jika ia berhenti</string>
     <string name="settings_tcp_mode">mod TCP</string>
     <string name="settings_tcp_mode_summary">"Membenarkan Shizuku memulakan semula tanpa Wi-Fi. (Shizuku mesti bermula sekali sejak but semula)"</string>
-    <string name="settings_tcp_mode_dialog_title">Mulakan semula Diperlukan</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku perlu dimulakan semula untuk menggunakan tetapan ini.<br><br><b>Shizuku akan terus berjalan dan menunggu sambungan Wi-Fi sebelum memulakan semula.</b>]]></string>
     <string name="settings_tcp_port">port TCP</string>
-    <string name="settings_tcp_port_deafult">Lalai (5555)</string>
     <string name="settings_tcp_port_hint">Biarkan kosong untuk menggunakan lalai (5555)</string>
     <string name="settings_tcp_learn_more">Ketahui lebih lanjut tentang menggunakan apl automasi untuk mengawal Shizuku</string>
     <string name="settings_language">Bahasa</string>
