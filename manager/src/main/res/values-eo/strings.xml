@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Serĉante parigan servon</string>
     <string name="dialog_adb_pairing_paring_code">Pariga kodo</string>
     <string name="paring_code_is_wrong">La pariĝa kodo estas malĝusta.</string>
-    <string name="cannot_connect_port">Ne eblas konekti al sendrata sencimiga servo.</string>
     <string name="dialog_wireless_adb_not_enabled">Sendrata sencimigado ne estas ebligita.\nNotu, ke antaŭ Android 11, por ebligi sendratan sencimigadon, komputila konekto estas nepra.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-sencimigado ne estas ebligita.\nBonvolu ebligi ĝin en \"Agordoj por programistoj\".</string>
     <string name="dialog_adb_pairing_message">Bonvolu komenci la parigon per la jenaj paŝoj: \"Agordoj por programistoj\" - \"Sendrata sencimigado\" - \"Parigu aparaton per pariga kodo.\"\n\nPost kiam la pariga procezo komenciĝos, vi povos enigi la parigan kodon.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">Aŭtomate rekomencu Ŝizuku-on se ĝi haltas</string>
     <string name="settings_tcp_mode">TCP-reĝimo</string>
     <string name="settings_tcp_mode_summary">"Permesas al Ŝizuku rekomenci sen Wi-Fi. (Ŝizuku devas esti rekomencinta unufoje post la rekomenco)"</string>
-    <string name="settings_tcp_mode_dialog_title">Rekomenco necesa</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Ŝizuku bezonas rekomenci por apliki ĉi tiun agordon.<br><br><b>Ŝizuku daŭre funkcios kaj atendos Wi-Fi-konekton antaŭ ol rekomenci.</b>]]></string>
     <string name="settings_tcp_port">TCP-pordo</string>
-    <string name="settings_tcp_port_deafult">Defaŭlta (5555)</string>
     <string name="settings_tcp_port_hint">Lasu malplena por uzi la defaŭltan (5555)</string>
     <string name="settings_tcp_learn_more">Lernu pli pri uzado de aŭtomatigaj aplikaĵoj por kontroli Shizuku-on</string>
     <string name="settings_language">Lingvo</string>
