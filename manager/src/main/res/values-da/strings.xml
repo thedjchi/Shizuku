@@ -30,7 +30,6 @@
     <string name="dialog_adb_pairing_discovery">Søgning efter parringstjeneste</string>
     <string name="dialog_adb_pairing_paring_code">Parringskode</string>
     <string name="paring_code_is_wrong">Parringskoden er forkert.</string>
-    <string name="cannot_connect_port">Kan ikke oprette forbindelse til trådløs fejlfindingstjeneste.</string>
     <string name="dialog_wireless_adb_not_enabled">Trådløs fejlfinding er ikke aktiveret.\nBemærk, før Android 11, er computerforbindelse et must for at aktivere trådløs fejlfinding.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-fejlfinding er ikke aktiveret.\nAktiver det venligst i \"Udviklerindstillinger\".</string>
     <string name="dialog_adb_pairing_message">Start venligst parringen ved at udføre følgende trin: \"Udviklerindstillinger\" - \"Trådløs fejlfinding\" - \"Parr enhed med parringskode.\"\n\nNår parringsprocessen er startet, vil du kunne indtaste parringskoden.</string>
@@ -103,10 +102,7 @@
     <string name="settings_watchdog_summary">Genstart Shizuku automatisk, hvis det stopper</string>
     <string name="settings_tcp_mode">TCP-tilstand</string>
     <string name="settings_tcp_mode_summary">"Det tillader Shizuku at genstarte uden Wi-Fi. (Shizuku må have startet én gang siden genstarten)"</string>
-    <string name="settings_tcp_mode_dialog_title">Genstart påkrævet</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Shizuku skal genstarte for at kunne anvende denne indstilling.<br><br><b>Shizuku vil fortsætte med at køre og vente på en Wi-Fi-forbindelse, før den genstarter.</b>]]></string>
     <string name="settings_tcp_port">TCP-port</string>
-    <string name="settings_tcp_port_deafult">Standard (5555)</string>
     <string name="settings_tcp_port_hint">Lad det stå tomt for at bruge standard (5555)</string>
     <string name="settings_tcp_learn_more">Lær mere om at bruge automatiseringsapps til at styre Shizuku</string>
     <string name="settings_language">Sprog</string>
