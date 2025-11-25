@@ -30,12 +30,15 @@
     <string name="dialog_adb_pairing_discovery">இணைத்தல் சேவையைத் தேடுகிறது</string>
     <string name="dialog_adb_pairing_paring_code">இணைத்தல் குறியீடு</string>
     <string name="paring_code_is_wrong">இணைத்தல் குறியீடு தவறானது.</string>
+    <string name="cannot_connect_port">வயர்லெஸ் பிழைத்திருத்தச் சேவையுடன் இணைக்க இயலவில்லை.\n\nநெட்வொர்க் அணுகலைக் கட்டுப்படுத்தக்கூடிய அனைத்து ஃபயர்வால், விளம்பரத் தொகுதி, VPN அல்லது ஒத்த பயன்பாடுகளிலும் Shizuku வெள்ளையாகப் பட்டியலிடப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.</string>
     <string name="dialog_wireless_adb_not_enabled">வயர்லெஸ் பிழைத்திருத்தம் இயக்கப்படவில்லை.\nகுறிப்பு, Android 11 க்கு முன், வயர்லெஸ் பிழைத்திருத்தத்தை இயக்க, கணினி இணைப்பு அவசியம்.</string>
     <string name="dialog_usb_debugging_not_enabled">USB பிழைத்திருத்தம் இயக்கப்படவில்லை.\n\"டெவலப்பர் விருப்பங்கள்\" என்பதில் அதை இயக்கவும்.</string>
     <string name="dialog_adb_pairing_message">பின்வரும் படிகளைச் செய்வதன் மூலம் இணைக்கத் தொடங்குங்கள்: \"டெவலப்பர் விருப்பங்கள்\" - \"வயர்லெஸ் பிழைத்திருத்தம்\" - \"இணைப்பு குறியீட்டுடன் சாதனத்தை இணை.\"\n\nஇணைத்தல் செயல்முறை தொடங்கிய பிறகு, நீங்கள் இணைத்தல் குறியீட்டை உள்ளிட முடியும்.</string>
     <string name="dialog_adb_pairing_accessibility_enable">இணைத்தல் செயல்முறையைத் தொடங்க அணுகல் சேவையை இயக்கவும். இது ஷிசுகுவை இணைத்தல் குறியீட்டைக் கண்டறிய அனுமதிக்கிறது.\n\nகுறியீடு கண்டுபிடிக்கப்பட்டதும் அல்லது 1 நிமிடத்திற்குப் பிறகு ஆற்றலைச் சேமிக்க அணுகல் சேவை முடக்கப்படும்.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">\"டெவலப்பர் விருப்பங்கள்\" &gt; \"வயர்லெஸ் பிழைத்திருத்தம்\" &gt; \"இணைத்தல் குறியீட்டுடன் சாதனத்தை இணைக்கவும்\" என்பதற்குச் செல்லவும். ஷிசுகு தானாகவே இணைத்தல் குறியீட்டைக் கண்டறியும்.</string>
     <string name="adb_pairing_requires_multi_window">முதலில் பிளவு-திரை (பல-சாளர) பயன்முறையை உள்ளிடவும்.</string>
+    <string name="adb_pairing_requires_multi_window_reason">முறைமைக்கு இணைத்தல் உரையாடல் எப்போதும் தெரியும். பிளவு-திரை பயன்முறையைப் பயன்படுத்துவது இந்த பயன்பாடு மற்றும் கணினி உரையாடலை ஒரே நேரத்தில் காண அனுமதிக்கும் ஒரே வழியாகும்.</string>
+    <string name="adb_error_key_store">கம்பியில்லா பிழைத்திருத்தத்திற்கான விசையை உருவாக்க இயலவில்லை.\nஇந்த சாதனத்தின் கீஸ்டோர் பொறிமுறை உடைந்துவிட்டதால் இது இருக்கலாம்.</string>
     <string name="adb_error_stop_tcp">TCP வழியாக ADB ஐ நிறுத்த முடியவில்லை.</string>
     <string name="adb_pair_required">முதலில் இணைத்தல் படிக்குச் செல்லவும்.</string>
     <string name="enable">இயக்கு</string>
@@ -47,9 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">இணைப்பதை முடிக்க அறிவிப்பில் குறியீட்டை உள்ளிடவும்.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">இணைத்தல் செயல்முறைக்கு ஷிசுகுவிலிருந்து வரும் அறிவிப்புடன் நீங்கள் தொடர்பு கொள்ள வேண்டும். அறிவிப்புகளை இடுகையிட ஷிசுகுவை அனுமதிக்கவும்.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI பயனர்கள் கணினி அமைப்புகளில் \"அறிவிப்பு\" - \"அறிவிப்பு நிழல்\" என்பதிலிருந்து அறிவிப்பு பாணியை \"Android\" க்கு மாற்ற வேண்டியிருக்கலாம்.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">இல்லையெனில், அறிவிப்பிலிருந்து இணைத்தல் குறியீட்டை உள்ளிட முடியாமல் போகலாம்.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">\"வயர்லெஸ் பிழைத்திருத்தம்\" விருப்பத்தின் இடது பகுதியைக் கிளிக் செய்யக்கூடியது என்பதை நினைவில் கொள்க, அதைத் தட்டினால் புதிய பக்கம் திறக்கும். வலதுபுறத்தில் சுவிட்சை இயக்குவது மட்டுமே தவறானது.</string>
+    <string name="adb_pairing_tutorial_content_finish">ஷிசுகுவுக்குத் திரும்பிச் சென்று ஷிசுகுவைத் தொடங்குங்கள்.</string>
+    <string name="adb_pairing_tutorial_content_network">ஷிசுகு உள்ளூர் நெட்வொர்க்கை அணுக வேண்டும். இது நெட்வொர்க் அனுமதியால் கட்டுப்படுத்தப்படுகிறது.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">சில அமைப்புகள் (MIUI போன்றவை) பயன்பாடு முன்புற சேவையைப் பயன்படுத்தினாலும், நெட்வொர்க்கைத் தெரியாதபோது அவற்றை அணுக அனுமதிக்காது. அத்தகைய அமைப்புகளில் Shizuku க்கான பேட்டரி தேர்வுமுறை அம்சங்களை முடக்கவும்.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[தொடங்கு (ரூட் செய்யப்பட்ட சாதனங்களுக்கு)]]></string>
     <string name="home_root_description"><![CDATA[கூடுதலாக, ஷிசுகுவை துவக்கும்போது தானாகவே தொடங்கலாம். இல்லையென்றால், உங்கள் கணினி அல்லது மூன்றாம் தரப்பு கருவிகள் ஷிசுகுவை கட்டுப்படுத்தியுள்ளதா எனச் சரிபார்க்கவும்.<br>நீங்கள் %sஐப் பார்க்கலாம்.]]></string>
+    <string name="home_root_description_sui"><![CDATA[நீங்கள் Magisk ஐப் பயன்படுத்துகிறீர்கள் என்றால், நீங்கள் முயற்சி செய்யலாம் %1$s. ரூட் பயனர்களுக்கு, இது இறுதியில் ஷிசுகுவை மாற்றும். குறிப்பு, ஏற்கனவே உள்ள பயன்பாடுகள் பயன்படுத்த கொஞ்சம் மாற்ற வேண்டும் %2$s.]]></string>
     <string name="home_root_button_start">தொடங்கு</string>
     <string name="home_root_button_restart">மறுதொடக்கம்</string>
     <!-- Home - Application management -->
@@ -89,12 +98,17 @@
     <string name="settings_behavior">நடத்தை</string>
     <string name="settings_start_on_boot">துவக்கத்தில் தொடங்கு</string>
     <string name="settings_start_on_boot_summary">Android 11+ அல்லது ரூட் தேவை</string>
+    <string name="settings_start_on_boot_bug">ஆண்ட்ராய்டு 11-12 இல் பிழை காரணமாக, வயர்லெஸ் பிழைத்திருத்தம் அங்கீகரிக்கப்பட்ட நெட்வொர்க்குகளை நினைவில் கொள்ளவில்லை.\n\nஅங்கீகார உரையாடல் பாப் அப் செய்யும்போது \"அனுமதி\" என்பதைத் தட்டுவதன் மூலம் ஒவ்வொரு மறுதொடக்கத்திலும் நெட்வொர்க்கை நீங்கள் மீண்டும் அங்கீகரிக்க வேண்டும்.</string>
     <string name="settings_use_system_color">சிஸ்டம் தீம் நிறத்தைப் பயன்படுத்து</string>
     <string name="settings_watchdog">கண்காணிப்பு நாய்</string>
     <string name="settings_watchdog_summary">ஷிசுகு நின்றால் தானாகவே மறுதொடக்கம் செய்யுங்கள்</string>
     <string name="settings_tcp_mode">TCP பயன்முறை</string>
     <string name="settings_tcp_mode_summary">"Wi-Fi இல்லாமல் Shizukuவை மறுதொடக்கம் செய்ய அனுமதிக்கிறது. (மறுதொடக்கம் செய்யப்பட்டதிலிருந்து Shizuku ஒரு முறை தொடங்கியிருக்க வேண்டும்)"</string>
+    <string name="settings_restart_dialog_title">மறுதொடக்கம் அவசியம்</string>
+    <string name="settings_restart_dialog_message">இந்த அமைப்பைப் பயன்படுத்த Shizuku மறுதொடக்கம் செய்ய வேண்டும்.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi தேவை. Shizuku தொடர்ந்து இயங்கும் மற்றும் பின்னணியில் மறுதொடக்கம் செய்வதற்கு முன் Wi-Fi இணைப்புக்காக காத்திருக்கும்.</b>]]></string>
     <string name="settings_tcp_port">TCP போர்ட்</string>
+    <string name="settings_tcp_port_default">இயல்புநிலை (5555)</string>
     <string name="settings_tcp_port_hint">இயல்புநிலையைப் பயன்படுத்த காலியாக விடவும் (5555)</string>
     <string name="settings_tcp_learn_more">ஷிசுகுவை கட்டுப்படுத்த ஆட்டோமேஷன் பயன்பாடுகளைப் பயன்படுத்துவது பற்றி மேலும் அறிக.</string>
     <string name="settings_language">மொழி</string>
@@ -118,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">மின்னஞ்சல் பயன்பாடு எதுவும் கிடைக்கவில்லை.</string>
     <string name="toast_shizuku_already_starting">ஷிசுகு ஏற்கனவே பின்னணியில் தொடங்குகிறது.</string>
+    <string name="toast_accessibility_tv_only">இந்த சேவை டிவி சாதனங்களில் மட்டுமே ஆதரிக்கப்படுகிறது.</string>
+    <string name="toast_accessibility_timed_out">Shizuku இணைத்தல் சேவை நேரம் முடிந்துவிட்டது.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">தீம்</string>
     <string name="dark_theme_off">எப்போதும் வெளிச்சம்</string>
@@ -166,6 +182,7 @@
     <string name="wadb_notification_channel">ADB தானியங்கு தொடக்க சேவை</string>
     <!-- Watchdog -->
     <string name="watchdog_running">கண்காணிப்புக் குழு இயங்குகிறது.</string>
+    <string name="watchdog_turn_off">அணைத்திடு</string>
     <string name="watchdog_shizuku_crashed_title">ஷிசுகு சமீபத்தில் விபத்துக்குள்ளானது.</string>
     <string name="watchdog_shizuku_crashed_text">வாட்ச்டாக் சேவையை மீண்டும் தொடங்கியது. எதிர்கால விபத்துகளைத் தடுப்பதற்கான சாத்தியமான திருத்தங்களைப் பற்றி அறிய தட்டவும்.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">விழிப்பூட்டல்களை முடக்கு</string>
