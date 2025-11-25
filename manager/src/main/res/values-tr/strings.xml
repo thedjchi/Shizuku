@@ -61,7 +61,7 @@
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (rootlu cihazlar için)]]></string>
     <string name="home_root_description"><![CDATA[Buna ek olarak, Shizuku otomatik olarak açılışta başlatılabilir. Aksi durumda ise, lütfen sisteminizin veya üçüncü taraf araçlarınızın Shizuku\'yu kısıtlayıp kısıtlamadığını kontrol edin. &lt;br&gt;%s \'ye başvurabilirsiniz.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magisk kullanıyorsan deneyebilirsin %1$s. Root kullanıcıları için ise sonunda Shizuku'nun yerini alacak. Mevcut uygulamaların biraz değişmesi gerektiğini unutmayın %2$s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Magisk kullanıyorsan deneyebilirsin %1$s. Root kullanıcıları için ise sonunda Shizuku\'nun yerini alacak. Mevcut uygulamaların biraz değişmesi gerektiğini unutmayın %2$s.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yeniden başlat</string>
     <!-- Home - Application management -->
