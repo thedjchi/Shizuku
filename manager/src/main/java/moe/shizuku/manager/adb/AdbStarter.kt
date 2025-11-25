@@ -7,7 +7,6 @@ import android.provider.Settings
 import android.widget.Toast
 import java.io.EOFException
 import java.net.SocketException
-import java.net.SocketTimeoutException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -37,6 +36,7 @@ object AdbStarter {
                     else throw AdbKeyException(it)
                 }
 
+            var retry = false
             var activePort = port
             val tcpMode = ShizukuSettings.getTcpMode()
             val tcpPort = ShizukuSettings.getTcpPort()
@@ -54,20 +54,21 @@ object AdbStarter {
                         client.command("tcpip:$activePort")
                     }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts in TCP mode
                 }
+                retry = true
             }
         
             log?.invoke("Connecting on port $activePort...")
 
             AdbClient("127.0.0.1", activePort, key).use { client ->
                 var delayTime = 0L
-                val maxAttempts = 5
+                val maxAttempts = if (retry) 5 else 1
                 for (attempt in 1..maxAttempts) {
                     try {
                         delay(delayTime)
                         client.connect()
                         break
                     } catch (e: Exception) {
-                        if (attempt == maxAttempts || e is CancellationException || e is SocketTimeoutException) {
+                        if (attempt == maxAttempts || e is CancellationException) {
                             throw e
                         }
                         delayTime += 1000
