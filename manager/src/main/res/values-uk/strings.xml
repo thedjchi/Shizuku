@@ -32,6 +32,7 @@
     <string name="dialog_adb_pairing_discovery">Пошук сервісу парування</string>
     <string name="dialog_adb_pairing_paring_code">Код парування</string>
     <string name="paring_code_is_wrong">Код парування неправильний.</string>
+    <string name="cannot_connect_port">Не можу підключитися до бездротової служби налагодження.\n\nБудь ласка, переконайтеся, що Shizuku внесений до білого списку у всіх фаєрволах, блокуванні реклами, VPN чи подібних додатках, які можуть обмежувати доступ до мережі.</string>
     <string name="dialog_wireless_adb_not_enabled">Налагодження через Wi-Fi не ввімкнено.
 \nЗверніть увагу, до Android 11, щоб увімкнути налагодження через Wi-Fi, під\'\'єднання до ПК обов\'\'язкове.</string>
     <string name="dialog_usb_debugging_not_enabled">Налагодження через USB не ввімкнено.\nБудь ласка, увімкніть його в розділі «Параметри розробника».</string>
@@ -39,6 +40,8 @@
     <string name="dialog_adb_pairing_accessibility_enable">Будь ласка, увімкніть службу доступності, щоб розпочати процес сполучення. Це дозволить Shizuku виявити код сполучення.\n\nСлужба доступності буде вимкнена після знаходження коду або через 1 хвилину для економії енергії.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Будь ласка, перейдіть до розділу \"Параметри розробника\" &gt; \"Налагодження бездротового зв\'язку\" &gt; \"Підключити пристрій за допомогою коду сполучення\". Shizuku автоматично визначить код сполучення.</string>
     <string name="adb_pairing_requires_multi_window">Спершу увійдіть в режим розділеного екрана (багатьох вікон).</string>
+    <string name="adb_pairing_requires_multi_window_reason">Система вимагає, щоб діалог поєднання завжди був видимим. Використання режиму розділеного екрану — єдиний спосіб зробити цей додаток і системний діалог видимими одночасно.</string>
+    <string name="adb_error_key_store">Не вдається згенерувати ключ для бездротового налагодження.\nМожливо, це пов\'язано з тим, що механізм KeyStore цього пристрою зламаний.</string>
     <string name="adb_error_stop_tcp">Не вдалося зупинити ADB через TCP</string>
     <string name="adb_pair_required">Будь ласка, спочатку пройдіть етап парування.</string>
     <string name="enable">Увімкнути</string>
@@ -50,9 +53,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Введіть код в повідомленні щоб завершити парування.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процес парування потребує, щоб ви взаємодіяли із сповіщенням від Shizuku. Будь ласка, дозвольте Shizuku публікувати сповіщення.</string>
     <string name="adb_pairing_tutorial_content_miui">Користувачам MIUI, иожливо, доведеться змінити стіль сповіщень на \"Android\" із \"Сповіщення\" - \"Панель сповіщень\" в системних налаштуваннях.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Інакше ви можете не мати змоги ввести код пари з повідомлення.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Зверніть увагу, що ліва частина опції «Бездротова налагодження» є клікабельною, натискання на неї відкриває нову сторінку. Вмикати лише перемикач праворуч — неправильно.</string>
+    <string name="adb_pairing_tutorial_content_finish">Повернись до Шізуку і почни Шізуку.</string>
+    <string name="adb_pairing_tutorial_content_network">Шідзуку потрібно отримати доступ до місцевої мережі. Він контролюється мережевим дозволом.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Деякі системи (наприклад, MIUI) забороняють додаткам доступ до мережі, якщо вони не видимі, навіть якщо додаток використовує передній план. Будь ласка, вимкніть функції оптимізації батареї для Shizuku на таких системах.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Запустіть службу з root доступом]]></string>
     <string name="home_root_description"><![CDATA[В додаток, Shizuku можна автоматично запустити при завантаженні. Якщо цього не трапляється, будь ласка, перевірте чи ваша не обмежили Shizuku система чи сторонні інструменти.&lt;br&gt;Ви можете переглянути більше на %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Якщо ви користуєтеся Magisk, можете спробувати %1$s. Для користувачів root він зрештою замінить Shizuku. Зверніть увагу, що існуючі додатки потрібно трохи змінити для використання %2$s.]]></string>
     <string name="home_root_button_start">Запуск</string>
     <string name="home_root_button_restart">Перезапуск</string>
     <!-- Home - Application management -->
@@ -98,12 +107,17 @@
     <string name="settings_behavior">Поведінка</string>
     <string name="settings_start_on_boot">Запуск при завантаженні</string>
     <string name="settings_start_on_boot_summary">Потрібен Android 11+ або root-доступ</string>
+    <string name="settings_start_on_boot_bug">Через баг у Android 11-12 бездротове налагодження не пам\'ятає жодної авторизованої мережі.\n\nВам потрібно буде повторно авторизувати мережу при кожному перезавантаженні, натискаючи «Дозволити», коли з\'являється діалогове повідомлення авторизації.</string>
     <string name="settings_use_system_color">Використовувати системний колір</string>
     <string name="settings_watchdog">Сторожовий пес</string>
     <string name="settings_watchdog_summary">Автоматично перезапускати Shizuku, якщо він зупиняється</string>
     <string name="settings_tcp_mode">Режим TCP</string>
     <string name="settings_tcp_mode_summary">"Дозволяє перезавантажити Shizuku без Wi-Fi. (Shizuku мала запуститися один раз після перезавантаження)"</string>
+    <string name="settings_restart_dialog_title">Потрібно перезавантажити</string>
+    <string name="settings_restart_dialog_message">Шізуку потрібно почати заново, щоб застосувати цей настрій.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Потрібен Wi-Fi. Шідзуку продовжить працювати і чекати на Wi-Fi, перш ніж перезапустити у фоновому режимі.</b>]]></string>
     <string name="settings_tcp_port">TCP-порт</string>
+    <string name="settings_tcp_port_default">За замовчуванням (5555)</string>
     <string name="settings_tcp_port_hint">Залиште порожнім, щоб використовувати значення за замовчуванням (5555)</string>
     <string name="settings_tcp_learn_more">Дізнайтеся більше про використання програм автоматизації для керування Shizuku</string>
     <string name="settings_language">Мова</string>
@@ -127,6 +141,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Поштового додатка не знайдено</string>
     <string name="toast_shizuku_already_starting">Шизуку вже починається на задньому плані</string>
+    <string name="toast_accessibility_tv_only">Ця послуга підтримується лише на телевізійних пристроях.</string>
+    <string name="toast_accessibility_timed_out">Сервіс парування Шідзуку закінчився.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Завжди легкий</string>
@@ -175,6 +191,7 @@
     <string name="wadb_notification_channel">Служба автоматичного запуску ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Сторожовий таймер працює</string>
+    <string name="watchdog_turn_off">Вимикати</string>
     <string name="watchdog_shizuku_crashed_title">Нещодавно розбився Сідзуку</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog перезапустив службу. Натисніть, щоб дізнатися про можливі виправлення для запобігання майбутнім збоям.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Вимкнути сповіщення</string>
