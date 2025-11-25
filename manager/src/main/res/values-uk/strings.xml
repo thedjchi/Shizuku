@@ -39,9 +39,6 @@
     <string name="dialog_adb_pairing_accessibility_enable">Будь ласка, увімкніть службу доступності, щоб розпочати процес сполучення. Це дозволить Shizuku виявити код сполучення.\n\nСлужба доступності буде вимкнена після знаходження коду або через 1 хвилину для економії енергії.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Будь ласка, перейдіть до розділу \"Параметри розробника\" &gt; \"Налагодження бездротового зв\'язку\" &gt; \"Підключити пристрій за допомогою коду сполучення\". Shizuku автоматично визначить код сполучення.</string>
     <string name="adb_pairing_requires_multi_window">Спершу увійдіть в режим розділеного екрана (багатьох вікон).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Системі потрібно, щоб діалогове вікно парування завжди було видимим. Використання режиму розділеного екрана — єдиний спосіб, щоб ця програма та системне діалогове вікно були видимими одночасно.</string>
-    <string name="adb_error_key_store">Неможливо генерувати ключ для налагодження через Wi-Fi.
-\nМожливо, механізм KeyStore цього пристрою зламаний.</string>
     <string name="adb_error_stop_tcp">Не вдалося зупинити ADB через TCP</string>
     <string name="adb_pair_required">Будь ласка, спочатку пройдіть етап парування.</string>
     <string name="enable">Увімкнути</string>
@@ -53,15 +50,9 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Введіть код в повідомленні щоб завершити парування.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процес парування потребує, щоб ви взаємодіяли із сповіщенням від Shizuku. Будь ласка, дозвольте Shizuku публікувати сповіщення.</string>
     <string name="adb_pairing_tutorial_content_miui">Користувачам MIUI, иожливо, доведеться змінити стіль сповіщень на \"Android\" із \"Сповіщення\" - \"Панель сповіщень\" в системних налаштуваннях.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">В іншому випадку, ви, можливо, не зможете увести код парування з повідомлення.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Зверніть увагу, на ліву частину \"Налагодження по Wi-Fi\" можна натиснути, при натисканні відкриється нова сторіна. Лише вмикати перемикач справа неправильно.</string>
-    <string name="adb_pairing_tutorial_content_finish">Поверніться до Shizuku та запустіть Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku потрібен доступ до локальної мережі. Це контролюється дозволом мережі.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Деякі системи (наприклад, MIUI) забороняють програмам доступ до мережі коли їх не видно, навіть якщо програма використовує фоновий сервіс за замовчуванням. Будь ласка, вимкніть оптимізацію батареї для Shizuku на таких системах.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Запустіть службу з root доступом]]></string>
     <string name="home_root_description"><![CDATA[В додаток, Shizuku можна автоматично запустити при завантаженні. Якщо цього не трапляється, будь ласка, перевірте чи ваша не обмежили Shizuku система чи сторонні інструменти.&lt;br&gt;Ви можете переглянути більше на %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Якщо ви користуєтесь Magisk, ви можете спробувати %1$s. Для користувачів root, він колись замінить Shizuku. Увага, існуючі програми мають трохи змінитися щоб можна було користуватися %2$s.]]></string>
     <string name="home_root_button_start">Запуск</string>
     <string name="home_root_button_restart">Перезапуск</string>
     <!-- Home - Application management -->
