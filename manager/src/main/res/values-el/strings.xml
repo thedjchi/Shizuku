@@ -30,12 +30,15 @@
     <string name="dialog_adb_pairing_discovery">Αναζήτηση για υπηρεσία σύζευξης</string>
     <string name="dialog_adb_pairing_paring_code">Κωδικός σύζευξης</string>
     <string name="paring_code_is_wrong">Ο κωδικός σύζευξης είναι εσφαλμένος.</string>
+    <string name="cannot_connect_port">Δεν είναι δυνατή η σύνδεση με την υπηρεσία ασύρματου εντοπισμού σφαλμάτων.\n\nΒεβαιωθείτε ότι το Shizuku είναι στη λίστα επιτρεπόμενων σε όλες τις εφαρμογές τείχους προστασίας, αποκλεισμού διαφημίσεων, VPN ή παρόμοιες εφαρμογές που μπορούν να περιορίσουν την πρόσβαση στο δίκτυο.</string>
     <string name="dialog_wireless_adb_not_enabled">Η ασύρματη λειτουργία εντοπισμού σφαλμάτων δεν είναι ενεργοποιημένη.\nΣημειώστε ότι πριν από το Android 11, για να ενεργοποιήσετε την ασύρματη λειτουργία εντοπισμού σφαλμάτων, ήταν απαραίτητη η σύνδεση με τον υπολογιστή.</string>
     <string name="dialog_usb_debugging_not_enabled">Η λειτουργία εντοπισμού σφαλμάτων USB δεν είναι ενεργοποιημένη.\nΕνεργοποιήστε την στις \"Επιλογές προγραμματιστή\".</string>
     <string name="dialog_adb_pairing_message">Ξεκινήστε τη σύζευξη ακολουθώντας τα παρακάτω βήματα: \"Επιλογές προγραμματιστή\" - \"Ασύρματος εντοπισμός σφαλμάτων\" - \"Σύζευξη συσκευής με κωδικό σύζευξης.\"\n\nΑφού ξεκινήσει η διαδικασία σύζευξης, θα μπορείτε να εισαγάγετε τον κωδικό σύζευξης.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Ενεργοποιήστε την υπηρεσία προσβασιμότητας για να ξεκινήσει η διαδικασία σύζευξης. Αυτό επιτρέπει στο Shizuku να εντοπίσει τον κωδικό σύζευξης.\n\nΗ υπηρεσία προσβασιμότητας θα απενεργοποιηθεί όταν βρεθεί ο κωδικός ή μετά από 1 λεπτό για εξοικονόμηση ενέργειας.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Μεταβείτε στις \"Επιλογές προγραμματιστή\" &gt; \"Ασύρματη διόρθωση σφαλμάτων\" &gt; \"Σύζευξη συσκευής με κωδικό σύζευξης\". Το Shizuku θα εντοπίσει αυτόματα τον κωδικό σύζευξης.</string>
     <string name="adb_pairing_requires_multi_window">Παρακαλώ, μεταβείτε πρώτα σε λειτουργία διαιρεμένης οθόνης (πολλαπλών παραθύρων).</string>
+    <string name="adb_pairing_requires_multi_window_reason">Το σύστημα απαιτεί το παράθυρο διαλόγου σύζευξης να είναι πάντα ορατό. Η χρήση της λειτουργίας διαιρεμένης οθόνης είναι ο μόνος τρόπος για να είναι ορατά ταυτόχρονα αυτή η εφαρμογή και το παράθυρο διαλόγου συστήματος.</string>
+    <string name="adb_error_key_store">Δεν είναι δυνατή η δημιουργία κλειδιού για τον ασύρματο εντοπισμό σφαλμάτων.\nΑυτό μπορεί να οφείλεται στο ότι ο μηχανισμός KeyStore αυτής της συσκευής είναι κατεστραμμένος.</string>
     <string name="adb_error_stop_tcp">Απέτυχε η διακοπή του ADB μέσω TCP</string>
     <string name="adb_pair_required">Παρακαλούμε ακολουθήστε πρώτα το βήμα σύζευξης.</string>
     <string name="enable">Ενεργοποιώ</string>
@@ -47,9 +50,15 @@
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Εισαγάγετε τον κωδικό στην ειδοποίηση για να ολοκληρώσετε τη σύζευξη.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Η διαδικασία σύζευξης απαιτεί να αλληλεπιδράσετε με μια ειδοποίηση από το Shizuku. Επιτρέψτε στο Shizuku να δημοσιεύει ειδοποιήσεις.</string>
     <string name="adb_pairing_tutorial_content_miui">Οι χρήστες MIUI ίσως χρειαστεί να αλλάξουν το στυλ ειδοποιήσεων σε \"Android\" από \"Ειδοποίηση\" - \"Σκιά ειδοποιήσεων\" στις ρυθμίσεις συστήματος.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Διαφορετικά, ενδέχεται να μην μπορείτε να εισαγάγετε τον κωδικό σύζευξης από την ειδοποίηση.</string>
+    <string name="adb_pairing_tutorial_content_left_is_clickable">Λάβετε υπόψη ότι το αριστερό μέρος της επιλογής \"Ασύρματος εντοπισμός σφαλμάτων\" είναι δυνατό με κλικ. Αν το πατήσετε, θα ανοίξει μια νέα σελίδα. Η ενεργοποίηση μόνο του διακόπτη στα δεξιά είναι λανθασμένη.</string>
+    <string name="adb_pairing_tutorial_content_finish">Επιστρέψτε στο Shizuku και ξεκινήστε το Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Το Shizuku χρειάζεται πρόσβαση στο τοπικό δίκτυο. Ελέγχεται από τα δικαιώματα δικτύου.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Ορισμένα συστήματα (όπως το MIUI) δεν επιτρέπουν στις εφαρμογές να έχουν πρόσβαση στο δίκτυο όταν δεν είναι ορατές, ακόμα κι αν η εφαρμογή χρησιμοποιεί μια υπηρεσία πρώτου πλάνου. Απενεργοποιήστε τις λειτουργίες βελτιστοποίησης μπαταρίας για το Shizuku σε τέτοια συστήματα.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Έναρξη (για συσκευές με root)]]></string>
     <string name="home_root_description"><![CDATA[Επιπλέον, το Shizuku μπορεί να ξεκινήσει αυτόματα κατά την εκκίνηση. Εάν όχι, ελέγξτε εάν το σύστημά σας ή εργαλεία τρίτων έχουν περιορίσει το Shizuku.<br>Μπορείτε να ανατρέξετε στο %s.]]></string>
+    <string name="home_root_description_sui"><![CDATA[Αν χρησιμοποιείτε Magisk, μπορείτε να δοκιμάσετε το %1$s. Για τους χρήστες root, τελικά θα αντικαταστήσει το Shizuku. Σημειώστε ότι οι υπάρχουσες εφαρμογές πρέπει να αλλάξουν λίγο για να χρησιμοποιήσουν το %2$s.]]></string>
     <string name="home_root_button_start">Αρχή</string>
     <string name="home_root_button_restart">Επανεκκίνηση</string>
     <!-- Home - Application management -->
@@ -89,12 +98,17 @@
     <string name="settings_behavior">Συμπεριφορά</string>
     <string name="settings_start_on_boot">Ξεκινήστε από την εκκίνηση</string>
     <string name="settings_start_on_boot_summary">Απαιτεί Android 11+ ή root</string>
+    <string name="settings_start_on_boot_bug">Λόγω ενός σφάλματος στο Android 11-12, η ασύρματη αποσφαλμάτωση δεν θυμάται κανένα εξουσιοδοτημένο δίκτυο.\n\nΘα χρειαστεί να εξουσιοδοτείτε ξανά το δίκτυο σε κάθε επανεκκίνηση πατώντας \"Να επιτρέπεται\" όταν εμφανιστεί το παράθυρο διαλόγου εξουσιοδότησης.</string>
     <string name="settings_use_system_color">Χρήση χρώματος θέματος συστήματος</string>
     <string name="settings_watchdog">Άγρυπνος φρουρός</string>
     <string name="settings_watchdog_summary">Αυτόματη επανεκκίνηση του Shizuku εάν σταματήσει</string>
     <string name="settings_tcp_mode">Λειτουργία TCP</string>
     <string name="settings_tcp_mode_summary">"Επιτρέπει στο Shizuku να επανεκκινήσει χωρίς Wi-Fi. (Το Shizuku πρέπει να ξεκίνησε μία φορά από την επανεκκίνηση)"</string>
+    <string name="settings_restart_dialog_title">Απαιτείται επανεκκίνηση</string>
+    <string name="settings_restart_dialog_message">Το Shizuku πρέπει να επανεκκινηθεί για να εφαρμοστεί αυτή η ρύθμιση.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Απαιτείται Wi-Fi. Το Shizuku θα συνεχίσει να εκτελείται και θα περιμένει σύνδεση Wi-Fi πριν από την επανεκκίνηση στο παρασκήνιο.</b>]]></string>
     <string name="settings_tcp_port">Θύρα TCP</string>
+    <string name="settings_tcp_port_default">Προεπιλογή (5555)</string>
     <string name="settings_tcp_port_hint">Αφήστε κενό για χρήση προεπιλογής (5555)</string>
     <string name="settings_tcp_learn_more">Μάθετε περισσότερα σχετικά με τη χρήση εφαρμογών αυτοματισμού για τον έλεγχο του Shizuku</string>
     <string name="settings_language">Γλώσσα</string>
@@ -118,6 +132,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Δεν βρέθηκε εφαρμογή email</string>
     <string name="toast_shizuku_already_starting">Το Shizuku ξεκινά ήδη στο παρασκήνιο</string>
+    <string name="toast_accessibility_tv_only">Αυτή η υπηρεσία υποστηρίζεται μόνο σε συσκευές τηλεόρασης.</string>
+    <string name="toast_accessibility_timed_out">Το χρονικό όριο της υπηρεσίας σύζευξης Shizuku έληξε.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Θέμα</string>
     <string name="dark_theme_off">Πάντα ελαφρύ</string>
@@ -166,6 +182,7 @@
     <string name="wadb_notification_channel">Υπηρεσία αυτόματης εκκίνησης ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Το Watchdog τρέχει</string>
+    <string name="watchdog_turn_off">Κλείνω</string>
     <string name="watchdog_shizuku_crashed_title">Ο Shizuku συνετρίβη πρόσφατα</string>
     <string name="watchdog_shizuku_crashed_text">Το Watchdog επανεκκίνησε την υπηρεσία. Πατήστε για να μάθετε σχετικά με πιθανές επιδιορθώσεις για την αποτροπή μελλοντικών σφαλμάτων.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Απενεργοποίηση ειδοποιήσεων</string>
