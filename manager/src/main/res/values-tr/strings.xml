@@ -32,7 +32,6 @@
     <string name="dialog_adb_pairing_discovery">Eşleştirme servisi aranıyor</string>
     <string name="dialog_adb_pairing_paring_code">Eşleşme kodu</string>
     <string name="paring_code_is_wrong">Eşleme kodu yanlış.</string>
-    <string name="cannot_connect_port">Kablosuz hata ayıklama hizmeti bağlanamıyor.</string>
     <string name="dialog_wireless_adb_not_enabled">Kablosuz hata ayıklama etkin değil.
 \nNot, Android 11’den önce kablosuz hata ayıklamayı etkinleştirmek için bilgisayar bağlantısının şart olduğunu unutmayın.</string>
     <string name="dialog_usb_debugging_not_enabled">USB hata ayıklama etkin değil.\nLütfen \"Geliştirici Seçenekleri\"nde etkinleştirin.</string>
@@ -111,10 +110,7 @@
     <string name="settings_watchdog_summary">Durduğunda Shizuku\'yu otomatik olarak yeniden başlat</string>
     <string name="settings_tcp_mode">TCP modu</string>
     <string name="settings_tcp_mode_summary">"Shizuku'nun Wi-Fi olmadan yeniden başlatılmasına izin verir. (Shizuku'nun yeniden başlatıldıktan sonra bir kez başlatılmış olması gerekir)"</string>
-    <string name="settings_tcp_mode_dialog_title">Yeniden Başlatma Gerekli</string>
-    <string name="settings_tcp_mode_dialog_message"><![CDATA[Bu ayarın uygulanabilmesi için Shizuku\'nun yeniden başlatılması gerekiyor.<br><br><b>Shizuku çalışmaya devam edecek ve yeniden başlatılmadan önce bir Wi-Fi bağlantısı bekleyecek.</b>]]></string>
     <string name="settings_tcp_port">TCP bağlantı noktası</string>
-    <string name="settings_tcp_port_deafult">Varsayılan (5555)</string>
     <string name="settings_tcp_port_hint">Varsayılanı (5555) kullanmak için boş bırakın</string>
     <string name="settings_tcp_learn_more">Shizuku\'yu kontrol etmek için otomasyon uygulamalarının kullanımı hakkında daha fazla bilgi edinin</string>
     <string name="settings_language">Dil</string>
