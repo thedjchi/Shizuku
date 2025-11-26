@@ -5,18 +5,18 @@
     <string name="home_status_service_is_running">%1$s 正在執行</string>
     <string name="home_status_service_not_running">%1$s 未在執行</string>
     <string name="home_status_service_version">版本 %2$s，%1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[版本 %2$s，%1$s&lt;br&gt;再次啟動來升級到版本 %3$s]]></string>
+    <string name="home_status_service_version_update"><![CDATA[版本 %2$s，%1$s<br>再次啟動來升級到版本 %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[透過與電腦連線來啟動 (使用 ADB)]]></string>
     <string name="home_adb_description"><![CDATA[沒有 Root 的裝置需藉助 ADB 來啟動 Shizuku (須與電腦連線)。在裝置每次重新啟動後，這項作業皆須重新進行。請<b><a href="%1$s">閱讀說明</a></b>。]]></string>
     <string name="home_adb_button_view_help">閱讀說明</string>
     <string name="home_adb_button_view_command">檢視命令</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* 還有一些其他注意事項，請確認你已閱讀說明。]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* 還有一些其他注意事項，請確認你已閱讀說明。]]></string>
     <string name="home_adb_dialog_view_command_copy_button">複製</string>
     <string name="home_adb_dialog_view_command_button_send">傳送</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[透過無線偵錯啟動]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[在 Android 11 或更高版本上，您可以直接從您的裝置啟用無線偵錯並啟動 Shizuku，無須與電腦連線。&lt;p&gt;請先檢視分步驟指南。]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[在 Android 11 或更高版本上，您可以直接從您的裝置啟用無線偵錯並啟動 Shizuku，無須與電腦連線。<p>請先檢視分步驟指南。]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[在 Android 11 之前，必須與電腦連線才能啟用無線偵錯。]]></string>
     <string name="home_wireless_adb_view_guide_button">分步驟指南</string>
     <!-- Adb -->
@@ -60,7 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系統（例如 MIUI）會禁止應用在不可見時存取網絡，即使該應用程式使用了前台服務。請在這些系統上為 Shizuku 關閉電池優化功能。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[啟動 (針對已 Root 裝置)]]></string>
-    <string name="home_root_description"><![CDATA[另外，Shizuku 可以在開機時自動啟動。如果沒有啟動，請檢查 Shizuku 是否被您的系統或是第三方工具限制。&lt;br&gt;你可以參考 %s。]]></string>
+    <string name="home_root_description"><![CDATA[另外，Shizuku 可以在開機時自動啟動。如果沒有啟動，請檢查 Shizuku 是否被您的系統或是第三方工具限制。<br>你可以參考 %s。]]></string>
     <string name="home_root_description_sui"><![CDATA[如果您正在使用 Magisk，可以嘗試使用 %1$s。對於 root 用戶，它最終會取代 Shizuku。請注意，現有應用程式需要稍作修改才能使用 %2$s。]]></string>
     <string name="home_root_button_start">啟動</string>
     <string name="home_root_button_restart">重新啟動</string>
@@ -83,7 +83,7 @@
 \n您可能需要重新啟動 Shizuku 以使作業生效。</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">ADB 權限受限</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[這極有可能是你的裝置製造商限制了 ADB 的權限。&lt;p&gt;&lt;b&gt;&lt;a href="%1$s"&gt;此文件&lt;/a&gt;&lt;/b&gt;中可能有針對你的系統的解決方案。]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[這極有可能是你的裝置製造商限制了 ADB 的權限。<p><b><a href="%1$s">此文件</a></b>中可能有針對你的系統的解決方案。]]></string>
     <string name="app_management_item_summary_requires_root">* 需要以 Root 執行的 Shizuku</string>
     <string name="app_management_toggle_all">切換全部</string>
     <!-- Terminal -->
@@ -98,7 +98,7 @@
     <string name="terminal_tutorial_2_description">例如，如果要在 %1$s 中使用 Shizuku，則應將 %2$s 取代為 %3$s (%4$s 是 %1$s 的套件名稱)。</string>
     <string name="terminal_tutorial_3">最後，將檔案移至終端機應用程式可以存取的位置，您便可使用 %1$s 來透過 Shizuku 執行命令。</string>
     <string name="terminal_tutorial_3_description">一些技巧：將執行權限授予 %1$s 並將其新增到 %2$s，您就能直接使用 %1$s。</string>
-    <string name="rish_description"><![CDATA[透過 %1$s，您可以在任何終端機應用程式中連線到由 Shizuku 執行的 shell 並與之互動。 &lt;p&gt;有關 %1$s 的具體使用方式，請輕觸以檢視文件。]]></string>
+    <string name="rish_description"><![CDATA[透過 %1$s，您可以在任何終端機應用程式中連線到由 Shizuku 執行的 shell 並與之互動。 <p>有關 %1$s 的具體使用方式，請輕觸以檢視文件。]]></string>
     <!-- Settings -->
     <string name="settings_title">設定</string>
     <string name="settings_behavior">態度</string>
@@ -200,9 +200,9 @@
     <string name="accessibility_service_description">為無法使用通知或分割畫面的裝置（例如運行 Android 14+ 的電視）提供配對支援。\n\n使雫能從無線除錯配對畫面擷取配對程式碼。一旦找到配對碼，它就會自動停用。</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s 不支援現代 Shizuku</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[舊式 Shizuku 已於 2019 年 3 月被棄用。此外，舊式 Shizuku 無法在較新版本的 Android 系統上工作。&lt;p&gt;請要求 &lt;b&gt;%1$s&lt;/b&gt; 的開發人員進行更新。]]></string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[舊式 Shizuku 已於 2019 年 3 月被棄用。此外，舊式 Shizuku 無法在較新版本的 Android 系統上工作。<p>請要求 <b>%1$s</b> 的開發人員進行更新。]]></string>
     <string name="dialog_requesting_legacy_title">%1$s 正在要求舊版 Shizuku</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; 支援現代 Shizuku，但它正在要求舊版 Shizuku。這可能是因為 Shizuku 未在執行，請在 Shizuku 應用程式內檢查。&lt;p&gt;舊版 Shizuku 已於 2019 年 3 月被棄用。]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> 支援現代 Shizuku，但它正在要求舊版 Shizuku。這可能是因為 Shizuku 未在執行，請在 Shizuku 應用程式內檢查。<p>舊版 Shizuku 已於 2019 年 3 月被棄用。]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">開啟 Shizuku</string>
     <string name="wadb_notification_attempt_now">現在嘗試</string>
 </resources>
