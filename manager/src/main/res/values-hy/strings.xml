@@ -5,13 +5,13 @@
     <string name="home_status_service_is_running">%1$s-ը միացված է</string>
     <string name="home_status_service_not_running">%1$s-ը միացված չէ</string>
     <string name="home_status_service_version">Փոփոխակ %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Փոփոխակ %2$s, %1$s&lt;br&gt;Միացրեք կրկին որպեսզի թարմացնեք դեպի %3$s փոփոխակ]]></string>
+    <string name="home_status_service_version_update"><![CDATA[Փոփոխակ %2$s, %1$s<br>Միացրեք կրկին որպեսզի թարմացնեք դեպի %3$s փոփոխակ]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Միացնել համակարգչի օգնությամբ]]></string>
-    <string name="home_adb_description"><![CDATA[Առանց «root» թույլտվություն ունեցող սարքերի օգտատերերը պետք է օգտագործեն adb, որպեսզի միացնեն Shizuku-ն (անհրաժեշտ է համակարգչային կապ)։ Այս գործողությունը պետք է կրկնել ամեն անգամ սարքի վերաբեռնելուց հետո։ Խնդրում ենք &lt;b&gt;&lt;a href="%1$s"&gt;կարդալ օգնությունը&lt;/a&gt;&lt;/b&gt;։]]></string>
+    <string name="home_adb_description"><![CDATA[Առանց «root» թույլտվություն ունեցող սարքերի օգտատերերը պետք է օգտագործեն adb, որպեսզի միացնեն Shizuku-ն (անհրաժեշտ է համակարգչային կապ)։ Այս գործողությունը պետք է կրկնել ամեն անգամ սարքի վերաբեռնելուց հետո։ Խնդրում ենք <b><a href="%1$s">կարդալ օգնությունը</a></b>։]]></string>
     <string name="home_adb_button_view_help">Կարդալ օգնությունը</string>
     <string name="home_adb_button_view_command">Տեսնել հրահանգը</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* Գոյություն ունեն ուրիշ դիտողություններ։ Սկզբում հաստատեք, որ կարդացել եք օգնությունը։]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Գոյություն ունեն ուրիշ դիտողություններ։ Սկզբում հաստատեք, որ կարդացել եք օգնությունը։]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Պատճենել</string>
     <string name="home_adb_dialog_view_command_button_send">Ուղարկել</string>
     <!-- Home - Wireless Adb -->
@@ -80,7 +80,7 @@
     <string name="home_adb_is_limited_description">Ձեր սարքի արտադրողը սահմանափակել է adb թույլտվությունները եւ հավելվածները, որոնք օգտագործում են Shizuku, ճիշտ չեն աշխատի:\n\nՍովորաբար այս սահմանափակումը կարելի է վերացնել՝ որոշ տարբերակներ կարգավորելով «Մշակողի ընտրանքներ» բաժնում։ Խնդրում ենք կարդալ օգնությունը մանրամասների համար, թե ինչպես դա անել:\n\nԳործողության ուժի մեջ մտնելու համար անհրաժեշտ է վերագործարկել Շիզուկուին։</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Adb-ի թույլտվությունները սահմանափակված են</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Շատ հնարավոր է, որ Ձեր սարքի արտադրողը սահմանափակել է adb-ի թույլտվությունները։ &lt;p&gt;Հնարավոր լուծումները գտեք &lt;b&gt;&lt;a href="%1$s"&gt;այստեղ&lt;/a&gt;&lt;/b&gt;։]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Շատ հնարավոր է, որ Ձեր սարքի արտադրողը սահմանափակել է adb-ի թույլտվությունները։ <p>Հնարավոր լուծումները գտեք <b><a href="%1$s">այստեղ</a></b>։]]></string>
     <string name="app_management_item_summary_requires_root">* Shizuku-ն root թույլտվություն պետք է ունենա</string>
     <string name="app_management_toggle_all">Toggle all</string>
     <!-- Terminal -->
@@ -193,13 +193,13 @@
     <string name="dialog_cannot_open_browser_title">Չհաջողվեց միացնել ինտերնետի ծրագիրը</string>
     <string name="toast_copied_to_clipboard">%s-ն
 \nպատճենվել է կցատարում։</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[&lt;b&gt;%s&lt;/b&gt;-ն պատճենվել է կցատարում։]]></string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b>-ն պատճենվել է կցատարում։]]></string>
     <string name="accessibility_service_description">Ապահովում է զուգավորման աջակցություն սարքերի համար (օրինակ՝ Android 14+ աշխատող հեռուստացույցներ), որտեղ հնարավոր չէ օգտագործել ծանուցումները կամ բաժանված էկրանը:\n\nՀնարավորություն է տալիս Shizuku-ին հանել զուգավորման կոդը անլար կարգաբերման զուգավորման էկրանից: Այն կանջատի ինքն իրեն, երբ զույգ կոդը գտնվի:</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s-ը չի ընդունում այժմյան Shizuku-ն</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[Հին Shizuku-ն համարվում է հնացած 2019-ի մարտից։ Հին Shizuku-ն չի աշխատում նոր Android-ի փոփոխակներում։&lt;p&gt;Դիմեք &lt;b&gt;%1$s&lt;/b&gt;-ի ծրագրավորողին և ասեք, որ ծրագիրը թարմացնի։]]></string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Հին Shizuku-ն համարվում է հնացած 2019-ի մարտից։ Հին Shizuku-ն չի աշխատում նոր Android-ի փոփոխակներում։<p>Դիմեք <b>%1$s</b>-ի ծրագրավորողին և ասեք, որ ծրագիրը թարմացնի։]]></string>
     <string name="dialog_requesting_legacy_title">%1$s-ն առաջարկում է օգտվել հին Shizuku-ից</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt;-ն օժտված է նոր Shizuku-ից օգտվելու հատկությունից, բայց այն փորձում է օգտվել հին Shizuku-ից։ Հնարավոր է, որ Shizuku-ն միացված չէ, ստուգեք Shizuku ծրագիրը։&lt;p&gt;Հին Shizuku-ն համարվում է հնացած 2019-ի մարտից։]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b>-ն օժտված է նոր Shizuku-ից օգտվելու հատկությունից, բայց այն փորձում է օգտվել հին Shizuku-ից։ Հնարավոր է, որ Shizuku-ն միացված չէ, ստուգեք Shizuku ծրագիրը։<p>Հին Shizuku-ն համարվում է հնացած 2019-ի մարտից։]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Բացել Shizuku-ն</string>
     <string name="wadb_notification_attempt_now">Փորձեք հիմա</string>
 </resources>
