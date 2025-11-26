@@ -5,18 +5,18 @@
     <string name="home_status_service_is_running">%1$s đang chạy</string>
     <string name="home_status_service_not_running">%1$s đang không chạy</string>
     <string name="home_status_service_version">Phiên bản %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Phiên bản %2$s, %1$s&lt;br&gt;Bắt đầu lại để cập nhật lên phiên bản %3$s]]></string>
+    <string name="home_status_service_version_update"><![CDATA[Phiên bản %2$s, %1$s<br>Bắt đầu lại để cập nhật lên phiên bản %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Bắt đầu bằng cách kết nối với máy tính]]></string>
     <string name="home_adb_description"><![CDATA[Đối với thiết bị không có root, bạn cần sử dụng adb để khởi động Shizuku (yêu cầu kết nối máy tính). Quá trình này cần được lặp lại mỗi khi thiết bị được khởi động lại. Vui lòng <b><a href="%1$s">đọc phần trợ giúp</a></b>.]]></string>
     <string name="home_adb_button_view_help">Đọc trợ giúp</string>
     <string name="home_adb_button_view_command">Xem lệnh</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* Có một số cân nhắc khác, vui lòng xác nhận rằng bạn đã đọc phần trợ giúp trước.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Có một số cân nhắc khác, vui lòng xác nhận rằng bạn đã đọc phần trợ giúp trước.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Sao chép</string>
     <string name="home_adb_dialog_view_command_button_send">Gửi</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Bắt đầu thông qua Gỡ lỗi không dây]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Trên Android 11 trở lên, bạn có thể bật tính năng Gỡ lỗi không dây và khởi động Shizuku trực tiếp từ thiết bị của mình mà không cần kết nối với máy tính.&lt;p&gt;Vui lòng xem hướng dẫn từng bước trước.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Trên Android 11 trở lên, bạn có thể bật tính năng Gỡ lỗi không dây và khởi động Shizuku trực tiếp từ thiết bị của mình mà không cần kết nối với máy tính.<p>Vui lòng xem hướng dẫn từng bước trước.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Trước Android 11, kết nối với máy tính là yêu cầu bắt buộc để bật Gỡ lỗi không dây.]]></string>
     <string name="home_wireless_adb_view_guide_button">Hướng dẫn từng bước</string>
     <!-- Adb -->
@@ -60,7 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Một số hệ thống (chẳng hạn như MIUI) không cho phép ứng dụng truy cập mạng khi chúng không hiển thị, ngay cả khi ứng dụng sử dụng dịch vụ nền trước. Vui lòng tắt các tính năng tối ưu hóa pin cho Shizuku trên các hệ thống đó.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Bắt đầu (cho các thiết bị đã root)]]></string>
-    <string name="home_root_description"><![CDATA[Ngoài ra, Shizuku có thể được khởi động tự động khi khởi động. Nếu không, vui lòng kiểm tra xem hệ thống của bạn hoặc các công cụ của bên thứ ba có hạn chế Shizuku hay không.&lt;br&gt;Bạn có thể tham khảo %s.]]></string>
+    <string name="home_root_description"><![CDATA[Ngoài ra, Shizuku có thể được khởi động tự động khi khởi động. Nếu không, vui lòng kiểm tra xem hệ thống của bạn hoặc các công cụ của bên thứ ba có hạn chế Shizuku hay không.<br>Bạn có thể tham khảo %s.]]></string>
     <string name="home_root_description_sui"><![CDATA[Nếu bạn đang sử dụng Magisk, bạn có thể thử %1$s. Đối với người dùng root, cuối cùng nó sẽ thay thế Shizuku. Lưu ý, các ứng dụng hiện có cần thay đổi một chút để sử dụng %2$s.]]></string>
     <string name="home_root_button_start">Bắt đầu</string>
     <string name="home_root_button_restart">Khởi động lại</string>
@@ -79,7 +79,7 @@
     <string name="home_adb_is_limited_description">Nhà sản xuất thiết bị của bạn đã hạn chế quyền adb và các ứng dụng sử dụng Shizuku sẽ không hoạt động bình thường.\n\nThông thường, hạn chế này có thể được gỡ bỏ bằng cách điều chỉnh một số tùy chọn trong \"Tùy chọn nhà phát triển\". Vui lòng đọc phần trợ giúp để biết chi tiết về cách thực hiện việc này.\n\nBạn có thể cần khởi động lại Shizuku để thao tác có hiệu lực.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Quyền của adb bị hạn chế</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Rất có thể nhà sản xuất thiết bị của bạn giới hạn quyền của adb.&lt;p&gt;Có thể có giải pháp cho hệ thống của bạn trong &lt;b&gt;&lt;a href="%1$s"&gt;tài liệu này&lt;/a&gt;&lt;/b&gt;.]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Rất có thể nhà sản xuất thiết bị của bạn giới hạn quyền của adb.<p>Có thể có giải pháp cho hệ thống của bạn trong <b><a href="%1$s">tài liệu này</a></b>.]]></string>
     <string name="app_management_item_summary_requires_root">* yêu cầu Shizuku chạy với root</string>
     <string name="app_management_toggle_all">Chuyển đổi tất cả</string>
     <!-- Terminal -->
@@ -94,7 +94,7 @@
     <string name="terminal_tutorial_2_description">Ví dụ, nếu bạn muốn sử dụng Shizuku trong %1$s, bạn nên thay thế %2$s bằng %3$s (%4$s là tên gói của %1$s).</string>
     <string name="terminal_tutorial_3">Cuối cùng, di chuyển các tệp đến một nơi nào đó mà ứng dụng đầu cuối của bạn có thể truy cập, bạn sẽ có thể sử dụng %1$s để chạy các lệnh thông qua Shizuku.</string>
     <string name="terminal_tutorial_3_description">Một số mẹo: cấp quyền thực thi cho %1$s và thêm quyền đó vào %2$s, bạn sẽ có thể sử dụng %1$s trực tiếp.</string>
-    <string name="rish_description"><![CDATA[Với %1$s, trong bất kỳ ứng dụng đầu cuối nào, bạn có thể kết nối và tương tác với shell do Shizuku điều hành. &lt;p&gt;Về cách sử dụng chi tiết %1$s, nhấn để xem tài liệu.]]></string>
+    <string name="rish_description"><![CDATA[Với %1$s, trong bất kỳ ứng dụng đầu cuối nào, bạn có thể kết nối và tương tác với shell do Shizuku điều hành. <p>Về cách sử dụng chi tiết %1$s, nhấn để xem tài liệu.]]></string>
     <!-- Settings -->
     <string name="settings_title">Cài đặt</string>
     <string name="settings_behavior">Hành vi</string>
@@ -196,9 +196,9 @@
     <string name="accessibility_service_description">Cung cấp hỗ trợ ghép nối cho các thiết bị (ví dụ: TV chạy Android 14 trở lên) không thể sử dụng thông báo hoặc chia đôi màn hình.\n\nCho phép Shizuku trích xuất mã ghép nối từ màn hình ghép nối gỡ lỗi không dây. Tính năng này sẽ tự tắt sau khi tìm thấy mã ghép nối.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s không hỗ trợ Shizuku hiện đại</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[Shizuku cũ không được dùng nữa kể từ tháng 3 năm 2019. Ngoài ra, Shizuku cũ không hoạt động trên các hệ thống Android mới hơn.&lt;p&gt;Vui lòng yêu cầu nhà phát triển của &lt;b&gt;%1$s&lt;/b&gt; cập nhật.]]></string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Shizuku cũ không được dùng nữa kể từ tháng 3 năm 2019. Ngoài ra, Shizuku cũ không hoạt động trên các hệ thống Android mới hơn.<p>Vui lòng yêu cầu nhà phát triển của <b>%1$s</b> cập nhật.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s đang yêu cầu Shizuku cũ</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; có hỗ trợ Shizuku hiện đại, nhưng nó yêu cầu Shizuku cũ. Điều này có thể do Shizuku đang không chạy, vui lòng kiểm tra ứng dụng Shizuku.&lt;p&gt;Shizuku cũ không được dùng nữa kể từ tháng 3 năm 2019.]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> có hỗ trợ Shizuku hiện đại, nhưng nó yêu cầu Shizuku cũ. Điều này có thể do Shizuku đang không chạy, vui lòng kiểm tra ứng dụng Shizuku.<p>Shizuku cũ không được dùng nữa kể từ tháng 3 năm 2019.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Mở Shizuku</string>
     <string name="wadb_notification_attempt_now">Thử ngay bây giờ</string>
 </resources>
