@@ -5,18 +5,18 @@
     <string name="home_status_service_is_running">%1$s davam edir</string>
     <string name="home_status_service_not_running">%1$s davam etmir</string>
     <string name="home_status_service_version">Versiya %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Versiya %2$s, %1$s &lt;br&gt; %3$s Versiyasına güncəlləmək üçün proqramı yenidən başladın]]></string>
+    <string name="home_status_service_version_update"><![CDATA[Versiya %2$s, %1$s <br> %3$s Versiyasına güncəlləmək üçün proqramı yenidən başladın]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Kompüterə qoşularaq başlayın]]></string>
     <string name="home_adb_description"><![CDATA[Root olmayan cihazlarda Shizuku-nu işə salmaq üçün adb-dən istifadə etməlisiniz (kompüter bağlantısı tələb olunur). Cihaz hər dəfə yenidən işə salındıqda bu proses təkrarlanmalıdır. Lütfən, <b><a href="%1$s">yardımı oxuyun</a></b>.]]></string>
     <string name="home_adb_button_view_help">Yardım</string>
     <string name="home_adb_button_view_command">Əmirə baxın</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* Bəzi başqa mülahizələr də var, lütfən, əvvəlcə yardımı oxuduğunuzu təsdiqləyin.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Bəzi başqa mülahizələr də var, lütfən, əvvəlcə yardımı oxuduğunuzu təsdiqləyin.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Kopyala</string>
     <string name="home_adb_dialog_view_command_button_send">Göndər</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Simsiz debaq ilə başladın]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Android 11 və ya daha yuxarı versiyalarda siz Simsiz debaqı aktivləşdirə və kompüterə qoşulmadan Shizuku-nu birbaşa cihazınızdan başlada bilərsiniz.&lt;p&gt;Lütfən, əvvəlcə addım-addım təlimata baxın.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Android 11 və ya daha yuxarı versiyalarda siz Simsiz debaqı aktivləşdirə və kompüterə qoşulmadan Shizuku-nu birbaşa cihazınızdan başlada bilərsiniz.<p>Lütfən, əvvəlcə addım-addım təlimata baxın.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Android 11 - dən aşağı android versiyalarında simsiz debaq üçün kompüterə bağlanmaq mütləqdir]]></string>
     <string name="home_wireless_adb_view_guide_button">Addım-Addım Təlimat</string>
     <!-- Adb -->
@@ -60,7 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bəzi sistemlər (məsələn, MIUI) proqramlar görünmədikdə, hətta proqram ön planda xidmətdən istifadə etsə belə, onların şəbəkəyə daxil olmasına icazə vermir. Zəhmət olmasa belə sistemlərdə Shizuku üçün batareyanın optimallaşdırılması funksiyalarını söndürün.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (root edilmiş cihazlar üçün)]]></string>
-    <string name="home_root_description"><![CDATA[Bundan əlavə, Shizuku yüklənərkən avtomatik olaraq işə salına bilər. Əks-təqdirdə , sisteminizin və ya üçüncü tərəf alətlərin Shizuku-nu məhdudlaşdırıb-məhdudlaşdırdığını yoxlayın.&lt;br&gt;Siz %s-ə müraciət edə bilərsiniz.]]></string>
+    <string name="home_root_description"><![CDATA[Bundan əlavə, Shizuku yüklənərkən avtomatik olaraq işə salına bilər. Əks-təqdirdə , sisteminizin və ya üçüncü tərəf alətlərin Shizuku-nu məhdudlaşdırıb-məhdudlaşdırdığını yoxlayın.<br>Siz %s-ə müraciət edə bilərsiniz.]]></string>
     <string name="home_root_description_sui"><![CDATA[Magisk istifadə edirsinizsə, cəhd edə bilərsiniz %1$s. Kök istifadəçiləri üçün o, nəticədə Shizuku-nu əvəz edəcək. Qeyd edək ki, %2$sistifadə etmək üçün mövcud proqramlar bir az dəyişməlidir.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yenidən Başlat</string>
@@ -80,7 +80,7 @@
     <string name="home_adb_is_limited_description">Cihaz istehsalçınız adb icazələrini məhdudlaşdırıb və Shizuku istifadə edən tətbiqlər düzgün işləməyəcək.\n\nAdətən, bu məhdudiyyət \"İnkişaf etdirici seçimləri\"ndə bəzi seçimləri tənzimləməklə aradan qaldırıla bilər. Bunun necə ediləcəyi barədə ətraflı məlumat üçün zəhmət olmasa, köməkçi səhifəni oxuyun.\n\nƏməliyyatın təsir etməsi üçün Shizuku-nu yenidən başlatmaq lazım ola bilər.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">adb icazəsi məhduddur</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Çox güman ki, cihazınızın istehsalçısı adb icazəsini məhdudlaşdırır.&lt;p&gt;Sisteminiz üçün &lt;b&gt;&lt;a href="%1$s"&gt;bu sənəddə&lt;/a&gt;&lt;/b&gt; həll yolu ola bilər.]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Çox güman ki, cihazınızın istehsalçısı adb icazəsini məhdudlaşdırır.<p>Sisteminiz üçün <b><a href="%1$s">bu sənəddə</a></b> həll yolu ola bilər.]]></string>
     <string name="app_management_item_summary_requires_root">* Shizuku rootla işləməsini tələb edir</string>
     <string name="app_management_toggle_all">Hamısını dəyiş</string>
     <!-- Terminal -->
@@ -95,7 +95,7 @@
     <string name="terminal_tutorial_2_description">Məsələn, %1$s-da Shizuku-dan istifadə etmək istəyirsinizsə, %2$s-ı %3$s ilə əvəz etməlisiniz (%4$s %1$s paketinin adıdır).</string>
     <string name="terminal_tutorial_3">Nəhayət, faylları terminal proqramınızın daxil ola biləcəyi yerə köçürün, Shizuku vasitəsilə əmrləri yerinə yetirmək üçün %1$s-dan istifadə edə biləcəksiniz.</string>
     <string name="terminal_tutorial_3_description">Bəzi məsləhətlər: %1$s-a icra icazəsi verin və onu %2$s-a əlavə edin, siz birbaşa %1$s-dan istifadə edə biləcəksiniz.</string>
-    <string name="rish_description"><![CDATA[%1$s ilə istənilən terminal proqramında siz Shizuku tərəfindən hazırlanmış shell-lərə qoşula və onlarla əlaqə saxlaya bilərsiniz. &lt;p&gt;Ətraflı istifadə %1$s haqqında sənədə baxmaq üçün toxunun.]]></string>
+    <string name="rish_description"><![CDATA[%1$s ilə istənilən terminal proqramında siz Shizuku tərəfindən hazırlanmış shell-lərə qoşula və onlarla əlaqə saxlaya bilərsiniz. <p>Ətraflı istifadə %1$s haqqında sənədə baxmaq üçün toxunun.]]></string>
     <!-- Settings -->
     <string name="settings_title">Parametrlər</string>
     <string name="settings_behavior">Davranış</string>
@@ -197,9 +197,9 @@
     <string name="accessibility_service_description">Bildirişlərin və ya bölünmüş ekranın istifadə olunmadığı cihazlar (məsələn, Android 14+ işləyən televizorlar) üçün cütləşdirmə dəstəyi təmin edir.\n\nShizuku-ya simsiz debugging cütləşdirmə ekranından cütləşdirmə kodunu çıxarmağa imkan verir. Cütləşdirmə kodu tapıldıqdan sonra özünü deaktiv edəcək.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s müasir Shizukunu dəstəkləmir</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[Köhnə Shizuku 2019-cu ilin mart ayından ləğv edilib. Həmçinin, köhnə Shizuku daha yeni Android sistemlərində işləmir.&lt;p&gt;Lütfən, &lt;b&gt;%1$s&lt;/b&gt; tərtibatçısından yeniləməsini xahiş edin.]]></string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Köhnə Shizuku 2019-cu ilin mart ayından ləğv edilib. Həmçinin, köhnə Shizuku daha yeni Android sistemlərində işləmir.<p>Lütfən, <b>%1$s</b> tərtibatçısından yeniləməsini xahiş edin.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s köhnə Şizuku tələb edir</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; müasir Shizuku dəstəyinə malikdir, lakin o, köhnə Şizuku tələb edir. Bu, Shizuku işləmədiyinə görə ola bilər, lütfən, Shizuku proqramında yoxlayın.&lt;p&gt;Legacy Shizuku 2019-cu ilin mart ayından etibarən köhnəlib]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> müasir Shizuku dəstəyinə malikdir, lakin o, köhnə Şizuku tələb edir. Bu, Shizuku işləmədiyinə görə ola bilər, lütfən, Shizuku proqramında yoxlayın.<p>Legacy Shizuku 2019-cu ilin mart ayından etibarən köhnəlib]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Shizukunu aç</string>
     <string name="wadb_notification_attempt_now">İndi cəhd et</string>
 </resources>
