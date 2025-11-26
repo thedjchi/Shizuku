@@ -5,18 +5,18 @@
     <string name="home_status_service_is_running">%1$s teče</string>
     <string name="home_status_service_not_running">%1$s ne teče</string>
     <string name="home_status_service_version">Verzija %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Verzija %2$s, %1$s&lt;br&gt;Začni znova za posodobitev na verzijo %3$s]]></string>
+    <string name="home_status_service_version_update"><![CDATA[Verzija %2$s, %1$s<br>Začni znova za posodobitev na verzijo %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Začni z povezovanjem na računalnik]]></string>
     <string name="home_adb_description"><![CDATA[Za naprave brez root-a, potrebujete adb, da zaženete Shizuku (potrebna je računalniška povezava). Ta proces je potrebno ponoviti vsakič, ko se naprava ponovno zažene. Prosimo <b><a href="%1$s">preberite pomoč</a></b>.]]></string>
     <string name="home_adb_button_view_help">Preberite pomoč</string>
     <string name="home_adb_button_view_command">Pokaži ukaz</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* Obstaja nekaj premislekov. Prosimo, potrdite, da ste najprej prebrali pomoč.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Obstaja nekaj premislekov. Prosimo, potrdite, da ste najprej prebrali pomoč.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Kopiraj</string>
     <string name="home_adb_dialog_view_command_button_send">Pošlji</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Začni preko Brezžičnega razhroščevanja]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Na Androidu 11 ali več, lahko vklopite Brezžično razhroščevanje in začnete Shizuku direktno iz vaše naprave, brez povezovanja na računalnik.&lt;p&gt;Prosimo, najprej poglejte vodnik po korakih.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Na Androidu 11 ali več, lahko vklopite Brezžično razhroščevanje in začnete Shizuku direktno iz vaše naprave, brez povezovanja na računalnik.<p>Prosimo, najprej poglejte vodnik po korakih.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Pred Androidom 11, je povezava z računalnikom potrebna, da omogočite Brezžično razhroščevanje.]]></string>
     <string name="home_wireless_adb_view_guide_button">Vodnik po korakih</string>
     <!-- Adb -->

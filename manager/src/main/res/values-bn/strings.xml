@@ -5,7 +5,7 @@
     <string name="home_status_service_is_running">%1$s চলমান</string>
     <string name="home_status_service_not_running">%1$s চলছে না</string>
     <string name="home_status_service_version">সংস্করণ %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[সংস্করণ %2$s, %1$s&lt;br&gt; %3$s সংস্করণে নবায়ন করতে আবার শুরু করুন]]></string>
+    <string name="home_status_service_version_update"><![CDATA[সংস্করণ %2$s, %1$s<br> %3$s সংস্করণে নবায়ন করতে আবার শুরু করুন]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[একটি কম্পিউটার এ সংযোগ প্রদানের মাধ্যমে শুরু করুন]]></string>
     <string name="home_adb_description"><![CDATA[রুট ছাড়া ডিভাইসগুলির জন্য, শিজুকু শুরু করতে আপনাকে adb ব্যবহার করতে হবে (কম্পিউটার সংযোগ প্রয়োজন)। প্রতিবার ডিভাইসটি পুনঃশুরু করার সময় এই প্রক্রিয়াটি পুনরাবৃত্তি করা প্রয়োজন। অনুগ্রহ করে <b><a href=\"%1$s\">সাহায্য পড়ুন</a></b>.]]></string>

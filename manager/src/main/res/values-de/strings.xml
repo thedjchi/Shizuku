@@ -5,18 +5,18 @@
     <string name="home_status_service_is_running">%1$s läuft</string>
     <string name="home_status_service_not_running">%1$s wird nicht ausgeführt</string>
     <string name="home_status_service_version">Version %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Version %2$s, %1$s&lt;br&gt;Erneut starten, um auf Version %3$s zu aktualisieren]]></string>
+    <string name="home_status_service_version_update"><![CDATA[Version %2$s, %1$s<br>Erneut starten, um auf Version %3$s zu aktualisieren]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Verbindung mit dem Compter herstellen]]></string>
     <string name="home_adb_description"><![CDATA[Bei Geräten ohne Root müssen Sie adb verwenden, um Shizuku zu starten (erfordert Computerverbindung). Dieser Vorgang muss bei jedem Neustart des Geräts wiederholt werden. Bitte <b><a href="%1$s">die Hilfe lesen</a></b>.]]></string>
     <string name="home_adb_button_view_help">Hilfe lesen</string>
     <string name="home_adb_button_view_command">Befehl anzeigen</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* Es gibt noch einige andere Überlegungen, bitte vergewissern, dass Sie zuerst die Hilfe gelesen haben.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Es gibt noch einige andere Überlegungen, bitte vergewissern, dass Sie zuerst die Hilfe gelesen haben.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Kopieren</string>
     <string name="home_adb_dialog_view_command_button_send">Senden</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Über Wireless-Debugging starten]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Unter Android 11 oder höher können Sie Wireless Debugging aktivieren und Shizuku direkt von Ihrem Gerät aus starten, ohne eine Verbindung zu einem Computer herzustellen.&lt;p&gt;Bitte zuerst die Schritt-für-Schritt-Anleitung ansehen.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Unter Android 11 oder höher können Sie Wireless Debugging aktivieren und Shizuku direkt von Ihrem Gerät aus starten, ohne eine Verbindung zu einem Computer herzustellen.<p>Bitte zuerst die Schritt-für-Schritt-Anleitung ansehen.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Vor Android 11 ist eine Verbindung zu einem Computer erforderlich, um Wireless Debugging zu aktivieren.]]></string>
     <string name="home_wireless_adb_view_guide_button">Schritt-für-Schritt-Anleitung</string>
     <!-- Adb -->
@@ -60,7 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Manche Systeme (wie z. B. MIUI) verhindern, dass Apps auf das Netzwerk zugreifen, wenn sie nicht sichtbar sind, selbst wenn die App einen Vordergrunddienst nutzt. Bitte deaktivieren Sie die Akkuoptimierungsfunktionen für Shizuku auf solchen Systemen.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (für gerootete Geräte)]]></string>
-    <string name="home_root_description"><![CDATA[Außerdem kann Shizuku beim Booten automatisch gestartet werden. Wenn nicht, überprüfen Sie bitte, ob Ihr System oder Tools von Drittanbietern Shizuku eingeschränkt haben.&lt;br&gt;Sie können auf %s verweisen.]]></string>
+    <string name="home_root_description"><![CDATA[Außerdem kann Shizuku beim Booten automatisch gestartet werden. Wenn nicht, überprüfen Sie bitte, ob Ihr System oder Tools von Drittanbietern Shizuku eingeschränkt haben.<br>Sie können auf %s verweisen.]]></string>
     <string name="home_root_description_sui"><![CDATA[Wenn Sie Magisk verwenden, können Sie %1$sausprobieren. Für Root-Benutzer wird es Shizuku zukünftig ersetzen. Beachten Sie, dass bestehende Anwendungen geringfügig angepasst werden müssen, um %2$szu verwenden.]]></string>
     <string name="home_root_button_start">Anfangen</string>
     <string name="home_root_button_restart">Neustart</string>
@@ -84,7 +84,7 @@
 \nEventuell müssen Sie Shizuku neustarten, damit die Änderungen angewandt werden.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">ADB-Berechtigungen sind begrenzt</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Es ist sehr wahrscheinlich, dass Ihr Gerätehersteller die Berechtigung von adb einschränkt. &lt;p&gt;Vielleicht finden Sie in &lt;b&gt;&lt;a href="%1$s"&gt;diesem Dokument&lt;/a&gt;&lt;/b&gt; eine Lösung für Ihr System.]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Es ist sehr wahrscheinlich, dass Ihr Gerätehersteller die Berechtigung von adb einschränkt. <p>Vielleicht finden Sie in <b><a href="%1$s">diesem Dokument</a></b> eine Lösung für Ihr System.]]></string>
     <string name="app_management_item_summary_requires_root">* erfordert, dass Shizuku mit Root läuft</string>
     <string name="app_management_toggle_all">Alle umschalten</string>
     <!-- Terminal -->
@@ -99,7 +99,7 @@
     <string name="terminal_tutorial_2_description">Wenn Sie beispielsweise Shizuku in %1$s verwenden möchten, sollten Sie %2$s durch %3$s ersetzen (%4$s ist der Paketname von %1$s).</string>
     <string name="terminal_tutorial_3">Zum Schluss verschieben Sie die Dateien an einen Ort, auf den Ihre Terminal-App zugreifen kann, damit Sie mit %1$s Befehle über Shizuku ausführen können.</string>
     <string name="terminal_tutorial_3_description">Einige Tipps: %1$s die Ausführungsberechtigung erteilen und zu %2$s hinzufügen, dann können Sie %1$s direkt verwenden.</string>
-    <string name="rish_description"><![CDATA[Mit %1$s können Sie in jeder Terminal-App eine Verbindung zur Shell von Shizuku herstellen und mit ihr interagieren. &lt;p&gt;Zur detaillierten Verwendung von %1$s tippen, um das Dokument anzuzeigen.]]></string>
+    <string name="rish_description"><![CDATA[Mit %1$s können Sie in jeder Terminal-App eine Verbindung zur Shell von Shizuku herstellen und mit ihr interagieren. <p>Zur detaillierten Verwendung von %1$s tippen, um das Dokument anzuzeigen.]]></string>
     <!-- Settings -->
     <string name="settings_title">Einstellungen</string>
     <string name="settings_behavior">Benehmen</string>
@@ -201,9 +201,9 @@
     <string name="accessibility_service_description">Bietet Koppelungsunterstützung für Geräte (z. B. Fernseher mit Android 14+), bei denen Benachrichtigungen oder Splitscreen nicht verwendet werden können.\n\nErmöglicht es Shizuku, den Pairing-Code aus dem drahtlosen Debugging-Pairing-Bildschirm zu extrahieren. Sobald der Pairing-Code gefunden ist, wird er sich selbst deaktivieren.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s unterstützt das moderne Shizuku nicht</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[Legacy Shizuku ist seit März 2019 veraltet. Außerdem funktioniert Legacy Shizuku nicht auf neueren Android-Systemen.&lt;p&gt;Bitte bitten Sie den Entwickler von &lt;b&gt;%1$s&lt;/b&gt; es zu aktualisieren.]]></string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[Legacy Shizuku ist seit März 2019 veraltet. Außerdem funktioniert Legacy Shizuku nicht auf neueren Android-Systemen.<p>Bitte bitten Sie den Entwickler von <b>%1$s</b> es zu aktualisieren.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s bittet um Legacy Shizuku</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; hat moderne Shizuku-Unterstützung, aber es fordert Legacy Shizuku an. Dies könnte daran liegen, dass Shizuku nicht läuft. Bitte in der Shizuku-App überprüfen.&lt;p&gt;Legacy Shizuku wird seit März 2019 nicht mehr unterstützt.]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> hat moderne Shizuku-Unterstützung, aber es fordert Legacy Shizuku an. Dies könnte daran liegen, dass Shizuku nicht läuft. Bitte in der Shizuku-App überprüfen.<p>Legacy Shizuku wird seit März 2019 nicht mehr unterstützt.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Shizuku öffnen</string>
     <string name="wadb_notification_attempt_now">Jetzt versuchen</string>
 </resources>

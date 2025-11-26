@@ -11,7 +11,7 @@
     <string name="home_adb_description"><![CDATA[Root nélküli eszközök esetén az adb-t kell használnia a Shizuku elindításához (számítógépes kapcsolat szükséges). Ezt a folyamatot minden alkalommal meg kell ismételni az eszköz újraindításakor. Kérem <b><a href=\"%1$s\">olvassa el a súgót</a></b>.]]></string>
     <string name="home_adb_button_view_help">Olvassa el a súgót</string>
     <string name="home_adb_button_view_command">Parancs megtekintés</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* Vannak más szempontok is, kérjük erősítse meg, hogy először elolvasta a súgót.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Vannak más szempontok is, kérjük erősítse meg, hogy először elolvasta a súgót.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Másolás</string>
     <string name="home_adb_dialog_view_command_button_send">Küldés</string>
     <!-- Home - Wireless Adb -->

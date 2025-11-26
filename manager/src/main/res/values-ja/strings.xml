@@ -5,18 +5,18 @@
     <string name="home_status_service_is_running">%1$s は実行中</string>
     <string name="home_status_service_not_running">%1$s は停止中</string>
     <string name="home_status_service_version">バージョン %2$s、 %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[バージョン %2$s, %1$s&lt;br&gt;バージョン %3$s にアップデートするには、再度起動してください]]></string>
+    <string name="home_status_service_version_update"><![CDATA[バージョン %2$s, %1$s<br>バージョン %3$s にアップデートするには、再度起動してください]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[コンピュータに接続して開始する]]></string>
     <string name="home_adb_description"><![CDATA[root権限を持たないデバイスの場合、adbを使ってShizukuを起動する必要があります（コンピュータへの接続が必要）。この作業は、端末を再起動するたびに繰り返す必要があります。<b><a href="%1$s">詳しくはヘルプをお読みください</a></b>。]]></string>
     <string name="home_adb_button_view_help">ヘルプ</string>
     <string name="home_adb_button_view_command">コマンドを表示する</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* 他にもいくつか注意点がありますので、まずはヘルプを読んで確認してください。]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* 他にもいくつか注意点がありますので、まずはヘルプを読んで確認してください。]]></string>
     <string name="home_adb_dialog_view_command_copy_button">コピー</string>
     <string name="home_adb_dialog_view_command_button_send">送信</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[ワイヤレスデバッグで開始]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Android 11以上ではワイヤレスデバッグを有効にして、コンピュータに接続することなくデバイスから直接Shizukuを起動できます。&lt;p&gt;詳しくはガイドをご覧ください。]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Android 11以上ではワイヤレスデバッグを有効にして、コンピュータに接続することなくデバイスから直接Shizukuを起動できます。<p>詳しくはガイドをご覧ください。]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Android 11以前では、ワイヤレスデバッグを有効にするためにパソコンとの接続が必要です。]]></string>
     <string name="home_wireless_adb_view_guide_button">ガイド</string>
     <!-- Adb -->
@@ -60,7 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">一部のシステム(MIUIなど)は、アプリがフォアグラウンドサービスを使っていても、見えないアプリがネットワークにアクセスすることを許可しません。そのようなシステムでは、しずくのバッテリー最適化機能を無効にしてください。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[開始(Root化された端末の場合のみ)]]></string>
-    <string name="home_root_description"><![CDATA[また、起動時にShizukuを自動的に起動することもできます。もし、起動しない場合は、システムやサードパーティのツールがShizukuを制限していないか確認してください。&lt;br&gt;一部古い情報ですが%sを参考にしてください。]]></string>
+    <string name="home_root_description"><![CDATA[また、起動時にShizukuを自動的に起動することもできます。もし、起動しない場合は、システムやサードパーティのツールがShizukuを制限していないか確認してください。<br>一部古い情報ですが%sを参考にしてください。]]></string>
     <string name="home_root_description_sui"><![CDATA[Magiskを使っているなら試してみてはどうでしょうか %1$s.ルートユーザーにとっては、いずれ雫の代わりになるでしょう。既存のアプリケーションは少し変更が必要ですが、使うには少し変更が必要です %2$s.]]></string>
     <string name="home_root_button_start">開始</string>
     <string name="home_root_button_restart">再起動</string>
@@ -83,7 +83,7 @@
 \n操作を有効にするために､ Shizukuを再起動する必要がある場合があります。</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">adbの権限が制限されています</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[端末の製造元がadbの権限を制限している可能性が高いです。&lt;p&gt; &lt;b&gt;&lt;a href="%1$s"&gt;このドキュメント&lt;/a&gt;&lt;/b&gt;の中に、あなたのシステムに合った解決策があるかもしれません。]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[端末の製造元がadbの権限を制限している可能性が高いです。<p> <b><a href="%1$s">このドキュメント</a></b>の中に、あなたのシステムに合った解決策があるかもしれません。]]></string>
     <string name="app_management_item_summary_requires_root">* root権限でShizukuを実行する必要があります</string>
     <string name="app_management_toggle_all">すべて切り替え</string>
     <!-- Terminal -->
@@ -98,7 +98,7 @@
     <string name="terminal_tutorial_2_description">例えば、%1$sでShizukuを使いたい場合は、%2$sを%3$sに置き換えてください（%4$sは%1$sのパッケージ名です）。</string>
     <string name="terminal_tutorial_3">最後に、ファイルをターミナルアプリがアクセスできる場所に移動させると、%1$sを使ってShizukuでコマンドを実行できるようになります。</string>
     <string name="terminal_tutorial_3_description">ヒント: %1$s に実行権限を与え、それを %2$s に追加すると、%1$s を直接使用できるようになります。</string>
-    <string name="rish_description"><![CDATA[%1$sを使えば、任意のターミナルアプリで、Shizukuが実行するシェルに接続し、対話することができます。&lt;p&gt;詳しい使い方については、%1$sをタップするとドキュメントが表示されます。]]></string>
+    <string name="rish_description"><![CDATA[%1$sを使えば、任意のターミナルアプリで、Shizukuが実行するシェルに接続し、対話することができます。<p>詳しい使い方については、%1$sをタップするとドキュメントが表示されます。]]></string>
     <!-- Settings -->
     <string name="settings_title">設定</string>
     <string name="settings_behavior">行動</string>
@@ -170,7 +170,7 @@
     <!-- Permission related, appears in system permission UI -->
     <string name="permission_label">Shizukuにアクセスする</string>
     <string name="permission_description">アプリでShizukuの使用を許可します。</string>
-    <string name="permission_warning_template"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt; に「%2$s」を許可しますか？]]></string>
+    <string name="permission_warning_template"><![CDATA[<b>%1$s</b> に「%2$s」を許可しますか？]]></string>
     <string name="grant_dialog_button_allow_always">常に許可</string>
     <string name="grant_dialog_button_deny">"許可しない"</string>
     <!-- Starter -->
@@ -196,13 +196,13 @@
     <string name="dialog_cannot_open_browser_title">ブラウザが起動することができません</string>
     <string name="toast_copied_to_clipboard">%s
 \nはクリップボードにコピーされました。</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[&lt;b&gt;%s&lt;/b&gt; はクリップボードにコピーされました。]]></string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> はクリップボードにコピーされました。]]></string>
     <string name="accessibility_service_description">通知や分割画面が使用できないデバイス（例：Android 14以降を搭載したテレビ）のペアリングサポートを提供します。\n\nShizukuがワイヤレスデバッグペアリング画面からペアリングコードを抽出できるようにします。ペアリングコードが見つかると、Shizukuは自動的に無効になります。</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s は最新の Shizuku をサポートしていません</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[古いバージョンのShizukuは2019年3月より非推奨となりました。また、古いバージョンのShizukuは新しいAndroidシステムでは動作しません。&lt;p&gt;&lt;b&gt;%1$s&lt;/b&gt;の開発者にアップデートを依頼してください。]]></string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[古いバージョンのShizukuは2019年3月より非推奨となりました。また、古いバージョンのShizukuは新しいAndroidシステムでは動作しません。<p><b>%1$s</b>の開発者にアップデートを依頼してください。]]></string>
     <string name="dialog_requesting_legacy_title">%1$s は古いバージョンのShizukuを要求しています</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt;は最新のShizukuをサポートしていますが、古いバージョンのShizukuを要求しています。これは、Shizukuが実行されていない可能性があります。Shizukuアプリで確認してください。&lt;p&gt;古いバージョンのShizukuは2019年3月から非推奨となっています。]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b>は最新のShizukuをサポートしていますが、古いバージョンのShizukuを要求しています。これは、Shizukuが実行されていない可能性があります。Shizukuアプリで確認してください。<p>古いバージョンのShizukuは2019年3月から非推奨となっています。]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Shizukuを開く</string>
     <string name="wadb_notification_attempt_now">今すぐ試す</string>
 </resources>
