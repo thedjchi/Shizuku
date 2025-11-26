@@ -5,18 +5,18 @@
     <string name="home_status_service_is_running">%1$s가 실행 중입니다</string>
     <string name="home_status_service_not_running">%1$s가 실행 중이 아닙니다</string>
     <string name="home_status_service_version">%1$s, 버전 %2$s</string>
-    <string name="home_status_service_version_update"><![CDATA[%1$s, 버전 %2$s&lt;br&gt;다시 시작하여 버전 %3$s로 업데이트]]></string>
+    <string name="home_status_service_version_update"><![CDATA[%1$s, 버전 %2$s<br>다시 시작하여 버전 %3$s로 업데이트]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[컴퓨터에 연결하여 시작]]></string>
     <string name="home_adb_description"><![CDATA[루링 없이 Shizuku를 시작하기 위해 adb가 필요합니다. (컴퓨터 연결 필수) 이 작업은 다시 시작 시 마다 필요로 합니다. 자세한 정보는 <b><a href="%1$s">도움말</a></b>을 확인하세요.]]></string>
     <string name="home_adb_button_view_help">도움말 읽기</string>
     <string name="home_adb_button_view_command">명령어 보기</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[&lt;font face=monospace&gt;%1$s&lt;/font&gt;&lt;br&gt;&lt;br&gt;* 몇 가지 다른 참고 사항이 있으므로, 도움말을 먼저 확인하세요.]]></string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* 몇 가지 다른 참고 사항이 있으므로, 도움말을 먼저 확인하세요.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">복사</string>
     <string name="home_adb_dialog_view_command_button_send">보내기</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[무선 디버깅으로 시작]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Android 11 또는 그 이상 버전에서는 컴퓨터에 연결하지 않아도 무선 디버깅을 활성화하하여 기기에서 직접 Shizuku를 시작할 수 있습니다.&lt;p&gt;단계별 가이드를 먼저 확인하세요.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Android 11 또는 그 이상 버전에서는 컴퓨터에 연결하지 않아도 무선 디버깅을 활성화하하여 기기에서 직접 Shizuku를 시작할 수 있습니다.<p>단계별 가이드를 먼저 확인하세요.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Android 11 이전에서는 무선 디버깅을 활성화하기 위해 컴퓨터에 연결해야 합니다.]]></string>
     <string name="home_wireless_adb_view_guide_button">단계별 가이드</string>
     <!-- Adb -->
@@ -60,7 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">일부 시스템(예: MIUI)은 앱이 포그라운드 서비스를 사용하더라도 보이지 않으면 네트워크에 접속하지 못하게 합니다. 해당 시스템에서는 시즈쿠의 배터리 최적화 기능을 비활성화해 주세요.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[시작 (루팅된 기기용)]]></string>
-    <string name="home_root_description"><![CDATA[Shizuku는 부팅 시 자동으로 시작됩니다. 그렇지 않을 경우, 시스템 또는 제 3자 도구에서 Shizuku를 제한하고 있는지 확인하세요.&lt;br&gt;%s를 참조할 수 있습니다.]]></string>
+    <string name="home_root_description"><![CDATA[Shizuku는 부팅 시 자동으로 시작됩니다. 그렇지 않을 경우, 시스템 또는 제 3자 도구에서 Shizuku를 제한하고 있는지 확인하세요.<br>%s를 참조할 수 있습니다.]]></string>
     <string name="home_root_description_sui"><![CDATA[Magisk를 사용 중이라면 시도해 볼 수 있습니다 %1$s. 루트 사용자에게는 결국 시즈쿠를 대체할 것입니다. 참고로, 기존 애플리케이션은 사용하려면 약간의 변경이 필요합니다 %2$s.]]></string>
     <string name="home_root_button_start">시작</string>
     <string name="home_root_button_restart">재시작</string>
@@ -83,7 +83,7 @@
 \n작업을 적용하려면 Shizuku를 다시 시작해야 할 수도 있습니다.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">ADB의 권한이 제한됨</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[기기 제조사에서 ADB의 권한을 제한하고 있을 가능성이 높습니다.&lt;p&gt;&lt;b&gt;&lt;a href="%1$s"&gt;이 문서&lt;/a&gt;&lt;/b&gt;에 시스템에 대한 해결 방안이 있을 수 있습니다.]]></string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[기기 제조사에서 ADB의 권한을 제한하고 있을 가능성이 높습니다.<p><b><a href="%1$s">이 문서</a></b>에 시스템에 대한 해결 방안이 있을 수 있습니다.]]></string>
     <string name="app_management_item_summary_requires_root">* 루트 권한으로 실행된 Shizuku 필요</string>
     <string name="app_management_toggle_all">모두 전환</string>
     <!-- Terminal -->
@@ -98,7 +98,7 @@
     <string name="terminal_tutorial_2_description">예를 들어, %1$s에서 Shizuku를 사용하려면 %2$s를 %3$s로 바꿔야 합니다(%4$s는 %1$s의 패키지 이름입니다).</string>
     <string name="terminal_tutorial_3">마지막으로 터미널 앱이 액세스할 수 있는 위치로 파일을 이동하면 %1$s를 사용하여 Shizuku를 통해 명령을 실행할 수 있습니다.</string>
     <string name="terminal_tutorial_3_description">몇 가지 팁: %1$s에 실행 권한을 부여하고 %2$s에 추가하면 %1$s를 직접 사용할 수 있습니다.</string>
-    <string name="rish_description"><![CDATA[%1$s를 사용하면 모든 터미널 앱에서 Shizuku가 실행하는 셸에 연결하고 상호 작용할 수 있습니다. &lt;p&gt;자세한 사용법 %1$s에 대해 문서를 보려면 탭하세요.]]></string>
+    <string name="rish_description"><![CDATA[%1$s를 사용하면 모든 터미널 앱에서 Shizuku가 실행하는 셸에 연결하고 상호 작용할 수 있습니다. <p>자세한 사용법 %1$s에 대해 문서를 보려면 탭하세요.]]></string>
     <!-- Settings -->
     <string name="settings_title">설정</string>
     <string name="settings_behavior">행동</string>
@@ -196,13 +196,13 @@
     <string name="dialog_cannot_open_browser_title">브라우저를 실행할 수 없음</string>
     <string name="toast_copied_to_clipboard">%s
 \n클립보드로 복사됨.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[&lt;b&gt;%s&lt;/b&gt;가 클립보드로 복사되었습니다.]]></string>
+    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b>가 클립보드로 복사되었습니다.]]></string>
     <string name="accessibility_service_description">알림이나 분할 화면을 사용할 수 없는 기기(예: Android 14 이상을 실행하는 TV)에 대한 페어링 지원을 제공합니다.\n\nShizuku가 무선 디버깅 페어링 화면에서 페어링 코드를 추출할 수 있도록 합니다. 페어링 코드를 찾으면 Shizuku가 자동으로 비활성화됩니다.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s는 최신 Shizuku를 지원하지 않음</string>
-    <string name="dialog_legacy_not_support_message"><![CDATA[구형 Shizuku는 2019년 3월에 지원이 중단되었습니다. 또한, 구형 Shizuku는 새로운 안드로이드 시스템에서 동작하지 않습니다.&lt;p&gt;&lt;b&gt;%1$s&lt;/b&gt; 개발자에게 업데이트를 문의하세요.]]></string>
+    <string name="dialog_legacy_not_support_message"><![CDATA[구형 Shizuku는 2019년 3월에 지원이 중단되었습니다. 또한, 구형 Shizuku는 새로운 안드로이드 시스템에서 동작하지 않습니다.<p><b>%1$s</b> 개발자에게 업데이트를 문의하세요.]]></string>
     <string name="dialog_requesting_legacy_title">%1$s가 구형 Shizuku를 요청하고 있음</string>
-    <string name="dialog_requesting_legacy_message"><![CDATA[&lt;b&gt;%1$s&lt;/b&gt;가 최신 Shizuku를 지원하지만, 구형 Shizuku를 요청하고 있습니다. Shizuku가 실행 중이지 않아서 발생할 수 있으니 Shizuku 앱에서 확인하세요.&lt;p&gt;구형 Shizuku는 2019년 3월 부터 지원이 중단되었습니다.]]></string>
+    <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b>가 최신 Shizuku를 지원하지만, 구형 Shizuku를 요청하고 있습니다. Shizuku가 실행 중이지 않아서 발생할 수 있으니 Shizuku 앱에서 확인하세요.<p>구형 Shizuku는 2019년 3월 부터 지원이 중단되었습니다.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Shizuku 열기</string>
     <string name="wadb_notification_attempt_now">지금 시도하세요</string>
 </resources>
