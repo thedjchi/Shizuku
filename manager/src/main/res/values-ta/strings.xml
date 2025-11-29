@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">ஆண்ட்ராய்டு 11-12 இல் பிழை காரணமாக, வயர்லெஸ் பிழைத்திருத்தம் அங்கீகரிக்கப்பட்ட நெட்வொர்க்குகளை நினைவில் கொள்ளவில்லை.\n\nஅங்கீகார உரையாடல் பாப் அப் செய்யும்போது \"அனுமதி\" என்பதைத் தட்டுவதன் மூலம் ஒவ்வொரு மறுதொடக்கத்திலும் நெட்வொர்க்கை நீங்கள் மீண்டும் அங்கீகரிக்க வேண்டும்.</string>
     <string name="settings_use_system_color">சிஸ்டம் தீம் நிறத்தைப் பயன்படுத்து</string>
     <string name="settings_watchdog">கண்காணிப்பு நாய்</string>
-    <string name="settings_watchdog_summary">ஷிசுகு நின்றால் தானாகவே மறுதொடக்கம் செய்யுங்கள்</string>
     <string name="settings_tcp_mode">TCP பயன்முறை</string>
     <string name="settings_tcp_mode_summary">"Wi-Fi இல்லாமல் Shizukuவை மறுதொடக்கம் செய்ய அனுமதிக்கிறது. (மறுதொடக்கம் செய்யப்பட்டதிலிருந்து Shizuku ஒரு முறை தொடங்கியிருக்க வேண்டும்)"</string>
     <string name="settings_restart_dialog_title">மறுதொடக்கம் அவசியம்</string>
