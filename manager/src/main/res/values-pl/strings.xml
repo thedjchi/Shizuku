@@ -90,7 +90,6 @@
     <string name="settings_start_on_boot_bug">Z powodu błędu w systemie Android 11-12 debugowanie bezprzewodowe nie zapamiętuje autoryzowanych sieci.\n\nBędziesz musiał ponownie autoryzować sieć przy każdym ponownym uruchomieniu, dotykając \"Zezwól\", gdy pojawi się okno autoryzacji.</string>
     <string name="settings_use_system_color">Użyj koloru motywu systemowego</string>
     <string name="settings_watchdog">Nadzorowanie</string>
-    <string name="settings_watchdog_summary">Automatycznie uruchamia Shizuku ponownie, jeśli usługa się zatrzyma</string>
     <string name="settings_tcp_mode">Tryb TCP</string>
     <string name="settings_tcp_mode_summary">"Pozwala zrestartować Shizuku bez Wi-Fi (Shizuku musi zostać uruchomione przynajmniej raz po restarcie urządzenia)."</string>
     <string name="settings_restart_dialog_title">Wymagane ponowne uruchomienie</string>
