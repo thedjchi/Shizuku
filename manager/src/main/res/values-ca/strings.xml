@@ -90,7 +90,6 @@
     <string name="terminal_tutorial_1_description">S\'exportaran dos fitxers: %1$s i %2$s. Si els fitxers ja existeixen a la carpeta seleccionada, s\'eliminaran.</string>
     <string name="terminal_export_files">Exporta fitxers</string>
     <string name="terminal_tutorial_2">Feu servir l\'aplicació de terminal per copiar els fitxers al seu directori de fitxers privats.</string>
-    <string name="terminal_tutorial_2_description">Consell: Si el directori d\'inici (~) de l\'aplicació de terminal es troba a la carpeta /data/data, si hi col·loqueu els fitxers, podreu executar %1$s sense escriure la ruta.\n\nSi no, podeu crear un àlies per a %2$s al fitxer de configuració .bashrc de l\'aplicació de terminal.</string>
     <string name="terminal_tutorial_3">Obriu una shell amb la següent comanda:</string>
     <string name="rish_description"><![CDATA[Amb %1$s, podeu executar ordres de shell en qualsevol aplicació de terminal.<p>Toqueu per obtenir més informació sobre com utilitzar-ho.]]></string>
     <!-- Settings -->
