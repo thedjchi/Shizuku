@@ -57,8 +57,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">برخی سیستم ها (مانند MIUI) اجازه نمی دهند برنامه ها زمانی که قابل مشاهده نیستند، حتی اگر برنامه از سرویس پیش زمینه استفاده کند، به شبکه دسترسی پیدا کنند. لطفا ویژگی های بهینه سازی باتری شیزوکو را در چنین سیستم هایی غیرفعال کنید.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[راه‌اندازی (برای دستگاه‌هایی با دسترسی ریشه)]]></string>
-    <string name="home_root_description"><![CDATA[علاوه بر این، Shizuku می تواند به طور خودکار هنگام راه‌اندازی دستگاه راه اندازی شود. اگر نه، لطفاً بررسی کنید که آیا سیستم شما یا ابزارهای شخص ثالث Shizuku را محدود کرده است.<br>می توانید به %s مراجعه کنید.]]></string>
-    <string name="home_root_description_sui"><![CDATA[اگر از Magisk استفاده می کنی، می توانی امتحان کنی %1$s. برای کاربران روت، در نهایت جایگزین شیزوکو خواهد شد. توجه داشته باشید، برنامه های موجود باید کمی تغییر کنند تا استفاده شود %2$s.]]></string>
     <string name="home_root_button_start">راه‌اندازی</string>
     <string name="home_root_button_restart">راه‌اندازی مجدد</string>
     <!-- Home - Application management -->
@@ -70,7 +68,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[برای مدیریت برنامه های مجاز ضربه بزنید]]></string>
     <string name="home_app_management_empty">برنامه‌هایی که درخواست مجوز Shizuku را داده‌اند یا آن را اعلام کرده‌اند، اینجا نمایش داده می‌شوند.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">یادگیری Shizuku</string>
     <string name="home_learn_more_description">یاد بگیرید که چگونه با Shizuku توسعه دهید</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">شما باید یک قدم اضافی بردارید</string>
@@ -82,17 +79,7 @@
     <string name="app_management_toggle_all">همه را تغییر دهید</string>
     <!-- Terminal -->
     <string name="home_terminal_title">از Shizuku در برنامه های پایانه استفاده کنید</string>
-    <string name="home_terminal_description">دستورات را از طریق Shizuku در برنامه های پایانه که دوست دارید اجرا کنید</string>
-    <string name="terminal_tutorial_1">ابتدا پرونده ها را به هر جایی که می خواهید صادر کنید. دو پرونده %1$s و %2$s پیدا خواهید کرد.</string>
-    <string name="terminal_tutorial_1_description">اگر پرونده هایی با همین نام در پوشه انتخاب شده وجود داشته باشد، حذف خواهند شد.\n\nتابع صادرات از SAF (چارچوب دسترسی ذخیره سازی) استفاده می کند. گزارش شده است که MIUI عملکردهای SAF را خراب می کند. اگر از MIUI استفاده می کنید، ممکن است مجبور شوید پرونده را از apk شیزوکو استخراج کنید یا از GitHub بارگیری کنید.</string>
     <string name="terminal_export_files">صادرات پرونده ها</string>
-    <string name="terminal_tutorial_2">سپس، از هر ویرایشگر متنی برای باز کردن و ویرایش %1$s استفاده کنید.</string>
-    <string name="terminal_tutorial_2_description">برای مثال، اگر می‌خواهید از Shizuku در %1$s استفاده کنید، باید %2$s را با %3$s جایگزین کنید (%4$s نام بسته %1$s است).</string>
-    <string name="terminal_tutorial_3">در نهایت، پرونده ها را به جایی منتقل کنید که برنامه پایانه شما می تواند به آن دسترسی داشته باشد، می توانید از %1$s برای اجرای دستورات از طریق Shizuku استفاده کنید.</string>
-    <string name="terminal_tutorial_3_description">چند نکته: به %1$s اجازه اجرا بدهید و آن را به %2$s اضافه کنید، می‌توانید مستقیماً از %1$s استفاده کنید.</string>
-    <string name="rish_description"><![CDATA[با %1$s، در هر برنامه پایانه‌ای، می‌توانید به پوسته‌ای که Shizuku اجرا می‌کند متصل شوید و با آن تعامل داشته باشید.
-<p>درباره استفاده دقیق %1$s، برای مشاهده سند ضربه بزنید.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">تنظیمات</string>
     <string name="settings_behavior">رفتار</string>
