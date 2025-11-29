@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">As gevolg van \'n fout in Android 11-12, onthou draadlose ontfouting geen gemagtigde netwerke nie.\n\nJy sal die netwerk met elke herbegin moet hermagtig deur op \"Laat toe\" te tik wanneer die magtigingsdialoog verskyn.</string>
     <string name="settings_use_system_color">Gebruik stelseltemakleur</string>
     <string name="settings_watchdog">Waghond</string>
-    <string name="settings_watchdog_summary">Herbegin Shizuku outomaties as dit stop</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku moes een keer sedert herbegin begin het)"</string>
     <string name="settings_restart_dialog_title">Herbegin Vereis</string>
