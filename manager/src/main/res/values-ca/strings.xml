@@ -90,7 +90,6 @@
     <string name="settings_start_on_boot_bug">A causa d\'un error a Android 11-12, la depuració sense fil no recorda cap xarxa autoritzada.\n\nHaureu de tornar a autoritzar la xarxa a cada reinici tocant \"Permet\" quan aparegui el quadre de diàleg d\'autorització.</string>
     <string name="settings_use_system_color">Utilitza el color del tema del sistema</string>
     <string name="settings_watchdog">Vigilant</string>
-    <string name="settings_watchdog_summary">Reinicia automàticament la Shizuku si s\'atura</string>
     <string name="settings_tcp_mode">Mode TCP</string>
     <string name="settings_tcp_mode_summary">"Permet a la Shizuku reiniciar sense Wi-Fi. (La Shizuku deu haver començat una vegada des del reinici)"</string>
     <string name="settings_restart_dialog_title">Cal reiniciar</string>
