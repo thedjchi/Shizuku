@@ -87,7 +87,6 @@
     <string name="settings_start_on_boot_bug">Disebabkan oleh pepijat dalam Android 11-12, penyahpepijatan wayarles tidak mengingati mana-mana rangkaian yang dibenarkan.\n\nAnda perlu membenarkan semula rangkaian pada setiap but semula dengan mengetik \"Benarkan\" apabila dialog kebenaran muncul.</string>
     <string name="settings_use_system_color">Gunakan warna tema sistem</string>
     <string name="settings_watchdog">Pengawas</string>
-    <string name="settings_watchdog_summary">Mulakan semula Shizuku secara automatik jika ia berhenti</string>
     <string name="settings_tcp_mode">mod TCP</string>
     <string name="settings_tcp_mode_summary">"Membenarkan Shizuku memulakan semula tanpa Wi-Fi. (Shizuku mesti bermula sekali sejak but semula)"</string>
     <string name="settings_restart_dialog_title">Mulakan semula Diperlukan</string>
