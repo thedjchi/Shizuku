@@ -95,7 +95,6 @@
     <string name="terminal_tutorial_1_description">Serão exportados dois ficheiros: %1$s e %2$s. Se os ficheiros já existirem na pasta selecionada, serão eliminados.</string>
     <string name="terminal_export_files">Exportar arquivos</string>
     <string name="terminal_tutorial_2">Utilize a aplicação de terminal para copiar os ficheiros para o diretório de ficheiros privados.</string>
-    <string name="terminal_tutorial_2_description">Dica: Se o diretório inicial da sua aplicação de terminal (~) estiver na pasta /data/data, colocar os ficheiros lá permitirá executar %1$s sem ter de digitar o caminho.\n\nCaso contrário, pode criar um alias para %2$s no ficheiro de configuração . bashrc da sua aplicação de terminal.</string>
     <string name="terminal_tutorial_3">Abra um terminal com o seguinte comando:</string>
     <string name="rish_description"><![CDATA[Com %1$s, pode executar comandos shell em qualquer aplicação de terminal.<p>Toque para saber mais sobre como utilizá-lo.]]></string>
     <!-- Settings -->
