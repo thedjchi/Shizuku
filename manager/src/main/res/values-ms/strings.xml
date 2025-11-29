@@ -87,6 +87,7 @@
     <string name="terminal_tutorial_1_description">Dua fail akan dieksport: %1$s dan %2$s. Jika fail sudah wujud dalam folder yang dipilih, ia akan dipadamkan.</string>
     <string name="terminal_export_files">Eksport fail</string>
     <string name="terminal_tutorial_2">Gunakan apl terminal anda untuk menyalin fail ke direktori fail peribadinya.</string>
+    <string name="terminal_tutorial_2_description">Petua: Jika direktori rumah apl terminal anda (~) berada dalam direktori fail peribadi, meletakkan fail di sana akan membolehkan anda menjalankan %1$s tanpa menulis laluan.\n\nJika tidak, anda boleh mencipta alias untuk %2$s dalam fail konfigurasi %3$s apl terminal anda.</string>
     <string name="terminal_tutorial_3">Buka shell dengan arahan berikut:</string>
     <string name="rish_description"><![CDATA[Dengan %1$s, anda boleh menjalankan arahan shell dalam mana-mana apl terminal.<p>Ketik untuk mengetahui lebih lanjut tentang cara menggunakannya.]]></string>
     <!-- Settings -->
