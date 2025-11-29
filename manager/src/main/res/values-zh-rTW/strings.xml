@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系統（例如 MIUI）會禁止應用在不可見時存取網絡，即使該應用程式使用了前台服務。請在這些系統上為 Shizuku 關閉電池優化功能。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[啟動 (針對已 Root 裝置)]]></string>
+    <string name="home_root_description"><![CDATA[如果您正在使用 Magisk，可以嘗試使用 %1$s。對於 root 用戶，它最終會取代 Shizuku。請注意，現有應用程式需要稍作修改才能使用 %2$s。]]></string>
     <string name="home_root_button_start">啟動</string>
     <string name="home_root_button_restart">重新啟動</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[輕觸以管理已授權的應用程式]]></string>
     <string name="home_app_management_empty">申請或宣告雫許可的應用程式會顯示在這裡。</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">開發者指南</string>
     <string name="home_learn_more_description">瞭解如何使用 Shizuku 開發</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">您需要進行額外的步驟</string>
@@ -85,7 +87,16 @@
     <string name="app_management_toggle_all">切換全部</string>
     <!-- Terminal -->
     <string name="home_terminal_title">在終端機應用程式中使用 Shizuku</string>
+    <string name="home_terminal_description">透過 Shizuku 在終端應用程式中執行 shell 命令</string>
+    <string name="terminal_tutorial_miui">使用者反映 MIUI 破壞了匯出功能所使用的儲存存取框架。</string>
+    <string name="terminal_tutorial_miui_2">如果您使用的是 MIUI 系統，則可能需要從 Shizuku 的 APK 的 assets 資料夾中提取該檔案。</string>
+    <string name="terminal_tutorial_1">將文件匯出到新資料夾。</string>
+    <string name="terminal_tutorial_1_description">將匯出兩個檔案： %1$s 和 %2$s。如果所選資料夾中已存在這些文件，則會將其刪除。</string>
     <string name="terminal_export_files">匯出檔案</string>
+    <string name="terminal_tutorial_2">使用終端應用程式將檔案複製到其私有檔案目錄。</string>
+    <string name="terminal_tutorial_2_description">提示：如果你的終端應用程式的主目錄（~）位於 /data/data 資料夾下，將檔案放在那裡就可以直接運行 %1$s 而無需輸入路徑。\n\n否則，你可以在終端應用程式的 .bashrc 設定檔中為 %2$s 建立一個別名。</string>
+    <string name="terminal_tutorial_3">使用以下命令開啟 shell：</string>
+    <string name="rish_description"><![CDATA[使用 %1$s，您可以在任何終端應用程式中執行 shell 命令。<p>點選了解更多使用方法。]]></string>
     <!-- Settings -->
     <string name="settings_title">設定</string>
     <string name="settings_behavior">態度</string>
@@ -94,6 +105,7 @@
     <string name="settings_start_on_boot_bug">由於 Android 11-12 的一個錯誤，無線除錯無法記住任何授權網路。\n\n每次重啟時，當授權對話框跳出時，點擊「允許」重新授權網路。</string>
     <string name="settings_use_system_color">使用系統主題色彩</string>
     <string name="settings_watchdog">看門狗</string>
+    <string name="settings_watchdog_summary">如果 Shizuku 崩潰，則自動重新啟動。</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"讓雫能在沒有 Wi-Fi 的情況下重新開始。（雫自重啟後應該開始過一次）"</string>
     <string name="settings_restart_dialog_title">需要重啟</string>
