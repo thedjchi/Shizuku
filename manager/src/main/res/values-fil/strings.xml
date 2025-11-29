@@ -95,7 +95,6 @@
     <string name="settings_start_on_boot_bug">Dahil sa isang bug sa Android 11-12, hindi naaalala ng wireless na pag-debug ang anumang mga awtorisadong network.\n\nKakailanganin mong muling pahintulutan ang network sa bawat pag-reboot sa pamamagitan ng pag-tap sa \"Payagan\" kapag nag-pop up ang dialog ng awtorisasyon.</string>
     <string name="settings_use_system_color">Gamitin ang kulay ng tema ng sistema</string>
     <string name="settings_watchdog">Tagapagbantay</string>
-    <string name="settings_watchdog_summary">Awtomatikong i-restart ang Shizuku kung titigil ito</string>
     <string name="settings_tcp_mode">TCP mode</string>
     <string name="settings_tcp_mode_summary">"Pinapayagan ang Shizuku na mag-restart nang walang Wi-Fi. (Siguro minsan nang nagsimula si Shizuku mula nang mag-reboot)"</string>
     <string name="settings_restart_dialog_title">I-restart ang Kinakailangan</string>
