@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">일부 시스템(예: MIUI)은 앱이 포그라운드 서비스를 사용하더라도 보이지 않으면 네트워크에 접속하지 못하게 합니다. 해당 시스템에서는 시즈쿠의 배터리 최적화 기능을 비활성화해 주세요.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[시작 (루팅된 기기용)]]></string>
-    <string name="home_root_description"><![CDATA[Shizuku는 부팅 시 자동으로 시작됩니다. 그렇지 않을 경우, 시스템 또는 제 3자 도구에서 Shizuku를 제한하고 있는지 확인하세요.<br>%s를 참조할 수 있습니다.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magisk를 사용 중이라면 시도해 볼 수 있습니다 %1$s. 루트 사용자에게는 결국 시즈쿠를 대체할 것입니다. 참고로, 기존 애플리케이션은 사용하려면 약간의 변경이 필요합니다 %2$s.]]></string>
     <string name="home_root_button_start">시작</string>
     <string name="home_root_button_restart">재시작</string>
     <!-- Home - Application management -->
@@ -72,7 +70,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[탭하여 인증된 앱 관리]]></string>
     <string name="home_app_management_empty">Shizuku 권한을 요청하거나 선언한 앱이 여기에 표시됩니다.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Shizuku 알아보기</string>
     <string name="home_learn_more_description">Shizuku로 개발하는 방법 알아보기</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">추가 단계를 진행해야 합니다</string>
@@ -88,17 +85,7 @@
     <string name="app_management_toggle_all">모두 전환</string>
     <!-- Terminal -->
     <string name="home_terminal_title">터미널에서 Shizuku 사용</string>
-    <string name="home_terminal_description">좋아하는 터미널 앱에서 Shizuku를 통해 명령 실행</string>
-    <string name="terminal_tutorial_1">먼저 원하는 곳으로 파일을 내보냅니다. %1$s 및 %2$s의 두 파일을 찾을 수 있습니다.</string>
-    <string name="terminal_tutorial_1_description">선택한 폴더에 같은 이름의 파일이 있으면 삭제됩니다.
-\n
-\n내보내기 기능은 SAF(Storage Access Framework)를 사용합니다. MIUI가 SAF의 기능을 중단시키는 것으로 보고되었습니다. MIUI를 사용하는 경우 Shizuku의 apk에서 파일을 추출하거나 GitHub에서 다운로드해야 할 수 있습니다.</string>
     <string name="terminal_export_files">파일 내보내기</string>
-    <string name="terminal_tutorial_2">그런 다음 텍스트 편집기를 사용하여 %1$s을 열고 편집하십시오.</string>
-    <string name="terminal_tutorial_2_description">예를 들어, %1$s에서 Shizuku를 사용하려면 %2$s를 %3$s로 바꿔야 합니다(%4$s는 %1$s의 패키지 이름입니다).</string>
-    <string name="terminal_tutorial_3">마지막으로 터미널 앱이 액세스할 수 있는 위치로 파일을 이동하면 %1$s를 사용하여 Shizuku를 통해 명령을 실행할 수 있습니다.</string>
-    <string name="terminal_tutorial_3_description">몇 가지 팁: %1$s에 실행 권한을 부여하고 %2$s에 추가하면 %1$s를 직접 사용할 수 있습니다.</string>
-    <string name="rish_description"><![CDATA[%1$s를 사용하면 모든 터미널 앱에서 Shizuku가 실행하는 셸에 연결하고 상호 작용할 수 있습니다. <p>자세한 사용법 %1$s에 대해 문서를 보려면 탭하세요.]]></string>
     <!-- Settings -->
     <string name="settings_title">설정</string>
     <string name="settings_behavior">행동</string>
