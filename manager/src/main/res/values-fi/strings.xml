@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12 -versioiden virheen vuoksi langaton virheenkorjaus ei muista valtuutettuja verkkoja.\n\nSinun on valtuutettava verkko uudelleen jokaisen uudelleenkäynnistyksen yhteydessä napauttamalla \"Salli\", kun valtuutusikkuna ponnahtaa esiin.</string>
     <string name="settings_use_system_color">Käytä järjestelmän teemaväriä</string>
     <string name="settings_watchdog">Vahtikoira</string>
-    <string name="settings_watchdog_summary">Käynnistä Shizuku automaattisesti uudelleen, jos se pysähtyy</string>
     <string name="settings_tcp_mode">TCP-tila</string>
     <string name="settings_tcp_mode_summary">"Sallii Shizukun aloittaa uudelleen ilman Wi-Fiä. (Shizuku on varmaan aloittanut kerran uudelleenkäynnistyksen jälkeen)"</string>
     <string name="settings_restart_dialog_title">Uudelleenkäynnistys vaaditaan</string>
