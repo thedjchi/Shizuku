@@ -94,7 +94,6 @@
     <string name="settings_start_on_boot_bug">เนื่องจากข้อบกพร่องใน Android 11-12 การดีบักแบบไร้สายจึงไม่จดจําเครือข่ายที่ได้รับอนุญาต\n\nคุณจะต้องอนุญาตเครือข่ายอีกครั้งในการรีบูตแต่ละครั้งโดยแตะ \"อนุญาต\" เมื่อกล่องโต้ตอบการอนุญาตปรากฏขึ้น</string>
     <string name="settings_use_system_color">ใช้สีของธีมระบบ</string>
     <string name="settings_watchdog">สุนัขเฝ้าบ้าน</string>
-    <string name="settings_watchdog_summary">รีสตาร์ทชิซึกุโดยอัตโนมัติหากหยุด</string>
     <string name="settings_tcp_mode">โหมด TCP</string>
     <string name="settings_tcp_mode_summary">"ช่วยให้ชิซึกุสามารถรีสตาร์ทได้โดยไม่ต้องใช้ Wi-Fi (ชิซึกุต้องเริ่มใหม่ครั้งหนึ่งหลังจากรีบูต)"</string>
     <string name="settings_restart_dialog_title">จำเป็นต้องรีสตาร์ท</string>
