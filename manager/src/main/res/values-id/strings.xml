@@ -94,7 +94,6 @@
     <string name="settings_start_on_boot_bug">Karena bug di Android 11-12, debugging nirkabel tidak mengingat jaringan yang diotorisasi.\n\nAnda perlu mengotorisasi ulang jaringan setiap kali melakukan boot ulang dengan mengetuk \"Izinkan\" saat dialog otorisasi muncul.</string>
     <string name="settings_use_system_color">Gunakan tema warna sistem</string>
     <string name="settings_watchdog">Penjaga</string>
-    <string name="settings_watchdog_summary">Mulai ulang Shizuku secara otomatis jika berhenti</string>
     <string name="settings_tcp_mode">modus TCP</string>
     <string name="settings_tcp_mode_summary">"Memungkinkan Shizuku untuk memulai ulang tanpa Wi-Fi. (Shizuku harus sudah memulai sekali sejak di-reboot)"</string>
     <string name="settings_restart_dialog_title">Diperlukan Restart</string>
