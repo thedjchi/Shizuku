@@ -90,6 +90,7 @@
     <string name="terminal_tutorial_1_description">Zostaną wyeksportowane dwa pliki: %1$s i %2$s. Jeśli pliki znajdują się już w wybranym folderze, zostaną usunięte.</string>
     <string name="terminal_export_files">Eksportuj pliki</string>
     <string name="terminal_tutorial_2">Za pomocą aplikacji terminalowej skopiuj pliki do prywatnego katalogu plików.</string>
+    <string name="terminal_tutorial_2_description">Wskazówka: Jeśli katalog domowy (~) Twojej aplikacji terminalowej znajduje się w katalogu plików prywatnych, umieszczenie plików w tym miejscu umożliwi uruchomienie %1$s bez wpisywania ścieżki.\n\nW przeciwnym razie możesz utworzyć alias dla %2$s w pliku konfiguracyjnym %3$s Twojej aplikacji terminalowej.</string>
     <string name="terminal_tutorial_3">Otwórz powłokę za pomocą następującego polecenia:</string>
     <string name="rish_description"><![CDATA[Za pomocą %1$smożesz uruchamiać polecenia powłoki w dowolnej aplikacji terminalowej.<p>Kliknij, aby dowiedzieć się więcej o sposobie korzystania z tej opcji.]]></string>
     <!-- Settings -->
