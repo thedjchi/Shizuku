@@ -57,8 +57,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Jotkin järjestelmät (kuten MIUI) estävät sovelluksia käyttämästä verkkoa, kun ne eivät ole näkyvissä, vaikka sovellus käyttäisi etualalla olevaa palvelua. Poista Shizukun akun optimointiominaisuudet käytöstä tällaisissa järjestelmissä.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (rootatuille laitteille)]]></string>
-    <string name="home_root_description"><![CDATA[Lisäksi Shizuku voidaan käynnistää automaattisesti käynnistyksen yhteydessä. Jos ei, tarkista, onko järjestelmäsi tai kolmannen osapuolen työkalut rajoittaneet Shizukua.<br>Voit viitata seuraaviin %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Jos käytät Magiskia, voit kokeilla %1$s. Pääkäyttäjille se korvaa lopulta Shizukun. Huomaa, että olemassa olevia sovelluksia on muutettava hieman, jotta ne voivat käyttää %2$s.]]></string>
     <string name="home_root_button_start">Aloittaa</string>
     <string name="home_root_button_restart">Käynnistää uudelleen</string>
     <!-- Home - Application management -->
@@ -70,7 +68,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Napauta hallitaksesi valtuutettuja sovelluksia]]></string>
     <string name="home_app_management_empty">Sovellukset, jotka ovat pyytäneet tai ilmoittaneet Shizuku-luvan, näkyvät tässä.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Opettele Shizuku</string>
     <string name="home_learn_more_description">Opi kehittymään Shizukun kanssa</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Sinun täytyy ottaa ylimääräinen askel</string>
@@ -82,17 +79,7 @@
     <string name="app_management_toggle_all">Kytke kaikki päälle</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Käytä Shizukua terminaalisovelluksissa</string>
-    <string name="home_terminal_description">Suorita komentoja Shizukun kautta terminaalisovelluksissa, joista pidät.</string>
-    <string name="terminal_tutorial_1">Ensiksi, vie tiedostot minne tahansa haluat. Löydät kaksi tiedostoa, %1$s ja %2$s.</string>
-    <string name="terminal_tutorial_1_description">Jos valitussa kansiossa on samannimisiä tiedostoja, ne poistetaan.\n\nVientitoiminto käyttää SAF:ia (Storage Access Framework). Raporttien mukaan MIUI rikkoo SAF:n toimintoja. Jos käytät MIUI:ta, saatat joutua purkamaan tiedoston Shizukun apk:sta tai lataamaan GitHubista.</string>
     <string name="terminal_export_files">Tiedostojen vienti</string>
-    <string name="terminal_tutorial_2">Sitten käytä mitä tahansa tekstieditoria avataksesi ja muokataksesi %1$s.</string>
-    <string name="terminal_tutorial_2_description">Esimerkiksi, jos haluat käyttää Shizukua %1$s, sinun pitäisi korvata %2$s kanssa %3$s (%4$s on paketin nimi %1$s).</string>
-    <string name="terminal_tutorial_3">Lopuksi, siirrä tiedostot paikkaan, johon päätelaitteesi pääsee käsiksi, voit käyttää niitä %1$s käskyjen suorittamiseen Shizukun kautta.</string>
-    <string name="terminal_tutorial_3_description">Vinkkejä: anna suorituslupa %1$s ja lisää se %2$s, voit käyttää %1$s suoraan.</string>
-    <string name="rish_description"><![CDATA[Kanssa %1$s, missä tahansa terminaalisovelluksessa voit yhdistää ja olla vuorovaikutuksessa Shizukun ylläpitämään shelliin.
-<p>Yksityiskohtaisesta käytöstä %1$s, napauta nähdäksesi dokumentin.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Asetukset</string>
     <string name="settings_behavior">Käyttäytyminen</string>
