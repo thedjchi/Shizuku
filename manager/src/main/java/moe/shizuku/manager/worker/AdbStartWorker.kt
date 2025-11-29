@@ -3,6 +3,8 @@ package moe.shizuku.manager.worker
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.database.ContentObserver
+import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -13,10 +15,12 @@ import androidx.work.*
 import java.io.EOFException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 import moe.shizuku.manager.R
@@ -48,19 +52,51 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 AdbStarter.stopTcp(applicationContext, tcpPort)
             }
 
-            val port = tcpPort.takeIf { !EnvironmentUtils.isWifiRequired() } ?: withTimeout(15000) {
-                callbackFlow {
-                    Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
-                    val adbMdns = AdbMdns(applicationContext, AdbMdns.TLS_CONNECT) { port ->
-                        if (port > 0) trySend(port)
-                    }
+            val port = tcpPort.takeIf { !EnvironmentUtils.isWifiRequired() } ?: callbackFlow {
+                val adbMdns = AdbMdns(applicationContext, AdbMdns.TLS_CONNECT) { p ->
+                    if (p > 0) trySend(p)
+                }
+
+                var awaitingAuth = false
+                var timeoutJob: Job? = null
+
+                fun startDiscoveryWithTimeout() {
                     adbMdns.start()
-                    awaitClose {
-                        adbMdns.stop()
+                    timeoutJob?.cancel()
+                    timeoutJob = launch {
+                        delay(15_000)
+                        close(CancellationException("Timeout during mDNS port discovery"))
                     }
-                }.first()
-            }
-            AdbStarter.startAdb(applicationContext, port)
+                }
+
+                val observer = object : ContentObserver(null) {
+                    override fun onChange(selfChange: Boolean) {
+                        val value = Settings.Global.getInt(cr, "adb_wifi_enabled", 0)
+                        if (value == 0) {
+                            if (awaitingAuth) {
+                                close(CancellationException("User did not authorize network for wireless debugging"))
+                            } else {
+                                awaitingAuth = true
+                                timeoutJob?.cancel()
+                                adbMdns.stop()
+                            }
+                        } else if (value == 1) {
+                            startDiscoveryWithTimeout()
+                        }
+                    }
+                }
+
+                cr.registerContentObserver(Settings.Global.getUriFor("adb_wifi_enabled"), false, observer)
+                Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
+
+                awaitClose {
+                    adbMdns.stop()
+                    timeoutJob?.cancel()
+                    cr.unregisterContentObserver(observer)
+                }
+            }.first()
+            
+            AdbStarter.startAdb(applicationContext, port, forceRetry = true)
             Starter.waitForBinder()
 
             val nm = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -92,7 +128,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
         val uri = Uri.parse(
             "mailto:" + context.getString(R.string.support_email) +
-            "?subject=" + Uri.encode("Error while starting on boot") +
+            "?subject=" + Uri.encode("Error while starting Shizuku") +
             "&body=v" + Uri.encode(
                 context.packageManager.getPackageInfo(context.packageName, 0).versionName + "\n\n" +
                 e.stackTraceToString()

@@ -9,7 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.topjohnwu.superuser.CallbackList
 import com.topjohnwu.superuser.Shell
-import java.net.SocketException
+import java.net.ConnectException
 import java.net.SocketTimeoutException
 import javax.net.ssl.SSLProtocolException
 import kotlin.coroutines.resume
@@ -69,7 +69,7 @@ class StarterActivity : AppBarActivity() {
                     is SocketTimeoutException -> {
                         message = R.string.cannot_connect_port
                     }
-                    is SocketException -> {
+                    is ConnectException -> {
                         message = R.string.cannot_connect_port
                     }
                     is SSLProtocolException -> {

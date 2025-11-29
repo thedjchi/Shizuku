@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rikka.widget.borderview.BorderNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<rikka.widget.borderview.BorderNestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
@@ -46,6 +47,54 @@
                 android:duplicateParentState="true"
                 android:textColor="?colorOnSecondaryContainer"
                 tools:text="@string/rish_description" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/miui"
+            style="@style/FilledCard"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="?colorErrorContainer"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-8dp"
+                android:layout_marginTop="4dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_warning_24"
+                android:tint="?colorOnErrorContainer"
+                android:tintMode="src_in" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="36dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:text="@string/terminal_tutorial_miui"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnErrorContainer" />
+
+                <TextView
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:duplicateParentState="true"
+                    android:text="@string/terminal_tutorial_miui_2"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnErrorContainer" />
+
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -135,6 +184,17 @@
                     tools:text="@string/terminal_tutorial_2" />
 
                 <TextView
+                    android:id="@+id/command2"
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:textIsSelectable="true"
+                    android:textColor="?android:textColorSecondary"
+                    android:fontFamily="monospace"
+                    tools:text="@string/terminal_tutorial_3_command" />
+
+                <TextView
                     android:id="@+id/summary2"
                     style="@style/TerminalTutorialText"
                     android:layout_width="match_parent"
@@ -178,13 +238,15 @@
                     tools:text="@string/terminal_tutorial_3" />
 
                 <TextView
-                    android:id="@+id/summary3"
+                    android:id="@+id/command3"
                     style="@style/TerminalTutorialText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8sp"
+                    android:textIsSelectable="true"
                     android:textColor="?android:textColorSecondary"
-                    tools:text="@string/terminal_tutorial_3_description" />
+                    android:fontFamily="monospace"
+                    tools:text="@string/terminal_tutorial_3_command" />
 
             </LinearLayout>
 
