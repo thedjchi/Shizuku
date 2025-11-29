@@ -57,8 +57,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar is nie, selfs al gebruik die program \'n voorgronddiens. Deaktiveer asseblief battery-optimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
-    <string name="home_root_description"><![CDATA[Daarbenewens kan Shizuku outomaties met opstart begin word. Indien nie, kyk asseblief of jou stelsel of derdeparty-instrumente Shizuku beperk het.<br>Jy kan verwys na %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet \'n bietjie verander om %2$ste gebruik.]]></string>
     <string name="home_root_button_start">Begin</string>
     <string name="home_root_button_restart">Herbegin</string>
     <!-- Home - Application management -->
@@ -70,7 +68,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tik om gemagtigde programme te bestuur]]></string>
     <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of verklaar het, sal hier verskyn.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Leer Shizuku</string>
     <string name="home_learn_more_description">Leer hoe om met Shizuku te ontwikkel</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Jy moet \'n ekstra stap neem</string>
@@ -82,17 +79,7 @@
     <string name="app_management_toggle_all">Wissel alles</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gebruik Shizuku in terminaalprogramme</string>
-    <string name="home_terminal_description">Voer bevele deur Shizuku uit in terminaalprogramme waarvan jy hou</string>
-    <string name="terminal_tutorial_1">Eerstens, voer lêers uit na enige plek waar jy wil. Jy sal twee lêers vind, %1$s en %2$s.</string>
-    <string name="terminal_tutorial_1_description">Indien daar lêers met dieselfde naam in die gekose vouer is, sal hulle uitgevee word.\n\nDie uitvoerfunksie gebruik SAF (Storage Access Framework). Daar word berig dat MIUI die funksies van SAF onderbreek. As jy MIUI gebruik, moet jy dalk die lêer uit Shizuku se apk onttrek of van GitHub aflaai.</string>
     <string name="terminal_export_files">Voer lêers uit</string>
-    <string name="terminal_tutorial_2">Gebruik dan enige teksredigeerder om %1$soop te maak en te wysig.</string>
-    <string name="terminal_tutorial_2_description">Byvoorbeeld, as jy Shizuku in %1$swil gebruik, moet jy %2$s vervang met %3$s (%4$s is die pakketnaam van %1$s).</string>
-    <string name="terminal_tutorial_3">Laastens, skuif die lêers na \'n plek waar jou terminaal-app toegang het, jy sal %1$s kan gebruik om opdragte deur Shizuku uit te voer.</string>
-    <string name="terminal_tutorial_3_description">\'n Paar wenke: gee uitvoeringspermissie aan %1$s en voeg dit by %2$s, jy sal %1$s direk kan gebruik.</string>
-    <string name="rish_description"><![CDATA[Met %1$s, in enige terminaal-app, kan jy koppel aan en interaksie hê met die dop wat deur Shizuku uitgevoer word.
-<p>Oor die gedetailleerde gebruik %1$s, tik om die dokument te sien.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Instellings</string>
     <string name="settings_behavior">Gedrag</string>
