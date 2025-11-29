@@ -93,7 +93,6 @@
     <string name="terminal_tutorial_1_description">Izvoženi bosta dve datoteki: %1$s in %2$s. Če datoteke že obstajajo v izbrani mapi, bodo izbrisane.</string>
     <string name="terminal_export_files">Izvoz datotek</string>
     <string name="terminal_tutorial_2">Z aplikacijo terminala kopirajte datoteke v njen zasebni imenik datotek.</string>
-    <string name="terminal_tutorial_2_description">Nasvet: Če je domači imenik (~) vaše terminalske aplikacije v mapi /data/data, boste z namestitvijo datotek tja lahko zagnali %1$s brez pisanja poti.\n\nSicer pa lahko v konfiguracijski datoteki .bashrc vaše terminalske aplikacije ustvarite vzdevek za %2$s .</string>
     <string name="terminal_tutorial_3">Odprite lupino z naslednjim ukazom:</string>
     <string name="rish_description"><![CDATA[Z %1$slahko zaženete ukaze lupine v kateri koli terminalski aplikaciji.<p>Dotaknite se, če želite izvedeti več o uporabi.]]></string>
     <!-- Settings -->
