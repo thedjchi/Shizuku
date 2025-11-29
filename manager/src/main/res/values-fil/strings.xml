@@ -95,6 +95,7 @@
     <string name="terminal_tutorial_1_description">Dalawang file ang ie-export: %1$s at %2$s. Kung umiiral na ang mga file sa napiling folder, tatanggalin ang mga ito.</string>
     <string name="terminal_export_files">I-export ang mga file</string>
     <string name="terminal_tutorial_2">Gamitin ang iyong terminal app upang kopyahin ang mga file sa direktoryo ng mga pribadong file nito.</string>
+    <string name="terminal_tutorial_2_description">Tip: Kung ang home directory ng iyong terminal app (~) ay nasa private files directory, ang paglalagay ng mga file doon ay magbibigay-daan sa iyong tumakbo %1$s nang hindi isinusulat ang path.\n\nKung hindi, maaari kang lumikha ng alias para sa %2$s sa iyong terminal app na %3$s configuration file.</string>
     <string name="terminal_tutorial_3">Magbukas ng shell gamit ang sumusunod na command:</string>
     <string name="rish_description"><![CDATA[Sa %1$s, maaari kang magpatakbo ng mga shell command sa anumang terminal app.<p>I-tap para matuto pa tungkol sa kung paano ito gamitin.]]></string>
     <!-- Settings -->
