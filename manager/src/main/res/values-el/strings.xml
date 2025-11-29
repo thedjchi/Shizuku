@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">Λόγω ενός σφάλματος στο Android 11-12, η ασύρματη αποσφαλμάτωση δεν θυμάται κανένα εξουσιοδοτημένο δίκτυο.\n\nΘα χρειαστεί να εξουσιοδοτείτε ξανά το δίκτυο σε κάθε επανεκκίνηση πατώντας \"Να επιτρέπεται\" όταν εμφανιστεί το παράθυρο διαλόγου εξουσιοδότησης.</string>
     <string name="settings_use_system_color">Χρήση χρώματος θέματος συστήματος</string>
     <string name="settings_watchdog">Άγρυπνος φρουρός</string>
-    <string name="settings_watchdog_summary">Αυτόματη επανεκκίνηση του Shizuku εάν σταματήσει</string>
     <string name="settings_tcp_mode">Λειτουργία TCP</string>
     <string name="settings_tcp_mode_summary">"Επιτρέπει στο Shizuku να επανεκκινήσει χωρίς Wi-Fi. (Το Shizuku πρέπει να ξεκίνησε μία φορά από την επανεκκίνηση)"</string>
     <string name="settings_restart_dialog_title">Απαιτείται επανεκκίνηση</string>
