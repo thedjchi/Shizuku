@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12-ში არსებული შეცდომის გამო, უკაბელო გამართვა არ იმახსოვრებს არცერთ ავტორიზებულ ქსელს.\n\nთქვენ დაგჭირდებათ ქსელის ხელახლა ავტორიზაცია ყოველი გადატვირთვისას „დაშვებაზე“ შეხებით, როდესაც ავტორიზაციის დიალოგური ფანჯარა გამოჩნდება.</string>
     <string name="settings_use_system_color">გამოიყენეთ სისტემის თემის ფერი</string>
     <string name="settings_watchdog">მაკონტროლებელი</string>
-    <string name="settings_watchdog_summary">ავტომატურად გადატვირთეთ Shizuku, თუ ის შეჩერდება</string>
     <string name="settings_tcp_mode">TCP რეჟიმი</string>
     <string name="settings_tcp_mode_summary">"საშუალებას აძლევს Shizuku-ს გადატვირთოს Wi-Fi-ის გარეშე. (შიზუკუ გადატვირთვის შემდეგ ერთხელ უნდა დაიწყოს)"</string>
     <string name="settings_restart_dialog_title">გადატვირთვა აუცილებელია</string>
