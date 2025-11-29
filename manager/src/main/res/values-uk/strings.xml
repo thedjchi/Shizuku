@@ -97,7 +97,6 @@
     <string name="settings_start_on_boot_bug">Через баг у Android 11-12 бездротове налагодження не пам\'ятає жодної авторизованої мережі.\n\nВам потрібно буде повторно авторизувати мережу при кожному перезавантаженні, натискаючи «Дозволити», коли з\'являється діалогове повідомлення авторизації.</string>
     <string name="settings_use_system_color">Використовувати системний колір</string>
     <string name="settings_watchdog">Сторожовий пес</string>
-    <string name="settings_watchdog_summary">Автоматично перезапускати Shizuku, якщо він зупиняється</string>
     <string name="settings_tcp_mode">Режим TCP</string>
     <string name="settings_tcp_mode_summary">"Дозволяє перезавантажити Shizuku без Wi-Fi. (Shizuku мала запуститися один раз після перезавантаження)"</string>
     <string name="settings_restart_dialog_title">Потрібно перезавантажити</string>
