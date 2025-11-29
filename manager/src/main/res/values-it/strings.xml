@@ -95,7 +95,6 @@
     <string name="settings_start_on_boot_bug">A causa di un bug in Android 11-12, il debug wireless non ricorda nessuna rete autorizzata.\n\nDovrai riautorizzare la rete ad ogni riavvio toccando \"Consenti\" quando appare la finestra di autorizzazione.</string>
     <string name="settings_use_system_color">Usa il colore del tema di sistema</string>
     <string name="settings_watchdog">Cane da guardia</string>
-    <string name="settings_watchdog_summary">Riavvia automaticamente Shizuku se si ferma</string>
     <string name="settings_tcp_mode">Modalità TCP</string>
     <string name="settings_tcp_mode_summary">"Permette a Shizuku di riavviarsi senza Wi-Fi. (Shizuku deve essere stato avviato una volta dopo il riavvio)"</string>
     <string name="settings_restart_dialog_title">Riavvio richiesto</string>
