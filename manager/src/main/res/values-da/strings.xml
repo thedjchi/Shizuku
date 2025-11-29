@@ -57,8 +57,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nogle systemer (som f.eks. MIUI) tillader ikke apps at få adgang til netværket, når de ikke er synlige, selvom appen bruger en forgrundstjeneste. Deaktiver venligst batterioptimeringsfunktioner for Shizuku på sådanne systemer.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (for rootede enheder)]]></string>
-    <string name="home_root_description"><![CDATA[Derudover kan Shizuku startes automatisk ved opstart. Hvis ikke, så tjek venligst, om dit system eller tredjepartsværktøjer har begrænset Shizuku.<br>Du kan henvise til %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Hvis du bruger Magisk, kan du prøve %1$s. For root-brugere vil det med tiden erstatte Shizuku. Bemærk, at eksisterende applikationer skal ændres en smule for at bruge %2$s.]]></string>
     <string name="home_root_button_start">Begynde</string>
     <string name="home_root_button_restart">Genstarte</string>
     <!-- Home - Application management -->
@@ -70,7 +68,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tryk for at administrere autoriserede apps]]></string>
     <string name="home_app_management_empty">Apps, der har anmodet om eller erklæret Shizuku-tilladelsen, vil blive vist her.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Lær Shizuku</string>
     <string name="home_learn_more_description">Lær at udvikle dig med Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Du skal tage et ekstra skridt</string>
@@ -82,17 +79,7 @@
     <string name="app_management_toggle_all">Skift til og fra</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Brug Shizuku i terminalapps</string>
-    <string name="home_terminal_description">Kør kommandoer gennem Shizuku i terminalapps, du kan lide</string>
-    <string name="terminal_tutorial_1">Først, eksporter filer til hvor du vil. Du vil finde to filer, %1$s og %2$s.</string>
-    <string name="terminal_tutorial_1_description">Hvis der er filer med samme navn i den valgte mappe, vil de blive slettet.\n\nEksportfunktionen bruger SAF (Storage Access Framework). Det rapporteres, at MIUI bryder SAF\'s funktioner. Hvis du bruger MIUI, kan det være nødvendigt at udpakke filen fra Shizukus apk eller downloade den fra GitHub.</string>
     <string name="terminal_export_files">Eksportfiler</string>
-    <string name="terminal_tutorial_2">Brug derefter en hvilken som helst teksteditor til at åbne og redigere %1$s.</string>
-    <string name="terminal_tutorial_2_description">For eksempel, hvis du vil bruge Shizuku i %1$s, du bør udskifte %2$s med %3$s (%4$s er pakkenavnet for %1$s).</string>
-    <string name="terminal_tutorial_3">Til sidst, flyt filerne til et sted, hvor din terminalapp kan få adgang, og du vil kunne bruge dem %1$s at køre kommandoer gennem Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Nogle tips: giv udførelsestilladelse til %1$s og tilføje det til %2$s, du vil kunne bruge %1$s direkte.</string>
-    <string name="rish_description"><![CDATA[Med %1$s, i enhver terminal-app kan du forbinde til og interagere med shellen, som Shizuku kører.
-<p>Om den detaljerede anvendelse %1$s, tryk for at se dokumentet.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Indstillinger</string>
     <string name="settings_behavior">Adfærd</string>
