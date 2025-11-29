@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Որոշ համակարգեր (օրինակ՝ MIUI-ը) թույլ չեն տալիս հավելվածներին մուտք գործել ցանց, երբ դրանք տեսանելի չեն, նույնիսկ եթե հավելվածն օգտագործում է առաջնային պլանի ծառայություն: Խնդրում ենք անջատել Shizuku-ի մարտկոցի օպտիմալացման գործառույթները նման համակարգերում:</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Միացնել (root արած սարքերի համար)]]></string>
+    <string name="home_root_description"><![CDATA[Եթե օգտագործում եք Magisk, կարող եք փորձել %1$s-ը։ Root օգտատերերի համար այն ի վերջո կփոխարինի Shizuku-ին։ Նշենք, որ առկա ծրագրերը պետք է մի փոքր փոփոխվեն՝ %2$s-ն օգտագործելու համար։]]></string>
     <string name="home_root_button_start">Միացնել</string>
     <string name="home_root_button_restart">Վերաբեռնել</string>
     <!-- Home - Application management -->
@@ -71,6 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Սեղմեք, որպեսզի վավերացված ծրագրերը տիրապետելու համար]]></string>
     <string name="home_app_management_empty">Այստեղ կցուցադրվեն հավելվածները, որոնք խնդրել կամ հայտարարել են Shizuku թույլտվությունը։</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Մշակողի ուղեցույց</string>
     <string name="home_learn_more_description">Սովորեք ծրագրավորել Shizuku-ով կամ Shizuku-ն ուրիշ ծրագրերի հետ օգտագործել</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Դուք պետք է լրացուցիչ քայլ կատարեք</string>
@@ -82,7 +84,16 @@
     <string name="app_management_toggle_all">Toggle all</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Օգտագործեք Shizuku-ն տերմինալային հավելվածներում</string>
+    <string name="home_terminal_description">Գործարկեք shell հրամանները տերմինալային հավելվածներում Shizuku-ի միջոցով</string>
+    <string name="terminal_tutorial_miui">Օգտատերերը հայտնել են, որ MIUI-ը խախտում է Storage Access Framework-ը, որն օգտագործվում է արտահանման գործառույթի կողմից։</string>
+    <string name="terminal_tutorial_miui_2">Եթե օգտագործում եք MIUI, հնարավոր է, որ ստիպված լինեք ֆայլը հանել Shizuku-ի APK ֆայլի assets պանակից։</string>
+    <string name="terminal_tutorial_1">Արտահանեք ֆայլերը նոր թղթապանակ։</string>
+    <string name="terminal_tutorial_1_description">Երկու ֆայլ կարտահանվի՝ %1$s և %2$s: Եթե ֆայլերն արդեն իսկ գոյություն ունեն ընտրված թղթապանակում, դրանք կջնջվեն:</string>
     <string name="terminal_export_files">Արտահանել ֆայլերը</string>
+    <string name="terminal_tutorial_2">Օգտագործեք ձեր տերմինալի ծրագիրը՝ ֆայլերը դրա անձնական ֆայլերի պանակում պատճենելու համար։</string>
+    <string name="terminal_tutorial_2_description">Հուշում. Եթե ձեր տերմինալի հավելվածի գլխավոր գրացուցակը (~) գտնվում է /data/data թղթապանակում, ֆայլերը այնտեղ տեղադրելը թույլ կտա ձեզ գործարկել %1$s -ը՝ առանց ուղին գրելու:\n\nՀակառակ դեպքում, կարող եք ստեղծել %2$s -ի համար կեղծանուն ձեր տերմինալի հավելվածի .bashrc կարգավորման ֆայլում:</string>
+    <string name="terminal_tutorial_3">Բացեք shell-ը հետևյալ հրամանով.</string>
+    <string name="rish_description"><![CDATA[%1$s-ի միջոցով կարող եք գործարկել shell հրամաններ ցանկացած տերմինալային հավելվածում:<p>Սեղմեք՝ դրա օգտագործման մասին ավելին իմանալու համար:]]></string>
     <!-- Settings -->
     <string name="settings_title">Կարգավորումներ</string>
     <string name="settings_behavior">Վարքագիծ</string>
@@ -91,6 +102,7 @@
     <string name="settings_start_on_boot_bug">Android 11-12-ում առկա սխալի պատճառով անլար կարգաբերումը չի հիշում որևէ լիազորված ցանց։\n\nԴուք պետք է վերահաստատեք ցանցը յուրաքանչյուր վերագործարկման ժամանակ՝ սեղմելով «Թույլատրել» կոճակը, երբ բացվի լիազորման երկխոսության պատուհանը։</string>
     <string name="settings_use_system_color">Օգտագործել համակարգի տեսաձեւի գույնը</string>
     <string name="settings_watchdog">Հսկիչ</string>
+    <string name="settings_watchdog_summary">Ավտոմատ վերագործարկեք Շիզուկուն, եթե այն խափանվի</string>
     <string name="settings_tcp_mode">TCP ռեժիմ</string>
     <string name="settings_tcp_mode_summary">"Թույլ է տալիս Shizuku-ին վերագործարկել առանց Wi-Fi-ի: (Shizuku-ն պետք է որ մեկ անգամ սկսել է վերագործարկումից հետո)"</string>
     <string name="settings_restart_dialog_title">Վերագործարկումը պարտադիր է</string>
