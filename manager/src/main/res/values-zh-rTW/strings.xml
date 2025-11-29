@@ -94,7 +94,6 @@
     <string name="settings_start_on_boot_bug">由於 Android 11-12 的一個錯誤，無線除錯無法記住任何授權網路。\n\n每次重啟時，當授權對話框跳出時，點擊「允許」重新授權網路。</string>
     <string name="settings_use_system_color">使用系統主題色彩</string>
     <string name="settings_watchdog">看門狗</string>
-    <string name="settings_watchdog_summary">如果停止，請自動重新啟動雫</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"讓雫能在沒有 Wi-Fi 的情況下重新開始。（雫自重啟後應該開始過一次）"</string>
     <string name="settings_restart_dialog_title">需要重啟</string>
