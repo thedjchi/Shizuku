@@ -99,7 +99,6 @@
     <string name="terminal_tutorial_1_description">سيتم تصدير ملفين: %1$s و %2$s. إذا كانت الملفات موجودة بالفعل في المجلد المحدد، فسيتم حذفها.</string>
     <string name="terminal_export_files">تصدير الملفات</string>
     <string name="terminal_tutorial_2">استخدم تطبيق المحطة الطرفية الخاص بك لنسخ الملفات إلى دليل الملفات الخاص به.</string>
-    <string name="terminal_tutorial_2_description">نصيحة: إذا كان دليل التطبيق الطرفي الخاص بك (~) موجودًا في مجلد /data/data، فإن وضع الملفات هناك سيسمح لك بتشغيل %1$s دون كتابة المسار.\n\nوإلا، فيمكنك إنشاء اسم مستعار لـ %2$s في ملف تكوين .bashrc الخاص بتطبيقك الطرفي.</string>
     <string name="terminal_tutorial_3">افتح shell باستخدام الأمر التالي:</string>
     <string name="rish_description"><![CDATA[باستخدام %1$s، يمكنك تشغيل أوامر shell في أي تطبيق طرفي. انقر فوق<p>لمعرفة المزيد حول كيفية استخدامه.]]></string>
     <!-- Settings -->
