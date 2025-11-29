@@ -95,7 +95,6 @@
     <string name="settings_start_on_boot_bug">Aufgrund eines Fehlers in Android 11-12 merkt sich das WLAN-Debugging keine autorisierten Netzwerke.\n\nSie müssen das Netzwerk nach jedem Neustart erneut autorisieren, indem Sie im Autorisierungsdialog auf „Zulassen“ tippen.</string>
     <string name="settings_use_system_color">Verwende Farbe des Systemdesigns</string>
     <string name="settings_watchdog">Wachhund</string>
-    <string name="settings_watchdog_summary">Shizuku wird automatisch neu gestartet, wenn es aufhört.</string>
     <string name="settings_tcp_mode">TCP-Modus</string>
     <string name="settings_tcp_mode_summary">"Ermöglicht es Shizuku, ohne WLAN neu zu starten. (Shizuku muss seit dem Reboot einmal angefangen haben)"</string>
     <string name="settings_restart_dialog_title">Neustart erforderlich</string>
