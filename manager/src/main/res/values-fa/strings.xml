@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">برخی سیستم ها (مانند MIUI) اجازه نمی دهند برنامه ها زمانی که قابل مشاهده نیستند، حتی اگر برنامه از سرویس پیش زمینه استفاده کند، به شبکه دسترسی پیدا کنند. لطفا ویژگی های بهینه سازی باتری شیزوکو را در چنین سیستم هایی غیرفعال کنید.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[راه‌اندازی (برای دستگاه‌هایی با دسترسی ریشه)]]></string>
+    <string name="home_root_description"><![CDATA[اگر از Magisk استفاده می‌کنید، می‌توانید %1$sرا امتحان کنید. برای کاربران روت، در نهایت جایگزین Shizuku خواهد شد. توجه داشته باشید، برنامه‌های موجود برای استفاده از %2$sباید کمی تغییر کنند.]]></string>
     <string name="home_root_button_start">راه‌اندازی</string>
     <string name="home_root_button_restart">راه‌اندازی مجدد</string>
     <!-- Home - Application management -->
@@ -68,6 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[برای مدیریت برنامه های مجاز ضربه بزنید]]></string>
     <string name="home_app_management_empty">برنامه‌هایی که درخواست مجوز Shizuku را داده‌اند یا آن را اعلام کرده‌اند، اینجا نمایش داده می‌شوند.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">راهنمای توسعه‌دهنده</string>
     <string name="home_learn_more_description">یاد بگیرید که چگونه با Shizuku توسعه دهید</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">شما باید یک قدم اضافی بردارید</string>
@@ -79,7 +81,16 @@
     <string name="app_management_toggle_all">همه را تغییر دهید</string>
     <!-- Terminal -->
     <string name="home_terminal_title">از Shizuku در برنامه های پایانه استفاده کنید</string>
+    <string name="home_terminal_description">اجرای دستورات shell در برنامه‌های ترمینال از طریق Shizuku</string>
+    <string name="terminal_tutorial_miui">کاربران گزارش داده‌اند که MIUI چارچوب دسترسی به حافظه (Storage Access Framework) را که توسط تابع export استفاده می‌شود، نقض می‌کند.</string>
+    <string name="terminal_tutorial_miui_2">اگر از MIUI استفاده می‌کنید، ممکن است مجبور شوید فایل را از پوشه assets در APK شیزوکو استخراج کنید.</string>
+    <string name="terminal_tutorial_1">فایل‌ها را به یک پوشه جدید صادر کنید.</string>
+    <string name="terminal_tutorial_1_description">دو فایل صادر می‌شوند: %1$s و %2$s. اگر این فایل‌ها از قبل در پوشه انتخاب شده وجود داشته باشند، حذف خواهند شد.</string>
     <string name="terminal_export_files">صادرات پرونده ها</string>
+    <string name="terminal_tutorial_2">از برنامه ترمینال خود برای کپی کردن فایل‌ها در دایرکتوری فایل‌های خصوصی آن استفاده کنید.</string>
+    <string name="terminal_tutorial_2_description">نکته: اگر دایرکتوری خانگی برنامه ترمینال شما (~) در پوشه /data/data قرار دارد، قرار دادن فایل‌ها در آنجا به شما امکان می‌دهد %1$s را بدون نوشتن مسیر اجرا کنید.\n\nدر غیر این صورت، می‌توانید یک نام مستعار برای %2$s در فایل پیکربندی .bashrc برنامه ترمینال خود ایجاد کنید.</string>
+    <string name="terminal_tutorial_3">با دستور زیر یک پوسته باز کنید:</string>
+    <string name="rish_description"><![CDATA[با %1$sمی‌توانید دستورات shell را در هر برنامه ترمینالی اجرا کنید.<p>برای کسب اطلاعات بیشتر در مورد نحوه استفاده از آن، ضربه بزنید.]]></string>
     <!-- Settings -->
     <string name="settings_title">تنظیمات</string>
     <string name="settings_behavior">رفتار</string>
@@ -88,6 +99,7 @@
     <string name="settings_start_on_boot_bug">به دلیل یک باگ در اندروید ۱۱-۱۲، اشکال زدایی بی سیم هیچ شبکه مجاز را به یاد نمی آورد.\n\nدر هر راه اندازی مجدد باید شبکه را با ضربه زدن روی «اجازه» هنگام ظاهر شدن دیالوگ مجوزدهی مجددا، مجددا تأیید کنید.</string>
     <string name="settings_use_system_color">از رنگ طرح زمینه دستگاه استفاده کنید</string>
     <string name="settings_watchdog">دیده‌بان</string>
+    <string name="settings_watchdog_summary">در صورت خرابی، شیزوکو را به طور خودکار مجدداً راه اندازی کنید</string>
     <string name="settings_tcp_mode">حالت TCP</string>
     <string name="settings_tcp_mode_summary">"به Shizuku اجازه می‌دهد بدون Wi-Fi دوباره راه‌اندازی شود. (Shizuku باید یک بار از زمان راه‌اندازی مجدد شروع شده باشد)"</string>
     <string name="settings_restart_dialog_title">راه اندازی مجدد مورد نیاز است</string>
