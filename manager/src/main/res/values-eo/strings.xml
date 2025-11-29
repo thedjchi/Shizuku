@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">Pro cimo en Android 11-12, sendrata sencimigado ne memoras iujn ajn rajtigitajn retojn.\n\nVi devos re-rajtigi la reton ĉe ĉiu restartiĝo alklakante \"Permesi\" kiam la rajtiga dialogo aperas.</string>
     <string name="settings_use_system_color">Uzi sistemteman koloron</string>
     <string name="settings_watchdog">Gardohundo</string>
-    <string name="settings_watchdog_summary">Aŭtomate rekomencu Ŝizuku-on se ĝi haltas</string>
     <string name="settings_tcp_mode">TCP-reĝimo</string>
     <string name="settings_tcp_mode_summary">"Permesas al Ŝizuku rekomenci sen Wi-Fi. (Ŝizuku devas esti rekomencinta unufoje post la rekomenco)"</string>
     <string name="settings_restart_dialog_title">Rekomenco necesa</string>
