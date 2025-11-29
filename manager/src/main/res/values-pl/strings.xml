@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Niektóre systemy (takie jak MIUI) nie pozwalają aplikacjom na dostęp do sieci, gdy nie są widoczne, nawet jeśli aplikacja korzysta z usługi na pierwszym planie. Proszę wyłączyć funkcje optymalizacji baterii dla Shizuku na takich systemach.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Uruchom (dla urządzeń z rootem)]]></string>
+    <string name="home_root_description"><![CDATA[Jeśli używasz Magiska, możesz wypróbować %1$s. Dla użytkowników roota z czasem zastąpi on Shizuku. Uwaga: istniejące aplikacje wymagają niewielkich zmian, aby korzystać z %2$s.]]></string>
     <string name="home_root_button_start">Uruchom</string>
     <string name="home_root_button_restart">Uruchom ponownie</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Zarządzaj autoryzowanymi aplikacjami]]></string>
     <string name="home_app_management_empty">Tutaj pojawią się aplikacje, które zażądały lub zadeklarowały uprawnienia Shizuku.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Przewodnik dla programistów</string>
     <string name="home_learn_more_description">Dowiedz się, jak tworzyć aplikacje z wykorzystaniem Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Wymagany dodatkowy krok</string>
@@ -81,7 +83,16 @@
     <string name="app_management_toggle_all">Przełącz wszystkie</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Używaj Shizuku w terminalu</string>
+    <string name="home_terminal_description">Uruchamianie poleceń powłoki w aplikacjach terminalowych za pomocą Shizuku</string>
+    <string name="terminal_tutorial_miui">Użytkownicy zgłosili, że MIUI zakłóca działanie Storage Access Framework, który jest wykorzystywany przez funkcję eksportu.</string>
+    <string name="terminal_tutorial_miui_2">Jeśli używasz MIUI, może być konieczne wyodrębnienie pliku z folderu zasobów w pliku APK Shizuku.</string>
+    <string name="terminal_tutorial_1">Eksportuj pliki do nowego folderu.</string>
+    <string name="terminal_tutorial_1_description">Zostaną wyeksportowane dwa pliki: %1$s i %2$s. Jeśli pliki znajdują się już w wybranym folderze, zostaną usunięte.</string>
     <string name="terminal_export_files">Eksportuj pliki</string>
+    <string name="terminal_tutorial_2">Za pomocą aplikacji terminalowej skopiuj pliki do prywatnego katalogu plików.</string>
+    <string name="terminal_tutorial_2_description">Wskazówka: Jeśli katalog domowy aplikacji terminalowej (~) znajduje się w folderze /data/data, umieszczenie tam plików umożliwi uruchomienie %1$s bez wpisywania ścieżki.\n\nW przeciwnym razie możesz utworzyć alias dla %2$s w pliku konfiguracyjnym .bashrc aplikacji terminalowej.</string>
+    <string name="terminal_tutorial_3">Otwórz powłokę za pomocą następującego polecenia:</string>
+    <string name="rish_description"><![CDATA[Za pomocą %1$smożesz uruchamiać polecenia powłoki w dowolnej aplikacji terminalowej.<p>Kliknij, aby dowiedzieć się więcej o sposobie korzystania z tej opcji.]]></string>
     <!-- Settings -->
     <string name="settings_title">Ustawienia</string>
     <string name="settings_behavior">Zachowanie</string>
@@ -90,6 +101,7 @@
     <string name="settings_start_on_boot_bug">Z powodu błędu w systemie Android 11-12 debugowanie bezprzewodowe nie zapamiętuje autoryzowanych sieci.\n\nBędziesz musiał ponownie autoryzować sieć przy każdym ponownym uruchomieniu, dotykając \"Zezwól\", gdy pojawi się okno autoryzacji.</string>
     <string name="settings_use_system_color">Użyj koloru motywu systemowego</string>
     <string name="settings_watchdog">Nadzorowanie</string>
+    <string name="settings_watchdog_summary">Automatycznie uruchom ponownie Shizuku, jeśli ulegnie awarii</string>
     <string name="settings_tcp_mode">Tryb TCP</string>
     <string name="settings_tcp_mode_summary">"Pozwala zrestartować Shizuku bez Wi-Fi (Shizuku musi zostać uruchomione przynajmniej raz po restarcie urządzenia)."</string>
     <string name="settings_restart_dialog_title">Wymagane ponowne uruchomienie</string>
