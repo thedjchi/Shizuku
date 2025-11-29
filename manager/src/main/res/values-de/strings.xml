@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Manche Systeme (wie z. B. MIUI) verhindern, dass Apps auf das Netzwerk zugreifen, wenn sie nicht sichtbar sind, selbst wenn die App einen Vordergrunddienst nutzt. Bitte deaktivieren Sie die Akkuoptimierungsfunktionen für Shizuku auf solchen Systemen.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (für gerootete Geräte)]]></string>
+    <string name="home_root_description"><![CDATA[Wenn Sie Magisk verwenden, können Sie %1$sausprobieren. Für Root-Benutzer wird es Shizuku zukünftig ersetzen. Beachten Sie, dass bestehende Anwendungen geringfügig angepasst werden müssen, um %2$szu verwenden.]]></string>
     <string name="home_root_button_start">Anfangen</string>
     <string name="home_root_button_restart">Neustart</string>
     <!-- Home - Application management -->
@@ -71,6 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tippen, um autorisierte Apps zu verwalten]]></string>
     <string name="home_app_management_empty">Apps, die die Shizuku-Erlaubnis beantragt oder deklariert haben, werden hier angezeigt.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Entwicklerhandbuch</string>
     <string name="home_learn_more_description">Lernen Sie, wie Apps mit Shizuku entwickelt werden</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Sie müssen einen zusätzlichen Schritt durchführen</string>
@@ -86,7 +88,16 @@
     <string name="app_management_toggle_all">Alle umschalten</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Shizuku in Terminal-Apps verwenden</string>
+    <string name="home_terminal_description">Führe Shell-Befehle in Terminalanwendungen über Shizuku aus.</string>
+    <string name="terminal_tutorial_miui">Nutzer haben berichtet, dass MIUI das Storage Access Framework, das von der Exportfunktion verwendet wird, beeinträchtigt.</string>
+    <string name="terminal_tutorial_miui_2">Wenn Sie MIUI verwenden, müssen Sie die Datei möglicherweise aus dem Assets-Ordner in Shizukus APK extrahieren.</string>
+    <string name="terminal_tutorial_1">Exportieren Sie die Dateien in einen neuen Ordner.</string>
+    <string name="terminal_tutorial_1_description">Es werden zwei Dateien exportiert: %1$s und %2$s. Falls die Dateien bereits im ausgewählten Ordner vorhanden sind, werden sie gelöscht.</string>
     <string name="terminal_export_files">Dateien exportieren</string>
+    <string name="terminal_tutorial_2">Verwenden Sie Ihre Terminal-App, um die Dateien in das private Dateiverzeichnis zu kopieren.</string>
+    <string name="terminal_tutorial_2_description">Tipp: Befindet sich das Home-Verzeichnis Ihrer Terminalanwendung (~) im Ordner /data/data, können Sie die Dateien dort ablegen und so %1$s ausführen, ohne den Pfad angeben zu müssen.\n\nAlternativ können Sie in der .bashrc-Konfigurationsdatei Ihrer Terminalanwendung einen Alias für %2$s erstellen.</string>
+    <string name="terminal_tutorial_3">Öffnen Sie eine Shell mit folgendem Befehl:</string>
+    <string name="rish_description"><![CDATA[Mit %1$skönnen Sie Shell-Befehle in jeder Terminal-Anwendung ausführen.<p>Tippen Sie hier, um mehr über die Verwendung zu erfahren.]]></string>
     <!-- Settings -->
     <string name="settings_title">Einstellungen</string>
     <string name="settings_behavior">Benehmen</string>
@@ -95,6 +106,7 @@
     <string name="settings_start_on_boot_bug">Aufgrund eines Fehlers in Android 11-12 merkt sich das WLAN-Debugging keine autorisierten Netzwerke.\n\nSie müssen das Netzwerk nach jedem Neustart erneut autorisieren, indem Sie im Autorisierungsdialog auf „Zulassen“ tippen.</string>
     <string name="settings_use_system_color">Verwende Farbe des Systemdesigns</string>
     <string name="settings_watchdog">Wachhund</string>
+    <string name="settings_watchdog_summary">Shizuku wird automatisch neu gestartet, falls es abstürzt.</string>
     <string name="settings_tcp_mode">TCP-Modus</string>
     <string name="settings_tcp_mode_summary">"Ermöglicht es Shizuku, ohne WLAN neu zu starten. (Shizuku muss seit dem Reboot einmal angefangen haben)"</string>
     <string name="settings_restart_dialog_title">Neustart erforderlich</string>
