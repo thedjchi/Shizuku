@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Některé systémy (například MIUI) neumožňují aplikacím přístup k síti, když nejsou viditelné, a to i v případě, že aplikace používá službu v popředí. V takových systémech prosím vypněte funkce optimalizace baterie pro aplikaci Shizuku.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (pro rootovaná zařízení)]]></string>
+    <string name="home_root_description"><![CDATA[Pokud používáte Magisk, můžete zkusit %1$s. Pro uživatele root nakonec nahradí Shizuku. Upozorňujeme, že stávající aplikace se musí trochu změnit, aby mohly používat %2$s.]]></string>
     <string name="home_root_button_start">Spustit</string>
     <string name="home_root_button_restart">Restartovat</string>
     <!-- Home - Application management -->
@@ -73,6 +74,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Klepnutím můžete spravovat autorizované aplikace]]></string>
     <string name="home_app_management_empty">Aplikace, které požádaly nebo deklarovaly povolení Shizuku, se zde zobrazí.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Průvodce pro vývojáře</string>
     <string name="home_learn_more_description">Naučte se, jak vyvíjet aplikace s pomocí Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Je třeba udělat jeden krok navíc</string>
@@ -88,7 +90,16 @@
     <string name="app_management_toggle_all">Přepínat vše</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Použít Shizuku v terminálových aplikacích</string>
+    <string name="home_terminal_description">Spouštění příkazů shellu v terminálových aplikacích pomocí Shizuku</string>
+    <string name="terminal_tutorial_miui">Uživatelé hlásili, že MIUI narušuje rámec pro přístup k úložišti (Storage Access Framework), který používá funkce exportu.</string>
+    <string name="terminal_tutorial_miui_2">Pokud používáte MIUI, budete možná muset soubor extrahovat ze složky assets v APK souboru Shizuku.</string>
+    <string name="terminal_tutorial_1">Exportujte soubory do nové složky.</string>
+    <string name="terminal_tutorial_1_description">Budou exportovány dva soubory: %1$s a %2$s. Pokud soubory již ve vybrané složce existují, budou smazány.</string>
     <string name="terminal_export_files">Exportovat soubory</string>
+    <string name="terminal_tutorial_2">Pomocí terminálové aplikace zkopírujte soubory do jejího soukromého adresáře souborů.</string>
+    <string name="terminal_tutorial_2_description">Tip: Pokud se domovský adresář (~) vaší terminálové aplikace nachází ve složce /data/data, umístění souborů tam vám umožní spustit %1$s bez zápisu cesty.\n\nV opačném případě můžete pro %2$s vytvořit alias v konfiguračním souboru .bashrc vaší terminálové aplikace.</string>
+    <string name="terminal_tutorial_3">Otevřete shell pomocí následujícího příkazu:</string>
+    <string name="rish_description"><![CDATA[Pomocí %1$smůžete spouštět příkazy shellu v jakékoli terminálové aplikaci.<p>Klepnutím se dozvíte více o jeho použití.]]></string>
     <!-- Settings -->
     <string name="settings_title">Nastavení</string>
     <string name="settings_behavior">Chování</string>
@@ -97,6 +108,7 @@
     <string name="settings_start_on_boot_bug">Kvůli chybě v systému Android 11-12 si bezdrátové ladění nepamatuje žádné autorizované sítě.\n\nPři každém restartu budete muset síť znovu autorizovat klepnutím na „Povolit“, jakmile se zobrazí dialogové okno pro autorizaci.</string>
     <string name="settings_use_system_color">Použít systémovou barvu motivu</string>
     <string name="settings_watchdog">Hlídací pes</string>
+    <string name="settings_watchdog_summary">Automaticky restartovat Shizuku v případě pádu</string>
     <string name="settings_tcp_mode">TCP režim</string>
     <string name="settings_tcp_mode_summary">"Umožňuje Shizuku restartovat bez Wi-Fi. (Shizuku musela od restartu začít jednou)"</string>
     <string name="settings_restart_dialog_title">Vyžadován restart</string>
