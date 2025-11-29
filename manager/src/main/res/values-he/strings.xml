@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">מערכות מסוימות (כגון MIUI) אוסרות גישה לאפליקציות לרשת כאשר הן אינן גלויות, גם אם האפליקציה משתמשת בשירות קדמי. אנא השבת את תכונות אופטימיזציית הסוללה עבור Shizuku במערכות כאלה.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[התחל (למכשירים עם הרשאות מקור)]]></string>
+    <string name="home_root_description"><![CDATA[אם אתם משתמשים ב-Magisk, תוכלו לנסות את %1$s. עבור משתמשי רוט, הוא יחליף בסופו של דבר את Shizuku. שימו לב, יישומים קיימים צריכים להשתנות מעט כדי להשתמש ב- %2$s.]]></string>
     <string name="home_root_button_start">הַתחָלָה</string>
     <string name="home_root_button_restart">הפעלה מחדש</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[הקש כדי לנהל אפליקציות מורשות]]></string>
     <string name="home_app_management_empty">אפליקציות שביקשו או הצהירו על הרשאת Shizuku יוצגו כאן.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">מדריך למפתחים</string>
     <string name="home_learn_more_description">למד כיצד לפתח עם שיזוקו</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">אתה צריך לעשות צעד נוסף</string>
@@ -81,7 +83,16 @@
     <string name="app_management_toggle_all">החלף הכל</string>
     <!-- Terminal -->
     <string name="home_terminal_title">השתמש ב-Shizuku ביישומי טרמינל</string>
+    <string name="home_terminal_description">הפעל פקודות מעטפת ביישומי טרמינל דרך Shizuku</string>
+    <string name="terminal_tutorial_miui">משתמשים דיווחו כי MIUI שובר את מסגרת הגישה לאחסון, בה משתמשת פונקציית הייצוא.</string>
+    <string name="terminal_tutorial_miui_2">אם אתם משתמשים ב-MIUI, ייתכן שתצטרכו לחלץ את הקובץ מתיקיית הנכסים בקובץ ה-APK של Shizuku.</string>
+    <string name="terminal_tutorial_1">ייצא את הקבצים לתיקייה חדשה.</string>
+    <string name="terminal_tutorial_1_description">ייוצאו שני קבצים: %1$s ו- %2$s. אם הקבצים כבר קיימים בתיקייה שנבחרה, הם יימחקו.</string>
     <string name="terminal_export_files">ייצוא קבצים</string>
+    <string name="terminal_tutorial_2">השתמש באפליקציית הטרמינל שלך כדי להעתיק את הקבצים לתיקיית הקבצים הפרטית שלה.</string>
+    <string name="terminal_tutorial_2_description">טיפ: אם ספריית הבית (~) של אפליקציית הטרמינל שלך נמצאת בתיקייה /data/data, הצבת הקבצים שם תאפשר לך להפעיל את %1$s מבלי לכתוב את הנתיב.\n\nאחרת, תוכל ליצור כינוי עבור %2$s בקובץ התצורה .bashrc של אפליקציית הטרמינל שלך.</string>
+    <string name="terminal_tutorial_3">פתחו מעטפת עם הפקודה הבאה:</string>
+    <string name="rish_description"><![CDATA[בעזרת %1$s, ניתן להריץ פקודות מעטפת בכל אפליקציית טרמינל.<p>הקש כדי ללמוד עוד על אופן השימוש בו.]]></string>
     <!-- Settings -->
     <string name="settings_title">הגדרות</string>
     <string name="settings_behavior">הִתְנַהֲגוּת</string>
@@ -90,6 +101,7 @@
     <string name="settings_start_on_boot_bug">עקב באג באנדרואיד 11-12, ניפוי שגיאות אלחוטי אינו זוכר רשתות מורשות.\n\nתצטרך לאשר מחדש את הרשת בכל אתחול מחדש על ידי לחיצה על \"אפשר\" כאשר תיבת הדו-שיח של ההרשאה תופיע.</string>
     <string name="settings_use_system_color">השתמש בצבע ערכת הנושא של המערכת</string>
     <string name="settings_watchdog">כֶּלֶב שְׁמִירָה</string>
+    <string name="settings_watchdog_summary">הפעל מחדש את שיזוקו באופן אוטומטי אם הוא קורס</string>
     <string name="settings_tcp_mode">מצב TCP</string>
     <string name="settings_tcp_mode_summary">"מאפשר לשיזוקו להפעיל מחדש ללא Wi-Fi. (שיזוקו חייבת להיות מופעלת פעם אחת מאז האתחול מחדש)"</string>
     <string name="settings_restart_dialog_title">נדרש הפעלה מחדש</string>
