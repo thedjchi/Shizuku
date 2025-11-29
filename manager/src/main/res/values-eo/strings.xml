@@ -88,7 +88,6 @@
     <string name="terminal_tutorial_1_description">Du dosieroj estos eksportitaj: %1$s kaj %2$s. Se la dosieroj jam ekzistas en la elektita dosierujo, ili estos forigitaj.</string>
     <string name="terminal_export_files">Eksporti dosierojn</string>
     <string name="terminal_tutorial_2">Uzu vian terminalan aplikaĵon por kopii la dosierojn al ĝia privata dosierujo.</string>
-    <string name="terminal_tutorial_2_description">Konsilo: Se la hejma dosierujo (~) de via fina aplikaĵo estas en la dosierujo /data/data, meti la dosierojn tien permesos al vi ruli %1$s sen skribi la vojon.\n\nAlie, vi povas krei kaŝnomon por %2$s en la agordodosiero .bashrc de via fina aplikaĵo.</string>
     <string name="terminal_tutorial_3">Malfermu ŝelon per la jena komando:</string>
     <string name="rish_description"><![CDATA[Per %1$s, vi povas ruli ŝelkomandojn en iu ajn fina aplikaĵo.<p>Frapetu por lerni pli pri kiel uzi ĝin.]]></string>
     <!-- Settings -->
