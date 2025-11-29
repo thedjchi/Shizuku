@@ -88,6 +88,7 @@
     <string name="terminal_tutorial_1_description">Er worden twee bestanden geëxporteerd: %1$s en %2$s. Als de bestanden al in de geselecteerde map staan, worden ze verwijderd.</string>
     <string name="terminal_export_files">Bestanden exporteren</string>
     <string name="terminal_tutorial_2">Gebruik uw terminal-app om de bestanden naar de persoonlijke bestandsmap te kopiëren.</string>
+    <string name="terminal_tutorial_2_description">Tip: Als de thuismap (~) van uw terminal-app zich in de map met persoonlijke bestanden bevindt, kunt u door de bestanden daarin te plaatsen %1$s uitvoeren zonder het pad te hoeven schrijven.\n\nAnders kunt u een alias voor %2$s maken in het configuratiebestand %3$s van uw terminal-app.</string>
     <string name="terminal_tutorial_3">Open een shell met de volgende opdracht:</string>
     <string name="rish_description"><![CDATA[Met %1$skunt u shell-opdrachten uitvoeren in elke terminal-app.<p>Tik om meer te weten te komen over het gebruik ervan.]]></string>
     <!-- Settings -->
