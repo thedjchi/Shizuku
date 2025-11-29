@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">일부 시스템(예: MIUI)은 앱이 포그라운드 서비스를 사용하더라도 보이지 않으면 네트워크에 접속하지 못하게 합니다. 해당 시스템에서는 시즈쿠의 배터리 최적화 기능을 비활성화해 주세요.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[시작 (루팅된 기기용)]]></string>
+    <string name="home_root_description"><![CDATA[Magisk를 사용 중이라면 %1$s를 사용해 보세요. 루트 사용자의 경우, 이 명령은 Shizuku를 대체하게 됩니다. 참고: %2$s를 사용하려면 기존 애플리케이션을 약간 변경해야 합니다.]]></string>
     <string name="home_root_button_start">시작</string>
     <string name="home_root_button_restart">재시작</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[탭하여 인증된 앱 관리]]></string>
     <string name="home_app_management_empty">Shizuku 권한을 요청하거나 선언한 앱이 여기에 표시됩니다.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">개발자 가이드</string>
     <string name="home_learn_more_description">Shizuku로 개발하는 방법 알아보기</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">추가 단계를 진행해야 합니다</string>
@@ -85,7 +87,16 @@
     <string name="app_management_toggle_all">모두 전환</string>
     <!-- Terminal -->
     <string name="home_terminal_title">터미널에서 Shizuku 사용</string>
+    <string name="home_terminal_description">Shizuku를 통해 터미널 앱에서 셸 명령 실행</string>
+    <string name="terminal_tutorial_miui">사용자들은 MIUI가 내보내기 기능에서 사용되는 Storage Access Framework를 손상시킨다고 보고했습니다.</string>
+    <string name="terminal_tutorial_miui_2">MIUI를 사용하는 경우 Shizuku APK의 assets 폴더에서 파일을 추출해야 할 수도 있습니다.</string>
+    <string name="terminal_tutorial_1">파일을 새 폴더로 내보냅니다.</string>
+    <string name="terminal_tutorial_1_description">%1$s 및 %2$s두 개의 파일이 내보내집니다. 선택한 폴더에 해당 파일이 이미 있는 경우 삭제됩니다.</string>
     <string name="terminal_export_files">파일 내보내기</string>
+    <string name="terminal_tutorial_2">터미널 앱을 사용하여 파일을 개인 파일 디렉토리에 복사합니다.</string>
+    <string name="terminal_tutorial_2_description">팁: 터미널 앱의 홈 디렉토리(~)가 /data/data 폴더에 있는 경우, 해당 폴더에 파일을 저장하면 경로를 쓰지 않고도 %1$s 을 실행할 수 있습니다.\n\n그렇지 않은 경우, 터미널 앱의 .bashrc 설정 파일에서 %2$s 에 대한 별칭을 만들 수 있습니다.</string>
+    <string name="terminal_tutorial_3">다음 명령으로 셸을 엽니다.</string>
+    <string name="rish_description"><![CDATA[%1$s를 사용하면 모든 터미널 앱에서 셸 명령을 실행할 수 있습니다.<p>탭하여 사용 방법에 대한 자세한 내용을 알아보세요.]]></string>
     <!-- Settings -->
     <string name="settings_title">설정</string>
     <string name="settings_behavior">행동</string>
@@ -94,6 +105,7 @@
     <string name="settings_start_on_boot_bug">Android 11-12의 버그로 인해 무선 디버깅은 권한이 부여된 네트워크를 기억하지 못합니다.\n\n재부팅할 때마다 인증 대화상자가 뜰 때 \"허용\" 버튼을 눌러 네트워크를 재승인해야 합니다.</string>
     <string name="settings_use_system_color">시스템 테마 색상 사용</string>
     <string name="settings_watchdog">지키는 개</string>
+    <string name="settings_watchdog_summary">Shizuku가 충돌하면 자동으로 다시 시작합니다.</string>
     <string name="settings_tcp_mode">TCP 모드</string>
     <string name="settings_tcp_mode_summary">"Shizuku가 Wi-Fi 없이 재시작할 수 있도록 합니다. (Shizuku는 재부팅 후 한 번 시작되어야 합니다.)"</string>
     <string name="settings_restart_dialog_title">재시작 필요</string>
