@@ -97,6 +97,7 @@
     <string name="terminal_tutorial_1_description">Budou exportovány dva soubory: %1$s a %2$s. Pokud soubory již ve vybrané složce existují, budou smazány.</string>
     <string name="terminal_export_files">Exportovat soubory</string>
     <string name="terminal_tutorial_2">Pomocí terminálové aplikace zkopírujte soubory do jejího soukromého adresáře souborů.</string>
+    <string name="terminal_tutorial_2_description">Tip: Pokud se domovský adresář (~) vaší terminálové aplikace nachází v adresáři soukromých souborů, umístění souborů tam vám umožní spustit %1$s bez zápisu cesty.\n\nV opačném případě můžete vytvořit alias pro %2$s v konfiguračním souboru %3$s vaší terminálové aplikace.</string>
     <string name="terminal_tutorial_3">Otevřete shell pomocí následujícího příkazu:</string>
     <string name="rish_description"><![CDATA[Pomocí %1$smůžete spouštět příkazy shellu v jakékoli terminálové aplikaci.<p>Klepnutím se dozvíte více o jeho použití.]]></string>
     <!-- Settings -->
