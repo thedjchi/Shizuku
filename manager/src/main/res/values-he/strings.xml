@@ -57,8 +57,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">מערכות מסוימות (כגון MIUI) אוסרות גישה לאפליקציות לרשת כאשר הן אינן גלויות, גם אם האפליקציה משתמשת בשירות קדמי. אנא השבת את תכונות אופטימיזציית הסוללה עבור Shizuku במערכות כאלה.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[התחל (למכשירים עם הרשאות מקור)]]></string>
-    <string name="home_root_description"><![CDATA[בנוסף, ניתן להפעיל את Shizuku באופן אוטומטי בעת האתחול. אם לא, אנא בדוק אם המערכת שלך או כלי צד שלישי הגבילו את Shizuku.<br>ניתן לעיין ב- %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[אם אתם משתמשים ב-Magisk, תוכלו לנסות את %1$s. עבור משתמשי רוט, הוא יחליף בסופו של דבר את Shizuku. שימו לב, יישומים קיימים צריכים להשתנות מעט כדי להשתמש ב- %2$s.]]></string>
     <string name="home_root_button_start">הַתחָלָה</string>
     <string name="home_root_button_restart">הפעלה מחדש</string>
     <!-- Home - Application management -->
@@ -72,7 +70,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[הקש כדי לנהל אפליקציות מורשות]]></string>
     <string name="home_app_management_empty">אפליקציות שביקשו או הצהירו על הרשאת Shizuku יוצגו כאן.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">למד שיזוקו</string>
     <string name="home_learn_more_description">למד כיצד לפתח עם שיזוקו</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">אתה צריך לעשות צעד נוסף</string>
@@ -84,17 +81,7 @@
     <string name="app_management_toggle_all">החלף הכל</string>
     <!-- Terminal -->
     <string name="home_terminal_title">השתמש ב-Shizuku ביישומי טרמינל</string>
-    <string name="home_terminal_description">הפעל פקודות דרך Shizuku באפליקציות טרמינל שאתה אוהב</string>
-    <string name="terminal_tutorial_1">ראשית, ייצא קבצים לכל מקום שתרצה. תמצא שני קבצים, %1$s ו- %2$s.</string>
-    <string name="terminal_tutorial_1_description">אם ישנם קבצים בעלי שם זהה בתיקייה שנבחרה, הם יימחקו.\n\nפונקציית הייצוא משתמשת ב-SAF (Storage Access Framework). דווח ש-MIUI פוגע בפונקציות של SAF. אם אתם משתמשים ב-MIUI, ייתכן שתצטרכו לחלץ את הקובץ מקובץ ה-apk של Shizuku או להוריד אותו מ-GitHub.</string>
     <string name="terminal_export_files">ייצוא קבצים</string>
-    <string name="terminal_tutorial_2">לאחר מכן, השתמש בכל עורך טקסט כדי לפתוח ולערוך את %1$s.</string>
-    <string name="terminal_tutorial_2_description">לדוגמה, אם ברצונך להשתמש ב-Shizuku ב- %1$s, עליך להחליף את %2$s ב- %3$s (%4$s הוא שם החבילה של %1$s).</string>
-    <string name="terminal_tutorial_3">לבסוף, העבירו את הקבצים למקום שבו אפליקציית הטרמינל שלכם יכולה לגשת, תוכלו להשתמש ב- %1$s כדי להריץ פקודות דרך Shizuku.</string>
-    <string name="terminal_tutorial_3_description">כמה טיפים: הענק הרשאת ביצוע ל- %1$s והוסף אותו ל- %2$s, תוכל להשתמש ב- %1$s ישירות.</string>
-    <string name="rish_description"><![CDATA[בעזרת %1$s, בכל אפליקציית טרמינל, ניתן להתחבר ולקיים אינטראקציה עם ה-shell המופעל על ידי Shizuku.
-<p>אודות השימוש המפורט %1$s, הקש כדי להציג את המסמך.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">הגדרות</string>
     <string name="settings_behavior">הִתְנַהֲגוּת</string>
