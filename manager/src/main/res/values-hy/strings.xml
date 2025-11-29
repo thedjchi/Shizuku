@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Որոշ համակարգեր (օրինակ՝ MIUI-ը) թույլ չեն տալիս հավելվածներին մուտք գործել ցանց, երբ դրանք տեսանելի չեն, նույնիսկ եթե հավելվածն օգտագործում է առաջնային պլանի ծառայություն: Խնդրում ենք անջատել Shizuku-ի մարտկոցի օպտիմալացման գործառույթները նման համակարգերում:</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Միացնել (root արած սարքերի համար)]]></string>
-    <string name="home_root_description"><![CDATA[Բացի այդ, Shizuku-ն կարող է ավտոմատ կերպով մեկնարկվել բեռնման ժամանակ։ Հակառակ դեպքում, խնդրում ենք ստուգել, թե արդյոք ձեր համակարգը կամ երրորդ կողմի գործիքները սահմանափակել են Shizuku-ն։<br>Կարող եք դիմել %s-ին։]]></string>
-    <string name="home_root_description_sui"><![CDATA[Եթե օգտագործում եք Magisk, կարող եք փորձել %1$s-ը։ Root օգտատերերի համար այն ի վերջո կփոխարինի Shizuku-ին։ Նշենք, որ առկա ծրագրերը պետք է մի փոքր փոփոխվեն՝ %2$s-ն օգտագործելու համար։]]></string>
     <string name="home_root_button_start">Միացնել</string>
     <string name="home_root_button_restart">Վերաբեռնել</string>
     <!-- Home - Application management -->
@@ -73,7 +71,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Սեղմեք, որպեսզի վավերացված ծրագրերը տիրապետելու համար]]></string>
     <string name="home_app_management_empty">Այստեղ կցուցադրվեն հավելվածները, որոնք խնդրել կամ հայտարարել են Shizuku թույլտվությունը։</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Սովորել Shizuku</string>
     <string name="home_learn_more_description">Սովորեք ծրագրավորել Shizuku-ով կամ Shizuku-ն ուրիշ ծրագրերի հետ օգտագործել</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Դուք պետք է լրացուցիչ քայլ կատարեք</string>
@@ -85,17 +82,7 @@
     <string name="app_management_toggle_all">Toggle all</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Օգտագործեք Shizuku-ն տերմինալային հավելվածներում</string>
-    <string name="home_terminal_description">Գործարկեք հրամաններ Shizuku-ի միջոցով ձեզ դուր եկած տերմինալային հավելվածներում</string>
-    <string name="terminal_tutorial_1">Առաջին, արտահանել ֆայլերը ցանկացած վայրում, որտեղ դուք ցանկանում եք: Դուք կգտնեք երկու ֆայլ՝ %1$s եւ %2$s.</string>
-    <string name="terminal_tutorial_1_description">Եթե ընտրված պանակում կան նույն անունով նիշքեր, դրանք կջնջվեն:\n\nԱրտահանման ֆունկցիան օգտագործում է SAF (Storage Access Framework): Հաղորդվում է, որ MIUI-ն խախտում է SAF-ի գործառույթները։ Եթե դուք օգտագործում եք MIUI, դուք կարող եք հանել ֆայլը Shizuku- ի apk- ից կամ ներբեռնել GitHub- ից:</string>
     <string name="terminal_export_files">Արտահանել ֆայլերը</string>
-    <string name="terminal_tutorial_2">Այնուհետեւ օգտագործեք ցանկացած տեքստային խմբագրիչ՝ բացելու եւ խմբագրելու համար %1$s.</string>
-    <string name="terminal_tutorial_2_description">Օրինակ, եթե ցանկանում եք օգտագործել Shizuku-ն %1$s, դուք պետք է փոխարինեք %2$s հետ %3$s (%4$s փաթեթի անվանումն է %1$s).</string>
-    <string name="terminal_tutorial_3">Վերջապես, տեղափոխեք ֆայլերը մի տեղ, որտեղ ձեր տերմինալի հավելվածը կարող է մուտք գործել, դուք կկարողանաք օգտագործել %1$s հրամաններ կատարել Շիզուկուի միջոցով:</string>
-    <string name="terminal_tutorial_3_description">Որոշ խորհուրդներ. %1$s եւ ավելացրեք այն %2$s, դուք կկարողանաք օգտագործել %1$s ուղղակիորեն:</string>
-    <string name="rish_description"><![CDATA[Հետ %1$s, ցանկացած տերմինալային հավելվածում կարող եք միանալ եւ շփվել Shizuku-ի կողմից աշխատեցվող խխունջի հետ։
-<p>Մանրամասն օգտագործման մասին %1$s, հպեք՝ փաստաթուղթը դիտելու համար:
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Կարգավորումներ</string>
     <string name="settings_behavior">Վարքագիծ</string>
