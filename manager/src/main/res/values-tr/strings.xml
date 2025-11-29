@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bazı sistemler (örneğin MIUI), uygulamaların görünmediği durumlarda ağa erişmesini yasaklar, uygulama ön plan hizmeti kullansa bile. Lütfen bu tür sistemlerde Shizuku için pil optimizasyon özelliklerini devre dışı bırakın.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (rootlu cihazlar için)]]></string>
+    <string name="home_root_description"><![CDATA[Magisk kullanıyorsanız, %1$skomutunu deneyebilirsiniz. Kök kullanıcılar için, sonunda Shizuku'nun yerini alacaktır. Mevcut uygulamaların %2$skomutunu kullanabilmesi için biraz değişiklik yapılması gerektiğini unutmayın.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yeniden başlat</string>
     <!-- Home - Application management -->
@@ -71,6 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Yetkilendirilmiş uygulamaları yönetmek için dokunun]]></string>
     <string name="home_app_management_empty">Shizuku iznini talep eden veya beyan eden uygulamalar burada gösterilecektir.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Geliştirici kılavuzu</string>
     <string name="home_learn_more_description">Shizuku ile nasıl uygulama geliştireceğinizi öğrenin</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Fazladan bi adım daha yapmanız gerekiyor</string>
@@ -86,7 +88,16 @@
     <string name="app_management_toggle_all">Tümünü aç/kapat</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Shizuku’yu terminal uygulamalarında kullanın</string>
+    <string name="home_terminal_description">Shizuku aracılığıyla terminal uygulamalarında kabuk komutlarını çalıştırın</string>
+    <string name="terminal_tutorial_miui">Kullanıcılar, MIUI\'nin dışa aktarma işlevi tarafından kullanılan Depolama Erişim Çerçevesini bozduğunu bildirdi.</string>
+    <string name="terminal_tutorial_miui_2">Eğer MIUI kullanıyorsanız, dosyayı Shizuku\'nun APK\'sındaki varlıklar klasöründen çıkarmanız gerekebilir.</string>
+    <string name="terminal_tutorial_1">Dosyaları yeni bir klasöre aktarın.</string>
+    <string name="terminal_tutorial_1_description">İki dosya dışa aktarılacak: %1$s ve %2$s. Dosyalar seçili klasörde zaten mevcutsa silinecek.</string>
     <string name="terminal_export_files">Dosyaları dışa aktar</string>
+    <string name="terminal_tutorial_2">Terminal uygulamanızı kullanarak dosyaları özel dosyalar dizinine kopyalayın.</string>
+    <string name="terminal_tutorial_2_description">İpucu: Terminal uygulamanızın ana dizini (~) /data/data klasöründeyse, dosyaları oraya yerleştirmek, yolu yazmadan %1$s komutunu çalıştırmanıza olanak tanır.\n\nAksi takdirde, terminal uygulamanızın .bashrc yapılandırma dosyasında %2$s için bir takma ad oluşturabilirsiniz.</string>
+    <string name="terminal_tutorial_3">Aşağıdaki komutla bir kabuk açın:</string>
+    <string name="rish_description"><![CDATA[%1$sile herhangi bir terminal uygulamasında kabuk komutlarını çalıştırabilirsiniz.<p>Nasıl kullanılacağı hakkında daha fazla bilgi edinmek için dokunun.]]></string>
     <!-- Settings -->
     <string name="settings_title">Ayarlar</string>
     <string name="settings_behavior">Davranış</string>
@@ -95,6 +106,7 @@
     <string name="settings_start_on_boot_bug">Android 11-12\'deki bir hata nedeniyle, kablosuz hata ayıklama yetkili ağları hatırlamıyor.\n\nHer yeniden başlatmada yetkilendirme diyalogu açıldığında \"İzin ver\" tuşuna tıklayarak ağı yeniden yetkilendirmeniz gerekecek.</string>
     <string name="settings_use_system_color">Sistem tema rengini kullan</string>
     <string name="settings_watchdog">Bekçi köpeği</string>
+    <string name="settings_watchdog_summary">Çökerse Shizuku\'yu otomatik olarak yeniden başlat</string>
     <string name="settings_tcp_mode">TCP modu</string>
     <string name="settings_tcp_mode_summary">"Shizuku'nun Wi-Fi olmadan yeniden başlatılmasına izin verir. (Shizuku'nun yeniden başlatıldıktan sonra bir kez başlatılmış olması gerekir)"</string>
     <string name="settings_restart_dialog_title">Yeniden Başlatma Gerekli</string>
