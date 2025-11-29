@@ -94,7 +94,6 @@
     <string name="terminal_tutorial_1_description">將匯出兩個檔案： %1$s 和 %2$s。如果所選資料夾中已存在這些文件，則會將其刪除。</string>
     <string name="terminal_export_files">匯出檔案</string>
     <string name="terminal_tutorial_2">使用終端應用程式將檔案複製到其私有檔案目錄。</string>
-    <string name="terminal_tutorial_2_description">提示：如果你的終端應用程式的主目錄（~）位於 /data/data 資料夾下，將檔案放在那裡就可以直接運行 %1$s 而無需輸入路徑。\n\n否則，你可以在終端應用程式的 .bashrc 設定檔中為 %2$s 建立一個別名。</string>
     <string name="terminal_tutorial_3">使用以下命令開啟 shell：</string>
     <string name="rish_description"><![CDATA[使用 %1$s，您可以在任何終端應用程式中執行 shell 命令。<p>點選了解更多使用方法。]]></string>
     <!-- Settings -->
