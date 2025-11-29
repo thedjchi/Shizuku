@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">অ্যান্ড্রয়েড ১১-১২-তে একটি বাগের কারণে, ওয়্যারলেস ডিবাগিং কোনও অনুমোদিত নেটওয়ার্ক মনে রাখে না।\n\nঅনুমোদনের ডায়ালগ পপ আপ হলে \"অনুমতি দিন\" ট্যাপ করে প্রতিটি রিবুটে নেটওয়ার্ক পুনরায় অনুমোদন করতে হবে।</string>
     <string name="settings_use_system_color">সিস্টেম থিমের রঙ ব্যবহার করুন</string>
     <string name="settings_watchdog">ওয়াচডগ</string>
-    <string name="settings_watchdog_summary">শিজুকু বন্ধ হয়ে গেলে স্বয়ংক্রিয়ভাবে এটি পুনরায় চালু করুন</string>
     <string name="settings_tcp_mode">টিসিপি মোড</string>
     <string name="settings_tcp_mode_summary">"ওয়াই-ফাই ছাড়াই শিজুকুকে পুনঃশুরু করার অনুমতি দেয়। (শিজুকু অবশ্যই রিবুট হওয়ার পর থেকে একবার শুরু করেছে)"</string>
     <string name="settings_restart_dialog_title">পুনঃসূচনা প্রয়োজন</string>
