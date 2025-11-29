@@ -90,7 +90,6 @@
     <string name="settings_start_on_boot_bug">עקב באג באנדרואיד 11-12, ניפוי שגיאות אלחוטי אינו זוכר רשתות מורשות.\n\nתצטרך לאשר מחדש את הרשת בכל אתחול מחדש על ידי לחיצה על \"אפשר\" כאשר תיבת הדו-שיח של ההרשאה תופיע.</string>
     <string name="settings_use_system_color">השתמש בצבע ערכת הנושא של המערכת</string>
     <string name="settings_watchdog">כֶּלֶב שְׁמִירָה</string>
-    <string name="settings_watchdog_summary">הפעל מחדש את שיזוקו באופן אוטומטי אם הוא נעצר</string>
     <string name="settings_tcp_mode">מצב TCP</string>
     <string name="settings_tcp_mode_summary">"מאפשר לשיזוקו להפעיל מחדש ללא Wi-Fi. (שיזוקו חייבת להיות מופעלת פעם אחת מאז האתחול מחדש)"</string>
     <string name="settings_restart_dialog_title">נדרש הפעלה מחדש</string>
