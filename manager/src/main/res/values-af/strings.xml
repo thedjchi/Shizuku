@@ -88,6 +88,7 @@
     <string name="terminal_tutorial_1_description">Twee lêers sal uitgevoer word: %1$s en %2$s. Indien die lêers reeds in die gekose vouer bestaan, sal hulle uitgevee word.</string>
     <string name="terminal_export_files">Voer lêers uit</string>
     <string name="terminal_tutorial_2">Gebruik jou terminaal-app om die lêers na sy privaat lêergids te kopieer.</string>
+    <string name="terminal_tutorial_2_description">Wenk: As jou terminaal-app se tuisgids (~) in die privaat lêergids is, sal die plasing van die lêers daar jou toelaat om %1$s uit te voer sonder om die pad te skryf.\n\nAndersins kan jy \'n alias vir %2$s in jou terminaal-app se %3$s konfigurasielêer skep.</string>
     <string name="terminal_tutorial_3">Maak \'n dop oop met die volgende opdrag:</string>
     <string name="rish_description"><![CDATA[Met %1$skan jy dopbevele in enige terminaaltoepassing uitvoer.<p>Tik om meer te wete te kom oor hoe om dit te gebruik.]]></string>
     <!-- Settings -->
