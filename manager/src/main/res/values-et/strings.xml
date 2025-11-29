@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12 vea tõttu ei mäleta traadita ühenduse silumine ühtegi volitatud võrku.\n\nPeate võrgu iga taaskäivitamise ajal uuesti autoriseerima, puudutades autoriseerimisdialoogi hüpikaknas nuppu „Luba”.</string>
     <string name="settings_use_system_color">Kasuta süsteemi teemavärvi</string>
     <string name="settings_watchdog">Valvekoer</string>
-    <string name="settings_watchdog_summary">Taaskäivita Shizuku automaatselt, kui see peatub</string>
     <string name="settings_tcp_mode">TCP režiim</string>
     <string name="settings_tcp_mode_summary">"Võimaldab Shizukul taaskäivitada ilma Wi-Fita. (Shizuku pidi pärast taaskäivitust kord alustama)"</string>
     <string name="settings_restart_dialog_title">Taaskäivitamine on vajalik</string>
