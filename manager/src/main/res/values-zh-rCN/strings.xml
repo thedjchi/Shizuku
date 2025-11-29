@@ -60,8 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系统（例如 MIUI）会禁止应用在不可见时访问网络，即使该应用使用了前台服务。请在这些系统上为 Shizuku 关闭电池优化功能。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[启动（针对已 root 设备）]]></string>
-    <string name="home_root_description"><![CDATA[另外，Shizuku 可以在开机时自动启动。如果没有，请检查您的系统或是第三方工具是否限制了 Shizuku。<br>你可以参考 %s。]]></string>
-    <string name="home_root_description_sui"><![CDATA[如果您正在使用 Magisk，可以尝试使用 %1$s。对于 root 用户，它最终会取代 Shizuku。请注意，现有应用程序需要稍作修改才能使用 %2$s。]]></string>
+    <string name="home_root_description"><![CDATA[如果您正在使用 Magisk，可以尝试使用 %1$s。对于 root 用户，它最终会取代 Shizuku。请注意，现有应用程序需要稍作修改才能使用 %2$s。]]></string>
     <string name="home_root_button_start">启动</string>
     <string name="home_root_button_restart">重新启动</string>
     <!-- Home - Application management -->
@@ -72,7 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[点按以管理授权的应用]]></string>
     <string name="home_app_management_empty">已请求或声明 Shizuku 权限的应用将显示在此处。</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">了解 Shizuku</string>
+    <string name="home_learn_more_title">开发者指南</string>
     <string name="home_learn_more_description">了解如何使用 Shizuku 开发</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">您需要进行额外的步骤</string>
@@ -84,16 +83,16 @@
     <string name="app_management_toggle_all">切换全部</string>
     <!-- Terminal -->
     <string name="home_terminal_title">在终端应用中使用 Shizuku</string>
-    <string name="home_terminal_description">在您喜欢的终端应用中通过 Shizuku 运行命令</string>
-    <string name="terminal_tutorial_1">首先，将文件导出到任何您想要的位置。您将找到两个文件，%1$s 和 %2$s。</string>
-    <string name="terminal_tutorial_1_description">若选择的文件夹中已有同名文件，它们会被删除。\n\n导出功能使用 SAF（Storage Access Framework）。有报告称 MIUI 破坏了 SAF 的功能，如果您使用 MIUI，您可能需要从 Shizuku 的 apk 中提取文件，或是从 GitHub 下载文件。</string>
+    <string name="home_terminal_description">通过 Shizuku 在终端应用程序中运行 shell 命令</string>
+    <string name="terminal_tutorial_miui">用户反映 MIUI 破坏了导出功能所使用的存储访问框架。</string>
+    <string name="terminal_tutorial_miui_2">如果您使用的是 MIUI 系统，则可能需要从 Shizuku 的 APK 的 assets 文件夹中提取该文件。</string>
+    <string name="terminal_tutorial_1">将文件导出到新文件夹。</string>
+    <string name="terminal_tutorial_1_description">将导出两个文件： %1$s 和 %2$s。如果所选文件夹中已存在这些文件，则会将其删除。</string>
     <string name="terminal_export_files">导出文件</string>
-    <string name="terminal_tutorial_2">然后，使用任意文本编辑器打开并编辑 %1$s。</string>
-    <string name="terminal_tutorial_2_description">例如，如果要在 %1$s 中使用 Shizuku，则应将 %2$s 替换为 %3$s（%4$s 是 %1$s 的软件包名称）。</string>
-    <string name="terminal_tutorial_3">最后，将文件移动到终端应用可以访问的位置，您便可使用 %1$s 来通过 Shizuku 运行命令。</string>
-    <string name="terminal_tutorial_3_description">一些技巧：将执行权限授予 %1$s 并将其添加到 %2$s，您将可以直接使用 %1$s。</string>
-    <string name="rish_description"><![CDATA[通过 %1$s，您可以在任何终端应用中连接到由 Shizuku 运行的 shell 并与之交互。
-<p>有关 %1$s 的具体使用方式，点按以阅读文档。]]></string>
+    <string name="terminal_tutorial_2">使用终端应用程序将文件复制到其私有文件目录。</string>
+    <string name="terminal_tutorial_2_description">提示：如果你的终端应用程序的主目录（~）位于私有文件目录中，将文件放在那里就可以直接运行 %1$s 而无需输入路径。\n\n否则，你可以在终端应用程序的 %3$s 配置文件中为 %2$s 创建一个别名。</string>
+    <string name="terminal_tutorial_3">使用以下命令打开 shell：</string>
+    <string name="rish_description"><![CDATA[使用 %1$s，您可以在任何终端应用程序中运行 shell 命令。<p>点击了解更多使用方法。]]></string>
     <!-- Settings -->
     <string name="settings_title">设置</string>
     <string name="settings_behavior">行为</string>
@@ -102,7 +101,7 @@
     <string name="settings_start_on_boot_bug">由于Android 11-12中的一个漏洞，无线调试不会记住任何授权网络。\n\n每次重启时，当授权对话框弹出时，点击“允许”重新授权网络。</string>
     <string name="settings_use_system_color">使用系统主题颜色</string>
     <string name="settings_watchdog">Watchdog</string>
-    <string name="settings_watchdog_summary">Shizuku 停止时自动重启 Shizuku</string>
+    <string name="settings_watchdog_summary">如果 Shizuku 崩溃，则自动重启。</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"允许 Shizuku 在没有 Wi-Fi 的情况下重启。（Shizuku 必须在重启后启动过一次）"</string>
     <string name="settings_restart_dialog_title">需要重启</string>

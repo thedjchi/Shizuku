@@ -60,8 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Unele sisteme (cum ar fi MIUI) interpermit accesul aplicațiilor la rețea atunci când nu sunt vizibile, chiar dacă aplicația folosește un serviciu de prim-plan. Vă rugăm să dezactivați funcțiile de optimizare a bateriei pentru Shizuku pe astfel de sisteme.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Pornire (pentru dispozitive root-ate)]]></string>
-    <string name="home_root_description"><![CDATA[În plus, Shizuku poate fi pornit automat la pornire. Dacă nu, verifică dacă sistemul sau instrumente terțe au restricționat Shizuku.<br>Poți consulta %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Dacă folosești Magisk, poți încerca %1$s. Pentru utilizatorii root, va înlocui în cele din urmă Shizuku. Reține, aplicațiile existente trebuie să se schimbe puțin pentru a fi folosite %2$s.]]></string>
+    <string name="home_root_description"><![CDATA[Dacă folosești Magisk, poți încerca %1$s. Pentru utilizatorii root, acesta va înlocui în cele din urmă Shizuku. Reține că aplicațiile existente trebuie să se modifice puțin pentru a utiliza %2$s.]]></string>
     <string name="home_root_button_start">Pornire</string>
     <string name="home_root_button_restart">Repornire</string>
     <!-- Home - Application management -->
@@ -74,7 +73,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Atinge pentru a gestiona aplicațiile autorizate]]></string>
     <string name="home_app_management_empty">Aplicațiile care au solicitat sau au declarat permisiunea Shizuku vor fi afișate aici.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Învață Shizuku</string>
+    <string name="home_learn_more_title">Ghid pentru dezvoltatori</string>
     <string name="home_learn_more_description">Află cum să dezvolți cu Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Trebuie să faci un pas suplimentar</string>
@@ -90,17 +89,16 @@
     <string name="app_management_toggle_all">Comutare toate</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Utilizează Shizuku în aplicații terminale</string>
-    <string name="home_terminal_description">Rulează comenzi prin Shizuku în aplicațiile terminale care îți plac</string>
-    <string name="terminal_tutorial_1">Mai întâi exportă fișierele oriunde dorești. Vei găsi două fișiere, %1$s și %2$s.</string>
-    <string name="terminal_tutorial_1_description">Dacă există fișiere cu același nume în dosarul selectat, acestea vor fi șterse.
-\n
-\nFuncția de export folosește SAF (Storage Access Framework). A fost raportat că MIUI întrerupe funcțiile SAF. Dacă utilizezi MIUI, poate fi necesar să extragi fișierul din apk-ul lui Shizuku sau să-l descarci de pe GitHub.</string>
+    <string name="home_terminal_description">Executați comenzi shell în aplicațiile terminale prin Shizuku</string>
+    <string name="terminal_tutorial_miui">Utilizatorii au raportat că MIUI încalcă Storage Access Framework, care este utilizat de funcția de export.</string>
+    <string name="terminal_tutorial_miui_2">Dacă folosești MIUI, este posibil să fie nevoie să extragi fișierul din folderul de resurse din APK-ul lui Shizuku.</string>
+    <string name="terminal_tutorial_1">Exportați fișierele într-un folder nou.</string>
+    <string name="terminal_tutorial_1_description">Vor fi exportate două fișiere: %1$s și %2$s. Dacă fișierele există deja în folderul selectat, acestea vor fi șterse.</string>
     <string name="terminal_export_files">Export fișiere</string>
-    <string name="terminal_tutorial_2">Apoi, utilizează orice editor de text pentru a deschide și edita %1$s.</string>
-    <string name="terminal_tutorial_2_description">De exemplu, dacă vrei să folosești Shizuku în %1$s, ar trebui să înlocuiești %2$s cu %3$s (%4$s este numele pachetului al %1$s).</string>
-    <string name="terminal_tutorial_3">În cele din urmă, mută fișierele într-un loc unde aplicația de terminal le poate accesa, vei putea folosi %1$s pentru a rula comenzi prin Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Câteva sfaturi: acordă permisiunea de execuție pentru %1$s și adaugă la %2$s, vei putea folosi %1$s direct.</string>
-    <string name="rish_description"><![CDATA[Cu %1$s, în orice aplicație de terminal, vei putea conecta și interacționa cu shell-urile rulate de Shizuku. <p>Despre utilizarea detaliată %1$s, atinge pentru a vizualiza documentul.]]></string>
+    <string name="terminal_tutorial_2">Folosește aplicația de terminal pentru a copia fișierele în directorul său privat de fișiere.</string>
+    <string name="terminal_tutorial_2_description">Sfat: Dacă directorul principal (~) al aplicației terminale se află în directorul de fișiere private, plasarea fișierelor acolo vă va permite să rulați %1$s fără a scrie calea.\n\nÎn caz contrar, puteți crea un alias pentru %2$s în fișierul de configurare %3$s al aplicației terminale.</string>
+    <string name="terminal_tutorial_3">Deschideți un shell cu următoarea comandă:</string>
+    <string name="rish_description"><![CDATA[Cu %1$s, puteți rula comenzi shell în orice aplicație terminal.<p>Atingeți pentru a afla mai multe despre cum să o utilizați.]]></string>
     <!-- Settings -->
     <string name="settings_title">Setări</string>
     <string name="settings_behavior">Comportament</string>
@@ -109,7 +107,7 @@
     <string name="settings_start_on_boot_bug">Din cauza unui bug în Android 11-12, depanarea wireless nu își amintește nicio rețea autorizată.\n\nVa trebui să reautorizezi rețeaua la fiecare repornire apăsând pe \"Permite\" când apare fereul de autorizare.</string>
     <string name="settings_use_system_color">Utilizează culoarea temei de sistem</string>
     <string name="settings_watchdog">Câine de pază</string>
-    <string name="settings_watchdog_summary">Repornește automat Shizuku dacă se oprește</string>
+    <string name="settings_watchdog_summary">Repornește automat Shizuku dacă se blochează</string>
     <string name="settings_tcp_mode">Mod TCP</string>
     <string name="settings_tcp_mode_summary">"Permite repornirea sistemului Shizuku fără Wi-Fi. (Shizuku trebuie să fi pornit o dată de la repornire)"</string>
     <string name="settings_restart_dialog_title">Repornire necesară</string>

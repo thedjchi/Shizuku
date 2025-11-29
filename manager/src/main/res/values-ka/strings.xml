@@ -57,8 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">ზოგიერთი სისტემა (მაგალითად, MIUI) კრძალავს აპლიკაციებს ქსელზე წვდომას, როდესაც ისინი არ არიან ხილული, მაშინაც კი, თუ აპლიკაცია იყენებს წინა პლანის სერვისს. გთხოვთ, გამორთოთ ბატარეის ოპტიმიზაციის ფუნქციები Shizuku-სთვის ასეთ სისტემებზე.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[დაწყება (rooted მოწყობილობებისთვის)]]></string>
-    <string name="home_root_description"><![CDATA[გარდა ამისა, Shizuku შეიძლება ავტომატურად დაიწყოს ჩატვირთვისას. თუ არა, გთხოვთ, შეამოწმოთ, შეზღუდა თუ არა თქვენმა სისტემამ ან მესამე მხარის ინსტრუმენტებმა Shizuku.<br>შეგიძლიათ მიმართოთ %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[თუ Magisk-ს იყენებთ, შეგიძლიათ სცადოთ %1$s. root მომხმარებლებისთვის ის საბოლოოდ ჩაანაცვლებს Shizuku-ს. გაითვალისწინეთ, რომ არსებული აპლიკაციები %2$s-ის გამოსაყენებლად ცოტა უნდა შეიცვალოს.]]></string>
+    <string name="home_root_description"><![CDATA[თუ Magisk-ს იყენებთ, შეგიძლიათ სცადოთ %1$s. root მომხმარებლებისთვის ის საბოლოოდ ჩაანაცვლებს Shizuku-ს. გაითვალისწინეთ, რომ არსებული აპლიკაციები %2$s-ის გამოსაყენებლად ცოტა უნდა შეიცვალოს.]]></string>
     <string name="home_root_button_start">დაწყება</string>
     <string name="home_root_button_restart">გადატვირთვა</string>
     <!-- Home - Application management -->
@@ -70,7 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[შეეხეთ ავტორიზებული აპების სამართავად]]></string>
     <string name="home_app_management_empty">აპლიკაციები, რომლებმაც მოითხოვეს ან გამოაცხადეს Shizuku-ს ნებართვა, გამოჩნდება აქ.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">ისწავლეთ შიზუკუ</string>
+    <string name="home_learn_more_title">დეველოპერის სახელმძღვანელო</string>
     <string name="home_learn_more_description">ისწავლეთ როგორ განვითარდეთ Shizuku-სთან ერთად</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">თქვენ უნდა გადადგათ დამატებითი ნაბიჯი</string>
@@ -82,17 +81,16 @@
     <string name="app_management_toggle_all">ყველაფრის გადართვა</string>
     <!-- Terminal -->
     <string name="home_terminal_title">გამოიყენეთ Shizuku ტერმინალის აპებში</string>
-    <string name="home_terminal_description">გაუშვით ბრძანებები Shizuku-ს მეშვეობით თქვენთვის სასურველ ტერმინალის აპებში</string>
-    <string name="terminal_tutorial_1">პირველ რიგში, ფაილების ექსპორტი ნებისმიერ ადგილას, სადაც გსურთ. თქვენ ნახავთ ორ ფაილს, %1$s და %2$s.</string>
-    <string name="terminal_tutorial_1_description">თუ შერჩეულ საქაღალდეში არის იგივე სახელწოდების ფაილები, ისინი წაიშლება.\n\nექსპორტის ფუნქცია იყენებს SAF-ს (Storage Access Framework). გავრცელებული ინფორმაციით, MIUI არღვევს SAF-ის ფუნქციებს. თუ იყენებთ MIUI-ს, შეიძლება დაგჭირდეთ ფაილის ამოღება Shizuku-ს apk-დან ან ჩამოტვირთვა GitHub-დან.</string>
+    <string name="home_terminal_description">ტერმინალის აპლიკაციებში shell ბრძანებების გაშვება Shizuku-ს მეშვეობით</string>
+    <string name="terminal_tutorial_miui">მომხმარებლებმა განაცხადეს, რომ MIUI არღვევს Storage Access Framework-ს, რომელსაც ექსპორტის ფუნქცია იყენებს.</string>
+    <string name="terminal_tutorial_miui_2">თუ MIUI-ს იყენებთ, შესაძლოა ფაილის ამოღება Shizuku-ს APK ფაილის assets საქაღალდიდან დაგჭირდეთ.</string>
+    <string name="terminal_tutorial_1">ფაილების ექსპორტი ახალ საქაღალდეში.</string>
+    <string name="terminal_tutorial_1_description">ექსპორტირებული იქნება ორი ფაილი: %1$s და %2$s. თუ ფაილები უკვე არსებობს არჩეულ საქაღალდეში, ისინი წაიშლება.</string>
     <string name="terminal_export_files">ფაილების ექსპორტი</string>
-    <string name="terminal_tutorial_2">შემდეგ გამოიყენეთ ნებისმიერი ტექსტური რედაქტორი გასახსნელად და რედაქტირებისთვის %1$s.</string>
-    <string name="terminal_tutorial_2_description">მაგალითად, თუ გსურთ გამოიყენოთ Shizuku in %1$s, თქვენ უნდა შეცვალოთ %2$s თან %3$s (%4$s არის პაკეტის სახელი %1$s).</string>
-    <string name="terminal_tutorial_3">და ბოლოს, გადაიტანეთ ფაილები სადმე, სადაც თქვენს ტერმინალის აპს შეუძლია წვდომა, თქვენ შეძლებთ გამოიყენოთ %1$s ბრძანებების გაშვება Shizuku-ს მეშვეობით.</string>
-    <string name="terminal_tutorial_3_description">რამდენიმე რჩევა: მიეცით ნებართვა %1$s და დაამატეთ იგი %2$s, თქვენ შეძლებთ გამოიყენოთ %1$s პირდაპირ.</string>
-    <string name="rish_description"><![CDATA[თან %1$s, ნებისმიერ ტერმინალის აპლიკაციაში შეგიძლიათ დაუკავშირდეთ და დაუკავშირდეთ Shizuku-ს მიერ გაშვებულ ჭურვს.
-<p>დეტალური გამოყენების შესახებ %1$s, შეეხეთ დოკუმენტის სანახავად.
-    ]]></string>
+    <string name="terminal_tutorial_2">გამოიყენეთ თქვენი ტერმინალის აპლიკაცია ფაილების მის კერძო ფაილების დირექტორიაში კოპირებისთვის.</string>
+    <string name="terminal_tutorial_2_description">რჩევა: თუ თქვენი ტერმინალის აპლიკაციის საწყისი დირექტორია (~) კერძო ფაილების დირექტორიაშია, ფაილების იქ განთავსება საშუალებას მოგცემთ გაუშვათ %1$s გზის ჩაწერის გარეშე.\n\nწინააღმდეგ შემთხვევაში, შეგიძლიათ შექმნათ მეტსახელი %2$s -სთვის თქვენი ტერმინალის აპლიკაციის %3$s კონფიგურაციის ფაილში.</string>
+    <string name="terminal_tutorial_3">გახსენით shell შემდეგი ბრძანებით:</string>
+    <string name="rish_description"><![CDATA[%1$s-ის საშუალებით შეგიძლიათ გაუშვათ shell ბრძანებები ნებისმიერ ტერმინალის აპლიკაციაში.<p>შეეხეთ, რომ მეტი გაიგოთ მისი გამოყენების შესახებ.]]></string>
     <!-- Settings -->
     <string name="settings_title">პარამეტრები</string>
     <string name="settings_behavior">ქცევა</string>
@@ -101,7 +99,7 @@
     <string name="settings_start_on_boot_bug">Android 11-12-ში არსებული შეცდომის გამო, უკაბელო გამართვა არ იმახსოვრებს არცერთ ავტორიზებულ ქსელს.\n\nთქვენ დაგჭირდებათ ქსელის ხელახლა ავტორიზაცია ყოველი გადატვირთვისას „დაშვებაზე“ შეხებით, როდესაც ავტორიზაციის დიალოგური ფანჯარა გამოჩნდება.</string>
     <string name="settings_use_system_color">გამოიყენეთ სისტემის თემის ფერი</string>
     <string name="settings_watchdog">მაკონტროლებელი</string>
-    <string name="settings_watchdog_summary">ავტომატურად გადატვირთეთ Shizuku, თუ ის შეჩერდება</string>
+    <string name="settings_watchdog_summary">ავტომატური გადატვირთვა Shizuku-სთვის, თუ ის გაითიშება</string>
     <string name="settings_tcp_mode">TCP რეჟიმი</string>
     <string name="settings_tcp_mode_summary">"საშუალებას აძლევს Shizuku-ს გადატვირთოს Wi-Fi-ის გარეშე. (შიზუკუ გადატვირთვის შემდეგ ერთხელ უნდა დაიწყოს)"</string>
     <string name="settings_restart_dialog_title">გადატვირთვა აუცილებელია</string>

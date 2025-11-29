@@ -57,8 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Certains systèmes (comme MIUI) interdisent aux applications d\'accéder au réseau lorsqu\'elles ne sont pas visibles, même si l\'application utilise un service de premier plan. Veuillez désactiver les fonctions d\'optimisation de la batterie pour Shizuku sur ces systèmes.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Démarrer (pour les appareils rootés)]]></string>
-    <string name="home_root_description"><![CDATA[De plus, Shizuku peut être démarré automatiquement au démarrage. Si non, merci de vérifier si votre système ou un outil tiers a restreint Shizuku. <br>Vous pouvez vous référer à %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Si vous utilisez Magisk, vous pouvez essayer %1$s. Pour les utilisateurs root, cette commande remplacera à terme Shizuku. Notez que les applications existantes devront être légèrement modifiées pour utiliser %2$s.]]></string>
+    <string name="home_root_description"><![CDATA[Si vous utilisez Magisk, vous pouvez essayer %1$s. Pour les utilisateurs root, cette commande remplacera à terme Shizuku. Notez que les applications existantes devront être légèrement modifiées pour utiliser %2$s.]]></string>
     <string name="home_root_button_start">Démarrer</string>
     <string name="home_root_button_restart">Redémarrer</string>
     <!-- Home - Application management -->
@@ -70,7 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Appuyez pour gérer les applis autorisées]]></string>
     <string name="home_app_management_empty">Les applications qui ont demandé ou déclaré la permission de Shizuku apparaîtront ici.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Apprendre Shizuku</string>
+    <string name="home_learn_more_title">Guide du développeur</string>
     <string name="home_learn_more_description">Apprenez comment développer avec Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Une étape supplémentaire est nécessaire</string>
@@ -86,17 +85,16 @@
     <string name="app_management_toggle_all">Basculer tout</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Utiliser Shizuku dans les applis de terminal</string>
-    <string name="home_terminal_description">Exécuter des commandes à travers Shizuku dans les applis de terminal que vous aimez</string>
-    <string name="terminal_tutorial_1">D\'abord, exportez les fichiers oú vous voulez. Vous trouverez deux fichiers, %1$s et %2$s.</string>
-    <string name="terminal_tutorial_1_description">Si il y a des fichiers avec le même nom dans le dossier sélectionné, ils seront supprimés.
-\n
-\nLa fonction exporter utilise le SAF (Framework d\'Accès au Stockage). Nous savons que MIUI casse les fonctions du SAF. Si vous utilisez MIUI, vous pourriez devoir extraire les fichiers depuis l\'apk de Shizuku ou les télécharger depuis GitHub.</string>
+    <string name="home_terminal_description">Exécutez des commandes shell dans des applications terminales via Shizuku.</string>
+    <string name="terminal_tutorial_miui">Des utilisateurs ont signalé que MIUI endommage le Storage Access Framework, utilisé par la fonction d\'exportation.</string>
+    <string name="terminal_tutorial_miui_2">Si vous utilisez MIUI, vous devrez peut-être extraire le fichier du dossier assets de l\'APK de Shizuku.</string>
+    <string name="terminal_tutorial_1">Exportez les fichiers vers un nouveau dossier.</string>
+    <string name="terminal_tutorial_1_description">Deux fichiers seront exportés : %1$s et %2$s. Si ces fichiers existent déjà dans le dossier sélectionné, ils seront supprimés.</string>
     <string name="terminal_export_files">Exporter les fichiers</string>
-    <string name="terminal_tutorial_2">Ensuite, utilisez un éditeur de texte pour ouvrir et éditer %1$s.</string>
-    <string name="terminal_tutorial_2_description">Par exemple, si vous voulez utiliser Shizuku dans %1$s, vous devriez remplacer %2$s par %3$s (%4$s est le nom de package de %1$s).</string>
-    <string name="terminal_tutorial_3">Enfin, déplacez les fichiers quelque part où votre appli de terminal a accès, vous pourrez utiliser %1$s pour exécuter des commandes à travers Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Quelques astuces : accordez la permission d\'exécution à %1$s et ajoutez le au %2$s, vous pourrez utiliser %1$s directement.</string>
-    <string name="rish_description"><![CDATA[Avec %1$s, dans n\'importe quelle appli de terminal, vous pouvez vous connecter et interagir avec le shell lancé par Shizuku. <p>À propos de l\'usage détaillé de %1$s, appuyez pour voir le document.]]></string>
+    <string name="terminal_tutorial_2">Utilisez votre application terminal pour copier les fichiers dans son répertoire de fichiers privés.</string>
+    <string name="terminal_tutorial_2_description">Astuce : Si le répertoire personnel (~) de votre application de terminal se trouve dans le répertoire des fichiers privés, y placer les fichiers vous permettra d’exécuter %1$s sans avoir à saisir le chemin.\n\nSinon, vous pouvez créer un alias pour %2$s dans le fichier de configuration %3$s de votre application de terminal.</string>
+    <string name="terminal_tutorial_3">Ouvrez un terminal avec la commande suivante :</string>
+    <string name="rish_description"><![CDATA[Avec %1$s, vous pouvez exécuter des commandes shell dans n'importe quelle application de terminal.<p>Appuyez pour en savoir plus sur son utilisation.]]></string>
     <!-- Settings -->
     <string name="settings_title">Paramètres</string>
     <string name="settings_behavior">Comportement</string>
@@ -105,7 +103,7 @@
     <string name="settings_start_on_boot_bug">En raison d\'un bug dans Android 11-12, le débogage sans fil ne mémorise aucun réseau autorisé.\n\nVous devrez réautoriser le réseau à chaque redémarrage en appuyant sur « Autoriser » lorsque la boîte de dialogue d\'autorisation apparaît.</string>
     <string name="settings_use_system_color">Utiliser la couleur du thème système</string>
     <string name="settings_watchdog">Chien de garde</string>
-    <string name="settings_watchdog_summary">Redémarre automatiquement Shizuku si ça s’arrête</string>
+    <string name="settings_watchdog_summary">Redémarrage automatique de Shizuku en cas de plantage</string>
     <string name="settings_tcp_mode">Mode TCP</string>
     <string name="settings_tcp_mode_summary">"Permet à Shizuku de redémarrer sans Wi-Fi. (Shizuku a dû commencer une fois depuis le reboot)"</string>
     <string name="settings_restart_dialog_title">Redémarrage requis</string>

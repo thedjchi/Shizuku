@@ -57,8 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sesetengah sistem (seperti MIUI) tidak membenarkan apl mengakses rangkaian apabila ia tidak kelihatan, walaupun apl menggunakan perkhidmatan latar depan. Sila lumpuhkan ciri pengoptimuman bateri untuk Shizuku pada sistem sedemikian.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Mula (untuk peranti berakar)]]></string>
-    <string name="home_root_description"><![CDATA[Selain itu, Shizuku boleh dimulakan secara automatik semasa but. Jika tidak, sila semak sama ada sistem atau alat pihak ketiga anda telah menyekat Shizuku.<br>Anda boleh rujuk %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Jika anda menggunakan Magisk, anda boleh mencuba %1$s. Bagi pengguna root, ia akhirnya akan menggantikan Shizuku. Ambil perhatian, aplikasi sedia ada perlu berubah sedikit untuk digunakan %2$s.]]></string>
+    <string name="home_root_description"><![CDATA[Jika anda menggunakan Magisk, anda boleh mencuba %1$s. Bagi pengguna root, ia akhirnya akan menggantikan Shizuku. Perhatikan, aplikasi sedia ada perlu berubah sedikit untuk menggunakan %2$s.]]></string>
     <string name="home_root_button_start">Mulakan</string>
     <string name="home_root_button_restart">Mulakan semula</string>
     <!-- Home - Application management -->
@@ -69,7 +68,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Ketik untuk mengurus apl yang dibenarkan]]></string>
     <string name="home_app_management_empty">Apl yang telah meminta atau mengisytiharkan kebenaran Shizuku akan dipaparkan di sini.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Belajar Shizuku</string>
+    <string name="home_learn_more_title">Panduan pembangun</string>
     <string name="home_learn_more_description">Ketahui cara membangun dengan Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Anda perlu mengambil langkah tambahan</string>
@@ -81,17 +80,16 @@
     <string name="app_management_toggle_all">Togol semua</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gunakan Shizuku dalam apl terminal</string>
-    <string name="home_terminal_description">Jalankan arahan melalui Shizuku dalam apl terminal yang anda suka</string>
-    <string name="terminal_tutorial_1">Pertama, Eksport fail ke mana-mana tempat yang anda mahukan. Anda akan menemui dua fail, %1$s dan %2$s.</string>
-    <string name="terminal_tutorial_1_description">Jika terdapat fail dengan nama yang sama dalam folder yang dipilih, ia akan dipadamkan.\n\nFungsi eksport menggunakan SAF (Rangka Kerja Akses Storan). Dilaporkan bahawa MIUI memecah fungsi SAF. Jika anda menggunakan MIUI, anda mungkin perlu mengekstrak fail daripada apk Shizuku atau memuat turun daripada GitHub.</string>
+    <string name="home_terminal_description">Jalankan arahan shell dalam apl terminal melalui Shizuku</string>
+    <string name="terminal_tutorial_miui">Pengguna telah melaporkan bahawa MIUI memecahkan Rangka Kerja Akses Storan, yang digunakan oleh fungsi eksport.</string>
+    <string name="terminal_tutorial_miui_2">Jika anda menggunakan MIUI, anda mungkin perlu mengekstrak fail daripada folder aset dalam APK Shizuku.</string>
+    <string name="terminal_tutorial_1">Eksport fail ke folder baharu.</string>
+    <string name="terminal_tutorial_1_description">Dua fail akan dieksport: %1$s dan %2$s. Jika fail sudah wujud dalam folder yang dipilih, ia akan dipadamkan.</string>
     <string name="terminal_export_files">Eksport fail</string>
-    <string name="terminal_tutorial_2">Kemudian, gunakan mana-mana penyunting teks untuk membuka dan mengedit %1$s.</string>
-    <string name="terminal_tutorial_2_description">Sebagai contoh, jika anda ingin menggunakan Shizuku dalam %1$s, anda hendaklah menggantikan %2$s dengan %3$s (%4$s ialah nama pakej bagi %1$s).</string>
-    <string name="terminal_tutorial_3">Akhir sekali, alihkan fail ke tempat yang boleh diakses oleh apl terminal anda, anda akan dapat menggunakan %1$s untuk menjalankan arahan melalui Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Beberapa petua: berikan laksanakan kebenaran kepada %1$s dan tambahkannya pada %2$s, anda akan dapat menggunakan %1$s secara langsung.</string>
-    <string name="rish_description"><![CDATA[Dengan %1$s, dalam mana-mana apl terminal, anda boleh menyambung dan berinteraksi dengan shell yang dikendalikan oleh Shizuku.
-<p>Mengenai penggunaan terperinci %1$s, ketik untuk melihat dokumen.
-    ]]></string>
+    <string name="terminal_tutorial_2">Gunakan apl terminal anda untuk menyalin fail ke direktori fail peribadinya.</string>
+    <string name="terminal_tutorial_2_description">Petua: Jika direktori rumah apl terminal anda (~) berada dalam direktori fail peribadi, meletakkan fail di sana akan membolehkan anda menjalankan %1$s tanpa menulis laluan.\n\nJika tidak, anda boleh mencipta alias untuk %2$s dalam fail konfigurasi %3$s apl terminal anda.</string>
+    <string name="terminal_tutorial_3">Buka shell dengan arahan berikut:</string>
+    <string name="rish_description"><![CDATA[Dengan %1$s, anda boleh menjalankan arahan shell dalam mana-mana apl terminal.<p>Ketik untuk mengetahui lebih lanjut tentang cara menggunakannya.]]></string>
     <!-- Settings -->
     <string name="settings_title">tetapan</string>
     <string name="settings_behavior">Tingkah laku</string>
@@ -100,7 +98,7 @@
     <string name="settings_start_on_boot_bug">Disebabkan oleh pepijat dalam Android 11-12, penyahpepijatan wayarles tidak mengingati mana-mana rangkaian yang dibenarkan.\n\nAnda perlu membenarkan semula rangkaian pada setiap but semula dengan mengetik \"Benarkan\" apabila dialog kebenaran muncul.</string>
     <string name="settings_use_system_color">Gunakan warna tema sistem</string>
     <string name="settings_watchdog">Pengawas</string>
-    <string name="settings_watchdog_summary">Mulakan semula Shizuku secara automatik jika ia berhenti</string>
+    <string name="settings_watchdog_summary">Mulakan semula Shizuku secara automatik jika ia ranap</string>
     <string name="settings_tcp_mode">mod TCP</string>
     <string name="settings_tcp_mode_summary">"Membenarkan Shizuku memulakan semula tanpa Wi-Fi. (Shizuku mesti bermula sekali sejak but semula)"</string>
     <string name="settings_restart_dialog_title">Mulakan semula Diperlukan</string>

@@ -60,8 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">一部のシステム(MIUIなど)は、アプリがフォアグラウンドサービスを使っていても、見えないアプリがネットワークにアクセスすることを許可しません。そのようなシステムでは、しずくのバッテリー最適化機能を無効にしてください。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[開始(Root化された端末の場合のみ)]]></string>
-    <string name="home_root_description"><![CDATA[また、起動時にShizukuを自動的に起動することもできます。もし、起動しない場合は、システムやサードパーティのツールがShizukuを制限していないか確認してください。<br>一部古い情報ですが%sを参考にしてください。]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magiskを使っているなら試してみてはどうでしょうか %1$s.ルートユーザーにとっては、いずれ雫の代わりになるでしょう。既存のアプリケーションは少し変更が必要ですが、使うには少し変更が必要です %2$s.]]></string>
+    <string name="home_root_description"><![CDATA[Magiskをお使いの場合は、 %1$sをお試しください。rootユーザーの場合、最終的にはShizukuに取って代わる予定です。ただし、既存のアプリケーションで %2$sを使用するには、少し変更が必要です。]]></string>
     <string name="home_root_button_start">開始</string>
     <string name="home_root_button_restart">再起動</string>
     <!-- Home - Application management -->
@@ -72,7 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[タップで許可されたアプリを管理]]></string>
     <string name="home_app_management_empty">Shizuku の権限を要求または宣言したアプリがここに表示されます。</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Shizukuについて学ぶ</string>
+    <string name="home_learn_more_title">開発者ガイド</string>
     <string name="home_learn_more_description">Shizukuを使った開発方法、Shizukuを使ったアプリの入手方法について学ぶことができます</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">もう一段階行う必要がある</string>
@@ -88,17 +87,16 @@
     <string name="app_management_toggle_all">すべて切り替え</string>
     <!-- Terminal -->
     <string name="home_terminal_title">ターミナルアプリで「Shizuku」を利用する</string>
-    <string name="home_terminal_description">Shizukuを介して、好きなターミナルアプリでコマンドを実行する</string>
-    <string name="terminal_tutorial_1">まず、ファイルを任意の場所にエクスポートします。%1$sと%2$sの2つのファイルがあります。</string>
-    <string name="terminal_tutorial_1_description">選択したフォルダー内に同名のファイルがある場合は、そのファイルは削除されます。
-\n
-\nエクスポート機能には、SAF（Storage Access Framework）が使用されています。MIUIではSAFの機能が壊れることが報告されています。MIUIをお使いの方は、Shizukuのapkからファイルを抽出するか、GitHubからダウンロードする必要があるかもしれません。</string>
+    <string name="home_terminal_description">Shizuku を介してターミナルアプリでシェルコマンドを実行する</string>
+    <string name="terminal_tutorial_miui">ユーザーからは、MIUI がエクスポート機能で使用されるストレージ アクセス フレームワークを壊すという報告があります。</string>
+    <string name="terminal_tutorial_miui_2">MIUI を使用している場合は、Shizuku の APK のアセット フォルダーからファイルを抽出する必要がある場合があります。</string>
+    <string name="terminal_tutorial_1">ファイルを新しいフォルダにエクスポートします。</string>
+    <string name="terminal_tutorial_1_description">2つのファイルがエクスポートされます: %1$s と %2$s。選択したフォルダに既にファイルが存在する場合は削除されます。</string>
     <string name="terminal_export_files">ファイルのエクスポート</string>
-    <string name="terminal_tutorial_2">その後、任意のテキストエディタで%1$sを開いて編集します。</string>
-    <string name="terminal_tutorial_2_description">例えば、%1$sでShizukuを使いたい場合は、%2$sを%3$sに置き換えてください（%4$sは%1$sのパッケージ名です）。</string>
-    <string name="terminal_tutorial_3">最後に、ファイルをターミナルアプリがアクセスできる場所に移動させると、%1$sを使ってShizukuでコマンドを実行できるようになります。</string>
-    <string name="terminal_tutorial_3_description">ヒント: %1$s に実行権限を与え、それを %2$s に追加すると、%1$s を直接使用できるようになります。</string>
-    <string name="rish_description"><![CDATA[%1$sを使えば、任意のターミナルアプリで、Shizukuが実行するシェルに接続し、対話することができます。<p>詳しい使い方については、%1$sをタップするとドキュメントが表示されます。]]></string>
+    <string name="terminal_tutorial_2">ターミナル アプリを使用して、ファイルをプライベート ファイル ディレクトリにコピーします。</string>
+    <string name="terminal_tutorial_2_description">ヒント: ターミナル アプリのホーム ディレクトリ (~) がプライベート ファイル ディレクトリにある場合は、そこにファイルを配置すると、パスを書き込まなくても %1$s を実行できます。\n\nそれ以外の場合は、ターミナル アプリの %3$s 構成ファイルで %2$s のエイリアスを作成できます。</string>
+    <string name="terminal_tutorial_3">次のコマンドでシェルを開きます。</string>
+    <string name="rish_description"><![CDATA[%1$sを使用すると、任意のターミナル アプリでシェル コマンドを実行できます。<p>タップして、使用方法の詳細を確認してください。]]></string>
     <!-- Settings -->
     <string name="settings_title">設定</string>
     <string name="settings_behavior">行動</string>
@@ -107,7 +105,7 @@
     <string name="settings_start_on_boot_bug">Android 11-12のバグにより、無線デバッグは認可されたネットワークを記憶しません。\n\n再開のたびに、認証ダイアログが表示されたら「許可」をタップしてネットワークを再認証する必要があります。</string>
     <string name="settings_use_system_color">システムテーマカラー</string>
     <string name="settings_watchdog">ウォッチドッグ</string>
-    <string name="settings_watchdog_summary">Shizukuが停止した場合は自動的に再起動します</string>
+    <string name="settings_watchdog_summary">Shizukuがクラッシュした場合に自動的に再起動する</string>
     <string name="settings_tcp_mode">TCPモード</string>
     <string name="settings_tcp_mode_summary">"Wi-FiなしでShizukuを再起動できるようにします。（再起動後、Shizukuが一度起動している必要があります）"</string>
     <string name="settings_restart_dialog_title">再起動が必要です</string>

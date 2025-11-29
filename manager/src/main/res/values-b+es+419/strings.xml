@@ -43,7 +43,6 @@
     <string name="adb_pairing_tutorial_content_notification_blocked">The pairing process needs you to interact with a notificación from Shizuku. Please allow Shizuku to post notifications.El proceso de emparejamiento necesita que interactúes con una notificación de Shizuku. Permita que Shizuku publique notificaciones.El proceso de emparejamiento necesita que interactúes con una notificación de Shizuku. Permita que Shizuku publique notificaciones.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Iniciar (para dispositivos root)]]></string>
-    <string name="home_root_description"><![CDATA[Además, Shizuku puede iniciarse automáticamente al arrancar. Si no es así, por favor compruebe si su sistema o herramientas de terceros han restringido Shizuku.<br>Puede consultar %s.]]></string>
     <string name="home_root_button_start">Iniciar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
@@ -54,7 +53,6 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Toque para administrar aplicaciones autorizadas]]></string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Aprende sobre Shizuku</string>
     <string name="home_learn_more_description">Aprenda a desarrollar con Shizuku o consiga aplicaciones con Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <!-- Application management -->
@@ -63,17 +61,7 @@
     <string name="app_management_item_summary_requires_root">* requiere que Shizuku se ejecute con la root</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Utilice Shizuku en apps de terminal</string>
-    <string name="home_terminal_description">Ejecute comandos a través de Shizuku en las aplicaciones de terminal que le gusten</string>
-    <string name="terminal_tutorial_1">Primero, exporte archivos a cualquier lugar que desee. Encontrará dos archivos,%1$s y %2$s.</string>
-    <string name="terminal_tutorial_1_description">Si hay archivos con el mismo nombre en la carpeta seleccionada, se eliminarán.
-\n
-\nLa función de exportación utiliza SAF (Storage Access Framework). Se informa que MIUI rompe las funciones de SAF. Si está utilizando MIUI, es posible que deba extraer el archivo de la apk de Shizuku o descargarlo de GitHub.</string>
     <string name="terminal_export_files">Exportar archivos</string>
-    <string name="terminal_tutorial_2">Luego, use cualquier editor de texto para abrir y editar %1$s.</string>
-    <string name="terminal_tutorial_2_description">Por ejemplo, si desea usar Shizuku en %1$s, debe reemplazar %2$s con %3$s (%4$s es el nombre del paquete de %1$s).</string>
-    <string name="terminal_tutorial_3">Finalmente, mueva los archivos a un lugar donde su aplicación de terminal pueda acceder, podrá usar %1$s para ejecutar comandos a través de Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Algunos consejos: conceda permiso de ejecución a %1$s y agréguelo a %2$s , podrá usar %1$s directamente.</string>
-    <string name="rish_description"><![CDATA[Con %1$s, en cualquier aplicación de terminal, puede conectarse e interactuar con el shell que ejecuta Shizuku. <p>Acerca del uso detallado %1$s, toca para ver el documento.]]></string>
     <!-- Settings -->
     <string name="settings_title">Configuraciones</string>
     <string name="settings_language">Idioma</string>

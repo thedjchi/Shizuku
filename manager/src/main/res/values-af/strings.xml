@@ -57,8 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar is nie, selfs al gebruik die program \'n voorgronddiens. Deaktiveer asseblief battery-optimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
-    <string name="home_root_description"><![CDATA[Daarbenewens kan Shizuku outomaties met opstart begin word. Indien nie, kyk asseblief of jou stelsel of derdeparty-instrumente Shizuku beperk het.<br>Jy kan verwys na %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet \'n bietjie verander om %2$ste gebruik.]]></string>
+    <string name="home_root_description"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet 'n bietjie verander om %2$ste gebruik.]]></string>
     <string name="home_root_button_start">Begin</string>
     <string name="home_root_button_restart">Herbegin</string>
     <!-- Home - Application management -->
@@ -70,7 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tik om gemagtigde programme te bestuur]]></string>
     <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of verklaar het, sal hier verskyn.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Leer Shizuku</string>
+    <string name="home_learn_more_title">Ontwikkelaarsgids</string>
     <string name="home_learn_more_description">Leer hoe om met Shizuku te ontwikkel</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Jy moet \'n ekstra stap neem</string>
@@ -82,17 +81,16 @@
     <string name="app_management_toggle_all">Wissel alles</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gebruik Shizuku in terminaalprogramme</string>
-    <string name="home_terminal_description">Voer bevele deur Shizuku uit in terminaalprogramme waarvan jy hou</string>
-    <string name="terminal_tutorial_1">Eerstens, voer lêers uit na enige plek waar jy wil. Jy sal twee lêers vind, %1$s en %2$s.</string>
-    <string name="terminal_tutorial_1_description">Indien daar lêers met dieselfde naam in die gekose vouer is, sal hulle uitgevee word.\n\nDie uitvoerfunksie gebruik SAF (Storage Access Framework). Daar word berig dat MIUI die funksies van SAF onderbreek. As jy MIUI gebruik, moet jy dalk die lêer uit Shizuku se apk onttrek of van GitHub aflaai.</string>
+    <string name="home_terminal_description">Voer dopopdragte in terminaalprogramme deur Shizuku uit</string>
+    <string name="terminal_tutorial_miui">Gebruikers het berig dat MIUI die Storage Access Framework, wat deur die uitvoerfunksie gebruik word, oortree.</string>
+    <string name="terminal_tutorial_miui_2">As jy MIUI gebruik, moet jy dalk die lêer uit die bate-lêergids in Shizuku se APK onttrek.</string>
+    <string name="terminal_tutorial_1">Voer die lêers na \'n nuwe vouer uit.</string>
+    <string name="terminal_tutorial_1_description">Twee lêers sal uitgevoer word: %1$s en %2$s. Indien die lêers reeds in die gekose vouer bestaan, sal hulle uitgevee word.</string>
     <string name="terminal_export_files">Voer lêers uit</string>
-    <string name="terminal_tutorial_2">Gebruik dan enige teksredigeerder om %1$soop te maak en te wysig.</string>
-    <string name="terminal_tutorial_2_description">Byvoorbeeld, as jy Shizuku in %1$swil gebruik, moet jy %2$s vervang met %3$s (%4$s is die pakketnaam van %1$s).</string>
-    <string name="terminal_tutorial_3">Laastens, skuif die lêers na \'n plek waar jou terminaal-app toegang het, jy sal %1$s kan gebruik om opdragte deur Shizuku uit te voer.</string>
-    <string name="terminal_tutorial_3_description">\'n Paar wenke: gee uitvoeringspermissie aan %1$s en voeg dit by %2$s, jy sal %1$s direk kan gebruik.</string>
-    <string name="rish_description"><![CDATA[Met %1$s, in enige terminaal-app, kan jy koppel aan en interaksie hê met die dop wat deur Shizuku uitgevoer word.
-<p>Oor die gedetailleerde gebruik %1$s, tik om die dokument te sien.
-    ]]></string>
+    <string name="terminal_tutorial_2">Gebruik jou terminaal-app om die lêers na sy privaat lêergids te kopieer.</string>
+    <string name="terminal_tutorial_2_description">Wenk: As jou terminaal-app se tuisgids (~) in die privaat lêergids is, sal die plasing van die lêers daar jou toelaat om %1$s uit te voer sonder om die pad te skryf.\n\nAndersins kan jy \'n alias vir %2$s in jou terminaal-app se %3$s konfigurasielêer skep.</string>
+    <string name="terminal_tutorial_3">Maak \'n dop oop met die volgende opdrag:</string>
+    <string name="rish_description"><![CDATA[Met %1$skan jy dopbevele in enige terminaaltoepassing uitvoer.<p>Tik om meer te wete te kom oor hoe om dit te gebruik.]]></string>
     <!-- Settings -->
     <string name="settings_title">Instellings</string>
     <string name="settings_behavior">Gedrag</string>
@@ -101,7 +99,7 @@
     <string name="settings_start_on_boot_bug">As gevolg van \'n fout in Android 11-12, onthou draadlose ontfouting geen gemagtigde netwerke nie.\n\nJy sal die netwerk met elke herbegin moet hermagtig deur op \"Laat toe\" te tik wanneer die magtigingsdialoog verskyn.</string>
     <string name="settings_use_system_color">Gebruik stelseltemakleur</string>
     <string name="settings_watchdog">Waghond</string>
-    <string name="settings_watchdog_summary">Herbegin Shizuku outomaties as dit stop</string>
+    <string name="settings_watchdog_summary">Herbegin Shizuku outomaties as dit vasval</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku moes een keer sedert herbegin begin het)"</string>
     <string name="settings_restart_dialog_title">Herbegin Vereis</string>

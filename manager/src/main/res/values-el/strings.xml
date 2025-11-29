@@ -57,8 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Ορισμένα συστήματα (όπως το MIUI) δεν επιτρέπουν στις εφαρμογές να έχουν πρόσβαση στο δίκτυο όταν δεν είναι ορατές, ακόμα κι αν η εφαρμογή χρησιμοποιεί μια υπηρεσία πρώτου πλάνου. Απενεργοποιήστε τις λειτουργίες βελτιστοποίησης μπαταρίας για το Shizuku σε τέτοια συστήματα.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Έναρξη (για συσκευές με root)]]></string>
-    <string name="home_root_description"><![CDATA[Επιπλέον, το Shizuku μπορεί να ξεκινήσει αυτόματα κατά την εκκίνηση. Εάν όχι, ελέγξτε εάν το σύστημά σας ή εργαλεία τρίτων έχουν περιορίσει το Shizuku.<br>Μπορείτε να ανατρέξετε στο %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Αν χρησιμοποιείτε Magisk, μπορείτε να δοκιμάσετε το %1$s. Για τους χρήστες root, τελικά θα αντικαταστήσει το Shizuku. Σημειώστε ότι οι υπάρχουσες εφαρμογές πρέπει να αλλάξουν λίγο για να χρησιμοποιήσουν το %2$s.]]></string>
+    <string name="home_root_description"><![CDATA[Αν χρησιμοποιείτε Magisk, μπορείτε να δοκιμάσετε το %1$s. Για τους χρήστες root, τελικά θα αντικαταστήσει το Shizuku. Σημειώστε ότι οι υπάρχουσες εφαρμογές πρέπει να αλλάξουν λίγο για να χρησιμοποιήσουν το %2$s.]]></string>
     <string name="home_root_button_start">Αρχή</string>
     <string name="home_root_button_restart">Επανεκκίνηση</string>
     <!-- Home - Application management -->
@@ -70,7 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Πατήστε για να διαχειριστείτε εξουσιοδοτημένες εφαρμογές]]></string>
     <string name="home_app_management_empty">Οι εφαρμογές που έχουν ζητήσει ή δηλώσει την άδεια Shizuku θα εμφανίζονται εδώ.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Μάθετε Σιζούκου</string>
+    <string name="home_learn_more_title">Οδηγός προγραμματιστή</string>
     <string name="home_learn_more_description">Μάθετε πώς να αναπτύσσεστε με το Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Πρέπει να κάνεις ένα επιπλέον βήμα</string>
@@ -82,17 +81,16 @@
     <string name="app_management_toggle_all">Εναλλαγή όλων</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Χρήση Shizuku σε εφαρμογές τερματικού</string>
-    <string name="home_terminal_description">Εκτελέστε εντολές μέσω του Shizuku σε εφαρμογές τερματικού που σας αρέσουν</string>
-    <string name="terminal_tutorial_1">Αρχικά, εξάγετε αρχεία σε οποιαδήποτε θέση θέλετε. Θα βρείτε δύο αρχεία, %1$s και %2$s.</string>
-    <string name="terminal_tutorial_1_description">Εάν υπάρχουν αρχεία με το ίδιο όνομα στον επιλεγμένο φάκελο, θα διαγραφούν.\n\nΗ λειτουργία εξαγωγής χρησιμοποιεί SAF (Storage Access Framework). Έχει αναφερθεί ότι το MIUI διακόπτει τις λειτουργίες του SAF. Εάν χρησιμοποιείτε MIUI, ίσως χρειαστεί να εξαγάγετε το αρχείο από το apk του Shizuku ή να το κατεβάσετε από το GitHub.</string>
+    <string name="home_terminal_description">Εκτέλεση εντολών κελύφους σε εφαρμογές τερματικού μέσω Shizuku</string>
+    <string name="terminal_tutorial_miui">Οι χρήστες έχουν αναφέρει ότι το MIUI παραβιάζει το Storage Access Framework, το οποίο χρησιμοποιείται από τη λειτουργία εξαγωγής.</string>
+    <string name="terminal_tutorial_miui_2">Εάν χρησιμοποιείτε MIUI, ίσως χρειαστεί να εξαγάγετε το αρχείο από τον φάκελο assets στο APK του Shizuku.</string>
+    <string name="terminal_tutorial_1">Εξαγάγετε τα αρχεία σε έναν νέο φάκελο.</string>
+    <string name="terminal_tutorial_1_description">Θα εξαχθούν δύο αρχεία: %1$s και %2$s. Εάν τα αρχεία υπάρχουν ήδη στον επιλεγμένο φάκελο, θα διαγραφούν.</string>
     <string name="terminal_export_files">Εξαγωγή αρχείων</string>
-    <string name="terminal_tutorial_2">Στη συνέχεια, χρησιμοποιήστε οποιοδήποτε πρόγραμμα επεξεργασίας κειμένου για να ανοίξετε και να επεξεργαστείτε το %1$s.</string>
-    <string name="terminal_tutorial_2_description">Για παράδειγμα, αν θέλετε να χρησιμοποιήσετε το Shizuku στο %1$s, θα πρέπει να αντικαταστήσετε το %2$s με το %3$s (το%4$s είναι το όνομα του πακέτου του %1$s).</string>
-    <string name="terminal_tutorial_3">Τέλος, μετακινήστε τα αρχεία σε ένα σημείο όπου έχει πρόσβαση η εφαρμογή τερματικού σας. Θα μπορείτε να χρησιμοποιήσετε το %1$s για να εκτελέσετε εντολές μέσω του Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Μερικές συμβουλές: παραχωρήστε δικαίωμα εκτέλεσης στο %1$s και προσθέστε το στο %2$s, θα μπορείτε να χρησιμοποιήσετε απευθείας το %1$s .</string>
-    <string name="rish_description"><![CDATA[Με το %1$s, σε οποιαδήποτε εφαρμογή τερματικού, μπορείτε να συνδεθείτε και να αλληλεπιδράσετε με τα εκτελέσιμα κελύφους του Shizuku.
-<p>Σχετικά με τη λεπτομερή χρήση %1$s, πατήστε για να δείτε το έγγραφο.
-    ]]></string>
+    <string name="terminal_tutorial_2">Χρησιμοποιήστε την εφαρμογή τερματικού σας για να αντιγράψετε τα αρχεία στον ιδιωτικό κατάλογο αρχείων της.</string>
+    <string name="terminal_tutorial_2_description">Συμβουλή: Εάν ο αρχικός κατάλογος (~) της εφαρμογής τερματικού σας βρίσκεται στον κατάλογο ιδιωτικών αρχείων, η τοποθέτηση των αρχείων εκεί θα σας επιτρέψει να εκτελέσετε το %1$s χωρίς να γράψετε τη διαδρομή.\n\nΔιαφορετικά, μπορείτε να δημιουργήσετε ένα ψευδώνυμο για το %2$s στο αρχείο ρυθμίσεων %3$s της εφαρμογής τερματικού σας.</string>
+    <string name="terminal_tutorial_3">Ανοίξτε ένα κέλυφος με την ακόλουθη εντολή:</string>
+    <string name="rish_description"><![CDATA[Με το %1$s, μπορείτε να εκτελέσετε εντολές shell σε οποιαδήποτε εφαρμογή τερματικού.<p>Πατήστε για να μάθετε περισσότερα σχετικά με τον τρόπο χρήσης του.]]></string>
     <!-- Settings -->
     <string name="settings_title">Ρυθμίσεις</string>
     <string name="settings_behavior">Συμπεριφορά</string>
@@ -101,7 +99,7 @@
     <string name="settings_start_on_boot_bug">Λόγω ενός σφάλματος στο Android 11-12, η ασύρματη αποσφαλμάτωση δεν θυμάται κανένα εξουσιοδοτημένο δίκτυο.\n\nΘα χρειαστεί να εξουσιοδοτείτε ξανά το δίκτυο σε κάθε επανεκκίνηση πατώντας \"Να επιτρέπεται\" όταν εμφανιστεί το παράθυρο διαλόγου εξουσιοδότησης.</string>
     <string name="settings_use_system_color">Χρήση χρώματος θέματος συστήματος</string>
     <string name="settings_watchdog">Άγρυπνος φρουρός</string>
-    <string name="settings_watchdog_summary">Αυτόματη επανεκκίνηση του Shizuku εάν σταματήσει</string>
+    <string name="settings_watchdog_summary">Αυτόματη επανεκκίνηση του Shizuku σε περίπτωση διακοπής λειτουργίας</string>
     <string name="settings_tcp_mode">Λειτουργία TCP</string>
     <string name="settings_tcp_mode_summary">"Επιτρέπει στο Shizuku να επανεκκινήσει χωρίς Wi-Fi. (Το Shizuku πρέπει να ξεκίνησε μία φορά από την επανεκκίνηση)"</string>
     <string name="settings_restart_dialog_title">Απαιτείται επανεκκίνηση</string>
