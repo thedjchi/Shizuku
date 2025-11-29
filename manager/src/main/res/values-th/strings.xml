@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">บางระบบ (เช่น MIUI) ไม่อนุญาตให้แอปเข้าถึงเครือข่ายเมื่อมองไม่เห็น แม้ว่าแอปจะใช้บริการเบื้องหน้าก็ตาม โปรดปิดใช้งานคุณสมบัติการเพิ่มประสิทธิภาพแบตเตอรี่สําหรับ Shizuku ในระบบดังกล่าว</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[เริ่ม (สำหรับอุปกรณ์ที่รูทแล้ว)]]></string>
+    <string name="home_root_description"><![CDATA[หากคุณใช้ Magisk คุณสามารถลองใช้ %1$sได้ สำหรับผู้ใช้รูท ในที่สุดมันจะมาแทนที่ Shizuku โปรดทราบว่าแอปพลิเคชันที่มีอยู่จำเป็นต้องเปลี่ยนแปลงเล็กน้อยเพื่อใช้ %2$s]]></string>
     <string name="home_root_button_start">เริ่ม</string>
     <string name="home_root_button_restart">เริ่มใหม่</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[แตะเพื่อจัดการแอปที่ได้รับอนุญาต]]></string>
     <string name="home_app_management_empty">แอปที่ได้ร้องขอหรือประกาศการอนุญาต Shizuku จะแสดงที่นี่</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">คู่มือนักพัฒนา</string>
     <string name="home_learn_more_description">เรียนรู้การพัฒนาเพื่อใช้ร่วมกันกับ Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">คุณต้องทำขั้นตอนเพิ่มเติม</string>
@@ -85,7 +87,16 @@
     <string name="app_management_toggle_all">สลับทั้งหมด</string>
     <!-- Terminal -->
     <string name="home_terminal_title">ใช้ Shizuku ในแอปเทอร์มินอล</string>
+    <string name="home_terminal_description">รันคำสั่งเชลล์ในแอปเทอร์มินัลผ่าน Shizuku</string>
+    <string name="terminal_tutorial_miui">ผู้ใช้รายงานว่า MIUI ทำลาย Storage Access Framework ซึ่งใช้โดยฟังก์ชันการส่งออก</string>
+    <string name="terminal_tutorial_miui_2">หากคุณใช้ MIUI คุณอาจต้องแตกไฟล์จากโฟลเดอร์สินทรัพย์ใน APK ของ Shizuku</string>
+    <string name="terminal_tutorial_1">ส่งออกไฟล์ไปยังโฟลเดอร์ใหม่</string>
+    <string name="terminal_tutorial_1_description">ไฟล์สองไฟล์จะถูกส่งออก: %1$s และ %2$sหากมีไฟล์อยู่ในโฟลเดอร์ที่เลือกอยู่แล้ว ไฟล์เหล่านั้นจะถูกลบออก</string>
     <string name="terminal_export_files">ส่งออกไฟล์</string>
+    <string name="terminal_tutorial_2">ใช้แอปเทอร์มินัลของคุณเพื่อคัดลอกไฟล์ไปยังไดเร็กทอรีไฟล์ส่วนตัว</string>
+    <string name="terminal_tutorial_2_description">เคล็ดลับ: หากไดเร็กทอรีโฮมของแอปเทอร์มินัลของคุณ (~) อยู่ในโฟลเดอร์ /data/data การวางไฟล์ไว้ที่นั่นจะทำให้คุณสามารถรัน %1$s ได้โดยไม่ต้องเขียนเส้นทาง\n\nหรืออีกทางหนึ่ง คุณสามารถสร้างนามแฝงสำหรับ %2$s ในไฟล์ config .bashrc ของแอปเทอร์มินัลของคุณได้</string>
+    <string name="terminal_tutorial_3">เปิดเชลล์ด้วยคำสั่งต่อไปนี้:</string>
+    <string name="rish_description"><![CDATA[ด้วย %1$sคุณสามารถรันคำสั่งเชลล์ในแอปพลิเคชันเทอร์มินัลใดก็ได้<p>แตะเพื่อเรียนรู้เพิ่มเติมเกี่ยวกับวิธีการใช้งาน]]></string>
     <!-- Settings -->
     <string name="settings_title">การตั้งค่า</string>
     <string name="settings_behavior">พฤติกรรม</string>
@@ -94,6 +105,7 @@
     <string name="settings_start_on_boot_bug">เนื่องจากข้อบกพร่องใน Android 11-12 การดีบักแบบไร้สายจึงไม่จดจําเครือข่ายที่ได้รับอนุญาต\n\nคุณจะต้องอนุญาตเครือข่ายอีกครั้งในการรีบูตแต่ละครั้งโดยแตะ \"อนุญาต\" เมื่อกล่องโต้ตอบการอนุญาตปรากฏขึ้น</string>
     <string name="settings_use_system_color">ใช้สีของธีมระบบ</string>
     <string name="settings_watchdog">สุนัขเฝ้าบ้าน</string>
+    <string name="settings_watchdog_summary">รีสตาร์ทชิซูกุโดยอัตโนมัติหากเกิดการขัดข้อง</string>
     <string name="settings_tcp_mode">โหมด TCP</string>
     <string name="settings_tcp_mode_summary">"ช่วยให้ชิซึกุสามารถรีสตาร์ทได้โดยไม่ต้องใช้ Wi-Fi (ชิซึกุต้องเริ่มใหม่ครั้งหนึ่งหลังจากรีบูต)"</string>
     <string name="settings_restart_dialog_title">จำเป็นต้องรีสตาร์ท</string>
