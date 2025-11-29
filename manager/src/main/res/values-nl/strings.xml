@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige systemen (zoals MIUI) staan apps geen toegang tot het netwerk toe wanneer ze niet zichtbaar zijn, zelfs niet als de app een service op de voorgrond gebruikt. Schakel de batterijoptimalisatie voor Shizuku op dergelijke systemen uit.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (voor geroote apparaten)]]></string>
+    <string name="home_root_description"><![CDATA[Als u Magisk gebruikt, kunt u %1$sproberen. Voor rootgebruikers zal dit uiteindelijk Shizuku vervangen. Let op: bestaande applicaties moeten enigszins worden aangepast om %2$ste kunnen gebruiken.]]></string>
     <string name="home_root_button_start">Beginnen</string>
     <string name="home_root_button_restart">Herstarten</string>
     <!-- Home - Application management -->
@@ -68,6 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tik om geautoriseerde apps te beheren]]></string>
     <string name="home_app_management_empty">Apps die de Shizuku-toestemming hebben aangevraagd of verklaard, worden hier weergegeven.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Ontwikkelaarsgids</string>
     <string name="home_learn_more_description">Leer hoe je je ontwikkelt met Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Je moet een extra stap zetten</string>
@@ -79,7 +81,16 @@
     <string name="app_management_toggle_all">Schakel alles uit</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gebruik Shizuku in terminalapps</string>
+    <string name="home_terminal_description">Voer shell-opdrachten uit in terminal-apps via Shizuku</string>
+    <string name="terminal_tutorial_miui">Gebruikers hebben gemeld dat MIUI het Storage Access Framework verstoort, dat door de exportfunctie wordt gebruikt.</string>
+    <string name="terminal_tutorial_miui_2">Als u MIUI gebruikt, moet u het bestand mogelijk uit de map \'assets\' in de APK van Shizuku extraheren.</string>
+    <string name="terminal_tutorial_1">Exporteer de bestanden naar een nieuwe map.</string>
+    <string name="terminal_tutorial_1_description">Er worden twee bestanden geëxporteerd: %1$s en %2$s. Als de bestanden al in de geselecteerde map staan, worden ze verwijderd.</string>
     <string name="terminal_export_files">Bestanden exporteren</string>
+    <string name="terminal_tutorial_2">Gebruik uw terminal-app om de bestanden naar de persoonlijke bestandsmap te kopiëren.</string>
+    <string name="terminal_tutorial_2_description">Tip: Als de thuismap (~) van uw terminal-app zich in de map /data/data bevindt, kunt u door de bestanden daarin te plaatsen %1$s uitvoeren zonder het pad te hoeven schrijven.\n\nAnders kunt u een alias voor %2$s maken in het .bashrc-configuratiebestand van uw terminal-app.</string>
+    <string name="terminal_tutorial_3">Open een shell met de volgende opdracht:</string>
+    <string name="rish_description"><![CDATA[Met %1$skunt u shell-opdrachten uitvoeren in elke terminal-app.<p>Tik om meer te weten te komen over het gebruik ervan.]]></string>
     <!-- Settings -->
     <string name="settings_title">Instellingen</string>
     <string name="settings_behavior">Gedrag</string>
@@ -88,6 +99,7 @@
     <string name="settings_start_on_boot_bug">Vanwege een bug in Android 11-12 onthoudt draadloos foutopsporing geen geautoriseerde netwerken.\n\nU moet het netwerk bij elke herstart opnieuw autoriseren door op \"Toestaan\" te tikken wanneer het autorisatiedialoogvenster verschijnt.</string>
     <string name="settings_use_system_color">Gebruik systeemthemakleur</string>
     <string name="settings_watchdog">Waakhond</string>
+    <string name="settings_watchdog_summary">Shizuku automatisch opnieuw opstarten als het vastloopt</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Stelt Shizuku in staat om zonder wifi opnieuw te starten. (Shizuku moet sinds de reboot al eens begonnen zijn)"</string>
     <string name="settings_restart_dialog_title">Opnieuw opstarten vereist</string>
