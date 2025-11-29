@@ -94,7 +94,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12のバグにより、無線デバッグは認可されたネットワークを記憶しません。\n\n再開のたびに、認証ダイアログが表示されたら「許可」をタップしてネットワークを再認証する必要があります。</string>
     <string name="settings_use_system_color">システムテーマカラー</string>
     <string name="settings_watchdog">ウォッチドッグ</string>
-    <string name="settings_watchdog_summary">Shizukuが停止した場合は自動的に再起動します</string>
     <string name="settings_tcp_mode">TCPモード</string>
     <string name="settings_tcp_mode_summary">"Wi-FiなしでShizukuを再起動できるようにします。（再起動後、Shizukuが一度起動している必要があります）"</string>
     <string name="settings_restart_dialog_title">再起動が必要です</string>
