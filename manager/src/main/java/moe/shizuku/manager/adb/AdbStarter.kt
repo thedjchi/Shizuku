@@ -21,7 +21,7 @@ import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
 
 object AdbStarter {
-    suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
+    suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null, forceRetry: Boolean = false) {
         suspend fun AdbClient.runCommand(cmd: String) {
             command(cmd) { log?.invoke(String(it)) }
         }
@@ -36,7 +36,7 @@ object AdbStarter {
                     else throw AdbKeyException(it)
                 }
 
-            var retry = false
+            var retry = if (forceRetry) true else false
             var activePort = port
             val tcpMode = ShizukuSettings.getTcpMode()
             val tcpPort = ShizukuSettings.getTcpPort()
