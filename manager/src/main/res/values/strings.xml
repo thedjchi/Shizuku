@@ -112,7 +112,7 @@
     <string name="settings_start_on_boot_bug">Due to a bug in Android 11-12, wireless debugging does not remember any authorized networks.\n\nYou will need to re-authorize the network on each reboot by tapping \"Allow\" when the authorization dialog pops up.</string>
     <string name="settings_use_system_color">Use system theme color</string>
     <string name="settings_watchdog">Watchdog</string>
-    <string name="settings_watchdog_summary">Automatically restart Shizuku if it stops</string>
+    <string name="settings_watchdog_summary">Automatically restart Shizuku if it crashes</string>
     <string name="settings_tcp_mode">TCP mode</string>
     <string name="settings_tcp_mode_summary">"Allows Shizuku to restart without Wi-Fi. (Shizuku must have started once since reboot)"</string>
     <string name="settings_restart_dialog_title">Restart Required</string>
