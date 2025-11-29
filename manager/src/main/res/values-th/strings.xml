@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">บางระบบ (เช่น MIUI) ไม่อนุญาตให้แอปเข้าถึงเครือข่ายเมื่อมองไม่เห็น แม้ว่าแอปจะใช้บริการเบื้องหน้าก็ตาม โปรดปิดใช้งานคุณสมบัติการเพิ่มประสิทธิภาพแบตเตอรี่สําหรับ Shizuku ในระบบดังกล่าว</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[เริ่ม (สำหรับอุปกรณ์ที่รูทแล้ว)]]></string>
-    <string name="home_root_description"><![CDATA[นอกจากนี้ Shizuku ยังสามารถเริ่มอัตโนมัติเมื่ออุปกรณ์ถูกเปิด หากไม่ โปรดตรวจสอบอุปกรณ์หรือเครื่องมือภายนอกที่จำกัดการเข้าถึงของ Shizuku<br>หรือดูตาม %s]]></string>
-    <string name="home_root_description_sui"><![CDATA[หากคุณใช้ Magisk คุณสามารถลอง %1$s. สําหรับผู้ใช้รูท มันจะเข้ามาแทนที่ Shizuku ในที่สุด หมายเหตุ แอปพลิเคชันที่มีอยู่จําเป็นต้องเปลี่ยนแปลงเล็กน้อยเพื่อใช้งาน %2$s.]]></string>
     <string name="home_root_button_start">เริ่ม</string>
     <string name="home_root_button_restart">เริ่มใหม่</string>
     <!-- Home - Application management -->
@@ -72,7 +70,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[แตะเพื่อจัดการแอปที่ได้รับอนุญาต]]></string>
     <string name="home_app_management_empty">แอปที่ได้ร้องขอหรือประกาศการอนุญาต Shizuku จะแสดงที่นี่</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">เรียนรู้ Shizuku</string>
     <string name="home_learn_more_description">เรียนรู้การพัฒนาเพื่อใช้ร่วมกันกับ Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">คุณต้องทำขั้นตอนเพิ่มเติม</string>
@@ -88,17 +85,7 @@
     <string name="app_management_toggle_all">สลับทั้งหมด</string>
     <!-- Terminal -->
     <string name="home_terminal_title">ใช้ Shizuku ในแอปเทอร์มินอล</string>
-    <string name="home_terminal_description">สั่งคำสั่งผ่าน Shizuku ในแอปเทอร์มินอลที่คุณเลือก</string>
-    <string name="terminal_tutorial_1">ก่อนอื่น ส่งออกไฟล์ไปยังที่ใดก็ได้ จะมีอยู่สองไฟล์ %1$s และ %2$s</string>
-    <string name="terminal_tutorial_1_description">หากมีไฟล์ที่มีชื่อเดียวกันในโฟลเดอร์ที่เลือก ไฟล์เหล่านั้นจะถูกลบออก
-\n
-\nใช้ฟังก์ชันการส่งออก SAF (Storage Access Framework) มีรายงานว่า MIUI ทำลายฟังก์ชันของ SAF หากคุณใช้ MIUI คุณอาจจะต้องแตกไฟล์จาก apk ของ Shizuku หรือดาวน์โหลดจาก GitHub</string>
     <string name="terminal_export_files">ส่งออกไฟล์</string>
-    <string name="terminal_tutorial_2">จากนั้น ใช้ตัวแก้ไขไฟล์เปิดและแก้ไข %1$s</string>
-    <string name="terminal_tutorial_2_description">ยกตัวอย่างเช่น ถ้าคุณต้องการใช้ Shizuku ใน %1$s คุณจะต้องแทนที่ %2$s ด้วย %3$s (%4$s คือชื่อแพ็กเกจของ %1$s)</string>
-    <string name="terminal_tutorial_3">สุดท้าย ย้ายไฟล์ไปสักที่ที่แอปเทอร์มินอลของคุณสามารถเข้าถึงได้ ทีนี้คุณก็จะสามารถใช้ %1$s เพื่อสั่งคำสั่งผ่าน Shizuku</string>
-    <string name="terminal_tutorial_3_description">แนะนำนิดหน่อย: ให้การอนุญาตดำเนิดการแก่ %1$s และเพิ่มเข้าไปใน %2$s ก็จะสามารถใช้ %1$s ได้โดยตรง</string>
-    <string name="rish_description"><![CDATA[ด้วย %1$s ในแอปเทอร์มินอลใด ๆ คุณจะสามารถเชื่อมต่อและดำเนินการกับ shell ที่รันโดย Shizuku <p>รายละเอียดอื่น ๆ ในการใช้ %1$s แตะเพื่อดูเอกสาร]]></string>
     <!-- Settings -->
     <string name="settings_title">การตั้งค่า</string>
     <string name="settings_behavior">พฤติกรรม</string>
