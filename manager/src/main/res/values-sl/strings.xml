@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nekateri sistemi (kot je MIUI) ne dovoljujejo aplikacijam dostopa do omrežja, kadar niso vidne, tudi če aplikacija uporablja storitev v ospredju. Prosimo, onemogočite funkcije optimizacije baterije za Shizuku na takšnih sistemih.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Začni (za naprave s korenskim dostopom)]]></string>
-    <string name="home_root_description"><![CDATA[Poleg tega se lahko Shizuku samodejno zažene ob zagonu. Če ne, preverite, ali je vaš sistem ali orodja drugih proizvajalcev omejila Shizuku.<br>Glejte %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Če uporabljaš Magisk, lahko poskusiš %1$s. Za root uporabnike bo sčasoma nadomestil Shizuku. Upoštevajte, da morajo obstoječe aplikacije nekoliko spremeniti za uporabo %2$s.]]></string>
     <string name="home_root_button_start">Začni</string>
     <string name="home_root_button_restart">Ponovni zagon</string>
     <!-- Home - Application management -->
@@ -75,7 +73,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Dotaknite se za upravljanje pooblaščenih aplikacij]]></string>
     <string name="home_app_management_empty">Tukaj bodo prikazane aplikacije, ki so zahtevale ali prijavile dovoljenje Shizuku.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Naučite se Šizukuja</string>
     <string name="home_learn_more_description">Naučite se razvijati s Shizukujem</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Morate narediti dodaten korak</string>
@@ -87,17 +84,7 @@
     <string name="app_management_toggle_all">Preklopi vse</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Uporaba Shizukuja v terminalskih aplikacijah</string>
-    <string name="home_terminal_description">Izvajanje ukazov prek Shizukuja v terminalskih aplikacijah, ki so vam všeč</string>
-    <string name="terminal_tutorial_1">Najprej izvozite datoteke kamor koli želite. Našli boste dve datoteki, %1$s in %2$s.</string>
-    <string name="terminal_tutorial_1_description">Če so v izbrani mapi datoteke z istim imenom, bodo izbrisane.\n\nFunkcija izvoza uporablja SAF (Storage Access Framework). Poroča se, da MIUI moti delovanje SAF. Če uporabljate MIUI, boste morda morali datoteko izvleči iz Shizukujeve aplikacije ali jo prenesti z GitHuba.</string>
     <string name="terminal_export_files">Izvoz datotek</string>
-    <string name="terminal_tutorial_2">Nato s katerim koli urejevalnikom besedil odprite in uredite %1$s.</string>
-    <string name="terminal_tutorial_2_description">Na primer, če želite uporabiti Shizuku v %1$s, morate %2$s zamenjati z %3$s (%4$s je ime paketa %1$s).</string>
-    <string name="terminal_tutorial_3">Končno premaknite datoteke nekam, do katerega lahko dostopa vaša terminalska aplikacija, in s pomočjo %1$s boste lahko izvajali ukaze prek Shizukuja.</string>
-    <string name="terminal_tutorial_3_description">Nekaj nasvetov: podelite dovoljenje za izvajanje za %1$s in ga dodajte v %2$s, tako boste lahko neposredno uporabili %1$s .</string>
-    <string name="rish_description"><![CDATA[Z %1$sse lahko v kateri koli terminalski aplikaciji povežete in komunicirate z lupino, ki jo izvaja Shizuku.
-<p>O podrobni uporabi %1$s, tapnite za ogled dokumenta.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Nastavitve</string>
     <string name="settings_behavior">Vedenje</string>
