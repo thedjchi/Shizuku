@@ -88,6 +88,7 @@
     <string name="terminal_tutorial_1_description">Kaksi tiedostoa viedään: %1$s ja %2$s. Jos tiedostot ovat jo valitussa kansiossa, ne poistetaan.</string>
     <string name="terminal_export_files">Tiedostojen vienti</string>
     <string name="terminal_tutorial_2">Kopioi tiedostot päätesovelluksella sen yksityiseen tiedostohakemistoon.</string>
+    <string name="terminal_tutorial_2_description">Vinkki: Jos päätesovelluksesi kotihakemisto (~) on yksityisten tiedostojen hakemistossa, tiedostojen sijoittaminen sinne mahdollistaa %1$s -komennon suorittamisen kirjoittamatta polkua.\n\nMuussa tapauksessa voit luoda aliaksen %2$s -komennolle päätesovelluksesi %3$s -määritystiedostossa.</string>
     <string name="terminal_tutorial_3">Avaa komentotulkki seuraavalla komennolla:</string>
     <string name="rish_description"><![CDATA[Komentosarjalla %1$svoit suorittaa komentotulkkikomentoja missä tahansa päätesovelluksessa.<p>Napauta saadaksesi lisätietoja sen käytöstä.]]></string>
     <!-- Settings -->
