@@ -95,6 +95,7 @@
     <string name="terminal_tutorial_1_description">Es werden zwei Dateien exportiert: %1$s und %2$s. Falls die Dateien bereits im ausgewählten Ordner vorhanden sind, werden sie gelöscht.</string>
     <string name="terminal_export_files">Dateien exportieren</string>
     <string name="terminal_tutorial_2">Verwenden Sie Ihre Terminal-App, um die Dateien in das private Dateiverzeichnis zu kopieren.</string>
+    <string name="terminal_tutorial_2_description">Tipp: Befindet sich das Home-Verzeichnis Ihrer Terminalanwendung (~) im Verzeichnis für private Dateien, können Sie die Dateien dort ablegen und so %1$s ausführen, ohne den Pfad angeben zu müssen.\n\nAlternativ können Sie einen Alias für %2$s in der %3$s Konfigurationsdatei Ihrer Terminalanwendung erstellen.</string>
     <string name="terminal_tutorial_3">Öffnen Sie eine Shell mit folgendem Befehl:</string>
     <string name="rish_description"><![CDATA[Mit %1$skönnen Sie Shell-Befehle in jeder Terminal-Anwendung ausführen.<p>Tippen Sie hier, um mehr über die Verwendung zu erfahren.]]></string>
     <!-- Settings -->
