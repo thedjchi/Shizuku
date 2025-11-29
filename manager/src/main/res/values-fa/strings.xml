@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">به دلیل یک باگ در اندروید ۱۱-۱۲، اشکال زدایی بی سیم هیچ شبکه مجاز را به یاد نمی آورد.\n\nدر هر راه اندازی مجدد باید شبکه را با ضربه زدن روی «اجازه» هنگام ظاهر شدن دیالوگ مجوزدهی مجددا، مجددا تأیید کنید.</string>
     <string name="settings_use_system_color">از رنگ طرح زمینه دستگاه استفاده کنید</string>
     <string name="settings_watchdog">دیده‌بان</string>
-    <string name="settings_watchdog_summary">اگر Shizuku متوقف شود، آن را به طور خودکار مجدداً راه اندازی کنید</string>
     <string name="settings_tcp_mode">حالت TCP</string>
     <string name="settings_tcp_mode_summary">"به Shizuku اجازه می‌دهد بدون Wi-Fi دوباره راه‌اندازی شود. (Shizuku باید یک بار از زمان راه‌اندازی مجدد شروع شده باشد)"</string>
     <string name="settings_restart_dialog_title">راه اندازی مجدد مورد نیاز است</string>
