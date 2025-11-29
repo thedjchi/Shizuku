@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">På grund av en bugg i Android 11-12 minns trådlös felsökning inga auktoriserade nätverk.\n\nDu måste återauktorisera nätverket vid varje omstart genom att trycka på \"Tillåt\" när auktoriseringsdialogen dyker upp.</string>
     <string name="settings_use_system_color">Använd systemtemafärg</string>
     <string name="settings_watchdog">Vakthund</string>
-    <string name="settings_watchdog_summary">Starta om Shizuku automatiskt om den stannar</string>
     <string name="settings_tcp_mode">TCP-läge</string>
     <string name="settings_tcp_mode_summary">"Tillåter att Shizuku startas om utan Wi-Fi. (Shizuku måste ha startats en gång sedan omstarten)"</string>
     <string name="settings_restart_dialog_title">Omstart krävs</string>
