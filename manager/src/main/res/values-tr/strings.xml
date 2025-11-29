@@ -95,7 +95,6 @@
     <string name="terminal_tutorial_1_description">İki dosya dışa aktarılacak: %1$s ve %2$s. Dosyalar seçili klasörde zaten mevcutsa silinecek.</string>
     <string name="terminal_export_files">Dosyaları dışa aktar</string>
     <string name="terminal_tutorial_2">Terminal uygulamanızı kullanarak dosyaları özel dosyalar dizinine kopyalayın.</string>
-    <string name="terminal_tutorial_2_description">İpucu: Terminal uygulamanızın ana dizini (~) /data/data klasöründeyse, dosyaları oraya yerleştirmek, yolu yazmadan %1$s komutunu çalıştırmanıza olanak tanır.\n\nAksi takdirde, terminal uygulamanızın .bashrc yapılandırma dosyasında %2$s için bir takma ad oluşturabilirsiniz.</string>
     <string name="terminal_tutorial_3">Aşağıdaki komutla bir kabuk açın:</string>
     <string name="rish_description"><![CDATA[%1$sile herhangi bir terminal uygulamasında kabuk komutlarını çalıştırabilirsiniz.<p>Nasıl kullanılacağı hakkında daha fazla bilgi edinmek için dokunun.]]></string>
     <!-- Settings -->
