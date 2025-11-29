@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Hindi pinapayagan ng ilang system (gaya ng MIUI) ang mga app na i-access ang network kapag hindi nakikita ang mga ito, kahit na gumagamit ang app ng serbisyo sa harapan. Mangyaring huwag paganahin ang mga feature ng pag-optimize ng baterya para sa Shizuku sa mga naturang system.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Simulan (para sa mga device na may root)]]></string>
-    <string name="home_root_description"><![CDATA[Pwede ring awtomatikong masimulan ang Shizuku pagka-boot. Kung hindi, maaaring nilimitahan ng iyong sistema o ng third-party na kagamitan ang Shizuku.<br>Sumangguni sa %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Kung gumagamit ka ng Magisk, maaari mong subukan %1$s. Para sa mga gumagamit ng ugat, sa kalaunan ay papalitan nito ang Shizuku. Tandaan, kailangang magbago ng kaunti ang mga umiiral na application upang magamit ang %2$s.]]></string>
     <string name="home_root_button_start">Simulan</string>
     <string name="home_root_button_restart">Simulan muli</string>
     <!-- Home - Application management -->
@@ -73,7 +71,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Pindutin para pamahalaan ang mga awtorisadong app]]></string>
     <string name="home_app_management_empty">Ipapakita dito ang mga app na humiling o nagdeklara ng pahintulot ng Shizuku.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Matuto Pa Tungkol sa Shizuku</string>
     <string name="home_learn_more_description">Matuto kung paano mag-develop gamit ang Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">May mga karagdagang hakbang kang dapat gawin</string>
@@ -89,17 +86,7 @@
     <string name="app_management_toggle_all">I-toggle ang lahat</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gamitin ang Shizuku sa mga terminal app</string>
-    <string name="home_terminal_description">Magpatakbo ng mga utos papuntang Shizuku gamit ang terminal app mo</string>
-    <string name="terminal_tutorial_1">Una, i-export ang mga file saan mo man gusto. May dalawa kang file na makikita, %1$s at %2$s.</string>
-    <string name="terminal_tutorial_1_description">Mabubura ang mga file na may parehong pangalan sa folder na pipiliin mo.
-\n
-\nGinagamit ang SAF (Storage Access Framework) para ma-export ang file. Naiulat na hindi gumagana nang maayos ang SAF sa MIUI. Kung nasa MIUI ka, baka kailangan mong i-extract ang file mula sa apk ng Shizuku o i-download ito mula sa GitHub.</string>
     <string name="terminal_export_files">I-export ang mga file</string>
-    <string name="terminal_tutorial_2">Tapos, guamit ng anumang editor ng teksto para buksan at baguhin ang %1$s.</string>
-    <string name="terminal_tutorial_2_description">Halimbawa, kung gusto mong gamitin ang Shizuku sa %1$s, dapat palitan mo ang %2$s ng %3$s (ang package name ng %1$s ay %4$s).</string>
-    <string name="terminal_tutorial_3">At, ilipat ang mga file sa kung saan ito pwedeng ma-access ng terminal app mo, magagamit mo ang %1$s para magpaandar ng mga utos papuntang Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Tip: bigyan ng pahintulot na ma-execute ang %1$s at idagdag ito sa %2$s, pwede mong direktang magamit ang %1$s.</string>
-    <string name="rish_description"><![CDATA[Gamit ang %1$s, makakakonekta ka sa shell ng Shizuku gamit ang anumang terminal app. <p>Pindutin para makita ang detalyadong impormasyon tungkol sa %1$s.]]></string>
     <!-- Settings -->
     <string name="settings_title">Mga Setting</string>
     <string name="settings_behavior">Pag-uugali</string>
