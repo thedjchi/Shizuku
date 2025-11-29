@@ -90,7 +90,6 @@
     <string name="terminal_tutorial_1_description">ייוצאו שני קבצים: %1$s ו- %2$s. אם הקבצים כבר קיימים בתיקייה שנבחרה, הם יימחקו.</string>
     <string name="terminal_export_files">ייצוא קבצים</string>
     <string name="terminal_tutorial_2">השתמש באפליקציית הטרמינל שלך כדי להעתיק את הקבצים לתיקיית הקבצים הפרטית שלה.</string>
-    <string name="terminal_tutorial_2_description">טיפ: אם ספריית הבית (~) של אפליקציית הטרמינל שלך נמצאת בתיקייה /data/data, הצבת הקבצים שם תאפשר לך להפעיל את %1$s מבלי לכתוב את הנתיב.\n\nאחרת, תוכל ליצור כינוי עבור %2$s בקובץ התצורה .bashrc של אפליקציית הטרמינל שלך.</string>
     <string name="terminal_tutorial_3">פתחו מעטפת עם הפקודה הבאה:</string>
     <string name="rish_description"><![CDATA[בעזרת %1$s, ניתן להריץ פקודות מעטפת בכל אפליקציית טרמינל.<p>הקש כדי ללמוד עוד על אופן השימוש בו.]]></string>
     <!-- Settings -->
