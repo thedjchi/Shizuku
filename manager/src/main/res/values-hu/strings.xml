@@ -88,6 +88,7 @@
     <string name="terminal_tutorial_1_description">Két fájl kerül exportálásra: %1$s és %2$s. Ha a fájlok már léteznek a kiválasztott mappában, akkor törlődnek.</string>
     <string name="terminal_export_files">Fájlok exportálása</string>
     <string name="terminal_tutorial_2">A terminálalkalmazással másolja a fájlokat a privát fájlok könyvtárába.</string>
+    <string name="terminal_tutorial_2_description">Tipp: Ha a terminálalkalmazásod kezdőkönyvtára (~) a privát fájlok könyvtárában található, akkor a fájlok oda helyezése lehetővé teszi a %1$s futtatását az elérési út megadása nélkül.\n\nEgyébként létrehozhatsz egy aliast a %2$s számára a terminálalkalmazásod %3$s konfigurációs fájljában.</string>
     <string name="terminal_tutorial_3">Nyisson meg egy shell-t a következő paranccsal:</string>
     <string name="rish_description"><![CDATA[A %1$sparanccsal shell parancsokat futtathatsz bármelyik terminálalkalmazásban.<p>Koppints ide, ha többet szeretnél megtudni a használatáról.]]></string>
     <!-- Settings -->
