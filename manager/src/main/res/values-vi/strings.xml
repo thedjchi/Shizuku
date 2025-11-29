@@ -90,6 +90,7 @@
     <string name="terminal_tutorial_1_description">Hai tệp sẽ được xuất: %1$s và %2$s. Nếu các tệp đã tồn tại trong thư mục đã chọn, chúng sẽ bị xóa.</string>
     <string name="terminal_export_files">Xuất tệp</string>
     <string name="terminal_tutorial_2">Sử dụng ứng dụng đầu cuối để sao chép các tệp vào thư mục tệp riêng tư.</string>
+    <string name="terminal_tutorial_2_description">Mẹo: Nếu thư mục gốc của ứng dụng đầu cuối (~) nằm trong thư mục tệp riêng tư, việc đặt các tệp ở đó sẽ cho phép bạn chạy %1$s mà không cần ghi đường dẫn.\n\nNếu không, bạn có thể tạo bí danh cho %2$s trong tệp cấu hình %3$s của ứng dụng đầu cuối.</string>
     <string name="terminal_tutorial_3">Mở shell bằng lệnh sau:</string>
     <string name="rish_description"><![CDATA[Với %1$s, bạn có thể chạy lệnh shell trong bất kỳ ứng dụng đầu cuối nào.<p>Nhấn để tìm hiểu thêm về cách sử dụng.]]></string>
     <!-- Settings -->
