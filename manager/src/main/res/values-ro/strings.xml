@@ -96,6 +96,7 @@
     <string name="terminal_tutorial_1_description">Vor fi exportate două fișiere: %1$s și %2$s. Dacă fișierele există deja în folderul selectat, acestea vor fi șterse.</string>
     <string name="terminal_export_files">Export fișiere</string>
     <string name="terminal_tutorial_2">Folosește aplicația de terminal pentru a copia fișierele în directorul său privat de fișiere.</string>
+    <string name="terminal_tutorial_2_description">Sfat: Dacă directorul principal (~) al aplicației terminale se află în directorul de fișiere private, plasarea fișierelor acolo vă va permite să rulați %1$s fără a scrie calea.\n\nÎn caz contrar, puteți crea un alias pentru %2$s în fișierul de configurare %3$s al aplicației terminale.</string>
     <string name="terminal_tutorial_3">Deschideți un shell cu următoarea comandă:</string>
     <string name="rish_description"><![CDATA[Cu %1$s, puteți rula comenzi shell în orice aplicație terminal.<p>Atingeți pentru a afla mai multe despre cum să o utilizați.]]></string>
     <!-- Settings -->
