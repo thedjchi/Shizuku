@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nekateri sistemi (kot je MIUI) ne dovoljujejo aplikacijam dostopa do omrežja, kadar niso vidne, tudi če aplikacija uporablja storitev v ospredju. Prosimo, onemogočite funkcije optimizacije baterije za Shizuku na takšnih sistemih.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Začni (za naprave s korenskim dostopom)]]></string>
+    <string name="home_root_description"><![CDATA[Če uporabljate Magisk, lahko poskusite %1$s. Za uporabnike root bo sčasoma nadomestil Shizuku. Upoštevajte, da se morajo obstoječe aplikacije nekoliko spremeniti, da bodo lahko uporabljale %2$s.]]></string>
     <string name="home_root_button_start">Začni</string>
     <string name="home_root_button_restart">Ponovni zagon</string>
     <!-- Home - Application management -->
@@ -73,6 +74,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Dotaknite se za upravljanje pooblaščenih aplikacij]]></string>
     <string name="home_app_management_empty">Tukaj bodo prikazane aplikacije, ki so zahtevale ali prijavile dovoljenje Shizuku.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Vodnik za razvijalce</string>
     <string name="home_learn_more_description">Naučite se razvijati s Shizukujem</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Morate narediti dodaten korak</string>
@@ -84,7 +86,16 @@
     <string name="app_management_toggle_all">Preklopi vse</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Uporaba Shizukuja v terminalskih aplikacijah</string>
+    <string name="home_terminal_description">Zaženite ukaze lupine v terminalskih aplikacijah prek Shizukuja</string>
+    <string name="terminal_tutorial_miui">Uporabniki so poročali, da MIUI krši ogrodje za dostop do shrambe, ki ga uporablja funkcija izvoza.</string>
+    <string name="terminal_tutorial_miui_2">Če uporabljate MIUI, boste morda morali datoteko izvleči iz mape z sredstvi v Shizukujevem APK-ju.</string>
+    <string name="terminal_tutorial_1">Izvozite datoteke v novo mapo.</string>
+    <string name="terminal_tutorial_1_description">Izvoženi bosta dve datoteki: %1$s in %2$s. Če datoteke že obstajajo v izbrani mapi, bodo izbrisane.</string>
     <string name="terminal_export_files">Izvoz datotek</string>
+    <string name="terminal_tutorial_2">Z aplikacijo terminala kopirajte datoteke v njen zasebni imenik datotek.</string>
+    <string name="terminal_tutorial_2_description">Nasvet: Če je domači imenik (~) vaše terminalske aplikacije v mapi /data/data, boste z namestitvijo datotek tja lahko zagnali %1$s brez pisanja poti.\n\nSicer pa lahko v konfiguracijski datoteki .bashrc vaše terminalske aplikacije ustvarite vzdevek za %2$s .</string>
+    <string name="terminal_tutorial_3">Odprite lupino z naslednjim ukazom:</string>
+    <string name="rish_description"><![CDATA[Z %1$slahko zaženete ukaze lupine v kateri koli terminalski aplikaciji.<p>Dotaknite se, če želite izvedeti več o uporabi.]]></string>
     <!-- Settings -->
     <string name="settings_title">Nastavitve</string>
     <string name="settings_behavior">Vedenje</string>
@@ -93,6 +104,7 @@
     <string name="settings_start_on_boot_bug">Zaradi napake v Androidu 11-12 brezžično odpravljanje napak ne pomni nobenih pooblaščenih omrežij.\n\nOb vsakem ponovnem zagonu boste morali ponovno avtorizirati omrežje tako, da tapnete »Dovoli«, ko se pojavi okno za avtorizacijo.</string>
     <string name="settings_use_system_color">Uporabi sistemsko barvo teme</string>
     <string name="settings_watchdog">Nadzorni pes</string>
+    <string name="settings_watchdog_summary">Samodejni ponovni zagon Shizukuja, če se sesuje</string>
     <string name="settings_tcp_mode">Način TCP</string>
     <string name="settings_tcp_mode_summary">"Omogoča Shizuku, da se ponovno zažene brez Wi-Fi-ja. (Shizuku je morala enkrat začeti od ponovnega zagona)"</string>
     <string name="settings_restart_dialog_title">Potreben je ponovni zagon</string>
