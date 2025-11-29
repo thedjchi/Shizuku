@@ -91,7 +91,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12-ում առկա սխալի պատճառով անլար կարգաբերումը չի հիշում որևէ լիազորված ցանց։\n\nԴուք պետք է վերահաստատեք ցանցը յուրաքանչյուր վերագործարկման ժամանակ՝ սեղմելով «Թույլատրել» կոճակը, երբ բացվի լիազորման երկխոսության պատուհանը։</string>
     <string name="settings_use_system_color">Օգտագործել համակարգի տեսաձեւի գույնը</string>
     <string name="settings_watchdog">Հսկիչ</string>
-    <string name="settings_watchdog_summary">Ավտոմատ վերագործարկել Shizuku, եթե այն կանգ է առնում</string>
     <string name="settings_tcp_mode">TCP ռեժիմ</string>
     <string name="settings_tcp_mode_summary">"Թույլ է տալիս Shizuku-ին վերագործարկել առանց Wi-Fi-ի: (Shizuku-ն պետք է որ մեկ անգամ սկսել է վերագործարկումից հետո)"</string>
     <string name="settings_restart_dialog_title">Վերագործարկումը պարտադիր է</string>
