@@ -92,7 +92,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
         val uri = Uri.parse(
             "mailto:" + context.getString(R.string.support_email) +
-            "?subject=" + Uri.encode("Error while starting on boot") +
+            "?subject=" + Uri.encode("Error while starting Shizuku") +
             "&body=v" + Uri.encode(
                 context.packageManager.getPackageInfo(context.packageName, 0).versionName + "\n\n" +
                 e.stackTraceToString()
