@@ -94,7 +94,7 @@ class ShellTutorialActivity : AppBarActivity() {
 
             text2.text = getString(R.string.terminal_tutorial_2, shName).toHtml()
             command2.text = "cp /sdcard/chosen-folder/* /data/data/terminal.package.name/files"
-            summary2.text = getString(R.string.terminal_tutorial_2_description, shName, shName).toHtml()
+            summary2.text = getString(R.string.terminal_tutorial_2_description, shName, shName, ".bashrc").toHtml()
 
             text3.text = getString(R.string.terminal_tutorial_3)
             command3.text = "sh /path/to/$SH_NAME"

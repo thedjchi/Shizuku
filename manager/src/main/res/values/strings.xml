@@ -100,7 +100,7 @@
     <string name="terminal_tutorial_1_description">Two files will be exported: %1$s and %2$s. If the files already exist in the selected folder, they will be deleted.</string>
     <string name="terminal_export_files">Export files</string>
     <string name="terminal_tutorial_2">Use your terminal app to copy the files to its private files directory.</string>
-    <string name="terminal_tutorial_2_description">Tip: If your terminal app\'s home directory (~) is in the /data/data folder, placing the files there will allow you to run %1$s without writing the path.\n\nOtherwise, you can create an alias for %2$s in your terminal app\'s .bashrc config file.</string>
+    <string name="terminal_tutorial_2_description">Tip: If your terminal app\'s home directory (~) is in the private files directory, placing the files there will allow you to run %1$s without writing the path.\n\nOtherwise, you can create an alias for %2$s in your terminal app\'s %3$s configuration file.</string>
     <string name="terminal_tutorial_3">Open a shell with the following command:</string>
     <string name="rish_description"><![CDATA[With %1$s, you can run shell commands in any terminal app.<p>Tap to learn more about how to use it.]]></string>
 
