@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Algunos sistemas (como MIUI) impiden que las aplicaciones accedan a la red cuando no son visibles, incluso si la app utiliza un servicio en primer plano. Por favor, desactiva las funciones de optimización de batería para Shizuku en estos sistemas.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Iniciar (dispositivo rooteado)]]></string>
+    <string name="home_root_description"><![CDATA[Si usas Magisk, puedes probar %1$s. Para usuarios root, eventualmente reemplazará a Shizuku. Ten en cuenta que las aplicaciones existentes deben modificarse ligeramente para usar %2$s.]]></string>
     <string name="home_root_button_start">Iniciar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
@@ -71,6 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Toque para administrar aplicaciones autorizadas]]></string>
     <string name="home_app_management_empty">Las aplicaciones que hayan solicitado o declarado el permiso Shizuku se mostrarán aquí.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Guía para desarrolladores</string>
     <string name="home_learn_more_description">Aprende a desarrollar con Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Necesitas dar un paso más</string>
@@ -86,7 +88,16 @@
     <string name="app_management_toggle_all">Activar/desactivar todo</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Usar Shizuku en la consola de comandos</string>
+    <string name="home_terminal_description">Ejecute comandos de shell en aplicaciones de terminal a través de Shizuku</string>
+    <string name="terminal_tutorial_miui">Los usuarios han informado que MIUI rompe el Storage Access Framework, que es utilizado por la función de exportación.</string>
+    <string name="terminal_tutorial_miui_2">Si está utilizando MIUI, es posible que tenga que extraer el archivo de la carpeta de activos en el APK de Shizuku.</string>
+    <string name="terminal_tutorial_1">Exportar los archivos a una nueva carpeta.</string>
+    <string name="terminal_tutorial_1_description">Se exportarán dos archivos: %1$s y %2$s. Si los archivos ya existen en la carpeta seleccionada, se eliminarán.</string>
     <string name="terminal_export_files">Exportar archivos</string>
+    <string name="terminal_tutorial_2">Utilice su aplicación de terminal para copiar los archivos a su directorio de archivos privados.</string>
+    <string name="terminal_tutorial_2_description">Consejo: si el directorio de inicio de su aplicación de terminal (~) está en la carpeta /data/data, colocar los archivos allí le permitirá ejecutar %1$s sin escribir la ruta.\n\nDe lo contrario, puede crear un alias para %2$s en el archivo de configuración .bashrc de su aplicación de terminal.</string>
+    <string name="terminal_tutorial_3">Abra un shell con el siguiente comando:</string>
+    <string name="rish_description"><![CDATA[Con %1$s, puedes ejecutar comandos de shell en cualquier aplicación de terminal.<p>Toca para obtener más información sobre cómo usarlo.]]></string>
     <!-- Settings -->
     <string name="settings_title">Configuración</string>
     <string name="settings_behavior">Comportamiento</string>
@@ -95,6 +106,7 @@
     <string name="settings_start_on_boot_bug">Debido a un error en Android 11-12, la depuración inalámbrica no recuerda ninguna red autorizada.\n\nTendrás que reautorizar la red en cada reinicio pulsando \"Permitir\" cuando aparezca el cuadro de autorización.</string>
     <string name="settings_use_system_color">Usar el color del tema del sistema</string>
     <string name="settings_watchdog">Perro guardián</string>
+    <string name="settings_watchdog_summary">Reiniciar automáticamente Shizuku si falla</string>
     <string name="settings_tcp_mode">Modo TCP</string>
     <string name="settings_tcp_mode_summary">"Permite que Shizuku se reinicie sin Wi-Fi. (Shizuku debe haberse iniciado una vez desde el reinicio)."</string>
     <string name="settings_restart_dialog_title">Reinicio necesario</string>
