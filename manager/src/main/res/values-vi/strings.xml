@@ -90,7 +90,6 @@
     <string name="settings_start_on_boot_bug">Do lỗi trong Android 11-12, gỡ lỗi không dây không ghi nhớ bất kỳ mạng được ủy quyền nào.\n\nBạn sẽ cần ủy quyền lại mạng trong mỗi lần khởi động lại bằng cách nhấn vào \"Cho phép\" khi hộp thoại ủy quyền bật lên.</string>
     <string name="settings_use_system_color">Sử dụng màu chủ đề hệ thống</string>
     <string name="settings_watchdog">Chó canh gác</string>
-    <string name="settings_watchdog_summary">Tự động khởi động lại Shizuku nếu nó dừng lại</string>
     <string name="settings_tcp_mode">Chế độ TCP</string>
     <string name="settings_tcp_mode_summary">"Cho phép Shizuku khởi động lại mà không cần Wi-Fi. (Shizuku phải khởi động lại một lần kể từ khi khởi động lại)"</string>
     <string name="settings_restart_dialog_title">Cần khởi động lại</string>
