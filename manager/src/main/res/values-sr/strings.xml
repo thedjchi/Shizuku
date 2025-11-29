@@ -92,7 +92,6 @@
     <string name="settings_start_on_boot_bug">Zbog greške u Androidu 11-12, bežično otklanjanje grešaka ne pamti nijednu ovlašćenu mrežu.\n\nMoraćete da ponovo autorizujete mrežu pri svakom ponovnom pokretanju tako što ćete dodirnuti \"Dozvoli\" kada se pojavi dijalog za autorizaciju.</string>
     <string name="settings_use_system_color">Користи боју системске теме</string>
     <string name="settings_watchdog">Чувар</string>
-    <string name="settings_watchdog_summary">Аутоматски поново покрените Шизуку ако се заустави</string>
     <string name="settings_tcp_mode">TCP режим</string>
     <string name="settings_tcp_mode_summary">"Омогућава Шизукуу да се поново покрене без Wi-Fi-ја. (Шизуку се морао једном покренути од поновног покретања)"</string>
     <string name="settings_restart_dialog_title">Потребно је поновно покретање</string>
