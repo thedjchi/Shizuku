@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">Az Android 11-12-es verziójában található hiba miatt a vezeték nélküli hibakeresés nem emlékszik a jogosult hálózatokra.\n\nMinden újraindításkor újra engedélyezned kell a hálózatot az „Engedélyezés” gombra koppintva, amikor a hitelesítési párbeszédpanel felugrik.</string>
     <string name="settings_use_system_color">Használja a rendszertéma színét</string>
     <string name="settings_watchdog">Őrzőkutya</string>
-    <string name="settings_watchdog_summary">Shizuku automatikus újraindítása leállás esetén</string>
     <string name="settings_tcp_mode">TCP mód</string>
     <string name="settings_tcp_mode_summary">"Lehetővé teszi a Shizuku újraindítását Wi-Fi nélkül. (A Shizukunak egyszer el kellett indulnia az újraindítás óta.)"</string>
     <string name="settings_restart_dialog_title">Újraindítás szükséges</string>
