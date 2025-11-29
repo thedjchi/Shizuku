@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Neki sistemi (kao što je MIUI) ne dozvoljavaju aplikacijama pristup mreži kada nisu vidljive, čak i ako aplikacija koristi uslugu u prvom planu. Molimo Vas da onemogućite funkcije optimizacije baterije za Shizuku na takvim sistemima.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Покрени (за рутоване уређаје)]]></string>
+    <string name="home_root_description"><![CDATA[Ако користите Magisk, можете испробати %1$s. За root кориснике, на крају ће заменити Shizuku. Имајте на уму да постојеће апликације треба мало да се промене да би користиле %2$s.]]></string>
     <string name="home_root_button_start">Почетак</string>
     <string name="home_root_button_restart">Поново покрени</string>
     <!-- Home - Application management -->
@@ -72,6 +73,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Додирните да бисте управљали овлашћеним апликацијама]]></string>
     <string name="home_app_management_empty">Апликације које су затражиле или пријавиле Шизуку дозволу биће приказане овде.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Водич за програмере</string>
     <string name="home_learn_more_description">Научите како да развијате уз Шизуку</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Морате направити додатни корак</string>
@@ -83,7 +85,16 @@
     <string name="app_management_toggle_all">Укључи/искључи све</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Користите Шизуку у терминалним апликацијама</string>
+    <string name="home_terminal_description">Покрените команде шкољке у терминалним апликацијама путем Шизукуа</string>
+    <string name="terminal_tutorial_miui">Корисници су пријавили да MIUI крши Storage Access Framework, који користи функција извоза.</string>
+    <string name="terminal_tutorial_miui_2">Ако користите MIUI, можда ћете морати да извучете датотеку из фасцикле assets у Shizuku-овом APK-у.</string>
+    <string name="terminal_tutorial_1">Извезите датотеке у нову фасциклу.</string>
+    <string name="terminal_tutorial_1_description">Биће извезене две датотеке: %1$s и %2$s. Ако датотеке већ постоје у изабраној фасцикли, биће обрисане.</string>
     <string name="terminal_export_files">Извоз датотека</string>
+    <string name="terminal_tutorial_2">Користите терминалну апликацију да копирате датотеке у њен приватни директоријум датотека.</string>
+    <string name="terminal_tutorial_2_description">Савет: Ако се почетни директоријум ваше терминалне апликације (~) налази у фолдеру /data/data, смештање датотека тамо ће вам омогућити да покренете %1$s без писања путање.\n\nУ супротном, можете креирати алиас за %2$s у конфигурационом фајлу .bashrc ваше терминалне апликације.</string>
+    <string name="terminal_tutorial_3">Отворите љуску следећом командом:</string>
+    <string name="rish_description"><![CDATA[Са %1$s, можете покренути команде шкољке у било којој терминалној апликацији.<p>Додирните да бисте сазнали више о томе како да га користите.]]></string>
     <!-- Settings -->
     <string name="settings_title">Подешавања</string>
     <string name="settings_behavior">Понашање</string>
@@ -92,6 +103,7 @@
     <string name="settings_start_on_boot_bug">Zbog greške u Androidu 11-12, bežično otklanjanje grešaka ne pamti nijednu ovlašćenu mrežu.\n\nMoraćete da ponovo autorizujete mrežu pri svakom ponovnom pokretanju tako što ćete dodirnuti \"Dozvoli\" kada se pojavi dijalog za autorizaciju.</string>
     <string name="settings_use_system_color">Користи боју системске теме</string>
     <string name="settings_watchdog">Чувар</string>
+    <string name="settings_watchdog_summary">Аутоматски поново покрените Шизуку ако се сруши</string>
     <string name="settings_tcp_mode">TCP режим</string>
     <string name="settings_tcp_mode_summary">"Омогућава Шизукуу да се поново покрене без Wi-Fi-ја. (Шизуку се морао једном покренути од поновног покретања)"</string>
     <string name="settings_restart_dialog_title">Потребно је поновно покретање</string>
