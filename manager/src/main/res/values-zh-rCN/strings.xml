@@ -90,7 +90,6 @@
     <string name="terminal_tutorial_1_description">将导出两个文件： %1$s 和 %2$s。如果所选文件夹中已存在这些文件，则会将其删除。</string>
     <string name="terminal_export_files">导出文件</string>
     <string name="terminal_tutorial_2">使用终端应用程序将文件复制到其私有文件目录。</string>
-    <string name="terminal_tutorial_2_description">提示：如果你的终端应用程序的主目录（~）位于 /data/data 文件夹下，将文件放在那里就可以直接运行 %1$s 而无需输入路径。\n\n否则，你可以在终端应用程序的 .bashrc 配置文件中为 %2$s 创建一个别名。</string>
     <string name="terminal_tutorial_3">使用以下命令打开 shell：</string>
     <string name="rish_description"><![CDATA[使用 %1$s，您可以在任何终端应用程序中运行 shell 命令。<p>点击了解更多使用方法。]]></string>
     <!-- Settings -->
