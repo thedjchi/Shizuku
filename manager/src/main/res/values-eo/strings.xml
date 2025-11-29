@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Iuj sistemoj (kiel MIUI) malpermesas al aplikaĵoj aliri la reton kiam ili ne estas videblaj, eĉ se la aplikaĵo uzas servon en malfono. Bonvolu malŝalti la funkciojn de bateria optimumigo por Shizuku en tiaj sistemoj.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Komencu (por enradikiĝintaj aparatoj)]]></string>
+    <string name="home_root_description"><![CDATA[Se vi uzas Magisk, vi povas provi %1$s. Por administraj uzantoj, ĝi poste anstataŭigos Shizuku. Notu, ke ekzistantaj aplikaĵoj bezonas iom ŝanĝiĝi por uzi %2$s.]]></string>
     <string name="home_root_button_start">Komenci</string>
     <string name="home_root_button_restart">Rekomenci</string>
     <!-- Home - Application management -->
@@ -68,6 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tuŝu por administri rajtigitajn aplikaĵojn]]></string>
     <string name="home_app_management_empty">Aplikaĵoj, kiuj petis aŭ deklaris la permeson Shizuku, aperos ĉi tie.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Gvidilo por programistoj</string>
     <string name="home_learn_more_description">Lernu kiel disvolvi kun Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Vi bezonas fari plian paŝon</string>
@@ -79,7 +81,16 @@
     <string name="app_management_toggle_all">Malŝalti ĉion</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Uzu Ŝizuku en terminalaj aplikaĵoj</string>
+    <string name="home_terminal_description">Rulu ŝelkomandojn en terminalaj aplikaĵoj per Shizuku</string>
+    <string name="terminal_tutorial_miui">Uzantoj raportis, ke MIUI rompas la Storage Access Framework, kiun uzas la eksportfunkcio.</string>
+    <string name="terminal_tutorial_miui_2">Se vi uzas MIUI, vi eble devos eltiri la dosieron el la dosierujo \"resursoj\" en la APK de Shizuku.</string>
+    <string name="terminal_tutorial_1">Eksporti la dosierojn al nova dosierujo.</string>
+    <string name="terminal_tutorial_1_description">Du dosieroj estos eksportitaj: %1$s kaj %2$s. Se la dosieroj jam ekzistas en la elektita dosierujo, ili estos forigitaj.</string>
     <string name="terminal_export_files">Eksporti dosierojn</string>
+    <string name="terminal_tutorial_2">Uzu vian terminalan aplikaĵon por kopii la dosierojn al ĝia privata dosierujo.</string>
+    <string name="terminal_tutorial_2_description">Konsilo: Se la hejma dosierujo (~) de via fina aplikaĵo estas en la dosierujo /data/data, meti la dosierojn tien permesos al vi ruli %1$s sen skribi la vojon.\n\nAlie, vi povas krei kaŝnomon por %2$s en la agordodosiero .bashrc de via fina aplikaĵo.</string>
+    <string name="terminal_tutorial_3">Malfermu ŝelon per la jena komando:</string>
+    <string name="rish_description"><![CDATA[Per %1$s, vi povas ruli ŝelkomandojn en iu ajn fina aplikaĵo.<p>Frapetu por lerni pli pri kiel uzi ĝin.]]></string>
     <!-- Settings -->
     <string name="settings_title">Agordoj</string>
     <string name="settings_behavior">Konduto</string>
@@ -88,6 +99,7 @@
     <string name="settings_start_on_boot_bug">Pro cimo en Android 11-12, sendrata sencimigado ne memoras iujn ajn rajtigitajn retojn.\n\nVi devos re-rajtigi la reton ĉe ĉiu restartiĝo alklakante \"Permesi\" kiam la rajtiga dialogo aperas.</string>
     <string name="settings_use_system_color">Uzi sistemteman koloron</string>
     <string name="settings_watchdog">Gardohundo</string>
+    <string name="settings_watchdog_summary">Aŭtomate rekomenci Ŝizuku-on se ĝi kraŝas</string>
     <string name="settings_tcp_mode">TCP-reĝimo</string>
     <string name="settings_tcp_mode_summary">"Permesas al Ŝizuku rekomenci sen Wi-Fi. (Ŝizuku devas esti rekomencinta unufoje post la rekomenco)"</string>
     <string name="settings_restart_dialog_title">Rekomenco necesa</string>
