@@ -99,7 +99,6 @@
     <string name="settings_start_on_boot_bug">بسبب وجود خلل في نظامي التشغيل Android 11-12، لا يتذكر التصحيح اللاسلكي أي شبكات معتمدة.\n\nستحتاج إلى إعادة تفويض الشبكة عند كل إعادة تشغيل من خلال النقر على \"السماح\" عند ظهور مربع حوار التفويض.</string>
     <string name="settings_use_system_color">استخدم لون سمة النظام</string>
     <string name="settings_watchdog">مراقب</string>
-    <string name="settings_watchdog_summary">إعادة تشغيل Shizuku تلقائيًا إذا توقفت</string>
     <string name="settings_tcp_mode">وضع TCP</string>
     <string name="settings_tcp_mode_summary">"يسمح لـ Shizuku بإعادة التشغيل دون اتصال Wi-Fi. (يجب أن يكون Shizuku قد بدأ مرة واحدة بعد إعادة التشغيل)"</string>
     <string name="settings_restart_dialog_title">مطلوب إعادة التشغيل</string>
