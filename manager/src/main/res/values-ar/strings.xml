@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">بعض الأنظمة (مثل MIUI) تمنع التطبيقات من الوصول إلى الشبكة عند عدم ظهورها، حتى لو كانت تستخدم خدمة الواجهة الأمامية. يُرجى تعطيل ميزات تحسين أداء البطارية لتطبيق Shizuku على هذه الأنظمة.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[ابدأ (للأجهزة المجذرة)]]></string>
+    <string name="home_root_description"><![CDATA[إذا كنت تستخدم Magisk، يمكنك تجربة %1$s. بالنسبة لمستخدمي الجذر، سيحل هذا الخيار محل Shizuku في نهاية المطاف. ملاحظة: تحتاج التطبيقات الحالية إلى تغيير بسيط لاستخدام %2$s.]]></string>
     <string name="home_root_button_start">البدء بالتشغيل</string>
     <string name="home_root_button_restart">إعادة البدء بالتشغيل</string>
     <!-- Home - Application management -->
@@ -75,6 +76,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[انقر لإدارة التطبيقات المصرح بها]]></string>
     <string name="home_app_management_empty">ستظهر هنا التطبيقات التي طلبت أو أعلنت عن إذن Shizuku.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">دليل المطور</string>
     <string name="home_learn_more_description">تعلم كيف تطور مع Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">أنت بحاجة إلى اتخاذ خطوة إضافية</string>
@@ -90,7 +92,16 @@
     <string name="app_management_toggle_all">تبديل الكل</string>
     <!-- Terminal -->
     <string name="home_terminal_title">استخدم Shizuku في تطبيقات المحطة</string>
+    <string name="home_terminal_description">تشغيل أوامر shell في تطبيقات المحطة الطرفية من خلال Shizuku</string>
+    <string name="terminal_tutorial_miui">أبلغ المستخدمون أن MIUI يكسر إطار عمل الوصول إلى التخزين، والذي تستخدمه وظيفة التصدير.</string>
+    <string name="terminal_tutorial_miui_2">إذا كنت تستخدم MIUI، فقد تحتاج إلى استخراج الملف من مجلد الأصول في ملف APK الخاص بـ Shizuku.</string>
+    <string name="terminal_tutorial_1">تصدير الملفات إلى مجلد جديد.</string>
+    <string name="terminal_tutorial_1_description">سيتم تصدير ملفين: %1$s و %2$s. إذا كانت الملفات موجودة بالفعل في المجلد المحدد، فسيتم حذفها.</string>
     <string name="terminal_export_files">تصدير الملفات</string>
+    <string name="terminal_tutorial_2">استخدم تطبيق المحطة الطرفية الخاص بك لنسخ الملفات إلى دليل الملفات الخاص به.</string>
+    <string name="terminal_tutorial_2_description">نصيحة: إذا كان دليل التطبيق الطرفي الخاص بك (~) موجودًا في مجلد /data/data، فإن وضع الملفات هناك سيسمح لك بتشغيل %1$s دون كتابة المسار.\n\nوإلا، فيمكنك إنشاء اسم مستعار لـ %2$s في ملف تكوين .bashrc الخاص بتطبيقك الطرفي.</string>
+    <string name="terminal_tutorial_3">افتح shell باستخدام الأمر التالي:</string>
+    <string name="rish_description"><![CDATA[باستخدام %1$s، يمكنك تشغيل أوامر shell في أي تطبيق طرفي. انقر فوق<p>لمعرفة المزيد حول كيفية استخدامه.]]></string>
     <!-- Settings -->
     <string name="settings_title">الإعدادات</string>
     <string name="settings_behavior">سلوك</string>
@@ -99,6 +110,7 @@
     <string name="settings_start_on_boot_bug">بسبب وجود خلل في نظامي التشغيل Android 11-12، لا يتذكر التصحيح اللاسلكي أي شبكات معتمدة.\n\nستحتاج إلى إعادة تفويض الشبكة عند كل إعادة تشغيل من خلال النقر على \"السماح\" عند ظهور مربع حوار التفويض.</string>
     <string name="settings_use_system_color">استخدم لون سمة النظام</string>
     <string name="settings_watchdog">مراقب</string>
+    <string name="settings_watchdog_summary">إعادة تشغيل Shizuku تلقائيًا في حالة تعطله</string>
     <string name="settings_tcp_mode">وضع TCP</string>
     <string name="settings_tcp_mode_summary">"يسمح لـ Shizuku بإعادة التشغيل دون اتصال Wi-Fi. (يجب أن يكون Shizuku قد بدأ مرة واحدة بعد إعادة التشغيل)"</string>
     <string name="settings_restart_dialog_title">مطلوب إعادة التشغيل</string>
