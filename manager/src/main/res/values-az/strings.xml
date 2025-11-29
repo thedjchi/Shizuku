@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bəzi sistemlər (məsələn, MIUI) proqramlar görünmədikdə, hətta proqram ön planda xidmətdən istifadə etsə belə, onların şəbəkəyə daxil olmasına icazə vermir. Zəhmət olmasa belə sistemlərdə Shizuku üçün batareyanın optimallaşdırılması funksiyalarını söndürün.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (root edilmiş cihazlar üçün)]]></string>
-    <string name="home_root_description"><![CDATA[Bundan əlavə, Shizuku yüklənərkən avtomatik olaraq işə salına bilər. Əks-təqdirdə , sisteminizin və ya üçüncü tərəf alətlərin Shizuku-nu məhdudlaşdırıb-məhdudlaşdırdığını yoxlayın.<br>Siz %s-ə müraciət edə bilərsiniz.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Magisk istifadə edirsinizsə, cəhd edə bilərsiniz %1$s. Kök istifadəçiləri üçün o, nəticədə Shizuku-nu əvəz edəcək. Qeyd edək ki, %2$sistifadə etmək üçün mövcud proqramlar bir az dəyişməlidir.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yenidən Başlat</string>
     <!-- Home - Application management -->
@@ -73,7 +71,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[İcazə verilmiş proqramları idarə etmək üçün toxunun]]></string>
     <string name="home_app_management_empty">Shizuku icazəsini tələb edən və ya bəyan edən tətbiqlər burada göstəriləcək.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Shizuku haqqında</string>
     <string name="home_learn_more_description">Necə Shizuku dəstəkli proqram hazırlaya biləcəyinizi öyrənin və ya Shizuku dəstəkli proqramları əldə edin</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Əlavə bir addım atmalısan</string>
@@ -85,17 +82,7 @@
     <string name="app_management_toggle_all">Hamısını dəyiş</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Shizikunu terminal proqramlarında istifadə edin</string>
-    <string name="home_terminal_description">İstədiyiniz terminal proqramlarında Shizuku vasitəsilə əmrləri işə salın</string>
-    <string name="terminal_tutorial_1">Birincisi, faylları istədiyiniz yerə ixrac edin. Siz iki fayl tapacaqsınız, %1$s və %2$s.</string>
-    <string name="terminal_tutorial_1_description">Seçilmiş qovluqda eyni adlı fayllar varsa, onlar silinəcək.
-\n
-\nİxrac funksiyası SAF (Storage Access Framework) istifadə edir. MIUI-nin SAF funksiyalarını pozduğu bildirilir. MIUI istifadə edirsinizsə, faylı Shizuku-nun apk-dan çıxarmalı və ya GitHub-dan yükləməli ola bilərsiniz.</string>
     <string name="terminal_export_files">Faylları ixrac edin</string>
-    <string name="terminal_tutorial_2">Sonra %1$s-ı açmaq və redaktə etmək üçün istənilən mətn redaktorundan istifadə edin.</string>
-    <string name="terminal_tutorial_2_description">Məsələn, %1$s-da Shizuku-dan istifadə etmək istəyirsinizsə, %2$s-ı %3$s ilə əvəz etməlisiniz (%4$s %1$s paketinin adıdır).</string>
-    <string name="terminal_tutorial_3">Nəhayət, faylları terminal proqramınızın daxil ola biləcəyi yerə köçürün, Shizuku vasitəsilə əmrləri yerinə yetirmək üçün %1$s-dan istifadə edə biləcəksiniz.</string>
-    <string name="terminal_tutorial_3_description">Bəzi məsləhətlər: %1$s-a icra icazəsi verin və onu %2$s-a əlavə edin, siz birbaşa %1$s-dan istifadə edə biləcəksiniz.</string>
-    <string name="rish_description"><![CDATA[%1$s ilə istənilən terminal proqramında siz Shizuku tərəfindən hazırlanmış shell-lərə qoşula və onlarla əlaqə saxlaya bilərsiniz. <p>Ətraflı istifadə %1$s haqqında sənədə baxmaq üçün toxunun.]]></string>
     <!-- Settings -->
     <string name="settings_title">Parametrlər</string>
     <string name="settings_behavior">Davranış</string>
