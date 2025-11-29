@@ -94,6 +94,7 @@
     <string name="terminal_tutorial_1_description">2つのファイルがエクスポートされます: %1$s と %2$s。選択したフォルダに既にファイルが存在する場合は削除されます。</string>
     <string name="terminal_export_files">ファイルのエクスポート</string>
     <string name="terminal_tutorial_2">ターミナル アプリを使用して、ファイルをプライベート ファイル ディレクトリにコピーします。</string>
+    <string name="terminal_tutorial_2_description">ヒント: ターミナル アプリのホーム ディレクトリ (~) がプライベート ファイル ディレクトリにある場合は、そこにファイルを配置すると、パスを書き込まなくても %1$s を実行できます。\n\nそれ以外の場合は、ターミナル アプリの %3$s 構成ファイルで %2$s のエイリアスを作成できます。</string>
     <string name="terminal_tutorial_3">次のコマンドでシェルを開きます。</string>
     <string name="rish_description"><![CDATA[%1$sを使用すると、任意のターミナル アプリでシェル コマンドを実行できます。<p>タップして、使用方法の詳細を確認してください。]]></string>
     <!-- Settings -->
