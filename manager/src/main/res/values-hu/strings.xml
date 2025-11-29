@@ -57,8 +57,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Néhány rendszer (például az MIUI) nem engedélyezi az alkalmazásoknak a hálózathoz való hozzáférést, amikor azok nem láthatók, még akkor sem, ha az alkalmazás előtérben lévő szolgáltatást használ. Kérjük, tiltsa le a Shizuku akkumulátoroptimalizálási funkcióit az ilyen rendszereken.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Indítás (rootolt eszközökhöz)]]></string>
-    <string name="home_root_description"><![CDATA[Ezenkívül a Shizuku automatikusan elindítható rendszerindításkor. Ha nem, ellenőrizze, hogy rendszere vagy harmadik féltől származó eszközei nem korlátozták-e a Shizukut.<br>A következőre hivatkozhat: %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Ha Magisk-et használsz, próbáld ki a %1$s-t. Root felhasználók számára ez végül felváltja a Shizuku-t. Fontos megjegyezni, hogy a meglévő alkalmazásoknak kicsit módosítaniuk kell a %2$shasználatához.]]></string>
     <string name="home_root_button_start">Indítás</string>
     <string name="home_root_button_restart">Újraindítás</string>
     <!-- Home - Application management -->
@@ -70,7 +68,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Érintse meg az engedélyezett alkalmazások kezeléséhez]]></string>
     <string name="home_app_management_empty">Azok az alkalmazások jelennek meg itt, amelyek kérték vagy deklarálták a Shizuku engedélyt.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Tanulja a Shizukut</string>
     <string name="home_learn_more_description">Tanuljon meg fejlődni a Shizukuval</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Egy plusz lépést kell tennie</string>
@@ -82,17 +79,7 @@
     <string name="app_management_toggle_all">Összes ki-/bekapcsolása</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Használja a Shizukut a terminál appokban</string>
-    <string name="home_terminal_description">Futtasson parancsokat a Shizuku-n keresztül a kívánt terminálalkalmazásokban</string>
-    <string name="terminal_tutorial_1">Először is exportálja a fájlokat a kívánt helyre. Két fájlt fog találni, %1$s és %2$s.</string>
-    <string name="terminal_tutorial_1_description">Ha a kiválasztott mappában vannak azonos nevű fájlok, akkor azok törlődnek.\n\nAz export funkció SAF-et használ (Storage Access Framework). A jelentések szerint a MIUI megszakítja a SAF funkcióit. Ha MIUI-t használ, előfordulhat, hogy ki kell csomagolnia a fájlt a Shizuku apk-jából, vagy le kell töltenie a GitHubról.</string>
     <string name="terminal_export_files">Fájlok exportálása</string>
-    <string name="terminal_tutorial_2">Ezután bármelyik szövegszerkesztővel nyissa meg és szerkessze a %1$s fájlt.</string>
-    <string name="terminal_tutorial_2_description">Ha például a Shizukut szeretné használni a %1$s alkalmazásban, cserélje ki a %2$s kifejezést a következőre: %3$s (%4$s a csomag neve ennek: %1$s).</string>
-    <string name="terminal_tutorial_3">Végül helyezze át a fájlokat valahova, ahol a terminálalkalmazása hozzáférhet, így a %1$s segítségével parancsokat futtathat a Shizuku-n keresztül..</string>
-    <string name="terminal_tutorial_3_description">Néhány tipp: adjon végrehajtási engedélyt a következőnek: %1$s, és adja hozzá a következőhöz: %2$s, így közvetlenül használhatja a %1$s-t.</string>
-    <string name="rish_description"><![CDATA[A %1$s segítségével bármely terminálalkalmazásban csatlakozhat a Shizuku által futtatott shellhez, és kommunikálhat vele.
-<p>A %1$s részletes használatáról, érintse a dokumentum megtekintéséhez.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Beállítások</string>
     <string name="settings_behavior">Viselkedés</string>
