@@ -91,7 +91,6 @@
     <string name="terminal_tutorial_1_description">İki fayl ixrac olunacaq: %1$s və %2$s. Fayllar seçilmiş qovluqda artıq varsa, onlar silinəcək.</string>
     <string name="terminal_export_files">Faylları ixrac edin</string>
     <string name="terminal_tutorial_2">Faylları şəxsi fayllar kataloquna köçürmək üçün terminal proqramından istifadə edin.</string>
-    <string name="terminal_tutorial_2_description">İpucu: Terminal proqramınızın ev kataloqu (~) /data/data qovluğundadırsa, faylları orada yerləşdirmək sizə yolu yazmadan %1$s -ni işə salmağa imkan verəcək.\n\nƏks halda, siz terminal proqramınızın .bashrc konfiqurasiya faylında %2$s üçün ləqəb yarada bilərsiniz.</string>
     <string name="terminal_tutorial_3">Aşağıdakı əmrlə qabığı açın:</string>
     <string name="rish_description"><![CDATA[%1$silə siz istənilən terminal proqramında qabıq əmrlərini işlədə bilərsiniz.<p>Onu necə istifadə etmək barədə ətraflı öyrənmək üçün toxunun.]]></string>
     <!-- Settings -->
