@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Некоторые системы (например, MIUI) запрещают приложениям получать доступ к сети, если они невидимы, даже если приложение использует сервис переднего плана. Пожалуйста, отключите функции оптимизации батареи для Shizuku на таких системах.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Запуск (для устройств с root правами)]]></string>
+    <string name="home_root_description"><![CDATA[Если вы используете Magisk, попробуйте %1$s. Для пользователей root он в конечном итоге заменит Shizuku. Обратите внимание, что существующие приложения необходимо немного изменить для использования %2$s.]]></string>
     <string name="home_root_button_start">Запустить</string>
     <string name="home_root_button_restart">Перезапустить</string>
     <!-- Home - Application management -->
@@ -73,6 +74,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Нажмите для управления списком допущенных приложений]]></string>
     <string name="home_app_management_empty">Здесь будут отображаться приложения, которые запросили или заявили разрешение Shizuku.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Руководство разработчика</string>
     <string name="home_learn_more_description">Узнайте, как начать разрабатывать с Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Нужен дополнительный шаг</string>
@@ -88,7 +90,16 @@
     <string name="app_management_toggle_all">Переключить все</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Применение Shizuku в эмуляторах терминала</string>
+    <string name="home_terminal_description">Выполнение команд оболочки в терминальных приложениях через Shizuku</string>
+    <string name="terminal_tutorial_miui">Пользователи сообщают, что MIUI нарушает работу Storage Access Framework, который используется функцией экспорта.</string>
+    <string name="terminal_tutorial_miui_2">Если вы используете MIUI, вам, возможно, придется извлечь файл из папки assets в APK-файле Shizuku.</string>
+    <string name="terminal_tutorial_1">Экспортируйте файлы в новую папку.</string>
+    <string name="terminal_tutorial_1_description">Будут экспортированы два файла: %1$s и %2$s. Если файлы уже существуют в выбранной папке, они будут удалены.</string>
     <string name="terminal_export_files">Экспорт файлов</string>
+    <string name="terminal_tutorial_2">Используйте приложение терминала для копирования файлов в его личный каталог.</string>
+    <string name="terminal_tutorial_2_description">Совет: если домашний каталог вашего терминального приложения (~) находится в папке /data/data, размещение файлов там позволит вам запускать %1$s без указания пути.\n\nВ противном случае вы можете создать псевдоним для %2$s в файле конфигурации .bashrc вашего терминального приложения.</string>
+    <string name="terminal_tutorial_3">Откройте оболочку с помощью следующей команды:</string>
+    <string name="rish_description"><![CDATA[С помощью %1$sвы можете запускать команды оболочки в любом терминальном приложении.<p>Нажмите, чтобы узнать больше об использовании.]]></string>
     <!-- Settings -->
     <string name="settings_title">Настройки</string>
     <string name="settings_behavior">Поведение</string>
@@ -97,6 +108,7 @@
     <string name="settings_start_on_boot_bug">Из-за ошибки в Android 11-12 беспроводная отладка не запоминает ни одной авторизованной сети.\n\nПри каждой перезагрузке вам нужно будет повторно авторизировать сеть, нажав «Разрешить» при появлении диалога авторизации.</string>
     <string name="settings_use_system_color">Палитра цветов из системы</string>
     <string name="settings_watchdog">Сторожевой пес</string>
+    <string name="settings_watchdog_summary">Автоматически перезапускать Shizuku в случае сбоя</string>
     <string name="settings_tcp_mode">TCP-режим</string>
     <string name="settings_tcp_mode_summary">"Позволяет Shizuku перезапуститься без Wi-Fi. (Shizuku должен был запуститься один раз после перезагрузки)"</string>
     <string name="settings_restart_dialog_title">Требуется перезагрузка</string>
