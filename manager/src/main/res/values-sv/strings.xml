@@ -88,6 +88,7 @@
     <string name="terminal_tutorial_1_description">Två filer kommer att exporteras: %1$s och %2$s. Om filerna redan finns i den valda mappen kommer de att raderas.</string>
     <string name="terminal_export_files">Exportera filer</string>
     <string name="terminal_tutorial_2">Använd din terminalapp för att kopiera filerna till dess privata filkatalog.</string>
+    <string name="terminal_tutorial_2_description">Tips: Om din terminalapps hemkatalog (~) finns i katalogen för privata filer, kommer du att kunna köra %1$s utan att skriva sökvägen genom att placera filerna där.\n\nAnnars kan du skapa ett alias för %2$s i din terminalapps konfigurationsfil %3$s .</string>
     <string name="terminal_tutorial_3">Öppna ett shell med följande kommando:</string>
     <string name="rish_description"><![CDATA[Med %1$skan du köra shell-kommandon i vilken terminalapp som helst.<p>Tryck för att lära dig mer om hur du använder det.]]></string>
     <!-- Settings -->
