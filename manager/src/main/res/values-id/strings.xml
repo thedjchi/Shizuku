@@ -94,7 +94,6 @@
     <string name="terminal_tutorial_1_description">Dua berkas akan diekspor: %1$s dan %2$s. Jika berkas tersebut sudah ada di folder yang dipilih, berkas tersebut akan dihapus.</string>
     <string name="terminal_export_files">Ekspor file</string>
     <string name="terminal_tutorial_2">Gunakan aplikasi terminal Anda untuk menyalin file ke direktori file privatnya.</string>
-    <string name="terminal_tutorial_2_description">Kiat: Jika direktori beranda (~) aplikasi terminal Anda ada di folder /data/data, meletakkan berkas di sana akan memungkinkan Anda menjalankan %1$s tanpa menuliskan jalurnya.\n\nKalau tidak, Anda dapat membuat alias untuk %2$s di berkas konfigurasi .bashrc aplikasi terminal Anda.</string>
     <string name="terminal_tutorial_3">Buka shell dengan perintah berikut:</string>
     <string name="rish_description"><![CDATA[Dengan %1$s, Anda dapat menjalankan perintah shell di aplikasi terminal apa pun.<p>Ketuk untuk mempelajari lebih lanjut tentang cara menggunakannya.]]></string>
     <!-- Settings -->
