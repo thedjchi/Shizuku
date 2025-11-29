@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Mõned süsteemid (näiteks MIUI) keelavad rakendustel võrgule juurdepääsu, kui need pole nähtavad, isegi kui rakendus kasutab esiplaanil olevat teenust. Sellistes süsteemides keelake Shizuku aku optimeerimise funktsioonid.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (rootitud seadmete jaoks)]]></string>
+    <string name="home_root_description"><![CDATA[Kui kasutate Magiski, võite proovida %1$s. Juurkasutajate jaoks asendab see lõpuks Shizuku. Pane tähele, et olemasolevad rakendused peavad %2$skasutamiseks veidi muutuma.]]></string>
     <string name="home_root_button_start">Alustama</string>
     <string name="home_root_button_restart">Taaskäivitage</string>
     <!-- Home - Application management -->
@@ -68,6 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Puuduta, et hallata volitatud rakendusi]]></string>
     <string name="home_app_management_empty">Rakendused, mis on taotlenud või deklareerinud Shizuku loa, kuvatakse siin.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Arendaja juhend</string>
     <string name="home_learn_more_description">Õpi, kuidas Shizukuga areneda</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Pead astuma veel ühe sammu</string>
@@ -79,7 +81,16 @@
     <string name="app_management_toggle_all">Lülita kõik sisse</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Kasuta Shizukut terminalirakendustes</string>
+    <string name="home_terminal_description">Käivita Shizuku kaudu terminalirakendustes kestakäsklused</string>
+    <string name="terminal_tutorial_miui">Kasutajad on teatanud, et MIUI lõhub ekspordifunktsiooni poolt kasutatavat salvestuspääsu raamistikku.</string>
+    <string name="terminal_tutorial_miui_2">Kui kasutate MIUI-d, peate faili võib-olla Shizuku APK-s olevate ressursside kaustast lahti pakkima.</string>
+    <string name="terminal_tutorial_1">Ekspordi failid uude kausta.</string>
+    <string name="terminal_tutorial_1_description">Eksporditakse kaks faili: %1$s ja %2$s. Kui failid on valitud kaustas juba olemas, kustutatakse need.</string>
     <string name="terminal_export_files">Failide eksport</string>
+    <string name="terminal_tutorial_2">Kasutage oma terminalirakendust failide kopeerimiseks selle privaatsete failide kataloogi.</string>
+    <string name="terminal_tutorial_2_description">Näpunäide: kui teie terminalirakenduse kodukataloog (~) asub kaustas /data/data, siis failide sinna paigutamine võimaldab teil käivitada %1$s ilma teed kirjutamata.\n\nVastasel juhul saate luua %2$s aliase oma terminalirakenduse .bashrc konfiguratsioonifailis.</string>
+    <string name="terminal_tutorial_3">Ava kest järgmise käsuga:</string>
+    <string name="rish_description"><![CDATA[%1$sabil saate käivitada shellikäsklusi mis tahes terminalirakenduses.<p>Puudutage, et saada lisateavet selle kasutamise kohta.]]></string>
     <!-- Settings -->
     <string name="settings_title">Seaded</string>
     <string name="settings_behavior">Käitumine</string>
@@ -88,6 +99,7 @@
     <string name="settings_start_on_boot_bug">Android 11-12 vea tõttu ei mäleta traadita ühenduse silumine ühtegi volitatud võrku.\n\nPeate võrgu iga taaskäivitamise ajal uuesti autoriseerima, puudutades autoriseerimisdialoogi hüpikaknas nuppu „Luba”.</string>
     <string name="settings_use_system_color">Kasuta süsteemi teemavärvi</string>
     <string name="settings_watchdog">Valvekoer</string>
+    <string name="settings_watchdog_summary">Taaskäivita Shizuku automaatselt, kui see krahhi teeb</string>
     <string name="settings_tcp_mode">TCP režiim</string>
     <string name="settings_tcp_mode_summary">"Võimaldab Shizukul taaskäivitada ilma Wi-Fita. (Shizuku pidi pärast taaskäivitust kord alustama)"</string>
     <string name="settings_restart_dialog_title">Taaskäivitamine on vajalik</string>
