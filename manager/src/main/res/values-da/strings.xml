@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nogle systemer (som f.eks. MIUI) tillader ikke apps at få adgang til netværket, når de ikke er synlige, selvom appen bruger en forgrundstjeneste. Deaktiver venligst batterioptimeringsfunktioner for Shizuku på sådanne systemer.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (for rootede enheder)]]></string>
+    <string name="home_root_description"><![CDATA[Hvis du bruger Magisk, kan du prøve %1$s. For root-brugere vil det med tiden erstatte Shizuku. Bemærk, at eksisterende applikationer skal ændres en smule for at bruge %2$s.]]></string>
     <string name="home_root_button_start">Begynde</string>
     <string name="home_root_button_restart">Genstarte</string>
     <!-- Home - Application management -->
@@ -68,6 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tryk for at administrere autoriserede apps]]></string>
     <string name="home_app_management_empty">Apps, der har anmodet om eller erklæret Shizuku-tilladelsen, vil blive vist her.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Udviklervejledning</string>
     <string name="home_learn_more_description">Lær at udvikle dig med Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Du skal tage et ekstra skridt</string>
@@ -79,7 +81,16 @@
     <string name="app_management_toggle_all">Skift til og fra</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Brug Shizuku i terminalapps</string>
+    <string name="home_terminal_description">Kør shell-kommandoer i terminalapps via Shizuku</string>
+    <string name="terminal_tutorial_miui">Brugere har rapporteret, at MIUI bryder Storage Access Framework, som bruges af eksportfunktionen.</string>
+    <string name="terminal_tutorial_miui_2">Hvis du bruger MIUI, skal du muligvis udpakke filen fra mappen med aktiver i Shizukus APK.</string>
+    <string name="terminal_tutorial_1">Eksporter filerne til en ny mappe.</string>
+    <string name="terminal_tutorial_1_description">To filer vil blive eksporteret: %1$s og %2$s. Hvis filerne allerede findes i den valgte mappe, vil de blive slettet.</string>
     <string name="terminal_export_files">Eksportfiler</string>
+    <string name="terminal_tutorial_2">Brug din terminalapp til at kopiere filerne til dens private filmappe.</string>
+    <string name="terminal_tutorial_2_description">Tip: Hvis din terminalapps hjemmemappe (~) er i mappen /data/data, vil placering af filerne der give dig mulighed for at køre %1$s uden at skrive stien.\n\nEllers kan du oprette et alias for %2$s i din terminalapps .bashrc-konfigurationsfil.</string>
+    <string name="terminal_tutorial_3">Åbn en shell med følgende kommando:</string>
+    <string name="rish_description"><![CDATA[Med %1$skan du køre shell-kommandoer i enhver terminalapp.<p>Tryk for at få mere at vide om, hvordan du bruger det.]]></string>
     <!-- Settings -->
     <string name="settings_title">Indstillinger</string>
     <string name="settings_behavior">Adfærd</string>
@@ -88,6 +99,7 @@
     <string name="settings_start_on_boot_bug">På grund af en fejl i Android 11-12 husker trådløs fejlfinding ikke nogen autoriserede netværk.\n\nDu skal autorisere netværket igen ved hver genstart ved at trykke på \"Tillad\", når godkendelsesdialogboksen vises.</string>
     <string name="settings_use_system_color">Brug systemtemafarve</string>
     <string name="settings_watchdog">Watchdog</string>
+    <string name="settings_watchdog_summary">Genstart Shizuku automatisk, hvis den går ned</string>
     <string name="settings_tcp_mode">TCP-tilstand</string>
     <string name="settings_tcp_mode_summary">"Det tillader Shizuku at genstarte uden Wi-Fi. (Shizuku må have startet én gang siden genstarten)"</string>
     <string name="settings_restart_dialog_title">Genstart påkrævet</string>
