@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">Vanwege een bug in Android 11-12 onthoudt draadloos foutopsporing geen geautoriseerde netwerken.\n\nU moet het netwerk bij elke herstart opnieuw autoriseren door op \"Toestaan\" te tikken wanneer het autorisatiedialoogvenster verschijnt.</string>
     <string name="settings_use_system_color">Gebruik systeemthemakleur</string>
     <string name="settings_watchdog">Waakhond</string>
-    <string name="settings_watchdog_summary">Shizuku automatisch opnieuw opstarten als het stopt</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Stelt Shizuku in staat om zonder wifi opnieuw te starten. (Shizuku moet sinds de reboot al eens begonnen zijn)"</string>
     <string name="settings_restart_dialog_title">Opnieuw opstarten vereist</string>
