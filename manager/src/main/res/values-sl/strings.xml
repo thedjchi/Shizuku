@@ -93,7 +93,6 @@
     <string name="settings_start_on_boot_bug">Zaradi napake v Androidu 11-12 brezžično odpravljanje napak ne pomni nobenih pooblaščenih omrežij.\n\nOb vsakem ponovnem zagonu boste morali ponovno avtorizirati omrežje tako, da tapnete »Dovoli«, ko se pojavi okno za avtorizacijo.</string>
     <string name="settings_use_system_color">Uporabi sistemsko barvo teme</string>
     <string name="settings_watchdog">Nadzorni pes</string>
-    <string name="settings_watchdog_summary">Samodejno znova zaženite Shizuku, če se ustavi</string>
     <string name="settings_tcp_mode">Način TCP</string>
     <string name="settings_tcp_mode_summary">"Omogoča Shizuku, da se ponovno zažene brez Wi-Fi-ja. (Shizuku je morala enkrat začeti od ponovnega zagona)"</string>
     <string name="settings_restart_dialog_title">Potreben je ponovni zagon</string>
