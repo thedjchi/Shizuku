@@ -91,7 +91,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12-də bir səhvə görə, simsiz sazlama heç bir səlahiyyətli şəbəkəni xatırlamır.\n\nAvtorizasiya dialoqu açıldıqda \"İcazə verin\" üzərinə klikləməklə, hər bir yenidən yükləmədə şəbəkəyə yenidən icazə verməli olacaqsınız.</string>
     <string name="settings_use_system_color">Sistem teması rəngindən istifadə edin</string>
     <string name="settings_watchdog">Nəzarətçi</string>
-    <string name="settings_watchdog_summary">Əgər dayansa, Shizuku avtomatik olaraq yenidən başlayır</string>
     <string name="settings_tcp_mode">TCP rejimi</string>
     <string name="settings_tcp_mode_summary">"Bu, Shizuku-nun Wi-Fi olmadan yenidən başlamasına imkan verir. (Shizuku yenidən başladıqdan sonra bir dəfə başlamış olmalıdır)"</string>
     <string name="settings_restart_dialog_title">Yenidən başladın Tələb olunur</string>
