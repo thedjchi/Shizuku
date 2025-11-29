@@ -94,6 +94,7 @@
     <string name="terminal_tutorial_1_description">%1$s 및 %2$s두 개의 파일이 내보내집니다. 선택한 폴더에 해당 파일이 이미 있는 경우 삭제됩니다.</string>
     <string name="terminal_export_files">파일 내보내기</string>
     <string name="terminal_tutorial_2">터미널 앱을 사용하여 파일을 개인 파일 디렉토리에 복사합니다.</string>
+    <string name="terminal_tutorial_2_description">팁: 터미널 앱의 홈 디렉토리(~)가 개인 파일 디렉토리에 있는 경우, 해당 디렉토리에 파일을 두면 경로를 쓰지 않고도 %1$s 을 실행할 수 있습니다.\n\n그렇지 않은 경우, 터미널 앱의 %3$s 구성 파일에서 %2$s 에 대한 별칭을 만들 수 있습니다.</string>
     <string name="terminal_tutorial_3">다음 명령으로 셸을 엽니다.</string>
     <string name="rish_description"><![CDATA[%1$s를 사용하면 모든 터미널 앱에서 셸 명령을 실행할 수 있습니다.<p>탭하여 사용 방법에 대한 자세한 내용을 알아보세요.]]></string>
     <!-- Settings -->
