@@ -60,7 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bazı sistemler (örneğin MIUI), uygulamaların görünmediği durumlarda ağa erişmesini yasaklar, uygulama ön plan hizmeti kullansa bile. Lütfen bu tür sistemlerde Shizuku için pil optimizasyon özelliklerini devre dışı bırakın.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (rootlu cihazlar için)]]></string>
-    <string name="home_root_description"><![CDATA[Magisk kullanıyorsanız, %1$skomutunu deneyebilirsiniz. Kök kullanıcılar için, sonunda Shizuku'nun yerini alacaktır. Mevcut uygulamaların %2$skomutunu kullanabilmesi için biraz değişiklik yapılması gerektiğini unutmayın.]]></string>
+    <string name="home_root_description"><![CDATA[Magisk kullanıyorsanız, %1$skomutunu deneyebilirsiniz. Kök kullanıcılar için, sonunda Shizuku\'nun yerini alacaktır. Mevcut uygulamaların %2$skomutunu kullanabilmesi için biraz değişiklik yapılması gerektiğini unutmayın.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yeniden başlat</string>
     <!-- Home - Application management -->

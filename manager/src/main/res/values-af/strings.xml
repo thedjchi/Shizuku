@@ -57,7 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar is nie, selfs al gebruik die program \'n voorgronddiens. Deaktiveer asseblief battery-optimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
-    <string name="home_root_description"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet 'n bietjie verander om %2$ste gebruik.]]></string>
+    <string name="home_root_description"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet \'n bietjie verander om %2$ste gebruik.]]></string>
     <string name="home_root_button_start">Begin</string>
     <string name="home_root_button_restart">Herbegin</string>
     <!-- Home - Application management -->
