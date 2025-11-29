@@ -88,7 +88,6 @@
     <string name="terminal_tutorial_1_description">Eksporditakse kaks faili: %1$s ja %2$s. Kui failid on valitud kaustas juba olemas, kustutatakse need.</string>
     <string name="terminal_export_files">Failide eksport</string>
     <string name="terminal_tutorial_2">Kasutage oma terminalirakendust failide kopeerimiseks selle privaatsete failide kataloogi.</string>
-    <string name="terminal_tutorial_2_description">Näpunäide: kui teie terminalirakenduse kodukataloog (~) asub kaustas /data/data, siis failide sinna paigutamine võimaldab teil käivitada %1$s ilma teed kirjutamata.\n\nVastasel juhul saate luua %2$s aliase oma terminalirakenduse .bashrc konfiguratsioonifailis.</string>
     <string name="terminal_tutorial_3">Ava kest järgmise käsuga:</string>
     <string name="rish_description"><![CDATA[%1$sabil saate käivitada shellikäsklusi mis tahes terminalirakenduses.<p>Puudutage, et saada lisateavet selle kasutamise kohta.]]></string>
     <!-- Settings -->
