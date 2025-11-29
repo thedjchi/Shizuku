@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Některé systémy (například MIUI) neumožňují aplikacím přístup k síti, když nejsou viditelné, a to i v případě, že aplikace používá službu v popředí. V takových systémech prosím vypněte funkce optimalizace baterie pro aplikaci Shizuku.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (pro rootovaná zařízení)]]></string>
-    <string name="home_root_description"><![CDATA[Kromě toho lze Shizuku spustit automaticky při spuštění. Pokud ne, zkontrolujte, zda váš systém nebo nástroje třetích stran neomezují Shizuku. <br> Můžete se podívat na %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Pokud používáte Magisk, můžete zkusit %1$s. Pro uživatele root nakonec nahradí Shizuku. Upozorňujeme, že stávající aplikace se musí trochu změnit, aby mohly používat %2$s.]]></string>
     <string name="home_root_button_start">Spustit</string>
     <string name="home_root_button_restart">Restartovat</string>
     <!-- Home - Application management -->
@@ -75,7 +73,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Klepnutím můžete spravovat autorizované aplikace]]></string>
     <string name="home_app_management_empty">Aplikace, které požádaly nebo deklarovaly povolení Shizuku, se zde zobrazí.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Naučte se Shizuku</string>
     <string name="home_learn_more_description">Naučte se, jak vyvíjet aplikace s pomocí Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Je třeba udělat jeden krok navíc</string>
@@ -91,19 +88,7 @@
     <string name="app_management_toggle_all">Přepínat vše</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Použít Shizuku v terminálových aplikacích</string>
-    <string name="home_terminal_description">Spouštějte příkazy přes Shizuku v terminálových aplikacích které máte rádi</string>
-    <string name="terminal_tutorial_1">Prvně, Exportujte soubory kamkoliv chcete. Najdete dva soubory, %1$s a %2$s.</string>
-    <string name="terminal_tutorial_1_description">Pokir jsou be vybrané složce soubory se stejným jménem budou smazány.
-\n
-\nFunkce exportu používá SAF (Storage Access Framework - \"Rámcový přístup k úložišti\"). Je nahlašováno že MIUI rozbíjí funkce SAF. Pokud používáte MIUI, možná budete muset extraktovat ty soubory z apk Shizuku nebo je stáhnout z GitHubu.</string>
     <string name="terminal_export_files">Exportovat soubory</string>
-    <string name="terminal_tutorial_2">Pak, použijte jakýkoliv textový editor k otevření a upravení %1$s.</string>
-    <string name="terminal_tutorial_2_description">Jako příklad, pokud chcete použít Shizuku v %1$su, musíte změnit %2$s na %3$s (%4$s je jméno balíčku %1$su).</string>
-    <string name="terminal_tutorial_3">Nakonec, přesuňte ty soubory někam kde k nim vaše terminálová aplikace může přistupovat a budete moci používat %1$s aby jste pouštěli příkazy přes Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Několik tipů: udělit povolení k provádění %1$s a přidej to k %2$s, budete moci použít %1$s přímo.</string>
-    <string name="rish_description"><![CDATA[S %1$s, v jakékoli terminálové aplikaci se můžete připojit a interagovat s shellovými zařízeními od Shizuku.
-<p>O podrobném použití %1$s, klepněte pro zobrazení dokumentu.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Nastavení</string>
     <string name="settings_behavior">Chování</string>
