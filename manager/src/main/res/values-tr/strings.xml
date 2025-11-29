@@ -95,7 +95,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12\'deki bir hata nedeniyle, kablosuz hata ayıklama yetkili ağları hatırlamıyor.\n\nHer yeniden başlatmada yetkilendirme diyalogu açıldığında \"İzin ver\" tuşuna tıklayarak ağı yeniden yetkilendirmeniz gerekecek.</string>
     <string name="settings_use_system_color">Sistem tema rengini kullan</string>
     <string name="settings_watchdog">Bekçi köpeği</string>
-    <string name="settings_watchdog_summary">Durduğunda Shizuku\'yu otomatik olarak yeniden başlat</string>
     <string name="settings_tcp_mode">TCP modu</string>
     <string name="settings_tcp_mode_summary">"Shizuku'nun Wi-Fi olmadan yeniden başlatılmasına izin verir. (Shizuku'nun yeniden başlatıldıktan sonra bir kez başlatılmış olması gerekir)"</string>
     <string name="settings_restart_dialog_title">Yeniden Başlatma Gerekli</string>
