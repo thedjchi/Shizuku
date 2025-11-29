@@ -94,7 +94,6 @@
     <string name="settings_start_on_boot_bug">Android 11-12의 버그로 인해 무선 디버깅은 권한이 부여된 네트워크를 기억하지 못합니다.\n\n재부팅할 때마다 인증 대화상자가 뜰 때 \"허용\" 버튼을 눌러 네트워크를 재승인해야 합니다.</string>
     <string name="settings_use_system_color">시스템 테마 색상 사용</string>
     <string name="settings_watchdog">지키는 개</string>
-    <string name="settings_watchdog_summary">시즈쿠가 멈추면 자동으로 재시작합니다.</string>
     <string name="settings_tcp_mode">TCP 모드</string>
     <string name="settings_tcp_mode_summary">"Shizuku가 Wi-Fi 없이 재시작할 수 있도록 합니다. (Shizuku는 재부팅 후 한 번 시작되어야 합니다.)"</string>
     <string name="settings_restart_dialog_title">재시작 필요</string>
