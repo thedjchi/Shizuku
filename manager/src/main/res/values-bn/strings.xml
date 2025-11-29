@@ -57,8 +57,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">কিছু সিস্টেম (যেমন MIUI) অ্যাপগুলিকে নেটওয়ার্ক অ্যাক্সেস করার অনুমতি দেয় না যখন তারা দৃশ্যমান হয় না, এমনকি যদি অ্যাপটি ফোরগ্রাউন্ড পরিষেবা ব্যবহার করে। অনুগ্রহ করে এই ধরনের সিস্টেমে Shizuku-এর জন্য ব্যাটারি অপ্টিমাইজেশন বৈশিষ্ট্যগুলি অক্ষম করুন।</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[শুরু করুন (রুট করা ডিভাইসগুলির জন্য)]]></string>
-    <string name="home_root_description"><![CDATA[উপরন্তু, শিজুকু বুটে স্বয়ংক্রিয়ভাবে চালু করা যেতে পারে। যদি তা না হয় তবে দয়া করে পরীক্ষা করে দেখুন যে আপনার সিস্টেম বা তৃতীয় পক্ষের সরঞ্জামগুলি শিজুকুকে সীমাবদ্ধ করেছে কিনা।<br>আপনি উল্লেখ করতে পারেন %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[আপনি যদি Magisk ব্যবহার করেন, তাহলে %1$sচেষ্টা করে দেখতে পারেন। রুট ব্যবহারকারীদের জন্য, এটি অবশেষে Shizuku কে প্রতিস্থাপন করবে। মনে রাখবেন, %2$sব্যবহার করার জন্য বিদ্যমান অ্যাপ্লিকেশনগুলিতে কিছুটা পরিবর্তন করতে হবে।]]></string>
     <string name="home_root_button_start">সূচনা</string>
     <string name="home_root_button_restart">পুনর্সূচনা</string>
     <!-- Home - Application management -->
@@ -70,7 +68,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[অনুমোদিত অ্যাপগুলি পরিচালনা করতে ট্যাপ করুন]]></string>
     <string name="home_app_management_empty">যে অ্যাপগুলি শিজুকু অনুমতির অনুরোধ করেছে বা ঘোষণা করেছে সেগুলি এখানে প্রদর্শিত হবে।</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">শিজুকু শিখুন</string>
     <string name="home_learn_more_description">শিজুকুর সাথে কীভাবে বিকাশ করতে হয় তা শিখুন</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">আপনাকে একটি অতিরিক্ত পদক্ষেপ নিতে হবে</string>
@@ -82,17 +79,7 @@
     <string name="app_management_toggle_all">সব টগল করুন</string>
     <!-- Terminal -->
     <string name="home_terminal_title">টার্মিনাল অ্যাপগুলিতে শিজুকু ব্যবহার করুন</string>
-    <string name="home_terminal_description">আপনার পছন্দসই টার্মিনাল অ্যাপগুলিতে শিজুকুর মাধ্যমে আদেশগুলি চালান</string>
-    <string name="terminal_tutorial_1">প্রথমত, আপনি যে কোনও জায়গায় ফাইল রফতানি করুন। আপনি দুটি ফাইল পাবেন, %1$s এবং %2$s.</string>
-    <string name="terminal_tutorial_1_description">যদি নির্বাচিত ফোল্ডারে একই নামের ফাইল থাকে তবে সেগুলি মুছে ফেলা হবে।\n\nএক্সপোর্ট ফাংশনটি এসএএফ (স্টোরেজ অ্যাক্সেস ফ্রেমওয়ার্ক) ব্যবহার করে। জানা গেছে যে এমআইইউআই এসএএফের ফাংশনগুলি ভেঙে দেয়। আপনি যদি এমআইইউআই ব্যবহার করেন তবে আপনাকে শিজুকুর এপিকে থেকে ফাইলটি বের করতে হতে পারে বা গিটহাব থেকে ডাউনলোড করতে হতে পারে।</string>
     <string name="terminal_export_files">ফাইল রপ্তানি করুন</string>
-    <string name="terminal_tutorial_2">তারপরে, খুলতে এবং সম্পাদনা করতে যে কোনও পাঠ্য সম্পাদক ব্যবহার করুন %1$s.</string>
-    <string name="terminal_tutorial_2_description">উদাহরণস্বরূপ, আপনি যদি শিজুকু ব্যবহার করতে চান %1$s, আপনার প্রতিস্থাপন করা উচিত %2$s সাথে %3$s (%4$s এর প্যাকেজের নাম %1$s).</string>
-    <string name="terminal_tutorial_3">অবশেষে, ফাইলগুলি এমন কোথাও স্থানান্তরিত করুন যেখানে আপনার টার্মিনাল অ্যাপ্লিকেশনটি অ্যাক্সেস করতে পারে, আপনি ব্যবহার করতে সক্ষম হবেন %1$s শিজুকুর মাধ্যমে কমান্ড চালানোর জন্য।</string>
-    <string name="terminal_tutorial_3_description">কিছু টিপস: কার্যকর করার অনুমতি দিন %1$s এবং এটি যোগ করুন %2$s, আপনি ব্যবহার করতে সক্ষম হবেন %1$s সরাসরি।</string>
-    <string name="rish_description"><![CDATA[সাথে %1$s, যে কোনও টার্মিনাল অ্যাপ্লিকেশনে, আপনি শিজুকু দ্বারা চালিত শেলের সাথে সংযোগ করতে এবং ইন্টারঅ্যাক্ট করতে পারেন।
-<p>বিস্তারিত ব্যবহার সম্পর্কে %1$s, নথিটি দেখতে আলতো চাপুন।
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">সেটিংস</string>
     <string name="settings_behavior">আচরণ</string>
