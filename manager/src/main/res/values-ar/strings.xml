@@ -60,9 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">بعض الأنظمة (مثل MIUI) تمنع التطبيقات من الوصول إلى الشبكة عند عدم ظهورها، حتى لو كانت تستخدم خدمة الواجهة الأمامية. يُرجى تعطيل ميزات تحسين أداء البطارية لتطبيق Shizuku على هذه الأنظمة.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[ابدأ (للأجهزة المجذرة)]]></string>
-    <string name="home_root_description"><![CDATA[بالإضافة إلى ذلك ، يمكن بدء تشغيل Shizuku تلقائياً عند حالة التشغيل بعد القفل. إذا لم يكن الأمر كذلك ، فيرجى التحقق مما إذا كان نظامك أو أدوات الجهات الخارجية (تطبيقات خارجية) قد حد أو عطل Shizuku.
-\n&lt;br&gt; يمكنك الرجوع إلى %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[إذا كنت تستخدم Magisk، يمكنك تجربة %1$s. بالنسبة لمستخدمي الجذر، سيحل هذا الخيار محل Shizuku في نهاية المطاف. ملاحظة: تحتاج التطبيقات الحالية إلى تغيير بسيط لاستخدام %2$s.]]></string>
     <string name="home_root_button_start">البدء بالتشغيل</string>
     <string name="home_root_button_restart">إعادة البدء بالتشغيل</string>
     <!-- Home - Application management -->
@@ -78,7 +75,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[انقر لإدارة التطبيقات المصرح بها]]></string>
     <string name="home_app_management_empty">ستظهر هنا التطبيقات التي طلبت أو أعلنت عن إذن Shizuku.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">معلومات عن Shizuku</string>
     <string name="home_learn_more_description">تعلم كيف تطور مع Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">أنت بحاجة إلى اتخاذ خطوة إضافية</string>
@@ -94,17 +90,7 @@
     <string name="app_management_toggle_all">تبديل الكل</string>
     <!-- Terminal -->
     <string name="home_terminal_title">استخدم Shizuku في تطبيقات المحطة</string>
-    <string name="home_terminal_description">قم بتشغيل الأوامر من خلال Shizuku في تطبيقات المحطة التي تريدها</string>
-    <string name="terminal_tutorial_1">أولاً ، قم بتصدير الملفات إلى أي مكان تريده. ستجد ملفين, %1$s و %2$s.</string>
-    <string name="terminal_tutorial_1_description">إذا كانت هناك ملفات بنفس الاسم في المجلد المحدد ، فسيتم حذفها.
-\n
-\nتستخدم وظيفة التصدير SAF (إطار عمل الوصول إلى التخزين). يُذكر أن MIUI قد يخرب وظائف SAF. إذا كنت من تستخدمي MIUI ، فقد تضطر إلى استخراج الملف من APK Shizuku أو تنزيله من GitHub.</string>
     <string name="terminal_export_files">تصدير الملفات</string>
-    <string name="terminal_tutorial_2">بعد ذلك ، استخدم أي محرر نصوص لفتح %1$s وقم بتعديله.</string>
-    <string name="terminal_tutorial_2_description">على سبيل المثال ، إذا كنت تريد استخدام Shizuku في %1$s ، فيجب استبدال %2$s بـ %3$s (%4$s هو اسم الحزمة %1$s).</string>
-    <string name="terminal_tutorial_3">أخيرًا ، انقل الملفات إلى مكان يمكن لتطبيقك الطرفي الوصول إليه ، وستتمكن من استخدام %1$s لتشغيل الأوامر من خلال Shizuku.</string>
-    <string name="terminal_tutorial_3_description">بعض النصائح: امنح إذن التنفيذ لـ %1$s وأضفه إلى%2$s ، ستتمكن من استخدام %1$s مباشرةً.</string>
-    <string name="rish_description"><![CDATA[باستخدام %1$s ، في أي تطبيق طرفي ، يمكنك الاتصال والتفاعل مع عمليات تشغيل shell بواسطة Shizuku. <p> حول الاستخدام التفصيلي %1$s ، انقر لعرض المستند.]]></string>
     <!-- Settings -->
     <string name="settings_title">الإعدادات</string>
     <string name="settings_behavior">سلوك</string>
