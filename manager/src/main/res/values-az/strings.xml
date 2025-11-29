@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bəzi sistemlər (məsələn, MIUI) proqramlar görünmədikdə, hətta proqram ön planda xidmətdən istifadə etsə belə, onların şəbəkəyə daxil olmasına icazə vermir. Zəhmət olmasa belə sistemlərdə Shizuku üçün batareyanın optimallaşdırılması funksiyalarını söndürün.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Başlat (root edilmiş cihazlar üçün)]]></string>
+    <string name="home_root_description"><![CDATA[Magisk istifadə edirsinizsə, cəhd edə bilərsiniz %1$s. Kök istifadəçiləri üçün o, nəticədə Shizuku-nu əvəz edəcək. Qeyd edək ki, %2$sistifadə etmək üçün mövcud proqramlar bir az dəyişməlidir.]]></string>
     <string name="home_root_button_start">Başlat</string>
     <string name="home_root_button_restart">Yenidən Başlat</string>
     <!-- Home - Application management -->
@@ -71,6 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[İcazə verilmiş proqramları idarə etmək üçün toxunun]]></string>
     <string name="home_app_management_empty">Shizuku icazəsini tələb edən və ya bəyan edən tətbiqlər burada göstəriləcək.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Tərtibatçı təlimatı</string>
     <string name="home_learn_more_description">Necə Shizuku dəstəkli proqram hazırlaya biləcəyinizi öyrənin və ya Shizuku dəstəkli proqramları əldə edin</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Əlavə bir addım atmalısan</string>
@@ -82,7 +84,16 @@
     <string name="app_management_toggle_all">Hamısını dəyiş</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Shizikunu terminal proqramlarında istifadə edin</string>
+    <string name="home_terminal_description">Shizuku vasitəsilə terminal proqramlarında qabıq əmrlərini işlədin</string>
+    <string name="terminal_tutorial_miui">İstifadəçilər MIUI-nin ixrac funksiyası tərəfindən istifadə edilən Yaddaş Giriş Çərçivəsini pozduğunu bildirdilər.</string>
+    <string name="terminal_tutorial_miui_2">Əgər MIUI istifadə edirsinizsə, faylı Shizuku APK-sindəki aktivlər qovluğundan çıxarmalı ola bilərsiniz.</string>
+    <string name="terminal_tutorial_1">Faylları yeni qovluğa ixrac edin.</string>
+    <string name="terminal_tutorial_1_description">İki fayl ixrac olunacaq: %1$s və %2$s. Fayllar seçilmiş qovluqda artıq varsa, onlar silinəcək.</string>
     <string name="terminal_export_files">Faylları ixrac edin</string>
+    <string name="terminal_tutorial_2">Faylları şəxsi fayllar kataloquna köçürmək üçün terminal proqramından istifadə edin.</string>
+    <string name="terminal_tutorial_2_description">İpucu: Terminal proqramınızın ev kataloqu (~) /data/data qovluğundadırsa, faylları orada yerləşdirmək sizə yolu yazmadan %1$s -ni işə salmağa imkan verəcək.\n\nƏks halda, siz terminal proqramınızın .bashrc konfiqurasiya faylında %2$s üçün ləqəb yarada bilərsiniz.</string>
+    <string name="terminal_tutorial_3">Aşağıdakı əmrlə qabığı açın:</string>
+    <string name="rish_description"><![CDATA[%1$silə siz istənilən terminal proqramında qabıq əmrlərini işlədə bilərsiniz.<p>Onu necə istifadə etmək barədə ətraflı öyrənmək üçün toxunun.]]></string>
     <!-- Settings -->
     <string name="settings_title">Parametrlər</string>
     <string name="settings_behavior">Davranış</string>
@@ -91,6 +102,7 @@
     <string name="settings_start_on_boot_bug">Android 11-12-də bir səhvə görə, simsiz sazlama heç bir səlahiyyətli şəbəkəni xatırlamır.\n\nAvtorizasiya dialoqu açıldıqda \"İcazə verin\" üzərinə klikləməklə, hər bir yenidən yükləmədə şəbəkəyə yenidən icazə verməli olacaqsınız.</string>
     <string name="settings_use_system_color">Sistem teması rəngindən istifadə edin</string>
     <string name="settings_watchdog">Nəzarətçi</string>
+    <string name="settings_watchdog_summary">Shizuku qəzaya uğradıqda onu avtomatik olaraq yenidən başladın</string>
     <string name="settings_tcp_mode">TCP rejimi</string>
     <string name="settings_tcp_mode_summary">"Bu, Shizuku-nun Wi-Fi olmadan yenidən başlamasına imkan verir. (Shizuku yenidən başladıqdan sonra bir dəfə başlamış olmalıdır)"</string>
     <string name="settings_restart_dialog_title">Yenidən başladın Tələb olunur</string>
