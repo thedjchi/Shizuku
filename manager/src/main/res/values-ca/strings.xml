@@ -59,6 +59,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alguns sistemes (com ara MIUI) no permeten que les aplicacions accedeixin a la xarxa quan no són visibles, fins i tot si l\'aplicació utilitza un servei en primer pla. Si us plau, desactiveu les funcions d\'optimització de la bateria per a Shizuku en aquests sistemes.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (per a dispositius rootejats)]]></string>
+    <string name="home_root_description"><![CDATA[Si feu servir Magisk, podeu provar %1$s. Per als usuaris root, acabarà substituint Shizuku. Tingueu en compte que les aplicacions existents han de canviar una mica per poder utilitzar %2$s.]]></string>
     <string name="home_root_button_start">Començar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Toca per gestionar aplicacions autoritzades]]></string>
     <string name="home_app_management_empty">Les aplicacions que hagin sol·licitat o declarat el permís de Shizuku apareixeran aquí.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Guia per a desenvolupadors</string>
     <string name="home_learn_more_description">Aprèn a desenvolupar amb la Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Has de fer un pas més</string>
@@ -81,7 +83,16 @@
     <string name="app_management_toggle_all">Canvia tot</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Fes servir Shizuku a les aplicacions de terminal</string>
+    <string name="home_terminal_description">Executar ordres de shell en aplicacions de terminal a través de Shizuku</string>
+    <string name="terminal_tutorial_miui">Els usuaris han informat que MIUI incompleix el Storage Access Framework, que utilitza la funció d\'exportació.</string>
+    <string name="terminal_tutorial_miui_2">Si feu servir MIUI, és possible que hàgiu d\'extreure el fitxer de la carpeta d\'actius de l\'APK de Shizuku.</string>
+    <string name="terminal_tutorial_1">Exporteu els fitxers a una carpeta nova.</string>
+    <string name="terminal_tutorial_1_description">S\'exportaran dos fitxers: %1$s i %2$s. Si els fitxers ja existeixen a la carpeta seleccionada, s\'eliminaran.</string>
     <string name="terminal_export_files">Exporta fitxers</string>
+    <string name="terminal_tutorial_2">Feu servir l\'aplicació de terminal per copiar els fitxers al seu directori de fitxers privats.</string>
+    <string name="terminal_tutorial_2_description">Consell: Si el directori d\'inici (~) de l\'aplicació de terminal es troba a la carpeta /data/data, si hi col·loqueu els fitxers, podreu executar %1$s sense escriure la ruta.\n\nSi no, podeu crear un àlies per a %2$s al fitxer de configuració .bashrc de l\'aplicació de terminal.</string>
+    <string name="terminal_tutorial_3">Obriu una shell amb la següent comanda:</string>
+    <string name="rish_description"><![CDATA[Amb %1$s, podeu executar ordres de shell en qualsevol aplicació de terminal.<p>Toqueu per obtenir més informació sobre com utilitzar-ho.]]></string>
     <!-- Settings -->
     <string name="settings_title">Configuració</string>
     <string name="settings_behavior">Comportament</string>
@@ -90,6 +101,7 @@
     <string name="settings_start_on_boot_bug">A causa d\'un error a Android 11-12, la depuració sense fil no recorda cap xarxa autoritzada.\n\nHaureu de tornar a autoritzar la xarxa a cada reinici tocant \"Permet\" quan aparegui el quadre de diàleg d\'autorització.</string>
     <string name="settings_use_system_color">Utilitza el color del tema del sistema</string>
     <string name="settings_watchdog">Vigilant</string>
+    <string name="settings_watchdog_summary">Reinicia automàticament Shizuku si falla</string>
     <string name="settings_tcp_mode">Mode TCP</string>
     <string name="settings_tcp_mode_summary">"Permet a la Shizuku reiniciar sense Wi-Fi. (La Shizuku deu haver començat una vegada des del reinici)"</string>
     <string name="settings_restart_dialog_title">Cal reiniciar</string>
