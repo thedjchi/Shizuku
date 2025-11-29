@@ -96,7 +96,6 @@
     <string name="settings_start_on_boot_bug">Din cauza unui bug în Android 11-12, depanarea wireless nu își amintește nicio rețea autorizată.\n\nVa trebui să reautorizezi rețeaua la fiecare repornire apăsând pe \"Permite\" când apare fereul de autorizare.</string>
     <string name="settings_use_system_color">Utilizează culoarea temei de sistem</string>
     <string name="settings_watchdog">Câine de pază</string>
-    <string name="settings_watchdog_summary">Repornește automat Shizuku dacă se oprește</string>
     <string name="settings_tcp_mode">Mod TCP</string>
     <string name="settings_tcp_mode_summary">"Permite repornirea sistemului Shizuku fără Wi-Fi. (Shizuku trebuie să fi pornit o dată de la repornire)"</string>
     <string name="settings_restart_dialog_title">Repornire necesară</string>
