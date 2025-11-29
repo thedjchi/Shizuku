@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Hindi pinapayagan ng ilang system (gaya ng MIUI) ang mga app na i-access ang network kapag hindi nakikita ang mga ito, kahit na gumagamit ang app ng serbisyo sa harapan. Mangyaring huwag paganahin ang mga feature ng pag-optimize ng baterya para sa Shizuku sa mga naturang system.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Simulan (para sa mga device na may root)]]></string>
+    <string name="home_root_description"><![CDATA[Kung gumagamit ka ng Magisk, maaari mong subukan %1$s. Para sa mga gumagamit ng ugat, sa kalaunan ay papalitan nito ang Shizuku. Tandaan, kailangang magbago ng kaunti ang mga umiiral na application upang magamit ang %2$s.]]></string>
     <string name="home_root_button_start">Simulan</string>
     <string name="home_root_button_restart">Simulan muli</string>
     <!-- Home - Application management -->
@@ -71,6 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Pindutin para pamahalaan ang mga awtorisadong app]]></string>
     <string name="home_app_management_empty">Ipapakita dito ang mga app na humiling o nagdeklara ng pahintulot ng Shizuku.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Gabay ng developer</string>
     <string name="home_learn_more_description">Matuto kung paano mag-develop gamit ang Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">May mga karagdagang hakbang kang dapat gawin</string>
@@ -86,7 +88,16 @@
     <string name="app_management_toggle_all">I-toggle ang lahat</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gamitin ang Shizuku sa mga terminal app</string>
+    <string name="home_terminal_description">Patakbuhin ang mga shell command sa mga terminal app sa pamamagitan ng Shizuku</string>
+    <string name="terminal_tutorial_miui">Iniulat ng mga user na sinira ng MIUI ang Storage Access Framework, na ginagamit ng export function.</string>
+    <string name="terminal_tutorial_miui_2">Kung gumagamit ka ng MIUI, maaaring kailanganin mong i-extract ang file mula sa folder ng mga asset sa APK ng Shizuku.</string>
+    <string name="terminal_tutorial_1">I-export ang mga file sa isang bagong folder.</string>
+    <string name="terminal_tutorial_1_description">Dalawang file ang ie-export: %1$s at %2$s. Kung umiiral na ang mga file sa napiling folder, tatanggalin ang mga ito.</string>
     <string name="terminal_export_files">I-export ang mga file</string>
+    <string name="terminal_tutorial_2">Gamitin ang iyong terminal app upang kopyahin ang mga file sa direktoryo ng mga pribadong file nito.</string>
+    <string name="terminal_tutorial_2_description">Tip: Kung ang home directory ng iyong terminal app (~) ay nasa /data/data folder, ang paglalagay ng mga file doon ay magbibigay-daan sa iyong tumakbo %1$s nang hindi isinusulat ang path.\n\nKung hindi, maaari kang lumikha ng alias para sa %2$s sa .bashrc config file ng iyong terminal app.</string>
+    <string name="terminal_tutorial_3">Magbukas ng shell gamit ang sumusunod na command:</string>
+    <string name="rish_description"><![CDATA[Sa %1$s, maaari kang magpatakbo ng mga shell command sa anumang terminal app.<p>I-tap para matuto pa tungkol sa kung paano ito gamitin.]]></string>
     <!-- Settings -->
     <string name="settings_title">Mga Setting</string>
     <string name="settings_behavior">Pag-uugali</string>
@@ -95,6 +106,7 @@
     <string name="settings_start_on_boot_bug">Dahil sa isang bug sa Android 11-12, hindi naaalala ng wireless na pag-debug ang anumang mga awtorisadong network.\n\nKakailanganin mong muling pahintulutan ang network sa bawat pag-reboot sa pamamagitan ng pag-tap sa \"Payagan\" kapag nag-pop up ang dialog ng awtorisasyon.</string>
     <string name="settings_use_system_color">Gamitin ang kulay ng tema ng sistema</string>
     <string name="settings_watchdog">Tagapagbantay</string>
+    <string name="settings_watchdog_summary">Awtomatikong i-restart ang Shizuku kung nag-crash ito</string>
     <string name="settings_tcp_mode">TCP mode</string>
     <string name="settings_tcp_mode_summary">"Pinapayagan ang Shizuku na mag-restart nang walang Wi-Fi. (Siguro minsan nang nagsimula si Shizuku mula nang mag-reboot)"</string>
     <string name="settings_restart_dialog_title">I-restart ang Kinakailangan</string>
