@@ -59,8 +59,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alguns sistemes (com ara MIUI) no permeten que les aplicacions accedeixin a la xarxa quan no són visibles, fins i tot si l\'aplicació utilitza un servei en primer pla. Si us plau, desactiveu les funcions d\'optimització de la bateria per a Shizuku en aquests sistemes.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Start (per a dispositius rootejats)]]></string>
-    <string name="home_root_description"><![CDATA[A més, Shizuku es pot iniciar automàticament en arrencar. Si no, comprova si el teu sistema o eines de tercers han restringit Shizuku.<br>Pots consultar %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Si feu servir Magisk, podeu provar %1$s. Per als usuaris root, acabarà substituint Shizuku. Tingueu en compte que les aplicacions existents han de canviar una mica per poder utilitzar %2$s.]]></string>
     <string name="home_root_button_start">Començar</string>
     <string name="home_root_button_restart">Reiniciar</string>
     <!-- Home - Application management -->
@@ -72,7 +70,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Toca per gestionar aplicacions autoritzades]]></string>
     <string name="home_app_management_empty">Les aplicacions que hagin sol·licitat o declarat el permís de Shizuku apareixeran aquí.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Aprèn Shizuku</string>
     <string name="home_learn_more_description">Aprèn a desenvolupar amb la Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Has de fer un pas més</string>
@@ -84,17 +81,7 @@
     <string name="app_management_toggle_all">Canvia tot</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Fes servir Shizuku a les aplicacions de terminal</string>
-    <string name="home_terminal_description">Executa ordres a través de Shizuku a les aplicacions de terminal que t\'agradin</string>
-    <string name="terminal_tutorial_1">Primer, exporta els fitxers a qualsevol lloc que vulguis. Trobaràs dos arxius, %1$s i %2$s.</string>
-    <string name="terminal_tutorial_1_description">Si hi ha fitxers amb el mateix nom a la carpeta seleccionada, seran eliminats.\n\nLa funció d\'exportació utilitza SAF (Storage Access Framework). S\'ha informat que la MIUI trenca les funcions del SAF. Si utilitzes MIUI, potser hauràs d\'extreure el fitxer de l\'apk de Shizuku o descarregar-lo des de GitHub.</string>
     <string name="terminal_export_files">Exporta fitxers</string>
-    <string name="terminal_tutorial_2">Després, utilitza qualsevol editor de text per obrir i editar %1$s.</string>
-    <string name="terminal_tutorial_2_description">Per exemple, si vols utilitzar la Shizuku a %1$s, hauries de substituir %2$s amb %3$s (%4$s és el nom del paquet de %1$s).</string>
-    <string name="terminal_tutorial_3">Finalment, mou els fitxers a un lloc on la teva aplicació de terminal pugui accedir-hi, que podràs utilitzar %1$s per executar ordres a través de la Shizuku.</string>
-    <string name="terminal_tutorial_3_description">Alguns consells: concedeix permís per executar %1$s i afegeix-ho a %2$s, podràs utilitzar %1$s directament.</string>
-    <string name="rish_description"><![CDATA[Amb %1$s, en qualsevol aplicació de terminal, pots connectar-te i interactuar amb la shell executada per Shizuku.
-<p>Sobre l\'ús detallat %1$s, toca per veure el document.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Configuració</string>
     <string name="settings_behavior">Comportament</string>
