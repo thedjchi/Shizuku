@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Некоторые системы (например, MIUI) запрещают приложениям получать доступ к сети, если они невидимы, даже если приложение использует сервис переднего плана. Пожалуйста, отключите функции оптимизации батареи для Shizuku на таких системах.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Запуск (для устройств с root правами)]]></string>
-    <string name="home_root_description"><![CDATA[В дополнение, Shizuku может запускаться сразу после загрузки системы. Если этого не происходит, проверьте, нет ли ограничений со стороны вашей системы или сторонних инструментов.<br>Вы можете обратиться в %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Если вы используете Magisk, можете попробовать %1$s. Для пользователей root он в конечном итоге заменит Shizuku. Обратите внимание, что существующие приложения требуют небольших изменений для использования %2$s.]]></string>
     <string name="home_root_button_start">Запустить</string>
     <string name="home_root_button_restart">Перезапустить</string>
     <!-- Home - Application management -->
@@ -75,7 +73,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Нажмите для управления списком допущенных приложений]]></string>
     <string name="home_app_management_empty">Здесь будут отображаться приложения, которые запросили или заявили разрешение Shizuku.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Узнать больше о Shizuku</string>
     <string name="home_learn_more_description">Узнайте, как начать разрабатывать с Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Нужен дополнительный шаг</string>
@@ -91,17 +88,7 @@
     <string name="app_management_toggle_all">Переключить все</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Применение Shizuku в эмуляторах терминала</string>
-    <string name="home_terminal_description">Запуск команд через Shizuku прямиком из любимых приложений-терминалов</string>
-    <string name="terminal_tutorial_1">Сначала экспортируйте файлы в любое место на свое усмотрение. Там появятся два файла: %1$s и %2$s.</string>
-    <string name="terminal_tutorial_1_description">Если в выбранной папке уже есть файлы с такими же именами, они будут удалены.
-\n
-\nДля работы функции экспорта используется SAF (Storage Access Framework). Сообщается, что на MIUI сломаны механизмы SAF, поэтому там может понадобиться вручную извлечь файл из .apk Shizuku или скачать его с GitHub.</string>
     <string name="terminal_export_files">Экспорт файлов</string>
-    <string name="terminal_tutorial_2">Затем откройте и отредактируйте %1$s любым текстовым редактором.</string>
-    <string name="terminal_tutorial_2_description">К примеру: если вы захотите использовать Shizuku внутри %1$s, нужно заменить %2$s на %3$s (%4$s – это имя пакета эмулятора терминала %1$s).</string>
-    <string name="terminal_tutorial_3">И последнее: переместите файлы туда, куда сможет обращаться ваше приложение-терминал, и отныне станет возможным запускать команды через Shizuku посредством %1$s.</string>
-    <string name="terminal_tutorial_3_description">Небольшой совет: выдайте %1$s права на выполнение и пропишите в %2$s, чтобы обращаться к %1$s напрямую.</string>
-    <string name="rish_description"><![CDATA[Посредством %1$s из любого приложения-терминала можно подключаться и взаимодействовать с shell, запущенной Shizuku. <p>Нажмите здесь для просмотра инструкции по работе с %1$s.]]></string>
     <!-- Settings -->
     <string name="settings_title">Настройки</string>
     <string name="settings_behavior">Поведение</string>
