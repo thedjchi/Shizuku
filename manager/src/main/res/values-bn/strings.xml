@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">কিছু সিস্টেম (যেমন MIUI) অ্যাপগুলিকে নেটওয়ার্ক অ্যাক্সেস করার অনুমতি দেয় না যখন তারা দৃশ্যমান হয় না, এমনকি যদি অ্যাপটি ফোরগ্রাউন্ড পরিষেবা ব্যবহার করে। অনুগ্রহ করে এই ধরনের সিস্টেমে Shizuku-এর জন্য ব্যাটারি অপ্টিমাইজেশন বৈশিষ্ট্যগুলি অক্ষম করুন।</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[শুরু করুন (রুট করা ডিভাইসগুলির জন্য)]]></string>
+    <string name="home_root_description"><![CDATA[যদি আপনি Magisk ব্যবহার করেন, তাহলে %1$sচেষ্টা করে দেখতে পারেন। রুট ব্যবহারকারীদের জন্য, এটি অবশেষে Shizuku কে প্রতিস্থাপন করবে। মনে রাখবেন, %2$sব্যবহার করার জন্য বিদ্যমান অ্যাপ্লিকেশনগুলিতে কিছুটা পরিবর্তন করতে হবে।]]></string>
     <string name="home_root_button_start">সূচনা</string>
     <string name="home_root_button_restart">পুনর্সূচনা</string>
     <!-- Home - Application management -->
@@ -68,6 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[অনুমোদিত অ্যাপগুলি পরিচালনা করতে ট্যাপ করুন]]></string>
     <string name="home_app_management_empty">যে অ্যাপগুলি শিজুকু অনুমতির অনুরোধ করেছে বা ঘোষণা করেছে সেগুলি এখানে প্রদর্শিত হবে।</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">ডেভেলপার গাইড</string>
     <string name="home_learn_more_description">শিজুকুর সাথে কীভাবে বিকাশ করতে হয় তা শিখুন</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">আপনাকে একটি অতিরিক্ত পদক্ষেপ নিতে হবে</string>
@@ -79,7 +81,16 @@
     <string name="app_management_toggle_all">সব টগল করুন</string>
     <!-- Terminal -->
     <string name="home_terminal_title">টার্মিনাল অ্যাপগুলিতে শিজুকু ব্যবহার করুন</string>
+    <string name="home_terminal_description">Shizuku এর মাধ্যমে টার্মিনাল অ্যাপগুলিতে শেল কমান্ড চালান</string>
+    <string name="terminal_tutorial_miui">ব্যবহারকারীরা জানিয়েছেন যে MIUI স্টোরেজ অ্যাক্সেস ফ্রেমওয়ার্ক ভঙ্গ করে, যা এক্সপোর্ট ফাংশন দ্বারা ব্যবহৃত হয়।</string>
+    <string name="terminal_tutorial_miui_2">আপনি যদি MIUI ব্যবহার করেন, তাহলে আপনাকে Shizuku এর APK এর সম্পদ ফোল্ডার থেকে ফাইলটি বের করতে হতে পারে।</string>
+    <string name="terminal_tutorial_1">ফাইলগুলি একটি নতুন ফোল্ডারে রপ্তানি করুন।</string>
+    <string name="terminal_tutorial_1_description">দুটি ফাইল রপ্তানি করা হবে: %1$s এবং %2$s। যদি নির্বাচিত ফোল্ডারে ফাইলগুলি ইতিমধ্যেই বিদ্যমান থাকে, তাহলে সেগুলি মুছে ফেলা হবে।</string>
     <string name="terminal_export_files">ফাইল রপ্তানি করুন</string>
+    <string name="terminal_tutorial_2">আপনার টার্মিনাল অ্যাপ ব্যবহার করে ফাইলগুলো তার ব্যক্তিগত ফাইল ডিরেক্টরিতে কপি করুন।</string>
+    <string name="terminal_tutorial_2_description">টিপস: যদি আপনার টার্মিনাল অ্যাপের হোম ডিরেক্টরি (~) /data/data ফোল্ডারে থাকে, তাহলে ফাইলগুলি সেখানে রাখলে আপনি পাথ না লিখেই %1$s চালাতে পারবেন।\n\nঅন্যথায়, আপনি আপনার টার্মিনাল অ্যাপের .bashrc কনফিগ ফাইলে %2$s এর জন্য একটি উপনাম তৈরি করতে পারেন।</string>
+    <string name="terminal_tutorial_3">নিম্নলিখিত কমান্ড দিয়ে একটি শেল খুলুন:</string>
+    <string name="rish_description"><![CDATA[%1$sদিয়ে, আপনি যেকোনো টার্মিনাল অ্যাপে শেল কমান্ড চালাতে পারবেন।<p>এটি কীভাবে ব্যবহার করবেন সে সম্পর্কে আরও জানতে ট্যাপ করুন।]]></string>
     <!-- Settings -->
     <string name="settings_title">সেটিংস</string>
     <string name="settings_behavior">আচরণ</string>
@@ -88,6 +99,7 @@
     <string name="settings_start_on_boot_bug">অ্যান্ড্রয়েড ১১-১২-তে একটি বাগের কারণে, ওয়্যারলেস ডিবাগিং কোনও অনুমোদিত নেটওয়ার্ক মনে রাখে না।\n\nঅনুমোদনের ডায়ালগ পপ আপ হলে \"অনুমতি দিন\" ট্যাপ করে প্রতিটি রিবুটে নেটওয়ার্ক পুনরায় অনুমোদন করতে হবে।</string>
     <string name="settings_use_system_color">সিস্টেম থিমের রঙ ব্যবহার করুন</string>
     <string name="settings_watchdog">ওয়াচডগ</string>
+    <string name="settings_watchdog_summary">শিজুকু ক্র্যাশ হলে স্বয়ংক্রিয়ভাবে পুনরায় চালু করুন</string>
     <string name="settings_tcp_mode">টিসিপি মোড</string>
     <string name="settings_tcp_mode_summary">"ওয়াই-ফাই ছাড়াই শিজুকুকে পুনঃশুরু করার অনুমতি দেয়। (শিজুকু অবশ্যই রিবুট হওয়ার পর থেকে একবার শুরু করেছে)"</string>
     <string name="settings_restart_dialog_title">পুনঃসূচনা প্রয়োজন</string>
