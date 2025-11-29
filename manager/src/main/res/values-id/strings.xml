@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Beberapa sistem (seperti MIUI) melarang aplikasi mengakses jaringan saat tidak terlihat, meskipun aplikasi tersebut menggunakan layanan latar depan. Harap nonaktifkan fitur pengoptimalan baterai untuk Shizuku pada sistem tersebut.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Mulai (untuk perangkat dengan root)]]></string>
+    <string name="home_root_description"><![CDATA[Jika Anda menggunakan Magisk, Anda bisa mencoba %1$s. Bagi pengguna root, Magisk nantinya akan menggantikan Shizuku. Perlu diketahui, aplikasi yang sudah ada perlu sedikit diubah agar dapat menggunakan %2$s.]]></string>
     <string name="home_root_button_start">Mulai</string>
     <string name="home_root_button_restart">Mulai ulang</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Ketuk untuk mengatur aplikasi terdaftar]]></string>
     <string name="home_app_management_empty">Aplikasi yang telah meminta atau mendeklarasikan izin Shizuku akan ditampilkan di sini.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Panduan pengembang</string>
     <string name="home_learn_more_description">Pelajari cara mengembangkan dengan Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Anda perlu mengambil langkah ekstra</string>
@@ -85,7 +87,16 @@
     <string name="app_management_toggle_all">Beralih semua</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gunakan Shizuku pada aplikasi terminal</string>
+    <string name="home_terminal_description">Jalankan perintah shell di aplikasi terminal melalui Shizuku</string>
+    <string name="terminal_tutorial_miui">Pengguna telah melaporkan bahwa MIUI merusak Storage Access Framework yang digunakan oleh fungsi ekspor.</string>
+    <string name="terminal_tutorial_miui_2">Jika Anda menggunakan MIUI, Anda mungkin harus mengekstrak file dari folder aset di APK Shizuku.</string>
+    <string name="terminal_tutorial_1">Ekspor file ke folder baru.</string>
+    <string name="terminal_tutorial_1_description">Dua berkas akan diekspor: %1$s dan %2$s. Jika berkas tersebut sudah ada di folder yang dipilih, berkas tersebut akan dihapus.</string>
     <string name="terminal_export_files">Ekspor file</string>
+    <string name="terminal_tutorial_2">Gunakan aplikasi terminal Anda untuk menyalin file ke direktori file privatnya.</string>
+    <string name="terminal_tutorial_2_description">Kiat: Jika direktori beranda (~) aplikasi terminal Anda ada di folder /data/data, meletakkan berkas di sana akan memungkinkan Anda menjalankan %1$s tanpa menuliskan jalurnya.\n\nKalau tidak, Anda dapat membuat alias untuk %2$s di berkas konfigurasi .bashrc aplikasi terminal Anda.</string>
+    <string name="terminal_tutorial_3">Buka shell dengan perintah berikut:</string>
+    <string name="rish_description"><![CDATA[Dengan %1$s, Anda dapat menjalankan perintah shell di aplikasi terminal apa pun.<p>Ketuk untuk mempelajari lebih lanjut tentang cara menggunakannya.]]></string>
     <!-- Settings -->
     <string name="settings_title">Pengaturan</string>
     <string name="settings_behavior">Perilaku</string>
@@ -94,6 +105,7 @@
     <string name="settings_start_on_boot_bug">Karena bug di Android 11-12, debugging nirkabel tidak mengingat jaringan yang diotorisasi.\n\nAnda perlu mengotorisasi ulang jaringan setiap kali melakukan boot ulang dengan mengetuk \"Izinkan\" saat dialog otorisasi muncul.</string>
     <string name="settings_use_system_color">Gunakan tema warna sistem</string>
     <string name="settings_watchdog">Penjaga</string>
+    <string name="settings_watchdog_summary">Mulai ulang Shizuku secara otomatis jika macet</string>
     <string name="settings_tcp_mode">modus TCP</string>
     <string name="settings_tcp_mode_summary">"Memungkinkan Shizuku untuk memulai ulang tanpa Wi-Fi. (Shizuku harus sudah memulai sekali sejak di-reboot)"</string>
     <string name="settings_restart_dialog_title">Diperlukan Restart</string>
