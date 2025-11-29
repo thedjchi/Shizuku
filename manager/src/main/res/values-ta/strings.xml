@@ -57,6 +57,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">சில அமைப்புகள் (MIUI போன்றவை) பயன்பாடு முன்புற சேவையைப் பயன்படுத்தினாலும், நெட்வொர்க்கைத் தெரியாதபோது அவற்றை அணுக அனுமதிக்காது. அத்தகைய அமைப்புகளில் Shizuku க்கான பேட்டரி தேர்வுமுறை அம்சங்களை முடக்கவும்.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[தொடங்கு (ரூட் செய்யப்பட்ட சாதனங்களுக்கு)]]></string>
+    <string name="home_root_description"><![CDATA[நீங்கள் Magisk ஐப் பயன்படுத்துகிறீர்கள் என்றால், %1$sஐ முயற்சி செய்யலாம். ரூட் பயனர்களுக்கு, இது இறுதியில் Shizuku ஐ மாற்றும். குறிப்பு, %2$sஐப் பயன்படுத்த ஏற்கனவே உள்ள பயன்பாடுகள் சிறிது மாற வேண்டும்.]]></string>
     <string name="home_root_button_start">தொடங்கு</string>
     <string name="home_root_button_restart">மறுதொடக்கம்</string>
     <!-- Home - Application management -->
@@ -68,6 +69,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[அங்கீகரிக்கப்பட்ட பயன்பாடுகளை நிர்வகிக்க தட்டவும்]]></string>
     <string name="home_app_management_empty">ஷிசுகு அனுமதியைக் கோரிய அல்லது அறிவித்த பயன்பாடுகள் இங்கே காண்பிக்கப்படும்.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">டெவலப்பர் வழிகாட்டி</string>
     <string name="home_learn_more_description">ஷிசுகுவுடன் எவ்வாறு உருவாக்குவது என்பதை அறிக</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">நீங்கள் ஒரு கூடுதல் படி எடுக்க வேண்டும்.</string>
@@ -79,7 +81,16 @@
     <string name="app_management_toggle_all">அனைத்தையும் மாற்று</string>
     <!-- Terminal -->
     <string name="home_terminal_title">டெர்மினல் பயன்பாடுகளில் ஷிசுகுவைப் பயன்படுத்தவும்</string>
+    <string name="home_terminal_description">ஷிசுகு வழியாக டெர்மினல் பயன்பாடுகளில் ஷெல் கட்டளைகளை இயக்கவும்.</string>
+    <string name="terminal_tutorial_miui">ஏற்றுமதி செயல்பாட்டால் பயன்படுத்தப்படும் சேமிப்பக அணுகல் கட்டமைப்பை MIUI உடைப்பதாக பயனர்கள் தெரிவித்துள்ளனர்.</string>
+    <string name="terminal_tutorial_miui_2">நீங்கள் MIUI ஐப் பயன்படுத்துகிறீர்கள் என்றால், ஷிசுகுவின் APK இல் உள்ள சொத்துக்கள் கோப்புறையிலிருந்து கோப்பைப் பிரித்தெடுக்க வேண்டியிருக்கும்.</string>
+    <string name="terminal_tutorial_1">கோப்புகளை ஒரு புதிய கோப்புறைக்கு ஏற்றுமதி செய்யவும்.</string>
+    <string name="terminal_tutorial_1_description">இரண்டு கோப்புகள் ஏற்றுமதி செய்யப்படும்: %1$s மற்றும் %2$s. தேர்ந்தெடுக்கப்பட்ட கோப்புறையில் கோப்புகள் ஏற்கனவே இருந்தால், அவை நீக்கப்படும்.</string>
     <string name="terminal_export_files">கோப்புகளை ஏற்றுமதி செய்</string>
+    <string name="terminal_tutorial_2">கோப்புகளை அதன் தனிப்பட்ட கோப்புகள் கோப்பகத்திற்கு நகலெடுக்க உங்கள் முனைய பயன்பாட்டைப் பயன்படுத்தவும்.</string>
+    <string name="terminal_tutorial_2_description">குறிப்பு: உங்கள் டெர்மினல் பயன்பாட்டின் முகப்பு கோப்பகம் (~) /data/data கோப்புறையில் இருந்தால், கோப்புகளை அங்கு வைப்பது பாதையை எழுதாமல் %1$s ஐ இயக்க அனுமதிக்கும்.\n\nஇல்லையெனில், உங்கள் டெர்மினல் பயன்பாட்டின் .bashrc config கோப்பில் %2$s க்கு மாற்றுப்பெயரை உருவாக்கலாம்.</string>
+    <string name="terminal_tutorial_3">பின்வரும் கட்டளையுடன் ஒரு ஷெல்லைத் திறக்கவும்:</string>
+    <string name="rish_description"><![CDATA[%1$sஉடன், நீங்கள் எந்த முனைய பயன்பாட்டிலும் ஷெல் கட்டளைகளை இயக்கலாம்.<p>அதை எவ்வாறு பயன்படுத்துவது என்பது பற்றி மேலும் அறிய தட்டவும்.]]></string>
     <!-- Settings -->
     <string name="settings_title">அமைப்புகள்</string>
     <string name="settings_behavior">நடத்தை</string>
@@ -88,6 +99,7 @@
     <string name="settings_start_on_boot_bug">ஆண்ட்ராய்டு 11-12 இல் பிழை காரணமாக, வயர்லெஸ் பிழைத்திருத்தம் அங்கீகரிக்கப்பட்ட நெட்வொர்க்குகளை நினைவில் கொள்ளவில்லை.\n\nஅங்கீகார உரையாடல் பாப் அப் செய்யும்போது \"அனுமதி\" என்பதைத் தட்டுவதன் மூலம் ஒவ்வொரு மறுதொடக்கத்திலும் நெட்வொர்க்கை நீங்கள் மீண்டும் அங்கீகரிக்க வேண்டும்.</string>
     <string name="settings_use_system_color">சிஸ்டம் தீம் நிறத்தைப் பயன்படுத்து</string>
     <string name="settings_watchdog">கண்காணிப்பு நாய்</string>
+    <string name="settings_watchdog_summary">ஷிசுகு செயலிழந்தால் தானாகவே மறுதொடக்கம் செய்யுங்கள்.</string>
     <string name="settings_tcp_mode">TCP பயன்முறை</string>
     <string name="settings_tcp_mode_summary">"Wi-Fi இல்லாமல் Shizukuவை மறுதொடக்கம் செய்ய அனுமதிக்கிறது. (மறுதொடக்கம் செய்யப்பட்டதிலிருந்து Shizuku ஒரு முறை தொடங்கியிருக்க வேண்டும்)"</string>
     <string name="settings_restart_dialog_title">மறுதொடக்கம் அவசியம்</string>
