@@ -88,7 +88,6 @@
     <string name="terminal_tutorial_1_description">To filer vil bli eksportert: %1$s og %2$s. Hvis filene allerede finnes i den valgte mappen, vil de bli slettet.</string>
     <string name="terminal_export_files">Eksportfiler</string>
     <string name="terminal_tutorial_2">Bruk terminalappen din til å kopiere filene til den private filkatalogen.</string>
-    <string name="terminal_tutorial_2_description">Tips: Hvis hjemmekatalogen (~) til terminalappen din er i /data/data-mappen, vil det å plassere filene der tillate deg å kjøre %1$s uten å skrive banen.\n\nEllers kan du opprette et alias for %2$s i terminalappens .bashrc-konfigurasjonsfil.</string>
     <string name="terminal_tutorial_3">Åpne et skall med følgende kommando:</string>
     <string name="rish_description"><![CDATA[Med %1$skan du kjøre skallkommandoer i en hvilken som helst terminalapp.<p>Trykk for å lære mer om hvordan du bruker det.]]></string>
     <!-- Settings -->
