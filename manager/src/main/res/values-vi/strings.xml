@@ -60,6 +60,7 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Một số hệ thống (chẳng hạn như MIUI) không cho phép ứng dụng truy cập mạng khi chúng không hiển thị, ngay cả khi ứng dụng sử dụng dịch vụ nền trước. Vui lòng tắt các tính năng tối ưu hóa pin cho Shizuku trên các hệ thống đó.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Bắt đầu (cho các thiết bị đã root)]]></string>
+    <string name="home_root_description"><![CDATA[Nếu bạn đang sử dụng Magisk, bạn có thể thử %1$s. Đối với người dùng root, nó sẽ thay thế Shizuku. Lưu ý, các ứng dụng hiện có cần phải thay đổi một chút để sử dụng %2$s.]]></string>
     <string name="home_root_button_start">Bắt đầu</string>
     <string name="home_root_button_restart">Khởi động lại</string>
     <!-- Home - Application management -->
@@ -70,6 +71,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Nhấn để quản lý các ứng dụng được ủy quyền]]></string>
     <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo quyền Shizuku sẽ hiển thị ở đây.</string>
     <!-- Home - Learn more -->
+    <string name="home_learn_more_title">Hướng dẫn dành cho nhà phát triển</string>
     <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng dụng bằng Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Bạn cần phải thực hiện thêm một bước</string>
@@ -81,7 +83,16 @@
     <string name="app_management_toggle_all">Chuyển đổi tất cả</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Sử dụng Shizuku trong các ứng dụng đầu cuối</string>
+    <string name="home_terminal_description">Chạy lệnh shell trong ứng dụng terminal thông qua Shizuku</string>
+    <string name="terminal_tutorial_miui">Người dùng đã báo cáo rằng MIUI làm hỏng Storage Access Framework, được sử dụng bởi chức năng xuất.</string>
+    <string name="terminal_tutorial_miui_2">Nếu bạn đang sử dụng MIUI, bạn có thể phải giải nén tệp từ thư mục tài sản trong APK của Shizuku.</string>
+    <string name="terminal_tutorial_1">Xuất các tập tin vào một thư mục mới.</string>
+    <string name="terminal_tutorial_1_description">Hai tệp sẽ được xuất: %1$s và %2$s. Nếu các tệp đã tồn tại trong thư mục đã chọn, chúng sẽ bị xóa.</string>
     <string name="terminal_export_files">Xuất tệp</string>
+    <string name="terminal_tutorial_2">Sử dụng ứng dụng đầu cuối để sao chép các tệp vào thư mục tệp riêng tư.</string>
+    <string name="terminal_tutorial_2_description">Mẹo: Nếu thư mục gốc của ứng dụng đầu cuối (~) nằm trong thư mục /data/data, việc đặt các tệp ở đó sẽ cho phép bạn chạy %1$s mà không cần ghi đường dẫn.\n\nNếu không, bạn có thể tạo bí danh cho %2$s trong tệp cấu hình .bashrc của ứng dụng đầu cuối.</string>
+    <string name="terminal_tutorial_3">Mở shell bằng lệnh sau:</string>
+    <string name="rish_description"><![CDATA[Với %1$s, bạn có thể chạy lệnh shell trong bất kỳ ứng dụng đầu cuối nào.<p>Nhấn để tìm hiểu thêm về cách sử dụng.]]></string>
     <!-- Settings -->
     <string name="settings_title">Cài đặt</string>
     <string name="settings_behavior">Hành vi</string>
@@ -90,6 +101,7 @@
     <string name="settings_start_on_boot_bug">Do lỗi trong Android 11-12, gỡ lỗi không dây không ghi nhớ bất kỳ mạng được ủy quyền nào.\n\nBạn sẽ cần ủy quyền lại mạng trong mỗi lần khởi động lại bằng cách nhấn vào \"Cho phép\" khi hộp thoại ủy quyền bật lên.</string>
     <string name="settings_use_system_color">Sử dụng màu chủ đề hệ thống</string>
     <string name="settings_watchdog">Chó canh gác</string>
+    <string name="settings_watchdog_summary">Tự động khởi động lại Shizuku nếu nó bị sập</string>
     <string name="settings_tcp_mode">Chế độ TCP</string>
     <string name="settings_tcp_mode_summary">"Cho phép Shizuku khởi động lại mà không cần Wi-Fi. (Shizuku phải khởi động lại một lần kể từ khi khởi động lại)"</string>
     <string name="settings_restart_dialog_title">Cần khởi động lại</string>
