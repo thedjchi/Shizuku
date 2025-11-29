@@ -88,7 +88,6 @@
     <string name="settings_start_on_boot_bug">På grunn av en feil i Android 11-12 husker ikke trådløs feilsøking noen autoriserte nettverk.\n\nDu må autorisere nettverket på nytt ved hver omstart ved å trykke på \"Tillat\" når autorisasjonsdialogen dukker opp.</string>
     <string name="settings_use_system_color">Bruk systemtemafarge</string>
     <string name="settings_watchdog">Watchdog</string>
-    <string name="settings_watchdog_summary">Start Shizuku automatisk på nytt hvis det stopper</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Lar Shizuku starte på nytt uten Wi-Fi. (Shizuku må ha startet én gang siden omstarten)"</string>
     <string name="settings_restart_dialog_title">Omstart kreves</string>
