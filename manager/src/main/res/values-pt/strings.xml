@@ -95,7 +95,6 @@
     <string name="settings_start_on_boot_bug">Devido a uma falha no Android 11-12, a depuração sem fios não se lembra de nenhuma rede autorizada.\n\nTerá de reautorizar a rede em cada reinicialização, pressionando em \"Permitir\" quando aparecer o diálogo de autorização.</string>
     <string name="settings_use_system_color">Use o tema do sistema</string>
     <string name="settings_watchdog">Cão de guarda</string>
-    <string name="settings_watchdog_summary">Reiniciar Shizuku automaticamente se parar</string>
     <string name="settings_tcp_mode">Modo TCP</string>
     <string name="settings_tcp_mode_summary">"Permite que o Shizuku reinicie sem Wi-Fi. (O Shizuku deve ter sido iniciado pelo menos uma vez desde o reinício)"</string>
     <string name="settings_restart_dialog_title">É necessário reiniciar.</string>
