@@ -60,8 +60,6 @@
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Neki sistemi (kao što je MIUI) ne dozvoljavaju aplikacijama pristup mreži kada nisu vidljive, čak i ako aplikacija koristi uslugu u prvom planu. Molimo Vas da onemogućite funkcije optimizacije baterije za Shizuku na takvim sistemima.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Покрени (за рутоване уређаје)]]></string>
-    <string name="home_root_description"><![CDATA[Поред тога, Шизуку се може аутоматски покренути при покретању система. Ако не, проверите да ли ваш систем или алати треће стране ограничавају Шизуку.<br>Можете погледати %s.]]></string>
-    <string name="home_root_description_sui"><![CDATA[Ako koristite Magisk, možete probati %1$s. Za root korisnike, na kraju će zameniti Shizuku. Napomena, postojeće aplikacije treba da se malo promeni da biste koristili %2$s.]]></string>
     <string name="home_root_button_start">Почетак</string>
     <string name="home_root_button_restart">Поново покрени</string>
     <!-- Home - Application management -->
@@ -74,7 +72,6 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Додирните да бисте управљали овлашћеним апликацијама]]></string>
     <string name="home_app_management_empty">Апликације које су затражиле или пријавиле Шизуку дозволу биће приказане овде.</string>
     <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Научите Шизуку</string>
     <string name="home_learn_more_description">Научите како да развијате уз Шизуку</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Морате направити додатни корак</string>
@@ -86,17 +83,7 @@
     <string name="app_management_toggle_all">Укључи/искључи све</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Користите Шизуку у терминалним апликацијама</string>
-    <string name="home_terminal_description">Покрените команде преко Шизукуа у терминалним апликацијама које вам се свиђају</string>
-    <string name="terminal_tutorial_1">Прво, извезите датотеке било где где желите. Наћи ћете две датотеке, %1$s и %2$s.</string>
-    <string name="terminal_tutorial_1_description">Ако у изабраној фасцикли постоје датотеке са истим именом, оне ће бити обрисане.\n\nФункција извоза користи SAF (Storage Access Framework). Пријављено је да MIUI прекида функције SAF-а. Ако користите MIUI, можда ћете морати да извучете датотеку из Shizuku-ове апликације или да је преузмете са GitHub-а.</string>
     <string name="terminal_export_files">Извоз датотека</string>
-    <string name="terminal_tutorial_2">Затим, користите било који уређивач текста да бисте отворили и уредили %1$s.</string>
-    <string name="terminal_tutorial_2_description">На пример, ако желите да користите Шизуку у %1$s, требало би да замените %2$s са %3$s (%4$s је назив пакета %1$s).</string>
-    <string name="terminal_tutorial_3">Коначно, преместите датотеке негде где ваша терминална апликација може да им приступи, моћи ћете да користите %1$s за покретање команди преко Шизукуа.</string>
-    <string name="terminal_tutorial_3_description">Неки савети: доделите дозволу за извршавање %1$s и додајте је у %2$s, моћи ћете директно да користите %1$s .</string>
-    <string name="rish_description"><![CDATA[Са %1$s, у било којој терминалној апликацији, можете се повезати и интераговати са љуском коју покреће Shizuku.
-<p>О детаљној употреби %1$s, додирните да бисте видели документ.
-    ]]></string>
     <!-- Settings -->
     <string name="settings_title">Подешавања</string>
     <string name="settings_behavior">Понашање</string>
