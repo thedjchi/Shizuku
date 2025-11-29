@@ -97,7 +97,6 @@
     <string name="settings_start_on_boot_bug">Из-за ошибки в Android 11-12 беспроводная отладка не запоминает ни одной авторизованной сети.\n\nПри каждой перезагрузке вам нужно будет повторно авторизировать сеть, нажав «Разрешить» при появлении диалога авторизации.</string>
     <string name="settings_use_system_color">Палитра цветов из системы</string>
     <string name="settings_watchdog">Сторожевой пес</string>
-    <string name="settings_watchdog_summary">Автоматически перезапустить Shizuku, если он остановится</string>
     <string name="settings_tcp_mode">TCP-режим</string>
     <string name="settings_tcp_mode_summary">"Позволяет Shizuku перезапуститься без Wi-Fi. (Shizuku должен был запуститься один раз после перезагрузки)"</string>
     <string name="settings_restart_dialog_title">Требуется перезагрузка</string>
