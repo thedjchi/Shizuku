@@ -92,7 +92,6 @@
     <string name="settings_start_on_boot_bug">En raison d\'un bug dans Android 11-12, le débogage sans fil ne mémorise aucun réseau autorisé.\n\nVous devrez réautoriser le réseau à chaque redémarrage en appuyant sur « Autoriser » lorsque la boîte de dialogue d\'autorisation apparaît.</string>
     <string name="settings_use_system_color">Utiliser la couleur du thème système</string>
     <string name="settings_watchdog">Chien de garde</string>
-    <string name="settings_watchdog_summary">Redémarre automatiquement Shizuku si ça s’arrête</string>
     <string name="settings_tcp_mode">Mode TCP</string>
     <string name="settings_tcp_mode_summary">"Permet à Shizuku de redémarrer sans Wi-Fi. (Shizuku a dû commencer une fois depuis le reboot)"</string>
     <string name="settings_restart_dialog_title">Redémarrage requis</string>
