@@ -15,7 +15,8 @@ This version of Shizuku includes some extra features over the original version, 
 * **TCP mode:** (i.e., the `adb tcpip` command) once Shizuku successfully starts with Wi-Fi after a reboot, you can stop/restart Shizuku without a Wi-Fi connection!
 * **Watchdog service:** automatically restarts Shizuku if it stops unexpectedly, and can alert you of crashes/potential fixes
 * **Start/stop intents**: toggle Shizuku on-demand using automation apps (e.g., Tasker, MacroDroid, Automate)
-* **Android/Google TV and VR headset support:** UI is now compatible with D-Pad remotes, pairing on Android 14+ TVs is now supported, and the multi-window pairing dialog is toggleable in settings for VR headsets  
+* **Android/Google TV and VR headset support:** UI is now compatible with D-Pad remotes, pairing on Android 14+ TVs is now supported, and the multi-window pairing dialog is toggleable in settings for VR headsets
+* **MediaTek support:** fixes a critical bug in the original v13.6.0 which prevented Shizuku from working on MediaTek devices
 * And more!
 
 ### Wiki
