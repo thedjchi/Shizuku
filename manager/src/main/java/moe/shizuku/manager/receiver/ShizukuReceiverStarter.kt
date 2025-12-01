@@ -47,8 +47,7 @@ object ShizukuReceiverStarter {
         }
     }
 
-    fun showNotification(context: Context, msg: String? = null) {
-
+    fun buildNotification(context: Context, msg: String? = null): Notification {
         val channel = NotificationChannel(
             CHANNEL_ID,
             context.getString(R.string.wadb_notification_title),
@@ -85,7 +84,7 @@ object ShizukuReceiverStarter {
             nb.setContentText(context.getString(R.string.wadb_notification_wifi_required))
         }
 
-        val notification = nb
+        return nb
             .setSmallIcon(R.drawable.ic_system_icon)
             .setContentTitle(context.getString(R.string.wadb_notification_title))
             .setOngoing(true)
@@ -95,8 +94,11 @@ object ShizukuReceiverStarter {
             .setDeleteIntent(restorePendingIntent)
             .setContentIntent(wifiPendingIntent)
             .build()
+    }
 
-        nm.notify(NOTIFICATION_ID, notification)
+    fun showNotification(context: Context, msg: String? = null) {
+        val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        nm.notify(NOTIFICATION_ID, buildNotification(context, msg))
     }
 
     private fun rootStart(context: Context) {

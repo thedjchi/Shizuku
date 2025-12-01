@@ -1,12 +1,15 @@
 package moe.shizuku.manager.worker
 
+import android.app.KeyguardManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
-import android.database.ContentObserver
+import android.content.BroadcastReceiver
 import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
+import android.database.ContentObserver
 import android.net.Uri
 import android.provider.Settings
 import androidx.core.app.NotificationCompat
@@ -59,6 +62,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
                 var awaitingAuth = false
                 var timeoutJob: Job? = null
+                var unlockReceiver: BroadcastReceiver? = null
 
                 fun startDiscoveryWithTimeout() {
                     adbMdns.start()
@@ -69,19 +73,42 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     }
                 }
 
+                fun handleAuth() {
+                    val km = applicationContext.getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+                    if (km.isKeyguardLocked) {
+                        val notification = ShizukuReceiverStarter.buildNotification(
+                            applicationContext,
+                            applicationContext.getString(R.string.wadb_notification_wifi_found)
+                        )
+                        val foregroundInfo = ForegroundInfo(
+                            ShizukuReceiverStarter.NOTIFICATION_ID,
+                            notification
+                        )
+                        setForegroundAsync(foregroundInfo)
+
+                        val filter = IntentFilter(Intent.ACTION_USER_PRESENT)
+                        unlockReceiver = object : BroadcastReceiver() {
+                            override fun onReceive(context: Context, intent: Intent) {
+                                if (intent.action == Intent.ACTION_USER_PRESENT) {
+                                    context.unregisterReceiver(this)
+                                    unlockReceiver = null
+                                    Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
+                                }
+                            }
+                        }
+                        applicationContext.registerReceiver(unlockReceiver, filter)
+                    } else awaitingAuth = true
+                    timeoutJob?.cancel()
+                    adbMdns.stop()
+                }
+
                 val observer = object : ContentObserver(null) {
                     override fun onChange(selfChange: Boolean) {
-                        val value = Settings.Global.getInt(cr, "adb_wifi_enabled", 0)
-                        if (value == 0) {
-                            if (awaitingAuth) {
+                        when (Settings.Global.getInt(cr, "adb_wifi_enabled", 0)) {
+                            0 -> if (awaitingAuth) {
                                 close(CancellationException("User did not authorize network for wireless debugging"))
-                            } else {
-                                awaitingAuth = true
-                                timeoutJob?.cancel()
-                                adbMdns.stop()
-                            }
-                        } else if (value == 1) {
-                            startDiscoveryWithTimeout()
+                            } else handleAuth()
+                            1 -> startDiscoveryWithTimeout()
                         }
                     }
                 }
@@ -93,6 +120,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     adbMdns.stop()
                     timeoutJob?.cancel()
                     cr.unregisterContentObserver(observer)
+                    unlockReceiver?.let { applicationContext.unregisterReceiver(it) }
                 }
             }.first()
             
