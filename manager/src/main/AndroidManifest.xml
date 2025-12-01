@@ -78,7 +78,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
 
-                <!-- 2023.08.03: Google play enforces that apps with LEANBACK_LAUNCHER Activity must be uploaded with App Bundle format, -->
+                <!-- 2023.08.03: Google play enforces that apps with LEANBACK_LAUNCHER Activity must
+                be uploaded with App Bundle format, -->
                 <!-- and possibly additional review steps. To avoid problems, remove it temporarily. -->
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
@@ -147,9 +148,10 @@
             android:exported="false"
             android:foregroundServiceType="shortService" />
 
-        <service android:name=".adb.AdbPairingAccessibilityService"
+        <service
+            android:name=".adb.AdbPairingAccessibilityService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
@@ -162,13 +164,14 @@
             android:name=".service.WatchdogService"
             android:exported="false"
             android:foregroundServiceType="specialUse">
-            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-            android:value="Many apps rely on this app's API service for core functionality.
-                The API service can stop unexpectedly for various reasons (e.g., when connecting to Android Auto over USB).
-                This prevents the other apps from functioning properly.
-                The watchdog service would ensure the API is always available for the apps to use.
-                The watchdog service uses minimal resources and battery. There is no constant polling; it only reacts when the API service stops unexpectedly.
-                The watchdog service is opt-in and toggleable via settings, so users can choose to disable it at any time if not desired."/>
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Many apps rely on this app's API service for core functionality.
+                    The API service can stop unexpectedly for various reasons (e.g., when connecting to Android Auto over USB).
+                    This prevents the other apps from functioning properly.
+                    The watchdog service would ensure the API is always available for the apps to use.
+                    The watchdog service uses minimal resources and battery. There is no constant polling; it only reacts when the API service stops unexpectedly.
+                    The watchdog service is opt-in and toggleable via settings, so users can choose to disable it at any time if not desired." />
         </service>
 
         <receiver
