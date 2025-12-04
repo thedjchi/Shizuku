@@ -199,7 +199,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="moe.shizuku.privileged.api.START" />
+                <action android:name="${applicationId}.START" />
             </intent-filter>
         </receiver>
 
@@ -208,7 +208,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="moe.shizuku.privileged.api.STOP" />
+                <action android:name="${applicationId}.STOP" />
             </intent-filter>
         </receiver>
 

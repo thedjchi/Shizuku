@@ -6,7 +6,8 @@ import android.content.Intent
 
 class ManualStartReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action != "moe.shizuku.privileged.api.START") return
+        val applicationId = context.packageName
+        if (intent.action != "${applicationId}.START") return
         ShizukuReceiverStarter.start(context)
     }
 }

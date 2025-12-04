@@ -9,7 +9,8 @@ import rikka.shizuku.Shizuku
 
 class ManualStopReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action != "moe.shizuku.privileged.api.STOP") return
+        val applicationId = context.packageName
+        if (intent.action != "${applicationId}.STOP") return
         if (!ShizukuStateMachine.isRunning()) return
 
         ShizukuStateMachine.set(ShizukuStateMachine.State.STOPPING)
