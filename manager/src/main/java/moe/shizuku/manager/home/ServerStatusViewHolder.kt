@@ -15,7 +15,6 @@ import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
 import rikka.shizuku.Shizuku
 import rikka.shizuku.ShizukuApiConstants
-import rikka.shizuku.server.ServerConstants
 
 class ServerStatusViewHolder(private val binding: HomeServerStatusBinding, root: View) :
     BaseViewHolder<ServiceStatus>(root) {
