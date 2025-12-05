@@ -37,6 +37,7 @@
 \n請注意，在 Android 11 之前，要啟用無線偵錯必須先與電腦連線。</string>
     <string name="dialog_usb_debugging_not_enabled">USB 除錯功能未啟用。\n請在「開發者選項」中啟用它。</string>
     <string name="dialog_adb_pairing_accessibility_enable">請啟用無障礙服務以開始配對流程。這讓雫能偵測到配對代碼。\n\n無障礙服務會在找到代碼後或1分鐘後關閉以節省能源。</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">請依照以下步驟開始配對：\n- 進入「開發者選項」\n- 啟用「USB偵錯」與「無線除錯」\n- 點選「無線偵錯」左側\n- 點擊「使用配對碼裝置」。 Shizuku 將自動檢測配對碼。</string>
     <string name="adb_pairing_requires_multi_window">請先進入「分割畫面」(多視窗) 模式。</string>
     <string name="adb_pairing_requires_multi_window_reason">系統需求配對對話框始終可見。只有使用分割畫面模式才能讓此應用程式和系統對話方塊同時可見。</string>
     <string name="adb_error_key_store">無法產生無線調試密鑰。\n這可能是因為此裝置的金鑰庫機制已損壞。</string>
@@ -47,6 +48,8 @@
     <string name="notification_settings">通知設定</string>
     <string name="adb_pairing_tutorial_title">將 Shizuku 與您的裝置配對</string>
     <string name="adb_pairing_tutorial_content_notification">一則來自 Shizuku 的通知將協助您完成配對。</string>
+    <string name="adb_pairing_tutorial_content_steps">進入“開發者選項”，然後啟用“USB調試”和“無線調試”。</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">點選「無線偵錯」左側，然後點選「使用配對碼配對裝置」。輸入通知中的代碼以完成配對。</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">配對過程需要您與 Shizuku 的通知互動。請允許 Shizuku 發布通知。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 使用者可能需要在系統設定中從「通知管理」-「通知顯示設定」將通知樣式切換為「原生樣式」。</string>
     <string name="adb_pairing_tutorial_content_miui_2">否則，您可能無法輸入通知中的配對碼。</string>
