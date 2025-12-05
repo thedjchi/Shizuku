@@ -33,9 +33,7 @@
     <string name="cannot_connect_port">Tidak boleh menyambung ke perkhidmatan penyahpepijatan wayarles.\n\nSila pastikan Shizuku disenaraikan putih dalam semua firewall, blok iklan, VPN atau apl serupa yang boleh menyekat akses rangkaian.</string>
     <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer adalah satu kemestian.</string>
     <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila dayakannya dalam \"Pilihan Pembangun\".</string>
-    <string name="dialog_adb_pairing_message">Sila mulakan berpasangan dengan melakukan langkah berikut: \"Pilihan Pembangun\" - \"Penyahpepijatan wayarles\" - \"Gandingkan peranti dengan kod berpasangan.\"\n\nSelepas proses berpasangan bermula, anda akan dapat memasukkan kod berpasangan.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Sila dayakan perkhidmatan kebolehaksesan untuk memulakan proses berpasangan. Ini membolehkan Shizuku mengesan kod berpasangan.\n\nPerkhidmatan kebolehaksesan akan dimatikan apabila kod ditemui atau selepas 1 minit untuk menjimatkan tenaga.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Sila navigasi ke \"Pilihan Pembangun\" &gt; \"Penyahpepijatan wayarles\" &gt; \"Gandingkan peranti dengan kod berpasangan.\" Shizuku akan mengesan kod pasangan secara automatik.</string>
     <string name="adb_pairing_requires_multi_window">Sila masukkan mod skrin belah (berbilang tetingkap) dahulu.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem memerlukan dialog berpasangan untuk sentiasa kelihatan. Menggunakan mod skrin belah ialah satu-satunya cara untuk membolehkan apl ini dan dialog sistem kelihatan pada masa yang sama.</string>
     <string name="adb_error_key_store">Tidak dapat menjana kunci untuk penyahpepijatan wayarles.\nIni mungkin kerana mekanisme KeyStore peranti ini rosak.</string>
@@ -46,12 +44,9 @@
     <string name="notification_settings">Pilihan pemberitahuan</string>
     <string name="adb_pairing_tutorial_title">Gandingkan Shizuku dengan peranti anda</string>
     <string name="adb_pairing_tutorial_content_notification">Pemberitahuan daripada Shizuku akan membantu anda melengkapkan gandingan.</string>
-    <string name="adb_pairing_tutorial_content_steps">Masukkan \"Pilihan pembangun\" - \"Penyahpepijatan wayarles\". Ketik \"Gandingkan peranti dengan kod berpasangan\", anda akan melihat kod enam digit.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Masukkan kod dalam pemberitahuan untuk melengkapkan gandingan.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proses berpasangan memerlukan anda berinteraksi dengan pemberitahuan daripada Shizuku. Sila benarkan Shizuku menyiarkan pemberitahuan.</string>
     <string name="adb_pairing_tutorial_content_miui">Pengguna MIUI mungkin perlu menukar gaya pemberitahuan kepada \"Android\" daripada \"Pemberitahuan\" - \"Teduhan pemberitahuan\" dalam tetapan sistem.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Jika tidak, anda mungkin tidak dapat memasukkan kod berpasangan daripada pemberitahuan.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Sila ambil perhatian, bahagian kiri pilihan \"Penyahpepijatan tanpa wayar\" boleh diklik, mengetiknya akan membuka halaman baharu. Hanya menghidupkan suis di sebelah kanan adalah tidak betul.</string>
     <string name="adb_pairing_tutorial_content_finish">Kembali ke Shizuku dan mulakan Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku perlu mengakses rangkaian tempatan. Ia dikawal oleh kebenaran rangkaian.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sesetengah sistem (seperti MIUI) tidak membenarkan apl mengakses rangkaian apabila ia tidak kelihatan, walaupun apl menggunakan perkhidmatan latar depan. Sila lumpuhkan ciri pengoptimuman bateri untuk Shizuku pada sistem sedemikian.</string>
