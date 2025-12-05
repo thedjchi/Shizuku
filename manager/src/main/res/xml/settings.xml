@@ -2,7 +2,9 @@
 <PreferenceScreen   xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory android:title="@string/settings_behavior">
+    <PreferenceCategory
+        android:key="category_behavior"
+        android:title="@string/settings_behavior">
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="start_on_boot"
@@ -30,7 +32,9 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/settings_language">
+    <PreferenceCategory
+        android:key="category_language"
+        android:title="@string/settings_language">
 
         <rikka.preference.SimpleMenuPreference
             android:defaultValue="SYSTEM"
@@ -49,7 +53,9 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/settings_user_interface">
+    <PreferenceCategory
+        android:key="category_ui"
+        android:title="@string/settings_user_interface">
 
         <moe.shizuku.manager.settings.IntegerSimpleMenuPreference
             android:entries="@array/night_mode"
@@ -69,7 +75,9 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/settings_support">
+    <PreferenceCategory
+        android:key="category_support"
+        android:title="@string/settings_support">
 
         <Preference
             android:key="help"
@@ -81,7 +89,9 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/settings_advanced">
+    <PreferenceCategory
+        android:key="category_advanced"
+        android:title="@string/settings_advanced">
 
         <rikka.material.preference.MaterialSwitchPreference
             android:key="legacy_pairing"

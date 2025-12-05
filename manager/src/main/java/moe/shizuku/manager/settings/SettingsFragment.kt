@@ -48,6 +48,7 @@ import moe.shizuku.manager.receiver.NotifCancelReceiver
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.util.ResourceUtils
 import rikka.html.text.HtmlCompat
@@ -73,6 +74,8 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
     private lateinit var useSystemColorPreference: TwoStatePreference
     private lateinit var helpPreference: Preference
     private lateinit var reportBugPreference: Preference
+    private lateinit var legacyPairingPreference: TwoStatePreference
+    private lateinit var advancedCategory: PreferenceCategory
 
     private lateinit var batteryOptimizationListener: ActivityResultLauncher<Intent>
     private var batteryOptimizationContinuation: CancellableContinuation<Boolean>? = null
@@ -105,9 +108,11 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         useSystemColorPreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
         helpPreference = findPreference(KEY_HELP)!!
         reportBugPreference = findPreference(KEY_REPORT_BUG)!!
+        legacyPairingPreference = findPreference(KEY_LEGACY_PAIRING)!!
+        advancedCategory = findPreference(KEY_CATEGORY_ADVANCED)!!
 
         batteryOptimizationListener = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            val accepted = ShizukuSettings.isIgnoringBatteryOptimizations(requireContext())
+            val accepted = SettingsHelper.isIgnoringBatteryOptimizations(requireContext())
             batteryOptimizationContinuation?.resume(accepted)
         }
 
@@ -309,6 +314,12 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
             }
             true
         }
+
+        legacyPairingPreference.apply {
+            isVisible = !EnvironmentUtils.isTelevision()
+        }
+
+        advancedCategory.isVisible = legacyPairingPreference.isVisible
     }
 
     override fun onResume() {
@@ -407,7 +418,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         onResult: (Boolean) -> Unit
     ) {
         val context = requireContext()
-        if (!newValue || ShizukuSettings.isIgnoringBatteryOptimizations(context) || EnvironmentUtils.isTelevision()) {
+        if (!newValue || SettingsHelper.isIgnoringBatteryOptimizations(context) || EnvironmentUtils.isTelevision()) {
             onResult(true)
             return
         }
@@ -421,7 +432,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                     msg = context.getString(R.string.snackbar_battery_optimization_settings),
                     duration = 6000,
                     actionText = context.getString(R.string.snackbar_action_fix),
-                    action = { ShizukuSettings.requestIgnoreBatteryOptimizations(context, batteryOptimizationListener) },
+                    action = { SettingsHelper.requestIgnoreBatteryOptimizations(context, batteryOptimizationListener) },
                     onDismiss = { event ->
                         if (event != Snackbar.Callback.DISMISS_EVENT_ACTION && continuation.isActive)
                             continuation.resume(false)

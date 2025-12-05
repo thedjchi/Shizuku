@@ -250,14 +250,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/adb_pairing_tutorial_content_steps" />
 
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/adb_pairing_tutorial_content_left_is_clickable"
-                    android:textColor="?colorError" />
-
                 <Button
                     android:id="@+id/developer_options"
                     android:layout_width="wrap_content"

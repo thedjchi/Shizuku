@@ -15,6 +15,7 @@ import moe.shizuku.manager.Manifest
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.model.ServiceStatus
 import moe.shizuku.manager.utils.Logger.LOGGER
+import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.ShizukuSystemApis
 import rikka.lifecycle.Resource
@@ -71,7 +72,7 @@ class HomeViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.Default) {
             if (!ShizukuSettings.getStartOnBoot(context) && !ShizukuSettings.getWatchdog()) return@launch
             _showBatteryOptimizationSnackbar.postValue(
-                !ShizukuSettings.isIgnoringBatteryOptimizations(context)
+                !SettingsHelper.isIgnoringBatteryOptimizations(context)
             )
         }
     }

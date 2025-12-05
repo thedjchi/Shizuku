@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager
 import android.provider.Settings
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.R
+import moe.shizuku.manager.utils.SettingsPage
 
 class WadbEnableUsbDebuggingDialogFragment :DialogFragment() {
 
@@ -27,14 +28,8 @@ class WadbEnableUsbDebuggingDialogFragment :DialogFragment() {
 
     private fun onDialogShow(dialog: AlertDialog) {
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-            val intent = Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            intent.putExtra(":settings:fragment_args_key", "enable_adb")
-            try {
-                dismissAllowingStateLoss()
-                it.context.startActivity(intent)
-            } catch (_: ActivityNotFoundException) {
-            }
+            dismissAllowingStateLoss()
+            SettingsPage.Developer.HighlightUsbDebugging.launch(it.context)
         }
     }
 

@@ -25,6 +25,7 @@ import moe.shizuku.manager.management.appsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
 import moe.shizuku.manager.utils.AppIconCache
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.content.asActivity
 import rikka.core.ktx.unsafeLazy
@@ -73,7 +74,7 @@ abstract class HomeActivity : AppBarActivity() {
                         msg = getString(R.string.snackbar_battery_optimization_home),
                         duration = Snackbar.LENGTH_INDEFINITE,
                         actionText = getString(R.string.snackbar_action_fix),
-                        action = { ShizukuSettings.requestIgnoreBatteryOptimizations(this, null) }
+                        action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) }
                     )
                     homeModel.batteryOptimizationHandled()
                 }

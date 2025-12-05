@@ -9,6 +9,8 @@ import androidx.fragment.app.FragmentManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbPairingAccessibilityService
+import moe.shizuku.manager.utils.SettingsHelper
+import moe.shizuku.manager.utils.SettingsPage
 
 class AdbPairAccessibilityDialogFragment: DialogFragment() {
 
@@ -26,7 +28,7 @@ class AdbPairAccessibilityDialogFragment: DialogFragment() {
                 .setTitle(R.string.dialog_adb_pairing_title)
                 .setMessage(R.string.dialog_adb_pairing_accessibility_enable)
                 .setPositiveButton(R.string.enable) { _, _ ->
-                    startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
+                    SettingsPage.Accessibility.launch(context)
                 }
                 .setNegativeButton(android.R.string.cancel, null)
                 .create()
@@ -35,7 +37,7 @@ class AdbPairAccessibilityDialogFragment: DialogFragment() {
                 .setTitle(R.string.dialog_adb_pairing_title)
                 .setMessage(R.string.dialog_adb_pairing_accessibility_navigate)
                 .setPositiveButton(R.string.development_settings) { _, _ ->
-                    startActivity(Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS))
+                    SettingsPage.Developer.HighlightWirelessDebugging.launch(context)
                 }
                 .setNegativeButton(android.R.string.cancel, null)
                 .create()

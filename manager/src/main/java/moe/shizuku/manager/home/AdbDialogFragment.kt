@@ -20,6 +20,7 @@ import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.databinding.AdbDialogBinding
 import moe.shizuku.manager.starter.StarterActivity
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.SettingsPage
 
 @RequiresApi(Build.VERSION_CODES.R)
 class AdbDialogFragment : DialogFragment() {
@@ -59,13 +60,7 @@ class AdbDialogFragment : DialogFragment() {
             Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 1)
 
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-            val intent = Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            intent.putExtra(":settings:fragment_args_key", "toggle_adb_wireless")
-            try {
-                it.context.startActivity(intent)
-            } catch (_: ActivityNotFoundException) {
-            }
+            SettingsPage.Developer.HighlightWirelessDebugging.launch(context)
         }
 
         port.observe(this) {

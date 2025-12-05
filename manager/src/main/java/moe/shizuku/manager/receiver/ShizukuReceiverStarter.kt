@@ -20,6 +20,7 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.ShizukuSettings.LaunchMethod
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.SettingsPage
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.UserHandleCompat
 import moe.shizuku.manager.worker.AdbStartWorker
@@ -71,7 +72,7 @@ object ShizukuReceiverStarter {
             context, 0, restoreIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        val wifiIntent = Intent(Settings.Panel.ACTION_INTERNET_CONNECTIVITY)
+        val wifiIntent = SettingsPage.InternetPanel.buildIntent(context)
         val wifiPendingIntent = PendingIntent.getActivity(
             context, 0, wifiIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
