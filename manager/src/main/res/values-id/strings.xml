@@ -36,9 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">Debug nirkabel belum diaktifkan.
 \nSebagai catatan, Anda harus terhubung ke komputer untuk mengaktifkan debug nirkabel pada perangkat sebelum Android 11.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging tidak diaktifkan.\nHarap aktifkan di \"Opsi Pengembang\".</string>
-    <string name="dialog_adb_pairing_message">Silakan mulai pemasangan dengan melakukan langkah-langkah berikut: \"Opsi Pengembang\" - \"Debugging Nirkabel\" - \"Pasangkan perangkat dengan kode pemasangan.\"\n\nSetelah proses pemasangan dimulai, Anda akan dapat memasukkan kode pemasangan.</string>
+    <string name="dialog_adb_pairing_message">Silakan mulai memasangkan dengan melakukan langkah-langkah berikut:\n- Arahkan ke \"Opsi Pengembang\"\n- Aktifkan \"Debugging USB\" dan \"Debugging Nirkabel\"\n- Ketuk sisi kiri \"Debugging Nirkabel\"\n- Ketuk \"Pasangkan perangkat dengan kode pemasangan\"\n- Masukkan kode pemasangan di notifikasi</string>
     <string name="dialog_adb_pairing_accessibility_enable">Harap aktifkan layanan aksesibilitas untuk memulai proses pemasangan. Ini memungkinkan Shizuku mendeteksi kode pemasangan.\n\nLayanan aksesibilitas akan dinonaktifkan ketika kode ditemukan atau setelah 1 menit untuk menghemat energi.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Silakan buka \"Opsi Pengembang\" &gt; \"Debugging Nirkabel\" &gt; \"Pasangkan perangkat dengan kode pemasangan.\" Shizuku akan mendeteksi kode pemasangan secara otomatis.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Silakan mulai pemasangan dengan melakukan langkah-langkah berikut:\n- Buka \"Opsi Pengembang\"\n- Aktifkan \"Debugging USB\" dan \"Debugging Nirkabel\"\n- Ketuk sisi kiri \"Debugging Nirkabel\"\n- Ketuk \"Pasangkan perangkat dengan kode pemasangan.\" Shizuku akan secara otomatis mendeteksi kode pemasangan.</string>
     <string name="adb_pairing_requires_multi_window">Harap pindah ke mode layar pisah (split-screen) terlebih dahulu.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem mengharuskan dialog pemasangan selalu terlihat. Menggunakan mode layar terpisah adalah satu-satunya cara agar aplikasi ini dan dialog sistem terlihat secara bersamaan.</string>
     <string name="adb_error_key_store">Tidak dapat membuat kunci untuk debugging nirkabel.\nIni mungkin karena mekanisme KeyStore perangkat ini rusak.</string>
@@ -49,12 +49,11 @@
     <string name="notification_settings">Pengaturan notifikasi</string>
     <string name="adb_pairing_tutorial_title">Pasangkan Shizuku dengan perangkat Anda</string>
     <string name="adb_pairing_tutorial_content_notification">Notifikasi dari Shizuku akan membantu Anda untuk menyelesaikan pemasangan.</string>
-    <string name="adb_pairing_tutorial_content_steps">Masuk \"Opsi developer\" - \"Debug nirkabel\". Sentuh \"Sambungkan perangkat dengan kode penghubung\", Anda akan melihat enam digit kode.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Masukkan kode pada notifikasi untuk menyelesaikan penyambungan.</string>
+    <string name="adb_pairing_tutorial_content_steps">Arahkan ke \"Opsi Pengembang\", lalu aktifkan \"Debugging USB\" dan \"Debugging Nirkabel\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Ketuk sisi kiri \"Debugging Nirkabel\", lalu ketuk \"Pasangkan perangkat dengan kode pemasangan\". Masukkan kode tersebut ke notifikasi untuk menyelesaikan pemasangan.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proses penyambungan membutuhkan Anda untuk berinteraksi dengan notifikasi dari Shizuku. Mohon izinkan Shizuku untuk mengirim pemberitahuan.</string>
     <string name="adb_pairing_tutorial_content_miui">Pengguna MIUI mungkin perlu mengubah gaya pemberitahuan ke \"Android\" dari \"Pemberitahuan\" - \"Bayangan pemberitahuan\" di pengaturan sistem.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Jika tidak, Anda mungkin tidak dapat memasukkan kode pemasangan dari notifikasi.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Harap dicatat, bagian kiri opsi \"Debugging Nirkabel\" dapat diklik. Mengetuknya akan membuka halaman baru. Menyalakan sakelar di sebelah kanan saja tidak tepat.</string>
     <string name="adb_pairing_tutorial_content_finish">Kembali ke Shizuku dan mulai Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku perlu mengakses jaringan lokal. Jaringan ini dikontrol oleh izin jaringan.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Beberapa sistem (seperti MIUI) melarang aplikasi mengakses jaringan saat tidak terlihat, meskipun aplikasi tersebut menggunakan layanan latar depan. Harap nonaktifkan fitur pengoptimalan baterai untuk Shizuku pada sistem tersebut.</string>

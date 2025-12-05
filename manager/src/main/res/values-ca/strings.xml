@@ -35,9 +35,7 @@
     <string name="cannot_connect_port">No es pot connectar al servei de depuració sense fil.\n\nAssegureu-vos que Shizuku estigui a la llista blanca de tots els tallafocs, bloquejadors d\'anuncis, VPN o aplicacions similars que puguin restringir l\'accés a la xarxa.</string>
     <string name="dialog_wireless_adb_not_enabled">La depuració sense fils no està activada.\nTingues en compte que, abans d\'Android 11, per activar la depuració sense fils, la connexió a l\'ordinador era imprescindible.</string>
     <string name="dialog_usb_debugging_not_enabled">La depuració USB no està activada.\nSi us plau, activa\'l a \"Opcions de desenvolupador\".</string>
-    <string name="dialog_adb_pairing_message">Si us plau, comença a emparellar fent els següents passos: \"Opcions de desenvolupador\" - \"Depuració sense fils\" - \"Aparella dispositiu amb codi d\'aparellament.\"\n\nUn cop comenci el procés d\'aparellament, podràs introduir el codi d\'aparellament.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Si us plau, activa el servei d\'accessibilitat perquè iniciï el procés d\'aparellament. Això permet a la Shizuku detectar el codi d\'aparellament.\n\nEl servei d\'accessibilitat s\'apagarà quan es trobi el codi o després d\'un minut per estalviar energia.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Si us plau, navegueu a \"Opcions per a desenvolupadors\" &gt; \"Depuració sense fils\" &gt; \"Emparella el dispositiu amb el codi d\'aparellament.\" La Shizuku detectarà automàticament el codi d\'aparellament.</string>
     <string name="adb_pairing_requires_multi_window">Si us plau, entra primer en mode pantalla dividida (amb múltiples finestres).</string>
     <string name="adb_pairing_requires_multi_window_reason">El sistema requereix que el quadre de diàleg d\'emparellament sigui sempre visible. L\'ús del mode de pantalla dividida és l\'única manera de permetre que aquesta aplicació i el quadre de diàleg del sistema siguin visibles alhora.</string>
     <string name="adb_error_key_store">No s\'ha pogut generar la clau per a la depuració sense fil.\nAixò pot ser degut a que el mecanisme KeyStore d\'aquest dispositiu està trencat.</string>
@@ -48,12 +46,9 @@
     <string name="notification_settings">Opcions de notificació</string>
     <string name="adb_pairing_tutorial_title">Emparella la Shizuku amb el teu dispositiu</string>
     <string name="adb_pairing_tutorial_content_notification">Una notificació de la Shizuku t\'ajudarà a completar la parella.</string>
-    <string name="adb_pairing_tutorial_content_steps">Introdueix \"Opcions de desenvolupador\" - \"Depuració sense fils\". Toca \"Emparella dispositiu amb codi d\'aparellament\", veuràs un codi de sis dígits.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Introdueix el codi a la notificació per completar l\'aparellament.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">El procés d\'aparellament requereix que interactuïs amb una notificació de la Shizuku. Si us plau, permeteu que la Shizuku publiqui notificacions.</string>
     <string name="adb_pairing_tutorial_content_miui">Els usuaris de MIUI poden haver de canviar l\'estil de notificació a \"Android\" des de \"Notificació\" a \"Notificació\" a la configuració del sistema.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Altrament, és possible que no puguis introduir el codi d\'emparellament de la notificació.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Tingueu en compte que es pot fer clic a la part esquerra de l\'opció \"Depuració sense fil\", i si hi toqueu, s\'obrirà una pàgina nova. Només activar l\'interruptor de la dreta és incorrecte.</string>
     <string name="adb_pairing_tutorial_content_finish">Torna a Shizuku i comença Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">La Shizuku necessita accedir a la xarxa local. Està controlada pel permís de xarxa.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alguns sistemes (com ara MIUI) no permeten que les aplicacions accedeixin a la xarxa quan no són visibles, fins i tot si l\'aplicació utilitza un servei en primer pla. Si us plau, desactiveu les funcions d\'optimització de la bateria per a Shizuku en aquests sistemes.</string>

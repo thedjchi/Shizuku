@@ -36,9 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">การแก้ไขข้อบกพร่องผ่าน Wi-Fi ไม่ถูกเปิดไว้
 \nหมายเหตุ หาก Android เป็นรุ่นที่เก่ากว่า 11 การจะเปิดการแก้ไขข้อบกพร่องผ่าน Wi-Fi จำเป็นต้องมีการเชื่อมต่อกับคอมพิวเตอร์</string>
     <string name="dialog_usb_debugging_not_enabled">การดีบัก USB ไม่ได้เปิดใช้งาน\nโปรดเปิดใช้งานใน \"ตัวเลือกสำหรับนักพัฒนา\"</string>
-    <string name="dialog_adb_pairing_message">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้: \"ตัวเลือกนักพัฒนา\" - \"การดีบักไร้สาย\" - \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\"\n\nหลังจากเริ่มกระบวนการจับคู่แล้ว คุณจะสามารถป้อนรหัสจับคู่ได้</string>
+    <string name="dialog_adb_pairing_message">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้:\n- ไปที่ \"ตัวเลือกสำหรับนักพัฒนา\"\n- เปิดใช้งาน \"การแก้จุดบกพร่อง USB\" และ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะด้านซ้ายของ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะ \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\"\n- ป้อนรหัสจับคู่ในข้อความแจ้งเตือน</string>
     <string name="dialog_adb_pairing_accessibility_enable">กรุณาเปิดใช้งานบริการการเข้าถึงเพื่อเริ่มขั้นตอนการจับคู่ ซึ่งจะทำให้ Shizuku สามารถตรวจจับรหัสการจับคู่ได้\n\nบริการการเข้าถึงจะถูกปิดเมื่อพบรหัส หรือหลังจาก 1 นาที เพื่อประหยัดพลังงาน</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">กรุณาไปที่ \"ตัวเลือกสำหรับนักพัฒนา\" &gt; \"การดีบักไร้สาย\" &gt; \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" Shizuku จะตรวจจับรหัสจับคู่โดยอัตโนมัติ</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้:\n- ไปที่ \"ตัวเลือกสำหรับนักพัฒนา\"\n- เปิดใช้งาน \"การแก้จุดบกพร่อง USB\" และ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะด้านซ้ายของ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะ \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" Shizuku จะตรวจจับรหัสจับคู่โดยอัตโนมัติ</string>
     <string name="adb_pairing_requires_multi_window">โปรดเข้าสู่โหมดแยกหน้าจอ (หลายหน้าต่าง) ก่อน</string>
     <string name="adb_pairing_requires_multi_window_reason">ระบบต้องการกล่องโต้ตอบการจับคู่เพื่อให้มองเห็นได้ตลอดเวลา การใช้โหมดแบ่งหน้าจอเป็นวิธีเดียวที่จะทําให้แอปนี้และกล่องโต้ตอบระบบมองเห็นได้พร้อมกัน</string>
     <string name="adb_error_key_store">ไม่สามารถสร้างคีย์สําหรับการดีบักแบบไร้สาย\nอาจเป็นเพราะกลไก KeyStore ของอุปกรณ์นี้เสีย</string>
@@ -49,12 +49,11 @@
     <string name="notification_settings">ตัวเลือกการแจ้งเตือน</string>
     <string name="adb_pairing_tutorial_title">จับคู่ Shizuku กับอุปกรณ์</string>
     <string name="adb_pairing_tutorial_content_notification">การแจ้งเตือนจาก Shizuku จะช่วยให้เสร็จสิ้นกระบวนการจับคู่</string>
-    <string name="adb_pairing_tutorial_content_steps">เข้าไปยัง \"ตัวเลือกสำหรับนักพัฒนาแอป\" - \"การแก้ไขข้อบกพร่องผ่าน Wi-Fi\" แตะ \"จับคู่อุปกรณ์ผ่านรหัสการจับคู่\" ก็จะพบกับรหัสหกตัว</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">ป้อนรหัสลงไปในการแจ้งเตือนเพื่อเสร็จสิ้นการจับคู่</string>
+    <string name="adb_pairing_tutorial_content_steps">ไปที่ \"ตัวเลือกสำหรับนักพัฒนา\" จากนั้นเปิดใช้งาน \"การแก้จุดบกพร่องผ่าน USB\" และ \"การแก้จุดบกพร่องแบบไร้สาย\"</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">แตะด้านซ้ายของ \"การแก้ไขข้อบกพร่องแบบไร้สาย\" จากนั้นแตะ \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" ป้อนรหัสในข้อความแจ้งเตือนเพื่อดำเนินการจับคู่ให้เสร็จสมบูรณ์</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">กระบวนการจับคู่จำเป็นต้องมีการป้อนข้อมูลลงในการแจ้งเตือนของ Shizuku โปรดอนุญาตให้ Shizuku ส่งการแจ้งเตือน</string>
     <string name="adb_pairing_tutorial_content_miui">ผู้ใช้ MIUI อาจจำเป็นต้องเปลี่ยนสไตล์การแจ้งเตือนเป็น \"Android\" ใน \"การแจ้งเตือน\" -\"เฉดการแจ้งเตือน\" ในการตั้งค่าของระบบ</string>
     <string name="adb_pairing_tutorial_content_miui_2">มิฉะนั้น คุณอาจไม่สามารถป้อนรหัสการจับคู่จากการแจ้งเตือนได้</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">โปรดทราบว่าส่วนด้านซ้ายของตัวเลือก \"การดีบักแบบไร้สาย\" สามารถคลิกได้ การเปิดสวิตช์ทางด้านขวาเท่านั้นไม่ถูกต้อง</string>
     <string name="adb_pairing_tutorial_content_finish">กลับไปที่ Shizuku และเริ่ม Shizuku</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku จําเป็นต้องเข้าถึงเครือข่ายท้องถิ่น มันถูกควบคุมโดยการอนุญาตเครือข่าย</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">บางระบบ (เช่น MIUI) ไม่อนุญาตให้แอปเข้าถึงเครือข่ายเมื่อมองไม่เห็น แม้ว่าแอปจะใช้บริการเบื้องหน้าก็ตาม โปรดปิดใช้งานคุณสมบัติการเพิ่มประสิทธิภาพแบตเตอรี่สําหรับ Shizuku ในระบบดังกล่าว</string>

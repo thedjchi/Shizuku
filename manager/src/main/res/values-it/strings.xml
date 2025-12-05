@@ -36,9 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">Il debug wireless non è abilitato.
 \nNota, per versioni precedenti ad Android 11, per abilitare il debug wireless, è necessaria la connessione al computer.</string>
     <string name="dialog_usb_debugging_not_enabled">Il debug USB non è abilitato.\nAbilitalo in \"Opzioni sviluppatore\".</string>
-    <string name="dialog_adb_pairing_message">Avvia l\'associazione eseguendo i seguenti passaggi: \"Opzioni sviluppatore\" - \"Debug wireless\" - \"Associa dispositivo con codice di associazione\".\n\nDopo l\'avvio del processo di associazione, potrai inserire il codice di associazione.</string>
+    <string name="dialog_adb_pairing_message">Per iniziare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\"\n- Inserisci il codice di associazione nella notifica</string>
     <string name="dialog_adb_pairing_accessibility_enable">Abilita il servizio di accessibilità per avviare il processo di associazione. Questo permetterà a Shizuku di rilevare il codice di associazione.\n\nIl servizio di accessibilità verrà disattivato quando il codice verrà trovato o dopo 1 minuto per risparmiare energia.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Vai su \"Opzioni sviluppatore\" &gt; \"Debug wireless\" &gt; \"Associa dispositivo con codice di associazione\". Shizuku rileverà automaticamente il codice di associazione.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Per avviare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\". Shizuku rileverà automaticamente il codice di associazione.</string>
     <string name="adb_pairing_requires_multi_window">Entra prima nella modalità schermo diviso (multi-finestra).</string>
     <string name="adb_pairing_requires_multi_window_reason">Il sistema richiede che la dialogo di accoppiamento sia sempre visibile. Usare la modalità split-screen è l\'unico modo per rendere visibile sia questa app che la finestra di dialogo di sistema contemporaneamente.</string>
     <string name="adb_error_key_store">Impossibile generare la chiave per il debug wireless.\nQuesto potrebbe essere dovuto al fatto che il meccanismo KeyStore di questo dispositivo è rotto.</string>
@@ -49,12 +49,11 @@
     <string name="notification_settings">Opzioni di notifica</string>
     <string name="adb_pairing_tutorial_title">Accoppia Shizuku col tuo dispositivo</string>
     <string name="adb_pairing_tutorial_content_notification">Una notifica da Shizuku ti aiuterà a completare l\'accoppiamento.</string>
-    <string name="adb_pairing_tutorial_content_steps">Entra in \"Modalità sviluppatore\" - \"Debug wireless\". Seleziona \"Accoppia dispositivo con codice di associazione\", vedrai un codice a sei cifre.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Inserisci il codice nella notifica per completare l\'accoppiamento.</string>
+    <string name="adb_pairing_tutorial_content_steps">Vai su \"Opzioni sviluppatore\", quindi abilita \"Debug USB\" e \"Debug wireless\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tocca il lato sinistro di \"Debug wireless\", quindi tocca \"Associa dispositivo con codice di associazione\". Inserisci il codice nella notifica per completare l\'associazione.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Il processo di accoppiamento richiede che tu interagisca con una notifica di Shizuku. Consenti a Shizuku di mostrare notifiche.</string>
     <string name="adb_pairing_tutorial_content_miui">Gli utenti MIUI potrebbero dover impostare lo stile di notifica su \"Android\" da \"Notifiche\" - \"Pannello notifiche\" nelle impostazioni di sistema.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Altrimenti, potresti non riuscire a inserire il codice di accoppiamento dalla notifica.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Nota che la parte sinistra dell\'opzione \"Debug wireless\" è cliccabile, toccarla si apre una nuova pagina. Accendere solo l\'interruttore a destra è sbagliato.</string>
     <string name="adb_pairing_tutorial_content_finish">Torna da Shizuku e inizia Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku deve accedere alla rete locale. È controllato dal permesso di rete.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alcuni sistemi (come MIUI) impediscono alle app di accedere alla rete quando non sono visibili, anche se l\'app utilizza un servizio in primo piano. Per favore, disattiva le funzioni di ottimizzazione della batteria per Shizuku su tali sistemi.</string>

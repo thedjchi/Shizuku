@@ -33,9 +33,9 @@
     <string name="cannot_connect_port">Ei saa ühendust traadita silumisteenusega.\n\nPalun veenduge, et Shizuku oleks valges nimekirjas kõigis tulemüürides, reklaamiblokeerijates, VPN-ides või sarnastes rakendustes, mis võivad võrgule juurdepääsu piirata.</string>
     <string name="dialog_wireless_adb_not_enabled">Juhtmevaba silumine ei ole lubatud.\nPane tähele, et enne Android 11-d on juhtmevaba silumise võimaldamiseks arvutiühendus hädavajalik.</string>
     <string name="dialog_usb_debugging_not_enabled">USB silumine ei ole lubatud.\nPalun luba see \"Arendaja valikud\" sektsioonis.</string>
-    <string name="dialog_adb_pairing_message">Palun alusta paaritamist, tehes järgmised sammud: \"Arendaja valikud\" - \"Juhtmevaba silumine\" - \"Seade sidumine sidumiskoodiga.\"\n\nPärast sidumisprotsessi algust saad sisestada sidumiskoodi.</string>
+    <string name="dialog_adb_pairing_message">Alusta sidumist järgmiste sammude abil:\n- Navigeeri jaotisse „Arendaja valikud”\n- Luba „USB silumine” ja „Juhtmevaba silumine”\n- Puuduta valiku „Juhtmevaba silumine” vasakut külge\n- Puuduta valikut „Seadme sidumine sidumiskoodiga”\n- Sisesta teavituses kuvatav sidumiskood</string>
     <string name="dialog_adb_pairing_accessibility_enable">Palun lubage ligipääsetavuse teenus, et alustada sidumisprotsessi. See võimaldab Shizukul tuvastada paarituskoodi.\n\nLigipääsetavuse teenus lülitatakse välja, kui kood leitakse, või pärast 1 minutit, et energiat säästa.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Palun liikuge \"Arendaja valikud\" lehele &gt; \"Juhtmevaba silumine\" &gt; \"Ühenda seade sidumiskoodiga.\" Shizuku tuvastab automaatselt sidumiskoodi.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Alusta sidumist järgmiste sammude abil:\n- Navigeeri jaotisse „Arendaja valikud”\n- Luba „USB silumine” ja „Juhtmevaba silumine”\n- Puuduta valikut „Juhtmevaba silumine” vasakut külge\n- Puuduta valikut „Seadme sidumine sidumiskoodiga”. Shizuku tuvastab sidumiskoodi automaatselt.</string>
     <string name="adb_pairing_requires_multi_window">Palun sisene esmalt jagatud ekraani (mitme akna) režiimi.</string>
     <string name="adb_pairing_requires_multi_window_reason">Süsteem nõuab, et sidumisdialoog oleks alati nähtav. Jagatud ekraani režiimi kasutamine on ainus viis, kuidas see rakendus ja süsteemidialoog korraga nähtavad olla.</string>
     <string name="adb_error_key_store">Traadita silumise võtit ei õnnestunud genereerida.\nSee võib olla tingitud seadme KeyStore\'i mehhanismi katkisest toimimisest.</string>
@@ -46,12 +46,11 @@
     <string name="notification_settings">Teavitusvalikud</string>
     <string name="adb_pairing_tutorial_title">Ühenda Shizuku oma seadmega</string>
     <string name="adb_pairing_tutorial_content_notification">Shizuku teavitus aitab sul paari lõpetada.</string>
-    <string name="adb_pairing_tutorial_content_steps">Sisesta \"Arendaja valikud\" - \"Juhtmevaba silumine\". Vajuta \"Pair device with pairing code\", näed kuuekohalist koodi.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Sisesta teavitusesse kood, et sidumine lõpetada.</string>
+    <string name="adb_pairing_tutorial_content_steps">Liikuge jaotisse \"Arendaja valikud\", seejärel lubage \"USB silumine\" ja \"Traadita silumine\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Puudutage valiku „Traadita ühenduse silumine“ vasakut külge ja seejärel valikut „Seo seade sidumiskoodiga“. Sidumise lõpuleviimiseks sisestage teavituses olev kood.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Sidumisprotsess nõuab, et sa suhtleksid Shizuku teavitusega. Palun lubage Shizukul teavitusi postitada.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI kasutajad võivad vajada teavitusstiili vahetamist \"Androidiks\" süsteemiseadetes \"Notification shade\" asemel \"Notification shade\".</string>
     <string name="adb_pairing_tutorial_content_miui_2">Vastasel juhul ei pruugi te teavituses kuvatud sidumiskoodi sisestada.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Pane tähele, et valiku „Traadita ühenduse silumine” vasakpoolne osa on klõpsatav ja selle puudutamisel avaneb uus leht. Ainult parempoolse lüliti sisselülitamine on vale.</string>
     <string name="adb_pairing_tutorial_content_finish">Minge tagasi Shizukusse ja alustage Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku vajab juurdepääsu kohalikule võrgule. Seda kontrollib võrguluba.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Mõned süsteemid (näiteks MIUI) keelavad rakendustel võrgule juurdepääsu, kui need pole nähtavad, isegi kui rakendus kasutab esiplaanil olevat teenust. Sellistes süsteemides keelake Shizuku aku optimeerimise funktsioonid.</string>

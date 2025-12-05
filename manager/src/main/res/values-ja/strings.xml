@@ -36,9 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">ワイヤレスデバッグが有効になっていません。
 \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
     <string name="dialog_usb_debugging_not_enabled">USBデバッグが有効になっていません。\n「開発者向けオプション」で有効にしてください。</string>
-    <string name="dialog_adb_pairing_message">以下の手順を実行してペアリングを開始してください: 「開発者向けオプション」 - 「ワイヤレスデバッグ」 - 「ペアリングコードを使用してデバイスをペアリングする」\n\nペアリングプロセスが開始すると、ペアリングコードを入力できるようになります。</string>
+    <string name="dialog_adb_pairing_message">以下の手順でペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。\n- 通知にペアリングコードを入力します。</string>
     <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">「開発者向けオプション」 &gt; 「ワイヤレスデバッグ」 &gt; 「ペアリングコードでデバイスをペアリング」に移動してください。Shizukuはペアリングコードを自動的に検出します。</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">以下の手順に従ってペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。Shizukuはペアリングコードを自動的に検出します。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
     <string name="adb_pairing_requires_multi_window_reason">このシステムはペアリングダイアログが常に見えることを求めています。分割画面モードを使うことが、このアプリとシステムのダイアログを同時に表示する唯一の方法です。</string>
     <string name="adb_error_key_store">ワイヤレスデバッグ用のキーを生成できません。\nこれはこのデバイスのKeyStore機構が故障しているためかもしれません。</string>
@@ -49,12 +49,11 @@
     <string name="notification_settings">通知オプション</string>
     <string name="adb_pairing_tutorial_title">お使いのデバイスとShizukuをペアリングする</string>
     <string name="adb_pairing_tutorial_content_notification">Shizukuからの通知でペアリングが完了します。</string>
-    <string name="adb_pairing_tutorial_content_steps">「開発者向けオプション」&gt;「ワイヤレスデバック」を選択し、「ペア設定コードによるデバイスのペア設定」をタップすると、6桁のコードが表示されます。</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">通知にコードを入力してペアリングします。</string>
+    <string name="adb_pairing_tutorial_content_steps">「開発者向けオプション」に移動し、「USB デバッグ」と「ワイヤレス デバッグ」を有効にします。</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">「ワイヤレスデバッグ」の左側をタップし、「ペアリングコードでデバイスをペアリング」をタップします。通知に記載されているコードを入力してペアリングを完了します。</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">ペアリング手順はShizukuからの通知を操作する必要があります。Shizukuからの通知を許可してください。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUIユーザーはシステムの設定から「通知」→「通知のシェード」から通知スタイルを「Android」に変更する必要がある場合があります。</string>
     <string name="adb_pairing_tutorial_content_miui_2">そうでなければ、通知からペアリングコードを入力できない可能性があります。</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">「ワイヤレスデバッグ」オプションの左側はクリック可能で、タップすると新しいページが開きます。右側のスイッチだけが正しくありません。</string>
     <string name="adb_pairing_tutorial_content_finish">雫に戻って雫を始めろ。</string>
     <string name="adb_pairing_tutorial_content_network">雫はローカルネットワークにアクセスする必要がある。ネットワークの許可によって制御されます。</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">一部のシステム(MIUIなど)は、アプリがフォアグラウンドサービスを使っていても、見えないアプリがネットワークにアクセスすることを許可しません。そのようなシステムでは、しずくのバッテリー最適化機能を無効にしてください。</string>
@@ -159,7 +158,7 @@
     <string name="notification_adb_pairing_input_paring_code">ペアリングコードを入力</string>
     <string name="notification_adb_pairing_searching_for_service_title">ペアリングサービスを探しています</string>
     <string name="notification_adb_pairing_service_found_title">ペアリングサービスを見つけました</string>
-    <string name="notification_adb_pairing_stop_searching">探すことを停止しています</string>
+    <string name="notification_adb_pairing_stop_searching">探すことを停止しさせます</string>
     <string name="notification_adb_pairing_working_title">ペアリング中</string>
     <string name="notification_adb_pairing_succeed_title">ペアリングしました</string>
     <string name="notification_adb_pairing_succeed_text">Shizukuサービスをスタートさせられます。</string>

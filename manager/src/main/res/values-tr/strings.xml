@@ -25,36 +25,35 @@
 \n
 \nNot, \"Geliştirici seçenekleri\" veya \"USB hata ayıklama\" devre dışı bırakmayın, Shizuku durdurulur.</string>
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Eğer sürekli arıyorsa lütfen \"Wireless Debugging\" ayarını kapatıp açmayı deneyin.</string>
-    <string name="dialog_adb_port">Liman</string>
-    <string name="dialog_adb_invalid_port">Port 1 ile 65535 arasında değişen bir tamsayıdır.</string>
+    <string name="dialog_adb_port">Port</string>
+    <string name="dialog_adb_invalid_port">Port 1 ile 65535 arasında değişen bir tamsayı olmalıdır. </string>
     <string name="adb_pairing">Eşleştiriliyor</string>
     <string name="dialog_adb_pairing_title">Cihazla eşleş</string>
     <string name="dialog_adb_pairing_discovery">Eşleştirme servisi aranıyor</string>
     <string name="dialog_adb_pairing_paring_code">Eşleşme kodu</string>
     <string name="paring_code_is_wrong">Eşleme kodu yanlış.</string>
-    <string name="cannot_connect_port">Kablosuz hata ayıklama servisine bağlanamıyorum.\n\nLütfen Shizuku\'nun ağ erişimini kısıtlayabilen tüm güvenlik duvarı, reklam engelleme, VPN veya benzeri uygulamalarda beyaz listeye alındığından emin olun.</string>
+    <string name="cannot_connect_port">Kablosuz hata ayıklama servisine bağlanılamıyor.\n\nLütfen Shizuku\'nun ağ erişimini kısıtlayabilen tüm güvenlik duvarı, reklam engelleme, VPN veya benzeri uygulamalarda beyaz listeye alındığından emin olun.</string>
     <string name="dialog_wireless_adb_not_enabled">Kablosuz hata ayıklama etkin değil.
 \nNot, Android 11’den önce kablosuz hata ayıklamayı etkinleştirmek için bilgisayar bağlantısının şart olduğunu unutmayın.</string>
     <string name="dialog_usb_debugging_not_enabled">USB hata ayıklama etkin değil.\nLütfen \"Geliştirici Seçenekleri\"nde etkinleştirin.</string>
-    <string name="dialog_adb_pairing_message">Lütfen aşağıdaki adımları uygulayarak eşleştirmeyi başlatın: \"Geliştirici Seçenekleri\" - \"Kablosuz hata ayıklama\" - \"Cihazı eşleştirme koduyla eşleştir.\"\n\nEşleştirme işlemi başladıktan sonra eşleştirme kodunu girebileceksiniz.</string>
+    <string name="dialog_adb_pairing_message">Lütfen aşağıdaki adımları uygulayarak eşleştirmeyi başlatın:\n- \"Geliştirici Seçenekleri\"ne gidin\n- \"USB hata ayıklama\" ve \"Kablosuz hata ayıklama\"yı etkinleştirin\n- \"Kablosuz hata ayıklama\"nın sol tarafına dokunun\n- \"Cihazı eşleştirme koduyla eşleştir\"e dokunun\n- Bildirimde eşleştirme kodunu girin</string>
     <string name="dialog_adb_pairing_accessibility_enable">Eşleştirme işlemini başlatmak için lütfen erişilebilirlik hizmetini etkinleştirin. Bu, Shizuku\'nun eşleştirme kodunu algılamasını sağlar.\n\nKod bulunduğunda veya enerji tasarrufu için 1 dakika sonra erişilebilirlik hizmeti kapatılacaktır.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Lütfen \"Geliştirici Seçenekleri\" &gt; \"Kablosuz hata ayıklama\" &gt; \"Cihazı eşleştirme koduyla eşleştir\" seçeneğine gidin. Shizuku eşleştirme kodunu otomatik olarak algılayacaktır.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Lütfen aşağıdaki adımları uygulayarak eşleştirmeyi başlatın:\n- \"Geliştirici Seçenekleri\"ne gidin\n- \"USB hata ayıklama\" ve \"Kablosuz hata ayıklama\"yı etkinleştirin\n- \"Kablosuz hata ayıklama\"nın sol tarafına dokunun\n- \"Cihazı eşleştirme koduyla eşleştir\"e dokunun. Shizuku eşleştirme kodunu otomatik olarak algılayacaktır.</string>
     <string name="adb_pairing_requires_multi_window">Lütfen önce bölünmüş ekran (çoklu pencere) moduna girin.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem, eşleştirme diyalogunun her zaman görünür olmasını gerektirir. Bölünmüş ekran modu kullanmak, bu uygulama ve sistem diyalogunun aynı anda görünmesini sağlamanın tek yoludur.</string>
     <string name="adb_error_key_store">Kablosuz hata ayıklama için anahtar oluşturulamıyor.\nBunun nedeni, bu cihazın KeyStore mekanizmasının bozulmuş olmasından kaynaklanıyor olabilir.</string>
     <string name="adb_error_stop_tcp">TCP üzerinden ADB durdurulamadı</string>
     <string name="adb_pair_required">Lütfen önce eşleştirme adımını uygulayın.</string>
-    <string name="enable">Olanak vermek</string>
+    <string name="enable">Etkinleştir</string>
     <string name="development_settings">Geliştirici seçenekleri</string>
     <string name="notification_settings">Bildirim seçenekleri</string>
     <string name="adb_pairing_tutorial_title">Shizuku’yu cihazınızla eşleştirin</string>
     <string name="adb_pairing_tutorial_content_notification">Shizuku’dan bir bildirim eşleştirmeyi tamamlamanıza yardım edecek.</string>
-    <string name="adb_pairing_tutorial_content_steps">\"Geliştirici Seçenekleri\" - \"Kablosuz hata ayıklama\" girin. \"Cihazı eşleştirme kodu ile eşleştir\"e dokunun, altı haneli bir kod göreceksiniz.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Eşleştirmeyi tamamlamak için kodu bildirime girin.</string>
+    <string name="adb_pairing_tutorial_content_steps">\"Geliştirici Seçenekleri\"ne gidin, ardından \"USB hata ayıklama\" ve \"Kablosuz hata ayıklama\"yı etkinleştirin.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">\"Kablosuz hata ayıklama\"nın sol tarafına dokunun, ardından \"Cihazı eşleştirme koduyla eşleştir\" seçeneğine dokunun. Eşleştirmeyi tamamlamak için bildirimdeki kodu girin.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Eşleştirme işlemi, Shizuku\'dan gelen bir bildirimle etkileşim kurmanızı gerektirir. Lütfen Shizuku\'nun bildirim göndermesine izin verin.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI kullanıcılarının sistem ayarlarında \"Bildirim\" - \"Bildirim gölgesi\"nden bildirim stilini \"Android\" olarak değiştirmeleri gerekebilir.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Aksi takdirde, bildirimden eşleştirme kodunu giremeyebilirsiniz.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Lütfen \"Kablosuz hata ayıklama\" seçeneğinin sol kısmına tıklanabilir, ona dokunmak yeni bir sayfa açacak. Sadece sağdaki anahtarı açmak yanlış.</string>
     <string name="adb_pairing_tutorial_content_finish">Shizuku\'ya geri dön ve Shizuku\'yu başlat.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku\'nun yerel ağa erişmesi gerekiyor. Ağ izniyle kontrol edilir.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bazı sistemler (örneğin MIUI), uygulamaların görünmediği durumlarda ağa erişmesini yasaklar, uygulama ön plan hizmeti kullansa bile. Lütfen bu tür sistemlerde Shizuku için pil optimizasyon özelliklerini devre dışı bırakın.</string>

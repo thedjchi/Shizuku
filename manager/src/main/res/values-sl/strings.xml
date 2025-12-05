@@ -36,9 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">Brezžično razhroščevanje ni omogočeno.
 \nPozor! Pred Androidom 11, je za omogočanje brezžičnega razhroščevanja potreben računalnik.</string>
     <string name="dialog_usb_debugging_not_enabled">Odpravljanje napak prek USB-ja ni omogočeno.\nOmogočite ga v »Možnostih za razvijalce«.</string>
-    <string name="dialog_adb_pairing_message">Začnite z združevanjem tako, da izvedete naslednje korake: »Možnosti za razvijalce« – »Odpravljanje napak brezžične povezave« – »Združi napravo s kodo za združevanje.«\n\nKo se postopek združevanja začne, boste lahko vnesli kodo za združevanje.</string>
+    <string name="dialog_adb_pairing_message">Začnite z združevanjem tako, da izvedete naslednje korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite »Odpravljanje napak USB« in »Brezžično odpravljanje napak«\n- Dotaknite se leve strani »Brezžično odpravljanje napak«\n- Dotaknite se »Seznani napravo s kodo za združevanje«\n- V obvestilo vnesite kodo za združevanje</string>
     <string name="dialog_adb_pairing_accessibility_enable">Za začetek postopka seznanjanja omogočite storitev dostopnosti. To bo Shizuku omogočilo zaznavanje kode za seznanjanje.\n\nStoritev dostopnosti se bo izklopila, ko bo koda najdena, ali po 1 minuti, da se prihrani energija.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Pojdite na »Možnosti za razvijalce« &gt; »Odpravljanje napak brezžičnega omrežja« &gt; »Seznani napravo s kodo za seznanjanje.« Shizuku bo samodejno zaznal kodo za seznanjanje.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Začnite z združevanjem tako, da izvedete naslednje korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite »Odpravljanje napak USB« in »Odpravljanje napak brezžično«\n- Dotaknite se leve strani »Odpravljanje napak brezžično«\n- Dotaknite se »Združi napravo s kodo za združevanje«. Shizuku bo samodejno zaznal kodo za združevanje.</string>
     <string name="adb_pairing_requires_multi_window">Najprej vklopite način deljenega zaslona (več oken).</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem zahteva, da je dialog za združevanje vedno viden. Uporaba deljenega zaslona je edini način, da sta ta aplikacija in sistemsko okno hkrati vidna.</string>
     <string name="adb_error_key_store">Ni mogoče generirati ključa za brezžično razhroščevanje.\nTo je morda zato, ker je mehanizem KeyStore na tej napravi pokvarjen.</string>
@@ -49,12 +49,11 @@
     <string name="notification_settings">Možnosti obveščanja</string>
     <string name="adb_pairing_tutorial_title">Združite Shizuku s svojo napravo</string>
     <string name="adb_pairing_tutorial_content_notification">Obvestilo Shizukuja vam bo pomagalo dokončati seznanjanje.</string>
-    <string name="adb_pairing_tutorial_content_steps">Vnesite »Možnosti za razvijalce« - »Odpravljanje napak brezžične povezave«. Dotaknite se »Seznani napravo s kodo za seznanjanje« in videli boste šestmestno kodo.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Vnesite kodo iz obvestila, da dokončate seznanjanje.</string>
+    <string name="adb_pairing_tutorial_content_steps">Pojdite na »Možnosti za razvijalce« in nato omogočite »Odpravljanje napak USB« in »Odpravljanje napak brezžično«.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Dotaknite se leve strani »Brezžično odpravljanje napak« in nato »Seznani napravo s kodo za seznanjanje«. Vnesite kodo iz obvestila, da dokončate seznanjanje.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Postopek seznanjanja zahteva interakcijo z obvestilom Shizuku. Dovolite Shizuku objavljanje obvestil.</string>
     <string name="adb_pairing_tutorial_content_miui">Uporabniki MIUI bodo morda morali v sistemskih nastavitvah preklopiti način obveščanja iz »Obvestilo« – »Obvestilna senca« na »Android«.</string>
     <string name="adb_pairing_tutorial_content_miui_2">V nasprotnem primeru morda ne boste mogli vnesti kode za povezovanje iz obvestila.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Prosimo, upoštevajte, da je levi del možnosti \"Brezžično razhroščevanje\" klikabilen, tapkanje nanj odpre novo stran. Samo vklop stikala na desni ni pravilen.</string>
     <string name="adb_pairing_tutorial_content_finish">Vrni se k Shizuku in začni Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku mora dostopati do lokalnega omrežja. Nadzoruje ga omrežno dovoljenje.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nekateri sistemi (kot je MIUI) ne dovoljujejo aplikacijam dostopa do omrežja, kadar niso vidne, tudi če aplikacija uporablja storitev v ospredju. Prosimo, onemogočite funkcije optimizacije baterije za Shizuku na takšnih sistemih.</string>

@@ -36,9 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">التصحيح اللاسلكي غير ممكّن.
 \nملاحظة ، قبل Android 11 ، لتمكين التصحيح اللاسلكي ، يجب أن يكون الاتصال بالكمبيوتر أمرًا ضروريًا.</string>
     <string name="dialog_usb_debugging_not_enabled">لم يتم تمكين تصحيح أخطاء USB.\nيرجى تمكينه في \"خيارات المطور\".</string>
-    <string name="dialog_adb_pairing_message">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية: \"خيارات المطور\" - \"تصحيح أخطاء الشبكة اللاسلكية\" - \"إقران الجهاز باستخدام رمز الاقتران\".\n\nبعد بدء عملية الاقتران، ستتمكن من إدخال رمز الاقتران.</string>
+    <string name="dialog_adb_pairing_message">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\"\n- أدخل رمز الاقتران في الإشعار</string>
     <string name="dialog_adb_pairing_accessibility_enable">يرجى تفعيل خدمة إمكانية الوصول لبدء عملية الاقتران. هذا يسمح لـ Shizuku باكتشاف رمز الاقتران.\n\nسيتم إيقاف خدمة إمكانية الوصول عند العثور على الرمز أو بعد دقيقة واحدة لتوفير الطاقة.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">يرجى الانتقال إلى \"خيارات المطور\" &gt; \"تصحيح أخطاء الشبكة اللاسلكية\" &gt; \"إقران الجهاز برمز الاقتران\". سيكتشف Shizuku رمز الاقتران تلقائيًا.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\". سيكتشف Shizuku رمز الاقتران تلقائيًا.</string>
     <string name="adb_pairing_requires_multi_window">الرجاء إدخال وضع تقسيم الشاشة (متعدد النوافذ) أولاً.</string>
     <string name="adb_pairing_requires_multi_window_reason">يتطلب النظام أن يكون مربع حوار الاقتران مرئيًا دائمًا. استخدام وضع تقسيم الشاشة هو الطريقة الوحيدة لإظهار هذا التطبيق ومربع حوار النظام في آنٍ واحد.</string>
     <string name="adb_error_key_store">غير قادر على إنشاء مفتاح لتصحيح الأخطاء اللاسلكية.\nقد يكون هذا بسبب تعطل آلية KeyStore لهذا الجهاز.</string>
@@ -49,12 +49,11 @@
     <string name="notification_settings">إعداد الإشعارات</string>
     <string name="adb_pairing_tutorial_title">قم بإقران Shizuku بجهازك</string>
     <string name="adb_pairing_tutorial_content_notification">سيساعدك إشعار من Shizuku على إكمال الاقتران.</string>
-    <string name="adb_pairing_tutorial_content_steps">أدخل \"خيارات المطور\" - \"التصحيح اللاسلكي\". انقر على \"إقران الجهاز برمز الإقران\" ، وسترى رمزًا مكونًا من ستة أرقام.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">أدخل الرمز في إشعار Shizuku المرسل لإكمال الاقتران.</string>
+    <string name="adb_pairing_tutorial_content_steps">انتقل إلى \"خيارات المطور\"، ثم قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح أخطاء اللاسلكي\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"، ثم انقر على \"إقران الجهاز برمز الاقتران\". أدخل الرمز في الإشعار لإكمال عملية الاقتران.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">تحتاج عملية الاقتران إلى التفاعل مع إشعار من Shizuku. يرجى السماح لشيزوكو بنشر الإخطارات.</string>
     <string name="adb_pairing_tutorial_content_miui">قد يحتاج مستخدمو MIUI إلى تبديل نمط الإعلام إلى \"Android\" من \"Notification\" - \"Notification Shade\" في إعدادات النظام.</string>
     <string name="adb_pairing_tutorial_content_miui_2">وإلا، فقد لا تتمكن من إدخال رمز الاقتران من الإشعار.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">يرجى ملاحظة أن الجزء الأيسر من خيار \"التصحيح اللاسلكي\" قابل للنقر، وعند النقر عليه ستُفتح صفحة جديدة. فقط تشغيل المفتاح الأيمن هو الخطأ.</string>
     <string name="adb_pairing_tutorial_content_finish">ارجع إلى شيزوكو وابدأ في شيزوكو.</string>
     <string name="adb_pairing_tutorial_content_network">يحتاج شيزوكو إلى الوصول إلى الشبكة المحلية. يتم التحكم به من خلال أذونات الشبكة.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">بعض الأنظمة (مثل MIUI) تمنع التطبيقات من الوصول إلى الشبكة عند عدم ظهورها، حتى لو كانت تستخدم خدمة الواجهة الأمامية. يُرجى تعطيل ميزات تحسين أداء البطارية لتطبيق Shizuku على هذه الأنظمة.</string>

@@ -36,9 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">无线调试未启用。
 \n请注意，在 Android 11 之前，要启用无线调试必须连接电脑。</string>
     <string name="dialog_usb_debugging_not_enabled">USB调试未启用。\n请在“开发者选项”中启用它。</string>
-    <string name="dialog_adb_pairing_message">请按照以下步骤开始配对：“开发者选项” - “无线调试” - “使用配对码配对设备”。\n\n配对过程开始后，你将能输入配对码。</string>
+    <string name="dialog_adb_pairing_message">请按照以下步骤开始配对：\n- 打开“开发者选项”\n- 启用“USB调试”和“无线调试”\n- 点击“无线调试”左侧\n- 点击“使用配对码配对设备”\n- 在通知栏中输入配对码</string>
     <string name="dialog_adb_pairing_accessibility_enable">请启用辅助功能服务以开始配对过程。这将使 Shizuku 能够检测到配对码。\n\n辅助功能服务将在找到配对码后或1分钟后关闭以节省电量。</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">请依次进入“开发者选项” &gt; “无线调试” &gt; “使用配对码配对设备”。Shizuku 将自动检测配对码。</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">请按照以下步骤开始配对：\n- 进入“开发者选项”\n- 启用“USB调试”和“无线调试”\n- 点击“无线调试”左侧\n- 点击“使用配对码配对设备”。Shizuku 将自动检测配对码。</string>
     <string name="adb_pairing_requires_multi_window">请先进入分屏（多窗口）模式。</string>
     <string name="adb_pairing_requires_multi_window_reason">系统要求配对对话框始终可见。只有使用分屏模式才能让此应用和系统对话框同时可见。</string>
     <string name="adb_error_key_store">无法生成无线调试密钥。\n这可能是因为此设备的密钥库机制已损坏。</string>
@@ -49,12 +49,11 @@
     <string name="notification_settings">通知设置</string>
     <string name="adb_pairing_tutorial_title">将 Shizuku 与您的设备配对</string>
     <string name="adb_pairing_tutorial_content_notification">一条来自 Shizuku 的通知将帮助您完成配对。</string>
-    <string name="adb_pairing_tutorial_content_steps">进入“开发者选项”-“无线调试”。点按“使用配对码配对设备”，您将看到一个六位数字代码。</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">在通知中输入代码来完成配对。</string>
+    <string name="adb_pairing_tutorial_content_steps">进入“开发者选项”，然后启用“USB调试”和“无线调试”。</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">点击“无线调试”左侧，然后点击“使用配对码配对设备”。输入通知中的代码以完成配对。</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">配对过程需要您与 Shizuku 的通知交互。请允许 Shizuku 发布通知。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 用户可能需要在系统设置中从“通知管理”-“通知显示设置”将通知样式切换为“原生样式”。</string>
     <string name="adb_pairing_tutorial_content_miui_2">否则，您可能无法输入通知中的配对码。</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">请注意，“无线调试”选项左侧的部分是可以点击的，点击后会打开一个新页面。只打开右侧的开关是错误的。</string>
     <string name="adb_pairing_tutorial_content_finish">回到雫并开始雫。</string>
     <string name="adb_pairing_tutorial_content_network">雫需要访问本地网络。这受网络权限控制。</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系统（例如 MIUI）会禁止应用在不可见时访问网络，即使该应用使用了前台服务。请在这些系统上为 Shizuku 关闭电池优化功能。</string>

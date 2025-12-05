@@ -33,9 +33,9 @@
     <string name="cannot_connect_port">Kan inte ansluta till trådlös felsökningstjänst.\n\nSe till att Shizuku är vitlistad i alla brandväggar, annonsblockeringar, VPN eller liknande appar som kan begränsa nätverksåtkomst.</string>
     <string name="dialog_wireless_adb_not_enabled">Trådlös felsökning är inte aktiverad.\nObservera att före Android 11 krävs en datoranslutning för att aktivera trådlös felsökning.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-felsökning är inte aktiverad.\nAktivera det i \"Utvecklaralternativ\".</string>
-    <string name="dialog_adb_pairing_message">Börja parkopplingen genom att utföra följande steg: \"Utvecklaralternativ\" - \"Trådlös felsökning\" - \"Para enhet med parkopplingskod.\"\n\nNär parkopplingsprocessen har startat kan du ange parkopplingskoden.</string>
+    <string name="dialog_adb_pairing_message">Börja parkopplingen genom att utföra följande steg:\n- Navigera till \"Utvecklaralternativ\"\n- Aktivera \"USB-felsökning\" och \"Trådlös felsökning\"\n- Tryck på vänster sida av \"Trådlös felsökning\"\n- Tryck på \"Para enhet med parkopplingskod\"\n- Ange parkopplingskoden i aviseringen</string>
     <string name="dialog_adb_pairing_accessibility_enable">Aktivera tillgänglighetstjänsten för att starta parkopplingsprocessen. Detta gör att Shizuku kan upptäcka parkopplingskoden.\n\nTillgänglighetstjänsten stängs av när koden hittas eller efter 1 minut för att spara energi.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Gå till \"Utvecklaralternativ\" &gt; \"Trådlös felsökning\" &gt; \"Para ihop enhet med parningskod\". Shizuku kommer automatiskt att identifiera parningskoden.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Börja parkopplingen genom att utföra följande steg:\n- Navigera till \"Utvecklaralternativ\"\n- Aktivera \"USB-felsökning\" och \"Trådlös felsökning\"\n- Tryck på vänster sida av \"Trådlös felsökning\"\n- Tryck på \"Para enhet med parkopplingskod\". Shizuku kommer automatiskt att upptäcka parkopplingskoden.</string>
     <string name="adb_pairing_requires_multi_window">Vänligen aktivera delad skärm (flera fönster) först.</string>
     <string name="adb_pairing_requires_multi_window_reason">Systemet kräver att paraningsdialogen alltid är synlig. Att använda delad skärm är det enda sättet att göra appen och systemdialogen synliga samtidigt.</string>
     <string name="adb_error_key_store">Kan inte generera nyckeln för trådlös felsökning.\nDetta kan bero på att KeyStore-mekanismen i denna enhet är trasig.</string>
@@ -46,12 +46,11 @@
     <string name="notification_settings">Aviseringsalternativ</string>
     <string name="adb_pairing_tutorial_title">Para ihop Shizuku med din enhet</string>
     <string name="adb_pairing_tutorial_content_notification">En avisering från Shizuku hjälper dig att slutföra parkopplingen.</string>
-    <string name="adb_pairing_tutorial_content_steps">Gå in i \"Utvecklaralternativ\" - \"Trådlös felsökning\". Tryck på \"Para enhet med parningskod\", så ser du en sexsiffrig kod.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Ange koden i aviseringen för att slutföra parkopplingen.</string>
+    <string name="adb_pairing_tutorial_content_steps">Navigera till \"Utvecklaralternativ\" och aktivera sedan \"USB-felsökning\" och \"Trådlös felsökning\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tryck på vänster sida av \"Trådlös felsökning\" och tryck sedan på \"Para enhet med parningskod\". Ange koden i aviseringen för att slutföra parkopplingen.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Parningsprocessen kräver att du interagerar med en avisering från Shizuku. Vänligen tillåt Shizuku att publicera aviseringar.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-användare kan behöva byta aviseringsstil till \"Android\" från \"Avisering\" - \"Aviseringsskärm\" i systeminställningarna.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Annars kan du kanske inte ange parningskoden från notisen.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Observera att den vänstra delen av alternativet \"Trådlös felsökning\" är klickbar, och att trycka på den öppnar en ny sida. Att bara slå på strömbrytaren till höger är fel.</string>
     <string name="adb_pairing_tutorial_content_finish">Gå tillbaka till Shizuku och börja med Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku behöver få tillgång till det lokala nätverket. Den styrs av nätverksbehörigheten.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Vissa system (som MIUI) förbjuder appar att komma åt nätverket när de inte är synliga, även om appen använder en förgrundstjänst. Vänligen inaktivera batterioptimeringsfunktioner för Shizuku på sådana system.</string>
