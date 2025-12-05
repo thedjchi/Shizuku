@@ -36,9 +36,7 @@
     <string name="dialog_wireless_adb_not_enabled">Налагодження через Wi-Fi не ввімкнено.
 \nЗверніть увагу, до Android 11, щоб увімкнути налагодження через Wi-Fi, під\'\'єднання до ПК обов\'\'язкове.</string>
     <string name="dialog_usb_debugging_not_enabled">Налагодження через USB не ввімкнено.\nБудь ласка, увімкніть його в розділі «Параметри розробника».</string>
-    <string name="dialog_adb_pairing_message">Будь ласка, розпочніть сполучення, виконавши такі кроки: \"Параметри розробника\" - \"Налагодження бездротового зв\'язку\" - \"Сполучити пристрій за допомогою коду сполучення\".\n\nПісля початку процесу сполучення ви зможете ввести код сполучення.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Будь ласка, увімкніть службу доступності, щоб розпочати процес сполучення. Це дозволить Shizuku виявити код сполучення.\n\nСлужба доступності буде вимкнена після знаходження коду або через 1 хвилину для економії енергії.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Будь ласка, перейдіть до розділу \"Параметри розробника\" &gt; \"Налагодження бездротового зв\'язку\" &gt; \"Підключити пристрій за допомогою коду сполучення\". Shizuku автоматично визначить код сполучення.</string>
     <string name="adb_pairing_requires_multi_window">Спершу увійдіть в режим розділеного екрана (багатьох вікон).</string>
     <string name="adb_pairing_requires_multi_window_reason">Система вимагає, щоб діалог поєднання завжди був видимим. Використання режиму розділеного екрану — єдиний спосіб зробити цей додаток і системний діалог видимими одночасно.</string>
     <string name="adb_error_key_store">Не вдається згенерувати ключ для бездротового налагодження.\nМожливо, це пов\'язано з тим, що механізм KeyStore цього пристрою зламаний.</string>
@@ -49,12 +47,9 @@
     <string name="notification_settings">Налаштування повідомлень</string>
     <string name="adb_pairing_tutorial_title">Парувати Shizuku з вашим пристроєм</string>
     <string name="adb_pairing_tutorial_content_notification">Повідомлення від Shizuku допоможе вам закінчити парування.</string>
-    <string name="adb_pairing_tutorial_content_steps">Зайдіть в \"Параметри розробника\" - \"Налагодження через Wi-Fi\". Натисніть на \"Підключати пристрій за допомогою коду підключення\", ви побачите шестизначний код.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Введіть код в повідомленні щоб завершити парування.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процес парування потребує, щоб ви взаємодіяли із сповіщенням від Shizuku. Будь ласка, дозвольте Shizuku публікувати сповіщення.</string>
     <string name="adb_pairing_tutorial_content_miui">Користувачам MIUI, иожливо, доведеться змінити стіль сповіщень на \"Android\" із \"Сповіщення\" - \"Панель сповіщень\" в системних налаштуваннях.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Інакше ви можете не мати змоги ввести код пари з повідомлення.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Зверніть увагу, що ліва частина опції «Бездротова налагодження» є клікабельною, натискання на неї відкриває нову сторінку. Вмикати лише перемикач праворуч — неправильно.</string>
     <string name="adb_pairing_tutorial_content_finish">Повернись до Шізуку і почни Шізуку.</string>
     <string name="adb_pairing_tutorial_content_network">Шідзуку потрібно отримати доступ до місцевої мережі. Він контролюється мережевим дозволом.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Деякі системи (наприклад, MIUI) забороняють додаткам доступ до мережі, якщо вони не видимі, навіть якщо додаток використовує передній план. Будь ласка, вимкніть функції оптимізації батареї для Shizuku на таких системах.</string>
