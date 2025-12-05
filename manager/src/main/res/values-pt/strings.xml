@@ -36,9 +36,7 @@
     <string name="dialog_wireless_adb_not_enabled">A depuração sem fio não está habilitada.
 \nObserve que, antes do Android 11, para habilitar a depuração sem fio, a conexão com o computador é obrigatória.</string>
     <string name="dialog_usb_debugging_not_enabled">A depuração USB não está ativada.\nAtive-a nas \"Opções do programador\".</string>
-    <string name="dialog_adb_pairing_message">Por favor, inicie o emparelhamento seguindo estes passos: \"Opções do programador\" - \"Depuração sem fios\" - \"Emparelhar dispositivo com código de emparelhamento\".\n\nApós o início do processo de emparelhamento, poderá introduzir o código de emparelhamento.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Por favor, ative o serviço de acessibilidade para iniciar o processo de emparelhamento. Isto permite que o Shizuku detete o código de emparelhamento.\n\nO serviço de acessibilidade será desativado quando o código for encontrado ou após 1 minuto para poupar energia.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Por favor, aceda a \"Opções do programador\" &gt; \"Depuração sem fios\" &gt; \"Emparelhar dispositivo com código de emparelhamento\". O Shizuku detetará automaticamente o código de emparelhamento.</string>
     <string name="adb_pairing_requires_multi_window">Por favor, entre primeiro no modo de tela dividida (várias janelas).</string>
     <string name="adb_pairing_requires_multi_window_reason">O sistema exige que o diálogo de emparelhamento seja sempre visível. Usar o modo de ecrã dividido é a única forma de permitir que esta aplicação e o diálogo do sistema sejam visíveis ao mesmo tempo.</string>
     <string name="adb_error_key_store">Não é possível gerar a chave para depuração sem fios.\nIsto pode dever-se ao facto de o mecanismo KeyStore deste dispositivo estar avariado.</string>
@@ -49,12 +47,9 @@
     <string name="notification_settings">Opções de notificação</string>
     <string name="adb_pairing_tutorial_title">Emparelhe Shizuku com seu dispositivo</string>
     <string name="adb_pairing_tutorial_content_notification">Uma notificação de Shizuku ajudará você a concluir o emparelhamento.</string>
-    <string name="adb_pairing_tutorial_content_steps">Digite \"Opções do desenvolvedor\" - \"Depuração sem fio\". Toque em \"Emparelhar dispositivo com código de emparelhamento\", você verá um código de seis dígitos.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Digite o código na notificação para concluir o emparelhamento.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">O processo de emparelhamento precisa que você interaja com uma notificação de Shizuku. Por favor, permita que Shizuku mostre notificações.</string>
     <string name="adb_pairing_tutorial_content_miui">Os usuários do MIUI podem precisar mudar o estilo de notificação para \"Android\" de \"Notificação\" - \"Sombra de notificação\" nas configurações do sistema.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Caso contrário, pode não conseguir introduzir o código de emparelhamento a partir da notificação.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Por favor, note que a parte esquerda da opção \"Depuração sem fios\" é clicável; ao tocá-la, abre-se uma nova página. Só ligar o interruptor à direita está errado.</string>
     <string name="adb_pairing_tutorial_content_finish">Volta para a Shizuku e começa a Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">A Shizuku precisa de aceder à rede local. É controlado pela permissão da rede.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alguns sistemas (como o MIUI) impedem que aplicações acedam à rede quando não são visíveis, mesmo que a aplicação utilize um serviço em primeiro plano. Por favor, desative as funcionalidades de otimização da bateria para Shizuku nesses sistemas.</string>
