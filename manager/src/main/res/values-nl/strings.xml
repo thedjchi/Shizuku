@@ -33,7 +33,9 @@
     <string name="cannot_connect_port">Kan geen verbinding maken met de draadloze foutopsporingsservice.\n\nZorg ervoor dat Shizuku op de witte lijst staat in alle firewalls, adblockers, VPN\'s of vergelijkbare apps die de netwerktoegang kunnen beperken.</string>
     <string name="dialog_wireless_adb_not_enabled">Draadloos debuggen is niet ingeschakeld.\nLet op: vóór Android 11 is een computerverbinding noodzakelijk om draadloos debuggen mogelijk te maken.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-debugging is niet ingeschakeld.\nSchakel het alstublieft in in \"Ontwikkelaarsopties\".</string>
+    <string name="dialog_adb_pairing_message">Begin met koppelen door de volgende stappen uit te voeren:\n- Navigeer naar \"Ontwikkelaarsopties\"\n- Schakel \"USB-foutopsporing\" en \"Draadloze foutopsporing\" in\n- Tik op de linkerkant van \"Draadloze foutopsporing\"\n- Tik op \"Apparaat koppelen met koppelingscode\"\n- Voer de koppelingscode in de melding in</string>
     <string name="dialog_adb_pairing_accessibility_enable">Schakel alstublieft de toegankelijkheidsdienst in om het koppelingsproces te starten. Hierdoor kan Shizuku de koppelcode detecteren.\n\nDe toegankelijkheidsdienst wordt uitgeschakeld zodra de code is gevonden of na 1 minuut om energie te besparen.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Begin met koppelen door de volgende stappen uit te voeren:\n- Ga naar \'Ontwikkelaarsopties\'\n- Schakel \'USB-foutopsporing\' en \'Draadloze foutopsporing\' in\n- Tik op de linkerkant van \'Draadloze foutopsporing\'\n- Tik op \'Apparaat koppelen met koppelingscode\'. Shizuku detecteert de koppelingscode automatisch.</string>
     <string name="adb_pairing_requires_multi_window">Ga eerst in split-screen (multi-window) modus.</string>
     <string name="adb_pairing_requires_multi_window_reason">Het systeem vereist dat het koppelingsvenster altijd zichtbaar is. De splitscreenmodus is de enige manier om deze app en het systeemvenster tegelijkertijd zichtbaar te maken.</string>
     <string name="adb_error_key_store">Kan geen sleutel genereren voor draadloos debuggen.\nDit kan komen doordat het KeyStore-mechanisme van dit apparaat kapot is.</string>
@@ -44,6 +46,8 @@
     <string name="notification_settings">Meldingsopties</string>
     <string name="adb_pairing_tutorial_title">Koppel Shizuku met je apparaat</string>
     <string name="adb_pairing_tutorial_content_notification">Een melding van Shizuku helpt je om de koppeling te voltooien.</string>
+    <string name="adb_pairing_tutorial_content_steps">Ga naar \'Ontwikkelaarsopties\' en schakel \'USB-foutopsporing\' en \'Draadloze foutopsporing\' in.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tik op de linkerkant van \'Draadloos debuggen\' en tik vervolgens op \'Apparaat koppelen met koppelingscode\'. Voer de code in de melding in om het koppelen te voltooien.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Het koppelproces vereist dat je reageert op een melding van Shizuku. Laat Shizuku alsjeblieft meldingen plaatsen.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moeten mogelijk de notificatiestijl wijzigen naar \"Android\" van \"Notification\" - \"Notification shade\" in de systeeminstellingen.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Anders is het mogelijk dat u de koppelingscode uit de melding niet kunt invoeren.</string>
