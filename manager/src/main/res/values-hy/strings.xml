@@ -36,9 +36,7 @@
     <string name="dialog_wireless_adb_not_enabled">Անլար կարգաբերումը միացված չէ։
 \nAndroid 11-ից առաջ անլար կարգաբերման համար անհրաժեշտ է համակարգչային կապ։</string>
     <string name="dialog_usb_debugging_not_enabled">USB կարգաբերումը թույլատրված չէ:\nԽնդրում ենք միացնել այն «Մշակողի ընտրանքներ» բաժնում:</string>
-    <string name="dialog_adb_pairing_message">Խնդրում ենք սկսել զուգավորումը՝ կատարելով հետեւյալ քայլերը. «Մշակողի ընտրանքներ» - «Անլար կարգաբերում» - «Զուգակցել սարքը զուգավորման կոդով»:\n\nԶուգավորման գործընթացը սկսելուց հետո դուք կկարողանաք մուտքագրել զուգավորման կոդը:</string>
     <string name="dialog_adb_pairing_accessibility_enable">Խնդրում ենք միացնել մատչելիության ծառայությունը՝ զուգավորման գործընթացը սկսելու համար: Սա թույլ է տալիս Շիզուկուին հայտնաբերել զույգավորման կոդը։\n\nՄատչելիության ծառայությունն անջատվելու է, երբ կոդը գտնվի կամ 1 րոպե անց՝ էներգիան խնայելու համար:</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Խնդրում ենք նավարկել դեպի «Մշակողի ընտրանքներ» &gt; «Անլար կարգաբերում» &gt; «Զուգակցել սարքը զուգակցման կոդով»: Shizuku-ն ավտոմատ կերպով կհայտնաբերի զույգավորման կոդը:</string>
     <string name="adb_pairing_requires_multi_window">Սկզբում միացրեք էկրանի կիսման ռեժիմը։</string>
     <string name="adb_pairing_requires_multi_window_reason">Համակարգը պահանջում է, որ զուգավորման երկխոսության պատուհանը միշտ տեսանելի լինի: Բաժանված էկրանի ռեժիմի օգտագործումը միակ միջոցն է, որպեսզի այս հավելվածը և համակարգի երկխոսության պատուհանը միաժամանակ տեսանելի լինեն:</string>
     <string name="adb_error_key_store">Անհնար է ստեղծել բանալի անլար վրիպազերծման համար։\nՍա կարող է պայմանավորված լինել այս սարքի KeyStore մեխանիզմի խափանումով։</string>
@@ -49,12 +47,9 @@
     <string name="notification_settings">Ծանուցման տարբերակներ</string>
     <string name="adb_pairing_tutorial_title">Զուգակցեք Shizuku-ն ձեր սարքի հետ</string>
     <string name="adb_pairing_tutorial_content_notification">Շիզուկուից ստացված ծանուցումը կօգնի ձեզ ավարտել զույգավորումը։</string>
-    <string name="adb_pairing_tutorial_content_steps">Մուտքագրեք «Մշակողի ընտրանքներ» - «Անլար կարգաբերում»։ Սեղմեք «Զուգակցել սարքը զուգավորման կոդով» կոճակը, կտեսնեք վեցանիշ կոդ։</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Մուտքագրեք ծանուցման մեջ նշված կոդը՝ զուգավորումն ավարտելու համար։</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Զուգավորման գործընթացը պահանջում է, որ դուք փոխազդեք Shizuku-ի ծանուցման հետ: Խնդրում ենք թույլատրել Shizuku-ին հրապարակել ծանուցումներ:</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI օգտատերերը կարող են ստիպված լինել համակարգի կարգավորումներում «Ծանուցում»-ից «Ծանուցման ստվեր» բաժնից փոխել ծանուցման ոճը «Android»-ի։</string>
     <string name="adb_pairing_tutorial_content_miui_2">Հակառակ դեպքում, դուք կարող է չկարողանաք մուտքագրել ծանուցումից ստացված զուգավորման կոդը։</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Խնդրում ենք նկատի ունենալ, որ «Անլար կարգաբերում» տարբերակի ձախ մասը կարելի է սեղմել, դրա վրա սեղմելը կբացի նոր էջ: Միայն աջ կողմի անջատիչը միացնելը սխալ է:</string>
     <string name="adb_pairing_tutorial_content_finish">Վերադարձեք Շիզուկու և սկսեք Շիզուկուն։</string>
     <string name="adb_pairing_tutorial_content_network">Շիզուկուն պետք է մուտք ունենա տեղական ցանց: Այն կառավարվում է ցանցի թույլտվությամբ:</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Որոշ համակարգեր (օրինակ՝ MIUI-ը) թույլ չեն տալիս հավելվածներին մուտք գործել ցանց, երբ դրանք տեսանելի չեն, նույնիսկ եթե հավելվածն օգտագործում է առաջնային պլանի ծառայություն: Խնդրում ենք անջատել Shizuku-ի մարտկոցի օպտիմալացման գործառույթները նման համակարգերում:</string>
