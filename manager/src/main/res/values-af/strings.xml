@@ -33,7 +33,9 @@
     <string name="cannot_connect_port">Kan nie aan draadlose ontfoutingsdiens koppel nie.\n\nMaak asseblief seker dat Shizuku op die witlys is in alle firewall-, advertensieblokkerings-, VPN- of soortgelyke programme wat netwerktoegang kan beperk.</string>
     <string name="dialog_wireless_adb_not_enabled">Draadlose ontfouting is nie geaktiveer nie.\nLet wel, voor Android 11, om draadlose ontfouting te aktiveer, is rekenaarverbinding \'n vereiste.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-ontfouting is nie geaktiveer nie.\nAktiveer dit asseblief in \"Ontwikkelaaropsies\".</string>
+    <string name="dialog_adb_pairing_message">Begin asseblief met paring deur die volgende stappe uit te voer:\n- Navigeer na \"Ontwikkelaaropsies\"\n- Aktiveer \"USB-ontfouting\" en \"Draadlose ontfouting\"\n- Tik die linkerkant van \"Draadlose ontfouting\"\n- Tik \"Koppel toestel met paringskode\"\n- Voer die paringskode in die kennisgewing in</string>
     <string name="dialog_adb_pairing_accessibility_enable">Aktiveer asseblief die toeganklikheidsdiens om die paringsproses te begin. Dit laat Shizuku toe om die paringskode op te spoor.\n\nDie toeganklikheidsdiens sal afgeskakel word wanneer die kode gevind word of na 1 minuut om energie te bespaar.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Begin asseblief met paring deur die volgende stappe uit te voer:\n- Navigeer na \"Ontwikkelaaropsies\"\n- Aktiveer \"USB-ontfouting\" en \"Draadlose ontfouting\"\n- Tik die linkerkant van \"Draadlose ontfouting\"\n- Tik \"Koppel toestel met paringskode.\" Shizuku sal outomaties die paringskode opspoor.</string>
     <string name="adb_pairing_requires_multi_window">Gaan asseblief eers na die verdeelskerm-modus (multivenstermodus).</string>
     <string name="adb_pairing_requires_multi_window_reason">Die stelsel vereis dat die paringsdialoog altyd sigbaar moet wees. Die gebruik van verdeelskermmodus is die enigste manier om hierdie toepassing en die stelseldialoog gelyktydig sigbaar te laat wees.</string>
     <string name="adb_error_key_store">Kan nie sleutel vir draadlose ontfouting genereer nie.\nDit mag wees omdat die KeyStore-meganisme van hierdie toestel gebreek is.</string>
@@ -44,6 +46,8 @@
     <string name="notification_settings">Kennisgewingopsies</string>
     <string name="adb_pairing_tutorial_title">Koppel Shizuku met jou toestel</string>
     <string name="adb_pairing_tutorial_content_notification">\'n Kennisgewing van Shizuku sal jou help om die paring te voltooi.</string>
+    <string name="adb_pairing_tutorial_content_steps">Navigeer na \"Ontwikkelaaropsies\" en aktiveer dan \"USB-ontfouting\" en \"Draadlose ontfouting\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tik aan die linkerkant van \"Draadlose ontfouting\" en tik dan op \"Koppel toestel met koppelkode\". Voer die kode in die kennisgewing in om die koppelproses te voltooi.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Die paringsproses vereis dat jy met \'n kennisgewing van Shizuku interaksie het. Laat asseblief Shizuku toe om kennisgewings te plaas.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moet dalk die kennisgewingstyl na \"Android\" oorskakel vanaf \"Kennisgewing\" - \"Kennisgewingskerm\" in stelselinstellings.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Andersins kan jy dalk nie die paringskode vanaf die kennisgewing invoer nie.</string>
