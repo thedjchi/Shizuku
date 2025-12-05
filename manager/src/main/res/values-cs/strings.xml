@@ -36,9 +36,7 @@
     <string name="dialog_wireless_adb_not_enabled">Bezdrátové ladění není povoleno.
 \nPřed povolením systému Android 11 je pro povolení bezdrátového ladění nutné připojení k počítači.</string>
     <string name="dialog_usb_debugging_not_enabled">Ladění přes USB není povolené.\nProsím, povolte to v \"Možnostech vývojářů\".</string>
-    <string name="dialog_adb_pairing_message">Začněte párování provedením následujících kroků: \"Možnosti vývojáře\" - \"Bezdrátové ladění\" - \"Spárování zařízení s kódem pro párování.\"\n\nPo zahájení párovacího procesu budete moci zadat párovací kód.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Prosím, povolte službu přístupnosti pro zahájení procesu párování. To umožňuje Shizuku detekovat párovací kód.\n\nSlužba přístupnosti bude vypnuta po nalezení kódu nebo po 1 minutě, aby se šetřila energie.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Přejděte prosím na \"Možnosti vývojářů\" &gt; \"Bezdrátové ladění\" &gt; \"Spoj zařízení s párovacím kódem.\" Shizuku automaticky rozpozná párovací kód.</string>
     <string name="adb_pairing_requires_multi_window">Nejprve prosím přejděte do režimu rozdělené obrazovky (více oken).</string>
     <string name="adb_pairing_requires_multi_window_reason">Systém vyžaduje, aby byl dialog pro párování vždy viditelný. Použití režimu rozdělené obrazovky je jediný způsob, jak zajistit, aby tato aplikace a dialogové okno systému byly viditelné současně.</string>
     <string name="adb_error_key_store">Nelze vygenerovat klíč pro bezdrátové ladění.\nMůže to být způsobeno chybou mechanismu úložiště klíčů v tomto zařízení.</string>
@@ -49,12 +47,9 @@
     <string name="notification_settings">Nastavení oznámení</string>
     <string name="adb_pairing_tutorial_title">Spárovat Shizuku s vaším zařízením</string>
     <string name="adb_pairing_tutorial_content_notification">Notifikace od Shizuku vám pomůže dokončit párování.</string>
-    <string name="adb_pairing_tutorial_content_steps">Otevřete \"Vývojářská Nastavení\" - \"Bezdrátové ladění\". Klikněte na \"Spárovat zařízení s párovacím kódem\", uvidíte šesti-místný kód.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Zadejte ten kód do oznámení aby jste dokončili párování.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proces párování vyžaduje interakci s oznámením od Shizuku. Prosím povolte Shizuku posílat oznámení.</string>
     <string name="adb_pairing_tutorial_content_miui">Uživatelé MIUI možná budou muset přepnout styl oznámení na \"Android\" z \"Oznámení\" - \"Lišta Oznámení\" v nastavení systému.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Jinak se vám nemusí podařit zadat párovací kód z oznámení.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Upozorňujeme, že levá část možnosti „Bezdrátové ladění“ je klikatelná, klepnutím na ni se otevře nová stránka. Pouze zapnutí přepínače vpravo je nesprávné.</string>
     <string name="adb_pairing_tutorial_content_finish">Vraťte se do Shizuku a začněte Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku potřebuje přístup k místní síti. Je řízen síťovými oprávněními.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Některé systémy (například MIUI) neumožňují aplikacím přístup k síti, když nejsou viditelné, a to i v případě, že aplikace používá službu v popředí. V takových systémech prosím vypněte funkce optimalizace baterie pro aplikaci Shizuku.</string>
