@@ -31,6 +31,7 @@
 #define EXIT_FATAL_KILL 9
 #define EXIT_FATAL_BINDER_BLOCKED_BY_SELINUX 10
 
+#define PACKAGE_NAME "moe.shizuku.privileged.api"
 #define SERVER_NAME "shizuku_server"
 #define SERVER_CLASS_PATH "rikka.shizuku.server.ShizukuService"
 
@@ -271,20 +272,15 @@ int main(int argc, char *argv[]) {
     }
 
     if (apk_path.empty()) {
-        // Use /proc/self/exe to get the executable path
-        char buf[PATH_MAX];
-        ssize_t len = readlink("/proc/self/exe", buf, sizeof(buf) - 1);
-        if (len == -1) {
-            perror("readlink");
-            return 1;
-        }
-        buf[len] = '\0';
-        std::string exe_path(buf);
-
-        // Find "/lib/" and replace from there with "/base.apk"
-        size_t lib_pos = exe_path.find("/lib/");
-        if (lib_pos != std::string::npos) {
-            apk_path = exe_path.substr(0, lib_pos) + "/base.apk";
+        auto f = popen("pm path " PACKAGE_NAME, "r");
+        if (f) {
+            char line[PATH_MAX]{0};
+            fgets(line, PATH_MAX, f);
+            trim(line);
+            if (strstr(line, "package:") == line) {
+                apk_path = line + strlen("package:");
+            }
+            pclose(f);
         }
     }
 
