@@ -38,6 +38,7 @@ import kotlinx.coroutines.CancellableContinuation
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.ShizukuSettings.Keys.*
+import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.app.ThemeHelper
 import moe.shizuku.manager.ktx.isComponentEnabled
@@ -178,7 +179,10 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                             icon = maybeGetRestartIcon(KEY_TCP_MODE)
                             tcpPortPreference.isVisible = newValue
                         }
-                        maybePromptRestart (KEY_TCP_MODE, newValue) { applyChange() }
+                        
+                        if (!newValue && !ShizukuStateMachine.isRunning() && needsRestart(KEY_TCP_MODE, newValue)) {
+                            promptStopTcp { applyChange() }
+                        } else maybePromptRestart (KEY_TCP_MODE, newValue) { applyChange() }
                     }
                     false
                 }
@@ -387,6 +391,21 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         context.theme.resolveAttribute(R.attr.colorOnSurfaceVariant, tintColor, true)
         icon?.mutate()?.setTint(tintColor.data)
         return icon
+    }
+
+    private fun promptStopTcp (applyChange: () -> Unit) {
+        val context = requireContext()
+        MaterialAlertDialogBuilder(context)
+            .setTitle(android.R.string.dialog_alert_title)
+            .setMessage("The TCP port will be closed immediately. You will need Wi-Fi to turn on TCP mode again. Continue?")
+            .setPositiveButton(android.R.string.ok) { _, _ ->
+                lifecycleScope.launch {
+                    AdbStarter.stopTcp(context, EnvironmentUtils.getAdbTcpPort())
+                    if (EnvironmentUtils.getAdbTcpPort() <= 0) applyChange()
+                }
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun maybePromptRestart (setting: String, newValue: Any? = null, applyChange: () -> Unit) {

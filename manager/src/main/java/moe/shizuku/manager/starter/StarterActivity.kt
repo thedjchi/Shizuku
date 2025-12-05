@@ -19,6 +19,7 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.withContext
 import moe.shizuku.manager.AppConstants.EXTRA
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbKeyException
@@ -126,7 +127,7 @@ private class ViewModel(
         if (started) return
         started = true
 
-        viewModelScope.launch(Dispatchers.IO + handler) {
+        viewModelScope.launch(handler) {
             try {
                 if (root) {
                     startRoot()
@@ -152,29 +153,32 @@ private class ViewModel(
     private suspend fun startRoot() {
         log("Starting with root...\n")
 
-        if (!Shell.getShell().isRoot) {
-            // Try again just in case
-            Shell.getCachedShell()?.close()
-
+        return withContext(Dispatchers.IO) {
             if (!Shell.getShell().isRoot) {
+                // Try again just in case
                 Shell.getCachedShell()?.close()
-                throw NotRootedException()
+
+                if (!Shell.getShell().isRoot) {
+                    Shell.getCachedShell()?.close()
+                    throw NotRootedException()
+                }
+            }
+
+            ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
+            suspendCancellableCoroutine { cont ->
+                Shell.cmd(Starter.internalCommand)
+                    .to(object : CallbackList<String?>() {
+                        override fun onAddElement(s: String?) { s?.let { log(it) } }
+                    })
+                    .submit {
+                        if (it.isSuccess) {
+                            cont.resume(Unit)
+                        } else {
+                            cont.resumeWithException(Exception("Failed to start with root"))
+                        }
+                    }
             }
         }
-
-        ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
-        return suspendCancellableCoroutine { cont ->
-            Shell.cmd(Starter.internalCommand)
-                .to(object : CallbackList<String?>() {
-                    override fun onAddElement(s: String?) { s?.let { log(it) } }
-                })
-                .submit {
-                    if (it.isSuccess) {
-                        cont.resume(Unit)
-                    } else {
-                        cont.resumeWithException(Exception("Failed to start with root"))
-                    }
-                }
-        }
     }
+    
 }

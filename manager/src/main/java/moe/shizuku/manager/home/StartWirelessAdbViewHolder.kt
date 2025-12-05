@@ -107,7 +107,7 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
             AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
         // If ADB IS listening to a TCP port but the user wants to close it and use TLS instead, close the TCP port and start mDns discovery
         } else if (!tcpMode) {
-            scope.launch(Dispatchers.IO) {
+            scope.launch {
                 AdbStarter.stopTcp(context, tcpPort)
             }
             AdbDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
