@@ -47,6 +47,8 @@
     <string name="notification_settings">Bildiriş seçimləri</string>
     <string name="adb_pairing_tutorial_title">Shizuku-nu cihazınızla cütləşdirin</string>
     <string name="adb_pairing_tutorial_content_notification">Shizukudan gələn bildiriş cütləşdirməni tamamlamağınız üçün sizə kömək edə bilər</string>
+    <string name="adb_pairing_tutorial_content_steps">\"Developer Options\"a keçin, sonra \"USB debugging\" və \"Wireless debugging\" funksiyalarını aktivləşdirin.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">\"Simsiz sazlama\"nın sol tərəfinə toxunun, sonra \"Cihazı cütləşdirmə kodu ilə cütləşdirin\" üzərinə toxunun. Qoşulmanı tamamlamaq üçün bildirişdə kodu daxil edin.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Cütləşmə prosesi Shizukudan gələn bildirişi görməyinizi tələb edir. Zəhmət olmasa, Shizuku-ya bildirişlər göndərməyə icazə verin.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI istifadəçiləri sistem parametrlərində bildiriş tərzini \"Bildiriş\" - \"Bildiriş kölgəsi\"ndən \"Android\"ə keçirməli ola bilərlər</string>
     <string name="adb_pairing_tutorial_content_miui_2">Əks halda, siz bildirişdəki cütləşdirmə kodunu daxil edə bilməyəcəksiniz.</string>
