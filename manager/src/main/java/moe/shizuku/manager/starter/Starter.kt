@@ -2,6 +2,7 @@ package moe.shizuku.manager.starter
 
 import androidx.lifecycle.asFlow
 import java.io.File
+import java.util.concurrent.TimeoutException
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.TimeoutCancellationException
@@ -20,9 +21,6 @@ object Starter {
 
     val serviceStartedMessage = "Service started, this window will be automatically closed in 3 seconds"
 
-    private class BinderTimeoutException:
-        Exception("Failed to receive binder within 10 seconds")
-
     suspend fun waitForBinder(log: ((String) -> Unit)? = null) {
         try {
             log?.invoke("\nWaiting for service...")
@@ -32,7 +30,7 @@ object Starter {
             }
             log?.invoke(serviceStartedMessage)
         } catch (e: TimeoutCancellationException) {
-            throw BinderTimeoutException()
+            throw TimeoutException("Failed to receive binder within 10 seconds")
         }
     }
 

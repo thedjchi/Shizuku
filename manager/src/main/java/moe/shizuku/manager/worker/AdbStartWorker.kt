@@ -16,6 +16,7 @@ import androidx.core.app.NotificationCompat
 import androidx.lifecycle.asFlow
 import androidx.work.*
 import java.io.EOFException
+import java.util.concurrent.TimeoutException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -69,7 +70,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     timeoutJob?.cancel()
                     timeoutJob = launch {
                         delay(15_000)
-                        close(CancellationException("Timeout during mDNS port discovery"))
+                        close(TimeoutException("Timed out during mDNS port discovery"))
                     }
                 }
 
@@ -106,7 +107,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     override fun onChange(selfChange: Boolean) {
                         when (Settings.Global.getInt(cr, "adb_wifi_enabled", 0)) {
                             0 -> if (awaitingAuth) {
-                                close(CancellationException("User did not authorize network for wireless debugging"))
+                                close(SecurityException("Network is not authorized for wireless debugging"))
                             } else handleAuth()
                             1 -> startDiscoveryWithTimeout()
                         }
@@ -131,15 +132,17 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
             nm.cancel(ShizukuReceiverStarter.NOTIFICATION_ID)
 
             return Result.success()
+        } catch (e: CancellationException) {
+            return Result.failure()
         } catch (e: Exception) {
-            if (ShizukuStateMachine.update() == ShizukuStateMachine.State.RUNNING)
+            if (e !is EOFException) showErrorNotification(applicationContext, e)
+
+            if (ShizukuStateMachine.update() == ShizukuStateMachine.State.RUNNING) {
                 return Result.success()
-
-            if (e !is CancellationException && e !is EOFException)
-                showErrorNotification(applicationContext, e)
-
-            ShizukuReceiverStarter.showNotification(applicationContext)
-            return Result.retry()
+            } else {
+                ShizukuReceiverStarter.showNotification(applicationContext)
+                return Result.retry()
+            }
         }
     }
 
