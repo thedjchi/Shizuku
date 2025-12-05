@@ -36,9 +36,7 @@
     <string name="dialog_wireless_adb_not_enabled">Gỡ lỗi không dây không được kích hoạt.
 \nLưu ý, trước Android 11, để kích hoạt tính năng gỡ lỗi không dây, kết nối máy tính là điều bắt buộc.</string>
     <string name="dialog_usb_debugging_not_enabled">Chưa bật tính năng gỡ lỗi USB.\nVui lòng bật tính năng này trong \"Tùy chọn nhà phát triển\".</string>
-    <string name="dialog_adb_pairing_message">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước sau: \"Tùy chọn nhà phát triển\" - \"Gỡ lỗi không dây\" - \"Ghép nối thiết bị bằng mã ghép nối\".\n\nSau khi quá trình ghép nối bắt đầu, bạn sẽ có thể nhập mã ghép nối.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vui lòng bật dịch vụ trợ năng để bắt đầu quá trình ghép nối. Thao tác này cho phép Shizuku phát hiện mã ghép nối.\n\nDịch vụ trợ năng sẽ bị tắt khi tìm thấy mã hoặc sau 1 phút để tiết kiệm pin.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Vui lòng điều hướng đến \"Tùy chọn nhà phát triển\" &gt; \"Gỡ lỗi không dây\" &gt; \"Ghép nối thiết bị bằng mã ghép nối\". Shizuku sẽ tự động phát hiện mã ghép nối.</string>
     <string name="adb_pairing_requires_multi_window">Vui lòng vào chế độ chia đôi màn hình (đa cửa sổ) trước.</string>
     <string name="adb_pairing_requires_multi_window_reason">Hệ thống yêu cầu hộp thoại ghép nối luôn hiển thị. Sử dụng chế độ chia đôi màn hình là cách duy nhất để hiển thị ứng dụng này và hộp thoại hệ thống cùng một lúc.</string>
     <string name="adb_error_key_store">Không thể tạo khóa để gỡ lỗi không dây.\nĐiều này có thể là do cơ chế KeyStore của thiết bị này bị hỏng.</string>
@@ -49,12 +47,9 @@
     <string name="notification_settings">Tùy chọn thông báo</string>
     <string name="adb_pairing_tutorial_title">Ghép nối Shizuku với thiết bị của bạn</string>
     <string name="adb_pairing_tutorial_content_notification">Một thông báo từ Shizuku sẽ giúp bạn hoàn thành việc ghép nối.</string>
-    <string name="adb_pairing_tutorial_content_steps">Nhập \"Tùy chọn nhà phát triển\" - \"Gỡ lỗi qua Wi-Fi\". Nhấn vào \"Ghép nối thiết bị bằng mã ghép nối\", bạn sẽ thấy một mã gồm sáu chữ số.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Nhập mã vào thông báo để hoàn tất quá trình ghép nối.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Quá trình ghép nối cần bạn tương tác với thông báo từ Shizuku. Vui lòng cho phép Shizuku đăng thông báo.</string>
     <string name="adb_pairing_tutorial_content_miui">Người dùng MIUI có thể cần chuyển kiểu thông báo sang \"Android\" từ \"Thông báo\" - \"Bóng thông báo\" trong cài đặt hệ thống.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Nếu không, bạn có thể không nhập được mã ghép nối từ thông báo.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Xin lưu ý, phần bên trái của tùy chọn \"Gỡ lỗi không dây\" có thể nhấp vào, nhấn vào nó sẽ mở ra một trang mới. Chỉ bật công tắc bên phải là không chính xác.</string>
     <string name="adb_pairing_tutorial_content_finish">Quay trở lại Shizuku và bắt đầu Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku cần truy cập mạng cục bộ. Nó được kiểm soát bởi quyền mạng.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Một số hệ thống (chẳng hạn như MIUI) không cho phép ứng dụng truy cập mạng khi chúng không hiển thị, ngay cả khi ứng dụng sử dụng dịch vụ nền trước. Vui lòng tắt các tính năng tối ưu hóa pin cho Shizuku trên các hệ thống đó.</string>
