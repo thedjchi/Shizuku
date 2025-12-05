@@ -33,9 +33,7 @@
     <string name="cannot_connect_port">Impossible de se connecter au service de débogage sans fil.\n\nVeuillez vous assurer que Shizuku est autorisé dans tous les pare-feu, bloqueurs de publicités, VPN ou applications similaires susceptibles de restreindre l\'accès au réseau.</string>
     <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, pour activer le débogage sans fil, la connexion à un ordinateur est requise.</string>
     <string name="dialog_usb_debugging_not_enabled">Le débogage USB n’est pas activé.\nVeuillez l’activer dans « Options développeur ».</string>
-    <string name="dialog_adb_pairing_message">Veuillez commencer l’appairage en effectuant les étapes suivantes : « Options développeur » - « Débogage sans fil » - « Appairer l’appareil avec le code d’appairage ».\n\nAprès le début du processus d’appariement, vous pourrez entrer le code d’appariement.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Veuillez activer le service d’accessibilité pour lancer le processus d’appairage. Cela permet à Shizuku de détecter le code d’appairage.\n\nLe service d’accessibilité sera désactivé dès que le code sera trouvé ou après 1 minute pour économiser de l’énergie.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Veuillez naviguer dans « Options développeurs » &gt; « Débogage sans fil » &gt; « Appairer l’appareil avec le code d’appairage. » Shizuku détectera automatiquement le code d’appairage.</string>
     <string name="adb_pairing_requires_multi_window">Merci d\'activer le mode écran partagé (mode multi-fenêtres) d\'abord.</string>
     <string name="adb_pairing_requires_multi_window_reason">Le système exige que la boîte de dialogue de jumelage soit toujours visible. Seul le mode écran partagé permet d\'afficher simultanément cette application et la boîte de dialogue système.</string>
     <string name="adb_error_key_store">Impossible de générer une clé pour le débogage sans fil.\nCela peut être dû à une défaillance du mécanisme KeyStore de cet appareil.</string>
@@ -46,12 +44,9 @@
     <string name="notification_settings">Options des notifications</string>
     <string name="adb_pairing_tutorial_title">Associer Shizuku avec votre appareil</string>
     <string name="adb_pairing_tutorial_content_notification">Une notification de Shizuku vous aidera à compléter l\'association.</string>
-    <string name="adb_pairing_tutorial_content_steps">Allez dans les \"Options pour les développeurs\" - \"Débogage sans fil\". Appuyez sur \"Associer l\'appareil avec un code d\'association\", vous verrez un code à six chiffres.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Entrez le code dans la notification pour compléter l\'association.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Le processus d\'association requiert que vous interagissez avec une notification de Shizuku. Merci d\'autoriser Shizuku à envoyer les notifications.</string>
     <string name="adb_pairing_tutorial_content_miui">Les utilisateurs de MIUI pourraient devoir changer le style de notifications vers \"Android\" dans \"Notifications\" - \"Style de notification\" dans les paramètres système.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Sinon, vous risquez de ne pas pouvoir saisir le code d\'appairage figurant dans la notification.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Veuillez noter que la partie gauche de l\'option « Débogage sans fil » est cliquable ; appuyer dessus ouvrira une nouvelle page. Activer uniquement le bouton de droite est incorrect.</string>
     <string name="adb_pairing_tutorial_content_finish">Retournez à Shizuku et démarrez Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku a besoin d\'accéder au réseau local. Cet accès est contrôlé par les autorisations réseau.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Certains systèmes (comme MIUI) interdisent aux applications d\'accéder au réseau lorsqu\'elles ne sont pas visibles, même si l\'application utilise un service de premier plan. Veuillez désactiver les fonctions d\'optimisation de la batterie pour Shizuku sur ces systèmes.</string>
