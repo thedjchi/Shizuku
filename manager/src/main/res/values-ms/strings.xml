@@ -34,6 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer adalah satu kemestian.</string>
     <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila dayakannya dalam \"Pilihan Pembangun\".</string>
     <string name="dialog_adb_pairing_accessibility_enable">Sila dayakan perkhidmatan kebolehaksesan untuk memulakan proses berpasangan. Ini membolehkan Shizuku mengesan kod berpasangan.\n\nPerkhidmatan kebolehaksesan akan dimatikan apabila kod ditemui atau selepas 1 minit untuk menjimatkan tenaga.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Sila mulakan berpasangan dengan melakukan langkah berikut:\n- Navigasi ke \"Pilihan Pembangun\"\n- Dayakan \"penyahpepijatan USB\" dan \"Penyahpepijatan wayarles\"\n- Ketik sebelah kiri \"Penyahpepijatan wayarles\"\n- Ketik \"Gandingkan peranti dengan peranti.\" Shizuku akan mengesan kod pasangan secara automatik.</string>
     <string name="adb_pairing_requires_multi_window">Sila masukkan mod skrin belah (berbilang tetingkap) dahulu.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem memerlukan dialog berpasangan untuk sentiasa kelihatan. Menggunakan mod skrin belah ialah satu-satunya cara untuk membolehkan apl ini dan dialog sistem kelihatan pada masa yang sama.</string>
     <string name="adb_error_key_store">Tidak dapat menjana kunci untuk penyahpepijatan wayarles.\nIni mungkin kerana mekanisme KeyStore peranti ini rosak.</string>
@@ -44,6 +45,8 @@
     <string name="notification_settings">Pilihan pemberitahuan</string>
     <string name="adb_pairing_tutorial_title">Gandingkan Shizuku dengan peranti anda</string>
     <string name="adb_pairing_tutorial_content_notification">Pemberitahuan daripada Shizuku akan membantu anda melengkapkan gandingan.</string>
+    <string name="adb_pairing_tutorial_content_steps">Navigasi ke \"Pilihan Pembangun\", kemudian dayakan \"penyahpepijatan USB\" dan \"Penyahpepijatan wayarles\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Ketik sebelah kiri \"Penyahpepijatan wayarles\", kemudian ketik \"Gandingkan peranti dengan kod berpasangan.\" Masukkan kod dalam pemberitahuan untuk melengkapkan gandingan.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Proses berpasangan memerlukan anda berinteraksi dengan pemberitahuan daripada Shizuku. Sila benarkan Shizuku menyiarkan pemberitahuan.</string>
     <string name="adb_pairing_tutorial_content_miui">Pengguna MIUI mungkin perlu menukar gaya pemberitahuan kepada \"Android\" daripada \"Pemberitahuan\" - \"Teduhan pemberitahuan\" dalam tetapan sistem.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Jika tidak, anda mungkin tidak dapat memasukkan kod berpasangan daripada pemberitahuan.</string>
