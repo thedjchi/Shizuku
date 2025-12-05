@@ -36,9 +36,7 @@
     <string name="dialog_wireless_adb_not_enabled">Bežično otklanjanje grešaka nije omogućeno.
 \nPrimedba: Pre Android-a 11, omogućavanje bežičnog otklanjanja grešaka bilo je uslovljeno postojanjem konekcije sa računarom.</string>
     <string name="dialog_usb_debugging_not_enabled">Отклањање грешака преко USB-а није омогућено.\nОмогућите га у „Опцијама за програмере“.</string>
-    <string name="dialog_adb_pairing_message">Молимо вас да покренете упаривање тако што ћете извршити следеће кораке: „Опције за програмере“ - „Бежично отклањање грешака“ - „Упарите уређај помоћу кода за упаривање“.\n\nНакон што процес упаривања почне, моћи ћете да унесете код за упаривање.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Омогућите услугу приступачности да бисте започели процес упаривања. Ово омогућава Шизукуу да детектује код за упаривање.\n\nУслуга приступачности ће бити искључена када се пронађе код или након 1 минута ради уштеде енергије.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Идите на „Опције за програмере“ &gt; „Бежично отклањање грешака“ &gt; „Упари уређај помоћу кода за упаривање“. Шизуку ће аутоматски детектовати код за упаривање.</string>
     <string name="adb_pairing_requires_multi_window">Molim Vas, najpre izaberite režim podeljenog ekrana, odnosno režim više prozora.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem zahteva dijalog uparivanja da uvek bude vidljiv. Korišćenje režima podeljenog ekrana je jedini način da ova aplikacija i sistemski dijalog budu vidljivi u isto vreme.</string>
     <string name="adb_error_key_store">Nije moguće generisati ključ za bežično otklanjanje grešaka.\nTo može biti zato što je KeiStore mehanizam ovog uređaja je slomljena.</string>
@@ -49,12 +47,9 @@
     <string name="notification_settings">Opcije obaveštenja</string>
     <string name="adb_pairing_tutorial_title">Uparite Shizuku sa Vašim uređajem</string>
     <string name="adb_pairing_tutorial_content_notification">Notifikacija iz Shizuku aplikacije će Vam pomoći da dovršite uparivanje.</string>
-    <string name="adb_pairing_tutorial_content_steps">Otvorite sekciju \"Razvojne opcije programera\" - \"Bežično otklanjanje grešaka\". Dodirnite \"Uparivanje uređaja pomoću kóda za uparivanje\" i pojaviće Vam se 6-cifreni kód.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Унесите код из обавештења да бисте завршили упаривање.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процес упаривања захтева вашу интеракцију са обавештењем од Шизукуа. Дозволите Шизукуу да објављује обавештења.</string>
     <string name="adb_pairing_tutorial_content_miui">Корисници MIUI-ја ће можда морати да промене стил обавештења на „Android“ из „Обавештења“ - „Тањир обавештења“ у системским подешавањима.</string>
     <string name="adb_pairing_tutorial_content_miui_2">U suprotnom, možda nećete moći da unesete kod za uparivanje iz obaveštenja.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Imajte na umu da se na levi deo opcije \"Bežično otklanjanje grešaka\" može kliknuti, dodirom će se otvoriti nova stranica. Samo uključivanje prekidača sa desne strane je netačno.</string>
     <string name="adb_pairing_tutorial_content_finish">Vratite se u Shizuku i počnite Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku treba da pristupi lokalnoj mreži. Kontroliše se mrežnom dozvolom.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Neki sistemi (kao što je MIUI) ne dozvoljavaju aplikacijama pristup mreži kada nisu vidljive, čak i ako aplikacija koristi uslugu u prvom planu. Molimo Vas da onemogućite funkcije optimizacije baterije za Shizuku na takvim sistemima.</string>
