@@ -36,9 +36,7 @@
     <string name="dialog_wireless_adb_not_enabled">Simsiz debaq aktiv edilməyib.
 \nQeyd edək ki, Android 11-dən əvvəl simsiz debaqı aktivləşdirmək üçün kompüter bağlantısı mütləqdir.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging aktiv deyil.\nZəhmət olmasa, onu \"İnkişaf etdirici seçimləri\" bölməsində aktiv edin.</string>
-    <string name="dialog_adb_pairing_message">Zəhmət olmasa, cütləşdirməyə aşağıdakı addımları yerinə yetirməklə başlayın: \"İnkişaf etdirici seçimləri\" - \"Simsiz debugging\" - \"Cihazı cütləşdirmə kodu ilə qoşun.\"\n\nCütləşdirmə prosesi başladıqdan sonra cütləşdirmə kodunu daxil edə biləcəksiniz.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Zəhmət olmasa, cütləşdirmə prosesini başlatmaq üçün əlçatanlıq xidmətini aktiv edin. Bu, Shizukuya cütləşdirmə kodunu aşkar etməyə imkan verir.\n\nƏlçatanlıq xidməti kod tapıldıqda və ya enerji qənaəti üçün 1 dəqiqə sonra söndürüləcək.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Zəhmət olmasa \"İnkişaf etdirici Seçimləri\" bölməsinə keçin &gt; \"Simsiz debugging\" &gt; \"Cihazı cütləşdirmə kodu ilə qoş.\" Shizuku cütləşdirmə kodunu avtomatik aşkar edəcək.</string>
     <string name="adb_pairing_requires_multi_window">Əvvəlcə bölünmüş ekran (çoxu pəncərə) rejiminə daxil olun.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem cütləşdirmə dialoqunun həmişə görünməsini tələb edir. Split ekran rejimindən istifadə bu tətbiqin və sistem dialoqunun eyni vaxtda görünməsinə imkan verməyin yeganə yoludur.</string>
     <string name="adb_error_key_store">Simsiz sazlama üçün açar yaratmaq mümkün deyil.\nBunun səbəbi bu cihazın KeyStore mexanizminin xarab olması ola bilər.</string>
@@ -49,12 +47,9 @@
     <string name="notification_settings">Bildiriş seçimləri</string>
     <string name="adb_pairing_tutorial_title">Shizuku-nu cihazınızla cütləşdirin</string>
     <string name="adb_pairing_tutorial_content_notification">Shizukudan gələn bildiriş cütləşdirməni tamamlamağınız üçün sizə kömək edə bilər</string>
-    <string name="adb_pairing_tutorial_content_steps">\"Tərtibatçı seçimləri\" - \"Simsiz debaq\" daxil olun. \"Cihazı cütləşdirmə kodu ilə cütləşdir\" klikləyin, altı rəqəmli kod görəcəksiniz.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Cütləşdirməni tamamlamaq üçün bildirişdəki kodu daxil edin</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Cütləşmə prosesi Shizukudan gələn bildirişi görməyinizi tələb edir. Zəhmət olmasa, Shizuku-ya bildirişlər göndərməyə icazə verin.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI istifadəçiləri sistem parametrlərində bildiriş tərzini \"Bildiriş\" - \"Bildiriş kölgəsi\"ndən \"Android\"ə keçirməli ola bilərlər</string>
     <string name="adb_pairing_tutorial_content_miui_2">Əks halda, siz bildirişdəki cütləşdirmə kodunu daxil edə bilməyəcəksiniz.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Nəzərə alın ki, \"Simsiz sazlama\" seçiminin sol hissəsi tıklanabilir, ona toxunmaq yeni səhifə açacaq. Yalnız sağdakı açarı açmaq düzgün deyil.</string>
     <string name="adb_pairing_tutorial_content_finish">Şizukuya qayıdın və Şizukuya başlayın.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku yerli şəbəkəyə daxil olmalıdır. Şəbəkə icazəsi ilə idarə olunur.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Bəzi sistemlər (məsələn, MIUI) proqramlar görünmədikdə, hətta proqram ön planda xidmətdən istifadə etsə belə, onların şəbəkəyə daxil olmasına icazə vermir. Zəhmət olmasa belə sistemlərdə Shizuku üçün batareyanın optimallaşdırılması funksiyalarını söndürün.</string>
