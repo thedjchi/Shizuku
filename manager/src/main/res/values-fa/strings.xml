@@ -33,9 +33,7 @@
     <string name="cannot_connect_port">نمی توانم به سرویس اشکال زدایی بی سیم وصل شوم.\n\nلطفا مطمئن شوید که شیزوکو در تمام برنامه های فایروال، مسدودسازی تبلیغات، VPN یا برنامه های مشابه که دسترسی به شبکه را محدود می کنند، در لیست سفید قرار دارد.</string>
     <string name="dialog_wireless_adb_not_enabled">اشکال‌زدایی بی‌سیم فعال نیست.\nتوجه داشته باشید، قبل از اندروید ۱۱، برای فعال کردن اشکال‌زدایی بی‌سیم، اتصال به رایانه ضروری است.</string>
     <string name="dialog_usb_debugging_not_enabled">اشکال‌زدایی USB فعال نیست.\nلطفاً آن را در «گزینه‌های توسعه‌دهنده» فعال کنید.</string>
-    <string name="dialog_adb_pairing_message">لطفاً با انجام مراحل زیر، جفت‌سازی را شروع کنید: «گزینه‌های توسعه‌دهنده» - «اشکال‌زدایی بی‌سیم» - «جفت‌سازی دستگاه با کد جفت‌سازی.»\n\nپس از شروع فرآیند جفت‌سازی، می‌توانید کد جفت‌سازی را وارد کنید.</string>
     <string name="dialog_adb_pairing_accessibility_enable">لطفاً برای شروع فرآیند جفت‌سازی، سرویس دسترسی را فعال کنید. این به شیزوکو اجازه می‌دهد تا کد جفت‌سازی را تشخیص دهد.\n\nسرویس دسترسی هنگام یافتن کد یا پس از ۱ دقیقه برای صرفه‌جویی در مصرف انرژی خاموش می‌شود.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">لطفاً به «گزینه‌های توسعه‌دهنده» &gt; «اشکال‌زدایی بی‌سیم» &gt; «جفت کردن دستگاه با کد جفت‌سازی» بروید. شیزوکو به‌طور خودکار کد جفت‌سازی را تشخیص می‌دهد.</string>
     <string name="adb_pairing_requires_multi_window">لطفاً ابتدا وارد حالت تقسیم صفحه (چند پنجره) شوید.</string>
     <string name="adb_pairing_requires_multi_window_reason">سیستم نیاز دارد که دیالوگ جفت سازی همیشه قابل مشاهده باشد. استفاده از حالت تقسیم صفحه تنها راهی است که این برنامه و دیالوگ سیستم همزمان قابل مشاهده باشند.</string>
     <string name="adb_error_key_store">امکان تولید کلید برای اشکال زدایی بی سیم وجود ندارد.\nاین ممکن است به این دلیل باشد که مکانیزم KeyStore این دستگاه خراب شده است.</string>
@@ -46,12 +44,9 @@
     <string name="notification_settings">گزینه های اعلان</string>
     <string name="adb_pairing_tutorial_title">برنامه Shizuku را با دستگاه خود مرتبط کنید</string>
     <string name="adb_pairing_tutorial_content_notification">یک اعلان از Shizuku به شما امکان می دهد مرتبط کردن را تکمیل کنید.</string>
-    <string name="adb_pairing_tutorial_content_steps">وارد \"گزینه‌های توسعه دهنده\" - \"اشکال‌زدایی بی‌سیم\" شوید.  روی \"مرتبط کردن دستگاه با رمز مرتبط‌سازی\" ضربه بزنید، یک رمز شش رقمی خواهید دید.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">برای تکمیل مرتبط سازی، رمز شش رقمی را در اعلان وارد کنید.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">فرآیند مرتبط شدن به شما نیاز دارد که با اعلان Shizuku تعامل داشته باشید. لطفاً به Shizuku اجازه دهید تا اعلان‌ها را ارسال کند.</string>
     <string name="adb_pairing_tutorial_content_miui">کاربران MIUI ممکن است نیاز داشته باشند که در تنظیمات دستگاه، سبک اعلان را به \"اندروید\" از \"اعلان ها\" - \"سایه اعلان\" تغییر دهند.</string>
     <string name="adb_pairing_tutorial_content_miui_2">در غیر این صورت، ممکن است نتوانید کد جفت سازی را از طریق اعلان وارد کنید.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">لطفا توجه داشته باشید، بخش سمت چپ گزینه «اشکال زدایی بی سیم» قابل کلیک است، با لمس روی آن صفحه جدیدی باز می شود. فقط روشن کردن کلید سمت راست اشتباه است.</string>
     <string name="adb_pairing_tutorial_content_finish">برگرد به شیزوکو و شیزوکو را شروع کن.</string>
     <string name="adb_pairing_tutorial_content_network">شیزوکو باید به شبکه محلی دسترسی پیدا کند. این سیستم توسط مجوز شبکه کنترل می شود.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">برخی سیستم ها (مانند MIUI) اجازه نمی دهند برنامه ها زمانی که قابل مشاهده نیستند، حتی اگر برنامه از سرویس پیش زمینه استفاده کند، به شبکه دسترسی پیدا کنند. لطفا ویژگی های بهینه سازی باتری شیزوکو را در چنین سیستم هایی غیرفعال کنید.</string>
