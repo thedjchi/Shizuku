@@ -36,7 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">Depanarea wireless nu este activată.
 \nReține că înainte de Android 11, pentru a activa depanarea wireless, conexiunea la computer este o necesitate.</string>
     <string name="dialog_usb_debugging_not_enabled">Depanarea USB nu este activată.\nVă rugăm să o activați în „Opțiuni pentru dezvoltatori”.</string>
+    <string name="dialog_adb_pairing_message">Vă rugăm să începeți asocierea urmând următorii pași:\n- Navigați la „Opțiuni pentru dezvoltatori”\n- Activați „Depanare USB” și „Depanare wireless”\n- Atingeți partea stângă a opțiunii „Depanare wireless”\n- Atingeți „Asocieți dispozitivul cu cod de asociere”\n- Introduceți codul de asociere în notificare</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vă rugăm să activați serviciul de accesibilitate pentru a începe procesul de asociere. Acest lucru permite dispozitivului Shizuku să detecteze codul de asociere.\n\nServiciul de accesibilitate va fi dezactivat când codul este găsit sau după 1 minut pentru a economisi energie.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Vă rugăm să începeți asocierea urmând următorii pași:\n- Navigați la „Opțiuni pentru dezvoltatori”\n- Activați „Depanare USB” și „Depanare wireless”\n- Atingeți partea stângă a opțiunii „Depanare wireless”\n- Atingeți „Asocieți dispozitivul cu cod de asociere”. Shizuku va detecta automat codul de asociere.</string>
     <string name="adb_pairing_requires_multi_window">Intră mai întâi în modul ecran divizat (ferestre multiple).</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistemul cere ca dialogul de împerechere să fie mereu vizibil. Folosirea modului split-screen este singura modalitate de a lăsa această aplicație și dialogul de sistem să fie vizibile în același timp.</string>
     <string name="adb_error_key_store">Nu pot genera cheia pentru depanarea wireless.\nAcest lucru poate fi cauzat de faptul că mecanismul KeyStore al acestui dispozitiv este defect.</string>
@@ -47,6 +49,8 @@
     <string name="notification_settings">Opțiuni de notificare</string>
     <string name="adb_pairing_tutorial_title">Asociază Shizuku cu acest dispozitiv</string>
     <string name="adb_pairing_tutorial_content_notification">O notificare de la Shizuku te va ajuta să finalizezi asocierea.</string>
+    <string name="adb_pairing_tutorial_content_steps">Navigați la „Opțiuni pentru dezvoltatori”, apoi activați „Depanare USB” și „Depanare wireless”.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Atingeți partea stângă a opțiunii „Depanare wireless”, apoi atingeți „Asocierea dispozitivului cu codul de asociere”. Introduceți codul din notificare pentru a finaliza asocierea.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Procesul de asociere necesită să interacționarea cu o notificare de la Shizuku. Permite lui Shizuku să afișeze notificări.</string>
     <string name="adb_pairing_tutorial_content_miui">Este posibil ca utilizatorii MIUI să fie nevoiți să schimbe stilul de notificare la „Android” în „Notificări” - „Panou de notificare” în setările sistemului.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Altfel, este posibil să nu poți introduce codul de împerechere din notificare.</string>
