@@ -36,7 +36,9 @@
     <string name="dialog_wireless_adb_not_enabled">무선 디버깅을 사용하고 있지 않습니다.
 \n안드로이드 11 이전은 무선 디버깅을 사용하기 위해서 컴퓨터 연결을 필수로 해야 합니다.</string>
     <string name="dialog_usb_debugging_not_enabled">USB 디버깅이 활성화되어 있지 않습니다.\n\"개발자 옵션\"에서 활성화해 주세요.</string>
+    <string name="dialog_adb_pairing_message">다음 단계를 수행하여 페어링을 시작하세요.\n- \"개발자 옵션\"으로 이동합니다.\n- \"USB 디버깅\" 및 \"무선 디버깅\"을 활성화합니다.\n- \"무선 디버깅\"의 왼쪽을 탭합니다.\n- \"페어링 코드로 장치 페어링\"을 탭합니다.\n- 알림에 페어링 코드를 입력합니다.</string>
     <string name="dialog_adb_pairing_accessibility_enable">페어링 과정을 시작하려면 접근성 서비스를 활성화하세요. 이렇게 하면 Shizuku가 페어링 코드를 감지할 수 있습니다.\n\n코드를 찾거나 1분 후에 에너지 절약을 위해 접근성 서비스가 꺼집니다.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">다음 단계를 수행하여 페어링을 시작하세요.\n- \"개발자 옵션\"으로 이동합니다.\n- \"USB 디버깅\" 및 \"무선 디버깅\"을 활성화합니다.\n- \"무선 디버깅\"의 왼쪽을 탭합니다.\n- \"페어링 코드로 기기 페어링\"을 탭합니다. Shizuku가 자동으로 페어링 코드를 감지합니다.</string>
     <string name="adb_pairing_requires_multi_window">먼저 화면 분할 (멀티 윈도우) 모드로 진입하세요.</string>
     <string name="adb_pairing_requires_multi_window_reason">이 시스템은 페어링 대화 대화가 항상 보이도록 요구합니다. 분할 화면 모드를 사용하는 것만이 이 앱과 시스템 대화 대화를 동시에 볼 수 있는 방법입니다.</string>
     <string name="adb_error_key_store">무선 디버깅용 키를 생성할 수 없습니다.\n이는 이 장치의 KeyStore 메커니즘이 고장 났기 때문일 수 있습니다.</string>
@@ -47,6 +49,8 @@
     <string name="notification_settings">알림 옵션</string>
     <string name="adb_pairing_tutorial_title">기기와 Shizuku 페어링</string>
     <string name="adb_pairing_tutorial_content_notification">Shizuku의 알림이 페어링을 완료하는 데 도움이 될 수도 있습니다.</string>
+    <string name="adb_pairing_tutorial_content_steps">\"개발자 옵션\"으로 이동한 다음 \"USB 디버깅\"과 \"무선 디버깅\"을 활성화합니다.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">\"무선 디버깅\"의 왼쪽을 탭한 다음 \"페어링 코드로 기기 페어링\"을 탭합니다. 알림에 있는 코드를 입력하여 페어링을 완료합니다.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">페어링 프로세스에서는 Shizuku의 알림과 상호 작용해야 합니다. Shizuku가 알림을 게시하도록 허용하십시오.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 사용자는 시스템 설정의 \"알림\" - \"알림 창\"에서 알림 스타일을 \"Android\"로 전환해야 합니다.</string>
     <string name="adb_pairing_tutorial_content_miui_2">그렇지 않으면 알림에서 페어링 코드를 입력하지 못할 수도 있습니다.</string>
