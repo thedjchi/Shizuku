@@ -39,7 +39,6 @@
     <string name="notification_settings">Opciones de Notificacion</string>
     <string name="adb_pairing_tutorial_title">Vincula Shizuku con tu dispositivo</string>
     <string name="adb_pairing_tutorial_content_notification">Shizuku te enviará una notificación para completar la vinculación</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Digita el código en la notificación para completar el emparejamiento.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">The pairing process needs you to interact with a notificación from Shizuku. Please allow Shizuku to post notifications.El proceso de emparejamiento necesita que interactúes con una notificación de Shizuku. Permita que Shizuku publique notificaciones.El proceso de emparejamiento necesita que interactúes con una notificación de Shizuku. Permita que Shizuku publique notificaciones.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Iniciar (para dispositivos root)]]></string>
