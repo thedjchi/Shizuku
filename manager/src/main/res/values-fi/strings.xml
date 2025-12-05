@@ -33,9 +33,7 @@
     <string name="cannot_connect_port">Langattomaan virheenkorjauspalveluun ei saada yhteyttä.\n\nVarmista, että Shizuku on sallittu kaikissa palomuuri-, mainostenesto-, VPN- tai vastaavissa sovelluksissa, jotka voivat rajoittaa verkkoyhteyttä.</string>
     <string name="dialog_wireless_adb_not_enabled">Langaton virheenkorjaus ei ole käytössä.\nHuomaa, että ennen Android 11:tä, langattoman virheenkorjauksen mahdollistamiseksi tietokoneyhteys oli välttämätön.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-virheenkorjaus ei ole käytössä.\nOta se käyttöön kohdassa \"Kehittäjäasetukset\".</string>
-    <string name="dialog_adb_pairing_message">Aloita parittaminen suorittamalla seuraavat vaiheet: \"Kehittäjäasetukset\" - \"Langaton debugging\" - \"Yhdistä laite parituskoodilla.\"\n\nKun paritusprosessi alkaa, voit syöttää parituskoodin.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Ole hyvä ja ota saavutettavuuspalvelu käyttöön aloittaaksesi paritusprosessin. Tämä mahdollistaa Shizukun tunnistaa parituskoodin.\n\nEsteettömyyspalvelu kytketään pois päältä, kun koodi löytyy, tai minuutin kuluttua energian säästämiseksi.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Siirry kohtaan \"Kehittäjävaihtoehdot\" &gt; \"Langaton virheenkorjaus\" &gt; \"Yhdistä laite parituskoodiin.\" Shizuku tunnistaa automaattisesti parituskoodin.</string>
     <string name="adb_pairing_requires_multi_window">Siirry ensin jaetun ruudun (moniikkuna) tilaan.</string>
     <string name="adb_pairing_requires_multi_window_reason">Järjestelmä vaatii, että pariliitosvalintaikkuna on aina näkyvissä. Jaetun näytön tilan käyttö on ainoa tapa, jolla tämä sovellus ja järjestelmävalintaikkuna voivat olla näkyvissä samanaikaisesti.</string>
     <string name="adb_error_key_store">Langattoman virheenkorjauksen avaimen luominen epäonnistui.\nTämä voi johtua siitä, että laitteen KeyStore-mekanismi on rikki.</string>
@@ -46,12 +44,9 @@
     <string name="notification_settings">Ilmoitusvaihtoehdot</string>
     <string name="adb_pairing_tutorial_title">Yhdistä Shizuku laitteeseesi</string>
     <string name="adb_pairing_tutorial_content_notification">Shizukun ilmoitus auttaa sinua täydentämään parituksen.</string>
-    <string name="adb_pairing_tutorial_content_steps">Syötä \"Kehittäjäasetukset\" - \"Langaton virheenkorjaus\". Napauta \"Yhdistä laite parituskoodilla\", näet kuusinumeroisen koodin.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Syötä koodi ilmoitukseen parittelun saamiseksi päätökseen.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Paritusprosessi vaatii, että olet vuorovaikutuksessa Shizukun ilmoituksen kanssa. Sallithan Shizukun lähettää ilmoituksia.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI:n käyttäjät saattavat joutua vaihtamaan ilmoitustyylin \"Android\"-muotoon \"Notification\" - \"Notification shade\" -asetuksista järjestelmäasetuksista.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Muussa tapauksessa et ehkä pysty syöttämään ilmoituksessa näkyvää pariliitoskoodia.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Huomaa, että \"Langattoman virheenkorjaus\" -vaihtoehdon vasenta puolta voi klikata. Sen napauttaminen avaa uuden sivun. Vain oikeanpuoleisen kytkimen kytkeminen päälle on virheellinen.</string>
     <string name="adb_pairing_tutorial_content_finish">Mene takaisin Shizukuun ja aloita Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizukun on käytettävä paikallisverkkoa. Sitä hallitsee verkkokäyttöoikeus.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Jotkin järjestelmät (kuten MIUI) estävät sovelluksia käyttämästä verkkoa, kun ne eivät ole näkyvissä, vaikka sovellus käyttäisi etualalla olevaa palvelua. Poista Shizukun akun optimointiominaisuudet käytöstä tällaisissa järjestelmissä.</string>
