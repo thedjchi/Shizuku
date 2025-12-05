@@ -33,9 +33,7 @@
     <string name="cannot_connect_port">Kan nie aan draadlose ontfoutingsdiens koppel nie.\n\nMaak asseblief seker dat Shizuku op die witlys is in alle firewall-, advertensieblokkerings-, VPN- of soortgelyke programme wat netwerktoegang kan beperk.</string>
     <string name="dialog_wireless_adb_not_enabled">Draadlose ontfouting is nie geaktiveer nie.\nLet wel, voor Android 11, om draadlose ontfouting te aktiveer, is rekenaarverbinding \'n vereiste.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-ontfouting is nie geaktiveer nie.\nAktiveer dit asseblief in \"Ontwikkelaaropsies\".</string>
-    <string name="dialog_adb_pairing_message">Begin asseblief met paring deur die volgende stappe uit te voer: \"Ontwikkelaaropsies\" - \"Draadlose ontfouting\" - \"Koppel toestel met paringskode.\"\n\nNadat die paringsproses begin het, sal jy die paringskode kan invoer.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Aktiveer asseblief die toeganklikheidsdiens om die paringsproses te begin. Dit laat Shizuku toe om die paringskode op te spoor.\n\nDie toeganklikheidsdiens sal afgeskakel word wanneer die kode gevind word of na 1 minuut om energie te bespaar.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Navigeer asseblief na \"Ontwikkelaaropsies\" &gt; \"Draadlose ontfouting\" &gt; \"Koppel toestel met koppelkode.\" Shizuku sal outomaties die koppelkode opspoor.</string>
     <string name="adb_pairing_requires_multi_window">Gaan asseblief eers na die verdeelskerm-modus (multivenstermodus).</string>
     <string name="adb_pairing_requires_multi_window_reason">Die stelsel vereis dat die paringsdialoog altyd sigbaar moet wees. Die gebruik van verdeelskermmodus is die enigste manier om hierdie toepassing en die stelseldialoog gelyktydig sigbaar te laat wees.</string>
     <string name="adb_error_key_store">Kan nie sleutel vir draadlose ontfouting genereer nie.\nDit mag wees omdat die KeyStore-meganisme van hierdie toestel gebreek is.</string>
@@ -46,12 +44,9 @@
     <string name="notification_settings">Kennisgewingopsies</string>
     <string name="adb_pairing_tutorial_title">Koppel Shizuku met jou toestel</string>
     <string name="adb_pairing_tutorial_content_notification">\'n Kennisgewing van Shizuku sal jou help om die paring te voltooi.</string>
-    <string name="adb_pairing_tutorial_content_steps">Voer \"Ontwikkelaaropsies\" - \"Draadlose ontfouting\" in. Tik \"Koppel toestel met koppelkode\", jy sal \'n ses-syfer kode sien.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Voer die kode in die kennisgewing in om die paring te voltooi.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Die paringsproses vereis dat jy met \'n kennisgewing van Shizuku interaksie het. Laat asseblief Shizuku toe om kennisgewings te plaas.</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moet dalk die kennisgewingstyl na \"Android\" oorskakel vanaf \"Kennisgewing\" - \"Kennisgewingskerm\" in stelselinstellings.</string>
     <string name="adb_pairing_tutorial_content_miui_2">Andersins kan jy dalk nie die paringskode vanaf die kennisgewing invoer nie.</string>
-    <string name="adb_pairing_tutorial_content_left_is_clickable">Let asseblief daarop dat die linker gedeelte van die \"Draadlose ontfouting\"-opsie klikbaar is. As jy daarop tik, sal \'n nuwe bladsy oopmaak. Slegs die skakelaar aan die regterkant aanskakel, is verkeerd.</string>
     <string name="adb_pairing_tutorial_content_finish">Gaan terug na Shizuku en begin Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku benodig toegang tot die plaaslike netwerk. Dit word beheer deur die netwerktoestemming.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar is nie, selfs al gebruik die program \'n voorgronddiens. Deaktiveer asseblief battery-optimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
