@@ -158,7 +158,7 @@
     <string name="notification_adb_pairing_input_paring_code">ペアリングコードを入力</string>
     <string name="notification_adb_pairing_searching_for_service_title">ペアリングサービスを探しています</string>
     <string name="notification_adb_pairing_service_found_title">ペアリングサービスを見つけました</string>
-    <string name="notification_adb_pairing_stop_searching">探すことを停止しさせます</string>
+    <string name="notification_adb_pairing_stop_searching">探すことを停止させます</string>
     <string name="notification_adb_pairing_working_title">ペアリング中</string>
     <string name="notification_adb_pairing_succeed_title">ペアリングしました</string>
     <string name="notification_adb_pairing_succeed_text">Shizukuサービスをスタートさせられます。</string>
