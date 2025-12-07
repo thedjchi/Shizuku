@@ -66,7 +66,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
     private lateinit var watchdogPreference: TwoStatePreference
     private lateinit var tcpModePreference: TwoStatePreference
     private lateinit var tcpPortPreference: EditTextPreference
-    private lateinit var tcpLearnMorePreference: Preference
     private lateinit var languagePreference: ListPreference
     private lateinit var translationPreference: Preference
     private lateinit var translationContributorsPreference: Preference
@@ -100,7 +99,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         watchdogPreference = findPreference(KEY_WATCHDOG)!!
         tcpModePreference = findPreference(KEY_TCP_MODE)!!
         tcpPortPreference = findPreference(KEY_TCP_PORT)!!
-        tcpLearnMorePreference = findPreference(KEY_TCP_LEARN_MORE)!!
         languagePreference = findPreference(KEY_LANGUAGE)!!
         translationPreference = findPreference(KEY_TRANSLATION)!!
         translationContributorsPreference = findPreference(KEY_TRANSLATION_CONTRIBUTORS)!!
@@ -222,15 +220,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                     SnackbarHelper.show(context, requireView(), context.getString(R.string.snackbar_invalid_port))
                 }
                 false
-            }
-        }
-
-        tcpLearnMorePreference.apply {
-            isVisible = tcpModePreference.isVisible
-            tint(icon)
-            setOnPreferenceClickListener {
-                CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.automation_apps_url))
-                true
             }
         }
 

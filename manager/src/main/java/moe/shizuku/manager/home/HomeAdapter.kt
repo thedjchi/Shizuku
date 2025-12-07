@@ -27,6 +27,7 @@ class HomeAdapter(private val homeModel: HomeViewModel, private val appsModel: A
         private const val ID_START_ADB = 5L
         private const val ID_LEARN_MORE = 6L
         private const val ID_ADB_PERMISSION_LIMITED = 7L
+        private const val ID_AUTOMATION = 8L
     }
 
     override fun onCreateCreatorPool(): IndexCreatorPool {
@@ -70,6 +71,7 @@ class HomeAdapter(private val homeModel: HomeViewModel, private val appsModel: A
                 addItem(StartRootViewHolder.CREATOR, rootRestart, ID_START_ROOT)
             }
         }
+        addItem(AutomationViewHolder.CREATOR, null, ID_AUTOMATION)
         addItem(LearnMoreViewHolder.CREATOR, null, ID_LEARN_MORE)
         notifyDataSetChanged()
     }

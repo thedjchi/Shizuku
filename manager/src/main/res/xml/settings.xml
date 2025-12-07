@@ -25,11 +25,6 @@
             android:title="@string/settings_tcp_port"
             android:inputType="number" />
 
-        <Preference
-            android:key="tcp_learn_more"
-            android:summary="@string/settings_tcp_learn_more"
-            android:icon="@drawable/ic_learn_more_24dp" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
