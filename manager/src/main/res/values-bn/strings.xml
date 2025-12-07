@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[অনুমোদিত অ্যাপগুলি পরিচালনা করতে ট্যাপ করুন]]></string>
     <string name="home_app_management_empty">যে অ্যাপগুলি শিজুকু অনুমতির অনুরোধ করেছে বা ঘোষণা করেছে সেগুলি এখানে প্রদর্শিত হবে।</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">ডেভেলপার গাইড</string>
     <string name="home_learn_more_description">শিজুকুর সাথে কীভাবে বিকাশ করতে হয় তা শিখুন</string>
@@ -139,6 +140,7 @@
     <string name="action_about">সম্বন্ধে</string>
     <string name="about_dialog_button_close">বন্ধ</string>
     <string name="about_view_source_code"><![CDATA[এখানে সোর্স কোড দেখুন %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">শিজুকু বন্ধ করুন</string>
     <string name="dialog_stop_message">শিজুকু পরিষেবা বন্ধ হয়ে যাবে।</string>
