@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Napauta hallitaksesi valtuutettuja sovelluksia]]></string>
     <string name="home_app_management_empty">Sovellukset, jotka ovat pyytäneet tai ilmoittaneet Shizuku-luvan, näkyvät tässä.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Kehittäjän opas</string>
     <string name="home_learn_more_description">Opi kehittymään Shizukun kanssa</string>
@@ -139,6 +140,7 @@
     <string name="action_about">Noin</string>
     <string name="about_dialog_button_close">Sulkea</string>
     <string name="about_view_source_code"><![CDATA[Katso lähdekoodi osoitteesta %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Pysäyttäkää Shizuku</string>
     <string name="dialog_stop_message">Shizukun palvelu lopetetaan.</string>
