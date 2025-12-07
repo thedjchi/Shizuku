@@ -69,6 +69,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Ketuk untuk mengatur aplikasi terdaftar]]></string>
     <string name="home_app_management_empty">Aplikasi yang telah meminta atau mendeklarasikan izin Shizuku akan ditampilkan di sini.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Panduan pengembang</string>
     <string name="home_learn_more_description">Pelajari cara mengembangkan dengan Shizuku</string>
@@ -145,6 +146,7 @@
     <string name="action_about">Tentang</string>
     <string name="about_dialog_button_close">Menutup</string>
     <string name="about_view_source_code"><![CDATA[Lihat kode sumbernya di %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Hentikan Shizuku</string>
     <string name="dialog_stop_message">Layanan Shizuku akan berhenti.</string>

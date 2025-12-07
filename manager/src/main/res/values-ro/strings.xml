@@ -71,6 +71,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Atinge pentru a gestiona aplicațiile autorizate]]></string>
     <string name="home_app_management_empty">Aplicațiile care au solicitat sau au declarat permisiunea Shizuku vor fi afișate aici.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Ghid pentru dezvoltatori</string>
     <string name="home_learn_more_description">Află cum să dezvolți cu Shizuku</string>
@@ -147,6 +148,7 @@
     <string name="action_about">Despre</string>
     <string name="about_dialog_button_close">Aproape</string>
     <string name="about_view_source_code"><![CDATA[Vizualizează codul sursă la %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Oprire Shizuku</string>
     <string name="dialog_stop_message">Serviciul Shizuku va fi oprit.</string>

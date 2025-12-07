@@ -72,6 +72,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Klepnutím můžete spravovat autorizované aplikace]]></string>
     <string name="home_app_management_empty">Aplikace, které požádaly nebo deklarovaly povolení Shizuku, se zde zobrazí.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Průvodce pro vývojáře</string>
     <string name="home_learn_more_description">Naučte se, jak vyvíjet aplikace s pomocí Shizuku</string>
@@ -148,6 +149,7 @@
     <string name="action_about">O Shizuku</string>
     <string name="about_dialog_button_close">Zavřít</string>
     <string name="about_view_source_code"><![CDATA[Zobrazit zdrojový kód na %su]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Zastavit Shizuku</string>
     <string name="dialog_stop_message">Služba Shizuku bude zastavena.</string>

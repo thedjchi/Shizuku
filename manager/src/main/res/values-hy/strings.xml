@@ -70,6 +70,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Սեղմեք, որպեսզի վավերացված ծրագրերը տիրապետելու համար]]></string>
     <string name="home_app_management_empty">Այստեղ կցուցադրվեն հավելվածները, որոնք խնդրել կամ հայտարարել են Shizuku թույլտվությունը։</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Մշակողի ուղեցույց</string>
     <string name="home_learn_more_description">Սովորեք ծրագրավորել Shizuku-ով կամ Shizuku-ն ուրիշ ծրագրերի հետ օգտագործել</string>
@@ -142,6 +143,7 @@
     <string name="action_about">Ծրագրի մասին</string>
     <string name="about_dialog_button_close">Փակել</string>
     <string name="about_view_source_code"><![CDATA[Տեսնել կոդի աղբյուրը %s-ում]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Անջատել Shizuku-ն</string>
     <string name="dialog_stop_message">Shizuku-ի ծառայությունը կանջատվի։</string>

@@ -69,6 +69,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[輕觸以管理已授權的應用程式]]></string>
     <string name="home_app_management_empty">申請或宣告雫許可的應用程式會顯示在這裡。</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">開發者指南</string>
     <string name="home_learn_more_description">瞭解如何使用 Shizuku 開發</string>
@@ -145,6 +146,7 @@
     <string name="action_about">關於</string>
     <string name="about_dialog_button_close">近</string>
     <string name="about_view_source_code"><![CDATA[在 %s 檢視原始碼]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">停止 Shizuku</string>
     <string name="dialog_stop_message">Shizuku 服務將被停止。</string>

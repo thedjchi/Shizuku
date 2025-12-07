@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Πατήστε για να διαχειριστείτε εξουσιοδοτημένες εφαρμογές]]></string>
     <string name="home_app_management_empty">Οι εφαρμογές που έχουν ζητήσει ή δηλώσει την άδεια Shizuku θα εμφανίζονται εδώ.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Οδηγός προγραμματιστή</string>
     <string name="home_learn_more_description">Μάθετε πώς να αναπτύσσεστε με το Shizuku</string>
@@ -139,6 +140,7 @@
     <string name="action_about">Για</string>
     <string name="about_dialog_button_close">Κλείνω</string>
     <string name="about_view_source_code"><![CDATA[Δείτε τον πηγαίο κώδικα στη διεύθυνση %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Σταματήστε το Shizuku</string>
     <string name="dialog_stop_message">Η υπηρεσία Shizuku θα διακοπεί.</string>

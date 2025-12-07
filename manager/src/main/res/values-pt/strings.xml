@@ -70,6 +70,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Toque para gerenciar aplicativos autorizados]]></string>
     <string name="home_app_management_empty">As aplicações que solicitaram ou declararam a permissão Shizuku serão apresentadas aqui.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Guia do desenvolvedor</string>
     <string name="home_learn_more_description">Aprenda a desenvolver com Shizuku</string>
@@ -146,6 +147,7 @@
     <string name="action_about">Sobre</string>
     <string name="about_dialog_button_close">Perto</string>
     <string name="about_view_source_code"><![CDATA[Veja o código-fonte em %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Parar Shizuku</string>
     <string name="dialog_stop_message">O serviço de Shizuku será interrompido.</string>

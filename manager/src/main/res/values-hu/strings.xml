@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Érintse meg az engedélyezett alkalmazások kezeléséhez]]></string>
     <string name="home_app_management_empty">Azok az alkalmazások jelennek meg itt, amelyek kérték vagy deklarálták a Shizuku engedélyt.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Fejlesztői útmutató</string>
     <string name="home_learn_more_description">Tanuljon meg fejlődni a Shizukuval</string>
@@ -139,6 +140,7 @@
     <string name="action_about">Rólunk</string>
     <string name="about_dialog_button_close">Közeli</string>
     <string name="about_view_source_code"><![CDATA[Forráskód megtekintése itt: %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">A Shizuku leállítása</string>
     <string name="dialog_stop_message">A Shizuku szolgáltatás leáll.</string>

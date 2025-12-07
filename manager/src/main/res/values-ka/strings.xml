@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[შეეხეთ ავტორიზებული აპების სამართავად]]></string>
     <string name="home_app_management_empty">აპლიკაციები, რომლებმაც მოითხოვეს ან გამოაცხადეს Shizuku-ს ნებართვა, გამოჩნდება აქ.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">დეველოპერის სახელმძღვანელო</string>
     <string name="home_learn_more_description">ისწავლეთ როგორ განვითარდეთ Shizuku-სთან ერთად</string>
@@ -139,6 +140,7 @@
     <string name="action_about">ჩვენს შესახებ</string>
     <string name="about_dialog_button_close">დაგვიკავშირდით</string>
     <string name="about_view_source_code"><![CDATA[წყაროს კოდის ნახვა %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">შეაჩერე შიზუკუ</string>
     <string name="dialog_stop_message">Shizuku მომსახურება შეწყდება.</string>

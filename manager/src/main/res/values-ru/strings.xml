@@ -72,6 +72,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Нажмите для управления списком допущенных приложений]]></string>
     <string name="home_app_management_empty">Здесь будут отображаться приложения, которые запросили или заявили разрешение Shizuku.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Руководство разработчика</string>
     <string name="home_learn_more_description">Узнайте, как начать разрабатывать с Shizuku</string>
@@ -148,6 +149,7 @@
     <string name="action_about">О приложении</string>
     <string name="about_dialog_button_close">Закрывать</string>
     <string name="about_view_source_code"><![CDATA[Исходный код доступен на %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Остановить Shizuku</string>
     <string name="dialog_stop_message">Служба Shizuku будет остановлена.</string>

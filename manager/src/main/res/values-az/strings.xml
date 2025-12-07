@@ -70,6 +70,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[İcazə verilmiş proqramları idarə etmək üçün toxunun]]></string>
     <string name="home_app_management_empty">Shizuku icazəsini tələb edən və ya bəyan edən tətbiqlər burada göstəriləcək.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Tərtibatçı təlimatı</string>
     <string name="home_learn_more_description">Necə Shizuku dəstəkli proqram hazırlaya biləcəyinizi öyrənin və ya Shizuku dəstəkli proqramları əldə edin</string>
@@ -142,6 +143,7 @@
     <string name="action_about">Haqqında</string>
     <string name="about_dialog_button_close">Bağlan</string>
     <string name="about_view_source_code"><![CDATA[Qaynaq kodlarına buradan baxın %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Shizikunu dayandır</string>
     <string name="dialog_stop_message">Shizuku xidməti dayandırılacaq.</string>

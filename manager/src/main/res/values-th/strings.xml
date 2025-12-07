@@ -69,6 +69,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[แตะเพื่อจัดการแอปที่ได้รับอนุญาต]]></string>
     <string name="home_app_management_empty">แอปที่ได้ร้องขอหรือประกาศการอนุญาต Shizuku จะแสดงที่นี่</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">คู่มือนักพัฒนา</string>
     <string name="home_learn_more_description">เรียนรู้การพัฒนาเพื่อใช้ร่วมกันกับ Shizuku</string>
@@ -145,6 +146,7 @@
     <string name="action_about">เกี่ยวกับ</string>
     <string name="about_dialog_button_close">ปิด</string>
     <string name="about_view_source_code"><![CDATA[ดูซอร์สโค้ดใน %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">หยุดทำงาน Shizuku</string>
     <string name="dialog_stop_message">บริการ Shizuku จะถูกหยุดทำงาน</string>

@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Trykk for å administrere autoriserte apper]]></string>
     <string name="home_app_management_empty">Apper som har bedt om eller erklært Shizuku-tillatelsen vil vises her.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Utviklerveiledning</string>
     <string name="home_learn_more_description">Lær hvordan du utvikler deg med Shizuku</string>
@@ -139,6 +140,7 @@
     <string name="action_about">Om</string>
     <string name="about_dialog_button_close">Lukke</string>
     <string name="about_view_source_code"><![CDATA[Se kildekoden på %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Stopp Shizuku</string>
     <string name="dialog_stop_message">Shizuku-tjenesten vil bli stanset.</string>

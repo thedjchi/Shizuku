@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[அங்கீகரிக்கப்பட்ட பயன்பாடுகளை நிர்வகிக்க தட்டவும்]]></string>
     <string name="home_app_management_empty">ஷிசுகு அனுமதியைக் கோரிய அல்லது அறிவித்த பயன்பாடுகள் இங்கே காண்பிக்கப்படும்.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">டெவலப்பர் வழிகாட்டி</string>
     <string name="home_learn_more_description">ஷிசுகுவுடன் எவ்வாறு உருவாக்குவது என்பதை அறிக</string>
@@ -139,6 +140,7 @@
     <string name="action_about">பற்றி</string>
     <string name="about_dialog_button_close">மூடு</string>
     <string name="about_view_source_code"><![CDATA[%sஇல் மூலக் குறியீட்டைக் காண்க]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">ஷிசுகுவை நிறுத்து</string>
     <string name="dialog_stop_message">ஷிசுகு சேவை நிறுத்தப்படும்.</string>
