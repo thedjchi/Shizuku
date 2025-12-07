@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Puuduta, et hallata volitatud rakendusi]]></string>
     <string name="home_app_management_empty">Rakendused, mis on taotlenud või deklareerinud Shizuku loa, kuvatakse siin.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Arendaja juhend</string>
     <string name="home_learn_more_description">Õpi, kuidas Shizukuga areneda</string>
@@ -139,6 +140,7 @@
     <string name="action_about">Umbes</string>
     <string name="about_dialog_button_close">Sulgema</string>
     <string name="about_view_source_code"><![CDATA[Vaata lähtekoodi aadressil %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Peata Shizuku</string>
     <string name="dialog_stop_message">Shizuku teenus peatatakse.</string>
