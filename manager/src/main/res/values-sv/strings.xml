@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tryck för att hantera auktoriserade appar]]></string>
     <string name="home_app_management_empty">Appar som har begärt eller deklarerat Shizuku-behörighet visas här.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Utvecklarguide</string>
     <string name="home_learn_more_description">Lär dig hur du utvecklar med Shizuku</string>
@@ -139,6 +140,7 @@
     <string name="action_about">Om</string>
     <string name="about_dialog_button_close">Nära</string>
     <string name="about_view_source_code"><![CDATA[Visa källkoden på %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Stoppa Shizuku</string>
     <string name="dialog_stop_message">Shizuku-tjänsten kommer att upphöra.</string>
