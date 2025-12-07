@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[برای مدیریت برنامه های مجاز ضربه بزنید]]></string>
     <string name="home_app_management_empty">برنامه‌هایی که درخواست مجوز Shizuku را داده‌اند یا آن را اعلام کرده‌اند، اینجا نمایش داده می‌شوند.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">راهنمای توسعه‌دهنده</string>
     <string name="home_learn_more_description">یاد بگیرید که چگونه با Shizuku توسعه دهید</string>
@@ -139,6 +140,7 @@
     <string name="action_about">درباره</string>
     <string name="about_dialog_button_close">بستن</string>
     <string name="about_view_source_code"><![CDATA[کد منبع را در %s مشاهده کنید]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">توقف Shizuku</string>
     <string name="dialog_stop_message">خدمات Shizuku متوقف خواهد شد.</string>
