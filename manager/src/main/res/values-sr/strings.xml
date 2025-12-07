@@ -71,6 +71,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Додирните да бисте управљали овлашћеним апликацијама]]></string>
     <string name="home_app_management_empty">Апликације које су затражиле или пријавиле Шизуку дозволу биће приказане овде.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Водич за програмере</string>
     <string name="home_learn_more_description">Научите како да развијате уз Шизуку</string>
@@ -143,6 +144,7 @@
     <string name="action_about">О нама</string>
     <string name="about_dialog_button_close">Затвори</string>
     <string name="about_view_source_code"><![CDATA[Погледајте изворни код на %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Заустави Шизуку</string>
     <string name="dialog_stop_message">Шизуку линија ће бити обустављена.</string>
