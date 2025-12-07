@@ -70,6 +70,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Pindutin para pamahalaan ang mga awtorisadong app]]></string>
     <string name="home_app_management_empty">Ipapakita dito ang mga app na humiling o nagdeklara ng pahintulot ng Shizuku.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Gabay ng developer</string>
     <string name="home_learn_more_description">Matuto kung paano mag-develop gamit ang Shizuku</string>
@@ -146,6 +147,7 @@
     <string name="action_about">Tungkol</string>
     <string name="about_dialog_button_close">Isara</string>
     <string name="about_view_source_code"><![CDATA[Tingnan ang source code sa %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Ihinto ang Shizuku</string>
     <string name="dialog_stop_message">Ihihinto ang serbisyo ng Shizuku.</string>
