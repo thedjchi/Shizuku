@@ -67,6 +67,7 @@
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tik om gemagtigde programme te bestuur]]></string>
     <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of verklaar het, sal hier verskyn.</string>
+    <!-- Home - Automation -->
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Ontwikkelaarsgids</string>
     <string name="home_learn_more_description">Leer hoe om met Shizuku te ontwikkel</string>
@@ -139,6 +140,7 @@
     <string name="action_about">Oor</string>
     <string name="about_dialog_button_close">Maak toe</string>
     <string name="about_view_source_code"><![CDATA[Bekyk bronkode by %s]]></string>
+    <!-- Start -->
     <!-- Stop -->
     <string name="action_stop">Stop Shizuku</string>
     <string name="dialog_stop_message">Shizuku-diens sal gestaak word.</string>
