@@ -69,7 +69,7 @@
     <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of verklaar het, sal hier verskyn.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Beheer Shizuku met outomatiseringsprogramme</string>
-    <string name="home_automation_description"><![CDATA[Programme soos Tasker en MacroDroid kan voornemens stuur om Shizuku outomaties te begin/stop.<p>Ongewortelde toestelle op Android 10 of ouer moet 'n TCP-poort vanaf 'n rekenaar oopmaak deur<font face="monospace"> %1$s </font>te gebruik vir die beginvoorneme om te werk.]]></string>
+    <string name="home_automation_description"><![CDATA[Programme soos Tasker en MacroDroid kan voornemens stuur om Shizuku outomaties te begin/stop.<p>Ongewortelde toestelle op Android 10 of ouer moet \'n TCP-poort vanaf \'n rekenaar oopmaak deur<font face="monospace"> %1$s </font>te gebruik vir die beginvoorneme om te werk.]]></string>
     <string name="home_automation_button_view_intents">Bekyk voornemens</string>
     <string name="home_automation_dialog_label_action">Aksie</string>
     <string name="home_automation_dialog_label_package">Pakket</string>
@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">Ouerskap-paring</string>
     <string name="settings_legacy_pairing_summary">Voer die paringskode in \'n dialoog in plaas van \'n kennisgewing in</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Doen eers die volgende:</string>
+    <string name="bug_report_dialog_update">Maak seker dat jy die nuutste weergawe van Shizuku gebruik.</string>
+    <string name="bug_report_dialog_button_update">Bekyk die nuutste vrystelling</string>
+    <string name="bug_report_dialog_wiki">Lees die wiki en volg alle relevante probleemoplossingstappe.</string>
+    <string name="bug_report_dialog_button_wiki">Bekyk wiki</string>
+    <string name="bug_report_dialog_issues">Soek deur alle bestaande probleme om te sien of jou fout/funksie reeds aangemeld is.</string>
+    <string name="bug_report_dialog_button_issues">Bekyk probleme</string>
+    <string name="bug_report_dialog_method">Dien asseblief \'n probleem op GitHub in as jy \'n rekening het.\n\nAndersins kan jy \'n e-pos stuur.</string>
+    <string name="bug_report_dialog_button_email">Stuur e-pos</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Poort moet tussen 1 en 65535 wees</string>
     <string name="snackbar_battery_optimization_home">Batteryoptimalisering moet gedeaktiveer wees vir die aanvang met selflaai/waghond om behoorlik te werk.</string>
