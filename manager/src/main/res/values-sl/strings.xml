@@ -73,6 +73,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Dotaknite se za upravljanje pooblaščenih aplikacij]]></string>
     <string name="home_app_management_empty">Tukaj bodo prikazane aplikacije, ki so zahtevale ali prijavile dovoljenje Shizuku.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Upravljajte Shizuku z aplikacijami za avtomatizacijo</string>
+    <string name="home_automation_description"><![CDATA[Aplikacije, kot sta Tasker in MacroDroid, lahko pošiljajo namere za samodejni zagon/ustavitev aplikacije Shizuku.<p>Naprave brez roota v sistemu Android 10 ali starejšem morajo odpreti vrata TCP iz računalnika z uporabo<font face="monospace"> %1$s </font>, da namera za zagon deluje.]]></string>
+    <string name="home_automation_button_view_intents">Ogled namenov</string>
+    <string name="home_automation_dialog_label_action">Dejanje</string>
+    <string name="home_automation_dialog_label_package">Paket</string>
+    <string name="home_automation_dialog_label_class">Razred</string>
+    <string name="home_automation_dialog_label_target">Cilj</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Vodnik za razvijalce</string>
     <string name="home_learn_more_description">Naučite se razvijati s Shizukujem</string>
@@ -127,6 +134,7 @@
     <string name="settings_advanced">Napreden</string>
     <string name="settings_legacy_pairing">Zapuščina parov</string>
     <string name="settings_legacy_pairing_summary">Namesto obvestila vnesite kodo za povezovanje v pogovorno okno</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pristanišče mora biti med 1 in 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizacija baterije mora biti onemogočena, da zagon ob zagonu/watchdogu deluje pravilno.</string>
@@ -146,6 +154,7 @@
     <string name="about_dialog_button_close">Blizu</string>
     <string name="about_view_source_code"><![CDATA[Poglej izvorno kodo na %s]]></string>
     <!-- Start -->
+    <string name="action_start">Zaženi Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Ustavi Shizuku</string>
     <string name="dialog_stop_message">Storitev Shizuku bo bila ustavljena.</string>
@@ -180,7 +189,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi najden. Postopek</string>
     <string name="wadb_error_title">Napaka ob zagonu zagona</string>
     <string name="wadb_error_notify_dev">Tapnite, da obvestite razvijalca.</string>
-    <string name="wadb_error_send_email">Pošljite e-pošto na</string>
     <string name="wadb_permission_error_notification_title">Napaka pri dovoljenju</string>
     <string name="wadb_permission_error_notification_content">Shizuku potrebuje WRITE_SECURE_SETTINGS, da začne na začetku. Tapnite, da izveste, kako ga odobriti.</string>
     <string name="wadb_notification_channel">ADB storitev samodejnega zagona</string>
