@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[შეეხეთ ავტორიზებული აპების სამართავად]]></string>
     <string name="home_app_management_empty">აპლიკაციები, რომლებმაც მოითხოვეს ან გამოაცხადეს Shizuku-ს ნებართვა, გამოჩნდება აქ.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">აკონტროლეთ Shizuku ავტომატიზაციის აპლიკაციებით</string>
+    <string name="home_automation_description"><![CDATA[ისეთ აპლიკაციებს, როგორიცაა Tasker და MacroDroid, შეუძლიათ Shizuku-ს ავტომატურად გაგზავნონ/გამორთონ intent-ები.<p>Android 10-ზე ან უფრო დაბალ ვერსიაზე მომუშავე Unroot-ირებულ მოწყობილობებს უნდა გახსნან TCP პორტი კომპიუტერიდან<font face="monospace"> %1$s </font>-ის გამოყენებით, რათა start intent-მა იმუშაოს.]]></string>
+    <string name="home_automation_button_view_intents">ხედვის განზრახვები</string>
+    <string name="home_automation_dialog_label_action">მოქმედება</string>
+    <string name="home_automation_dialog_label_package">პაკეტი</string>
+    <string name="home_automation_dialog_label_class">კლასი</string>
+    <string name="home_automation_dialog_label_target">სამიზნე</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">დეველოპერის სახელმძღვანელო</string>
     <string name="home_learn_more_description">ისწავლეთ როგორ განვითარდეთ Shizuku-სთან ერთად</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">გაფართოებული</string>
     <string name="settings_legacy_pairing">მემკვიდრეობის დაწყვილება</string>
     <string name="settings_legacy_pairing_summary">შეიყვანეთ დაწყვილების კოდი დიალოგში შეტყობინების ნაცვლად</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">პორტი უნდა იყოს 1-დან 65535-მდე</string>
     <string name="snackbar_battery_optimization_home">ბატარეის ოპტიმიზაცია უნდა გამორთული იყოს ჩატვირთვის / მაკონტროლებლის დასაწყებად გამართულად მუშაობისთვის.</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">დაგვიკავშირდით</string>
     <string name="about_view_source_code"><![CDATA[წყაროს კოდის ნახვა %s]]></string>
     <!-- Start -->
+    <string name="action_start">დაიწყეთ Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">შეაჩერე შიზუკუ</string>
     <string name="dialog_stop_message">Shizuku მომსახურება შეწყდება.</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi ნაპოვნია. პროცესი</string>
     <string name="wadb_error_title">შეცდომა ჩატვირთვისას</string>
     <string name="wadb_error_notify_dev">შეეხეთ დეველოპერის შესატყობინებლად.</string>
-    <string name="wadb_error_send_email">გაგზავნეთ ელ.წერილი</string>
     <string name="wadb_permission_error_notification_title">ნებართვის შეცდომა</string>
     <string name="wadb_permission_error_notification_content">შიზუკუს WRITE_SECURE_SETTINGS სჭირდება ჩატვირთვის დასაწყებად. შეეხეთ იმას, რომ გაიგოთ როგორ მიანიჭოთ იგი.</string>
     <string name="wadb_notification_channel">ADB-ის ავტომატური გაშვების სერვისი</string>
