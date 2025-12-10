@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Trykk for å administrere autoriserte apper]]></string>
     <string name="home_app_management_empty">Apper som har bedt om eller erklært Shizuku-tillatelsen vil vises her.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Styr Shizuku med automatiseringsapper</string>
+    <string name="home_automation_description"><![CDATA[Apper som Tasker og MacroDroid kan sende intensjoner om å starte/stoppe Shizuku automatisk.<p>Ikke-rootede enheter på Android 10 eller eldre må åpne en TCP-port fra en PC ved hjelp av<font face="monospace"> %1$s </font>for at startintensjonen skal fungere.]]></string>
+    <string name="home_automation_button_view_intents">Vis intensjoner</string>
+    <string name="home_automation_dialog_label_action">Handling</string>
+    <string name="home_automation_dialog_label_package">Pakke</string>
+    <string name="home_automation_dialog_label_class">Klasse</string>
+    <string name="home_automation_dialog_label_target">Mål</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Utviklerveiledning</string>
     <string name="home_learn_more_description">Lær hvordan du utvikler deg med Shizuku</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">Avansert</string>
     <string name="settings_legacy_pairing">Legacy-paring</string>
     <string name="settings_legacy_pairing_summary">Skriv inn paringskoden i en dialogboks i stedet for i en varsling</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Porten må være mellom 1 og 65535</string>
     <string name="snackbar_battery_optimization_home">Batterioptimalisering må deaktiveres for at oppstart på oppstart/watchdog skal fungere riktig.</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">Lukke</string>
     <string name="about_view_source_code"><![CDATA[Se kildekoden på %s]]></string>
     <!-- Start -->
+    <string name="action_start">Start Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Stopp Shizuku</string>
     <string name="dialog_stop_message">Shizuku-tjenesten vil bli stanset.</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi funnet. Fortsetter</string>
     <string name="wadb_error_title">Feil ved oppstart ved oppstart</string>
     <string name="wadb_error_notify_dev">Trykk for å varsle utvikleren.</string>
-    <string name="wadb_error_send_email">Send en e-post til</string>
     <string name="wadb_permission_error_notification_title">Tillatelsesfeil</string>
     <string name="wadb_permission_error_notification_content">Shizuku trenger WRITE_SECURE_SETTINGS for å starte på oppstart. Trykk for å lære hvordan du gir det.</string>
     <string name="wadb_notification_channel">ADB auto-start tjeneste</string>
