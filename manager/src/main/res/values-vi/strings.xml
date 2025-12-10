@@ -132,6 +132,15 @@
     <string name="settings_legacy_pairing">Cặp đôi di sản</string>
     <string name="settings_legacy_pairing_summary">Nhập mã ghép nối vào hộp thoại thay vì thông báo</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Trước tiên, vui lòng thực hiện các bước sau:</string>
+    <string name="bug_report_dialog_update">Hãy kiểm tra xem bạn có đang sử dụng phiên bản Shizuku mới nhất hay không.</string>
+    <string name="bug_report_dialog_button_update">Xem bản phát hành mới nhất</string>
+    <string name="bug_report_dialog_wiki">Hãy đọc hướng dẫn trên wiki và làm theo tất cả các bước khắc phục sự cố có liên quan.</string>
+    <string name="bug_report_dialog_button_wiki">Xem wiki</string>
+    <string name="bug_report_dialog_issues">Hãy tìm kiếm trong tất cả các vấn đề hiện có để xem lỗi/tính năng của bạn đã được báo cáo chưa.</string>
+    <string name="bug_report_dialog_button_issues">Xem các vấn đề</string>
+    <string name="bug_report_dialog_method">Vui lòng báo cáo sự cố trên GitHub nếu bạn có tài khoản.\n\nNếu không, bạn có thể gửi email.</string>
+    <string name="bug_report_dialog_button_email">Gửi email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Cổng phải nằm trong khoảng từ 1 đến 65535</string>
     <string name="snackbar_battery_optimization_home">Phải tắt tính năng tối ưu hóa pin để khởi động khi khởi động/theo dõi hoạt động bình thường.</string>
