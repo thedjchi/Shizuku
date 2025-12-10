@@ -70,6 +70,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[แตะเพื่อจัดการแอปที่ได้รับอนุญาต]]></string>
     <string name="home_app_management_empty">แอปที่ได้ร้องขอหรือประกาศการอนุญาต Shizuku จะแสดงที่นี่</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">ควบคุมชิซูกุด้วยแอปอัตโนมัติ</string>
+    <string name="home_automation_description"><![CDATA[แอปเช่น Tasker และ MacroDroid สามารถส่งอินเทนต์เพื่อเริ่ม/หยุด Shizuku ได้โดยอัตโนมัติ<p>อุปกรณ์ที่ไม่ได้รูทบน Android 10 หรือต่ำกว่าจะต้องเปิดพอร์ต TCP จากพีซีโดยใช้<font face="monospace"> %1$s </font>เพื่อให้อินเทนต์เริ่มต้นทำงานได้]]></string>
+    <string name="home_automation_button_view_intents">ดูความตั้งใจ</string>
+    <string name="home_automation_dialog_label_action">การกระทำ</string>
+    <string name="home_automation_dialog_label_package">บรรจุุภัณฑ์</string>
+    <string name="home_automation_dialog_label_class">ระดับ</string>
+    <string name="home_automation_dialog_label_target">เป้า</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">คู่มือนักพัฒนา</string>
     <string name="home_learn_more_description">เรียนรู้การพัฒนาเพื่อใช้ร่วมกันกับ Shizuku</string>
@@ -128,6 +135,7 @@
     <string name="settings_advanced">ขั้นสูง</string>
     <string name="settings_legacy_pairing">การจับคู่แบบมรดก</string>
     <string name="settings_legacy_pairing_summary">ป้อนรหัสการจับคู่ในกล่องโต้ตอบแทนการแจ้งเตือน</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">พอร์ตต้องอยู่ระหว่าง 1 ถึง 65535</string>
     <string name="snackbar_battery_optimization_home">จะต้องปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อให้เริ่มทำงานเมื่อบูตเครื่อง/เฝ้าระวังเพื่อให้ทำงานได้อย่างถูกต้อง</string>
@@ -147,6 +155,7 @@
     <string name="about_dialog_button_close">ปิด</string>
     <string name="about_view_source_code"><![CDATA[ดูซอร์สโค้ดใน %s]]></string>
     <!-- Start -->
+    <string name="action_start">เริ่มชิซึกุ</string>
     <!-- Stop -->
     <string name="action_stop">หยุดทำงาน Shizuku</string>
     <string name="dialog_stop_message">บริการ Shizuku จะถูกหยุดทำงาน</string>
@@ -181,7 +190,6 @@
     <string name="wadb_notification_wifi_found">พบ Wi-Fi แล้ว กำลังดำเนินการต่อไป</string>
     <string name="wadb_error_title">เกิดข้อผิดพลาดขณะเริ่มต้นระบบ</string>
     <string name="wadb_error_notify_dev">แตะเพื่อแจ้งให้ผู้พัฒนาทราบ</string>
-    <string name="wadb_error_send_email">ส่งอีเมล์ถึง</string>
     <string name="wadb_permission_error_notification_title">ข้อผิดพลาดในการอนุญาต</string>
     <string name="wadb_permission_error_notification_content">ชิซูกุต้องใช้ WRITE_SECURE_SETTINGS เพื่อเริ่มต้นระบบเมื่อบูตเครื่อง แตะเพื่อดูวิธีให้สิทธิ์</string>
     <string name="wadb_notification_channel">บริการเริ่มต้นอัตโนมัติของ ADB</string>
