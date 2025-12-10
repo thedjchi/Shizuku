@@ -3,6 +3,16 @@ description: Suggest an idea for this project
 labels: enhancement
 
 body:
+  - type: checkboxes
+    id: before_you_begin
+    attributes:
+      label: Before You Begin
+      options:
+        - label: I searched through all [open/closed issues](https://github.com/thedjchi/Shizuku/issues) and confirmed that this is a new feature request
+          required: true
+        - label: I am using the latest version of Shizuku
+          required: true
+
   - type: textarea
     id: problem
     attributes:

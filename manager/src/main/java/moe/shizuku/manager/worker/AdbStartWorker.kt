@@ -32,6 +32,7 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
+import moe.shizuku.manager.settings.BugReportDialogActivity
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
@@ -157,32 +158,21 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
         val nb = NotificationCompat.Builder(context, CHANNEL_ID)
 
-        val uri = Uri.parse(
-            "mailto:" + context.getString(R.string.support_email) +
-            "?subject=" + Uri.encode("Error while starting Shizuku") +
-            "&body=v" + Uri.encode(
-                context.packageManager.getPackageInfo(context.packageName, 0).versionName + "\n\n" +
-                e.stackTraceToString()
-            )
-        )
+        val msgNotif = "$e. ${context.getString(R.string.wadb_error_notify_dev)}"
 
-        val emailIntent = Intent(Intent.ACTION_SENDTO, uri)
-        var msgNotif = ""
-        if (emailIntent.resolveActivity(context.packageManager) != null) {
-            val emailPendingIntent = PendingIntent.getActivity(
-                context, 0, emailIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-            )
-            nb.setContentIntent(emailPendingIntent)
-            nb.setAutoCancel(true)
-            msgNotif = "$e. ${context.getString(R.string.wadb_error_notify_dev)}"
-        } else {
-            msgNotif = "$e. ${context.getString(R.string.wadb_error_send_email)} ${context.getString(R.string.support_email)}"
+        val intent = Intent(context, BugReportDialogActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
+        val pendingIntent = PendingIntent.getActivity(
+            context, 0, intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
 
         val notification = nb
             .setSmallIcon(R.drawable.ic_system_icon)
             .setContentTitle(context.getString(R.string.wadb_error_title))
             .setContentText(msgNotif)
+            .setContentIntent(pendingIntent)
             .setSilent(true)
             .setStyle(NotificationCompat.BigTextStyle().bigText(msgNotif))
             .build()

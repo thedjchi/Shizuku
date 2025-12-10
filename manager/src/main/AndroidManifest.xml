@@ -105,6 +105,13 @@
             android:name=".starter.StarterActivity"
             android:label="@string/starter" />
         <activity
+            android:name=".settings.BugReportDialogActivity"
+            android:theme="@style/Theme.App.DialogHost"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:exported="false" />
+        <activity
             android:name=".authorization.RequestPermissionActivity"
             android:directBootAware="true"
             android:excludeFromRecents="true"

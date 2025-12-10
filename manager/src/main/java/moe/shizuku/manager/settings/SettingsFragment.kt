@@ -296,15 +296,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         }
 
         reportBugPreference.setOnPreferenceClickListener {
-            val intent = Intent(Intent.ACTION_SENDTO, Uri.parse(
-                "mailto:" + context.getString(R.string.support_email) + 
-                "?body=v" + Uri.encode(context.packageManager.getPackageInfo(context.packageName, 0).versionName)
-            ))
-            try {
-                context.startActivity(intent)
-            } catch (e: ActivityNotFoundException) {
-                Toast.makeText(context, context.getString(R.string.toast_no_email_app), Toast.LENGTH_SHORT).show()
-            }
+            BugReportDialog().show(parentFragmentManager, "BugReportDialog")
             true
         }
 

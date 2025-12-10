@@ -144,6 +144,17 @@
     <string name="settings_legacy_pairing">Legacy pairing</string>
     <string name="settings_legacy_pairing_summary">Enter the pairing code in a dialog instead of a notification</string>
 
+    <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">First, please do the following:</string>
+    <string name="bug_report_dialog_update">Check that you are using the latest version of Shizuku.</string>
+    <string name="bug_report_dialog_button_update">View latest release</string>
+    <string name="bug_report_dialog_wiki">Read the wiki and follow all relevant troubleshooting steps.</string>
+    <string name="bug_report_dialog_button_wiki">View wiki</string>
+    <string name="bug_report_dialog_issues">Search through all existing issues to see if your bug/feature has already been reported.</string>
+    <string name="bug_report_dialog_button_issues">View issues</string>
+    <string name="bug_report_dialog_method">Please submit an issue on GitHub if you have an account.\n\nOtherwise, you can send an email.</string>
+    <string name="bug_report_dialog_button_email">Send Email</string>
+
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port must be between 1 and 65535</string>
     <string name="snackbar_battery_optimization_home">Battery optimization must be disabled for start on boot/watchdog to work properly.</string>
@@ -210,7 +221,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi found. Proceeding</string>
     <string name="wadb_error_title">Error while starting on boot</string>
     <string name="wadb_error_notify_dev">Tap to notify the developer.</string>
-    <string name="wadb_error_send_email">Send an email to</string>
     <string name="wadb_permission_error_notification_title">Permission Error</string>
     <string name="wadb_permission_error_notification_content">Shizuku needs WRITE_SECURE_SETTINGS to start on boot. Tap to learn how to grant it.</string>
     <string name="wadb_notification_channel">ADB auto-start service</string>
