@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Érintse meg az engedélyezett alkalmazások kezeléséhez]]></string>
     <string name="home_app_management_empty">Azok az alkalmazások jelennek meg itt, amelyek kérték vagy deklarálták a Shizuku engedélyt.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Irányítsd a Shizukut automatizálási alkalmazásokkal</string>
+    <string name="home_automation_description"><![CDATA[Az olyan alkalmazások, mint a Tasker és a MacroDroid, küldhetnek szándékokat a Shizuku automatikus indításához/leállításához.<p>Az Android 10-es vagy régebbi rendszeren futó, rootolatlan eszközöknek TCP portot kell nyitniuk egy PC-ről a<font face="monospace"> %1$s </font>használatával ahhoz, hogy az indítási szándék működjön.]]></string>
+    <string name="home_automation_button_view_intents">Szándékok megtekintése</string>
+    <string name="home_automation_dialog_label_action">Akció</string>
+    <string name="home_automation_dialog_label_package">Csomag</string>
+    <string name="home_automation_dialog_label_class">Osztály</string>
+    <string name="home_automation_dialog_label_target">Cél</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Fejlesztői útmutató</string>
     <string name="home_learn_more_description">Tanuljon meg fejlődni a Shizukuval</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">Fejlett</string>
     <string name="settings_legacy_pairing">Régi párosítás</string>
     <string name="settings_legacy_pairing_summary">A párosítási kódot egy párbeszédpanelen, ne pedig egy értesítésben add meg</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A portszámnak 1 és 65535 között kell lennie.</string>
     <string name="snackbar_battery_optimization_home">A rendszerindításkor/watchdogkor történő indítás megfelelő működéséhez le kell tiltani az akkumulátoroptimalizálást.</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">Közeli</string>
     <string name="about_view_source_code"><![CDATA[Forráskód megtekintése itt: %s]]></string>
     <!-- Start -->
+    <string name="action_start">Indítsa el a Shizukut</string>
     <!-- Stop -->
     <string name="action_stop">A Shizuku leállítása</string>
     <string name="dialog_stop_message">A Shizuku szolgáltatás leáll.</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi található. Folytatás</string>
     <string name="wadb_error_title">Hiba a rendszerindításkor</string>
     <string name="wadb_error_notify_dev">Koppintson a fejlesztő értesítéséhez.</string>
-    <string name="wadb_error_send_email">Küldjön egy e-mailt a következő címre:</string>
     <string name="wadb_permission_error_notification_title">Engedélyezési hiba</string>
     <string name="wadb_permission_error_notification_content">A Shizuku rendszerindításkor WRITE_SECURE_SETTINGS jogosultságra szorul. Koppintson ide, ha szeretné megtudni, hogyan engedélyezheti ezt.</string>
     <string name="wadb_notification_channel">ADB automatikus indítási szolgáltatás</string>
