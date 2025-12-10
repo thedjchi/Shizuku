@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">Legacy-koppeling</string>
     <string name="settings_legacy_pairing_summary">Voer de koppelcode in een dialoogvenster in in plaats van een melding</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Doe allereerst het volgende:</string>
+    <string name="bug_report_dialog_update">Controleer of je de nieuwste versie van Shizuku gebruikt.</string>
+    <string name="bug_report_dialog_button_update">Bekijk de nieuwste release</string>
+    <string name="bug_report_dialog_wiki">Lees de wiki en volg alle relevante stappen voor probleemoplossing.</string>
+    <string name="bug_report_dialog_button_wiki">Bekijk de wiki</string>
+    <string name="bug_report_dialog_issues">Doorzoek alle bestaande problemen om te zien of jouw bug/functie al is gemeld.</string>
+    <string name="bug_report_dialog_button_issues">Bekijk problemen</string>
+    <string name="bug_report_dialog_method">Als je een account hebt, kun je een probleem melden op GitHub.\n\nAnders kun je een e-mail sturen.</string>
+    <string name="bug_report_dialog_button_email">E-mail verzenden</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">De poort moet tussen 1 en 65535 liggen</string>
     <string name="snackbar_battery_optimization_home">Batterijoptimalisatie moet uitgeschakeld zijn om bij opstarten/watchdog goed te starten.</string>
