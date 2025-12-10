@@ -71,6 +71,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Սեղմեք, որպեսզի վավերացված ծրագրերը տիրապետելու համար]]></string>
     <string name="home_app_management_empty">Այստեղ կցուցադրվեն հավելվածները, որոնք խնդրել կամ հայտարարել են Shizuku թույլտվությունը։</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Կառավարեք Շիզուկուն ավտոմատացման հավելվածներով</string>
+    <string name="home_automation_description"><![CDATA[Tasker-ի և MacroDroid-ի նման հավելվածները կարող են ավտոմատ կերպով ուղարկել Shizuku-ն մեկնարկելու/անջատելու մտադրություններ:<p>Android 10 կամ ավելի ցածր օպերացիոն համակարգով աշխատող unrooted սարքերը պետք է բացեն TCP միացք համակարգչից՝ օգտագործելով<font face="monospace"> %1$s </font>մեկնարկի մտադրության աշխատանքի համար:]]></string>
+    <string name="home_automation_button_view_intents">Դիտել մտադրությունները</string>
+    <string name="home_automation_dialog_label_action">Գործողություն</string>
+    <string name="home_automation_dialog_label_package">Փաթեթ</string>
+    <string name="home_automation_dialog_label_class">Դաս</string>
+    <string name="home_automation_dialog_label_target">Նպատակակետ</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Մշակողի ուղեցույց</string>
     <string name="home_learn_more_description">Սովորեք ծրագրավորել Shizuku-ով կամ Shizuku-ն ուրիշ ծրագրերի հետ օգտագործել</string>
@@ -125,6 +132,7 @@
     <string name="settings_advanced">Ընդլայնված</string>
     <string name="settings_legacy_pairing">Ժառանգական զուգավորում</string>
     <string name="settings_legacy_pairing_summary">Մուտքագրեք զուգավորման կոդը երկխոսության մեջ ծանուցման փոխարեն</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Նավահանգիստը պետք է լինի միջեւ 1 եւ 65535</string>
     <string name="snackbar_battery_optimization_home">Մարտկոցի օպտիմալացումը պետք է անջատված լինի, որպեսզի boot/watchdog-ը ճիշտ աշխատի:</string>
@@ -144,6 +152,7 @@
     <string name="about_dialog_button_close">Փակել</string>
     <string name="about_view_source_code"><![CDATA[Տեսնել կոդի աղբյուրը %s-ում]]></string>
     <!-- Start -->
+    <string name="action_start">Սկսեք Shizuku-ն</string>
     <!-- Stop -->
     <string name="action_stop">Անջատել Shizuku-ն</string>
     <string name="dialog_stop_message">Shizuku-ի ծառայությունը կանջատվի։</string>
@@ -178,7 +187,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi գտնվել է։ Ընթացք</string>
     <string name="wadb_error_title">Սխալ boot-ից սկսելիս</string>
     <string name="wadb_error_notify_dev">Սեղմեք մշակողին ծանուցելու համար:</string>
-    <string name="wadb_error_send_email">Ուղարկել էլեկտրոնային նամակ</string>
     <string name="wadb_permission_error_notification_title">Թույլտվության սխալ</string>
     <string name="wadb_permission_error_notification_content">Shizuku-ն պետք է WRITE_SECURE_SETTINGS սկսել boot-ից։ Սեղմեք ՝ իմանալու համար, թե ինչպես շնորհել այն:</string>
     <string name="wadb_notification_channel">ADB ավտոմատ մեկնարկի ծառայություն</string>
