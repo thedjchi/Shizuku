@@ -70,6 +70,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[탭하여 인증된 앱 관리]]></string>
     <string name="home_app_management_empty">Shizuku 권한을 요청하거나 선언한 앱이 여기에 표시됩니다.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">자동화 앱으로 Shizuku 제어</string>
+    <string name="home_automation_description"><![CDATA[Tasker 및 MacroDroid와 같은 앱은 Shizuku를 자동으로 시작/중지하는 인텐트를 보낼 수 있습니다.<p>Android 10 이하에서 루팅되지 않은 기기는 시작 인텐트가 작동하도록<font face="monospace"> %1$s </font>을 사용하여 PC에서 TCP 포트를 열어야 합니다.]]></string>
+    <string name="home_automation_button_view_intents">의도 보기</string>
+    <string name="home_automation_dialog_label_action">행동</string>
+    <string name="home_automation_dialog_label_package">패키지</string>
+    <string name="home_automation_dialog_label_class">수업</string>
+    <string name="home_automation_dialog_label_target">목표</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">개발자 가이드</string>
     <string name="home_learn_more_description">Shizuku로 개발하는 방법 알아보기</string>
@@ -128,6 +135,7 @@
     <string name="settings_advanced">고급의</string>
     <string name="settings_legacy_pairing">레거시 페어링</string>
     <string name="settings_legacy_pairing_summary">알림 대신 대화 상자에 페어링 코드를 입력하세요.</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">포트는 1~65535 사이여야 합니다.</string>
     <string name="snackbar_battery_optimization_home">부팅/워치독 시작 시 배터리 최적화를 비활성화해야 제대로 작동합니다.</string>
@@ -147,6 +155,7 @@
     <string name="about_dialog_button_close">닫다</string>
     <string name="about_view_source_code"><![CDATA[%s에서 소스코드 보기]]></string>
     <!-- Start -->
+    <string name="action_start">시즈쿠 시작</string>
     <!-- Stop -->
     <string name="action_stop">Shizuku 중지</string>
     <string name="dialog_stop_message">Shizuku 서비스가 중지됩니다.</string>
@@ -181,7 +190,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi를 찾았습니다. 계속 진행 중</string>
     <string name="wadb_error_title">부팅 시 시작 중 오류 발생</string>
     <string name="wadb_error_notify_dev">개발자에게 알리려면 탭하세요.</string>
-    <string name="wadb_error_send_email">이메일을 보내세요</string>
     <string name="wadb_permission_error_notification_title">권한 오류</string>
     <string name="wadb_permission_error_notification_content">Shizuku를 부팅 시 시작하려면 WRITE_SECURE_SETTINGS 권한이 필요합니다. 탭하여 권한을 부여하는 방법을 알아보세요.</string>
     <string name="wadb_notification_channel">ADB 자동 시작 서비스</string>
