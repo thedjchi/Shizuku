@@ -134,6 +134,15 @@
     <string name="settings_legacy_pairing">Упаривање са старим уређајима</string>
     <string name="settings_legacy_pairing_summary">Унесите код за упаривање у дијалогу уместо у обавештењу</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Прво, урадите следеће:</string>
+    <string name="bug_report_dialog_update">Проверите да ли користите најновију верзију програма Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Погледајте најновије издање</string>
+    <string name="bug_report_dialog_wiki">Прочитајте вики и пратите све релевантне кораке за решавање проблема.</string>
+    <string name="bug_report_dialog_button_wiki">Погледајте вики</string>
+    <string name="bug_report_dialog_issues">Претражите све постојеће проблеме да бисте видели да ли је ваша грешка/функција већ пријављена.</string>
+    <string name="bug_report_dialog_button_issues">Прикажи проблеме</string>
+    <string name="bug_report_dialog_method">Молимо вас да пријавите проблем на GitHub-у ако имате налог.\n\nУ супротном, можете послати имејл.</string>
+    <string name="bug_report_dialog_button_email">Пошаљи имејл</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт мора бити између 1 и 65535</string>
     <string name="snackbar_battery_optimization_home">Оптимизација батерије мора бити онемогућена да би покретање при покретању/чување система исправно функционисало.</string>
