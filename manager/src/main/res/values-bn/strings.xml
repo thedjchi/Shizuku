@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">উত্তরাধিকার জুটি</string>
     <string name="settings_legacy_pairing_summary">কোনও বিজ্ঞপ্তির পরিবর্তে একটি ডায়ালগে জোড় বাঁধার কোডটি লিখুন</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">প্রথমে, অনুগ্রহ করে নিম্নলিখিতগুলি করুন:</string>
+    <string name="bug_report_dialog_update">আপনি Shizuku এর সর্বশেষ সংস্করণ ব্যবহার করছেন কিনা তা পরীক্ষা করুন।</string>
+    <string name="bug_report_dialog_button_update">সর্বশেষ প্রকাশ দেখুন</string>
+    <string name="bug_report_dialog_wiki">উইকিটি পড়ুন এবং সমস্ত প্রাসঙ্গিক সমস্যা সমাধানের পদক্ষেপগুলি অনুসরণ করুন।</string>
+    <string name="bug_report_dialog_button_wiki">উইকি দেখুন</string>
+    <string name="bug_report_dialog_issues">আপনার বাগ/বৈশিষ্ট্যটি ইতিমধ্যেই রিপোর্ট করা হয়েছে কিনা তা দেখতে বিদ্যমান সমস্ত সমস্যা অনুসন্ধান করুন।</string>
+    <string name="bug_report_dialog_button_issues">সমস্যাগুলি দেখুন</string>
+    <string name="bug_report_dialog_method">আপনার যদি অ্যাকাউন্ট থাকে তাহলে অনুগ্রহ করে GitHub-এ একটি সমস্যা জমা দিন।\n\nঅন্যথায়, আপনি একটি ইমেল পাঠাতে পারেন।</string>
+    <string name="bug_report_dialog_button_email">ইমেইল পাঠান</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">পোর্ট অবশ্যই 1 এবং 65535 এর মধ্যে হতে হবে</string>
     <string name="snackbar_battery_optimization_home">সঠিকভাবে কাজ করার জন্য বুট/ওয়াচডগ শুরু করার জন্য ব্যাটারি অপটিমাইজেশন অবশ্যই অক্ষম করতে হবে।</string>
