@@ -72,7 +72,7 @@
     <string name="home_app_management_empty">Qui verranno visualizzate le app che hanno richiesto o dichiarato l\'autorizzazione Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Controlla Shizuku con le app di automazione</string>
-    <string name="home_automation_description"><![CDATA[App come Tasker e MacroDroid possono inviare intent per avviare/arrestare Shizuku automaticamente.<p>I dispositivi non rootati su Android 10 o versioni precedenti devono aprire una porta TCP da un PC utilizzando<font face="monospace"> %1$s </font>affinché l'intento di avvio funzioni.]]></string>
+    <string name="home_automation_description"><![CDATA[App come Tasker e MacroDroid possono inviare intent per avviare/arrestare Shizuku automaticamente.<p>I dispositivi non rootati su Android 10 o versioni precedenti devono aprire una porta TCP da un PC utilizzando<font face="monospace"> %1$s </font>affinché l\'intento di avvio funzioni.]]></string>
     <string name="home_automation_button_view_intents">Visualizza intenti</string>
     <string name="home_automation_dialog_label_action">Azione</string>
     <string name="home_automation_dialog_label_package">Pacchetto</string>
@@ -137,6 +137,15 @@
     <string name="settings_legacy_pairing">Abbinamento legacy</string>
     <string name="settings_legacy_pairing_summary">Inserisci il codice di associazione in una finestra di dialogo anziché in una notifica</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Per prima cosa, procedi come segue:</string>
+    <string name="bug_report_dialog_update">Verifica di utilizzare la versione più recente di Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Visualizza l\'ultima versione</string>
+    <string name="bug_report_dialog_wiki">Leggi il wiki e segui tutti i passaggi rilevanti per la risoluzione dei problemi.</string>
+    <string name="bug_report_dialog_button_wiki">Visualizza wiki</string>
+    <string name="bug_report_dialog_issues">Cerca tra tutti i problemi esistenti per vedere se il tuo bug/la tua funzionalità è già stata segnalata.</string>
+    <string name="bug_report_dialog_button_issues">Visualizza i problemi</string>
+    <string name="bug_report_dialog_method">Segnala un problema su GitHub se hai un account.\n\nAltrimenti, puoi inviare un\'e-mail.</string>
+    <string name="bug_report_dialog_button_email">Invia email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">La porta deve essere compresa tra 1 e 65535</string>
     <string name="snackbar_battery_optimization_home">Per far sì che l\'avvio all\'avvio/watchdog funzioni correttamente, è necessario disattivare l\'ottimizzazione della batteria.</string>
