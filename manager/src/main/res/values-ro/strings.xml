@@ -72,6 +72,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Atinge pentru a gestiona aplicațiile autorizate]]></string>
     <string name="home_app_management_empty">Aplicațiile care au solicitat sau au declarat permisiunea Shizuku vor fi afișate aici.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Controlează Shizuku cu aplicații de automatizare</string>
+    <string name="home_automation_description"><![CDATA[Aplicații precum Tasker și MacroDroid pot trimite intenții de pornire/oprire automată a Shizuku.<p>Dispozitivele fără root, cu Android 10 sau versiuni anterioare, trebuie să deschidă un port TCP de pe un PC folosind<font face="monospace"> %1$s </font>pentru ca intenția de pornire să funcționeze.]]></string>
+    <string name="home_automation_button_view_intents">Vizualizați intențiile</string>
+    <string name="home_automation_dialog_label_action">Acţiune</string>
+    <string name="home_automation_dialog_label_package">Pachet</string>
+    <string name="home_automation_dialog_label_class">Clasă</string>
+    <string name="home_automation_dialog_label_target">Ţintă</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Ghid pentru dezvoltatori</string>
     <string name="home_learn_more_description">Află cum să dezvolți cu Shizuku</string>
@@ -130,6 +137,7 @@
     <string name="settings_advanced">Avansat</string>
     <string name="settings_legacy_pairing">Împerechere moștenită</string>
     <string name="settings_legacy_pairing_summary">Introduceți codul de asociere într-o casetă de dialog în loc de o notificare</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portul trebuie să fie între 1 și 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizarea bateriei trebuie dezactivată pentru ca pornirea la pornire/funcția de supraveghere să funcționeze corect.</string>
@@ -149,6 +157,7 @@
     <string name="about_dialog_button_close">Aproape</string>
     <string name="about_view_source_code"><![CDATA[Vizualizează codul sursă la %s]]></string>
     <!-- Start -->
+    <string name="action_start">Începe Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Oprire Shizuku</string>
     <string name="dialog_stop_message">Serviciul Shizuku va fi oprit.</string>
@@ -183,7 +192,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi găsit. Se continuă</string>
     <string name="wadb_error_title">Eroare la pornire la bootare</string>
     <string name="wadb_error_notify_dev">Atingeți pentru a notifica dezvoltatorul.</string>
-    <string name="wadb_error_send_email">Trimiteți un e-mail către</string>
     <string name="wadb_permission_error_notification_title">Eroare de permisiune</string>
     <string name="wadb_permission_error_notification_content">Shizuku are nevoie de WRITE_SECURE_SETTINGS pentru a porni la pornire. Atingeți pentru a afla cum să îl acordați.</string>
     <string name="wadb_notification_channel">Serviciu de pornire automată ADB</string>
