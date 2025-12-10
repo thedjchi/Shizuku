@@ -75,6 +75,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[انقر لإدارة التطبيقات المصرح بها]]></string>
     <string name="home_app_management_empty">ستظهر هنا التطبيقات التي طلبت أو أعلنت عن إذن Shizuku.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">التحكم في شيزوكو باستخدام تطبيقات الأتمتة</string>
+    <string name="home_automation_description"><![CDATA[يمكن للتطبيقات مثل Tasker وMacroDroid إرسال نوايا لبدء/إيقاف Shizuku تلقائيًا.<p>يجب على الأجهزة غير المتجذرة على نظام Android 10 أو الإصدارات الأقدم فتح منفذ TCP من جهاز كمبيوتر يستخدم<font face="monospace"> %1$s </font>لكي تعمل نية البدء.]]></string>
+    <string name="home_automation_button_view_intents">عرض النوايا</string>
+    <string name="home_automation_dialog_label_action">فعل</string>
+    <string name="home_automation_dialog_label_package">طَرد</string>
+    <string name="home_automation_dialog_label_class">فصل</string>
+    <string name="home_automation_dialog_label_target">هدف</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">دليل المطور</string>
     <string name="home_learn_more_description">تعلم كيف تطور مع Shizuku</string>
@@ -133,6 +140,7 @@
     <string name="settings_advanced">متقدم</string>
     <string name="settings_legacy_pairing">الاقتران القديم</string>
     <string name="settings_legacy_pairing_summary">أدخل رمز الاقتران في مربع حوار بدلاً من الإشعار</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">يجب أن يكون المنفذ بين 1 و 65535</string>
     <string name="snackbar_battery_optimization_home">يجب تعطيل تحسين البطارية حتى يعمل التشغيل عند التمهيد/مراقبة التشغيل بشكل صحيح.</string>
@@ -152,6 +160,7 @@
     <string name="about_dialog_button_close">يغلق</string>
     <string name="about_view_source_code"><![CDATA[عرض التعليمات البرمجية المصدر في %s]]></string>
     <!-- Start -->
+    <string name="action_start">ابدأ شيزوكو</string>
     <!-- Stop -->
     <string name="action_stop">إيقاف Shizuku</string>
     <string name="dialog_stop_message">سيتم إيقاف خدمة Shizuku.</string>
@@ -186,7 +195,6 @@
     <string name="wadb_notification_wifi_found">تم العثور على شبكة واي فاي. جاري المتابعة</string>
     <string name="wadb_error_title">حدث خطأ أثناء بدء التشغيل</string>
     <string name="wadb_error_notify_dev">انقر هنا لإعلام المطور.</string>
-    <string name="wadb_error_send_email">أرسل بريدًا إلكترونيًا إلى</string>
     <string name="wadb_permission_error_notification_title">خطأ في الإذن</string>
     <string name="wadb_permission_error_notification_content">يحتاج شيزوكو إلى WRITE_SECURE_SETTINGS للبدء عند بدء التشغيل. انقر لمعرفة كيفية تفعيله.</string>
     <string name="wadb_notification_channel">خدمة بدء التشغيل التلقائي لـ ADB</string>
