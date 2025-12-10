@@ -71,6 +71,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Pindutin para pamahalaan ang mga awtorisadong app]]></string>
     <string name="home_app_management_empty">Ipapakita dito ang mga app na humiling o nagdeklara ng pahintulot ng Shizuku.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Kontrolin ang Shizuku gamit ang mga automation app</string>
+    <string name="home_automation_description"><![CDATA[Ang mga app tulad ng Tasker at MacroDroid ay maaaring magpadala ng mga layunin upang awtomatikong simulan/ihinto ang Shizuku.<p>Ang mga hindi naka-root na device sa Android 10 o mas mababa ay dapat magbukas ng TCP port mula sa isang PC gamit ang<font face="monospace"> %1$s </font>para magsimulang gumana.]]></string>
+    <string name="home_automation_button_view_intents">Tingnan ang mga layunin</string>
+    <string name="home_automation_dialog_label_action">Aksyon</string>
+    <string name="home_automation_dialog_label_package">Package</string>
+    <string name="home_automation_dialog_label_class">Klase</string>
+    <string name="home_automation_dialog_label_target">Target</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Gabay ng developer</string>
     <string name="home_learn_more_description">Matuto kung paano mag-develop gamit ang Shizuku</string>
@@ -129,6 +136,7 @@
     <string name="settings_advanced">Advanced</string>
     <string name="settings_legacy_pairing">Pagpapares ng pamana</string>
     <string name="settings_legacy_pairing_summary">Ipasok ang code ng pagpapares sa isang dialog sa halip na isang abiso</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Ang port ay dapat na nasa pagitan ng 1 at 65535</string>
     <string name="snackbar_battery_optimization_home">Ang pag-optimize ng baterya ay dapat na hindi pinagana para sa pagsisimula sa boot / watchdog upang gumana nang maayos.</string>
@@ -148,6 +156,7 @@
     <string name="about_dialog_button_close">Isara</string>
     <string name="about_view_source_code"><![CDATA[Tingnan ang source code sa %s]]></string>
     <!-- Start -->
+    <string name="action_start">Simulan ang Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Ihinto ang Shizuku</string>
     <string name="dialog_stop_message">Ihihinto ang serbisyo ng Shizuku.</string>
@@ -182,7 +191,6 @@
     <string name="wadb_notification_wifi_found">Natagpuan ang Wi-Fi. Pagpapatuloy</string>
     <string name="wadb_error_title">Error habang nagsisimula sa boot</string>
     <string name="wadb_error_notify_dev">I-tap upang ipaalam sa developer.</string>
-    <string name="wadb_error_send_email">Email:</string>
     <string name="wadb_permission_error_notification_title">Error sa Pahintulot</string>
     <string name="wadb_permission_error_notification_content">Kailangan ni Shizuku ng WRITE_SECURE_SETTINGS para makapagsimula sa boot. Mag-tap upang malaman kung paano ito ibigay.</string>
     <string name="wadb_notification_channel">Serbisyo ng awtomatikong pagsisimula ng ADB</string>

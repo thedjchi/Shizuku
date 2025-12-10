@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Puuduta, et hallata volitatud rakendusi]]></string>
     <string name="home_app_management_empty">Rakendused, mis on taotlenud või deklareerinud Shizuku loa, kuvatakse siin.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Juhtige Shizukut automatiseerimisrakendustega</string>
+    <string name="home_automation_description"><![CDATA[Rakendused nagu Tasker ja MacroDroid saavad saata kavatsusi Shizuku automaatseks käivitamiseks/peatamiseks.<p>Juurdeta seadmed Android 10-s või vanemas versioonis peavad käivitamiskavatsuse toimimiseks avama arvuti TCP-pordi, kasutades<font face="monospace"> %1$s </font>.]]></string>
+    <string name="home_automation_button_view_intents">Kuva kavatsused</string>
+    <string name="home_automation_dialog_label_action">Tegevus</string>
+    <string name="home_automation_dialog_label_package">Pakett</string>
+    <string name="home_automation_dialog_label_class">Klass</string>
+    <string name="home_automation_dialog_label_target">Sihtmärk</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Arendaja juhend</string>
     <string name="home_learn_more_description">Õpi, kuidas Shizukuga areneda</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">Täpsem</string>
     <string name="settings_legacy_pairing">Pärandpaar</string>
     <string name="settings_legacy_pairing_summary">Sisesta paarituskood dialoogis, mitte teavituses</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port peab olema vahemikus 1 kuni 65535</string>
     <string name="snackbar_battery_optimization_home">Aku optimeerimine peab olema välja lülitatud, et käivitamine või valvekoer korralikult töötaks.</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">Sulgema</string>
     <string name="about_view_source_code"><![CDATA[Vaata lähtekoodi aadressil %s]]></string>
     <!-- Start -->
+    <string name="action_start">Käivitage Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Peata Shizuku</string>
     <string name="dialog_stop_message">Shizuku teenus peatatakse.</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi leitud. Menetluse</string>
     <string name="wadb_error_title">Viga käivitamisel käivitamisel</string>
     <string name="wadb_error_notify_dev">Puuduta, et arendajat teavitada.</string>
-    <string name="wadb_error_send_email">Saada e-kiri aadressile</string>
     <string name="wadb_permission_error_notification_title">Luba viga</string>
     <string name="wadb_permission_error_notification_content">Shizuku vajab WRITE_SECURE_SETTINGS käivitamiseks. Puuduta, et õppida, kuidas seda anda.</string>
     <string name="wadb_notification_channel">ADB automaatse käivituse teenus</string>

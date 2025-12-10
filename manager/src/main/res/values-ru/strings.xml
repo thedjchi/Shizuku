@@ -73,6 +73,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Нажмите для управления списком допущенных приложений]]></string>
     <string name="home_app_management_empty">Здесь будут отображаться приложения, которые запросили или заявили разрешение Shizuku.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Управляйте Сидзуку с помощью приложений автоматизации</string>
+    <string name="home_automation_description"><![CDATA[Приложения, такие как Tasker и MacroDroid, могут отправлять намерения на автоматический запуск/остановку Shizuku.<p>Устройства без root-прав на Android 10 или ниже должны открыть TCP-порт с ПК с помощью<font face="monospace"> %1$s </font>, чтобы намерение запуска сработало.]]></string>
+    <string name="home_automation_button_view_intents">Просмотр намерений</string>
+    <string name="home_automation_dialog_label_action">Действие</string>
+    <string name="home_automation_dialog_label_package">Упаковка</string>
+    <string name="home_automation_dialog_label_class">Сорт</string>
+    <string name="home_automation_dialog_label_target">Цель</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Руководство разработчика</string>
     <string name="home_learn_more_description">Узнайте, как начать разрабатывать с Shizuku</string>
@@ -131,6 +138,7 @@
     <string name="settings_advanced">Передовой</string>
     <string name="settings_legacy_pairing">Устаревшее сопряжение</string>
     <string name="settings_legacy_pairing_summary">Введите код сопряжения в диалоговом окне вместо уведомления.</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт должен быть от 1 до 65535.</string>
     <string name="snackbar_battery_optimization_home">Для корректной работы функции оптимизации батареи необходимо отключить запуск при загрузке/сторожевом таймере.</string>
@@ -150,6 +158,7 @@
     <string name="about_dialog_button_close">Закрывать</string>
     <string name="about_view_source_code"><![CDATA[Исходный код доступен на %s]]></string>
     <!-- Start -->
+    <string name="action_start">Запустить Шизуку</string>
     <!-- Stop -->
     <string name="action_stop">Остановить Shizuku</string>
     <string name="dialog_stop_message">Служба Shizuku будет остановлена.</string>
@@ -184,7 +193,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi найден. Продолжаем.</string>
     <string name="wadb_error_title">Ошибка при запуске загрузки</string>
     <string name="wadb_error_notify_dev">Нажмите, чтобы уведомить разработчика.</string>
-    <string name="wadb_error_send_email">Отправить электронное письмо</string>
     <string name="wadb_permission_error_notification_title">Ошибка разрешения</string>
     <string name="wadb_permission_error_notification_content">Для запуска Shizuku при загрузке требуется разрешение WRITE_SECURE_SETTINGS. Нажмите, чтобы узнать, как его предоставить.</string>
     <string name="wadb_notification_channel">Служба автоматического запуска ADB</string>

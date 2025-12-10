@@ -70,6 +70,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[タップで許可されたアプリを管理]]></string>
     <string name="home_app_management_empty">Shizuku の権限を要求または宣言したアプリがここに表示されます。</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">自動化アプリでShizukuを制御する</string>
+    <string name="home_automation_description"><![CDATA[Tasker や MacroDroid などのアプリは、Shizuku を自動的に起動/停止するインテントを送信できます。<p>Android 10 以下のルート化されていないデバイスでは、起動インテントが機能するために、<font face="monospace"> %1$s </font>を使用して PC から TCP ポートを開く必要があります。]]></string>
+    <string name="home_automation_button_view_intents">インテントを表示</string>
+    <string name="home_automation_dialog_label_action">アクション</string>
+    <string name="home_automation_dialog_label_package">パッケージ</string>
+    <string name="home_automation_dialog_label_class">クラス</string>
+    <string name="home_automation_dialog_label_target">ターゲット</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">開発者ガイド</string>
     <string name="home_learn_more_description">Shizukuを使った開発方法、Shizukuを使ったアプリの入手方法について学ぶことができます</string>
@@ -128,6 +135,7 @@
     <string name="settings_advanced">高度な</string>
     <string name="settings_legacy_pairing">レガシーペアリング</string>
     <string name="settings_legacy_pairing_summary">通知ではなくダイアログでペアリングコードを入力します</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">ポートは1～65535の範囲で指定する必要があります</string>
     <string name="snackbar_battery_optimization_home">起動/ウォッチドッグが正常に機能するには、バッテリー最適化を無効にする必要があります。</string>
@@ -147,6 +155,7 @@
     <string name="about_dialog_button_close">近い</string>
     <string name="about_view_source_code"><![CDATA[%sでソースコードを見る]]></string>
     <!-- Start -->
+    <string name="action_start">しずくスタート</string>
     <!-- Stop -->
     <string name="action_stop">Shizukuを停止する</string>
     <string name="dialog_stop_message">Shizukuのサービスを停止します。</string>
@@ -181,7 +190,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fiが見つかりました。続行します</string>
     <string name="wadb_error_title">起動時にエラーが発生しました</string>
     <string name="wadb_error_notify_dev">タップして開発者に通知します。</string>
-    <string name="wadb_error_send_email">メールを送信する</string>
     <string name="wadb_permission_error_notification_title">権限エラー</string>
     <string name="wadb_permission_error_notification_content">Shizukuを起動するにはWRITE_SECURE_SETTINGSが必要です。タップして許可方法をご確認ください。</string>
     <string name="wadb_notification_channel">ADB自動起動サービス</string>

@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[அங்கீகரிக்கப்பட்ட பயன்பாடுகளை நிர்வகிக்க தட்டவும்]]></string>
     <string name="home_app_management_empty">ஷிசுகு அனுமதியைக் கோரிய அல்லது அறிவித்த பயன்பாடுகள் இங்கே காண்பிக்கப்படும்.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">ஆட்டோமேஷன் பயன்பாடுகள் மூலம் ஷிசுகுவைக் கட்டுப்படுத்தவும்</string>
+    <string name="home_automation_description"><![CDATA[Tasker மற்றும் MacroDroid போன்ற பயன்பாடுகள் Shizuku ஐ தானாகத் தொடங்க/நிறுத்த இன்டென்ட்களை அனுப்ப முடியும்.<p>Android 10 அல்லது அதற்குக் கீழே உள்ள ரூட் செய்யப்படாத சாதனங்கள் தொடக்க இன்டென்ட் வேலை செய்ய<font face="monospace"> %1$s </font>ஐப் பயன்படுத்தி PC யிலிருந்து TCP போர்ட்டைத் திறக்க வேண்டும்.]]></string>
+    <string name="home_automation_button_view_intents">நோக்கங்களைக் காண்க</string>
+    <string name="home_automation_dialog_label_action">செயல்</string>
+    <string name="home_automation_dialog_label_package">தொகுப்பு</string>
+    <string name="home_automation_dialog_label_class">வர்க்கம்</string>
+    <string name="home_automation_dialog_label_target">இலக்கு</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">டெவலப்பர் வழிகாட்டி</string>
     <string name="home_learn_more_description">ஷிசுகுவுடன் எவ்வாறு உருவாக்குவது என்பதை அறிக</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">மேம்பட்டது</string>
     <string name="settings_legacy_pairing">லெகஸி இணைத்தல்</string>
     <string name="settings_legacy_pairing_summary">அறிவிப்புக்குப் பதிலாக உரையாடலில் இணைத்தல் குறியீட்டை உள்ளிடவும்.</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">போர்ட் 1 மற்றும் 65535 க்கு இடையில் இருக்க வேண்டும்.</string>
     <string name="snackbar_battery_optimization_home">துவக்கத்தில்/வாட்ச்டாக்கில் ஸ்டார்ட் சரியாக வேலை செய்ய பேட்டரி ஆப்டிமைசேஷன் முடக்கப்பட்டிருக்க வேண்டும்.</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">மூடு</string>
     <string name="about_view_source_code"><![CDATA[%sஇல் மூலக் குறியீட்டைக் காண்க]]></string>
     <!-- Start -->
+    <string name="action_start">Shizuku ஐத் தொடங்கவும்</string>
     <!-- Stop -->
     <string name="action_stop">ஷிசுகுவை நிறுத்து</string>
     <string name="dialog_stop_message">ஷிசுகு சேவை நிறுத்தப்படும்.</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">வைஃபை உள்ளது. தொடர்கிறது</string>
     <string name="wadb_error_title">துவக்கத்தில் தொடங்கும் போது பிழை</string>
     <string name="wadb_error_notify_dev">டெவலப்பருக்குத் தெரிவிக்க தட்டவும்.</string>
-    <string name="wadb_error_send_email">மின்னஞ்சல் அனுப்பு</string>
     <string name="wadb_permission_error_notification_title">அனுமதி பிழை</string>
     <string name="wadb_permission_error_notification_content">துவக்கத்தில் தொடங்க ஷிசுகுவுக்கு WRITE_SECURE_SETTINGS தேவை. அதை எப்படி வழங்குவது என்பதை அறிய தட்டவும்.</string>
     <string name="wadb_notification_channel">ADB தானியங்கு தொடக்க சேவை</string>

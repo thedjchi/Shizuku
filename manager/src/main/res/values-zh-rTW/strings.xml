@@ -70,6 +70,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[輕觸以管理已授權的應用程式]]></string>
     <string name="home_app_management_empty">申請或宣告雫許可的應用程式會顯示在這裡。</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">使用自動化應用程式控制雫</string>
+    <string name="home_automation_description"><![CDATA[Tasker 和 MacroDroid 等應用程式可以傳送 Intent 來自動啟動/停止 Shizuku。<p>執行 Android 10 或更低版本的未 root 裝置必須使用<font face="monospace"> %1$s </font>從 PC 開啟 TCP 連接埠，啟動 Intent 才能正常運作。]]></string>
+    <string name="home_automation_button_view_intents">查看意圖</string>
+    <string name="home_automation_dialog_label_action">行動</string>
+    <string name="home_automation_dialog_label_package">包裹</string>
+    <string name="home_automation_dialog_label_class">班級</string>
+    <string name="home_automation_dialog_label_target">目標</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">開發者指南</string>
     <string name="home_learn_more_description">瞭解如何使用 Shizuku 開發</string>
@@ -128,6 +135,7 @@
     <string name="settings_advanced">進階</string>
     <string name="settings_legacy_pairing">傳承配對</string>
     <string name="settings_legacy_pairing_summary">請在對話框中輸入配對代碼，而非通知</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必須介於1到65535之間</string>
     <string name="snackbar_battery_optimization_home">啟動時啟動或看門狗的啟動功能必須關閉電池優化。</string>
@@ -147,6 +155,7 @@
     <string name="about_dialog_button_close">近</string>
     <string name="about_view_source_code"><![CDATA[在 %s 檢視原始碼]]></string>
     <!-- Start -->
+    <string name="action_start">開始雫</string>
     <!-- Stop -->
     <string name="action_stop">停止 Shizuku</string>
     <string name="dialog_stop_message">Shizuku 服務將被停止。</string>
@@ -181,7 +190,6 @@
     <string name="wadb_notification_wifi_found">找到 Wi-Fi。訴訟進行</string>
     <string name="wadb_error_title">開機時出現錯誤</string>
     <string name="wadb_error_notify_dev">點擊即可通知開發者。</string>
-    <string name="wadb_error_send_email">寄電子郵件給</string>
     <string name="wadb_permission_error_notification_title">權限錯誤</string>
     <string name="wadb_permission_error_notification_content">雫需要WRITE_SECURE_SETTINGS才能開始新車。點擊以學習如何賦予它。</string>
     <string name="wadb_notification_channel">ADB 自動啟動服務</string>

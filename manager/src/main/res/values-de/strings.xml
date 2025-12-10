@@ -71,6 +71,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tippen, um autorisierte Apps zu verwalten]]></string>
     <string name="home_app_management_empty">Apps, die die Shizuku-Erlaubnis beantragt oder deklariert haben, werden hier angezeigt.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Steuern Sie Shizuku mit Automatisierungs-Apps</string>
+    <string name="home_automation_description"><![CDATA[Apps wie Tasker und MacroDroid können Intents senden, um Shizuku automatisch zu starten/stoppen.<p>Nicht gerootete Geräte mit Android 10 oder älter müssen einen TCP-Port von einem PC aus öffnen, damit der Start-Intent funktioniert.<font face="monospace"> %1$s </font>]]></string>
+    <string name="home_automation_button_view_intents">Absichten anzeigen</string>
+    <string name="home_automation_dialog_label_action">Aktion</string>
+    <string name="home_automation_dialog_label_package">Paket</string>
+    <string name="home_automation_dialog_label_class">Klasse</string>
+    <string name="home_automation_dialog_label_target">Ziel</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Entwicklerhandbuch</string>
     <string name="home_learn_more_description">Lernen Sie, wie Apps mit Shizuku entwickelt werden</string>
@@ -129,6 +136,7 @@
     <string name="settings_advanced">Fortgeschritten</string>
     <string name="settings_legacy_pairing">Legacy-Paarung</string>
     <string name="settings_legacy_pairing_summary">Geben Sie den Paarungscode in einem Dialog statt in einer Benachrichtigung ein</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Der Port muss zwischen 1 und 65535 liegen</string>
     <string name="snackbar_battery_optimization_home">Die Batterieoptimierung muss deaktiviert sein, damit der Start beim Boot/Watchdog richtig funktioniert.</string>
@@ -148,6 +156,7 @@
     <string name="about_dialog_button_close">Schließen</string>
     <string name="about_view_source_code"><![CDATA[Quelltext auf %s anzeigen]]></string>
     <!-- Start -->
+    <string name="action_start">Starten Sie Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Shizuku anhalten</string>
     <string name="dialog_stop_message">Shizuku-Dienst wird angehalten.</string>
@@ -182,7 +191,6 @@
     <string name="wadb_notification_wifi_found">WLAN gefunden. Vorgehen</string>
     <string name="wadb_error_title">Fehler beim Starten beim Booten</string>
     <string name="wadb_error_notify_dev">Tippen Sie, um den Entwickler zu benachrichtigen.</string>
-    <string name="wadb_error_send_email">Sende eine E-Mail an</string>
     <string name="wadb_permission_error_notification_title">Berechtigungsfehler</string>
     <string name="wadb_permission_error_notification_content">Shizuku braucht WRITE_SECURE_SETTINGS, um mit Boot zu beginnen. Tippen, um zu lernen, wie man es gewährt.</string>
     <string name="wadb_notification_channel">ADB-Autostart-Service</string>

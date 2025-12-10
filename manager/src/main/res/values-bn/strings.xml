@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[অনুমোদিত অ্যাপগুলি পরিচালনা করতে ট্যাপ করুন]]></string>
     <string name="home_app_management_empty">যে অ্যাপগুলি শিজুকু অনুমতির অনুরোধ করেছে বা ঘোষণা করেছে সেগুলি এখানে প্রদর্শিত হবে।</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">অটোমেশন অ্যাপের মাধ্যমে শিজুকু নিয়ন্ত্রণ করুন</string>
+    <string name="home_automation_description"><![CDATA[Tasker এবং MacroDroid এর মতো অ্যাপগুলি স্বয়ংক্রিয়ভাবে Shizuku শুরু/বন্ধ করার জন্য ইন্টেন্ট পাঠাতে পারে।<p>Android 10 বা তার নিচের ভার্সনে আনরুটেড ডিভাইসগুলিকে কাজ করার জন্য<font face="monospace"> %1$s </font>ব্যবহার করে একটি PC থেকে একটি TCP পোর্ট খুলতে হবে।]]></string>
+    <string name="home_automation_button_view_intents">ইন্টেন্ট দেখুন</string>
+    <string name="home_automation_dialog_label_action">অ্যাকশন</string>
+    <string name="home_automation_dialog_label_package">প্যাকেজ</string>
+    <string name="home_automation_dialog_label_class">শ্রেণী</string>
+    <string name="home_automation_dialog_label_target">লক্ষ্য</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">ডেভেলপার গাইড</string>
     <string name="home_learn_more_description">শিজুকুর সাথে কীভাবে বিকাশ করতে হয় তা শিখুন</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">উন্নত</string>
     <string name="settings_legacy_pairing">উত্তরাধিকার জুটি</string>
     <string name="settings_legacy_pairing_summary">কোনও বিজ্ঞপ্তির পরিবর্তে একটি ডায়ালগে জোড় বাঁধার কোডটি লিখুন</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">পোর্ট অবশ্যই 1 এবং 65535 এর মধ্যে হতে হবে</string>
     <string name="snackbar_battery_optimization_home">সঠিকভাবে কাজ করার জন্য বুট/ওয়াচডগ শুরু করার জন্য ব্যাটারি অপটিমাইজেশন অবশ্যই অক্ষম করতে হবে।</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">বন্ধ</string>
     <string name="about_view_source_code"><![CDATA[এখানে সোর্স কোড দেখুন %s]]></string>
     <!-- Start -->
+    <string name="action_start">শিজুকু শুরু করুন</string>
     <!-- Stop -->
     <string name="action_stop">শিজুকু বন্ধ করুন</string>
     <string name="dialog_stop_message">শিজুকু পরিষেবা বন্ধ হয়ে যাবে।</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">ওয়াই-ফাই পাওয়া গেছে। অগ্রসর হচ্ছে</string>
     <string name="wadb_error_title">বুট শুরু করার সময় ত্রুটি</string>
     <string name="wadb_error_notify_dev">বিকাশকারীকে বিজ্ঞাপিত করতে ট্যাপ করুন।</string>
-    <string name="wadb_error_send_email">একটি ইমেইল পাঠান</string>
     <string name="wadb_permission_error_notification_title">অনুমতি ত্রুটি</string>
     <string name="wadb_permission_error_notification_content">বুটে শুরু করার জন্য শিজুকুর WRITE_SECURE_SETTINGS প্রয়োজন। এটি কীভাবে মঞ্জুর করতে হয় তা শিখতে ট্যাপ করুন।</string>
     <string name="wadb_notification_channel">এডিবি অটো-স্টার্ট সার্ভিস</string>

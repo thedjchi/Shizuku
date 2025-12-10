@@ -70,6 +70,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[点按以管理授权的应用]]></string>
     <string name="home_app_management_empty">已请求或声明 Shizuku 权限的应用将显示在此处。</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">使用自动化应用程序控制雫</string>
+    <string name="home_automation_description"><![CDATA[Tasker 和 MacroDroid 等应用可以发送 Intent 来自动启动/停止 Shizuku。<p>运行 Android 10 或更低版本的未 root 设备必须使用<font face="monospace"> %1$s </font>从 PC 打开 TCP 端口，启动 Intent 才能正常工作。]]></string>
+    <string name="home_automation_button_view_intents">查看意图</string>
+    <string name="home_automation_dialog_label_action">行动</string>
+    <string name="home_automation_dialog_label_package">包裹</string>
+    <string name="home_automation_dialog_label_class">班级</string>
+    <string name="home_automation_dialog_label_target">目标</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">开发者指南</string>
     <string name="home_learn_more_description">了解如何使用 Shizuku 开发</string>
@@ -124,6 +131,7 @@
     <string name="settings_advanced">高级</string>
     <string name="settings_legacy_pairing">传统配对</string>
     <string name="settings_legacy_pairing_summary">请在对话框中输入配对码，而不是在通知中输入</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必须介于 1 和 65535 之间</string>
     <string name="snackbar_battery_optimization_home">要使 开机启动/watchdog 功能正常工作，必须禁用电池优化。</string>
@@ -143,6 +151,7 @@
     <string name="about_dialog_button_close">关闭</string>
     <string name="about_view_source_code"><![CDATA[在 %s 查看源码]]></string>
     <!-- Start -->
+    <string name="action_start">开始雫</string>
     <!-- Stop -->
     <string name="action_stop">停止 Shizuku</string>
     <string name="dialog_stop_message">Shizuku 服务将被停止。</string>
@@ -177,7 +186,6 @@
     <string name="wadb_notification_wifi_found">已找到Wi-Fi，正在继续</string>
     <string name="wadb_error_title">在系统启动时启动出现错误</string>
     <string name="wadb_error_notify_dev">点击通知开发者。</string>
-    <string name="wadb_error_send_email">发送电子邮件到</string>
     <string name="wadb_permission_error_notification_title">权限错误</string>
     <string name="wadb_permission_error_notification_content">Shizuku 需要 WRITE_SECURE_SETTINGS 权限才能开机启动。点击了解如何授予此权限。</string>
     <string name="wadb_notification_channel">ADB 自动启动服务</string>

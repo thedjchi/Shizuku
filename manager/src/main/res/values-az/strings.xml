@@ -71,6 +71,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[İcazə verilmiş proqramları idarə etmək üçün toxunun]]></string>
     <string name="home_app_management_empty">Shizuku icazəsini tələb edən və ya bəyan edən tətbiqlər burada göstəriləcək.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Avtomatlaşdırma proqramları ilə Shizuku-ya nəzarət edin</string>
+    <string name="home_automation_description"><![CDATA[Tasker və MacroDroid kimi proqramlar Shizuku-nu avtomatik başlatmaq/dayandırmaq niyyətlərini göndərə bilər.<p>Android 10 və ya daha aşağı versiyalarda root edilməmiş cihazlar işləmək üçün başlanğıc niyyəti üçün<font face="monospace"> %1$s </font>istifadə edərək kompüterdən TCP portunu açmalıdır.]]></string>
+    <string name="home_automation_button_view_intents">Niyyətlərə baxın</string>
+    <string name="home_automation_dialog_label_action">Fəaliyyət</string>
+    <string name="home_automation_dialog_label_package">Paket</string>
+    <string name="home_automation_dialog_label_class">Sinif</string>
+    <string name="home_automation_dialog_label_target">Hədəf</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Tərtibatçı təlimatı</string>
     <string name="home_learn_more_description">Necə Shizuku dəstəkli proqram hazırlaya biləcəyinizi öyrənin və ya Shizuku dəstəkli proqramları əldə edin</string>
@@ -125,6 +132,7 @@
     <string name="settings_advanced">İrəliləyişçilər</string>
     <string name="settings_legacy_pairing">İrs cütlüyü</string>
     <string name="settings_legacy_pairing_summary">Cütləşdirmə kodunu bildiriş əvəzinə dialoqda daxil edin</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port 1 ilə 65535 arasında olmalıdır</string>
     <string name="snackbar_battery_optimization_home">Start on boot/watchdog düzgün işləməsi üçün batareya optimizasiyası deaktiv edilməlidir.</string>
@@ -144,6 +152,7 @@
     <string name="about_dialog_button_close">Bağlan</string>
     <string name="about_view_source_code"><![CDATA[Qaynaq kodlarına buradan baxın %s]]></string>
     <!-- Start -->
+    <string name="action_start">Şizukuya başlayın</string>
     <!-- Stop -->
     <string name="action_stop">Shizikunu dayandır</string>
     <string name="dialog_stop_message">Shizuku xidməti dayandırılacaq.</string>
@@ -178,7 +187,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi tapıldı. Davam</string>
     <string name="wadb_error_title">Yükləmə zamanı xəta</string>
     <string name="wadb_error_notify_dev">İnkişafıçıya xəbər vermək üçün toxunun.</string>
-    <string name="wadb_error_send_email">E-poçt göndərin</string>
     <string name="wadb_permission_error_notification_title">İcazə xətası</string>
     <string name="wadb_permission_error_notification_content">Shizuku işə başlamaq üçün WRITE_SECURE_SETTINGS lazımdır. Onu necə vermək lazım olduğunu öyrənmək üçün toxun.</string>
     <string name="wadb_notification_channel">ADB avtomatik işə salma xidməti</string>
