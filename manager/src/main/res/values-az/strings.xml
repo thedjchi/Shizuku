@@ -133,6 +133,15 @@
     <string name="settings_legacy_pairing">İrs cütlüyü</string>
     <string name="settings_legacy_pairing_summary">Cütləşdirmə kodunu bildiriş əvəzinə dialoqda daxil edin</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Əvvəlcə aşağıdakıları edin:</string>
+    <string name="bug_report_dialog_update">Shizuku proqramının ən son versiyasından istifadə etdiyinizi yoxlayın.</string>
+    <string name="bug_report_dialog_button_update">Ən son buraxılışa baxın</string>
+    <string name="bug_report_dialog_wiki">Wiki-ni oxuyun və bütün müvafiq problemlərin həlli addımlarını izləyin.</string>
+    <string name="bug_report_dialog_button_wiki">Vikiyə baxın</string>
+    <string name="bug_report_dialog_issues">Səhvinizin/xüsusiyyətinizin artıq bildirilmiş olub olmadığını görmək üçün bütün mövcud problemləri axtarın.</string>
+    <string name="bug_report_dialog_button_issues">Məsələlərə baxın</string>
+    <string name="bug_report_dialog_method">Hesabınız varsa, GitHub-da problem göndərin.\n\nƏks halda, e-poçt göndərə bilərsiniz.</string>
+    <string name="bug_report_dialog_button_email">E-poçt göndər</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port 1 ilə 65535 arasında olmalıdır</string>
     <string name="snackbar_battery_optimization_home">Start on boot/watchdog düzgün işləməsi üçün batareya optimizasiyası deaktiv edilməlidir.</string>
