@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">லெகஸி இணைத்தல்</string>
     <string name="settings_legacy_pairing_summary">அறிவிப்புக்குப் பதிலாக உரையாடலில் இணைத்தல் குறியீட்டை உள்ளிடவும்.</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">முதலில், பின்வருவனவற்றைச் செய்யுங்கள்:</string>
+    <string name="bug_report_dialog_update">நீங்கள் ஷிசுகுவின் சமீபத்திய பதிப்பைப் பயன்படுத்துகிறீர்களா என்பதைச் சரிபார்க்கவும்.</string>
+    <string name="bug_report_dialog_button_update">சமீபத்திய வெளியீட்டைக் காண்க</string>
+    <string name="bug_report_dialog_wiki">விக்கியைப் படித்து, தொடர்புடைய அனைத்து சரிசெய்தல் படிகளையும் பின்பற்றவும்.</string>
+    <string name="bug_report_dialog_button_wiki">விக்கியைப் பார்க்கவும்</string>
+    <string name="bug_report_dialog_issues">உங்கள் பிழை/அம்சம் ஏற்கனவே புகாரளிக்கப்பட்டுள்ளதா என்பதைப் பார்க்க, ஏற்கனவே உள்ள அனைத்து சிக்கல்களையும் தேடுங்கள்.</string>
+    <string name="bug_report_dialog_button_issues">சிக்கல்களைக் காண்க</string>
+    <string name="bug_report_dialog_method">உங்களிடம் கணக்கு இருந்தால் GitHub இல் ஒரு சிக்கலைச் சமர்ப்பிக்கவும்.\n\nஇல்லையெனில், நீங்கள் ஒரு மின்னஞ்சலை அனுப்பலாம்.</string>
+    <string name="bug_report_dialog_button_email">மின்னஞ்சல் அனுப்பு</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">போர்ட் 1 மற்றும் 65535 க்கு இடையில் இருக்க வேண்டும்.</string>
     <string name="snackbar_battery_optimization_home">துவக்கத்தில்/வாட்ச்டாக்கில் ஸ்டார்ட் சரியாக வேலை செய்ய பேட்டரி ஆப்டிமைசேஷன் முடக்கப்பட்டிருக்க வேண்டும்.</string>
