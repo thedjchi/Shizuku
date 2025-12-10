@@ -136,6 +136,15 @@
     <string name="settings_legacy_pairing">레거시 페어링</string>
     <string name="settings_legacy_pairing_summary">알림 대신 대화 상자에 페어링 코드를 입력하세요.</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">먼저 다음 사항을 수행해 주십시오.</string>
+    <string name="bug_report_dialog_update">Shizuku의 최신 버전을 사용하고 있는지 확인하십시오.</string>
+    <string name="bug_report_dialog_button_update">최신 릴리스 보기</string>
+    <string name="bug_report_dialog_wiki">위키를 읽고 관련된 모든 문제 해결 단계를 따르십시오.</string>
+    <string name="bug_report_dialog_button_wiki">위키 보기</string>
+    <string name="bug_report_dialog_issues">기존 이슈들을 모두 검색하여 버그/기능이 이미 보고되었는지 확인하세요.</string>
+    <string name="bug_report_dialog_button_issues">문제 보기</string>
+    <string name="bug_report_dialog_method">GitHub 계정이 있으시면 GitHub에 이슈를 제출해 주세요.\n\n그렇지 않으면 이메일을 보내주세요.</string>
+    <string name="bug_report_dialog_button_email">이메일 보내기</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">포트는 1~65535 사이여야 합니다.</string>
     <string name="snackbar_battery_optimization_home">부팅/워치독 시작 시 배터리 최적화를 비활성화해야 제대로 작동합니다.</string>
