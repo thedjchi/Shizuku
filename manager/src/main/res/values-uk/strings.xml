@@ -139,6 +139,15 @@
     <string name="settings_legacy_pairing">Сполучення зі старими пристроями</string>
     <string name="settings_legacy_pairing_summary">Введіть код сполучення в діалоговому вікні, а не в сповіщенні</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Спочатку, будь ласка, виконайте наступне:</string>
+    <string name="bug_report_dialog_update">Перевірте, чи ви використовуєте останню версію Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Переглянути останній реліз</string>
+    <string name="bug_report_dialog_wiki">Прочитайте вікі-статус і виконайте всі відповідні кроки з усунення несправностей.</string>
+    <string name="bug_report_dialog_button_wiki">Переглянути вікі</string>
+    <string name="bug_report_dialog_issues">Перегляньте всі існуючі проблеми, щоб побачити, чи про вашу помилку/функцію вже повідомляли.</string>
+    <string name="bug_report_dialog_button_issues">Переглянути проблеми</string>
+    <string name="bug_report_dialog_method">Будь ласка, надішліть запит на проблему на GitHub, якщо у вас є обліковий запис.\n\nАбо ж ви можете надіслати електронного листа.</string>
+    <string name="bug_report_dialog_button_email">Надіслати електронного листа</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт має бути в діапазоні від 1 до 65535</string>
     <string name="snackbar_battery_optimization_home">Для коректної роботи запуску при завантаженні/сторожового таймера оптимізацію батареї необхідно вимкнути.</string>
