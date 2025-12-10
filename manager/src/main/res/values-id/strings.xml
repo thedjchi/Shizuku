@@ -136,6 +136,15 @@
     <string name="settings_legacy_pairing">Pasangan warisan</string>
     <string name="settings_legacy_pairing_summary">Masukkan kode pemasangan dalam dialog, bukan notifikasi</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Pertama, mohon lakukan hal berikut:</string>
+    <string name="bug_report_dialog_update">Pastikan Anda menggunakan versi Shizuku terbaru.</string>
+    <string name="bug_report_dialog_button_update">Lihat rilis terbaru</string>
+    <string name="bug_report_dialog_wiki">Bacalah wiki dan ikuti semua langkah pemecahan masalah yang relevan.</string>
+    <string name="bug_report_dialog_button_wiki">Lihat wiki</string>
+    <string name="bug_report_dialog_issues">Telusuri semua masalah yang ada untuk melihat apakah bug/fitur Anda sudah pernah dilaporkan.</string>
+    <string name="bug_report_dialog_button_issues">Lihat masalah</string>
+    <string name="bug_report_dialog_method">Silakan kirimkan masalah di GitHub jika Anda memiliki akun.\n\nJika tidak, Anda dapat mengirim email.</string>
+    <string name="bug_report_dialog_button_email">Kirim Email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port harus antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalisasi baterai harus dinonaktifkan agar dapat memulai saat boot/watchdog agar berfungsi dengan baik.</string>
