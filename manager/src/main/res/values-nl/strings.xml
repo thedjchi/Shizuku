@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tik om geautoriseerde apps te beheren]]></string>
     <string name="home_app_management_empty">Apps die de Shizuku-toestemming hebben aangevraagd of verklaard, worden hier weergegeven.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Bestuur Shizuku met automatiseringsapps</string>
+    <string name="home_automation_description"><![CDATA[Apps zoals Tasker en MacroDroid kunnen intenties verzenden om Shizuku automatisch te starten/stoppen.<p>Niet-geroote apparaten met Android 10 of lager moeten een TCP-poort openen vanaf een pc met behulp van<font face="monospace"> %1$s </font>om de startintentie te laten werken.]]></string>
+    <string name="home_automation_button_view_intents">Bekijk intenties</string>
+    <string name="home_automation_dialog_label_action">Actie</string>
+    <string name="home_automation_dialog_label_package">Pakket</string>
+    <string name="home_automation_dialog_label_class">Klas</string>
+    <string name="home_automation_dialog_label_target">Doel</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Ontwikkelaarsgids</string>
     <string name="home_learn_more_description">Leer hoe je je ontwikkelt met Shizuku</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">Geavanceerd</string>
     <string name="settings_legacy_pairing">Legacy-koppeling</string>
     <string name="settings_legacy_pairing_summary">Voer de koppelcode in een dialoogvenster in in plaats van een melding</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">De poort moet tussen 1 en 65535 liggen</string>
     <string name="snackbar_battery_optimization_home">Batterijoptimalisatie moet uitgeschakeld zijn om bij opstarten/watchdog goed te starten.</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">Sluiten</string>
     <string name="about_view_source_code"><![CDATA[Bekijk broncode op %s]]></string>
     <!-- Start -->
+    <string name="action_start">Begin met Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Stop Shizuku</string>
     <string name="dialog_stop_message">De dienst van Shizuku wordt stopgezet.</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">Wi-Fi gevonden. Procedure</string>
     <string name="wadb_error_title">Fout bij het opstarten bij het opstarten</string>
     <string name="wadb_error_notify_dev">Tik om de ontwikkelaar te informeren.</string>
-    <string name="wadb_error_send_email">Stuur een e-mail naar</string>
     <string name="wadb_permission_error_notification_title">Toestemmingsfout</string>
     <string name="wadb_permission_error_notification_content">Shizuku heeft WRITE_SECURE_SETTINGS nodig om bij opstart te beginnen. Tik om te leren hoe je het kunt toestaan.</string>
     <string name="wadb_notification_channel">ADB automatische start service</string>
