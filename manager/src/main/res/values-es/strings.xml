@@ -137,6 +137,15 @@
     <string name="settings_legacy_pairing">Emparejamiento heredado</string>
     <string name="settings_legacy_pairing_summary">Introduzca el código de emparejamiento en un cuadro de diálogo en lugar de una notificación</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Primero, haga lo siguiente:</string>
+    <string name="bug_report_dialog_update">Comprueba que estás utilizando la última versión de Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Ver el último lanzamiento</string>
+    <string name="bug_report_dialog_wiki">Lea la wiki y siga todos los pasos de solución de problemas relevantes.</string>
+    <string name="bug_report_dialog_button_wiki">Ver wiki</string>
+    <string name="bug_report_dialog_issues">Busque entre todos los problemas existentes para ver si su error o característica ya se ha informado.</string>
+    <string name="bug_report_dialog_button_issues">Ver problemas</string>
+    <string name="bug_report_dialog_method">Envíe un problema en GitHub si tiene una cuenta.\n\nDe lo contrario, puede enviar un correo electrónico.</string>
+    <string name="bug_report_dialog_button_email">Enviar correo electrónico</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">El puerto debe estar entre 1 y 65535</string>
     <string name="snackbar_battery_optimization_home">La optimización de la batería debe estar deshabilitada para que el inicio en el arranque/vigilancia funcione correctamente.</string>
