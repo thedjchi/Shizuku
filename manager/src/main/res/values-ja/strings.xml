@@ -136,6 +136,15 @@
     <string name="settings_legacy_pairing">レガシーペアリング</string>
     <string name="settings_legacy_pairing_summary">通知ではなくダイアログでペアリングコードを入力します</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">まず、次のことを行ってください。</string>
+    <string name="bug_report_dialog_update">Shizuku の最新バージョンを使用していることを確認してください。</string>
+    <string name="bug_report_dialog_button_update">最新リリースを見る</string>
+    <string name="bug_report_dialog_wiki">Wiki を読んで、関連するトラブルシューティング手順をすべて実行してください。</string>
+    <string name="bug_report_dialog_button_wiki">ウィキを見る</string>
+    <string name="bug_report_dialog_issues">既存のすべての問題を検索して、バグ/機能がすでに報告されているかどうかを確認します。</string>
+    <string name="bug_report_dialog_button_issues">問題を表示</string>
+    <string name="bug_report_dialog_method">アカウントをお持ちの場合は、GitHub で問題を送信してください。\n\nアカウントをお持ちでない場合は、メールを送信できます。</string>
+    <string name="bug_report_dialog_button_email">メールを送信</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">ポートは1～65535の範囲で指定する必要があります</string>
     <string name="snackbar_battery_optimization_home">起動/ウォッチドッグが正常に機能するには、バッテリー最適化を無効にする必要があります。</string>
