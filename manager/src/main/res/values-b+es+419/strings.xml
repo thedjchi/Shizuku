@@ -71,6 +71,7 @@
     <string name="settings_user_interface">Apariencia</string>
     <string name="settings_black_night_theme">Tema negro</string>
     <string name="settings_black_night_theme_summary">Use el tema negro puro si el modo nocturno está habilitado</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <!-- Toast -->
     <!-- Dark Mode Setting Override -->
