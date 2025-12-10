@@ -68,6 +68,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[برای مدیریت برنامه های مجاز ضربه بزنید]]></string>
     <string name="home_app_management_empty">برنامه‌هایی که درخواست مجوز Shizuku را داده‌اند یا آن را اعلام کرده‌اند، اینجا نمایش داده می‌شوند.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">کنترل شیزوکو با برنامه‌های اتوماسیون</string>
+    <string name="home_automation_description"><![CDATA[برنامه‌هایی مانند Tasker و MacroDroid می‌توانند برای شروع/توقف خودکار Shizuku، اینتنت ارسال کنند.<p>دستگاه‌های روت نشده با اندروید ۱۰ یا پایین‌تر باید یک پورت TCP را از یک کامپیوتر با استفاده از<font face="monospace"> %1$s </font>باز کنند تا اینتنت شروع کار کند.]]></string>
+    <string name="home_automation_button_view_intents">مشاهده اهداف</string>
+    <string name="home_automation_dialog_label_action">اکشن</string>
+    <string name="home_automation_dialog_label_package">بسته</string>
+    <string name="home_automation_dialog_label_class">کلاس</string>
+    <string name="home_automation_dialog_label_target">هدف</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">راهنمای توسعه‌دهنده</string>
     <string name="home_learn_more_description">یاد بگیرید که چگونه با Shizuku توسعه دهید</string>
@@ -122,6 +129,7 @@
     <string name="settings_advanced">پیشرفته</string>
     <string name="settings_legacy_pairing">جفت‌سازی قدیمی</string>
     <string name="settings_legacy_pairing_summary">کد جفت‌سازی را به جای اعلان، در یک کادر محاوره‌ای وارد کنید</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">پورت باید بین ۱ تا ۶۵۵۳۵ باشد</string>
     <string name="snackbar_battery_optimization_home">برای اینکه شروع به کار در هنگام بوت/واچ‌داگ به درستی انجام شود، باید بهینه‌سازی باتری غیرفعال باشد.</string>
@@ -141,6 +149,7 @@
     <string name="about_dialog_button_close">بستن</string>
     <string name="about_view_source_code"><![CDATA[کد منبع را در %s مشاهده کنید]]></string>
     <!-- Start -->
+    <string name="action_start">Shizuku را شروع کنید</string>
     <!-- Stop -->
     <string name="action_stop">توقف Shizuku</string>
     <string name="dialog_stop_message">خدمات Shizuku متوقف خواهد شد.</string>
@@ -175,7 +184,6 @@
     <string name="wadb_notification_wifi_found">وای‌فای پیدا شد. ادامه دارد</string>
     <string name="wadb_error_title">خطا هنگام شروع بوت</string>
     <string name="wadb_error_notify_dev">برای اطلاع به توسعه‌دهنده، ضربه بزنید.</string>
-    <string name="wadb_error_send_email">ارسال ایمیل به</string>
     <string name="wadb_permission_error_notification_title">خطای مجوز</string>
     <string name="wadb_permission_error_notification_content">شیزوکو برای شروع به کار در هنگام بوت شدن به WRITE_SECURE_SETTINGS نیاز دارد. برای یادگیری نحوه اعطای آن، روی ضربه بزنید.</string>
     <string name="wadb_notification_channel">سرویس شروع خودکار ADB</string>
