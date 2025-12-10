@@ -69,7 +69,7 @@
     <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of verklaar het, sal hier verskyn.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Beheer Shizuku met outomatiseringsprogramme</string>
-    <string name="home_automation_description"><![CDATA[Programme soos Tasker en MacroDroid kan voornemens stuur om Shizuku outomaties te begin/stop.<p>Ongewortelde toestelle op Android 10 of ouer moet 'n TCP-poort vanaf 'n rekenaar oopmaak deur<font face="monospace"> %1$s </font>te gebruik vir die beginvoorneme om te werk.]]></string>
+    <string name="home_automation_description"><![CDATA[Programme soos Tasker en MacroDroid kan voornemens stuur om Shizuku outomaties te begin/stop.<p>Ongewortelde toestelle op Android 10 of ouer moet \'n TCP-poort vanaf \'n rekenaar oopmaak deur<font face="monospace"> %1$s </font>te gebruik vir die beginvoorneme om te werk.]]></string>
     <string name="home_automation_button_view_intents">Bekyk voornemens</string>
     <string name="home_automation_dialog_label_action">Aksie</string>
     <string name="home_automation_dialog_label_package">Pakket</string>

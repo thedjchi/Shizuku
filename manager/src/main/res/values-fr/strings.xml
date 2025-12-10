@@ -69,7 +69,7 @@
     <string name="home_app_management_empty">Les applications qui ont demandé ou déclaré la permission de Shizuku apparaîtront ici.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Contrôlez Shizuku avec des applications d\'automatisation</string>
-    <string name="home_automation_description"><![CDATA[Des applications comme Tasker et MacroDroid peuvent envoyer des intentions pour démarrer/arrêter Shizuku automatiquement.<p>Les appareils non rootés sous Android 10 ou version antérieure doivent ouvrir un port TCP depuis un PC à l'aide de<font face="monospace"> %1$s </font>pour que l'intention de démarrage fonctionne.]]></string>
+    <string name="home_automation_description"><![CDATA[Des applications comme Tasker et MacroDroid peuvent envoyer des intentions pour démarrer/arrêter Shizuku automatiquement.<p>Les appareils non rootés sous Android 10 ou version antérieure doivent ouvrir un port TCP depuis un PC à l\'aide de<font face="monospace"> %1$s </font>pour que l\'intention de démarrage fonctionne.]]></string>
     <string name="home_automation_button_view_intents">Afficher les intentions</string>
     <string name="home_automation_dialog_label_action">Action</string>
     <string name="home_automation_dialog_label_package">Emballer</string>
