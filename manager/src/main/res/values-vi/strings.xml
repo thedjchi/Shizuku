@@ -70,6 +70,13 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Nhấn để quản lý các ứng dụng được ủy quyền]]></string>
     <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo quyền Shizuku sẽ hiển thị ở đây.</string>
     <!-- Home - Automation -->
+    <string name="home_automation_title">Kiểm soát Shizuku bằng ứng dụng tự động hóa</string>
+    <string name="home_automation_description"><![CDATA[Các ứng dụng như Tasker và MacroDroid có thể gửi ý định để tự động khởi động/dừng Shizuku.<p>Các thiết bị chưa root chạy Android 10 trở xuống phải mở cổng TCP từ PC bằng<font face="monospace"> %1$s </font>để ý định khởi động hoạt động.]]></string>
+    <string name="home_automation_button_view_intents">Xem ý định</string>
+    <string name="home_automation_dialog_label_action">Hoạt động</string>
+    <string name="home_automation_dialog_label_package">Bưu kiện</string>
+    <string name="home_automation_dialog_label_class">Lớp học</string>
+    <string name="home_automation_dialog_label_target">Mục tiêu</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Hướng dẫn dành cho nhà phát triển</string>
     <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng dụng bằng Shizuku</string>
@@ -124,6 +131,7 @@
     <string name="settings_advanced">Trình độ cao</string>
     <string name="settings_legacy_pairing">Cặp đôi di sản</string>
     <string name="settings_legacy_pairing_summary">Nhập mã ghép nối vào hộp thoại thay vì thông báo</string>
+    <!-- Bug Report Dialog -->
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Cổng phải nằm trong khoảng từ 1 đến 65535</string>
     <string name="snackbar_battery_optimization_home">Phải tắt tính năng tối ưu hóa pin để khởi động khi khởi động/theo dõi hoạt động bình thường.</string>
@@ -143,6 +151,7 @@
     <string name="about_dialog_button_close">Đóng</string>
     <string name="about_view_source_code"><![CDATA[Xem mã nguồn tại %s]]></string>
     <!-- Start -->
+    <string name="action_start">Bắt đầu Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">Dừng Shizuku</string>
     <string name="dialog_stop_message">Dịch vụ Shizuku sẽ ngừng hoạt động.</string>
@@ -177,7 +186,6 @@
     <string name="wadb_notification_wifi_found">Tìm thấy Wi-Fi. Tiếp tục</string>
     <string name="wadb_error_title">Lỗi khi khởi động</string>
     <string name="wadb_error_notify_dev">Nhấn để thông báo cho nhà phát triển.</string>
-    <string name="wadb_error_send_email">Gửi email đến</string>
     <string name="wadb_permission_error_notification_title">Lỗi quyền</string>
     <string name="wadb_permission_error_notification_content">Shizuku cần WRITE_SECURE_SETTINGS để bắt đầu khởi động. Nhấn để tìm hiểu cách cấp nó.</string>
     <string name="wadb_notification_channel">Dịch vụ tự động khởi động ADB</string>
