@@ -137,6 +137,15 @@
     <string name="settings_legacy_pairing">Abbinamento legacy</string>
     <string name="settings_legacy_pairing_summary">Inserisci il codice di associazione in una finestra di dialogo anziché in una notifica</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Per prima cosa, procedi come segue:</string>
+    <string name="bug_report_dialog_update">Verifica di utilizzare la versione più recente di Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Visualizza l\'ultima versione</string>
+    <string name="bug_report_dialog_wiki">Leggi il wiki e segui tutti i passaggi rilevanti per la risoluzione dei problemi.</string>
+    <string name="bug_report_dialog_button_wiki">Visualizza wiki</string>
+    <string name="bug_report_dialog_issues">Cerca tra tutti i problemi esistenti per vedere se il tuo bug/la tua funzionalità è già stata segnalata.</string>
+    <string name="bug_report_dialog_button_issues">Visualizza i problemi</string>
+    <string name="bug_report_dialog_method">Segnala un problema su GitHub se hai un account.\n\nAltrimenti, puoi inviare un\'e-mail.</string>
+    <string name="bug_report_dialog_button_email">Invia email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">La porta deve essere compresa tra 1 e 65535</string>
     <string name="snackbar_battery_optimization_home">Per far sì che l\'avvio all\'avvio/watchdog funzioni correttamente, è necessario disattivare l\'ottimizzazione della batteria.</string>
