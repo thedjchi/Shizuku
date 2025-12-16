@@ -136,7 +136,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
         } catch (e: CancellationException) {
             return Result.failure()
         } catch (e: Exception) {
-            if (e !is EOFException) showErrorNotification(applicationContext, e)
+            if (e !is EOFException && e !is SecurityException) showErrorNotification(applicationContext, e)
 
             if (ShizukuStateMachine.update() == ShizukuStateMachine.State.RUNNING) {
                 return Result.success()
