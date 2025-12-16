@@ -24,12 +24,12 @@ object SettingsHelper {
 
     fun requestIgnoreBatteryOptimizations(context: Context, launcher: ActivityResultLauncher<Intent>? = null) {
         val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
-            setData(Uri.parse("package:" + context.getPackageName()));
+            setData(Uri.parse("package:" + context.packageName))
         }
         if (launcher != null) {
-            launcher.launch(intent);
+            launcher.launch(intent)
         } else {
-            context.startActivity(intent);
+            context.startActivity(intent)
         }
     }
 
