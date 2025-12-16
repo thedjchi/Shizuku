@@ -134,6 +134,15 @@
     <string name="settings_legacy_pairing">Appariement héritier</string>
     <string name="settings_legacy_pairing_summary">Saisissez le code d’appairement dans une boîte de dialogue au lieu d’une notification</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Veuillez tout d\'abord procéder comme suit :</string>
+    <string name="bug_report_dialog_update">Vérifiez que vous utilisez bien la dernière version de Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Voir la dernière version</string>
+    <string name="bug_report_dialog_wiki">Consultez le wiki et suivez toutes les étapes de dépannage pertinentes.</string>
+    <string name="bug_report_dialog_button_wiki">Voir le wiki</string>
+    <string name="bug_report_dialog_issues">Parcourez tous les problèmes existants pour voir si votre bug/fonctionnalité a déjà été signalé.</string>
+    <string name="bug_report_dialog_button_issues">Afficher les problèmes</string>
+    <string name="bug_report_dialog_method">Veuillez signaler le problème sur GitHub si vous avez un compte.\n\nSinon, vous pouvez envoyer un e-mail.</string>
+    <string name="bug_report_dialog_button_email">Envoyer un courriel</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Le port doit être compris entre 1 et 65535</string>
     <string name="snackbar_battery_optimization_home">L’optimisation de la batterie doit être désactivée pour que le démarrage au démarrage/watchdog fonctionne correctement.</string>
