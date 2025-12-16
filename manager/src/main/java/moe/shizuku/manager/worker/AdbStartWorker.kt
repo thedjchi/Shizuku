@@ -126,7 +126,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                 }
             }.first()
             
-            AdbStarter.startAdb(applicationContext, port, forceRetry = true)
+            AdbStarter.startAdb(applicationContext, port)
             Starter.waitForBinder()
 
             val nm = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

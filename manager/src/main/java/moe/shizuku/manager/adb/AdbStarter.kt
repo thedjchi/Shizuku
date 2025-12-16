@@ -7,6 +7,7 @@ import android.provider.Settings
 import android.widget.Toast
 import java.io.EOFException
 import java.net.SocketException
+import java.net.SocketTimeoutException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -21,7 +22,7 @@ import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
 
 object AdbStarter {
-    suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null, forceRetry: Boolean = false) {
+    suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
         suspend fun AdbClient.runCommand(cmd: String) {
             command(cmd) { log?.invoke(String(it)) }
         }
@@ -37,7 +38,6 @@ object AdbStarter {
                         else throw AdbKeyException(it)
                     }
 
-                var retry = if (forceRetry) true else false
                 var activePort = port
                 val tcpMode = ShizukuSettings.getTcpMode()
                 val tcpPort = ShizukuSettings.getTcpPort()
@@ -55,23 +55,24 @@ object AdbStarter {
                             client.command("tcpip:$activePort")
                         }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts in TCP mode
                     }
-                    retry = true
                 }
         
                 log?.invoke("Connecting on port $activePort...")
 
                 AdbClient("127.0.0.1", activePort, key).use { client ->
                     var delayTime = 0L
-                    val maxAttempts = if (retry) 5 else 1
+                    val maxAttempts = 5
                     for (attempt in 1..maxAttempts) {
                         try {
                             delay(delayTime)
                             client.connect()
                             break
                         } catch (e: Exception) {
-                            if (attempt == maxAttempts || e is CancellationException) {
-                                throw e
-                            }
+                            if (
+                                attempt == maxAttempts ||
+                                e is CancellationException ||
+                                e is SocketTimeoutException
+                            ) throw e
                             delayTime += 1000
                         }
                     }
