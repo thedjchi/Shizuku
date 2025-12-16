@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">Pärandpaar</string>
     <string name="settings_legacy_pairing_summary">Sisesta paarituskood dialoogis, mitte teavituses</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Esmalt tehke järgmist.</string>
+    <string name="bug_report_dialog_update">Kontrollige, et kasutate Shizuku uusimat versiooni.</string>
+    <string name="bug_report_dialog_button_update">Vaata viimast versiooni</string>
+    <string name="bug_report_dialog_wiki">Loe wikit ja järgi kõiki asjakohaseid tõrkeotsingu samme.</string>
+    <string name="bug_report_dialog_button_wiki">Vaata wikit</string>
+    <string name="bug_report_dialog_issues">Otsi läbi kõik olemasolevad probleemid, et näha, kas sinu veast/funktsioonist on juba teatatud.</string>
+    <string name="bug_report_dialog_button_issues">Kuva probleemid</string>
+    <string name="bug_report_dialog_method">Kui sul on GitHubis konto, siis palun esita probleem.\n\nVastasel juhul võid saata e-kirja.</string>
+    <string name="bug_report_dialog_button_email">Saada e-kiri</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port peab olema vahemikus 1 kuni 65535</string>
     <string name="snackbar_battery_optimization_home">Aku optimeerimine peab olema välja lülitatud, et käivitamine või valvekoer korralikult töötaks.</string>
