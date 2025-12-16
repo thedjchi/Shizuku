@@ -8,6 +8,7 @@ android {
     defaultConfig {
         versionCode = rootProject.ext.versionCode
         versionName = rootProject.ext.versionName
+        buildConfigField "String", "MANAGER_APPLICATION_ID", "\"${project(':manager').android.defaultConfig.applicationId}\""
     }
     buildTypes {
         debug {
