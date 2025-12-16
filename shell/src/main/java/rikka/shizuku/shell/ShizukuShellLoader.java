@@ -49,12 +49,17 @@ public class ShizukuShellLoader {
         }
     };
 
-    private static void requestForBinder() throws RemoteException {
+    private static void requestForBinder() throws Exception {
         Bundle data = new Bundle();
         data.putBinder("binder", receiverBinder);
 
+        String managerApplicationId = System.getenv("MANAGER_APPLICATION_ID");
+        if (TextUtils.isEmpty(managerApplicationId) || "MANAGER_PKG".equals(managerApplicationId)) {
+            managerApplicationId = BuildConfig.MANAGER_APPLICATION_ID;
+        }
+
         Intent intent = new Intent("rikka.shizuku.intent.action.REQUEST_BINDER")
-                .setPackage("moe.shizuku.privileged.api")
+                .setClassName(managerApplicationId, "moe.shizuku.manager.receiver.BinderRequestReceiver")
                 .addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
                 .putExtra("data", data);
 
@@ -105,6 +110,7 @@ public class ShizukuShellLoader {
         }
 
         try {
+            System.out.println("Entering shell...");
             var classLoader = new BaseDexClassLoader(sourceDir, null, librarySearchPath, ClassLoader.getSystemClassLoader());
             Class<?> cls = classLoader.loadClass("moe.shizuku.manager.shell.Shell");
             cls.getDeclaredMethod("main", String[].class, String.class, IBinder.class, Handler.class)
@@ -131,7 +137,7 @@ public class ShizukuShellLoader {
         } else {
             packageName = System.getenv("RISH_APPLICATION_ID");
             if (TextUtils.isEmpty(packageName) || "PKG".equals(packageName)) {
-                abort("RISH_APPLICATION_ID is not set, set this environment variable to the id of current application (package name)");
+                abort("RISH_APPLICATION_ID is not set, please set this environment variable in rish to the package name of the terminal app");
                 System.exit(1);
             }
         }
@@ -154,8 +160,10 @@ public class ShizukuShellLoader {
 
         handler.postDelayed(() -> abort(
                 String.format(
-                        "Request timeout. The connection between the current app (%1$s) and Shizuku app may be blocked by your system. " +
-                                "Please disable all battery optimization features for both current app (%1$s) and Shizuku app.",
+                        "Request timeout. " +
+                        "MANAGER_APPLICATION_ID may not be correct, please set this environment variable in rish to the package name of Shizuku.\n" +
+                        "Otherwise, the connection between the current app (%1$s) and Shizuku app may be blocked by your system. " +
+                        "Please disable all battery optimization features for both current app (%1$s) and Shizuku app.",
                         packageName)
         ), 5000);
 
