@@ -129,6 +129,15 @@
     <string name="settings_legacy_pairing">Gandingan warisan</string>
     <string name="settings_legacy_pairing_summary">Masukkan kod gandingan dalam dialog dan bukannya pemberitahuan</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Pertama, sila lakukan perkara berikut:</string>
+    <string name="bug_report_dialog_update">Semak sama ada anda menggunakan versi terkini Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Lihat keluaran terkini</string>
+    <string name="bug_report_dialog_wiki">Baca wiki dan ikuti semua langkah penyelesaian masalah yang berkaitan.</string>
+    <string name="bug_report_dialog_button_wiki">Lihat wiki</string>
+    <string name="bug_report_dialog_issues">Cari semua isu sedia ada untuk melihat sama ada pepijat/ciri anda telah dilaporkan.</string>
+    <string name="bug_report_dialog_button_issues">Lihat isu</string>
+    <string name="bug_report_dialog_method">Sila serahkan isu di GitHub jika anda mempunyai akaun.\n\nJika tidak, anda boleh menghantar e-mel.</string>
+    <string name="bug_report_dialog_button_email">Hantar E-mel</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pelabuhan mestilah antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Pengoptimuman bateri mesti dilumpuhkan untuk permulaan pada but/pemantau untuk berfungsi dengan baik.</string>
