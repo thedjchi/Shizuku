@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">მემკვიდრეობის დაწყვილება</string>
     <string name="settings_legacy_pairing_summary">შეიყვანეთ დაწყვილების კოდი დიალოგში შეტყობინების ნაცვლად</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">პირველ რიგში, გთხოვთ, გააკეთოთ შემდეგი:</string>
+    <string name="bug_report_dialog_update">შეამოწმეთ, რომ იყენებთ Shizuku-ს უახლეს ვერსიას.</string>
+    <string name="bug_report_dialog_button_update">უახლესი გამოშვების ნახვა</string>
+    <string name="bug_report_dialog_wiki">წაიკითხეთ ვიკი და მიჰყევით პრობლემების მოგვარების ყველა შესაბამის ნაბიჯს.</string>
+    <string name="bug_report_dialog_button_wiki">ვიკის ნახვა</string>
+    <string name="bug_report_dialog_issues">გადახედეთ ყველა არსებულ პრობლემას, რათა ნახოთ, უკვე შეტყობინებულია თუ არა თქვენი შეცდომა/ფუნქცია.</string>
+    <string name="bug_report_dialog_button_issues">პრობლემების ნახვა</string>
+    <string name="bug_report_dialog_method">თუ ანგარიში გაქვთ, გთხოვთ, პრობლემა GitHub-ზე წარმოადგინოთ.\n\nწინააღმდეგ შემთხვევაში, შეგიძლიათ ელ. ფოსტის გაგზავნა.</string>
+    <string name="bug_report_dialog_button_email">ელფოსტის გაგზავნა</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">პორტი უნდა იყოს 1-დან 65535-მდე</string>
     <string name="snackbar_battery_optimization_home">ბატარეის ოპტიმიზაცია უნდა გამორთული იყოს ჩატვირთვის / მაკონტროლებლის დასაწყებად გამართულად მუშაობისთვის.</string>
