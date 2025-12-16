@@ -137,6 +137,15 @@
     <string name="settings_legacy_pairing">Miras eşleştirmesi</string>
     <string name="settings_legacy_pairing_summary">Eşleştirme kodunu bildirim yerine bir iletişim kutusuna girin</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Öncelikle lütfen aşağıdakileri yapın:</string>
+    <string name="bug_report_dialog_update">Shizuku\'nun en son sürümünü kullandığınızdan emin olun.</string>
+    <string name="bug_report_dialog_button_update">En son sürümü görüntüle</string>
+    <string name="bug_report_dialog_wiki">Vikiyi okuyun ve ilgili tüm sorun giderme adımlarını izleyin.</string>
+    <string name="bug_report_dialog_button_wiki">Vikiyi görüntüle</string>
+    <string name="bug_report_dialog_issues">Mevcut tüm sorunları inceleyerek, hatanızın/özelliğinizin daha önce bildirilip bildirilmediğini kontrol edin.</string>
+    <string name="bug_report_dialog_button_issues">Sorunları görüntüle</string>
+    <string name="bug_report_dialog_method">Hesabınız varsa lütfen GitHub\'da bir sorun gönderin.\n\nAksi takdirde e-posta gönderebilirsiniz.</string>
+    <string name="bug_report_dialog_button_email">E-posta gönder</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Bağlantı noktası 1 ile 65535 arasında olmalıdır</string>
     <string name="snackbar_battery_optimization_home">Önyükleme/bekçi köpeği sırasında başlatmanın düzgün çalışması için pil optimizasyonunun devre dışı bırakılması gerekir.</string>
