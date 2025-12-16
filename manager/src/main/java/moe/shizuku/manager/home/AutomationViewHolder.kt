@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.R
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeAutomationBinding
@@ -41,13 +42,13 @@ class AutomationViewHolder(binding: HomeAutomationBinding, root: View) : BaseVie
                 .setTitle(R.string.home_automation_button_view_intents)
                 .setMessage(HtmlCompat.fromHtml("""
                     <h4>$startLabel</h4>
-                    <b>$actionLabel:</b> ${context.packageName}.START<br>
+                    <b>$actionLabel:</b> ${BuildConfig.APPLICATION_ID}.START<br>
                     <b>$packageLabel:</b> ${context.packageName}<br>
                     <b>$classLabel:</b> ${ManualStartReceiver::class.java.name}<br>
                     <b>$targetLabel:</b> Broadcast Receiver<br><br>
 
                     <h4>$stopLabel</h4>
-                    <b>$actionLabel:</b> ${context.packageName}.STOP<br>
+                    <b>$actionLabel:</b> ${BuildConfig.APPLICATION_ID}.STOP<br>
                     <b>$packageLabel:</b> ${context.packageName}<br>
                     <b>$classLabel:</b> ${ManualStopReceiver::class.java.name}<br>
                     <b>$targetLabel:</b> Broadcast Receiver<br>
