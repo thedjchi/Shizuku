@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">Régi párosítás</string>
     <string name="settings_legacy_pairing_summary">A párosítási kódot egy párbeszédpanelen, ne pedig egy értesítésben add meg</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Először is, kérjük, tegye a következőket:</string>
+    <string name="bug_report_dialog_update">Ellenőrizd, hogy a Shizuku legújabb verzióját használod-e.</string>
+    <string name="bug_report_dialog_button_update">Legújabb kiadás megtekintése</string>
+    <string name="bug_report_dialog_wiki">Olvasd el a wikit, és kövesd az összes vonatkozó hibaelhárítási lépést.</string>
+    <string name="bug_report_dialog_button_wiki">Wiki megtekintése</string>
+    <string name="bug_report_dialog_issues">Keresd át az összes létező problémát, hogy lásd, jelentették-e már a hibádat/funkciódat.</string>
+    <string name="bug_report_dialog_button_issues">Problémák megtekintése</string>
+    <string name="bug_report_dialog_method">Kérjük, küldj egy problémát a GitHubon, ha van fiókod.\n\nEgyébként küldhetsz egy e-mailt is.</string>
+    <string name="bug_report_dialog_button_email">E-mail küldése</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A portszámnak 1 és 65535 között kell lennie.</string>
     <string name="snackbar_battery_optimization_home">A rendszerindításkor/watchdogkor történő indítás megfelelő működéséhez le kell tiltani az akkumulátoroptimalizálást.</string>
