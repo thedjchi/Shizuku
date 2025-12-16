@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">Legacy-parring</string>
     <string name="settings_legacy_pairing_summary">Indtast parringskoden i en dialog i stedet for en notifikation</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Først skal du gøre følgende:</string>
+    <string name="bug_report_dialog_update">Kontroller, at du bruger den nyeste version af Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Se den seneste udgivelse</string>
+    <string name="bug_report_dialog_wiki">Læs wikien og følg alle relevante fejlfindingstrin.</string>
+    <string name="bug_report_dialog_button_wiki">Se wikien</string>
+    <string name="bug_report_dialog_issues">Søg gennem alle eksisterende problemer for at se, om din fejl/funktion allerede er blevet rapporteret.</string>
+    <string name="bug_report_dialog_button_issues">Se problemer</string>
+    <string name="bug_report_dialog_method">Indsend venligst et problem på GitHub, hvis du har en konto.\n\nEllers kan du sende en e-mail.</string>
+    <string name="bug_report_dialog_button_email">Send e-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Porten skal være mellem 1 og 65535</string>
     <string name="snackbar_battery_optimization_home">Batterioptimering skal være deaktiveret for at starte op ved opstart/watchdog for at fungere korrekt.</string>
