@@ -174,6 +174,8 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                         val applyChange: () -> Unit = {
                             ShizukuSettings.setTcpMode(newValue)
                             isChecked = newValue
+                            isEnabled = true
+                            summary = context.getString(R.string.settings_tcp_mode_summary)
                             icon = maybeGetRestartIcon(KEY_TCP_MODE)
                             tcpPortPreference.isVisible = newValue
                         }
@@ -378,9 +380,13 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         val context = requireContext()
         MaterialAlertDialogBuilder(context)
             .setTitle(android.R.string.dialog_alert_title)
-            .setMessage("The TCP port will be closed immediately. You will need Wi-Fi to turn on TCP mode again. Continue?")
+            .setMessage(context.getString(R.string.settings_tcp_mode_dialog_close_port))
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 lifecycleScope.launch {
+                    tcpModePreference.apply {
+                        isEnabled = false
+                        summary = context.getString(R.string.settings_tcp_mode_closing_port)
+                    }
                     AdbStarter.stopTcp(context, EnvironmentUtils.getAdbTcpPort())
                     if (EnvironmentUtils.getAdbTcpPort() <= 0) applyChange()
                 }

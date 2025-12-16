@@ -60,24 +60,8 @@ object AdbStarter {
                 log?.invoke("Connecting on port $activePort...")
 
                 AdbClient("127.0.0.1", activePort, key).use { client ->
-                    var delayTime = 0L
-                    val maxAttempts = 5
-                    for (attempt in 1..maxAttempts) {
-                        try {
-                            delay(delayTime)
-                            client.connect()
-                            break
-                        } catch (e: Exception) {
-                            if (
-                                attempt == maxAttempts ||
-                                e is CancellationException ||
-                                e is SocketTimeoutException
-                            ) throw e
-                            delayTime += 1000
-                        }
-                    }
+                    connectWithRetry(client)
                     log?.invoke("Successfully connected on port $activePort...\n")
-            
                     client.runCommand("shell:${Starter.internalCommand}")
                 }
             }
@@ -89,11 +73,20 @@ object AdbStarter {
 
     suspend fun stopTcp(context: Context, port: Int) {
         runCatching {
+            val cr = context.contentResolver
+            if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
+                Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
+                Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
+            }
+        
+            val adbEnabled = Settings.Global.getInt(cr, Settings.Global.ADB_ENABLED, 0)
+            if (adbEnabled == 0) throw IllegalStateException("ADB is not enabled")
+
             ShizukuStateMachine.set(ShizukuStateMachine.State.STOPPING)
             val key = AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
             withContext(Dispatchers.IO) {
                 AdbClient("127.0.0.1", port, key).use { client ->
-                    client.connect()
+                    connectWithRetry(client)
                     client.command("usb:")
                 }
             }
@@ -101,9 +94,32 @@ object AdbStarter {
             if (EnvironmentUtils.getAdbTcpPort() > 0) {
                 ShizukuStateMachine.update()
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp), Toast.LENGTH_SHORT)
+                    val errorMsg = when (it) {
+                        is AdbKeyException -> context.getString(R.string.adb_error_key_store)
+                        else -> it.message
+                    }
+                    Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp) + ". ${errorMsg}", Toast.LENGTH_LONG)
                         .show()
                 }
+            }
+        }
+    }
+
+    private suspend fun connectWithRetry(client: AdbClient) {
+        var delayTime = 0L
+        val maxAttempts = 5
+        for (attempt in 1..maxAttempts) {
+            try {
+                delay(delayTime)
+                client.connect()
+                break
+            } catch (e: Exception) {
+                if (
+                    attempt == maxAttempts ||
+                    e is CancellationException ||
+                    e is SocketTimeoutException
+                ) throw e
+                delayTime += 1000
             }
         }
     }
