@@ -132,6 +132,15 @@
     <string name="settings_legacy_pairing">传统配对</string>
     <string name="settings_legacy_pairing_summary">请在对话框中输入配对码，而不是在通知中输入</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">首先，请执行以下操作：</string>
+    <string name="bug_report_dialog_update">请确认您使用的是最新版本的Shizuku。</string>
+    <string name="bug_report_dialog_button_update">查看最新版本</string>
+    <string name="bug_report_dialog_wiki">请阅读维基百科并按照所有相关的故障排除步骤进行操作。</string>
+    <string name="bug_report_dialog_button_wiki">查看维基百科</string>
+    <string name="bug_report_dialog_issues">搜索所有现有问题，看看你的错误/功能是否已被报告过。</string>
+    <string name="bug_report_dialog_button_issues">查看问题</string>
+    <string name="bug_report_dialog_method">如果您有 GitHub 帐户，请在 GitHub 上提交问题。\n\n否则，您可以发送电子邮件。</string>
+    <string name="bug_report_dialog_button_email">发送电子邮件</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必须介于 1 和 65535 之间</string>
     <string name="snackbar_battery_optimization_home">要使 开机启动/watchdog 功能正常工作，必须禁用电池优化。</string>
