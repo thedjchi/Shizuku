@@ -130,6 +130,15 @@
     <string name="settings_legacy_pairing">Perintöpari</string>
     <string name="settings_legacy_pairing_summary">Syötä parituskoodi dialogiin ilmoituksen sijaan</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Tee ensin seuraavat toimenpiteet:</string>
+    <string name="bug_report_dialog_update">Tarkista, että käytät Shizukun uusinta versiota.</string>
+    <string name="bug_report_dialog_button_update">Näytä uusin julkaisu</string>
+    <string name="bug_report_dialog_wiki">Lue wiki ja noudata kaikkia asiaankuuluvia vianmääritysohjeita.</string>
+    <string name="bug_report_dialog_button_wiki">Näytä wiki</string>
+    <string name="bug_report_dialog_issues">Hae läpi kaikki olemassa olevat ongelmat nähdäksesi, onko bugistasi/ominaisuudestasi jo ilmoitettu.</string>
+    <string name="bug_report_dialog_button_issues">Näytä ongelmat</string>
+    <string name="bug_report_dialog_method">Lähetä ongelma GitHubissa, jos sinulla on tili.\n\nMuussa tapauksessa voit lähettää sähköpostia.</string>
+    <string name="bug_report_dialog_button_email">Lähetä sähköpostia</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portin tulee olla välillä 1–65535</string>
     <string name="snackbar_battery_optimization_home">Akun optimointi täytyy olla pois päältä, jotta käynnistys käynnistyksellä/watchdogilla toimisi kunnolla.</string>
