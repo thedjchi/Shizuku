@@ -133,6 +133,15 @@
     <string name="settings_legacy_pairing">Ժառանգական զուգավորում</string>
     <string name="settings_legacy_pairing_summary">Մուտքագրեք զուգավորման կոդը երկխոսության մեջ ծանուցման փոխարեն</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Նախ, խնդրում ենք անել հետևյալը.</string>
+    <string name="bug_report_dialog_update">Ստուգեք, որ օգտագործում եք Shizuku-ի վերջին տարբերակը։</string>
+    <string name="bug_report_dialog_button_update">Դիտել վերջին թողարկումը</string>
+    <string name="bug_report_dialog_wiki">Կարդացե՛ք վիքի-ն և հետևե՛ք խնդիրների լուծման բոլոր համապատասխան քայլերին։</string>
+    <string name="bug_report_dialog_button_wiki">Դիտել վիքի</string>
+    <string name="bug_report_dialog_issues">Որոնեք բոլոր առկա խնդիրները՝ տեսնելու համար, թե արդյոք ձեր սխալի/գործառույթի մասին արդեն հաղորդվել է։</string>
+    <string name="bug_report_dialog_button_issues">Դիտել խնդիրները</string>
+    <string name="bug_report_dialog_method">Եթե ունեք հաշիվ, խնդրում ենք ներկայացնել ձեր խնդիրը GitHub-ում։\n\nՀակառակ դեպքում կարող եք ուղարկել էլ. նամակ։</string>
+    <string name="bug_report_dialog_button_email">Ուղարկել էլ. փոստ</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Նավահանգիստը պետք է լինի միջեւ 1 եւ 65535</string>
     <string name="snackbar_battery_optimization_home">Մարտկոցի օպտիմալացումը պետք է անջատված լինի, որպեսզի boot/watchdog-ը ճիշտ աշխատի:</string>
