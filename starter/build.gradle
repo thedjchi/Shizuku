@@ -6,7 +6,10 @@ plugins {
 android {
     namespace = "rikka.shizuku.starter"
     buildFeatures {
-        buildConfig = false
+        buildConfig = true
+    }
+    defaultConfig {
+        buildConfigField "String", "MANAGER_APPLICATION_ID", "\"${project(':manager').android.defaultConfig.applicationId}\""
     }
 }
 
