@@ -15,6 +15,7 @@ import moe.shizuku.api.BinderContainer;
 import moe.shizuku.starter.util.IContentProviderCompat;
 import rikka.hidden.compat.ActivityManagerApis;
 import rikka.shizuku.ShizukuApiConstants;
+import rikka.shizuku.starter.BuildConfig;
 import rikka.shizuku.server.UserService;
 
 public class ServiceStarter {
@@ -58,7 +59,7 @@ public class ServiceStarter {
                 managerPackageName, token, packageName, classname, callingUid, debug ? (" " + "--debug-name=" + processName) : "");
     }
 
-    private static String managerPackageName = null;
+    private static String managerPackageName = BuildConfig.MANAGER_APPLICATION_ID;
 
     public static void main(String[] args) {
         if (Looper.getMainLooper() == null) {
