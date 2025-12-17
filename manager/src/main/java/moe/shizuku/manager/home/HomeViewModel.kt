@@ -14,6 +14,7 @@ import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.Manifest
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.model.ServiceStatus
+import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.Logger.LOGGER
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
@@ -21,13 +22,15 @@ import moe.shizuku.manager.utils.ShizukuSystemApis
 import rikka.lifecycle.Resource
 import rikka.shizuku.Shizuku
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel(application: Application) : ViewModel() {
+
+    private val appContext: Context = application.applicationContext
 
     private val _serviceStatus = MutableLiveData<Resource<ServiceStatus>>()
     val serviceStatus = _serviceStatus as LiveData<Resource<ServiceStatus>>
 
-    private val _showBatteryOptimizationSnackbar = MutableLiveData<Boolean>(false)
-    val showBatteryOptimizationSnackbar: LiveData<Boolean> = _showBatteryOptimizationSnackbar
+    private val _shouldShowBatteryOptimizationSnackbar = MutableLiveData<Boolean>(false)
+    val shouldShowBatteryOptimizationSnackbar: LiveData<Boolean> = _shouldShowBatteryOptimizationSnackbar
 
 
     private fun load(): ServiceStatus {
@@ -68,16 +71,12 @@ class HomeViewModel : ViewModel() {
         }
     }
 
-    fun checkBatteryOptimization(context: Context) {
-        viewModelScope.launch(Dispatchers.Default) {
-            if (!ShizukuSettings.getStartOnBoot(context) && !ShizukuSettings.getWatchdog()) return@launch
-            _showBatteryOptimizationSnackbar.postValue(
-                !SettingsHelper.isIgnoringBatteryOptimizations(context)
-            )
-        }
-    }
-    fun batteryOptimizationHandled() {
-        _showBatteryOptimizationSnackbar.value = false
+    fun checkBatteryOptimization() {
+        if (EnvironmentUtils.isTelevision()) return
+        if (!ShizukuSettings.getStartOnBoot(appContext) && !ShizukuSettings.getWatchdog()) return
+        _shouldShowBatteryOptimizationSnackbar.postValue(
+            !SettingsHelper.isIgnoringBatteryOptimizations(appContext)
+        )
     }
 
 }

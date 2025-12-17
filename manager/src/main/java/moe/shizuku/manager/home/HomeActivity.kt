@@ -38,7 +38,7 @@ import rikka.shizuku.Shizuku
 
 abstract class HomeActivity : AppBarActivity() {
 
-    private val homeModel by viewModels { HomeViewModel() }
+    private val homeModel by viewModels { HomeViewModel(application) }
     private val appsModel by appsViewModel()
     private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
 
@@ -65,22 +65,19 @@ abstract class HomeActivity : AppBarActivity() {
             }
         }
 
-        if (!EnvironmentUtils.isTelevision()) {
-            homeModel.showBatteryOptimizationSnackbar.observe(this) {
-                if (it) {
-                    SnackbarHelper.show(
-                        this,
-                        binding.root,
-                        msg = getString(R.string.snackbar_battery_optimization_home),
-                        duration = Snackbar.LENGTH_INDEFINITE,
-                        actionText = getString(R.string.snackbar_action_fix),
-                        action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) }
-                    )
-                    homeModel.batteryOptimizationHandled()
-                }
+        homeModel.shouldShowBatteryOptimizationSnackbar.observe(this) {
+            if (it) {
+                SnackbarHelper.show(
+                    this,
+                    binding.root,
+                    msg = getString(R.string.snackbar_battery_optimization_home),
+                    duration = Snackbar.LENGTH_INDEFINITE,
+                    actionText = getString(R.string.snackbar_action_fix),
+                    action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) }
+                )
             }
-            homeModel.checkBatteryOptimization(applicationContext)
         }
+        homeModel.checkBatteryOptimization()
 
         appsModel.grantedCount.observe(this) {
             if (it.status == Status.SUCCESS) {
