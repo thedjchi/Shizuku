@@ -43,24 +43,32 @@ public class ServiceStarter {
 
     private static final String USER_SERVICE_CMD_FORMAT = "(CLASSPATH='%s' %s%s /system/bin " +
             "--nice-name='%s' moe.shizuku.starter.ServiceStarter " +
-            "--token='%s' --package='%s' --class='%s' --uid=%d%s)&";
+            "--manager='%s' --token='%s' --package='%s' --class='%s' --uid=%d%s)&";
 
     // DeathRecipient will automatically be unlinked when all references to the
     // binder is dropped, so we hold the reference here.
     @SuppressWarnings("FieldCanBeLocal")
     private static IBinder shizukuBinder;
 
-    public static String commandForUserService(String appProcess, String managerApkPath, String token, String packageName, String classname, String processNameSuffix, int callingUid, boolean debug) {
+    public static String commandForUserService(String appProcess, String managerApkPath, String managerPackageName, String token, String packageName, String classname, String processNameSuffix, int callingUid, boolean debug) {
         String processName = String.format("%s:%s", packageName, processNameSuffix);
         return String.format(Locale.ENGLISH, USER_SERVICE_CMD_FORMAT,
                 managerApkPath, appProcess, debug ? (" " + DEBUG_ARGS) : "",
                 processName,
-                token, packageName, classname, callingUid, debug ? (" " + "--debug-name=" + processName) : "");
+                managerPackageName, token, packageName, classname, callingUid, debug ? (" " + "--debug-name=" + processName) : "");
     }
+
+    private static String managerPackageName = null;
 
     public static void main(String[] args) {
         if (Looper.getMainLooper() == null) {
             Looper.prepareMainLooper();
+        }
+
+        for (String arg : args) {
+            if (arg.startsWith("--manager=")) {
+                managerPackageName = arg.substring("--manager=".length());
+            }
         }
 
         IBinder service;
@@ -92,8 +100,7 @@ public class ServiceStarter {
     }
 
     private static boolean sendBinder(IBinder binder, String token, boolean retry) {
-        String packageName = "moe.shizuku.privileged.api";
-        String name = packageName + ".shizuku";
+        String name = managerPackageName + ".shizuku";
         int userId = 0;
         IContentProvider provider = null;
 
@@ -109,8 +116,8 @@ public class ServiceStarter {
                 if (retry) {
                     // For unknown reason, sometimes this could happens
                     // Kill Shizuku app and try again could work
-                    ActivityManagerApis.forceStopPackageNoThrow(packageName, userId);
-                    Log.e(TAG, String.format("kill %s in user %d and try again", packageName, userId));
+                    ActivityManagerApis.forceStopPackageNoThrow(managerPackageName, userId);
+                    Log.e(TAG, String.format("kill %s in user %d and try again", managerPackageName, userId));
                     Thread.sleep(1000);
                     return sendBinder(binder, token, false);
                 }
@@ -130,7 +137,7 @@ public class ServiceStarter {
             if (reply != null) {
                 reply.setClassLoader(BinderContainer.class.getClassLoader());
 
-                Log.i(TAG, String.format("send binder to %s in user %d", packageName, userId));
+                Log.i(TAG, String.format("send binder to %s in user %d", managerPackageName, userId));
                 BinderContainer container = reply.getParcelable(EXTRA_BINDER);
 
                 if (container != null && container.binder != null && container.binder.pingBinder()) {
@@ -147,7 +154,7 @@ public class ServiceStarter {
 
             return false;
         } catch (Throwable tr) {
-            Log.e(TAG, String.format("failed send binder to %s in user %d", packageName, userId), tr);
+            Log.e(TAG, String.format("failed send binder to %s in user %d", managerPackageName, userId), tr);
             return false;
         } finally {
             if (provider != null) {
