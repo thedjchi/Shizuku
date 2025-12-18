@@ -37,11 +37,13 @@
 \nPřed povolením systému Android 11 je pro povolení bezdrátového ladění nutné připojení k počítači.</string>
     <string name="dialog_usb_debugging_not_enabled">Ladění přes USB není povolené.\nProsím, povolte to v \"Možnostech vývojářů\".</string>
     <string name="dialog_adb_pairing_message">Párování zahajte provedením následujících kroků:\n- Přejděte do sekce „Možnosti pro vývojáře“\n- Povolte „Ladění USB“ a „Bezdrátové ladění“\n- Klepněte na levou stranu sekce „Bezdrátové ladění“\n- Klepněte na „Spárovat zařízení s párovacím kódem“\n- Zadejte párovací kód z oznámení</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku možná chybí oprávnění %1$s . Chcete-li jej udělit, spusťte následující příkaz ADB:%2$sPokud jste příkaz již spustili, pokračujte v procesu párování.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Prosím, povolte službu přístupnosti pro zahájení procesu párování. To umožňuje Shizuku detekovat párovací kód.\n\nSlužba přístupnosti bude vypnuta po nalezení kódu nebo po 1 minutě, aby se šetřila energie.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Párování spusťte provedením následujících kroků:\n- Přejděte do sekce „Možnosti pro vývojáře“\n- Povolte „Ladění USB“ a „Bezdrátové ladění“\n- Klepněte na levou stranu sekce „Bezdrátové ladění“\n- Klepněte na „Spárovat zařízení s párovacím kódem“. Shizuku automaticky detekuje párovací kód.</string>
     <string name="adb_pairing_requires_multi_window">Nejprve prosím přejděte do režimu rozdělené obrazovky (více oken).</string>
     <string name="adb_pairing_requires_multi_window_reason">Systém vyžaduje, aby byl dialog pro párování vždy viditelný. Použití režimu rozdělené obrazovky je jediný způsob, jak zajistit, aby tato aplikace a dialogové okno systému byly viditelné současně.</string>
     <string name="adb_error_key_store">Nelze vygenerovat klíč pro bezdrátové ladění.\nMůže to být způsobeno chybou mechanismu úložiště klíčů v tomto zařízení.</string>
+    <string name="adb_stopping_tcp">Zavírání TCP portu</string>
     <string name="adb_error_stop_tcp">Nepodařilo se zastavit ADB přes TCP</string>
     <string name="adb_pair_required">Nejprve projděte krok párování.</string>
     <string name="enable">Zapnout</string>
@@ -118,6 +120,8 @@
     <string name="settings_watchdog_summary">Automaticky restartovat Shizuku v případě pádu</string>
     <string name="settings_tcp_mode">TCP režim</string>
     <string name="settings_tcp_mode_summary">"Umožňuje Shizuku restartovat bez Wi-Fi. (Shizuku musela od restartu začít jednou)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Port TCP bude okamžitě uzavřen. Pro opětovné zapnutí režimu TCP budete potřebovat Wi-Fi. Pokračovat?"</string>
+    <string name="settings_tcp_mode_closing_port">Zavírání TCP portu...</string>
     <string name="settings_restart_dialog_title">Vyžadován restart</string>
     <string name="settings_restart_dialog_message">Aby se toto nastavení projevilo, je nutné restartovat Shizuku.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Je vyžadováno připojení k Wi-Fi. Shizuku bude pokračovat v běhu a počká na připojení k Wi-Fi, než se restartuje na pozadí.</b>]]></string>
@@ -148,6 +152,7 @@
     <string name="bug_report_dialog_button_issues">Zobrazit problémy</string>
     <string name="bug_report_dialog_method">Pokud máte účet, odešlete prosím problém na GitHub.\n\nPřípadně můžete poslat e-mail.</string>
     <string name="bug_report_dialog_button_email">Odeslat e-mail</string>
+    <string name="bug_report_dialog_button_github">Přejít na $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port musí být mezi 1 a 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalizace baterie musí být vypnutá, aby start při startu/watchdogu fungoval správně.</string>
