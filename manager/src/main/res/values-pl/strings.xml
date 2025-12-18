@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">Debugowanie bezprzewodowe nie jest włączone.\nUwaga: w wersjach starszych niż Android 11, włączenie debugowania bezprzewodowego wymaga połączenia z komputerem.</string>
     <string name="dialog_usb_debugging_not_enabled">Debugowanie USB nie jest włączone.\nWłącz je w \"Opcjach programisty\".</string>
     <string name="dialog_adb_pairing_message">Rozpocznij parowanie, wykonując następujące kroki:\n- Przejdź do „Opcji programisty”\n- Włącz „Debugowanie USB” i „Debugowanie bezprzewodowe”\n- Dotknij lewej strony „Debugowania bezprzewodowego”\n- Dotknij „Sparuj urządzenie za pomocą kodu parowania”\n- Wprowadź kod parowania w powiadomieniu</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku może nie mieć uprawnienia %1$s . Aby je przyznać, uruchom następujące polecenie ADB:%2$sJeśli polecenie zostało już uruchomione, kontynuuj proces parowania.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Włącz usługę ułatwień dostępu, aby rozpocząć proces parowania. Pozwoli to Shizuku wykryć kod parowania.\n\nUsługa zostanie wyłączona po znalezieniu kodu lub po minucie, aby oszczędzać energię.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Rozpocznij parowanie, wykonując następujące kroki:\n- Przejdź do „Opcji programistycznych”\n- Włącz „Debugowanie USB” i „Debugowanie bezprzewodowe”\n- Dotknij lewej strony „Debugowania bezprzewodowego”\n- Dotknij „Sparuj urządzenie przy użyciu kodu parowania”. Shizuku automatycznie wykryje kod parowania.</string>
     <string name="adb_pairing_requires_multi_window">Najpierw uruchom tryb podzielonego ekranu.</string>
     <string name="adb_pairing_requires_multi_window_reason">System wymaga, aby dialog parowania był zawsze widoczny. Użycie trybu podzielonego ekranu to jedyny sposób, by ta aplikacja i dialog systemu były widoczne jednocześnie.</string>
     <string name="adb_error_key_store">Nie mogę wygenerować klucza do bezprzewodowego debugowania.\nMoże to wynikać z awarii mechanizmu KeyStore tego urządzenia.</string>
+    <string name="adb_stopping_tcp">Zamykanie portu TCP</string>
     <string name="adb_error_stop_tcp">Nie udało się zatrzymać ADB przez TCP</string>
     <string name="adb_pair_required">Najpierw przeprowadź parowanie.</string>
     <string name="enable">Włącz</string>
@@ -111,6 +113,8 @@
     <string name="settings_watchdog_summary">Automatycznie uruchom ponownie Shizuku, jeśli ulegnie awarii</string>
     <string name="settings_tcp_mode">Tryb TCP</string>
     <string name="settings_tcp_mode_summary">"Pozwala zrestartować Shizuku bez Wi-Fi (Shizuku musi zostać uruchomione przynajmniej raz po restarcie urządzenia)."</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Port TCP zostanie natychmiast zamknięty. Aby ponownie włączyć tryb TCP, będziesz potrzebować połączenia Wi-Fi. Kontynuować?"</string>
+    <string name="settings_tcp_mode_closing_port">Zamykanie portu TCP...</string>
     <string name="settings_restart_dialog_title">Wymagane ponowne uruchomienie</string>
     <string name="settings_restart_dialog_message">Shizuku musi zacząć od nowa, żeby zastosować to ustawienie.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi jest wymagane. Shizuku będzie dalej działać i czekać na połączenie Wi-Fi, zanim zrestartuje się w tle.</b>]]></string>
@@ -141,6 +145,7 @@
     <string name="bug_report_dialog_button_issues">Wyświetl problemy</string>
     <string name="bug_report_dialog_method">Jeśli masz konto, zgłoś problem na GitHubie.\n\nW przeciwnym razie możesz wysłać wiadomość e-mail.</string>
     <string name="bug_report_dialog_button_email">Wyślij e-mail</string>
+    <string name="bug_report_dialog_button_github">Przejdź do $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port musi mieścić się w zakresie od 1 do 65535</string>
     <string name="snackbar_battery_optimization_home">Aby start przy uruchomieniu systemu i nadzorowanie działały poprawnie, musisz wyłączyć optymalizację baterii.</string>
