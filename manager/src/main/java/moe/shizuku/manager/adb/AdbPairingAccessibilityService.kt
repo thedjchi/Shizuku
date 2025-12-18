@@ -31,6 +31,8 @@ class AdbPairingAccessibilityService : AccessibilityService() {
 
     override fun onServiceConnected() {
         super.onServiceConnected()
+
+        ShizukuSettings.setHasEnabledAccessibilityBefore(true)
         
         if (!(EnvironmentUtils.isTelevision() && EnvironmentUtils.isTlsSupported())) {
             Toast.makeText(this, getString(R.string.toast_accessibility_tv_only), Toast.LENGTH_SHORT).show()
