@@ -143,6 +143,7 @@
     <string name="bug_report_dialog_button_issues">مشاهده مسائل</string>
     <string name="bug_report_dialog_method">اگر حساب کاربری دارید، لطفاً مشکل خود را در گیت‌هاب ارسال کنید.\n\nدر غیر این صورت، می‌توانید ایمیل ارسال کنید.</string>
     <string name="bug_report_dialog_button_email">ارسال ایمیل</string>
+    <string name="bug_report_dialog_button_github">به %1$sبروید</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">پورت باید بین ۱ تا ۶۵۵۳۵ باشد</string>
     <string name="snackbar_battery_optimization_home">برای اینکه شروع به کار در هنگام بوت/واچ‌داگ به درستی انجام شود، باید بهینه‌سازی باتری غیرفعال باشد.</string>
