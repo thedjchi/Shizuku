@@ -152,7 +152,6 @@
     <string name="bug_report_dialog_button_issues">Переглянути проблеми</string>
     <string name="bug_report_dialog_method">Будь ласка, надішліть запит на проблему на GitHub, якщо у вас є обліковий запис.\n\nАбо ж ви можете надіслати електронного листа.</string>
     <string name="bug_report_dialog_button_email">Надіслати електронного листа</string>
-    <string name="bug_report_dialog_button_github">Перейти до $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт має бути в діапазоні від 1 до 65535</string>
     <string name="snackbar_battery_optimization_home">Для коректної роботи запуску при завантаженні/сторожового таймера оптимізацію батареї необхідно вимкнути.</string>
