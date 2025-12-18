@@ -158,6 +158,7 @@
     <string name="bug_report_dialog_button_issues">View issues</string>
     <string name="bug_report_dialog_method">Please submit an issue on GitHub if you have an account.\n\nOtherwise, you can send an email.</string>
     <string name="bug_report_dialog_button_email">Send Email</string>
+    <string name="bug_report_dialog_button_github">Go to $1$s</string>
 
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port must be between 1 and 65535</string>
