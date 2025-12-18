@@ -149,6 +149,7 @@
     <string name="bug_report_dialog_button_issues">ดูปัญหา</string>
     <string name="bug_report_dialog_method">หากคุณมีบัญชี GitHub โปรดแจ้งปัญหาผ่าน GitHub\n\nหรือส่งอีเมลมาก็ได้</string>
     <string name="bug_report_dialog_button_email">ส่งอีเมล</string>
+    <string name="bug_report_dialog_button_github">ไปที่ %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">พอร์ตต้องอยู่ระหว่าง 1 ถึง 65535</string>
     <string name="snackbar_battery_optimization_home">จะต้องปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อให้เริ่มทำงานเมื่อบูตเครื่อง/เฝ้าระวังเพื่อให้ทำงานได้อย่างถูกต้อง</string>
