@@ -152,7 +152,6 @@
     <string name="bug_report_dialog_button_issues">Просмотреть вопросы</string>
     <string name="bug_report_dialog_method">Если у вас есть учетная запись, пожалуйста, создайте заявку на GitHub.\n\nВ противном случае вы можете отправить электронное письмо.</string>
     <string name="bug_report_dialog_button_email">Отправить электронное письмо</string>
-    <string name="bug_report_dialog_button_github">Перейти к $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт должен быть от 1 до 65535.</string>
     <string name="snackbar_battery_optimization_home">Для корректной работы функции оптимизации батареи необходимо отключить запуск при загрузке/сторожевом таймере.</string>
