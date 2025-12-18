@@ -37,11 +37,13 @@
 \nHinweis: Vor Android 11 ist für die Aktivierung des kabellosen Debugging eine Computerverbindung erforderlich.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-Debugging ist nicht aktiviert.\nBitte aktivieren Sie es in \"Entwickleroptionen\".</string>
     <string name="dialog_adb_pairing_message">Bitte starten Sie die Kopplung mit den folgenden Schritten:\n– Öffnen Sie die „Entwickleroptionen“.\n– Aktivieren Sie „USB-Debugging“ und „Drahtloses Debugging“.\n– Tippen Sie links neben „Drahtloses Debugging“.\n– Tippen Sie auf „Gerät mit Kopplungscode koppeln“.\n– Geben Sie den Kopplungscode aus der Benachrichtigung ein.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku fehlt möglicherweise die Berechtigung %1$s . Um sie zu erteilen, führen Sie folgenden ADB-Befehl aus:%2$s. Falls Sie den Befehl bereits ausgeführt haben, fahren Sie mit dem Kopplungsvorgang fort.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Bitte aktivieren Sie den Barrierefreiheitsdienst, um den Paarungsprozess zu starten. Dadurch kann Shizuku den Paarungscode erkennen.\n\nDer Barrierefreiheitsdienst wird abgeschaltet, sobald der Code gefunden wird oder nach einer Minute, um Energie zu sparen.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Bitte starten Sie die Kopplung mit den folgenden Schritten:\n– Navigieren Sie zu „Entwickleroptionen“.\n– Aktivieren Sie „USB-Debugging“ und „Drahtloses Debugging“.\n– Tippen Sie links neben „Drahtloses Debugging“.\n– Tippen Sie auf „Gerät mit Kopplungscode koppeln“. Shizuku erkennt den Kopplungscode automatisch.</string>
     <string name="adb_pairing_requires_multi_window">Bitte zuerst in den Modus \"Geteilter Bildschirm\" (Mehrfenster) gehen.</string>
     <string name="adb_pairing_requires_multi_window_reason">Das System erfordert, dass der Kopplungsdialog immer sichtbar ist. Nur im Splitscreen-Modus können diese App und der Systemdialog gleichzeitig angezeigt werden.</string>
     <string name="adb_error_key_store">Es konnte kein Schlüssel für das drahtlose Debugging generiert werden.\nDies kann daran liegen, dass der KeyStore-Mechanismus dieses Geräts defekt ist.</string>
+    <string name="adb_stopping_tcp">Schließen des TCP-Ports</string>
     <string name="adb_error_stop_tcp">ADB über TCP nicht gestoppt</string>
     <string name="adb_pair_required">Bitte zuerst den Kopplungschritt durchführen.</string>
     <string name="enable">Ermöglichen</string>
@@ -116,6 +118,8 @@
     <string name="settings_watchdog_summary">Shizuku wird automatisch neu gestartet, falls es abstürzt.</string>
     <string name="settings_tcp_mode">TCP-Modus</string>
     <string name="settings_tcp_mode_summary">"Ermöglicht es Shizuku, ohne WLAN neu zu starten. (Shizuku muss seit dem Reboot einmal angefangen haben)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Der TCP-Port wird sofort geschlossen. Sie benötigen WLAN, um den TCP-Modus wieder zu aktivieren. Fortfahren?"</string>
+    <string name="settings_tcp_mode_closing_port">TCP-Port wird geschlossen...</string>
     <string name="settings_restart_dialog_title">Neustart erforderlich</string>
     <string name="settings_restart_dialog_message">Shizuku muss neu starten, um diese Einstellung anzuwenden.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>WLAN erforderlich. Shizuku läuft weiter und wartet auf eine WLAN-Verbindung, bevor es im Hintergrund neu gestartet wird.</b>]]></string>
@@ -146,6 +150,7 @@
     <string name="bug_report_dialog_button_issues">Probleme anzeigen</string>
     <string name="bug_report_dialog_method">Bitte melde das Problem auf GitHub, falls du dort ein Konto hast.\n\nAlternativ kannst du uns eine E-Mail senden.</string>
     <string name="bug_report_dialog_button_email">E-Mail senden</string>
+    <string name="bug_report_dialog_button_github">Gehe zu $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Der Port muss zwischen 1 und 65535 liegen</string>
     <string name="snackbar_battery_optimization_home">Die Batterieoptimierung muss deaktiviert sein, damit der Start beim Boot/Watchdog richtig funktioniert.</string>
