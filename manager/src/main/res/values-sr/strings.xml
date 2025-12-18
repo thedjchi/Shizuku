@@ -37,11 +37,13 @@
 \nPrimedba: Pre Android-a 11, omogućavanje bežičnog otklanjanja grešaka bilo je uslovljeno postojanjem konekcije sa računarom.</string>
     <string name="dialog_usb_debugging_not_enabled">Отклањање грешака преко USB-а није омогућено.\nОмогућите га у „Опцијама за програмере“.</string>
     <string name="dialog_adb_pairing_message">Почните упаривање пратећи следеће кораке:\n- Идите на „Опције за програмере“\n- Омогућите „USB отклањање грешака“ и „Бежично отклањање грешака“\n- Додирните леву страну „Бежично отклањање грешака“\n- Додирните „Упари уређај са кодом за упаривање“\n- Унесите код за упаривање у обавештење</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Шизуку можда нема дозволу %1$s . Да бисте је доделили, покрените следећу ADB команду:%2$sАко сте већ покренули команду, наставите са процесом упаривања.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Омогућите услугу приступачности да бисте започели процес упаривања. Ово омогућава Шизукуу да детектује код за упаривање.\n\nУслуга приступачности ће бити искључена када се пронађе код или након 1 минута ради уштеде енергије.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Почните упаривање пратећи следеће кораке:\n- Идите на „Опције за програмере“\n- Омогућите „USB отклањање грешака“ и „Бежично отклањање грешака“\n- Додирните леву страну „Бежично отклањање грешака“\n- Додирните „Упари уређај са кодом за упаривање“. Шизуку ће аутоматски детектовати код за упаривање.</string>
     <string name="adb_pairing_requires_multi_window">Molim Vas, najpre izaberite režim podeljenog ekrana, odnosno režim više prozora.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem zahteva dijalog uparivanja da uvek bude vidljiv. Korišćenje režima podeljenog ekrana je jedini način da ova aplikacija i sistemski dijalog budu vidljivi u isto vreme.</string>
     <string name="adb_error_key_store">Nije moguće generisati ključ za bežično otklanjanje grešaka.\nTo može biti zato što je KeiStore mehanizam ovog uređaja je slomljena.</string>
+    <string name="adb_stopping_tcp">Затварање TCP порта</string>
     <string name="adb_error_stop_tcp">Заустављање ADB-а преко TCP-а није успело</string>
     <string name="adb_pair_required">Molim Vas, najpre prođite kroz korake za uparivanje uređaja.</string>
     <string name="enable">Омогући</string>
@@ -113,6 +115,8 @@
     <string name="settings_watchdog_summary">Аутоматски поново покрените Шизуку ако се сруши</string>
     <string name="settings_tcp_mode">TCP режим</string>
     <string name="settings_tcp_mode_summary">"Омогућава Шизукуу да се поново покрене без Wi-Fi-ја. (Шизуку се морао једном покренути од поновног покретања)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP порт ће бити одмах затворен. Биће вам потребан Wi-Fi да бисте поново укључили TCP режим. Желите ли да наставите?"</string>
+    <string name="settings_tcp_mode_closing_port">Затварање TCP порта...</string>
     <string name="settings_restart_dialog_title">Потребно је поновно покретање</string>
     <string name="settings_restart_dialog_message">Shizuku treba da se ponovo pokrene da bi se primenila ova postavka.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Vi-Fi je potreban. Shizuku će nastaviti da radi i čekati Vi-Fi vezu pre ponovnog pokretanja u pozadini.</b>]]></string>
@@ -143,6 +147,7 @@
     <string name="bug_report_dialog_button_issues">Прикажи проблеме</string>
     <string name="bug_report_dialog_method">Молимо вас да пријавите проблем на GitHub-у ако имате налог.\n\nУ супротном, можете послати имејл.</string>
     <string name="bug_report_dialog_button_email">Пошаљи имејл</string>
+    <string name="bug_report_dialog_button_github">Иди на $1$с</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт мора бити између 1 и 65535</string>
     <string name="snackbar_battery_optimization_home">Оптимизација батерије мора бити онемогућена да би покретање при покретању/чување система исправно функционисало.</string>
