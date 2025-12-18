@@ -147,6 +147,7 @@
     <string name="bug_report_dialog_button_issues">Прикажи проблеме</string>
     <string name="bug_report_dialog_method">Молимо вас да пријавите проблем на GitHub-у ако имате налог.\n\nУ супротном, можете послати имејл.</string>
     <string name="bug_report_dialog_button_email">Пошаљи имејл</string>
+    <string name="bug_report_dialog_button_github">Иди на %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт мора бити између 1 и 65535</string>
     <string name="snackbar_battery_optimization_home">Оптимизација батерије мора бити онемогућена да би покретање при покретању/чување система исправно функционисало.</string>
