@@ -37,11 +37,13 @@
 \n請注意，在 Android 11 之前，要啟用無線偵錯必須先與電腦連線。</string>
     <string name="dialog_usb_debugging_not_enabled">USB 除錯功能未啟用。\n請在「開發者選項」中啟用它。</string>
     <string name="dialog_adb_pairing_message">請開始配對，請執行以下步驟：\n- 導覽至「開發者選項」\n- 啟用「USB 除錯」與「無線除錯」\n- 點選「無線除錯」的左側\n- 點擊「配對裝置與配對碼的裝置」\n- 在通知中輸入配對代碼</string>
+    <string name="dialog_adb_pairing_accessibility_permission">雫可能缺少 %1$s 權限。若要授予該權限，請執行下列 ADB 指令：%2$s。如果您已經執行過該命令，請繼續配對程序。</string>
     <string name="dialog_adb_pairing_accessibility_enable">請啟用無障礙服務以開始配對流程。這讓雫能偵測到配對代碼。\n\n無障礙服務會在找到代碼後或1分鐘後關閉以節省能源。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">請依照以下步驟開始配對：\n- 進入「開發者選項」\n- 啟用「USB偵錯」與「無線除錯」\n- 點選「無線偵錯」左側\n- 點擊「使用配對碼裝置」。 Shizuku 將自動檢測配對碼。</string>
     <string name="adb_pairing_requires_multi_window">請先進入「分割畫面」(多視窗) 模式。</string>
     <string name="adb_pairing_requires_multi_window_reason">系統需求配對對話框始終可見。只有使用分割畫面模式才能讓此應用程式和系統對話方塊同時可見。</string>
     <string name="adb_error_key_store">無法產生無線調試密鑰。\n這可能是因為此裝置的金鑰庫機制已損壞。</string>
+    <string name="adb_stopping_tcp">關閉 TCP 連接埠</string>
     <string name="adb_error_stop_tcp">未能阻止 ADB 透過 TCP 傳輸</string>
     <string name="adb_pair_required">請先進行配對步驟。</string>
     <string name="enable">啟用</string>
@@ -115,6 +117,8 @@
     <string name="settings_watchdog_summary">如果 Shizuku 崩潰，則自動重新啟動。</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"讓雫能在沒有 Wi-Fi 的情況下重新開始。（雫自重啟後應該開始過一次）"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP連接埠將立即關閉。您需要連接Wi-Fi才能重新啟用TCP模式。是否繼續？"</string>
+    <string name="settings_tcp_mode_closing_port">正在關閉 TCP 連接埠...</string>
     <string name="settings_restart_dialog_title">需要重啟</string>
     <string name="settings_restart_dialog_message">雫需要重啟才能套用此設定。</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>需要 Wi-Fi。雫會在後台繼續運作並等待 Wi-Fi 連接，連線成功後才會重新啟動。</b>]]></string>
@@ -145,6 +149,7 @@
     <string name="bug_report_dialog_button_issues">查看問題</string>
     <string name="bug_report_dialog_method">如果您有 GitHub 帳戶，請在 GitHub 上提交問題。\n\n否則，您可以發送電子郵件。</string>
     <string name="bug_report_dialog_button_email">傳送電子郵件</string>
+    <string name="bug_report_dialog_button_github">前往 $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必須介於1到65535之間</string>
     <string name="snackbar_battery_optimization_home">啟動時啟動或看門狗的啟動功能必須關閉電池優化。</string>
