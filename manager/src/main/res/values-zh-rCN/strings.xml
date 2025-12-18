@@ -145,7 +145,6 @@
     <string name="bug_report_dialog_button_issues">查看问题</string>
     <string name="bug_report_dialog_method">如果您有 GitHub 帐户，请在 GitHub 上提交问题。\n\n否则，您可以发送电子邮件。</string>
     <string name="bug_report_dialog_button_email">发送电子邮件</string>
-    <string name="bug_report_dialog_button_github">前往 $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必须介于 1 和 65535 之间</string>
     <string name="snackbar_battery_optimization_home">要使 开机启动/watchdog 功能正常工作，必须禁用电池优化。</string>
