@@ -149,7 +149,6 @@
     <string name="bug_report_dialog_button_issues">Lihat masalah</string>
     <string name="bug_report_dialog_method">Silakan kirimkan masalah di GitHub jika Anda memiliki akun.\n\nJika tidak, Anda dapat mengirim email.</string>
     <string name="bug_report_dialog_button_email">Kirim Email</string>
-    <string name="bug_report_dialog_button_github">Pergi ke $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port harus antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalisasi baterai harus dinonaktifkan agar dapat memulai saat boot/watchdog agar berfungsi dengan baik.</string>
