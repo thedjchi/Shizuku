@@ -143,7 +143,6 @@
     <string name="bug_report_dialog_button_issues">პრობლემების ნახვა</string>
     <string name="bug_report_dialog_method">თუ ანგარიში გაქვთ, გთხოვთ, პრობლემა GitHub-ზე წარმოადგინოთ.\n\nწინააღმდეგ შემთხვევაში, შეგიძლიათ ელ. ფოსტის გაგზავნა.</string>
     <string name="bug_report_dialog_button_email">ელფოსტის გაგზავნა</string>
-    <string name="bug_report_dialog_button_github">გადადით $1$-ზე</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">პორტი უნდა იყოს 1-დან 65535-მდე</string>
     <string name="snackbar_battery_optimization_home">ბატარეის ოპტიმიზაცია უნდა გამორთული იყოს ჩატვირთვის / მაკონტროლებლის დასაწყებად გამართულად მუშაობისთვის.</string>
