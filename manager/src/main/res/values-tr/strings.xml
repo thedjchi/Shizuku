@@ -150,6 +150,7 @@
     <string name="bug_report_dialog_button_issues">Sorunları görüntüle</string>
     <string name="bug_report_dialog_method">Hesabınız varsa lütfen GitHub\'da bir sorun gönderin.\n\nAksi takdirde e-posta gönderebilirsiniz.</string>
     <string name="bug_report_dialog_button_email">E-posta gönder</string>
+    <string name="bug_report_dialog_button_github">%1$sadresine git</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Bağlantı noktası 1 ile 65535 arasında olmalıdır</string>
     <string name="snackbar_battery_optimization_home">Önyükleme/bekçi köpeği sırasında başlatmanın düzgün çalışması için pil optimizasyonunun devre dışı bırakılması gerekir.</string>
