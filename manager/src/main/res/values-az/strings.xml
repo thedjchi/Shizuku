@@ -146,6 +146,7 @@
     <string name="bug_report_dialog_button_issues">Məsələlərə baxın</string>
     <string name="bug_report_dialog_method">Hesabınız varsa, GitHub-da problem göndərin.\n\nƏks halda, e-poçt göndərə bilərsiniz.</string>
     <string name="bug_report_dialog_button_email">E-poçt göndər</string>
+    <string name="bug_report_dialog_button_github">%1$sbölməsinə keçin</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port 1 ilə 65535 arasında olmalıdır</string>
     <string name="snackbar_battery_optimization_home">Start on boot/watchdog düzgün işləməsi üçün batareya optimizasiyası deaktiv edilməlidir.</string>
