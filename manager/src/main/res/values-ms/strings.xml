@@ -142,6 +142,7 @@
     <string name="bug_report_dialog_button_issues">Lihat isu</string>
     <string name="bug_report_dialog_method">Sila serahkan isu di GitHub jika anda mempunyai akaun.\n\nJika tidak, anda boleh menghantar e-mel.</string>
     <string name="bug_report_dialog_button_email">Hantar E-mel</string>
+    <string name="bug_report_dialog_button_github">Pergi ke %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pelabuhan mestilah antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Pengoptimuman bateri mesti dilumpuhkan untuk permulaan pada but/pemantau untuk berfungsi dengan baik.</string>
