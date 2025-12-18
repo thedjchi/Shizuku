@@ -37,11 +37,13 @@
 \nAndroid 11-ից առաջ անլար կարգաբերման համար անհրաժեշտ է համակարգչային կապ։</string>
     <string name="dialog_usb_debugging_not_enabled">USB կարգաբերումը թույլատրված չէ:\nԽնդրում ենք միացնել այն «Մշակողի ընտրանքներ» բաժնում:</string>
     <string name="dialog_adb_pairing_message">Սկսեք զուգակցումը կատարելով հետևյալ քայլերը՝\n- Անցեք «Մշակողի ընտրանքներ»\n- Միացրեք «USB վրիպազերծում» և «Անլար վրիպազերծում»\n- Հպեք «Անլար վրիպազերծում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը զուգակցման կոդով»\n- Մուտքագրեք զուգակցման կոդը ծանուցման մեջ</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Շիզուկուին հնարավոր է պակասում է %1$s թույլտվությունը։ Այն տրամադրելու համար գործարկեք հետևյալ ADB հրամանը՝%2$sԵթե արդեն գործարկել եք հրամանը, շարունակեք զուգավորման գործընթացը։</string>
     <string name="dialog_adb_pairing_accessibility_enable">Խնդրում ենք միացնել մատչելիության ծառայությունը՝ զուգավորման գործընթացը սկսելու համար: Սա թույլ է տալիս Շիզուկուին հայտնաբերել զույգավորման կոդը։\n\nՄատչելիության ծառայությունն անջատվելու է, երբ կոդը գտնվի կամ 1 րոպե անց՝ էներգիան խնայելու համար:</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Խնդրում ենք սկսել զուգակցումը կատարելով հետևյալ քայլերը՝\n- Անցեք «Մշակողի ընտրանքներ»\n- Միացրեք «USB կարգաբերում» և «Անլար կարգաբերում»\n- Հպեք «Անլար կարգաբերում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը զուգակցման կոդով»։ Շիզուկուն ավտոմատ կերպով կհայտնաբերի զուգակցման կոդը։</string>
     <string name="adb_pairing_requires_multi_window">Սկզբում միացրեք էկրանի կիսման ռեժիմը։</string>
     <string name="adb_pairing_requires_multi_window_reason">Համակարգը պահանջում է, որ զուգավորման երկխոսության պատուհանը միշտ տեսանելի լինի: Բաժանված էկրանի ռեժիմի օգտագործումը միակ միջոցն է, որպեսզի այս հավելվածը և համակարգի երկխոսության պատուհանը միաժամանակ տեսանելի լինեն:</string>
     <string name="adb_error_key_store">Անհնար է ստեղծել բանալի անլար վրիպազերծման համար։\nՍա կարող է պայմանավորված լինել այս սարքի KeyStore մեխանիզմի խափանումով։</string>
+    <string name="adb_stopping_tcp">TCP միացքի փակում</string>
     <string name="adb_error_stop_tcp">Ձախողվեց ADB-ի կանգնեցումը TCP-ի միջոցով</string>
     <string name="adb_pair_required">Խնդրում ենք սկզբում կատարել զուգելու քայլերը։</string>
     <string name="enable">Թույլատրել</string>
@@ -112,6 +114,8 @@
     <string name="settings_watchdog_summary">Ավտոմատ վերագործարկեք Շիզուկուն, եթե այն խափանվի</string>
     <string name="settings_tcp_mode">TCP ռեժիմ</string>
     <string name="settings_tcp_mode_summary">"Թույլ է տալիս Shizuku-ին վերագործարկել առանց Wi-Fi-ի: (Shizuku-ն պետք է որ մեկ անգամ սկսել է վերագործարկումից հետո)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP միացքը անմիջապես կփակվի: TCP ռեժիմը կրկին միացնելու համար ձեզ անհրաժեշտ կլինի Wi-Fi: Շարունակե՞լ:"</string>
+    <string name="settings_tcp_mode_closing_port">TCP միացքի փակում...</string>
     <string name="settings_restart_dialog_title">Վերագործարկումը պարտադիր է</string>
     <string name="settings_restart_dialog_message">Այս կարգավորումը կիրառելու համար Շիզուկուն պետք է վերագործարկվի։</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Պահանջվում է Wi-Fi: Shizuku-ն կշարունակի աշխատել և կսպասի Wi-Fi կապի, նախքան ֆոնային ռեժիմով վերագործարկվելը:</b>]]></string>
@@ -142,6 +146,7 @@
     <string name="bug_report_dialog_button_issues">Դիտել խնդիրները</string>
     <string name="bug_report_dialog_method">Եթե ունեք հաշիվ, խնդրում ենք ներկայացնել ձեր խնդիրը GitHub-ում։\n\nՀակառակ դեպքում կարող եք ուղարկել էլ. նամակ։</string>
     <string name="bug_report_dialog_button_email">Ուղարկել էլ. փոստ</string>
+    <string name="bug_report_dialog_button_github">Անցնել $1$s-ին</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Նավահանգիստը պետք է լինի միջեւ 1 եւ 65535</string>
     <string name="snackbar_battery_optimization_home">Մարտկոցի օպտիմալացումը պետք է անջատված լինի, որպեսզի boot/watchdog-ը ճիշտ աշխատի:</string>
