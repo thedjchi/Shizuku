@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer adalah satu kemestian.</string>
     <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila dayakannya dalam \"Pilihan Pembangun\".</string>
     <string name="dialog_adb_pairing_message">Sila mulakan berpasangan dengan melakukan langkah-langkah berikut:\n- Navigasi ke \"Pilihan Pemaju\"\n- Dayakan \"Penyahpepijatan USB\" dan \"Penyahpepijatan tanpa wayar\"\n- Ketik sebelah kiri \"Penyahpepijatan tanpa wayar\"\n- Ketik \"Pasangkan peranti dengan kod berpasangan\"\n- Masukkan kod gandingan dalam pemberitahuan</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku mungkin tiada kebenaran %1$s . Untuk memberikannya, jalankan arahan ADB berikut:%2$sJika anda telah menjalankan arahan tersebut, teruskan dengan proses pemasangan.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Sila dayakan perkhidmatan kebolehaksesan untuk memulakan proses berpasangan. Ini membolehkan Shizuku mengesan kod berpasangan.\n\nPerkhidmatan kebolehaksesan akan dimatikan apabila kod ditemui atau selepas 1 minit untuk menjimatkan tenaga.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Sila mulakan berpasangan dengan melakukan langkah berikut:\n- Navigasi ke \"Pilihan Pembangun\"\n- Dayakan \"penyahpepijatan USB\" dan \"Penyahpepijatan wayarles\"\n- Ketik sebelah kiri \"Penyahpepijatan wayarles\"\n- Ketik \"Gandingkan peranti dengan peranti.\" Shizuku akan mengesan kod pasangan secara automatik.</string>
     <string name="adb_pairing_requires_multi_window">Sila masukkan mod skrin belah (berbilang tetingkap) dahulu.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem memerlukan dialog berpasangan untuk sentiasa kelihatan. Menggunakan mod skrin belah ialah satu-satunya cara untuk membolehkan apl ini dan dialog sistem kelihatan pada masa yang sama.</string>
     <string name="adb_error_key_store">Tidak dapat menjana kunci untuk penyahpepijatan wayarles.\nIni mungkin kerana mekanisme KeyStore peranti ini rosak.</string>
+    <string name="adb_stopping_tcp">Menutup port TCP</string>
     <string name="adb_error_stop_tcp">Gagal menghentikan ADB melalui TCP</string>
     <string name="adb_pair_required">Sila lalui langkah berpasangan terlebih dahulu.</string>
     <string name="enable">Dayakan</string>
@@ -108,6 +110,8 @@
     <string name="settings_watchdog_summary">Mulakan semula Shizuku secara automatik jika ia ranap</string>
     <string name="settings_tcp_mode">mod TCP</string>
     <string name="settings_tcp_mode_summary">"Membenarkan Shizuku memulakan semula tanpa Wi-Fi. (Shizuku mesti bermula sekali sejak but semula)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Port TCP akan ditutup serta-merta. Anda memerlukan Wi-Fi untuk menghidupkan mod TCP sekali lagi. Teruskan?"</string>
+    <string name="settings_tcp_mode_closing_port">Menutup port TCP...</string>
     <string name="settings_restart_dialog_title">Mulakan semula Diperlukan</string>
     <string name="settings_restart_dialog_message">Shizuku perlu memulakan semula untuk menggunakan tetapan ini.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi diperlukan. Shizuku akan terus berjalan dan menunggu sambungan Wi-Fi sebelum dimulakan semula di latar belakang.</b>]]></string>
@@ -138,6 +142,7 @@
     <string name="bug_report_dialog_button_issues">Lihat isu</string>
     <string name="bug_report_dialog_method">Sila serahkan isu di GitHub jika anda mempunyai akaun.\n\nJika tidak, anda boleh menghantar e-mel.</string>
     <string name="bug_report_dialog_button_email">Hantar E-mel</string>
+    <string name="bug_report_dialog_button_github">Pergi ke $1$</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pelabuhan mestilah antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Pengoptimuman bateri mesti dilumpuhkan untuk permulaan pada but/pemantau untuk berfungsi dengan baik.</string>
