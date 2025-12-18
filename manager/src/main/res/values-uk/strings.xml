@@ -37,11 +37,13 @@
 \nЗверніть увагу, до Android 11, щоб увімкнути налагодження через Wi-Fi, під\'\'єднання до ПК обов\'\'язкове.</string>
     <string name="dialog_usb_debugging_not_enabled">Налагодження через USB не ввімкнено.\nБудь ласка, увімкніть його в розділі «Параметри розробника».</string>
     <string name="dialog_adb_pairing_message">Будь ласка, розпочніть сполучення, виконавши такі кроки:\n- Перейдіть до розділу \"Параметри розробника\"\n- Увімкніть \"Налагодження USB\" та \"Налагодження бездротового зв\'язку\"\n- Натисніть ліву частину розділу \"Налагодження бездротового зв\'язку\"\n- Натисніть \"Спів\'язати пристрій за допомогою коду сполучення\"\n- Введіть код сполучення зі сповіщення</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Можливо, у Shizuku бракує дозволу %1$s . Щоб надати його, виконайте таку команду ADB:%2$sЯкщо ви вже виконали команду, продовжте процес сполучення.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Будь ласка, увімкніть службу доступності, щоб розпочати процес сполучення. Це дозволить Shizuku виявити код сполучення.\n\nСлужба доступності буде вимкнена після знаходження коду або через 1 хвилину для економії енергії.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Будь ласка, розпочніть сполучення, виконавши такі кроки:\n- Перейдіть до розділу \"Параметри розробника\"\n- Увімкніть \"Налагодження USB\" та \"Налагодження бездротового зв\'язку\"\n- Натисніть ліву частину \"Налагодження бездротового зв\'язку\"\n- Натисніть \"Спів\'язати пристрій за допомогою коду сполучення\". Shizuku автоматично визначить код сполучення.</string>
     <string name="adb_pairing_requires_multi_window">Спершу увійдіть в режим розділеного екрана (багатьох вікон).</string>
     <string name="adb_pairing_requires_multi_window_reason">Система вимагає, щоб діалог поєднання завжди був видимим. Використання режиму розділеного екрану — єдиний спосіб зробити цей додаток і системний діалог видимими одночасно.</string>
     <string name="adb_error_key_store">Не вдається згенерувати ключ для бездротового налагодження.\nМожливо, це пов\'язано з тим, що механізм KeyStore цього пристрою зламаний.</string>
+    <string name="adb_stopping_tcp">Закриття TCP-порту</string>
     <string name="adb_error_stop_tcp">Не вдалося зупинити ADB через TCP</string>
     <string name="adb_pair_required">Будь ласка, спочатку пройдіть етап парування.</string>
     <string name="enable">Увімкнути</string>
@@ -118,6 +120,8 @@
     <string name="settings_watchdog_summary">Автоматично перезапускати Shizuku у разі збою</string>
     <string name="settings_tcp_mode">Режим TCP</string>
     <string name="settings_tcp_mode_summary">"Дозволяє перезавантажити Shizuku без Wi-Fi. (Shizuku мала запуститися один раз після перезавантаження)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP-порт буде негайно закрито. Щоб знову ввімкнути режим TCP, вам знадобиться Wi-Fi. Продовжити?"</string>
+    <string name="settings_tcp_mode_closing_port">Закриття TCP-порту...</string>
     <string name="settings_restart_dialog_title">Потрібно перезавантажити</string>
     <string name="settings_restart_dialog_message">Шізуку потрібно почати заново, щоб застосувати цей настрій.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Потрібен Wi-Fi. Шідзуку продовжить працювати і чекати на Wi-Fi, перш ніж перезапустити у фоновому режимі.</b>]]></string>
@@ -148,6 +152,7 @@
     <string name="bug_report_dialog_button_issues">Переглянути проблеми</string>
     <string name="bug_report_dialog_method">Будь ласка, надішліть запит на проблему на GitHub, якщо у вас є обліковий запис.\n\nАбо ж ви можете надіслати електронного листа.</string>
     <string name="bug_report_dialog_button_email">Надіслати електронного листа</string>
+    <string name="bug_report_dialog_button_github">Перейти до $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт має бути в діапазоні від 1 до 65535</string>
     <string name="snackbar_battery_optimization_home">Для коректної роботи запуску при завантаженні/сторожового таймера оптимізацію батареї необхідно вимкнути.</string>
