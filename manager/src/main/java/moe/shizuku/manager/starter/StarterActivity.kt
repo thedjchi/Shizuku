@@ -1,8 +1,10 @@
 package moe.shizuku.manager.starter
 
-import android.content.Context
+import android.app.Application
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -29,19 +31,12 @@ import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.databinding.StarterActivityBinding
 import rikka.lifecycle.Resource
 import rikka.lifecycle.Status
-import rikka.lifecycle.viewModels
 
 private class NotRootedException: Exception()
 
 class StarterActivity : AppBarActivity() {
 
-    private val viewModel by viewModels {
-        ViewModel(
-            this,
-            intent.getBooleanExtra(EXTRA_IS_ROOT, false),
-            intent.getIntExtra(EXTRA_PORT, 0),
-        )
-    }
+    private val viewModel: ViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,7 +90,10 @@ class StarterActivity : AppBarActivity() {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus && !hasStarted) {
             hasStarted = true
-            viewModel.start()
+            viewModel.start(
+                intent.getBooleanExtra(EXTRA_IS_ROOT, false),
+                intent.getIntExtra(EXTRA_PORT, 0)
+            )
         }
     }
 
@@ -106,11 +104,9 @@ class StarterActivity : AppBarActivity() {
     }
 }
 
-private class ViewModel(
-    private val context: Context,
-    private val root: Boolean,
-    private val port: Int
-) : androidx.lifecycle.ViewModel() {
+class ViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val appContext = getApplication<Application>().applicationContext
 
     private val sb = StringBuilder()
     private val _output = MutableLiveData<Resource<StringBuilder>>()
@@ -123,7 +119,7 @@ private class ViewModel(
 
     private var started = false
 
-    fun start() {
+    fun start(root: Boolean, port: Int) {
         if (started) return
         started = true
 
@@ -131,7 +127,7 @@ private class ViewModel(
             try {
                 if (root) {
                     startRoot()
-                } else AdbStarter.startAdb(context, port, { log(it) })
+                } else AdbStarter.startAdb(appContext, port, { log(it) })
                 Starter.waitForBinder({ log(it) })
             } catch (e: Exception) {
                 ShizukuStateMachine.update()

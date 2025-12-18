@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.TypedValue
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
 import moe.shizuku.manager.Helps
 import moe.shizuku.manager.R
@@ -19,7 +20,7 @@ import java.util.*
 
 class ApplicationManagementActivity : AppBarActivity() {
 
-    private val viewModel by appsViewModel()
+    private val viewModel: AppsViewModel by viewModels()
     private val adapter = AppsAdapter()
 
     private val stateListener: (ShizukuStateMachine.State) -> Unit = {

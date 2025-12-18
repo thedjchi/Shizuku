@@ -3,9 +3,10 @@ package moe.shizuku.manager.home
 import android.app.Application
 import android.content.Context
 import android.content.pm.PackageManager
+import android.content.pm.PermissionInfo
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
@@ -22,9 +23,9 @@ import moe.shizuku.manager.utils.ShizukuSystemApis
 import rikka.lifecycle.Resource
 import rikka.shizuku.Shizuku
 
-class HomeViewModel(application: Application) : ViewModel() {
+class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val appContext: Context = application.applicationContext
+    private val appContext: Context = getApplication<Application>().applicationContext
 
     private val _serviceStatus = MutableLiveData<Resource<ServiceStatus>>()
     val serviceStatus = _serviceStatus as LiveData<Resource<ServiceStatus>>
