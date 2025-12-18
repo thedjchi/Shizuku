@@ -35,7 +35,7 @@ object ShizukuReceiverStarter {
 
         if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
             rootStart(context)
-        } else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isTelevision())
+        } else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isTelevision() || EnvironmentUtils.getAdbTcpPort() > 0)
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
                     AdbStartWorker.enqueue(context)
@@ -44,7 +44,7 @@ object ShizukuReceiverStarter {
                     showPermissionErrorNotification(context)
                 }
         } else {
-            Log.w(AppConstants.TAG, "No support start on boot")
+            Log.w(AppConstants.TAG, "Background start not supported")
         }
     }
 
