@@ -37,11 +37,13 @@
 \nSebagai catatan, Anda harus terhubung ke komputer untuk mengaktifkan debug nirkabel pada perangkat sebelum Android 11.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging tidak diaktifkan.\nHarap aktifkan di \"Opsi Pengembang\".</string>
     <string name="dialog_adb_pairing_message">Silakan mulai memasangkan dengan melakukan langkah-langkah berikut:\n- Arahkan ke \"Opsi Pengembang\"\n- Aktifkan \"Debugging USB\" dan \"Debugging Nirkabel\"\n- Ketuk sisi kiri \"Debugging Nirkabel\"\n- Ketuk \"Pasangkan perangkat dengan kode pemasangan\"\n- Masukkan kode pemasangan di notifikasi</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku mungkin tidak memiliki izin %1$s . Untuk memberikannya, jalankan perintah ADB berikut:%2$sJika Anda sudah menjalankan perintah tersebut, lanjutkan dengan proses pemasangan.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Harap aktifkan layanan aksesibilitas untuk memulai proses pemasangan. Ini memungkinkan Shizuku mendeteksi kode pemasangan.\n\nLayanan aksesibilitas akan dinonaktifkan ketika kode ditemukan atau setelah 1 menit untuk menghemat energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Silakan mulai pemasangan dengan melakukan langkah-langkah berikut:\n- Buka \"Opsi Pengembang\"\n- Aktifkan \"Debugging USB\" dan \"Debugging Nirkabel\"\n- Ketuk sisi kiri \"Debugging Nirkabel\"\n- Ketuk \"Pasangkan perangkat dengan kode pemasangan.\" Shizuku akan secara otomatis mendeteksi kode pemasangan.</string>
     <string name="adb_pairing_requires_multi_window">Harap pindah ke mode layar pisah (split-screen) terlebih dahulu.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem mengharuskan dialog pemasangan selalu terlihat. Menggunakan mode layar terpisah adalah satu-satunya cara agar aplikasi ini dan dialog sistem terlihat secara bersamaan.</string>
     <string name="adb_error_key_store">Tidak dapat membuat kunci untuk debugging nirkabel.\nIni mungkin karena mekanisme KeyStore perangkat ini rusak.</string>
+    <string name="adb_stopping_tcp">Menutup port TCP</string>
     <string name="adb_error_stop_tcp">Gagal menghentikan ADB melalui TCP</string>
     <string name="adb_pair_required">Harap lakukan penyambungan terlebih dahulu.</string>
     <string name="enable">Memungkinkan</string>
@@ -115,6 +117,8 @@
     <string name="settings_watchdog_summary">Mulai ulang Shizuku secara otomatis jika macet</string>
     <string name="settings_tcp_mode">modus TCP</string>
     <string name="settings_tcp_mode_summary">"Memungkinkan Shizuku untuk memulai ulang tanpa Wi-Fi. (Shizuku harus sudah memulai sekali sejak di-reboot)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Port TCP akan segera ditutup. Anda memerlukan Wi-Fi untuk mengaktifkan kembali mode TCP. Lanjutkan?"</string>
+    <string name="settings_tcp_mode_closing_port">Menutup port TCP...</string>
     <string name="settings_restart_dialog_title">Diperlukan Restart</string>
     <string name="settings_restart_dialog_message">Shizuku perlu memulai ulang untuk menerapkan pengaturan ini.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi diperlukan. Shizuku akan terus berjalan dan menunggu koneksi Wi-Fi sebelum memulai ulang di latar belakang.</b>]]></string>
@@ -145,6 +149,7 @@
     <string name="bug_report_dialog_button_issues">Lihat masalah</string>
     <string name="bug_report_dialog_method">Silakan kirimkan masalah di GitHub jika Anda memiliki akun.\n\nJika tidak, Anda dapat mengirim email.</string>
     <string name="bug_report_dialog_button_email">Kirim Email</string>
+    <string name="bug_report_dialog_button_github">Pergi ke $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port harus antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalisasi baterai harus dinonaktifkan agar dapat memulai saat boot/watchdog agar berfungsi dengan baik.</string>
