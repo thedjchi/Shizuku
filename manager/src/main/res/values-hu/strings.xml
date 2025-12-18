@@ -143,6 +143,7 @@
     <string name="bug_report_dialog_button_issues">Problémák megtekintése</string>
     <string name="bug_report_dialog_method">Kérjük, küldj egy problémát a GitHubon, ha van fiókod.\n\nEgyébként küldhetsz egy e-mailt is.</string>
     <string name="bug_report_dialog_button_email">E-mail küldése</string>
+    <string name="bug_report_dialog_button_github">Menj ide: %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A portszámnak 1 és 65535 között kell lennie.</string>
     <string name="snackbar_battery_optimization_home">A rendszerindításkor/watchdogkor történő indítás megfelelő működéséhez le kell tiltani az akkumulátoroptimalizálást.</string>
