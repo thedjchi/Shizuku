@@ -143,7 +143,7 @@
     <string name="bug_report_dialog_button_issues">Näytä ongelmat</string>
     <string name="bug_report_dialog_method">Lähetä ongelma GitHubissa, jos sinulla on tili.\n\nMuussa tapauksessa voit lähettää sähköpostia.</string>
     <string name="bug_report_dialog_button_email">Lähetä sähköpostia</string>
-    <string name="bug_report_dialog_button_github">Siirry kohtaan $1$</string>
+    <string name="bug_report_dialog_button_github">Siirry kohtaan %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portin tulee olla välillä 1–65535</string>
     <string name="snackbar_battery_optimization_home">Akun optimointi täytyy olla pois päältä, jotta käynnistys käynnistyksellä/watchdogilla toimisi kunnolla.</string>

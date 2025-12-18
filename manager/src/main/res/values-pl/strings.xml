@@ -145,7 +145,7 @@
     <string name="bug_report_dialog_button_issues">Wyświetl problemy</string>
     <string name="bug_report_dialog_method">Jeśli masz konto, zgłoś problem na GitHubie.\n\nW przeciwnym razie możesz wysłać wiadomość e-mail.</string>
     <string name="bug_report_dialog_button_email">Wyślij e-mail</string>
-    <string name="bug_report_dialog_button_github">Przejdź do $1$s</string>
+    <string name="bug_report_dialog_button_github">Przejdź do %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port musi mieścić się w zakresie od 1 do 65535</string>
     <string name="snackbar_battery_optimization_home">Aby start przy uruchomieniu systemu i nadzorowanie działały poprawnie, musisz wyłączyć optymalizację baterii.</string>

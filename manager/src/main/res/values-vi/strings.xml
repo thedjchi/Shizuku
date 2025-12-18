@@ -145,7 +145,7 @@
     <string name="bug_report_dialog_button_issues">Xem các vấn đề</string>
     <string name="bug_report_dialog_method">Vui lòng báo cáo sự cố trên GitHub nếu bạn có tài khoản.\n\nNếu không, bạn có thể gửi email.</string>
     <string name="bug_report_dialog_button_email">Gửi email</string>
-    <string name="bug_report_dialog_button_github">Đi đến $1$s</string>
+    <string name="bug_report_dialog_button_github">Đi đến %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Cổng phải nằm trong khoảng từ 1 đến 65535</string>
     <string name="snackbar_battery_optimization_home">Phải tắt tính năng tối ưu hóa pin để khởi động khi khởi động/theo dõi hoạt động bình thường.</string>

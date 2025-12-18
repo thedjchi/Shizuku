@@ -154,7 +154,7 @@
     <string name="bug_report_dialog_button_issues">عرض المشكلات</string>
     <string name="bug_report_dialog_method">يرجى تقديم بلاغ عن المشكلة على GitHub إذا كان لديك حساب.\n\nوإلا، يمكنك إرسال بريد إلكتروني.</string>
     <string name="bug_report_dialog_button_email">إرسال بريد إلكتروني</string>
-    <string name="bug_report_dialog_button_github">انتقل إلى $1$s</string>
+    <string name="bug_report_dialog_button_github">انتقل إلى %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">يجب أن يكون المنفذ بين 1 و 65535</string>
     <string name="snackbar_battery_optimization_home">يجب تعطيل تحسين البطارية حتى يعمل التشغيل عند التمهيد/مراقبة التشغيل بشكل صحيح.</string>

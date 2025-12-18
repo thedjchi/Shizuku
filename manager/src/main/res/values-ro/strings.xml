@@ -151,7 +151,7 @@
     <string name="bug_report_dialog_button_issues">Vizualizați problemele</string>
     <string name="bug_report_dialog_method">Te rugăm să trimiți o problemă pe GitHub dacă ai un cont.\n\nAltfel, poți trimite un e-mail.</string>
     <string name="bug_report_dialog_button_email">Trimiteți e-mail</string>
-    <string name="bug_report_dialog_button_github">Mergi la $1$s</string>
+    <string name="bug_report_dialog_button_github">Accesați %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portul trebuie să fie între 1 și 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizarea bateriei trebuie dezactivată pentru ca pornirea la pornire/funcția de supraveghere să funcționeze corect.</string>

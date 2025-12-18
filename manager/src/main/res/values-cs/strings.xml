@@ -152,7 +152,7 @@
     <string name="bug_report_dialog_button_issues">Zobrazit problémy</string>
     <string name="bug_report_dialog_method">Pokud máte účet, odešlete prosím problém na GitHub.\n\nPřípadně můžete poslat e-mail.</string>
     <string name="bug_report_dialog_button_email">Odeslat e-mail</string>
-    <string name="bug_report_dialog_button_github">Přejít na $1$s</string>
+    <string name="bug_report_dialog_button_github">Přejít na %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port musí být mezi 1 a 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalizace baterie musí být vypnutá, aby start při startu/watchdogu fungoval správně.</string>

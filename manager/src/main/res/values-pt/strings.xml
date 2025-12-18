@@ -150,7 +150,7 @@
     <string name="bug_report_dialog_button_issues">Ver problemas</string>
     <string name="bug_report_dialog_method">Por favor, abra uma issue no GitHub se tiver uma conta.\n\nCaso contrário, pode enviar um e-mail.</string>
     <string name="bug_report_dialog_button_email">Enviar e-mail</string>
-    <string name="bug_report_dialog_button_github">Aceda a $1$s</string>
+    <string name="bug_report_dialog_button_github">Aceda a %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A porta deve estar entre 1 e 65535.</string>
     <string name="snackbar_battery_optimization_home">A otimização da bateria deve estar desativada para que o arranque no arranque/vigilância funcione corretamente.</string>

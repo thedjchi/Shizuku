@@ -149,7 +149,7 @@
     <string name="bug_report_dialog_button_issues">查看問題</string>
     <string name="bug_report_dialog_method">如果您有 GitHub 帳戶，請在 GitHub 上提交問題。\n\n否則，您可以發送電子郵件。</string>
     <string name="bug_report_dialog_button_email">傳送電子郵件</string>
-    <string name="bug_report_dialog_button_github">前往 $1$s</string>
+    <string name="bug_report_dialog_button_github">前往 %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必須介於1到65535之間</string>
     <string name="snackbar_battery_optimization_home">啟動時啟動或看門狗的啟動功能必須關閉電池優化。</string>

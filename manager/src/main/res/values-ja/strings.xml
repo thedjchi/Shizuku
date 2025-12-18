@@ -149,7 +149,7 @@
     <string name="bug_report_dialog_button_issues">問題を表示</string>
     <string name="bug_report_dialog_method">アカウントをお持ちの場合は、GitHub で問題を送信してください。\n\nアカウントをお持ちでない場合は、メールを送信できます。</string>
     <string name="bug_report_dialog_button_email">メールを送信</string>
-    <string name="bug_report_dialog_button_github">$1$へ移動</string>
+    <string name="bug_report_dialog_button_github">%1$sへ移動</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">ポートは1～65535の範囲で指定する必要があります</string>
     <string name="snackbar_battery_optimization_home">起動/ウォッチドッグが正常に機能するには、バッテリー最適化を無効にする必要があります。</string>

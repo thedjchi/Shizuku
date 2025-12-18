@@ -143,7 +143,7 @@
     <string name="bug_report_dialog_button_issues">Προβολή ζητημάτων</string>
     <string name="bug_report_dialog_method">Παρακαλούμε υποβάλετε ένα πρόβλημα στο GitHub εάν έχετε λογαριασμό.\n\nΔιαφορετικά, μπορείτε να στείλετε ένα email.</string>
     <string name="bug_report_dialog_button_email">Αποστολή ηλεκτρονικού ταχυδρομείου</string>
-    <string name="bug_report_dialog_button_github">Μετάβαση στο $1$s</string>
+    <string name="bug_report_dialog_button_github">Μεταβείτε στο %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Η θύρα πρέπει να είναι μεταξύ 1 και 65535</string>
     <string name="snackbar_battery_optimization_home">Η βελτιστοποίηση μπαταρίας πρέπει να είναι απενεργοποιημένη για να λειτουργήσει σωστά η εκκίνηση κατά την εκκίνηση/επιτήρηση.</string>
