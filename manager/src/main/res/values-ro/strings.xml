@@ -37,11 +37,13 @@
 \nReține că înainte de Android 11, pentru a activa depanarea wireless, conexiunea la computer este o necesitate.</string>
     <string name="dialog_usb_debugging_not_enabled">Depanarea USB nu este activată.\nVă rugăm să o activați în „Opțiuni pentru dezvoltatori”.</string>
     <string name="dialog_adb_pairing_message">Vă rugăm să începeți asocierea urmând următorii pași:\n- Navigați la „Opțiuni pentru dezvoltatori”\n- Activați „Depanare USB” și „Depanare wireless”\n- Atingeți partea stângă a opțiunii „Depanare wireless”\n- Atingeți „Asocieți dispozitivul cu cod de asociere”\n- Introduceți codul de asociere în notificare</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Este posibil ca lui Shizuku să nu-i fie permisiunea %1$s . Pentru a o acorda, executați următoarea comandă ADB:%2$sDacă ați executat deja comanda, continuați procesul de asociere.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vă rugăm să activați serviciul de accesibilitate pentru a începe procesul de asociere. Acest lucru permite dispozitivului Shizuku să detecteze codul de asociere.\n\nServiciul de accesibilitate va fi dezactivat când codul este găsit sau după 1 minut pentru a economisi energie.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Vă rugăm să începeți asocierea urmând următorii pași:\n- Navigați la „Opțiuni pentru dezvoltatori”\n- Activați „Depanare USB” și „Depanare wireless”\n- Atingeți partea stângă a opțiunii „Depanare wireless”\n- Atingeți „Asocieți dispozitivul cu cod de asociere”. Shizuku va detecta automat codul de asociere.</string>
     <string name="adb_pairing_requires_multi_window">Intră mai întâi în modul ecran divizat (ferestre multiple).</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistemul cere ca dialogul de împerechere să fie mereu vizibil. Folosirea modului split-screen este singura modalitate de a lăsa această aplicație și dialogul de sistem să fie vizibile în același timp.</string>
     <string name="adb_error_key_store">Nu pot genera cheia pentru depanarea wireless.\nAcest lucru poate fi cauzat de faptul că mecanismul KeyStore al acestui dispozitiv este defect.</string>
+    <string name="adb_stopping_tcp">Închiderea portului TCP</string>
     <string name="adb_error_stop_tcp">Nu s-a putut opri ADB prin TCP</string>
     <string name="adb_pair_required">Parcurge mai întâi procesul de asociere.</string>
     <string name="enable">Permite</string>
@@ -117,6 +119,8 @@
     <string name="settings_watchdog_summary">Repornește automat Shizuku dacă se blochează</string>
     <string name="settings_tcp_mode">Mod TCP</string>
     <string name="settings_tcp_mode_summary">"Permite repornirea sistemului Shizuku fără Wi-Fi. (Shizuku trebuie să fi pornit o dată de la repornire)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Portul TCP va fi închis imediat. Veți avea nevoie de Wi-Fi pentru a reactiva modul TCP. Continuați?"</string>
+    <string name="settings_tcp_mode_closing_port">Se închide portul TCP...</string>
     <string name="settings_restart_dialog_title">Repornire necesară</string>
     <string name="settings_restart_dialog_message">Shizuku trebuie să repornească pentru a aplica această setare.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi este necesar. Shizuku va continua să ruleze și va aștepta o conexiune Wi-Fi înainte de a reporni în fundal.</b>]]></string>
@@ -147,6 +151,7 @@
     <string name="bug_report_dialog_button_issues">Vizualizați problemele</string>
     <string name="bug_report_dialog_method">Te rugăm să trimiți o problemă pe GitHub dacă ai un cont.\n\nAltfel, poți trimite un e-mail.</string>
     <string name="bug_report_dialog_button_email">Trimiteți e-mail</string>
+    <string name="bug_report_dialog_button_github">Mergi la $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portul trebuie să fie între 1 și 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizarea bateriei trebuie dezactivată pentru ca pornirea la pornire/funcția de supraveghere să funcționeze corect.</string>
