@@ -143,7 +143,6 @@
     <string name="bug_report_dialog_button_issues">Bekijk problemen</string>
     <string name="bug_report_dialog_method">Als je een account hebt, kun je een probleem melden op GitHub.\n\nAnders kun je een e-mail sturen.</string>
     <string name="bug_report_dialog_button_email">E-mail verzenden</string>
-    <string name="bug_report_dialog_button_github">Ga naar $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">De poort moet tussen 1 en 65535 liggen</string>
     <string name="snackbar_battery_optimization_home">Batterijoptimalisatie moet uitgeschakeld zijn om bij opstarten/watchdog goed te starten.</string>
