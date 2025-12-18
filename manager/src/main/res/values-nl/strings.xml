@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">Draadloos debuggen is niet ingeschakeld.\nLet op: vóór Android 11 is een computerverbinding noodzakelijk om draadloos debuggen mogelijk te maken.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-debugging is niet ingeschakeld.\nSchakel het alstublieft in in \"Ontwikkelaarsopties\".</string>
     <string name="dialog_adb_pairing_message">Begin met koppelen door de volgende stappen uit te voeren:\n- Navigeer naar \"Ontwikkelaarsopties\"\n- Schakel \"USB-foutopsporing\" en \"Draadloze foutopsporing\" in\n- Tik op de linkerkant van \"Draadloze foutopsporing\"\n- Tik op \"Apparaat koppelen met koppelingscode\"\n- Voer de koppelingscode in de melding in</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku mist mogelijk de %1$s -toestemming. Om deze te verlenen, voert u de volgende ADB-opdracht uit:%2$sAls u de opdracht al hebt uitgevoerd, kunt u verdergaan met het koppelingsproces.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Schakel alstublieft de toegankelijkheidsdienst in om het koppelingsproces te starten. Hierdoor kan Shizuku de koppelcode detecteren.\n\nDe toegankelijkheidsdienst wordt uitgeschakeld zodra de code is gevonden of na 1 minuut om energie te besparen.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Begin met koppelen door de volgende stappen uit te voeren:\n- Ga naar \'Ontwikkelaarsopties\'\n- Schakel \'USB-foutopsporing\' en \'Draadloze foutopsporing\' in\n- Tik op de linkerkant van \'Draadloze foutopsporing\'\n- Tik op \'Apparaat koppelen met koppelingscode\'. Shizuku detecteert de koppelingscode automatisch.</string>
     <string name="adb_pairing_requires_multi_window">Ga eerst in split-screen (multi-window) modus.</string>
     <string name="adb_pairing_requires_multi_window_reason">Het systeem vereist dat het koppelingsvenster altijd zichtbaar is. De splitscreenmodus is de enige manier om deze app en het systeemvenster tegelijkertijd zichtbaar te maken.</string>
     <string name="adb_error_key_store">Kan geen sleutel genereren voor draadloos debuggen.\nDit kan komen doordat het KeyStore-mechanisme van dit apparaat kapot is.</string>
+    <string name="adb_stopping_tcp">TCP-poort sluiten</string>
     <string name="adb_error_stop_tcp">Niet geslaagd om ADB via TCP te stoppen</string>
     <string name="adb_pair_required">Ga eerst door de koppelingsstap.</string>
     <string name="enable">Inschakelen</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">Shizuku automatisch opnieuw opstarten als het vastloopt</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Stelt Shizuku in staat om zonder wifi opnieuw te starten. (Shizuku moet sinds de reboot al eens begonnen zijn)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"De TCP-poort wordt onmiddellijk gesloten. U hebt wifi nodig om de TCP-modus opnieuw in te schakelen. Doorgaan?"</string>
+    <string name="settings_tcp_mode_closing_port">TCP-poort sluiten...</string>
     <string name="settings_restart_dialog_title">Opnieuw opstarten vereist</string>
     <string name="settings_restart_dialog_message">Shizuku moet opnieuw worden opgestart om deze instelling toe te passen.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wifi is vereist. Shizuku blijft draaien en wacht op een wifi-verbinding voordat het op de achtergrond opnieuw opstart.</b>]]></string>
@@ -139,6 +143,7 @@
     <string name="bug_report_dialog_button_issues">Bekijk problemen</string>
     <string name="bug_report_dialog_method">Als je een account hebt, kun je een probleem melden op GitHub.\n\nAnders kun je een e-mail sturen.</string>
     <string name="bug_report_dialog_button_email">E-mail verzenden</string>
+    <string name="bug_report_dialog_button_github">Ga naar $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">De poort moet tussen 1 en 65535 liggen</string>
     <string name="snackbar_battery_optimization_home">Batterijoptimalisatie moet uitgeschakeld zijn om bij opstarten/watchdog goed te starten.</string>
