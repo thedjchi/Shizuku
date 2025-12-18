@@ -143,7 +143,6 @@
     <string name="bug_report_dialog_button_issues">Visa problem</string>
     <string name="bug_report_dialog_method">Vänligen skicka in ett ärende på GitHub om du har ett konto.\n\nAnnars kan du skicka ett e-postmeddelande.</string>
     <string name="bug_report_dialog_button_email">Skicka e-post</string>
-    <string name="bug_report_dialog_button_github">Gå till $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Porten måste vara mellan 1 och 65535</string>
     <string name="snackbar_battery_optimization_home">Batterioptimering måste vara inaktiverad för att start vid uppstart/watchdog ska fungera korrekt.</string>
