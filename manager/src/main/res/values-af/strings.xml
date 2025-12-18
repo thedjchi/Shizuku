@@ -143,6 +143,7 @@
     <string name="bug_report_dialog_button_issues">Bekyk probleme</string>
     <string name="bug_report_dialog_method">Dien asseblief \'n probleem op GitHub in as jy \'n rekening het.\n\nAndersins kan jy \'n e-pos stuur.</string>
     <string name="bug_report_dialog_button_email">Stuur e-pos</string>
+    <string name="bug_report_dialog_button_github">Gaan na %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Poort moet tussen 1 en 65535 wees</string>
     <string name="snackbar_battery_optimization_home">Batteryoptimalisering moet gedeaktiveer wees vir die aanvang met selflaai/waghond om behoorlik te werk.</string>
