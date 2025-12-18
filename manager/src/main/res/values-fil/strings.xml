@@ -150,6 +150,7 @@
     <string name="bug_report_dialog_button_issues">Tingnan ang mga isyu</string>
     <string name="bug_report_dialog_method">Mangyaring magsumite ng isyu sa GitHub kung mayroon kang account.\n\nKung hindi, maaari kang magpadala ng email.</string>
     <string name="bug_report_dialog_button_email">Magpadala ng Email</string>
+    <string name="bug_report_dialog_button_github">Pumunta sa %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Ang port ay dapat na nasa pagitan ng 1 at 65535</string>
     <string name="snackbar_battery_optimization_home">Ang pag-optimize ng baterya ay dapat na hindi pinagana para sa pagsisimula sa boot / watchdog upang gumana nang maayos.</string>
