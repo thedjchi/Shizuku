@@ -143,6 +143,7 @@
     <string name="bug_report_dialog_button_issues">சிக்கல்களைக் காண்க</string>
     <string name="bug_report_dialog_method">உங்களிடம் கணக்கு இருந்தால் GitHub இல் ஒரு சிக்கலைச் சமர்ப்பிக்கவும்.\n\nஇல்லையெனில், நீங்கள் ஒரு மின்னஞ்சலை அனுப்பலாம்.</string>
     <string name="bug_report_dialog_button_email">மின்னஞ்சல் அனுப்பு</string>
+    <string name="bug_report_dialog_button_github">%1$sக்குச் செல்லவும்</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">போர்ட் 1 மற்றும் 65535 க்கு இடையில் இருக்க வேண்டும்.</string>
     <string name="snackbar_battery_optimization_home">துவக்கத்தில்/வாட்ச்டாக்கில் ஸ்டார்ட் சரியாக வேலை செய்ய பேட்டரி ஆப்டிமைசேஷன் முடக்கப்பட்டிருக்க வேண்டும்.</string>
