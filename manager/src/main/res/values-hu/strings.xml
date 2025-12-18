@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">Vezeték nélküli hibakeresés nincs engedélyezve.\nNe feledje, hogy az Android 11 előtt a vezeték nélküli hibakeresés engedélyezéséhez számítógépes csatlakozásra van szükség.</string>
     <string name="dialog_usb_debugging_not_enabled">Az USB hibakeresés nincs engedélyezve.\nKérjük, engedélyezze a „Fejlesztői beállítások” között.</string>
     <string name="dialog_adb_pairing_message">Kérjük, kezdje el a párosítást a következő lépések végrehajtásával:\n- Navigáljon a „Fejlesztői beállítások” menüpontra\n- Engedélyezze az „USB-hibakeresés” és a „Vezeték nélküli hibakeresés” lehetőséget\n- Koppintson a „Vezeték nélküli hibakeresés” bal oldalára\n- Koppintson az „Eszköz párosítása párosító kóddal” lehetőségre\n- Írja be az értesítésben megjelenő párosítási kódot</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Lehetséges, hogy a Shizuku-nak hiányzik a %1$s engedély. A megadásához futtassa a következő ADB parancsot:%2$sHa már futtatta a parancsot, folytassa a párosítási folyamatot.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Kérjük, engedélyezze az akadálymentesítési szolgáltatást a párosítási folyamat megkezdéséhez. Ez lehetővé teszi a Shizuku számára a párosítási kód észlelését.\n\nAz akadálymentesítési szolgáltatás kikapcsol, amikor a kód megtalálható, vagy 1 perc elteltével az energiatakarékosság érdekében.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Kérjük, kezdje el a párosítást a következő lépések végrehajtásával:\n- Navigáljon a „Fejlesztői beállítások” menüpontra\n- Engedélyezze az „USB hibakeresést” és a „Vezeték nélküli hibakeresést”\n- Koppintson a „Vezeték nélküli hibakeresés” bal oldalára\n- Koppintson az „Eszköz párosítása párosító kóddal” lehetőségre. A Shizuku automatikusan felismeri a párosító kódot.</string>
     <string name="adb_pairing_requires_multi_window">Kérjük, először lépjen az osztott képernyős (több ablakos) módba.</string>
     <string name="adb_pairing_requires_multi_window_reason">A rendszer megköveteli, hogy a párosítási párbeszédpanel mindig látható legyen. Az osztott képernyős mód használata az egyetlen módja annak, hogy ez az alkalmazás és a rendszerpárbeszédpanel egyszerre látható legyen.</string>
     <string name="adb_error_key_store">Nem sikerült kulcsot generálni a vezeték nélküli hibakereséshez.\nEnnek oka lehet, hogy az eszköz KeyStore mechanizmusa hibás.</string>
+    <string name="adb_stopping_tcp">TCP port lezárása</string>
     <string name="adb_error_stop_tcp">Nem sikerült leállítani az ADB-t TCP-n keresztül.</string>
     <string name="adb_pair_required">Kérjük először végezze el a párosítási lépést.</string>
     <string name="enable">Engedélyezés</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">A Shizuku automatikus újraindítása összeomlás esetén</string>
     <string name="settings_tcp_mode">TCP mód</string>
     <string name="settings_tcp_mode_summary">"Lehetővé teszi a Shizuku újraindítását Wi-Fi nélkül. (A Shizukunak egyszer el kellett indulnia az újraindítás óta.)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"A TCP port azonnal lezárásra kerül. A TCP mód újbóli bekapcsolásához Wi-Fi-kapcsolatra lesz szüksége. Folytatja?"</string>
+    <string name="settings_tcp_mode_closing_port">TCP port lezárása...</string>
     <string name="settings_restart_dialog_title">Újraindítás szükséges</string>
     <string name="settings_restart_dialog_message">A beállítás alkalmazásához újra kell indítani a Shizuku-t.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi szükséges. A Shizuku továbbra is fut, és Wi-Fi kapcsolatra vár, mielőtt újraindulna a háttérben.</b>]]></string>
@@ -139,6 +143,7 @@
     <string name="bug_report_dialog_button_issues">Problémák megtekintése</string>
     <string name="bug_report_dialog_method">Kérjük, küldj egy problémát a GitHubon, ha van fiókod.\n\nEgyébként küldhetsz egy e-mailt is.</string>
     <string name="bug_report_dialog_button_email">E-mail küldése</string>
+    <string name="bug_report_dialog_button_github">Menj a $1$-ra</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A portszámnak 1 és 65535 között kell lennie.</string>
     <string name="snackbar_battery_optimization_home">A rendszerindításkor/watchdogkor történő indítás megfelelő működéséhez le kell tiltani az akkumulátoroptimalizálást.</string>
