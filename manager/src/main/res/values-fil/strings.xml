@@ -37,11 +37,13 @@
 \nTandaan, kailangang kumonekta sa kompyuter para mabuksan ang wireless na pag-debug sa Android 10 pababa.</string>
     <string name="dialog_usb_debugging_not_enabled">Hindi pinagana ang pag-debug ng USB.\nMangyaring paganahin ito sa \"Mga Pagpipilian sa Developer\".</string>
     <string name="dialog_adb_pairing_message">Mangyaring simulan ang pagpapares sa pamamagitan ng pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian sa Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang aparato na may code ng pagpapares\"\n- Ipasok ang code ng pagpapares sa abiso</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Maaaring nawawala sa Shizuku ang pahintulot na %1$s . Para ibigay ito, patakbuhin ang sumusunod na utos ng ADB:%2$sKung naipatakbo mo na ang utos, ipagpatuloy ang proseso ng pagpapares.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Mangyaring paganahin ang serbisyo ng pag-access upang simulan ang proseso ng pagpapares. Pinapayagan nito si Shizuku na makita ang code ng pagpapares.\n\nAng serbisyo sa pag-access ay papatayin kapag natagpuan ang code o pagkatapos ng 1 minuto upang makatipid ng enerhiya.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Mangyaring simulan ang pagpapares sa pamamagitan ng pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian sa Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang device sa pagpapares ng code.\" Awtomatikong makikita ng Shizuku ang code ng pagpapares.</string>
     <string name="adb_pairing_requires_multi_window">Pumunta muna sa split-screen (multi-window) mode.</string>
     <string name="adb_pairing_requires_multi_window_reason">Kinakailangan ng system na laging nakikita ang dialog ng pagpapares. Ang paggamit ng split-screen mode ay ang tanging paraan upang hayaan ang app na ito at ang dialog ng system na makita sa parehong oras.</string>
     <string name="adb_error_key_store">Hindi makabuo ng key para sa wireless debugging.\nIto ay maaaring dahil ang mekanismo ng KeyStore ng device na ito ay sira.</string>
+    <string name="adb_stopping_tcp">Pagsasara ng TCP port</string>
     <string name="adb_error_stop_tcp">Nabigo na pigilan ang ADB sa TCP</string>
     <string name="adb_pair_required">Sundin muna ang mga hakbang sa pagpapares.</string>
     <string name="enable">Paganahin</string>
@@ -116,6 +118,8 @@
     <string name="settings_watchdog_summary">Awtomatikong i-restart ang Shizuku kung nag-crash ito</string>
     <string name="settings_tcp_mode">TCP mode</string>
     <string name="settings_tcp_mode_summary">"Pinapayagan ang Shizuku na mag-restart nang walang Wi-Fi. (Siguro minsan nang nagsimula si Shizuku mula nang mag-reboot)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Agad na isasara ang TCP port. Kakailanganin mo ng Wi-Fi para muling ma-on ang TCP mode. Magpatuloy?"</string>
+    <string name="settings_tcp_mode_closing_port">Isinasara ang TCP port...</string>
     <string name="settings_restart_dialog_title">I-restart ang Kinakailangan</string>
     <string name="settings_restart_dialog_message">Kailangang mag-restart ng Shizuku para mailapat ang setting na ito.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Kinakailangan ang Wi-Fi. Magpapatuloy sa pagtakbo ang Shizuku at maghihintay ng koneksyon sa Wi-Fi bago mag-restart sa background.</b>]]></string>
@@ -137,6 +141,16 @@
     <string name="settings_legacy_pairing">Pagpapares ng pamana</string>
     <string name="settings_legacy_pairing_summary">Ipasok ang code ng pagpapares sa isang dialog sa halip na isang abiso</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Una, mangyaring gawin ang sumusunod:</string>
+    <string name="bug_report_dialog_update">Tingnan kung ginagamit mo ang pinakabagong bersyon ng Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Tingnan ang pinakabagong release</string>
+    <string name="bug_report_dialog_wiki">Basahin ang wiki at sundin ang lahat ng nauugnay na hakbang sa pag-troubleshoot.</string>
+    <string name="bug_report_dialog_button_wiki">Tingnan ang wiki</string>
+    <string name="bug_report_dialog_issues">Maghanap sa lahat ng umiiral na isyu upang makita kung naiulat na ang iyong bug/feature.</string>
+    <string name="bug_report_dialog_button_issues">Tingnan ang mga isyu</string>
+    <string name="bug_report_dialog_method">Mangyaring magsumite ng isyu sa GitHub kung mayroon kang account.\n\nKung hindi, maaari kang magpadala ng email.</string>
+    <string name="bug_report_dialog_button_email">Magpadala ng Email</string>
+    <string name="bug_report_dialog_button_github">Pumunta sa $1$</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Ang port ay dapat na nasa pagitan ng 1 at 65535</string>
     <string name="snackbar_battery_optimization_home">Ang pag-optimize ng baterya ay dapat na hindi pinagana para sa pagsisimula sa boot / watchdog upang gumana nang maayos.</string>

@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">Langaton virheenkorjaus ei ole käytössä.\nHuomaa, että ennen Android 11:tä, langattoman virheenkorjauksen mahdollistamiseksi tietokoneyhteys oli välttämätön.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-virheenkorjaus ei ole käytössä.\nOta se käyttöön kohdassa \"Kehittäjäasetukset\".</string>
     <string name="dialog_adb_pairing_message">Aloita pariliitos suorittamalla seuraavat vaiheet:\n- Siirry kohtaan \"Kehittäjäasetukset\"\n- Ota käyttöön \"USB-virheenkorjaus\" ja \"Langaton virheenkorjaus\"\n- Napauta \"Langaton virheenkorjaus\" -kohdan vasenta puolta\n- Napauta \"Yhdistä laite pariliitoskoodilla\"\n- Syötä pariliitoskoodi ilmoitukseen</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizukulta saattaa puuttua %1$s -käyttöoikeus. Myöntääksesi sen, suorita seuraava ADB-komento:%2$sJos olet jo suorittanut komennon, jatka pariliitoksen muodostamista.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Ole hyvä ja ota saavutettavuuspalvelu käyttöön aloittaaksesi paritusprosessin. Tämä mahdollistaa Shizukun tunnistaa parituskoodin.\n\nEsteettömyyspalvelu kytketään pois päältä, kun koodi löytyy, tai minuutin kuluttua energian säästämiseksi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Aloita pariliitos suorittamalla seuraavat vaiheet:\n- Siirry kohtaan \"Kehittäjäasetukset\"\n- Ota käyttöön \"USB-virheenkorjaus\" ja \"Langaton virheenkorjaus\"\n- Napauta \"Langaton virheenkorjaus\" -kohdan vasenta puolta\n- Napauta \"Yhdistä laite pariliitoskoodilla\". Shizuku tunnistaa pariliitoskoodin automaattisesti.</string>
     <string name="adb_pairing_requires_multi_window">Siirry ensin jaetun ruudun (moniikkuna) tilaan.</string>
     <string name="adb_pairing_requires_multi_window_reason">Järjestelmä vaatii, että pariliitosvalintaikkuna on aina näkyvissä. Jaetun näytön tilan käyttö on ainoa tapa, jolla tämä sovellus ja järjestelmävalintaikkuna voivat olla näkyvissä samanaikaisesti.</string>
     <string name="adb_error_key_store">Langattoman virheenkorjauksen avaimen luominen epäonnistui.\nTämä voi johtua siitä, että laitteen KeyStore-mekanismi on rikki.</string>
+    <string name="adb_stopping_tcp">TCP-portin sulkeminen</string>
     <string name="adb_error_stop_tcp">ADB:n pysäyttäminen TCP:n kautta epäonnistui</string>
     <string name="adb_pair_required">Käy ensin läpi paritusvaihe.</string>
     <string name="enable">Ottaa käyttöön</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">Käynnistä Shizuku automaattisesti uudelleen, jos se kaatuu</string>
     <string name="settings_tcp_mode">TCP-tila</string>
     <string name="settings_tcp_mode_summary">"Sallii Shizukun aloittaa uudelleen ilman Wi-Fiä. (Shizuku on varmaan aloittanut kerran uudelleenkäynnistyksen jälkeen)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP-portti suljetaan välittömästi. Tarvitset Wi-Fi-yhteyden ottaaksesi TCP-tilan uudelleen käyttöön. Jatketaanko?"</string>
+    <string name="settings_tcp_mode_closing_port">TCP-porttia suljetaan...</string>
     <string name="settings_restart_dialog_title">Uudelleenkäynnistys vaaditaan</string>
     <string name="settings_restart_dialog_message">Shizuku on käynnistettävä uudelleen, jotta tämä asetus otetaan käyttöön.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi-yhteys vaaditaan. Shizuku jatkaa toimintaansa ja odottaa Wi-Fi-yhteyttä ennen uudelleenkäynnistystä taustalla.</b>]]></string>
@@ -130,6 +134,16 @@
     <string name="settings_legacy_pairing">Perintöpari</string>
     <string name="settings_legacy_pairing_summary">Syötä parituskoodi dialogiin ilmoituksen sijaan</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Tee ensin seuraavat toimenpiteet:</string>
+    <string name="bug_report_dialog_update">Tarkista, että käytät Shizukun uusinta versiota.</string>
+    <string name="bug_report_dialog_button_update">Näytä uusin julkaisu</string>
+    <string name="bug_report_dialog_wiki">Lue wiki ja noudata kaikkia asiaankuuluvia vianmääritysohjeita.</string>
+    <string name="bug_report_dialog_button_wiki">Näytä wiki</string>
+    <string name="bug_report_dialog_issues">Hae läpi kaikki olemassa olevat ongelmat nähdäksesi, onko bugistasi/ominaisuudestasi jo ilmoitettu.</string>
+    <string name="bug_report_dialog_button_issues">Näytä ongelmat</string>
+    <string name="bug_report_dialog_method">Lähetä ongelma GitHubissa, jos sinulla on tili.\n\nMuussa tapauksessa voit lähettää sähköpostia.</string>
+    <string name="bug_report_dialog_button_email">Lähetä sähköpostia</string>
+    <string name="bug_report_dialog_button_github">Siirry kohtaan $1$</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portin tulee olla välillä 1–65535</string>
     <string name="snackbar_battery_optimization_home">Akun optimointi täytyy olla pois päältä, jotta käynnistys käynnistyksellä/watchdogilla toimisi kunnolla.</string>

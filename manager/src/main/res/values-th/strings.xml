@@ -37,11 +37,13 @@
 \nหมายเหตุ หาก Android เป็นรุ่นที่เก่ากว่า 11 การจะเปิดการแก้ไขข้อบกพร่องผ่าน Wi-Fi จำเป็นต้องมีการเชื่อมต่อกับคอมพิวเตอร์</string>
     <string name="dialog_usb_debugging_not_enabled">การดีบัก USB ไม่ได้เปิดใช้งาน\nโปรดเปิดใช้งานใน \"ตัวเลือกสำหรับนักพัฒนา\"</string>
     <string name="dialog_adb_pairing_message">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้:\n- ไปที่ \"ตัวเลือกสำหรับนักพัฒนา\"\n- เปิดใช้งาน \"การแก้จุดบกพร่อง USB\" และ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะด้านซ้ายของ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะ \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\"\n- ป้อนรหัสจับคู่ในข้อความแจ้งเตือน</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku อาจไม่มีสิทธิ์ %1$s หากต้องการให้สิทธิ์ ให้รันคำสั่ง ADB ต่อไปนี้:%2$sหากคุณรันคำสั่งนี้แล้ว ให้ดำเนินการจับคู่ต่อไป</string>
     <string name="dialog_adb_pairing_accessibility_enable">กรุณาเปิดใช้งานบริการการเข้าถึงเพื่อเริ่มขั้นตอนการจับคู่ ซึ่งจะทำให้ Shizuku สามารถตรวจจับรหัสการจับคู่ได้\n\nบริการการเข้าถึงจะถูกปิดเมื่อพบรหัส หรือหลังจาก 1 นาที เพื่อประหยัดพลังงาน</string>
     <string name="dialog_adb_pairing_accessibility_navigate">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้:\n- ไปที่ \"ตัวเลือกสำหรับนักพัฒนา\"\n- เปิดใช้งาน \"การแก้จุดบกพร่อง USB\" และ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะด้านซ้ายของ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะ \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" Shizuku จะตรวจจับรหัสจับคู่โดยอัตโนมัติ</string>
     <string name="adb_pairing_requires_multi_window">โปรดเข้าสู่โหมดแยกหน้าจอ (หลายหน้าต่าง) ก่อน</string>
     <string name="adb_pairing_requires_multi_window_reason">ระบบต้องการกล่องโต้ตอบการจับคู่เพื่อให้มองเห็นได้ตลอดเวลา การใช้โหมดแบ่งหน้าจอเป็นวิธีเดียวที่จะทําให้แอปนี้และกล่องโต้ตอบระบบมองเห็นได้พร้อมกัน</string>
     <string name="adb_error_key_store">ไม่สามารถสร้างคีย์สําหรับการดีบักแบบไร้สาย\nอาจเป็นเพราะกลไก KeyStore ของอุปกรณ์นี้เสีย</string>
+    <string name="adb_stopping_tcp">ปิดพอร์ต TCP</string>
     <string name="adb_error_stop_tcp">ไม่สามารถหยุด ADB ผ่าน TCP ได้</string>
     <string name="adb_pair_required">โปรดทำขั้นตอนการจับคู่ก่อน</string>
     <string name="enable">เปิดใช้งาน</string>
@@ -115,6 +117,8 @@
     <string name="settings_watchdog_summary">รีสตาร์ทชิซูกุโดยอัตโนมัติหากเกิดการขัดข้อง</string>
     <string name="settings_tcp_mode">โหมด TCP</string>
     <string name="settings_tcp_mode_summary">"ช่วยให้ชิซึกุสามารถรีสตาร์ทได้โดยไม่ต้องใช้ Wi-Fi (ชิซึกุต้องเริ่มใหม่ครั้งหนึ่งหลังจากรีบูต)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"พอร์ต TCP จะถูกปิดทันที คุณจะต้องใช้ Wi-Fi เพื่อเปิดใช้งานโหมด TCP อีกครั้ง ดำเนินการต่อหรือไม่?"</string>
+    <string name="settings_tcp_mode_closing_port">กำลังปิดพอร์ต TCP...</string>
     <string name="settings_restart_dialog_title">จำเป็นต้องรีสตาร์ท</string>
     <string name="settings_restart_dialog_message">Shizuku ต้องรีสตาร์ทเพื่อใช้การตั้งค่านี้</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>จําเป็นต้องใช้ Wi-Fi Shizuku จะทํางานต่อไปและรอการเชื่อมต่อ Wi-Fi ก่อนที่จะรีสตาร์ทในพื้นหลัง</b>]]></string>
@@ -136,6 +140,16 @@
     <string name="settings_legacy_pairing">การจับคู่แบบมรดก</string>
     <string name="settings_legacy_pairing_summary">ป้อนรหัสการจับคู่ในกล่องโต้ตอบแทนการแจ้งเตือน</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">ขั้นแรก โปรดทำตามขั้นตอนต่อไปนี้:</string>
+    <string name="bug_report_dialog_update">โปรดตรวจสอบให้แน่ใจว่าคุณกำลังใช้ Shizuku เวอร์ชันล่าสุด</string>
+    <string name="bug_report_dialog_button_update">ดูเวอร์ชันล่าสุด</string>
+    <string name="bug_report_dialog_wiki">อ่านวิกิและทำตามขั้นตอนการแก้ไขปัญหาที่เกี่ยวข้องทั้งหมด</string>
+    <string name="bug_report_dialog_button_wiki">ดูวิกิ</string>
+    <string name="bug_report_dialog_issues">ตรวจสอบปัญหาที่มีอยู่ทั้งหมดเพื่อดูว่ามีรายงานข้อผิดพลาด/ฟีเจอร์ของคุณแล้วหรือไม่</string>
+    <string name="bug_report_dialog_button_issues">ดูปัญหา</string>
+    <string name="bug_report_dialog_method">หากคุณมีบัญชี GitHub โปรดแจ้งปัญหาผ่าน GitHub\n\nหรือส่งอีเมลมาก็ได้</string>
+    <string name="bug_report_dialog_button_email">ส่งอีเมล</string>
+    <string name="bug_report_dialog_button_github">ไปที่ $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">พอร์ตต้องอยู่ระหว่าง 1 ถึง 65535</string>
     <string name="snackbar_battery_optimization_home">จะต้องปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อให้เริ่มทำงานเมื่อบูตเครื่อง/เฝ้าระวังเพื่อให้ทำงานได้อย่างถูกต้อง</string>

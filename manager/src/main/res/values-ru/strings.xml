@@ -37,11 +37,13 @@
 \nВнимание: на системах старше Android 11 для включения этой отладки необходимо соединение с компьютером.</string>
     <string name="dialog_usb_debugging_not_enabled">Отладка по USB не включена.\nВключите её в «Параметрах разработчика».</string>
     <string name="dialog_adb_pairing_message">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Сопарить устройство с кодом сопряжения»\n- Введите код сопряжения в уведомление</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Возможно, у Shizuku отсутствует разрешение %1$s . Чтобы его предоставить, выполните следующую команду ADB:%2$s. Если вы уже выполнили эту команду, продолжите процесс сопряжения.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Включите службу специальных возможностей, чтобы начать процесс сопряжения. Это позволит Shizuku обнаружить код сопряжения.\n\nСлужба специальных возможностей будет отключена после обнаружения кода или через 1 минуту для экономии энергии.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Сопарить устройство с кодом сопряжения». Сидзуку автоматически обнаружит код пары.</string>
     <string name="adb_pairing_requires_multi_window">Пожалуйста, сначала активируйте режим разделения экрана (многооконный режим).</string>
     <string name="adb_pairing_requires_multi_window_reason">Система требует, чтобы диалог с сопряжением всегда был видим. Использование режима разделённого экрана — единственный способ одновременно видеть это приложение и системный диалог.</string>
     <string name="adb_error_key_store">Не удаётся сгенерировать ключ для беспроводной отладки.\nВозможно, это связано с поломанным механизмом KeyStore этого устройства.</string>
+    <string name="adb_stopping_tcp">Закрытие TCP-порта</string>
     <string name="adb_error_stop_tcp">Не удалось остановить ADB через TCP</string>
     <string name="adb_pair_required">Пожалуйста, сперва пройдите процедуру сопряжения.</string>
     <string name="enable">Давать возможность</string>
@@ -118,6 +120,8 @@
     <string name="settings_watchdog_summary">Автоматически перезапускать Shizuku в случае сбоя</string>
     <string name="settings_tcp_mode">TCP-режим</string>
     <string name="settings_tcp_mode_summary">"Позволяет Shizuku перезапуститься без Wi-Fi. (Shizuku должен был запуститься один раз после перезагрузки)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP-порт будет немедленно закрыт. Для повторного включения TCP-режима потребуется Wi-Fi. Продолжить?"</string>
+    <string name="settings_tcp_mode_closing_port">Закрытие TCP-порта...</string>
     <string name="settings_restart_dialog_title">Требуется перезагрузка</string>
     <string name="settings_restart_dialog_message">Сидзуку нужно начать заново, чтобы применить этот сеттинг.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Требуется Wi-Fi. Шизуку продолжит работу и ждёт Wi-Fi подключения, прежде чем перезагрузить в фоновом режиме.</b>]]></string>
@@ -139,6 +143,16 @@
     <string name="settings_legacy_pairing">Устаревшее сопряжение</string>
     <string name="settings_legacy_pairing_summary">Введите код сопряжения в диалоговом окне вместо уведомления.</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Для начала выполните следующие действия:</string>
+    <string name="bug_report_dialog_update">Убедитесь, что вы используете последнюю версию Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Посмотреть последнюю версию</string>
+    <string name="bug_report_dialog_wiki">Ознакомьтесь с информацией в вики и выполните все соответствующие шаги по устранению неполадок.</string>
+    <string name="bug_report_dialog_button_wiki">Посмотреть вики</string>
+    <string name="bug_report_dialog_issues">Просмотрите все существующие сообщения об ошибках, чтобы узнать, не была ли уже зарегистрирована ваша ошибка/функция.</string>
+    <string name="bug_report_dialog_button_issues">Просмотреть вопросы</string>
+    <string name="bug_report_dialog_method">Если у вас есть учетная запись, пожалуйста, создайте заявку на GitHub.\n\nВ противном случае вы можете отправить электронное письмо.</string>
+    <string name="bug_report_dialog_button_email">Отправить электронное письмо</string>
+    <string name="bug_report_dialog_button_github">Перейти к $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт должен быть от 1 до 65535.</string>
     <string name="snackbar_battery_optimization_home">Для корректной работы функции оптимизации батареи необходимо отключить запуск при загрузке/сторожевом таймере.</string>

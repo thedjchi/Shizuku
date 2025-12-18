@@ -37,11 +37,13 @@
 \nملاحظة ، قبل Android 11 ، لتمكين التصحيح اللاسلكي ، يجب أن يكون الاتصال بالكمبيوتر أمرًا ضروريًا.</string>
     <string name="dialog_usb_debugging_not_enabled">لم يتم تمكين تصحيح أخطاء USB.\nيرجى تمكينه في \"خيارات المطور\".</string>
     <string name="dialog_adb_pairing_message">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\"\n- أدخل رمز الاقتران في الإشعار</string>
+    <string name="dialog_adb_pairing_accessibility_permission">قد لا تملك شيزوكو إذن %1$s . لمنحه، نفّذ أمر ADB التالي:%2$s. إذا كنت قد نفّذت الأمر بالفعل، فتابع عملية الاقتران.</string>
     <string name="dialog_adb_pairing_accessibility_enable">يرجى تفعيل خدمة إمكانية الوصول لبدء عملية الاقتران. هذا يسمح لـ Shizuku باكتشاف رمز الاقتران.\n\nسيتم إيقاف خدمة إمكانية الوصول عند العثور على الرمز أو بعد دقيقة واحدة لتوفير الطاقة.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\". سيكتشف Shizuku رمز الاقتران تلقائيًا.</string>
     <string name="adb_pairing_requires_multi_window">الرجاء إدخال وضع تقسيم الشاشة (متعدد النوافذ) أولاً.</string>
     <string name="adb_pairing_requires_multi_window_reason">يتطلب النظام أن يكون مربع حوار الاقتران مرئيًا دائمًا. استخدام وضع تقسيم الشاشة هو الطريقة الوحيدة لإظهار هذا التطبيق ومربع حوار النظام في آنٍ واحد.</string>
     <string name="adb_error_key_store">غير قادر على إنشاء مفتاح لتصحيح الأخطاء اللاسلكية.\nقد يكون هذا بسبب تعطل آلية KeyStore لهذا الجهاز.</string>
+    <string name="adb_stopping_tcp">إغلاق منفذ TCP</string>
     <string name="adb_error_stop_tcp">فشل في إيقاف ADB عبر TCP</string>
     <string name="adb_pair_required">يرجى المرور بخطوة الاقتران أولاً.</string>
     <string name="enable">يُمكَِن</string>
@@ -120,6 +122,8 @@
     <string name="settings_watchdog_summary">إعادة تشغيل Shizuku تلقائيًا في حالة تعطله</string>
     <string name="settings_tcp_mode">وضع TCP</string>
     <string name="settings_tcp_mode_summary">"يسمح لـ Shizuku بإعادة التشغيل دون اتصال Wi-Fi. (يجب أن يكون Shizuku قد بدأ مرة واحدة بعد إعادة التشغيل)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"سيتم إغلاق منفذ TCP فورًا. ستحتاج إلى اتصال Wi-Fi لإعادة تشغيل وضع TCP. هل تريد المتابعة؟"</string>
+    <string name="settings_tcp_mode_closing_port">إغلاق منفذ TCP...</string>
     <string name="settings_restart_dialog_title">مطلوب إعادة التشغيل</string>
     <string name="settings_restart_dialog_message">يجب على Shizuku إعادة التشغيل لتطبيق هذا الإعداد.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>يتطلب اتصالاً لاسلكياً. سيستمر شيزوكو بالعمل وينتظر اتصالاً لاسلكياً قبل إعادة التشغيل في الخلفية.</b>]]></string>
@@ -141,6 +145,16 @@
     <string name="settings_legacy_pairing">الاقتران القديم</string>
     <string name="settings_legacy_pairing_summary">أدخل رمز الاقتران في مربع حوار بدلاً من الإشعار</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">أولاً، يرجى القيام بما يلي:</string>
+    <string name="bug_report_dialog_update">تأكد من أنك تستخدم أحدث إصدار من برنامج شيزوكو.</string>
+    <string name="bug_report_dialog_button_update">اطلع على أحدث إصدار</string>
+    <string name="bug_report_dialog_wiki">اقرأ صفحة الويكي واتبع جميع خطوات استكشاف الأخطاء وإصلاحها ذات الصلة.</string>
+    <string name="bug_report_dialog_button_wiki">عرض ويكي</string>
+    <string name="bug_report_dialog_issues">ابحث في جميع المشكلات الموجودة لمعرفة ما إذا كان قد تم الإبلاغ عن الخطأ/الميزة الخاصة بك بالفعل.</string>
+    <string name="bug_report_dialog_button_issues">عرض المشكلات</string>
+    <string name="bug_report_dialog_method">يرجى تقديم بلاغ عن المشكلة على GitHub إذا كان لديك حساب.\n\nوإلا، يمكنك إرسال بريد إلكتروني.</string>
+    <string name="bug_report_dialog_button_email">إرسال بريد إلكتروني</string>
+    <string name="bug_report_dialog_button_github">انتقل إلى $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">يجب أن يكون المنفذ بين 1 و 65535</string>
     <string name="snackbar_battery_optimization_home">يجب تعطيل تحسين البطارية حتى يعمل التشغيل عند التمهيد/مراقبة التشغيل بشكل صحيح.</string>

@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">Trådløs feilsøking er ikke aktivert.\nMerk at før Android 11 er det nødvendig med en datamaskintilkobling for å aktivere trådløs feilsøking.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-feilsøking er ikke aktivert.\nAktiver det i «Utvikleralternativer».</string>
     <string name="dialog_adb_pairing_message">Start paringen ved å utføre følgende trinn:\n- Naviger til \"Utvikleralternativer\"\n- Aktiver \"USB-feilsøking\" og \"Trådløs feilsøking\"\n- Trykk på venstre side av \"Trådløs feilsøking\"\n- Trykk på \"Par enhet med paringskode\"\n- Skriv inn paringskoden i varselet</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku mangler kanskje tillatelsen %1$s . For å gi den, kjør følgende ADB-kommando:%2$sHvis du allerede har kjørt kommandoen, fortsett med paringsprosessen.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vennligst aktiver tilgjengelighetstjenesten for å starte paringsprosessen. Dette lar Shizuku oppdage paringskoden.\n\nTilgjengelighetstjenesten slås av når koden blir funnet, eller etter 1 minutt for å spare energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Start paringen ved å utføre følgende trinn:\n– Naviger til «Utvikleralternativer»\n– Aktiver «USB-feilsøking» og «Trådløs feilsøking»\n– Trykk på venstre side av «Trådløs feilsøking»\n– Trykk på «Par enhet med paringskode». Shizuku vil automatisk oppdage paringskoden.</string>
     <string name="adb_pairing_requires_multi_window">Vennligst aktiver delt skjermmodus (flere vinduer) først.</string>
     <string name="adb_pairing_requires_multi_window_reason">Systemet krever at paringsdialogen alltid er synlig. Å bruke delt skjerm-modus er den eneste måten å la denne appen og systemdialogen være synlige samtidig.</string>
     <string name="adb_error_key_store">Kan ikke generere nøkkel for trådløs feilsøking.\nDette kan skyldes at KeyStore-mekanismen til denne enheten er ødelagt.</string>
+    <string name="adb_stopping_tcp">Lukker TCP-porten</string>
     <string name="adb_error_stop_tcp">Klarte ikke å stoppe ADB over TCP</string>
     <string name="adb_pair_required">Gå gjennom paringstrinnet først.</string>
     <string name="enable">Aktivere</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">Start Shizuku automatisk på nytt hvis den krasjer</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Lar Shizuku starte på nytt uten Wi-Fi. (Shizuku må ha startet én gang siden omstarten)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP-porten vil bli stengt umiddelbart. Du trenger Wi-Fi for å slå på TCP-modus igjen. Vil du fortsette?"</string>
+    <string name="settings_tcp_mode_closing_port">Lukker TCP-porten...</string>
     <string name="settings_restart_dialog_title">Omstart kreves</string>
     <string name="settings_restart_dialog_message">Shizuku må starte på nytt for å kunne bruke denne innstillingen.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi er påkrevd. Shizuku fortsetter å kjøre og venter på Wi-Fi-tilkobling før han starter på nytt i bakgrunnen.</b>]]></string>
@@ -130,6 +134,16 @@
     <string name="settings_legacy_pairing">Legacy-paring</string>
     <string name="settings_legacy_pairing_summary">Skriv inn paringskoden i en dialogboks i stedet for i en varsling</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Først, vennligst gjør følgende:</string>
+    <string name="bug_report_dialog_update">Sjekk at du bruker den nyeste versjonen av Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Se siste utgivelse</string>
+    <string name="bug_report_dialog_wiki">Les wikien og følg alle relevante feilsøkingstrinn.</string>
+    <string name="bug_report_dialog_button_wiki">Vis wikien</string>
+    <string name="bug_report_dialog_issues">Søk gjennom alle eksisterende problemer for å se om feilen/funksjonen din allerede er rapportert.</string>
+    <string name="bug_report_dialog_button_issues">Vis problemer</string>
+    <string name="bug_report_dialog_method">Send inn et problem på GitHub hvis du har en konto.\n\nEllers kan du sende en e-post.</string>
+    <string name="bug_report_dialog_button_email">Send e-post</string>
+    <string name="bug_report_dialog_button_github">Gå til $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Porten må være mellom 1 og 65535</string>
     <string name="snackbar_battery_optimization_home">Batterioptimalisering må deaktiveres for at oppstart på oppstart/watchdog skal fungere riktig.</string>

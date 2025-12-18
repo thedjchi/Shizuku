@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">வயர்லெஸ் பிழைத்திருத்தம் இயக்கப்படவில்லை.\nகுறிப்பு, Android 11 க்கு முன், வயர்லெஸ் பிழைத்திருத்தத்தை இயக்க, கணினி இணைப்பு அவசியம்.</string>
     <string name="dialog_usb_debugging_not_enabled">USB பிழைத்திருத்தம் இயக்கப்படவில்லை.\n\"டெவலப்பர் விருப்பங்கள்\" என்பதில் அதை இயக்கவும்.</string>
     <string name="dialog_adb_pairing_message">பின்வரும் படிகளைச் செய்வதன் மூலம் இணைக்கத் தொடங்குங்கள்:\n- \"டெவலப்பர் விருப்பங்கள்\" என்பதற்குச் செல்லவும்\n- \"USB பிழைத்திருத்தம்\" மற்றும் \"வயர்லெஸ் பிழைத்திருத்தம்\" என்பதை இயக்கவும்\n- \"வயர்லெஸ் பிழைத்திருத்தம்\" இன் இடது பக்கத்தைத் தட்டவும்\n- \"இணைப்பு குறியீட்டுடன் சாதனத்தை இணை\" என்பதைத் தட்டவும்\n- அறிவிப்பில் இணைத்தல் குறியீட்டை உள்ளிடவும்</string>
+    <string name="dialog_adb_pairing_accessibility_permission">ஷிசுகுவில் %1$s அனுமதி இல்லாமல் இருக்கலாம். அதை வழங்க, பின்வரும் ADB கட்டளையை இயக்கவும்:%2$sநீங்கள் ஏற்கனவே கட்டளையை இயக்கியிருந்தால், இணைத்தல் செயல்முறையைத் தொடரவும்.</string>
     <string name="dialog_adb_pairing_accessibility_enable">இணைத்தல் செயல்முறையைத் தொடங்க அணுகல் சேவையை இயக்கவும். இது ஷிசுகுவை இணைத்தல் குறியீட்டைக் கண்டறிய அனுமதிக்கிறது.\n\nகுறியீடு கண்டுபிடிக்கப்பட்டதும் அல்லது 1 நிமிடத்திற்குப் பிறகு ஆற்றலைச் சேமிக்க அணுகல் சேவை முடக்கப்படும்.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">பின்வரும் படிகளைச் செய்வதன் மூலம் இணைக்கத் தொடங்குங்கள்:\n- \"டெவலப்பர் விருப்பங்கள்\" என்பதற்குச் செல்லவும்\n- \"USB பிழைத்திருத்தம்\" மற்றும் \"வயர்லெஸ் பிழைத்திருத்தம்\" என்பதை இயக்கவும்\n- \"வயர்லெஸ் பிழைத்திருத்தத்தின்\" இடது பக்கத்தைத் தட்டவும்\n- \"இணைப்பு குறியீட்டுடன் சாதனத்தை இணை\" என்பதைத் தட்டவும். ஷிசுகு தானாகவே இணை குறியீட்டைக் கண்டறியும்.</string>
     <string name="adb_pairing_requires_multi_window">முதலில் பிளவு-திரை (பல-சாளர) பயன்முறையை உள்ளிடவும்.</string>
     <string name="adb_pairing_requires_multi_window_reason">முறைமைக்கு இணைத்தல் உரையாடல் எப்போதும் தெரியும். பிளவு-திரை பயன்முறையைப் பயன்படுத்துவது இந்த பயன்பாடு மற்றும் கணினி உரையாடலை ஒரே நேரத்தில் காண அனுமதிக்கும் ஒரே வழியாகும்.</string>
     <string name="adb_error_key_store">கம்பியில்லா பிழைத்திருத்தத்திற்கான விசையை உருவாக்க இயலவில்லை.\nஇந்த சாதனத்தின் கீஸ்டோர் பொறிமுறை உடைந்துவிட்டதால் இது இருக்கலாம்.</string>
+    <string name="adb_stopping_tcp">TCP போர்ட்டை மூடுகிறது</string>
     <string name="adb_error_stop_tcp">TCP வழியாக ADB ஐ நிறுத்த முடியவில்லை.</string>
     <string name="adb_pair_required">முதலில் இணைத்தல் படிக்குச் செல்லவும்.</string>
     <string name="enable">இயக்கு</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">ஷிசுகு செயலிழந்தால் தானாகவே மறுதொடக்கம் செய்யுங்கள்.</string>
     <string name="settings_tcp_mode">TCP பயன்முறை</string>
     <string name="settings_tcp_mode_summary">"Wi-Fi இல்லாமல் Shizukuவை மறுதொடக்கம் செய்ய அனுமதிக்கிறது. (மறுதொடக்கம் செய்யப்பட்டதிலிருந்து Shizuku ஒரு முறை தொடங்கியிருக்க வேண்டும்)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP போர்ட் உடனடியாக மூடப்படும். TCP பயன்முறையை மீண்டும் இயக்க உங்களுக்கு Wi-Fi தேவைப்படும். தொடரவா?"</string>
+    <string name="settings_tcp_mode_closing_port">TCP போர்ட்டை மூடுகிறது...</string>
     <string name="settings_restart_dialog_title">மறுதொடக்கம் அவசியம்</string>
     <string name="settings_restart_dialog_message">இந்த அமைப்பைப் பயன்படுத்த Shizuku மறுதொடக்கம் செய்ய வேண்டும்.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi தேவை. Shizuku தொடர்ந்து இயங்கும் மற்றும் பின்னணியில் மறுதொடக்கம் செய்வதற்கு முன் Wi-Fi இணைப்புக்காக காத்திருக்கும்.</b>]]></string>
@@ -130,6 +134,16 @@
     <string name="settings_legacy_pairing">லெகஸி இணைத்தல்</string>
     <string name="settings_legacy_pairing_summary">அறிவிப்புக்குப் பதிலாக உரையாடலில் இணைத்தல் குறியீட்டை உள்ளிடவும்.</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">முதலில், பின்வருவனவற்றைச் செய்யுங்கள்:</string>
+    <string name="bug_report_dialog_update">நீங்கள் ஷிசுகுவின் சமீபத்திய பதிப்பைப் பயன்படுத்துகிறீர்களா என்பதைச் சரிபார்க்கவும்.</string>
+    <string name="bug_report_dialog_button_update">சமீபத்திய வெளியீட்டைக் காண்க</string>
+    <string name="bug_report_dialog_wiki">விக்கியைப் படித்து, தொடர்புடைய அனைத்து சரிசெய்தல் படிகளையும் பின்பற்றவும்.</string>
+    <string name="bug_report_dialog_button_wiki">விக்கியைப் பார்க்கவும்</string>
+    <string name="bug_report_dialog_issues">உங்கள் பிழை/அம்சம் ஏற்கனவே புகாரளிக்கப்பட்டுள்ளதா என்பதைப் பார்க்க, ஏற்கனவே உள்ள அனைத்து சிக்கல்களையும் தேடுங்கள்.</string>
+    <string name="bug_report_dialog_button_issues">சிக்கல்களைக் காண்க</string>
+    <string name="bug_report_dialog_method">உங்களிடம் கணக்கு இருந்தால் GitHub இல் ஒரு சிக்கலைச் சமர்ப்பிக்கவும்.\n\nஇல்லையெனில், நீங்கள் ஒரு மின்னஞ்சலை அனுப்பலாம்.</string>
+    <string name="bug_report_dialog_button_email">மின்னஞ்சல் அனுப்பு</string>
+    <string name="bug_report_dialog_button_github">$1$s-க்குச் செல்லவும்</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">போர்ட் 1 மற்றும் 65535 க்கு இடையில் இருக்க வேண்டும்.</string>
     <string name="snackbar_battery_optimization_home">துவக்கத்தில்/வாட்ச்டாக்கில் ஸ்டார்ட் சரியாக வேலை செய்ய பேட்டரி ஆப்டிமைசேஷன் முடக்கப்பட்டிருக்க வேண்டும்.</string>

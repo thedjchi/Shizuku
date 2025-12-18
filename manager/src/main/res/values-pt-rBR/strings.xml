@@ -37,11 +37,13 @@
 \nObserve que, antes do Android 11, para habilitar a Depuração via Wireless a conexão com um computador é obrigatória.</string>
     <string name="dialog_usb_debugging_not_enabled">A depuração USB não está ativada.\nAtive-a nas \"Opções do desenvolvedor\".</string>
     <string name="dialog_adb_pairing_message">Para iniciar o emparelhamento, siga estes passos:\n- Acesse \"Opções do desenvolvedor\"\n- Ative \"Depuração USB\" e \"Depuração sem fio\"\n- Toque no lado esquerdo de \"Depuração sem fio\"\n- Toque em \"Emparelhar dispositivo com código de emparelhamento\"\n- Insira o código de emparelhamento na notificação</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku pode não ter a permissão %1$s . Para concedê-la, execute o seguinte comando ADB:%2$sSe você já executou o comando, continue com o processo de emparelhamento.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Por favor, habilite o serviço de acessibilidade para iniciar o processo de emparelhamento. Isso permite que Shizuku detecte o código de emparelhamento.\n\nO serviço de acessibilidade será desativado quando o código for encontrado ou após 1 minuto para economizar energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Para iniciar o emparelhamento, siga estes passos:\n- Acesse \"Opções do desenvolvedor\"\n- Ative \"Depuração USB\" e \"Depuração sem fio\"\n- Toque no lado esquerdo de \"Depuração sem fio\"\n- Toque em \"Emparelhar dispositivo com código de emparelhamento\". O Shizuku detectará o código de emparelhamento automaticamente.</string>
     <string name="adb_pairing_requires_multi_window">Primeiramente, ative o modo de janela dividida, por favor.</string>
     <string name="adb_pairing_requires_multi_window_reason">O sistema exige que o diálogo de pareamento esteja sempre visível. Usar o modo tela dividida é a única forma de deixar esse app e o diálogo do sistema visíveis ao mesmo tempo.</string>
     <string name="adb_error_key_store">Não é possível gerar a chave para depuração sem fio.\nIsso pode ser porque o mecanismo KeyStore desse dispositivo está com defeito.</string>
+    <string name="adb_stopping_tcp">Fechando a porta TCP</string>
     <string name="adb_error_stop_tcp">Falha ao interromper o ADB sobre TCP</string>
     <string name="adb_pair_required">Execute o primeiro passo de pareamento.</string>
     <string name="enable">Habilitar</string>
@@ -116,6 +118,8 @@
     <string name="settings_watchdog_summary">Reiniciar Shizuku automaticamente se ele travar</string>
     <string name="settings_tcp_mode">Modo TCP</string>
     <string name="settings_tcp_mode_summary">"Permite que Shizuku reinicie sem Wi-Fi. (Shizuku deve ter sido iniciada pelo menos uma vez desde a reinicialização)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"A porta TCP será fechada imediatamente. Você precisará de Wi-Fi para ativar o modo TCP novamente. Continuar?"</string>
+    <string name="settings_tcp_mode_closing_port">Fechando a porta TCP...</string>
     <string name="settings_restart_dialog_title">É necessário reiniciar.</string>
     <string name="settings_restart_dialog_message">Shizuku precisa reiniciar para aplicar essa configuração.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi é obrigatório. Shizuku continua rodando e espera uma conexão Wi-Fi antes de reiniciar em segundo plano.</b>]]></string>
@@ -137,6 +141,16 @@
     <string name="settings_legacy_pairing">Emparelhamento legado</string>
     <string name="settings_legacy_pairing_summary">Insira o código de emparelhamento em uma caixa de diálogo em vez de uma notificação.</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Primeiramente, faça o seguinte:</string>
+    <string name="bug_report_dialog_update">Verifique se você está usando a versão mais recente do Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Veja a versão mais recente.</string>
+    <string name="bug_report_dialog_wiki">Leia o wiki e siga todos os passos relevantes para a resolução de problemas.</string>
+    <string name="bug_report_dialog_button_wiki">Ver wiki</string>
+    <string name="bug_report_dialog_issues">Procure em todos os problemas existentes para ver se o seu bug/recurso já foi relatado.</string>
+    <string name="bug_report_dialog_button_issues">Ver problemas</string>
+    <string name="bug_report_dialog_method">Por favor, abra uma issue no GitHub se você tiver uma conta.\n\nCaso contrário, você pode enviar um e-mail.</string>
+    <string name="bug_report_dialog_button_email">Enviar e-mail</string>
+    <string name="bug_report_dialog_button_github">Acesse $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A porta deve estar entre 1 e 65535.</string>
     <string name="snackbar_battery_optimization_home">A otimização de bateria deve estar desativada para que a inicialização na inicialização/vigilância funcione corretamente.</string>

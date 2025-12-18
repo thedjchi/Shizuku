@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">Η ασύρματη λειτουργία εντοπισμού σφαλμάτων δεν είναι ενεργοποιημένη.\nΣημειώστε ότι πριν από το Android 11, για να ενεργοποιήσετε την ασύρματη λειτουργία εντοπισμού σφαλμάτων, ήταν απαραίτητη η σύνδεση με τον υπολογιστή.</string>
     <string name="dialog_usb_debugging_not_enabled">Η λειτουργία εντοπισμού σφαλμάτων USB δεν είναι ενεργοποιημένη.\nΕνεργοποιήστε την στις \"Επιλογές προγραμματιστή\".</string>
     <string name="dialog_adb_pairing_message">Ξεκινήστε τη σύζευξη ακολουθώντας τα παρακάτω βήματα:\n- Μεταβείτε στις \"Επιλογές προγραμματιστή\"\n- Ενεργοποιήστε τις λειτουργίες \"USB debugging\" και \"Wireless debugging\"\n- Πατήστε την αριστερή πλευρά του \"Wireless debugging\"\n- Πατήστε \"Σύζευξη συσκευής με κωδικό σύζευξης\"\n- Εισαγάγετε τον κωδικό σύζευξης στην ειδοποίηση</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Ενδέχεται να λείπει το δικαίωμα %1$s από το Shizuku. Για να το εκχωρήσετε, εκτελέστε την ακόλουθη εντολή ADB:%2$sΕάν έχετε ήδη εκτελέσει την εντολή, συνεχίστε με τη διαδικασία σύζευξης.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Ενεργοποιήστε την υπηρεσία προσβασιμότητας για να ξεκινήσει η διαδικασία σύζευξης. Αυτό επιτρέπει στο Shizuku να εντοπίσει τον κωδικό σύζευξης.\n\nΗ υπηρεσία προσβασιμότητας θα απενεργοποιηθεί όταν βρεθεί ο κωδικός ή μετά από 1 λεπτό για εξοικονόμηση ενέργειας.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Ξεκινήστε τη σύζευξη ακολουθώντας τα παρακάτω βήματα:\n- Μεταβείτε στις \"Επιλογές προγραμματιστή\"\n- Ενεργοποιήστε τις \"Εντοπισμός σφαλμάτων USB\" και \"Ασύρματος εντοπισμός σφαλμάτων\"\n- Πατήστε την αριστερή πλευρά της επιλογής \"Ασύρματος εντοπισμός σφαλμάτων\"\n- Πατήστε \"Σύζευξη συσκευής με κωδικό σύζευξης\". Το Shizuku θα εντοπίσει αυτόματα τον κωδικό σύζευξης.</string>
     <string name="adb_pairing_requires_multi_window">Παρακαλώ, μεταβείτε πρώτα σε λειτουργία διαιρεμένης οθόνης (πολλαπλών παραθύρων).</string>
     <string name="adb_pairing_requires_multi_window_reason">Το σύστημα απαιτεί το παράθυρο διαλόγου σύζευξης να είναι πάντα ορατό. Η χρήση της λειτουργίας διαιρεμένης οθόνης είναι ο μόνος τρόπος για να είναι ορατά ταυτόχρονα αυτή η εφαρμογή και το παράθυρο διαλόγου συστήματος.</string>
     <string name="adb_error_key_store">Δεν είναι δυνατή η δημιουργία κλειδιού για τον ασύρματο εντοπισμό σφαλμάτων.\nΑυτό μπορεί να οφείλεται στο ότι ο μηχανισμός KeyStore αυτής της συσκευής είναι κατεστραμμένος.</string>
+    <string name="adb_stopping_tcp">Κλείσιμο θύρας TCP</string>
     <string name="adb_error_stop_tcp">Απέτυχε η διακοπή του ADB μέσω TCP</string>
     <string name="adb_pair_required">Παρακαλούμε ακολουθήστε πρώτα το βήμα σύζευξης.</string>
     <string name="enable">Ενεργοποιώ</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">Αυτόματη επανεκκίνηση του Shizuku σε περίπτωση διακοπής λειτουργίας</string>
     <string name="settings_tcp_mode">Λειτουργία TCP</string>
     <string name="settings_tcp_mode_summary">"Επιτρέπει στο Shizuku να επανεκκινήσει χωρίς Wi-Fi. (Το Shizuku πρέπει να ξεκίνησε μία φορά από την επανεκκίνηση)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Η θύρα TCP θα κλείσει αμέσως. Θα χρειαστείτε Wi-Fi για να ενεργοποιήσετε ξανά τη λειτουργία TCP. Θέλετε να συνεχίσετε;"</string>
+    <string name="settings_tcp_mode_closing_port">Κλείσιμο θύρας TCP...</string>
     <string name="settings_restart_dialog_title">Απαιτείται επανεκκίνηση</string>
     <string name="settings_restart_dialog_message">Το Shizuku πρέπει να επανεκκινηθεί για να εφαρμοστεί αυτή η ρύθμιση.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Απαιτείται Wi-Fi. Το Shizuku θα συνεχίσει να εκτελείται και θα περιμένει σύνδεση Wi-Fi πριν από την επανεκκίνηση στο παρασκήνιο.</b>]]></string>
@@ -130,6 +134,16 @@
     <string name="settings_legacy_pairing">Σύζευξη παλαιού τύπου</string>
     <string name="settings_legacy_pairing_summary">Εισαγάγετε τον κωδικό σύζευξης σε ένα παράθυρο διαλόγου αντί για μια ειδοποίηση</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Αρχικά, κάντε τα εξής:</string>
+    <string name="bug_report_dialog_update">Ελέγξτε ότι χρησιμοποιείτε την πιο πρόσφατη έκδοση του Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Δείτε την τελευταία έκδοση</string>
+    <string name="bug_report_dialog_wiki">Διαβάστε το wiki και ακολουθήστε όλα τα σχετικά βήματα αντιμετώπισης προβλημάτων.</string>
+    <string name="bug_report_dialog_button_wiki">Προβολή wiki</string>
+    <string name="bug_report_dialog_issues">Αναζητήστε όλα τα υπάρχοντα προβλήματα για να δείτε αν το σφάλμα/λειτουργία σας έχει ήδη αναφερθεί.</string>
+    <string name="bug_report_dialog_button_issues">Προβολή ζητημάτων</string>
+    <string name="bug_report_dialog_method">Παρακαλούμε υποβάλετε ένα πρόβλημα στο GitHub εάν έχετε λογαριασμό.\n\nΔιαφορετικά, μπορείτε να στείλετε ένα email.</string>
+    <string name="bug_report_dialog_button_email">Αποστολή ηλεκτρονικού ταχυδρομείου</string>
+    <string name="bug_report_dialog_button_github">Μετάβαση στο $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Η θύρα πρέπει να είναι μεταξύ 1 και 65535</string>
     <string name="snackbar_battery_optimization_home">Η βελτιστοποίηση μπαταρίας πρέπει να είναι απενεργοποιημένη για να λειτουργήσει σωστά η εκκίνηση κατά την εκκίνηση/επιτήρηση.</string>

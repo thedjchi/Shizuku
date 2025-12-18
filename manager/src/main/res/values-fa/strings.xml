@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">اشکال‌زدایی بی‌سیم فعال نیست.\nتوجه داشته باشید، قبل از اندروید ۱۱، برای فعال کردن اشکال‌زدایی بی‌سیم، اتصال به رایانه ضروری است.</string>
     <string name="dialog_usb_debugging_not_enabled">اشکال‌زدایی USB فعال نیست.\nلطفاً آن را در «گزینه‌های توسعه‌دهنده» فعال کنید.</string>
     <string name="dialog_adb_pairing_message">لطفاً با انجام مراحل زیر، جفت‌سازی را شروع کنید:\n- به «گزینه‌های توسعه‌دهنده» بروید\n- «اشکال‌زدایی USB» و «اشکال‌زدایی بی‌سیم» را فعال کنید\n- روی سمت چپ «اشکال‌زدایی بی‌سیم» ضربه بزنید\n- روی «جفت کردن دستگاه با کد جفت‌سازی» ضربه بزنید\n- کد جفت‌سازی را در اعلان وارد کنید</string>
+    <string name="dialog_adb_pairing_accessibility_permission">ممکن است شیزوکو مجوز %1$s را نداشته باشد. برای اعطای آن، دستور ADB زیر را اجرا کنید:%2$sاگر قبلاً دستور را اجرا کرده‌اید، فرآیند جفت‌سازی را ادامه دهید.</string>
     <string name="dialog_adb_pairing_accessibility_enable">لطفاً برای شروع فرآیند جفت‌سازی، سرویس دسترسی را فعال کنید. این به شیزوکو اجازه می‌دهد تا کد جفت‌سازی را تشخیص دهد.\n\nسرویس دسترسی هنگام یافتن کد یا پس از ۱ دقیقه برای صرفه‌جویی در مصرف انرژی خاموش می‌شود.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">لطفاً با انجام مراحل زیر، جفت‌سازی را شروع کنید:\n- به «گزینه‌های توسعه‌دهنده» بروید\n- «اشکال‌زدایی USB» و «اشکال‌زدایی بی‌سیم» را فعال کنید\n- روی سمت چپ «اشکال‌زدایی بی‌سیم» ضربه بزنید\n- روی «جفت‌سازی دستگاه با کد جفت‌سازی» ضربه بزنید. شیزوکو به‌طور خودکار کد جفت‌سازی را تشخیص می‌دهد.</string>
     <string name="adb_pairing_requires_multi_window">لطفاً ابتدا وارد حالت تقسیم صفحه (چند پنجره) شوید.</string>
     <string name="adb_pairing_requires_multi_window_reason">سیستم نیاز دارد که دیالوگ جفت سازی همیشه قابل مشاهده باشد. استفاده از حالت تقسیم صفحه تنها راهی است که این برنامه و دیالوگ سیستم همزمان قابل مشاهده باشند.</string>
     <string name="adb_error_key_store">امکان تولید کلید برای اشکال زدایی بی سیم وجود ندارد.\nاین ممکن است به این دلیل باشد که مکانیزم KeyStore این دستگاه خراب شده است.</string>
+    <string name="adb_stopping_tcp">بستن پورت TCP</string>
     <string name="adb_error_stop_tcp">متوقف کردن ADB روی TCP ناموفق بود</string>
     <string name="adb_pair_required">لطفاً ابتدا مرحله مرتبط کردن را طی کنید.</string>
     <string name="enable">فعال کردن</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">در صورت خرابی، شیزوکو را به طور خودکار مجدداً راه اندازی کنید</string>
     <string name="settings_tcp_mode">حالت TCP</string>
     <string name="settings_tcp_mode_summary">"به Shizuku اجازه می‌دهد بدون Wi-Fi دوباره راه‌اندازی شود. (Shizuku باید یک بار از زمان راه‌اندازی مجدد شروع شده باشد)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"پورت TCP فوراً بسته خواهد شد. برای فعال کردن مجدد حالت TCP به وای‌فای نیاز خواهید داشت. ادامه می‌دهید؟"</string>
+    <string name="settings_tcp_mode_closing_port">بستن پورت TCP...</string>
     <string name="settings_restart_dialog_title">راه اندازی مجدد مورد نیاز است</string>
     <string name="settings_restart_dialog_message">شیزوکو باید بازی را دوباره شروع کند تا بتواند این تنظیم را اعمال کند.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>وای فای لازم است. شیزوکو به کار خود ادامه می دهد و منتظر اتصال وای فای می ماند تا در پس زمینه ریستارت شود.</b>]]></string>
@@ -130,6 +134,16 @@
     <string name="settings_legacy_pairing">جفت‌سازی قدیمی</string>
     <string name="settings_legacy_pairing_summary">کد جفت‌سازی را به جای اعلان، در یک کادر محاوره‌ای وارد کنید</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">ابتدا لطفا موارد زیر را انجام دهید:</string>
+    <string name="bug_report_dialog_update">بررسی کنید که از آخرین نسخه Shizuku استفاده می‌کنید.</string>
+    <string name="bug_report_dialog_button_update">مشاهده آخرین نسخه منتشر شده</string>
+    <string name="bug_report_dialog_wiki">ویکی را بخوانید و تمام مراحل عیب‌یابی مربوطه را دنبال کنید.</string>
+    <string name="bug_report_dialog_button_wiki">مشاهده ویکی</string>
+    <string name="bug_report_dialog_issues">تمام مشکلات موجود را جستجو کنید تا ببینید آیا اشکال/ویژگی شما قبلاً گزارش شده است یا خیر.</string>
+    <string name="bug_report_dialog_button_issues">مشاهده مسائل</string>
+    <string name="bug_report_dialog_method">اگر حساب کاربری دارید، لطفاً مشکل خود را در گیت‌هاب ارسال کنید.\n\nدر غیر این صورت، می‌توانید ایمیل ارسال کنید.</string>
+    <string name="bug_report_dialog_button_email">ارسال ایمیل</string>
+    <string name="bug_report_dialog_button_github">به $1$بروید</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">پورت باید بین ۱ تا ۶۵۵۳۵ باشد</string>
     <string name="snackbar_battery_optimization_home">برای اینکه شروع به کار در هنگام بوت/واچ‌داگ به درستی انجام شود، باید بهینه‌سازی باتری غیرفعال باشد.</string>

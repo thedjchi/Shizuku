@@ -37,11 +37,13 @@
 \nNota, per versioni precedenti ad Android 11, per abilitare il debug wireless, è necessaria la connessione al computer.</string>
     <string name="dialog_usb_debugging_not_enabled">Il debug USB non è abilitato.\nAbilitalo in \"Opzioni sviluppatore\".</string>
     <string name="dialog_adb_pairing_message">Per iniziare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\"\n- Inserisci il codice di associazione nella notifica</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku potrebbe non avere il permesso %1$s . Per concederlo, esegui il seguente comando ADB:%2$s. Se hai già eseguito il comando, continua con il processo di associazione.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Abilita il servizio di accessibilità per avviare il processo di associazione. Questo permetterà a Shizuku di rilevare il codice di associazione.\n\nIl servizio di accessibilità verrà disattivato quando il codice verrà trovato o dopo 1 minuto per risparmiare energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Per avviare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\". Shizuku rileverà automaticamente il codice di associazione.</string>
     <string name="adb_pairing_requires_multi_window">Entra prima nella modalità schermo diviso (multi-finestra).</string>
     <string name="adb_pairing_requires_multi_window_reason">Il sistema richiede che la dialogo di accoppiamento sia sempre visibile. Usare la modalità split-screen è l\'unico modo per rendere visibile sia questa app che la finestra di dialogo di sistema contemporaneamente.</string>
     <string name="adb_error_key_store">Impossibile generare la chiave per il debug wireless.\nQuesto potrebbe essere dovuto al fatto che il meccanismo KeyStore di questo dispositivo è rotto.</string>
+    <string name="adb_stopping_tcp">Chiusura della porta TCP</string>
     <string name="adb_error_stop_tcp">Impossibile arrestare ADB su TCP</string>
     <string name="adb_pair_required">Esegui prima la fase di accoppiamento.</string>
     <string name="enable">Abilitare</string>
@@ -116,6 +118,8 @@
     <string name="settings_watchdog_summary">Riavvia automaticamente Shizuku se si blocca</string>
     <string name="settings_tcp_mode">Modalità TCP</string>
     <string name="settings_tcp_mode_summary">"Permette a Shizuku di riavviarsi senza Wi-Fi. (Shizuku deve essere stato avviato una volta dopo il riavvio)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"La porta TCP verrà chiusa immediatamente. Sarà necessario il Wi-Fi per riattivare la modalità TCP. Continuare?"</string>
+    <string name="settings_tcp_mode_closing_port">Chiusura della porta TCP...</string>
     <string name="settings_restart_dialog_title">Riavvio richiesto</string>
     <string name="settings_restart_dialog_message">Shizuku deve ricominciare per poter applicare questa impostazione.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Il Wi-Fi è necessario. Shizuku continuerà a funzionare e aspetterà una connessione Wi-Fi prima di riavviare in background.</b>]]></string>
@@ -137,6 +141,16 @@
     <string name="settings_legacy_pairing">Abbinamento legacy</string>
     <string name="settings_legacy_pairing_summary">Inserisci il codice di associazione in una finestra di dialogo anziché in una notifica</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Per prima cosa, procedi come segue:</string>
+    <string name="bug_report_dialog_update">Verifica di utilizzare la versione più recente di Shizuku.</string>
+    <string name="bug_report_dialog_button_update">Visualizza l\'ultima versione</string>
+    <string name="bug_report_dialog_wiki">Leggi il wiki e segui tutti i passaggi rilevanti per la risoluzione dei problemi.</string>
+    <string name="bug_report_dialog_button_wiki">Visualizza wiki</string>
+    <string name="bug_report_dialog_issues">Cerca tra tutti i problemi esistenti per vedere se il tuo bug/la tua funzionalità è già stata segnalata.</string>
+    <string name="bug_report_dialog_button_issues">Visualizza i problemi</string>
+    <string name="bug_report_dialog_method">Segnala un problema su GitHub se hai un account.\n\nAltrimenti, puoi inviare un\'e-mail.</string>
+    <string name="bug_report_dialog_button_email">Invia email</string>
+    <string name="bug_report_dialog_button_github">Vai a $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">La porta deve essere compresa tra 1 e 65535</string>
     <string name="snackbar_battery_optimization_home">Per far sì che l\'avvio all\'avvio/watchdog funzioni correttamente, è necessario disattivare l\'ottimizzazione della batteria.</string>

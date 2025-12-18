@@ -34,11 +34,13 @@
     <string name="dialog_wireless_adb_not_enabled">უსადენო გამართვა არ არის ჩართული.\nგაითვალისწინეთ, Android 11-მდე, უკაბელო გამართვის გასააქტიურებლად, კომპიუტერის კავშირი აუცილებელია.</string>
     <string name="dialog_usb_debugging_not_enabled">USB გამართვა არ არის ჩართული.\nგთხოვთ, ჩართოთ იგი \"დეველოპერის ოფციებში\".</string>
     <string name="dialog_adb_pairing_message">გთხოვთ, დაიწყოთ დაწყვილება შემდეგი ნაბიჯების შესრულებით:\n- გადადით „დეველოპერის პარამეტრებზე“\n- ჩართეთ „USB გამართვა“ და „უკაბელო გამართვა“\n- შეეხეთ „უკაბელო გამართვის“ მარცხენა მხარეს\n- შეეხეთ „მოწყობილობის დაწყვილება დაწყვილების კოდით“\n- შეიყვანეთ დაწყვილების კოდი შეტყობინებაში</string>
+    <string name="dialog_adb_pairing_accessibility_permission">შესაძლოა, Shizuku-ს არ ჰქონდეს %1$s ნებართვა. მის მისანიჭებლად, შეასრულეთ შემდეგი ADB ბრძანება:%2$sთუ ბრძანება უკვე შეასრულეთ, გააგრძელეთ დაწყვილების პროცესი.</string>
     <string name="dialog_adb_pairing_accessibility_enable">გთხოვთ, ჩართოთ ხელმისაწვდომობის სერვისი დაწყვილების პროცესის დასაწყებად. ეს საშუალებას აძლევს Shizuku-ს აღმოაჩინოს დაწყვილების კოდი.\n\nხელმისაწვდომობის სერვისი გამორთულია კოდის პოვნისას ან 1 წუთის შემდეგ ენერგიის დაზოგვის მიზნით.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">დაწყვილება დაიწყეთ შემდეგი ნაბიჯების შესრულებით:\n- გადადით „დეველოპერის პარამეტრებზე“\n- ჩართეთ „USB გამართვა“ და „უკაბელო გამართვა“\n- შეეხეთ „უკაბელო გამართვის“ მარცხენა მხარეს\n- შეეხეთ „მოწყობილობის დაწყვილების კოდით დაწყვილების“ ღილაკს. Shizuku ავტომატურად ამოიცნობს დაწყვილების კოდს.</string>
     <string name="adb_pairing_requires_multi_window">გთხოვთ, ჯერ შეხვიდეთ გაყოფილი ეკრანის (მრავალფანჯრის) რეჟიმში.</string>
     <string name="adb_pairing_requires_multi_window_reason">სისტემა მოითხოვს, რომ დაწყვილების დიალოგური ფანჯარა ყოველთვის ხილული იყოს. გაყოფილი ეკრანის რეჟიმის გამოყენება ერთადერთი გზაა, რომ ეს აპლიკაცია და სისტემის დიალოგური ფანჯარა ერთდროულად იყოს ხილული.</string>
     <string name="adb_error_key_store">უკაბელო გამართვის გასაღების გენერირება შეუძლებელია.\nშესაძლოა, ეს გამოწვეულია ამ მოწყობილობის KeyStore მექანიზმის გაუმართაობით.</string>
+    <string name="adb_stopping_tcp">TCP პორტის დახურვა</string>
     <string name="adb_error_stop_tcp">ADB-ის შეჩერება ვერ მოხერხდა TCP-ზე</string>
     <string name="adb_pair_required">გთხოვთ, ჯერ გაიაროთ დაწყვილების ნაბიჯი.</string>
     <string name="enable">ჩართვა</string>
@@ -109,6 +111,8 @@
     <string name="settings_watchdog_summary">ავტომატური გადატვირთვა Shizuku-სთვის, თუ ის გაითიშება</string>
     <string name="settings_tcp_mode">TCP რეჟიმი</string>
     <string name="settings_tcp_mode_summary">"საშუალებას აძლევს Shizuku-ს გადატვირთოს Wi-Fi-ის გარეშე. (შიზუკუ გადატვირთვის შემდეგ ერთხელ უნდა დაიწყოს)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP პორტი დაუყოვნებლივ დაიხურება. TCP რეჟიმის ხელახლა ჩასართავად Wi-Fi დაგჭირდებათ. გსურთ გაგრძელება?"</string>
+    <string name="settings_tcp_mode_closing_port">TCP პორტის დახურვა...</string>
     <string name="settings_restart_dialog_title">გადატვირთვა აუცილებელია</string>
     <string name="settings_restart_dialog_message">ამ პარამეტრის გამოსაყენებლად Shizuku-ს გადატვირთვაა საჭირო.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>საჭიროა Wi-Fi. Shizuku გააგრძელებს მუშაობას და დაელოდება Wi-Fi კავშირს, სანამ ფონურ რეჟიმში გადაიტვირთება.</b>]]></string>
@@ -130,6 +134,16 @@
     <string name="settings_legacy_pairing">მემკვიდრეობის დაწყვილება</string>
     <string name="settings_legacy_pairing_summary">შეიყვანეთ დაწყვილების კოდი დიალოგში შეტყობინების ნაცვლად</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">პირველ რიგში, გთხოვთ, გააკეთოთ შემდეგი:</string>
+    <string name="bug_report_dialog_update">შეამოწმეთ, რომ იყენებთ Shizuku-ს უახლეს ვერსიას.</string>
+    <string name="bug_report_dialog_button_update">უახლესი გამოშვების ნახვა</string>
+    <string name="bug_report_dialog_wiki">წაიკითხეთ ვიკი და მიჰყევით პრობლემების მოგვარების ყველა შესაბამის ნაბიჯს.</string>
+    <string name="bug_report_dialog_button_wiki">ვიკის ნახვა</string>
+    <string name="bug_report_dialog_issues">გადახედეთ ყველა არსებულ პრობლემას, რათა ნახოთ, უკვე შეტყობინებულია თუ არა თქვენი შეცდომა/ფუნქცია.</string>
+    <string name="bug_report_dialog_button_issues">პრობლემების ნახვა</string>
+    <string name="bug_report_dialog_method">თუ ანგარიში გაქვთ, გთხოვთ, პრობლემა GitHub-ზე წარმოადგინოთ.\n\nწინააღმდეგ შემთხვევაში, შეგიძლიათ ელ. ფოსტის გაგზავნა.</string>
+    <string name="bug_report_dialog_button_email">ელფოსტის გაგზავნა</string>
+    <string name="bug_report_dialog_button_github">გადადით $1$-ზე</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">პორტი უნდა იყოს 1-დან 65535-მდე</string>
     <string name="snackbar_battery_optimization_home">ბატარეის ოპტიმიზაცია უნდა გამორთული იყოს ჩატვირთვის / მაკონტროლებლის დასაწყებად გამართულად მუშაობისთვის.</string>

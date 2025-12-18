@@ -37,11 +37,13 @@
 \nNot, Android 11’den önce kablosuz hata ayıklamayı etkinleştirmek için bilgisayar bağlantısının şart olduğunu unutmayın.</string>
     <string name="dialog_usb_debugging_not_enabled">USB hata ayıklama etkin değil.\nLütfen \"Geliştirici Seçenekleri\"nde etkinleştirin.</string>
     <string name="dialog_adb_pairing_message">Lütfen aşağıdaki adımları uygulayarak eşleştirmeyi başlatın:\n- \"Geliştirici Seçenekleri\"ne gidin\n- \"USB hata ayıklama\" ve \"Kablosuz hata ayıklama\"yı etkinleştirin\n- \"Kablosuz hata ayıklama\"nın sol tarafına dokunun\n- \"Cihazı eşleştirme koduyla eşleştir\"e dokunun\n- Bildirimde eşleştirme kodunu girin</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku\'da %1$s izni eksik olabilir. Bu izni vermek için aşağıdaki ADB komutunu çalıştırın:%2$sEğer komutu zaten çalıştırdıysanız, eşleştirme işlemine devam edin.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Eşleştirme işlemini başlatmak için lütfen erişilebilirlik hizmetini etkinleştirin. Bu, Shizuku\'nun eşleştirme kodunu algılamasını sağlar.\n\nKod bulunduğunda veya enerji tasarrufu için 1 dakika sonra erişilebilirlik hizmeti kapatılacaktır.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Lütfen aşağıdaki adımları uygulayarak eşleştirmeyi başlatın:\n- \"Geliştirici Seçenekleri\"ne gidin\n- \"USB hata ayıklama\" ve \"Kablosuz hata ayıklama\"yı etkinleştirin\n- \"Kablosuz hata ayıklama\"nın sol tarafına dokunun\n- \"Cihazı eşleştirme koduyla eşleştir\"e dokunun. Shizuku eşleştirme kodunu otomatik olarak algılayacaktır.</string>
     <string name="adb_pairing_requires_multi_window">Lütfen önce bölünmüş ekran (çoklu pencere) moduna girin.</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem, eşleştirme diyalogunun her zaman görünür olmasını gerektirir. Bölünmüş ekran modu kullanmak, bu uygulama ve sistem diyalogunun aynı anda görünmesini sağlamanın tek yoludur.</string>
     <string name="adb_error_key_store">Kablosuz hata ayıklama için anahtar oluşturulamıyor.\nBunun nedeni, bu cihazın KeyStore mekanizmasının bozulmuş olmasından kaynaklanıyor olabilir.</string>
+    <string name="adb_stopping_tcp">TCP portu kapatılıyor</string>
     <string name="adb_error_stop_tcp">TCP üzerinden ADB durdurulamadı</string>
     <string name="adb_pair_required">Lütfen önce eşleştirme adımını uygulayın.</string>
     <string name="enable">Etkinleştir</string>
@@ -116,6 +118,8 @@
     <string name="settings_watchdog_summary">Çökerse Shizuku\'yu otomatik olarak yeniden başlat</string>
     <string name="settings_tcp_mode">TCP modu</string>
     <string name="settings_tcp_mode_summary">"Shizuku'nun Wi-Fi olmadan yeniden başlatılmasına izin verir. (Shizuku'nun yeniden başlatıldıktan sonra bir kez başlatılmış olması gerekir)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP portu hemen kapatılacaktır. TCP modunu tekrar açmak için Wi-Fi'ye ihtiyacınız olacak. Devam edilsin mi?"</string>
+    <string name="settings_tcp_mode_closing_port">TCP portu kapatılıyor...</string>
     <string name="settings_restart_dialog_title">Yeniden Başlatma Gerekli</string>
     <string name="settings_restart_dialog_message">Shizuku\'nun bu ayarı uygulayabilmesi için yeniden başlatması gerekiyor.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi zorunlu. Shizuku çalışmaya devam edecek ve Wi-Fi bağlantısını bekleyecek, sonra arka planda yeniden başlatacak.</b>]]></string>
@@ -137,6 +141,16 @@
     <string name="settings_legacy_pairing">Miras eşleştirmesi</string>
     <string name="settings_legacy_pairing_summary">Eşleştirme kodunu bildirim yerine bir iletişim kutusuna girin</string>
     <!-- Bug Report Dialog -->
+    <string name="bug_report_dialog_before_reporting">Öncelikle lütfen aşağıdakileri yapın:</string>
+    <string name="bug_report_dialog_update">Shizuku\'nun en son sürümünü kullandığınızdan emin olun.</string>
+    <string name="bug_report_dialog_button_update">En son sürümü görüntüle</string>
+    <string name="bug_report_dialog_wiki">Vikiyi okuyun ve ilgili tüm sorun giderme adımlarını izleyin.</string>
+    <string name="bug_report_dialog_button_wiki">Vikiyi görüntüle</string>
+    <string name="bug_report_dialog_issues">Mevcut tüm sorunları inceleyerek, hatanızın/özelliğinizin daha önce bildirilip bildirilmediğini kontrol edin.</string>
+    <string name="bug_report_dialog_button_issues">Sorunları görüntüle</string>
+    <string name="bug_report_dialog_method">Hesabınız varsa lütfen GitHub\'da bir sorun gönderin.\n\nAksi takdirde e-posta gönderebilirsiniz.</string>
+    <string name="bug_report_dialog_button_email">E-posta gönder</string>
+    <string name="bug_report_dialog_button_github">$1$adresine git</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Bağlantı noktası 1 ile 65535 arasında olmalıdır</string>
     <string name="snackbar_battery_optimization_home">Önyükleme/bekçi köpeği sırasında başlatmanın düzgün çalışması için pil optimizasyonunun devre dışı bırakılması gerekir.</string>
