@@ -37,11 +37,13 @@
 \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
     <string name="dialog_usb_debugging_not_enabled">USBデバッグが有効になっていません。\n「開発者向けオプション」で有効にしてください。</string>
     <string name="dialog_adb_pairing_message">以下の手順でペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。\n- 通知にペアリングコードを入力します。</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku に %1$s 権限が不足している可能性があります。権限を付与するには、次の ADB コマンドを実行してください:%2$s既にコマンドを実行している場合は、ペアリングプロセスを続行してください。</string>
     <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">以下の手順に従ってペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。Shizukuはペアリングコードを自動的に検出します。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
     <string name="adb_pairing_requires_multi_window_reason">このシステムはペアリングダイアログが常に見えることを求めています。分割画面モードを使うことが、このアプリとシステムのダイアログを同時に表示する唯一の方法です。</string>
     <string name="adb_error_key_store">ワイヤレスデバッグ用のキーを生成できません。\nこれはこのデバイスのKeyStore機構が故障しているためかもしれません。</string>
+    <string name="adb_stopping_tcp">TCPポートを閉じる</string>
     <string name="adb_error_stop_tcp">TCP経由のADBを停止できませんでした</string>
     <string name="adb_pair_required">まずはペアリングの手順を行ってください。</string>
     <string name="enable">有効にする</string>
@@ -115,6 +117,8 @@
     <string name="settings_watchdog_summary">Shizukuがクラッシュした場合に自動的に再起動する</string>
     <string name="settings_tcp_mode">TCPモード</string>
     <string name="settings_tcp_mode_summary">"Wi-FiなしでShizukuを再起動できるようにします。（再起動後、Shizukuが一度起動している必要があります）"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCPポートは直ちに閉じられます。TCPモードを再度オンにするにはWi-Fiが必要です。続行しますか？"</string>
+    <string name="settings_tcp_mode_closing_port">TCP ポートを閉じています...</string>
     <string name="settings_restart_dialog_title">再起動が必要です</string>
     <string name="settings_restart_dialog_message">雫はこの設定を適用するために再起動が必要です。</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fiは必須です。雫は走り続け、Wi-Fi接続を待ってからバックグラウンドで再起動する。</b>]]></string>
@@ -145,6 +149,7 @@
     <string name="bug_report_dialog_button_issues">問題を表示</string>
     <string name="bug_report_dialog_method">アカウントをお持ちの場合は、GitHub で問題を送信してください。\n\nアカウントをお持ちでない場合は、メールを送信できます。</string>
     <string name="bug_report_dialog_button_email">メールを送信</string>
+    <string name="bug_report_dialog_button_github">$1$へ移動</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">ポートは1～65535の範囲で指定する必要があります</string>
     <string name="snackbar_battery_optimization_home">起動/ウォッチドッグが正常に機能するには、バッテリー最適化を無効にする必要があります。</string>
