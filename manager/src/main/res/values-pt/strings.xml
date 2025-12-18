@@ -37,11 +37,13 @@
 \nObserve que, antes do Android 11, para habilitar a depuração sem fio, a conexão com o computador é obrigatória.</string>
     <string name="dialog_usb_debugging_not_enabled">A depuração USB não está ativada.\nAtive-a nas \"Opções do programador\".</string>
     <string name="dialog_adb_pairing_message">Para iniciar o emparelhamento, siga os seguintes passos:\n- Aceda a \"Opções de programador\"\n- Ative \"Depuração USB\" e \"Depuração sem fios\"\n- Toque no lado esquerdo de \"Depuração sem fios\"\n- Toque em \"Emparelhar dispositivo com código de emparelhamento\"\n- Introduza o código de emparelhamento na notificação</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku pode não ter a permissão %1$s . Para a conceder, execute o seguinte comando ADB:%2$sSe já executou o comando, continue com o processo de emparelhamento.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Por favor, ative o serviço de acessibilidade para iniciar o processo de emparelhamento. Isto permite que o Shizuku detete o código de emparelhamento.\n\nO serviço de acessibilidade será desativado quando o código for encontrado ou após 1 minuto para poupar energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Para iniciar o emparelhamento, siga os seguintes passos:\n- Aceda a \"Opções de programador\"\n- Ative \"Depuração USB\" e \"Depuração sem fios\"\n- Toque no lado esquerdo de \"Depuração sem fios\"\n- Toque em \"Emparelhar dispositivo com código de emparelhamento\". O Shizuku detetará o código de emparelhamento automaticamente.</string>
     <string name="adb_pairing_requires_multi_window">Por favor, entre primeiro no modo de tela dividida (várias janelas).</string>
     <string name="adb_pairing_requires_multi_window_reason">O sistema exige que o diálogo de emparelhamento seja sempre visível. Usar o modo de ecrã dividido é a única forma de permitir que esta aplicação e o diálogo do sistema sejam visíveis ao mesmo tempo.</string>
     <string name="adb_error_key_store">Não é possível gerar a chave para depuração sem fios.\nIsto pode dever-se ao facto de o mecanismo KeyStore deste dispositivo estar avariado.</string>
+    <string name="adb_stopping_tcp">Fechar a porta TCP</string>
     <string name="adb_error_stop_tcp">Falha ao interromper o ADB sobre TCP</string>
     <string name="adb_pair_required">Por favor, passe primeiro pela etapa de emparelhamento.</string>
     <string name="enable">Ativar</string>
@@ -116,6 +118,8 @@
     <string name="settings_watchdog_summary">Reiniciar Shizuku automaticamente se o programa bloquear</string>
     <string name="settings_tcp_mode">Modo TCP</string>
     <string name="settings_tcp_mode_summary">"Permite que o Shizuku reinicie sem Wi-Fi. (O Shizuku deve ter sido iniciado pelo menos uma vez desde o reinício)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"A porta TCP será fechada imediatamente. Precisará de Wi-Fi para ativar novamente o modo TCP. Continuar?"</string>
+    <string name="settings_tcp_mode_closing_port">Fechar a porta TCP...</string>
     <string name="settings_restart_dialog_title">É necessário reiniciar.</string>
     <string name="settings_restart_dialog_message">A Shizuku precisa de reiniciar para poder aplicar esta definição.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>É obrigatório Wi-Fi. A Shizuku continua a funcionar e espera pela ligação Wi-Fi antes de reiniciar em segundo plano.</b>]]></string>
@@ -146,6 +150,7 @@
     <string name="bug_report_dialog_button_issues">Ver problemas</string>
     <string name="bug_report_dialog_method">Por favor, abra uma issue no GitHub se tiver uma conta.\n\nCaso contrário, pode enviar um e-mail.</string>
     <string name="bug_report_dialog_button_email">Enviar e-mail</string>
+    <string name="bug_report_dialog_button_github">Aceda a $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A porta deve estar entre 1 e 65535.</string>
     <string name="snackbar_battery_optimization_home">A otimização da bateria deve estar desativada para que o arranque no arranque/vigilância funcione corretamente.</string>
