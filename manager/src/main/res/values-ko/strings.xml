@@ -149,7 +149,6 @@
     <string name="bug_report_dialog_button_issues">문제 보기</string>
     <string name="bug_report_dialog_method">GitHub 계정이 있으시면 GitHub에 이슈를 제출해 주세요.\n\n그렇지 않으면 이메일을 보내주세요.</string>
     <string name="bug_report_dialog_button_email">이메일 보내기</string>
-    <string name="bug_report_dialog_button_github">$1$로 이동</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">포트는 1~65535 사이여야 합니다.</string>
     <string name="snackbar_battery_optimization_home">부팅/워치독 시작 시 배터리 최적화를 비활성화해야 제대로 작동합니다.</string>
