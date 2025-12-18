@@ -150,7 +150,6 @@
     <string name="bug_report_dialog_button_issues">Probleme anzeigen</string>
     <string name="bug_report_dialog_method">Bitte melde das Problem auf GitHub, falls du dort ein Konto hast.\n\nAlternativ kannst du uns eine E-Mail senden.</string>
     <string name="bug_report_dialog_button_email">E-Mail senden</string>
-    <string name="bug_report_dialog_button_github">Gehe zu $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Der Port muss zwischen 1 und 65535 liegen</string>
     <string name="snackbar_battery_optimization_home">Die Batterieoptimierung muss deaktiviert sein, damit der Start beim Boot/Watchdog richtig funktioniert.</string>
