@@ -95,6 +95,13 @@
     <string name="home_adb_is_limited_title">You need to take an extra step</string>
     <string name="home_adb_is_limited_description">Your device manufacturer has restricted adb permissions and apps using Shizuku will not work properly.\n\nUsually, this limitation can be lifted by adjusting some options in \"Developer options\". Please read the help for details on how to do this.\n\nYou may need to restart Shizuku for the operation to take effect.</string>
 
+    <!-- Home - Dialogs -->
+    <string name="home_dialog_reboot_required_title">Reboot required</string>
+    <string name="home_dialog_reboot_required_message">A device reboot is required for Shizuku to work properly. To continue, please reboot your device.</string>
+    <string name="home_dialog_duplicate_app_detected_title">Duplicate app detected</string>
+    <string name="home_dialog_duplicate_app_detected_message">Another version of this app is installed on your device. To continue, please uninstall all duplicate versions and reboot your device.</string>
+    <string name="home_dialog_button_exit">Exit</string>
+
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">The permission of adb is limited</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[It\'s highly possible that your device manufacturer limits the permission of adb.<p>There may be a solution for your system in <b><a href=\"%1$s\">this document</a></b>.]]></string>

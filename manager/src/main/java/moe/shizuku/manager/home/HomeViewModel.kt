@@ -33,8 +33,27 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     private val _shouldShowBatteryOptimizationSnackbar = MutableLiveData<Boolean>(false)
     val shouldShowBatteryOptimizationSnackbar: LiveData<Boolean> = _shouldShowBatteryOptimizationSnackbar
 
+    private val _shouldShowRebootDialog = MutableLiveData<Boolean>(false)
+    val shouldShowRebootDialog: LiveData<Boolean> = _shouldShowRebootDialog
+
+    private val _shouldShowUninstallDialog = MutableLiveData<Boolean>(false)
+    val shouldShowUninstallDialog: LiveData<Boolean> = _shouldShowUninstallDialog
 
     private fun load(): ServiceStatus {
+        // In certain cases when user re-installs Shizuku with different package name (e.g., when using stealth mode), the system doesn't recognize the Shizuku permission.
+        // As a result, all permission operations (check/grant/revoke) will fail.
+        // This is fixed by rebooting the device.
+        // Run getPermissionGroupInfo() to trigger the exception. Then catch it and show a dialog prompting the user to reboot their device.
+        try {
+            val permissionGroup = appContext.packageManager.getPermissionGroupInfo(Manifest.permission_group.API, 0)
+            val permission = appContext.packageManager.getPermissionInfo(Manifest.permission.API_V23, 0)
+            if (permission.packageName != appContext.packageName) {
+                _shouldShowUninstallDialog.postValue(true)
+            }
+        } catch (e: PackageManager.NameNotFoundException) {
+            _shouldShowRebootDialog.postValue(true)
+        }
+
         if (!ShizukuStateMachine.isRunning()) {
             return ServiceStatus()
         }
