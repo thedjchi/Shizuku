@@ -146,7 +146,6 @@
     <string name="bug_report_dialog_button_issues">Դիտել խնդիրները</string>
     <string name="bug_report_dialog_method">Եթե ունեք հաշիվ, խնդրում ենք ներկայացնել ձեր խնդիրը GitHub-ում։\n\nՀակառակ դեպքում կարող եք ուղարկել էլ. նամակ։</string>
     <string name="bug_report_dialog_button_email">Ուղարկել էլ. փոստ</string>
-    <string name="bug_report_dialog_button_github">Անցնել $1$s-ին</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Նավահանգիստը պետք է լինի միջեւ 1 եւ 65535</string>
     <string name="snackbar_battery_optimization_home">Մարտկոցի օպտիմալացումը պետք է անջատված լինի, որպեսզի boot/watchdog-ը ճիշտ աշխատի:</string>
