@@ -37,11 +37,13 @@
 \nPozor! Pred Androidom 11, je za omogočanje brezžičnega razhroščevanja potreben računalnik.</string>
     <string name="dialog_usb_debugging_not_enabled">Odpravljanje napak prek USB-ja ni omogočeno.\nOmogočite ga v »Možnostih za razvijalce«.</string>
     <string name="dialog_adb_pairing_message">Začnite z združevanjem tako, da izvedete naslednje korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite »Odpravljanje napak USB« in »Brezžično odpravljanje napak«\n- Dotaknite se leve strani »Brezžično odpravljanje napak«\n- Dotaknite se »Seznani napravo s kodo za združevanje«\n- V obvestilo vnesite kodo za združevanje</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Shizuku morda nima dovoljenja %1$s . Če ga želite odobriti, zaženite naslednji ukaz ADB:%2$sČe ste ukaz že zagnali, nadaljujte s postopkom seznanjanja.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Za začetek postopka seznanjanja omogočite storitev dostopnosti. To bo Shizuku omogočilo zaznavanje kode za seznanjanje.\n\nStoritev dostopnosti se bo izklopila, ko bo koda najdena, ali po 1 minuti, da se prihrani energija.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Začnite z združevanjem tako, da izvedete naslednje korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite »Odpravljanje napak USB« in »Odpravljanje napak brezžično«\n- Dotaknite se leve strani »Odpravljanje napak brezžično«\n- Dotaknite se »Združi napravo s kodo za združevanje«. Shizuku bo samodejno zaznal kodo za združevanje.</string>
     <string name="adb_pairing_requires_multi_window">Najprej vklopite način deljenega zaslona (več oken).</string>
     <string name="adb_pairing_requires_multi_window_reason">Sistem zahteva, da je dialog za združevanje vedno viden. Uporaba deljenega zaslona je edini način, da sta ta aplikacija in sistemsko okno hkrati vidna.</string>
     <string name="adb_error_key_store">Ni mogoče generirati ključa za brezžično razhroščevanje.\nTo je morda zato, ker je mehanizem KeyStore na tej napravi pokvarjen.</string>
+    <string name="adb_stopping_tcp">Zapiranje TCP vrat</string>
     <string name="adb_error_stop_tcp">Ustavitev ADB prek TCP ni uspela</string>
     <string name="adb_pair_required">Najprej sledite koraku seznanjanja.</string>
     <string name="enable">Omogoči</string>
@@ -114,6 +116,8 @@
     <string name="settings_watchdog_summary">Samodejni ponovni zagon Shizukuja, če se sesuje</string>
     <string name="settings_tcp_mode">Način TCP</string>
     <string name="settings_tcp_mode_summary">"Omogoča Shizuku, da se ponovno zažene brez Wi-Fi-ja. (Shizuku je morala enkrat začeti od ponovnega zagona)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Vrata TCP bodo takoj zaprta. Za ponovni vklop načina TCP boste potrebovali Wi-Fi. Želite nadaljevati?"</string>
+    <string name="settings_tcp_mode_closing_port">Zapiranje TCP vrat ...</string>
     <string name="settings_restart_dialog_title">Potreben je ponovni zagon</string>
     <string name="settings_restart_dialog_message">Shizuku mora začeti znova, da lahko uporabi to nastavitev.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi je obvezen. Shizuku bo še naprej delovala in počakala na Wi-Fi povezavo, preden se bo v ozadju ponovno zagnala.</b>]]></string>
@@ -144,6 +148,7 @@
     <string name="bug_report_dialog_button_issues">Ogled težav</string>
     <string name="bug_report_dialog_method">Če imate račun, prosimo, oddajte težavo na GitHubu.\n\nSicer pa lahko pošljete e-pošto.</string>
     <string name="bug_report_dialog_button_email">Pošlji e-pošto</string>
+    <string name="bug_report_dialog_button_github">Pojdi na $1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pristanišče mora biti med 1 in 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizacija baterije mora biti onemogočena, da zagon ob zagonu/watchdogu deluje pravilno.</string>
