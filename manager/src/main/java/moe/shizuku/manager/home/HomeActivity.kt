@@ -9,6 +9,7 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.viewModels
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -21,7 +22,7 @@ import moe.shizuku.manager.databinding.AboutDialogBinding
 import moe.shizuku.manager.databinding.HomeActivityBinding
 import moe.shizuku.manager.home.AdbPairAccessibilityDialogFragment
 import moe.shizuku.manager.ktx.toHtml
-import moe.shizuku.manager.management.appsViewModel
+import moe.shizuku.manager.management.AppsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
 import moe.shizuku.manager.utils.AppIconCache
 import moe.shizuku.manager.utils.EnvironmentUtils
@@ -30,7 +31,6 @@ import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.content.asActivity
 import rikka.core.ktx.unsafeLazy
 import rikka.lifecycle.Status
-import rikka.lifecycle.viewModels
 import rikka.recyclerview.addEdgeSpacing
 import rikka.recyclerview.addItemSpacing
 import rikka.recyclerview.fixEdgeEffect
@@ -38,8 +38,8 @@ import rikka.shizuku.Shizuku
 
 abstract class HomeActivity : AppBarActivity() {
 
-    private val homeModel by viewModels { HomeViewModel(application) }
-    private val appsModel by appsViewModel()
+    private val homeModel: HomeViewModel by viewModels()
+    private val appsModel: AppsViewModel by viewModels()
     private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
 
     private val stateListener: (ShizukuStateMachine.State) -> Unit = {

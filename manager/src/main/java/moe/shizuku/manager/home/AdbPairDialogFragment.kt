@@ -1,9 +1,9 @@
 package moe.shizuku.manager.home
 
 import android.annotation.SuppressLint
+import android.app.Application
 import android.app.Dialog
 import android.content.ActivityNotFoundException
-import android.content.Context
 import android.content.Intent
 import android.os.Build.VERSION_CODES
 import android.os.Bundle
@@ -17,6 +17,8 @@ import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -29,7 +31,6 @@ import moe.shizuku.manager.adb.*
 import moe.shizuku.manager.databinding.AdbPairDialogBinding
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.SettingsPage
-import rikka.lifecycle.viewModels
 import java.net.ConnectException
 
 @RequiresApi(VERSION_CODES.R)
@@ -37,7 +38,7 @@ class AdbPairDialogFragment : DialogFragment() {
 
     private lateinit var binding: AdbPairDialogBinding
 
-    private val viewModel by viewModels { ViewModel(requireContext()) }
+    private val viewModel: ViewModel by activityViewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val context = requireContext()
@@ -153,7 +154,9 @@ class AdbPairDialogFragment : DialogFragment() {
 }
 
 @SuppressLint("NewApi")
-private class ViewModel(context: Context) : androidx.lifecycle.ViewModel() {
+class ViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val appContext = getApplication<Application>().applicationContext
 
     private val _result = MutableLiveData<Throwable?>()
     val result = _result as LiveData<Throwable?>
@@ -161,7 +164,7 @@ private class ViewModel(context: Context) : androidx.lifecycle.ViewModel() {
     private val _port = MutableLiveData<Int>()
     val port = _port as LiveData<Int>
 
-    private val adbMdns: AdbMdns = AdbMdns(context, AdbMdns.TLS_PAIRING) {
+    private val adbMdns: AdbMdns = AdbMdns(appContext, AdbMdns.TLS_PAIRING) {
         _port.postValue(it)
     }
 
