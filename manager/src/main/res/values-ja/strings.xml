@@ -37,7 +37,6 @@
 \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
     <string name="dialog_usb_debugging_not_enabled">USBデバッグが有効になっていません。\n「開発者向けオプション」で有効にしてください。</string>
     <string name="dialog_adb_pairing_message">以下の手順でペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。\n- 通知にペアリングコードを入力します。</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku に %1$s 権限が不足している可能性があります。権限を付与するには、次の ADB コマンドを実行してください:%2$s既にコマンドを実行している場合は、ペアリングプロセスを続行してください。</string>
     <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">以下の手順に従ってペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。Shizukuはペアリングコードを自動的に検出します。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
