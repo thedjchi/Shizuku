@@ -37,7 +37,6 @@
 \nLưu ý, trước Android 11, để kích hoạt tính năng gỡ lỗi không dây, kết nối máy tính là điều bắt buộc.</string>
     <string name="dialog_usb_debugging_not_enabled">Chưa bật tính năng gỡ lỗi USB.\nVui lòng bật tính năng này trong \"Tùy chọn nhà phát triển\".</string>
     <string name="dialog_adb_pairing_message">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối thiết bị bằng mã ghép nối\"\n- Nhập mã ghép nối vào thông báo</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku có thể thiếu quyền %1$s . Để cấp quyền này, hãy chạy lệnh ADB sau:%2$sNếu bạn đã chạy lệnh này rồi, hãy tiếp tục quá trình ghép nối.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vui lòng bật dịch vụ trợ năng để bắt đầu quá trình ghép nối. Thao tác này cho phép Shizuku phát hiện mã ghép nối.\n\nDịch vụ trợ năng sẽ bị tắt khi tìm thấy mã hoặc sau 1 phút để tiết kiệm pin.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối thiết bị bằng mã ghép nối\". Shizuku sẽ tự động phát hiện mã ghép nối.</string>
     <string name="adb_pairing_requires_multi_window">Vui lòng vào chế độ chia đôi màn hình (đa cửa sổ) trước.</string>
