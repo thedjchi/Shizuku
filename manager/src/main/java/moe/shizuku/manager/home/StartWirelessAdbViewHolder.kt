@@ -21,10 +21,11 @@ import kotlinx.coroutines.Dispatchers
 import moe.shizuku.manager.Helps
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.R
-import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.adb.AdbPairingTutorialActivity
+import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeStartWirelessAdbBinding
+import moe.shizuku.manager.home.showAccessibilityDialog
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.NotifCancelReceiver
 import moe.shizuku.manager.starter.StarterActivity
@@ -123,7 +124,7 @@ class StartWirelessAdbViewHolder(binding: HomeStartWirelessAdbBinding, root: Vie
     @RequiresApi(Build.VERSION_CODES.R)
     private fun onPairClicked(context: Context) {
         if (EnvironmentUtils.isTelevision()) {
-            AdbPairAccessibilityDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
+            context.showAccessibilityDialog()
         } else if ((context.display?.displayId ?: -1) > 0 || ShizukuSettings.getLegacyPairing()) {
             // Running in a multi-display environment (e.g., Windows Subsystem for Android),
             // pairing dialog can be displayed simultaneously with Shizuku.

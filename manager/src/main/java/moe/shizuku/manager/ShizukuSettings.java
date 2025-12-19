@@ -98,14 +98,6 @@ public class ShizukuSettings {
         getPreferences().edit().putInt("mode", method).apply();
     }
 
-    public static boolean getHasEnabledAccessibilityBefore() {
-        return getPreferences().getBoolean("enabled_accessibility_before", false);
-    }
-
-    public static void setHasEnabledAccessibilityBefore(boolean value) {
-        getPreferences().edit().putBoolean("enabled_accessibility_before", value).apply();
-    }
-
     public static boolean getStartOnBoot(Context context) {
         ComponentName bootCompleteReceiver = new ComponentName(context.getPackageName(), BootCompleteReceiver.class.getName());
         int state = context.getPackageManager().getComponentEnabledSetting(bootCompleteReceiver);

@@ -31,8 +31,6 @@ class AdbPairingAccessibilityService : AccessibilityService() {
 
     override fun onServiceConnected() {
         super.onServiceConnected()
-
-        ShizukuSettings.setHasEnabledAccessibilityBefore(true)
         
         if (!(EnvironmentUtils.isTelevision() && EnvironmentUtils.isTlsSupported())) {
             Toast.makeText(this, getString(R.string.toast_accessibility_tv_only), Toast.LENGTH_SHORT).show()
@@ -41,7 +39,11 @@ class AdbPairingAccessibilityService : AccessibilityService() {
         }
 
         val intent = Intent(this, MainActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            addFlags(
+                Intent.FLAG_ACTIVITY_NEW_TASK or 
+                Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                Intent.FLAG_ACTIVITY_SINGLE_TOP
+            )
             putExtra(HomeActivity.EXTRA_SHOW_PAIRING_DIALOG, true)
         }
         startActivity(intent)

@@ -20,7 +20,7 @@ import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.databinding.AboutDialogBinding
 import moe.shizuku.manager.databinding.HomeActivityBinding
-import moe.shizuku.manager.home.AdbPairAccessibilityDialogFragment
+import moe.shizuku.manager.home.showAccessibilityDialog
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.management.AppsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
@@ -91,11 +91,17 @@ abstract class HomeActivity : AppBarActivity() {
         recyclerView.addItemSpacing(top = 4f, bottom = 4f, unit = TypedValue.COMPLEX_UNIT_DIP)
         recyclerView.addEdgeSpacing(top = 4f, bottom = 4f, left = 16f, right = 16f, unit = TypedValue.COMPLEX_UNIT_DIP)
 
-        if (getIntent().getBooleanExtra(EXTRA_SHOW_PAIRING_DIALOG, false)) {
-            AdbPairAccessibilityDialogFragment().show(this.asActivity<FragmentActivity>().supportFragmentManager)
-        }
+        
 
         ShizukuStateMachine.addListener(stateListener)
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        intent?.let {
+            val showDialog = it.getBooleanExtra(HomeActivity.EXTRA_SHOW_PAIRING_DIALOG, false)
+            if (showDialog) showAccessibilityDialog()
+        }
     }
 
     override fun onResume() {
