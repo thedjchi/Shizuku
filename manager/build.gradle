@@ -153,6 +153,36 @@ configurations.configureEach {
     exclude group: "androidx.profileinstaller", module: "profileinstaller"
 }
 
+import java.net.URL
+
+def downloadRvp = tasks.register("downloadRvp") {
+    def version = "5.47.0"
+    def output = file("src/main/assets/patches.rvp")
+
+    doLast {
+        output.parentFile.mkdirs()
+
+        if (output.exists()) {
+            println("RVP already exists, skipping download.")
+            return
+        }
+
+        new URL("https://github.com/ReVanced/revanced-patches/releases/download/v${version}/patches-${version}.rvp")
+                .openStream()
+                .withCloseable { input ->
+                    output.newOutputStream().withCloseable { out ->
+                        out << input
+                    }
+                }
+
+        println("Downloaded RVP to: ${output}")
+    }
+}
+
+tasks.named("preBuild") {
+    dependsOn(downloadRvp)
+}
+
 dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2"

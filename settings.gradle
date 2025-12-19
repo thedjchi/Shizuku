@@ -41,14 +41,7 @@ dependencyResolutionManagement {
             }
         }
         maven {
-            url = uri("https://maven.pkg.github.com/ReVanced/revanced-patcher")
-            credentials {
-                username = gprUser
-                password = gprKey
-            }
-        }
-        maven {
-            url = uri("https://maven.pkg.github.com/ReVanced/revanced-library")
+            url = uri("https://maven.pkg.github.com/revanced/registry")
             credentials {
                 username = gprUser
                 password = gprKey
