@@ -75,9 +75,9 @@
     <string name="home_automation_title">使用自动化应用程序控制雫</string>
     <string name="home_automation_description"><![CDATA[Tasker 和 MacroDroid 等应用可以发送 Intent 来自动启动/停止 Shizuku。<p>运行 Android 10 或更低版本的未 root 设备必须使用<font face="monospace"> %1$s </font>从 PC 打开 TCP 端口，启动 Intent 才能正常工作。]]></string>
     <string name="home_automation_button_view_intents">查看意图</string>
-    <string name="home_automation_dialog_label_action">行动</string>
-    <string name="home_automation_dialog_label_package">包裹</string>
-    <string name="home_automation_dialog_label_class">班级</string>
+    <string name="home_automation_dialog_label_action">动作</string>
+    <string name="home_automation_dialog_label_package">包名</string>
+    <string name="home_automation_dialog_label_class">类名</string>
     <string name="home_automation_dialog_label_target">目标</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">开发者指南</string>
