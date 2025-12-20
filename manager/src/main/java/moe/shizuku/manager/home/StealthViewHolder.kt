@@ -9,7 +9,6 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeStealthBinding
 import moe.shizuku.manager.ktx.toHtml
-import moe.shizuku.manager.stealth.StealthModeHelper
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
@@ -26,7 +25,6 @@ class StealthViewHolder(binding: HomeStealthBinding, root: View) : BaseViewHolde
 
     init {
         root.setOnClickListener { v: View ->
-            StealthModeHelper.listAllPatches(v.context)
             // v.context.startActivity(Intent(v.context, StealthTutorialActivity::class.java))
         }
     }
