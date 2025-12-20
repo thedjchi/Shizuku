@@ -67,7 +67,12 @@ class HomeAdapter(private val homeModel: HomeViewModel, private val appsModel: A
             addItem(StartAdbViewHolder.CREATOR, null, ID_START_ADB)
         }
         addItem(AutomationViewHolder.CREATOR, null, ID_AUTOMATION)
-        addItem(StealthViewHolder.CREATOR, null, ID_AUTOMATION)
+
+        // ReVanced library minSdk is 26
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            addItem(StealthViewHolder.CREATOR, null, ID_AUTOMATION)
+        }
+
         addItem(LearnMoreViewHolder.CREATOR, null, ID_LEARN_MORE)
         notifyDataSetChanged()
     }
