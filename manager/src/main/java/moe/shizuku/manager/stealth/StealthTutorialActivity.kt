@@ -1,16 +1,20 @@
 package moe.shizuku.manager.stealth
 
+import android.animation.ValueAnimator
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
-import android.view.WindowInsets.Type
 import android.view.ViewGroup
+import android.view.WindowInsets.Type
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.transition.TransitionManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.RelativeCornerSize
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.transition.MaterialSharedAxis
@@ -43,17 +47,14 @@ class StealthTutorialActivity : AppBarActivity() {
                     }
 
                     is UiState.Unhide -> {
-                        fab.applyColors(this@StealthTutorialActivity, state.menuOpen)
+                        fab.animate(this@StealthTutorialActivity, state.menuOpen)
+                        fabMenu.animate(state.menuOpen)
                         if (state.menuOpen) {
-                            fab.shapeAppearanceModel = circleShape
                             fab.setImageResource(R.drawable.ic_close_24)
                             fab.setOnClickListener { viewModel.onCloseUnhideMenu() }
-                            fabMenu.animate(shouldShow = true)
                         } else {
-                            fab.shapeAppearanceModel = defaultShape
                             fab.setImageResource(R.drawable.ic_visibility_on_filled_24)
                             fab.setOnClickListener { viewModel.onOpenUnhideMenu() }
-                            fabMenu.animate(shouldShow = false)
                         }
 
                         packageNameEditText.setText(ORIGINAL_PACKAGE_NAME)
@@ -74,9 +75,7 @@ class StealthTutorialActivity : AppBarActivity() {
                 val imeHeight = insets.getInsets(Type.ime()).bottom
                 val isKeyboardVisible = imeHeight > 0
 
-                if (isKeyboardVisible) fab.hide()
-                else fab.show()
-
+                if (isKeyboardVisible) fab.hide() else fab.show()
                 insets
             }
 
@@ -93,56 +92,61 @@ class StealthTutorialActivity : AppBarActivity() {
         }
     }
 
-    private fun FloatingActionButton.applyColors(
-        context: Context,
-        menuOpen: Boolean
-    ) {
-        val bgColor = if (menuOpen) R.attr.colorPrimary else R.attr.colorPrimaryContainer
-        val iconColor = if (menuOpen) R.attr.colorOnPrimary else R.attr.colorOnPrimaryContainer
+    private fun <T> ValueAnimator.animate(update: (T) -> Unit) {
+        duration = 300
+        interpolator = FastOutSlowInInterpolator()
+        addUpdateListener {
+            @Suppress("UNCHECKED_CAST")
+            update(it.animatedValue as T)
+        }
+        start()
+    }
 
-        backgroundTintList = context.resolveColor(bgColor)
-        imageTintList = context.resolveColor(iconColor)
+    private fun FloatingActionButton.animate(
+        context: Context,
+        menuOpen: Boolean,
+    ) {
+        ValueAnimator
+            .ofArgb(
+                backgroundTintList?.defaultColor ?: Color.TRANSPARENT,
+                context.resolveColor(if (menuOpen) R.attr.colorPrimary else R.attr.colorPrimaryContainer),
+            ).animate<Int> { backgroundTintList = ColorStateList.valueOf(it) }
+
+        ValueAnimator
+            .ofArgb(
+                imageTintList?.defaultColor ?: Color.TRANSPARENT,
+                context.resolveColor(if (menuOpen) R.attr.colorOnPrimary else R.attr.colorOnPrimaryContainer),
+            ).animate<Int> { imageTintList = ColorStateList.valueOf(it) }
+
+        ValueAnimator
+            .ofFloat(
+                if (menuOpen) 0.25f else 0.5f,
+                if (menuOpen) 0.5f else 0.25f,
+            ).animate<Float> {
+                shapeAppearanceModel =
+                    shapeAppearanceModel
+                        .toBuilder()
+                        .setAllCornerSizes(RelativeCornerSize(it))
+                        .build()
+            }
     }
 
     private fun ViewGroup.animate(shouldShow: Boolean) {
-        val transition = MaterialSharedAxis(MaterialSharedAxis.X, shouldShow).apply {
-            duration = 300
-        }
-        TransitionManager.beginDelayedTransition(this, transition)
-
-        val indices = if (shouldShow) 0 until childCount else (childCount - 1 downTo 0)
-
-        for ((step, i) in indices.withIndex()) {
-            val child = getChildAt(i)
-            child.postDelayed({
-                child.isVisible = shouldShow
-            }, step * 40L)
-        }
-
-        this.isVisible = shouldShow
+        val transition =
+            MaterialSharedAxis(MaterialSharedAxis.X, shouldShow).apply {
+                duration = 300
+            }
+        TransitionManager.beginDelayedTransition(parent as ViewGroup, transition)
+        isVisible = shouldShow
     }
 
-    private fun Context.resolveColor(color: Int): ColorStateList {
+    private fun Context.resolveColor(color: Int): Int {
         val typedValue = TypedValue()
         theme.resolveAttribute(color, typedValue, true)
         val resolvedColor = typedValue.data
 
-        return ColorStateList.valueOf(resolvedColor)
+        return resolvedColor
     }
-
-    companion object {
-        private val defaultShape by lazy {
-            ShapeAppearanceModel.builder()
-                .setAllCornerSizes(RelativeCornerSize(0.2f))
-                .build()
-        }
-        private val circleShape by lazy {
-            ShapeAppearanceModel.builder()
-                .setAllCornerSizes(RelativeCornerSize(0.5f))
-                .build()
-        }
-    }
-
 }
 
 private const val codeSnippet = """
