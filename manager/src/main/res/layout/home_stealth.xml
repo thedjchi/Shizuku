@@ -14,7 +14,7 @@
             style="@style/CardIcon"
             android:duplicateParentState="true"
             android:importantForAccessibility="no"
-            android:src="@drawable/ic_visibility_off_24" />
+            android:src="@drawable/ic_visibility_off_outline_24" />
 
         <TextView
             style="@style/CardTitle"
