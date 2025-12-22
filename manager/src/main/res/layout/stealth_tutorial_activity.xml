@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <rikka.widget.borderview.BorderNestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:borderBottomVisibility="never"
+        app:borderTopDrawable="@null"
+        app:borderTopVisibility="whenTop">
+
+        <LinearLayout
+            android:id="@android:id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingStart="?android:listPreferredItemPaddingStart"
+            android:paddingTop="?actionBarSize"
+            android:paddingEnd="?android:listPreferredItemPaddingEnd"
+            android:paddingBottom="16dp"
+            app:fitsSystemWindowsInsets="bottom|top">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/FilledCard"
+                app:cardBackgroundColor="?colorErrorContainer">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_warning_24"
+                    android:tint="?colorOnErrorContainer"
+                    android:tintMode="src_in" />
+
+                <TextView
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:duplicateParentState="true"
+                    android:text="@string/stealth_warning_compatibility"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnErrorContainer" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/FilledCard"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="?colorErrorContainer">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_warning_24"
+                    android:tint="?colorOnErrorContainer"
+                    android:tintMode="src_in" />
+
+                <TextView
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:duplicateParentState="true"
+                    android:text="@string/stealth_warning_detection"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnErrorContainer" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginTop="8dp"
+                style="@style/FilledCard">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_help_outline_24dp"
+                    android:tint="?colorOnSecondaryContainer"
+                    android:tintMode="src_in" />
+
+                <TextView
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:duplicateParentState="true"
+                    android:text="@string/stealth_info_rish"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnSecondaryContainer" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginTop="8dp"
+                style="@style/FilledCard">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_help_outline_24dp"
+                    android:tint="?colorOnSecondaryContainer"
+                    android:tintMode="src_in" />
+
+                <TextView
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:duplicateParentState="true"
+                    android:text="@string/stealth_info_intents"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnSecondaryContainer" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/packageNameLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/stealth_package_name"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/packageNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </rikka.widget.borderview.BorderNestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/fabMenu"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:layout_gravity="bottom|end"
+        android:padding="16dp"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/unhideTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/stealth_menu_unhide_temporary"
+            android:textColor="?colorOnPrimaryContainer"
+            app:backgroundTint="?colorPrimaryContainer"
+            app:icon="@drawable/ic_visibility_on_outline_24"
+            app:iconTint="?colorOnPrimaryContainer" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/unhidePerm"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/stealth_menu_unhide_permanent"
+            android:textColor="?colorOnPrimaryContainer"
+            app:backgroundTint="?colorPrimaryContainer"
+            app:icon="@drawable/ic_visibility_on_filled_24"
+            app:iconTint="?colorOnPrimaryContainer" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        style="@style/Widget.Material3.FloatingActionButton.Medium" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

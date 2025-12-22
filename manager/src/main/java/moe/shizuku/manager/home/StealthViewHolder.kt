@@ -1,5 +1,6 @@
 package moe.shizuku.manager.home
 
+import android.content.Intent
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeStealthBinding
 import moe.shizuku.manager.ktx.toHtml
+import moe.shizuku.manager.stealth.StealthTutorialActivity
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
@@ -25,7 +27,7 @@ class StealthViewHolder(binding: HomeStealthBinding, root: View) : BaseViewHolde
 
     init {
         root.setOnClickListener { v: View ->
-            // v.context.startActivity(Intent(v.context, StealthTutorialActivity::class.java))
+            v.context.startActivity(Intent(v.context, StealthTutorialActivity::class.java))
         }
     }
 }
