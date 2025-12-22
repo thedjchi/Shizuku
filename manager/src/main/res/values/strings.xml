@@ -126,10 +126,13 @@
     <string name="rish_description"><![CDATA[With %1$s, you can run shell commands in any terminal app.<p>Tap to learn more about how to use it.]]></string>
 
     <!-- Stealth -->
-    <string name="stealth_warning_compatibility">Some apps that use Shizuku may not work with stealth mode.</string>
-    <string name="stealth_warning_detection">Some apps may still be able to detect Shizuku even when hidden. Nothing can be done about this.</string>
-    <string name="stealth_info_rish">If you use rish, you will need to re-export the files before using stealth mode for the first time.</string>
-    <string name="stealth_info_intents">If you use intents to control Shizuku, you will need to update the intents with the new package name after enabling stealth mode.</string>
+    <string name="stealth_warning_compatibility">Some apps that use Shizuku may not work with stealth mode because they try to detect if Shizuku is installed.</string>
+    <string name="stealth_warning_compatibility_2">Tap this card to reveal a code snippet you can send to the developer so their install check will work with stealth mode.</string>
+    <string name="stealth_warning_compatibility_3">As a workaround, you can temporarily unhide Shizuku, which re-installs the original version without uninstalling the clone. Then, make the required changes and re-hide Shizuku.</string>
+    <string name="stealth_warning_detection">Some apps may still be able to detect Shizuku even when hidden. There is no workaround.</string>
+    <string name="stealth_info_title">Important information</string>
+    <string name="stealth_info_rish">Rish users: re-export the files before using stealth mode for the first time.</string>
+    <string name="stealth_info_intents">Intent users: update your intents with the new package name after toggling stealth mode.</string>
     <string name="stealth_package_name">Package name (optional)</string>
     <string name="stealth_package_name_helper_text">If left empty, a random suffix will be added to the package name.</string>
     <string name="stealth_error_ends_with_period">Package name cannot end with a period.</string>
