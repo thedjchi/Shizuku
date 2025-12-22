@@ -54,6 +54,10 @@
         android:name="${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         tools:node="remove" />
 
+    <queries>
+        <package android:name="moe.shizuku.privileged.api" />
+    </queries>
+
     <application
         android:name=".ShizukuApplication"
         android:allowBackup="true"
@@ -96,6 +100,10 @@
         <activity
             android:name=".shell.ShellTutorialActivity"
             android:label="@string/home_terminal_title" />
+        <activity
+            android:name=".stealth.StealthTutorialActivity"
+            android:label="@string/home_stealth_title"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".settings.SettingsActivity"
             android:exported="false"
