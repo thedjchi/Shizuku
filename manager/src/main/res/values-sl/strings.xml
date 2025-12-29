@@ -139,15 +139,6 @@
     <string name="settings_legacy_pairing_summary">Namesto obvestila vnesite kodo za povezovanje v pogovorno okno</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Najprej storite naslednje:</string>
-    <string name="bug_report_dialog_update">Preverite, ali uporabljate najnovejšo različico programa Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Ogled najnovejše izdaje</string>
-    <string name="bug_report_dialog_wiki">Preberite wiki in sledite vsem ustreznim korakom za odpravljanje težav.</string>
-    <string name="bug_report_dialog_button_wiki">Ogled wikija</string>
-    <string name="bug_report_dialog_issues">Preiščite vse obstoječe težave in preverite, ali je bila vaša napaka/funkcija že prijavljena.</string>
-    <string name="bug_report_dialog_button_issues">Ogled težav</string>
-    <string name="bug_report_dialog_method">Če imate račun, prosimo, oddajte težavo na GitHubu.\n\nSicer pa lahko pošljete e-pošto.</string>
-    <string name="bug_report_dialog_button_email">Pošlji e-pošto</string>
-    <string name="bug_report_dialog_button_github">Pojdi na %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pristanišče mora biti med 1 in 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizacija baterije mora biti onemogočena, da zagon ob zagonu/watchdogu deluje pravilno.</string>
@@ -213,8 +204,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Izklopite opozorila</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Brskalnika ni mogoče zagnati</string>
-    <string name="toast_copied_to_clipboard">Datoteka %s\nje bila kopirana v odložišče.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> je bilo kopirano v odložišče.]]></string>
     <string name="accessibility_service_description">Zagotavlja podporo za seznanjanje naprav (npr. televizorjev s sistemom Android 14+), kjer ni mogoče uporabljati obvestil ali deljenega zaslona.\n\nOmogoča Shizuku, da izvleče kodo za seznanjanje z zaslona za brezžično odpravljanje napak. Ko najde kodo za seznanjanje, se samodejno onemogoči.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ne podpira sodobnega jezika Shizuku</string>
