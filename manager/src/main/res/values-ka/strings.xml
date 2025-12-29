@@ -134,15 +134,6 @@
     <string name="settings_legacy_pairing_summary">შეიყვანეთ დაწყვილების კოდი დიალოგში შეტყობინების ნაცვლად</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">პირველ რიგში, გთხოვთ, გააკეთოთ შემდეგი:</string>
-    <string name="bug_report_dialog_update">შეამოწმეთ, რომ იყენებთ Shizuku-ს უახლეს ვერსიას.</string>
-    <string name="bug_report_dialog_button_update">უახლესი გამოშვების ნახვა</string>
-    <string name="bug_report_dialog_wiki">წაიკითხეთ ვიკი და მიჰყევით პრობლემების მოგვარების ყველა შესაბამის ნაბიჯს.</string>
-    <string name="bug_report_dialog_button_wiki">ვიკის ნახვა</string>
-    <string name="bug_report_dialog_issues">გადახედეთ ყველა არსებულ პრობლემას, რათა ნახოთ, უკვე შეტყობინებულია თუ არა თქვენი შეცდომა/ფუნქცია.</string>
-    <string name="bug_report_dialog_button_issues">პრობლემების ნახვა</string>
-    <string name="bug_report_dialog_method">თუ ანგარიში გაქვთ, გთხოვთ, პრობლემა GitHub-ზე წარმოადგინოთ.\n\nწინააღმდეგ შემთხვევაში, შეგიძლიათ ელ. ფოსტის გაგზავნა.</string>
-    <string name="bug_report_dialog_button_email">ელფოსტის გაგზავნა</string>
-    <string name="bug_report_dialog_button_github">გადადით %1$s-ზე</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">პორტი უნდა იყოს 1-დან 65535-მდე</string>
     <string name="snackbar_battery_optimization_home">ბატარეის ოპტიმიზაცია უნდა გამორთული იყოს ჩატვირთვის / მაკონტროლებლის დასაწყებად გამართულად მუშაობისთვის.</string>
@@ -208,8 +199,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">გამორთეთ შეტყობინებები</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ბრაუზერის გაშვება შეუძლებელია</string>
-    <string name="toast_copied_to_clipboard">%s\nგადაწერილია ბუფერში.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> გადაწერილია ბუფერში.]]></string>
     <string name="accessibility_service_description">უზრუნველყოფს დაწყვილების მხარდაჭერას მოწყობილობებისთვის (მაგ., ტელევიზორები, რომლებიც მუშაობს Android 14+), სადაც შეტყობინებების ან გაყოფილი ეკრანის გამოყენება შეუძლებელია.\n\nსაშუალებას აძლევს Shizuku-ს ამოიღოს დაწყვილების კოდი უკაბელო გამართვის დაწყვილების ეკრანიდან. ის გამორთავს დაწყვილების კოდის პოვნის შემდეგ.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s არ უჭერს მხარს თანამედროვე შიზუკუს</string>
