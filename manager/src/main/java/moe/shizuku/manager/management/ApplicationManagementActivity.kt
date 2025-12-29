@@ -36,8 +36,7 @@ class ApplicationManagementActivity : AppBarActivity() {
             return
         }
 
-        val binding = AppsActivityBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val binding = AppsActivityBinding.inflate(layoutInflater, rootView, true)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

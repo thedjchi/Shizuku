@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen   xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Empty preference to fix issue with Android TVs not being able to re-focus on appbar if category is first item -->
+    <Preference
+        android:key="empty"
+        style="@style/Preference.Rikka.Material3.Empty" />
 
     <PreferenceCategory
         android:key="category_behavior"
         android:title="@string/settings_behavior">
 
-        <rikka.material.preference.MaterialSwitchPreference
+        <SwitchPreferenceCompat
             android:key="start_on_boot"
             android:title="@string/settings_start_on_boot" />
 
-        <rikka.material.preference.MaterialSwitchPreference
+        <SwitchPreferenceCompat
             android:key="watchdog"
             android:summary="@string/settings_watchdog_summary"
             android:title="@string/settings_watchdog" />
 
-        <rikka.material.preference.MaterialSwitchPreference
+        <SwitchPreferenceCompat
             android:key="tcp_mode"
             android:title="@string/settings_tcp_mode" 
             android:defaultValue="true" />
@@ -59,12 +65,12 @@
             android:summary="%s"
             android:title="@string/dark_theme" />
 
-        <rikka.material.preference.MaterialSwitchPreference
+        <SwitchPreferenceCompat
             android:key="black_night_theme"
             android:summary="@string/settings_black_night_theme_summary"
             android:title="@string/settings_black_night_theme" />
 
-        <rikka.material.preference.MaterialSwitchPreference
+        <SwitchPreferenceCompat
             android:key="use_system_color"
             android:title="@string/settings_use_system_color" />
 
@@ -88,7 +94,7 @@
         android:key="category_advanced"
         android:title="@string/settings_advanced">
 
-        <rikka.material.preference.MaterialSwitchPreference
+        <SwitchPreferenceCompat
             android:key="legacy_pairing"
             android:summary="@string/settings_legacy_pairing_summary"
             android:title="@string/settings_legacy_pairing" />

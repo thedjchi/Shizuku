@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="?homeCardStyle"
-    android:gravity="center_vertical"
-    android:orientation="horizontal">
+    style="@style/Card.Small">
 
     <ImageView
         android:id="@android:id/icon"
@@ -30,7 +29,7 @@
 
         <TextView
             android:id="@android:id/text2"
-            style="@style/CardSummary"
+            style="@style/CardSummary.Brief"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:duplicateParentState="true"

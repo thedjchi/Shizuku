@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="list_padding">24dp</dimen>
 
-    <dimen name="home_padding">8dp</dimen>
+    <dimen name="margin_horizontal">24dp</dimen>
 
 </resources>

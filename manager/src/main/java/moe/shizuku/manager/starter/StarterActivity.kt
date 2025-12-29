@@ -44,8 +44,7 @@ class StarterActivity : AppBarActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close_24)
 
-        val binding = StarterActivityBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val binding = StarterActivityBinding.inflate(layoutInflater, rootView, true)
 
         viewModel.output.observe(this) {
             val output = it.data!!.trim()
@@ -114,6 +113,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     val output = _output as LiveData<Resource<StringBuilder>>
 
     private val handler = CoroutineExceptionHandler { _, throwable ->
+        ShizukuStateMachine.update()
         log(error = throwable)
     }
 
@@ -124,15 +124,9 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         started = true
 
         viewModelScope.launch(handler) {
-            try {
-                if (root) {
-                    startRoot()
-                } else AdbStarter.startAdb(appContext, port, { log(it) })
-                Starter.waitForBinder({ log(it) })
-            } catch (e: Exception) {
-                ShizukuStateMachine.update()
-                throw e
-            }
+            if (root) startRoot()
+            else AdbStarter.startAdb(appContext, port, { log(it) })
+            Starter.waitForBinder({ log(it) })
         }
     }
 
@@ -140,10 +134,8 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         line?.let { sb.appendLine(it) }
         error?.let { sb.appendLine().appendLine(Log.getStackTraceString(it)) }
 
-        if (error == null)
-            _output.postValue(Resource.success(sb))
-        else
-            _output.postValue(Resource.error(error, sb))
+        if (error == null) _output.postValue(Resource.success(sb))
+        else _output.postValue(Resource.error(error, sb))
     }
 
     private suspend fun startRoot() {

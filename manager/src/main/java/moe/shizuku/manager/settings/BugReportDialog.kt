@@ -15,6 +15,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.R
 import moe.shizuku.manager.databinding.BugReportDialogBinding
+import moe.shizuku.manager.ktx.asLink
+import moe.shizuku.manager.ktx.applyTemplateArgs
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.worker.AdbStartWorker
 
@@ -26,21 +28,26 @@ class BugReportDialog : DialogFragment() {
         val context = requireContext()
         binding = BugReportDialogBinding.inflate(layoutInflater)
 
-        binding.updateButton.setOnClickListener {
-           CustomTabsHelper.launchUrlOrCopy(context, "https://github.com/thedjchi/Shizuku/releases/latest")
-        }
+        val updateLink = getString(R.string.bug_report_dialog_link_update)
+            .asLink("https://github.com/thedjchi/Shizuku/releases/latest")
 
-        binding.issuesButton.setOnClickListener {
-            CustomTabsHelper.launchUrlOrCopy(context, "https://github.com/thedjchi/Shizuku/issues")
-        }
+        val wikiLink = getString(R.string.bug_report_dialog_link_wiki)
+            .asLink("https://github.com/thedjchi/Shizuku/releases/wiki#troubleshooting")
 
-        binding.wikiButton.setOnClickListener {
-            CustomTabsHelper.launchUrlOrCopy(context, "https://github.com/thedjchi/Shizuku/wiki#troubleshooting")
+        val issuesLink = getString(R.string.bug_report_dialog_link_issues)
+            .asLink("https://github.com/thedjchi/Shizuku/releases/issues")
+
+        binding.apply {
+            updateText.applyTemplateArgs(updateLink)
+            wikiText.applyTemplateArgs(wikiLink)
+            issuesText.applyTemplateArgs(issuesLink)
+            methodText.applyTemplateArgs("GitHub")
         }
 
         return MaterialAlertDialogBuilder(context)
+            .setTitle(R.string.settings_report_bug)
             .setView(binding.root)
-            .setPositiveButton(context.getString(R.string.bug_report_dialog_button_github, "GitHub")) { _, _ ->
+            .setPositiveButton("GitHub") { _, _ ->
                 CustomTabsHelper.launchUrlOrCopy(context, "https://github.com/thedjchi/Shizuku/issues/new")
             }
             .setNegativeButton(R.string.bug_report_dialog_button_email) { _, _ ->

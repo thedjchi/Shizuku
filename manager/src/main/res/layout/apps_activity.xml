@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rikka.widget.borderview.BorderRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.recyclerview.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@android:id/list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    android:paddingStart="@dimen/rd_activity_horizontal_margin"
-    android:paddingTop="?actionBarSize"
-    android:paddingEnd="@dimen/rd_activity_horizontal_margin"
-    android:scrollbarStyle="outsideOverlay"
-    android:scrollbars="vertical"
-    app:borderBottomVisibility="never"
-    app:borderTopDrawable="@null"
-    app:borderTopVisibility="whenTop"
-    app:fitsSystemWindowsInsets="bottom|top"
+    app:fitsSystemWindowsInsets="bottom"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />

@@ -7,13 +7,18 @@
         <item name="android:duplicateParentState">true</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingStart">16dp</item>
-        <item name="android:paddingEnd">16dp</item>
-        <item name="android:paddingTop">20dp</item>
-        <item name="android:paddingBottom">20dp</item>
     </style>
 
-    <style name="Card.Light" />
+    <style name="Card.Small" parent="Card">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Card.Large" parent="Card">
+        <item name="android:orientation">vertical</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@drawable/spacing_list_item_vertical</item>
+    </style>
 
     <style name="CardButton" parent="Widget.Material3.Button">
         <item name="android:layout_width">wrap_content</item>
@@ -28,18 +33,15 @@
         <item name="android:textAppearance">?textAppearanceBodyLarge</item>
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:lineSpacingExtra">1sp</item>
     </style>
 
     <style name="CardSummary">
         <item name="android:textAppearance">?textAppearanceBodyMedium</item>
         <item name="android:textColor">?android:textColorSecondary</item>
-        <item name="android:layout_marginTop">4sp</item>
     </style>
 
-    <style name="CardContent">
-        <item name="android:textAppearance">?textAppearanceBodyMedium</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
+    <style name="CardSummary.Brief" parent="CardSummary">
+        <item name="android:layout_marginTop">4dp</item>
     </style>
 
     <style name="CardIcon">
@@ -68,23 +70,16 @@
         <item name="android:gravity">center_vertical</item>
     </style>
 
-    <style name="FilledCard" parent="@style/Widget.Material3.CardView.Filled">
+    <style name="DialogCard" parent="@style/Widget.Material3.CardView.Filled">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">-4dp</item>
-        <item name="android:layout_marginEnd">-4dp</item>
         <item name="android:checkable">true</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:clipChildren">false</item>
         <item name="android:clipToPadding">false</item>
         <item name="cardCornerRadius">28dp</item>
-        <item name="contentPaddingStart">24dp</item>
-        <item name="contentPaddingEnd">24dp</item>
-        <item name="contentPaddingLeft">24dp</item>
-        <item name="contentPaddingRight">24dp</item>
-        <item name="contentPaddingTop">20dp</item>
-        <item name="contentPaddingBottom">20dp</item>
+        <item name="contentPadding">24dp</item>
         <item name="cardBackgroundColor">?colorSecondaryContainer</item>
     </style>
 
@@ -106,7 +101,7 @@
         <item name="android:layout_marginBottom">2dp</item>
     </style>
 
-    <style name="GrantPermissionsButtons.Buttom">
+    <style name="GrantPermissionsButtons.Bottom">
         <item name="android:background">@drawable/grant_permissions_buttons_bottom</item>
         <item name="android:layout_marginTop">2dp</item>
     </style>
@@ -115,6 +110,10 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Preference.Rikka.Material3.Empty" parent="@style/Preference.Rikka.Material3">
+        <item name="layout">@layout/preference_empty</item>
     </style>
 
 </resources>

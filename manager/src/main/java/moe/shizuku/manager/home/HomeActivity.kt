@@ -54,8 +54,7 @@ abstract class HomeActivity : AppBarActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = HomeActivityBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val binding = HomeActivityBinding.inflate(layoutInflater, rootView, true)
 
         homeModel.serviceStatus.observe(this) {
             if (it.status == Status.SUCCESS) {
@@ -88,10 +87,17 @@ abstract class HomeActivity : AppBarActivity() {
         val recyclerView = binding.list
         recyclerView.adapter = adapter
         recyclerView.fixEdgeEffect()
-        recyclerView.addItemSpacing(top = 4f, bottom = 4f, unit = TypedValue.COMPLEX_UNIT_DIP)
-        recyclerView.addEdgeSpacing(top = 4f, bottom = 4f, left = 16f, right = 16f, unit = TypedValue.COMPLEX_UNIT_DIP)
 
-        
+        val cardSpacing = resources.getDimension(R.dimen.card_spacing)
+        val marginHorizontal = resources.getDimension(R.dimen.margin_horizontal)
+        val marginVertical = resources.getDimension(R.dimen.margin_vertical)
+
+        val itemSpacing = cardSpacing / 2f
+        val edgeSpacingH = marginHorizontal
+        val edgeSpacingV = marginVertical - itemSpacing
+
+        recyclerView.addItemSpacing(top = itemSpacing, bottom = itemSpacing)
+        recyclerView.addEdgeSpacing(top = edgeSpacingV, bottom = edgeSpacingV, left = edgeSpacingH, right = edgeSpacingH)
 
         ShizukuStateMachine.addListener(stateListener)
     }

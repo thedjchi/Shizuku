@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Base.AppTheme.Light" parent="Theme.Material3.Light.Shizuku">
-        <item name="android:statusBarColor">?android:colorBackground</item>
+    <style name="Base.AppTheme.Light" parent="Theme.Material3Expressive.Light.Shizuku">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">#B3000000</item>
+
+        <item name="android:forceDarkAllowed">false</item>
+
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
 
         <item name="appColorPrimary">@color/app_color_light</item>
-        <item name="homeCardStyle">@style/Card.Light</item>
 
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
@@ -15,9 +21,17 @@
 
     <style name="Theme.Light" parent="Base.AppTheme.Light" />
 
-    <style name="Base.AppTheme" parent="Theme.Material3.Dark.Shizuku">
+    <style name="Base.AppTheme" parent="Theme.Material3Expressive.Dark.Shizuku">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">#B3000000</item>
+
+        <item name="android:forceDarkAllowed">false</item>
+
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+        
         <item name="appColorPrimary">@color/app_color_dark</item>
-        <item name="homeCardStyle">@style/Card</item>
 
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
@@ -26,5 +40,9 @@
     </style>
 
     <style name="Theme" parent="Base.AppTheme" />
+
+    <style name="AppTheme.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay.Rikka.Material3">
+        <item name="switchPreferenceCompatStyle">@style/Preference.Rikka.MateriaSwitchPreference</item>
+    </style>
 
 </resources>

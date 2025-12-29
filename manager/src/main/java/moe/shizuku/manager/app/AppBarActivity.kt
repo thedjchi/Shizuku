@@ -9,13 +9,14 @@ import android.widget.FrameLayout
 import androidx.annotation.LayoutRes
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.AppBarLayout
 import moe.shizuku.manager.R
 import rikka.core.ktx.unsafeLazy
 
 abstract class AppBarActivity : AppActivity() {
 
-    private val rootView: ViewGroup by unsafeLazy {
+    protected val rootView: ViewGroup by unsafeLazy {
         findViewById<ViewGroup>(R.id.root)
     }
 
@@ -52,16 +53,24 @@ abstract class AppBarActivity : AppActivity() {
         rootView.addView(view, 0, params)
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
-    override fun onApplyTranslucentSystemBars() {
-        super.onApplyTranslucentSystemBars()
-        window?.statusBarColor = Color.TRANSPARENT
-    }
 }
 
 abstract class AppBarFragmentActivity : AppBarActivity() {
 
-    override fun getLayoutId(): Int {
-        return R.layout.appbar_fragment_activity
+    abstract fun createFragment(): Fragment
+
+    override fun getLayoutId(): Int = R.layout.appbar_fragment_activity
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container, createFragment())
+                .commit()
+        }
     }
+    
 }

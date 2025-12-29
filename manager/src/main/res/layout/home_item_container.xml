@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="?attr/materialCardViewFilledStyle"
@@ -9,8 +10,6 @@
     android:clickable="true"
     android:focusable="true"
     android:descendantFocusability="afterDescendants"
-    app:cardBackgroundColor="@color/home_card_background_color"
+    app:cardBackgroundColor="?colorSurfaceContainerLow"
     app:cardCornerRadius="28dp"
-    app:cardElevation="0dp"
-    tools:layout_height="100dp"
-    tools:layout_margin="24dp" />
+    app:contentPadding="24dp" />

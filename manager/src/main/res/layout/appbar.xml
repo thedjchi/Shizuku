@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbar_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:descendantFocusability="afterDescendants"
     app:liftOnScroll="true"
-    tools:viewBindingIgnore="true"
-    android:touchscreenBlocksFocus="false" >
+    tools:viewBindingIgnore="true">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
         android:layout_gravity="bottom"
-        android:background="@null"
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
-        android:focusedByDefault="true"
+        android:focusable="true"
+        android:descendantFocusability="afterDescendants"
+        app:layout_fitsSystemWindowsInsets="top|start|end"
         app:layout_collapseMode="pin"
-        tools:title="Title"
-        android:touchscreenBlocksFocus="false" />
+        tools:title="Title" />
 
 </com.google.android.material.appbar.AppBarLayout>

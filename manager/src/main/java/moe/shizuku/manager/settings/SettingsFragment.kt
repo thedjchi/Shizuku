@@ -22,6 +22,8 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat.Type
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.*
 import androidx.preference.Preference.SummaryProvider
@@ -55,9 +57,9 @@ import rikka.core.util.ResourceUtils
 import rikka.html.text.HtmlCompat
 import rikka.material.app.LocaleDelegate
 import rikka.recyclerview.addEdgeSpacing
+import rikka.recyclerview.addItemSpacing
 import rikka.recyclerview.fixEdgeEffect
 import rikka.shizuku.manager.ShizukuLocales
-import rikka.widget.borderview.BorderRecyclerView
 import java.util.*
 
 class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
@@ -332,15 +334,24 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         parent: ViewGroup,
         savedInstanceState: Bundle?
     ): RecyclerView {
-        val recyclerView = super.onCreateRecyclerView(inflater, parent, savedInstanceState) as BorderRecyclerView
-        recyclerView.fixEdgeEffect()
-        recyclerView.addEdgeSpacing(bottom = 8f, unit = TypedValue.COMPLEX_UNIT_DIP)
+        val recyclerView = super.onCreateRecyclerView(inflater, parent, savedInstanceState)
 
-        val lp = recyclerView.layoutParams
-        if (lp is FrameLayout.LayoutParams) {
-            lp.rightMargin = recyclerView.context.resources.getDimension(R.dimen.rd_activity_horizontal_margin).toInt()
-            lp.leftMargin = lp.rightMargin
+        ViewCompat.setOnApplyWindowInsetsListener(recyclerView) { v, insets ->
+            val systemBarsInsets = insets.getInsets(Type.systemBars() or Type.displayCutout())
+            recyclerView.addItemSpacing(
+                left = systemBarsInsets.left.toFloat(),
+                right = systemBarsInsets.right.toFloat()
+            )
+            recyclerView.setPadding(
+                recyclerView.paddingLeft,
+                recyclerView.paddingTop,
+                recyclerView.paddingRight,
+                systemBarsInsets.bottom
+            )
+            insets
         }
+
+        recyclerView.fixEdgeEffect()
 
         return recyclerView
     }

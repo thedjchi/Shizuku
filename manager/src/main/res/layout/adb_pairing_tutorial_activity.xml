@@ -1,228 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rikka.widget.borderview.BorderNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="vertical"
-    app:borderBottomVisibility="never"
-    app:borderTopDrawable="@null"
-    app:borderTopVisibility="whenTop">
+    android:clipToPadding="false"
+    app:fitsSystemWindowsInsets="bottom|start|end"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:paddingStart="?android:listPreferredItemPaddingStart"
-        android:paddingTop="?actionBarSize"
-        android:paddingEnd="?android:listPreferredItemPaddingEnd"
-        android:paddingBottom="16dp"
-        app:fitsSystemWindowsInsets="bottom|top">
+        android:paddingHorizontal="@dimen/margin_horizontal"
+        android:paddingVertical="@dimen/margin_vertical"
+        android:showDividers="middle"
+        android:divider="@drawable/spacing_list_item_vertical"
+        android:orientation="vertical">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/notification"
-            style="@style/FilledCard"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:focusable="false">
+            android:showDividers="middle"
+            android:divider="@drawable/spacing_card_vertical"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="-8dp"
-                android:layout_marginTop="4dp"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_outline_notifications_active_24"
-                android:tint="?colorOnSecondaryContainer"
-                android:tintMode="src_in" />
-
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/notification"
+                style="@style/DialogCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="36dp"
-                android:orientation="vertical">
+                android:focusable="false">
 
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/adb_pairing_tutorial_content_notification"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnSecondaryContainer" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/notification_disabled"
-            style="@style/FilledCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:cardBackgroundColor="?colorErrorContainer">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="-8dp"
-                android:layout_marginTop="4dp"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_outline_info_24"
-                android:tint="?colorOnErrorContainer"
-                android:tintMode="src_in" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="36dp"
-                android:orientation="vertical">
-
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:lineSpacingExtra="2sp"
-                    android:text="@string/adb_pairing_tutorial_content_notification_blocked"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnErrorContainer" />
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_outline_notifications_active_24"
+                    android:tint="?colorOnSecondaryContainer"
+                    android:tintMode="src_in" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/notification_options"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="36dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adb_pairing_tutorial_content_notification"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnSecondaryContainer" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/notification_disabled"
+                style="@style/DialogCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="?colorErrorContainer">
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="-8dp"
-                    android:text="@string/notification_settings"
-                    android:textColor="?colorOnError"
-                    app:backgroundTint="?colorError"
-                    app:iconTint="?colorOnError"
-                    app:iconTintMode="src_in"
-                    app:icon="@drawable/ic_outline_open_in_new_24"
-                    app:iconPadding="16dp" />
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_outline_info_24"
+                    android:tint="?colorOnErrorContainer"
+                    android:tintMode="src_in" />
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="36dp"
+                    android:orientation="vertical">
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="2sp"
+                        android:text="@string/adb_pairing_tutorial_content_notification_blocked"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnErrorContainer" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/network"
-            style="@style/FilledCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="?outlineButtonBackground"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:foreground="?outlineButtonForeground"
-            android:orientation="horizontal"
-            android:paddingStart="16dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/notification_options"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="-8dp"
+                        android:text="@string/notification_settings"
+                        android:textColor="?colorOnError"
+                        app:backgroundTint="?colorError"
+                        app:iconTint="?colorOnError"
+                        app:iconTintMode="src_in"
+                        app:icon="@drawable/ic_outline_open_in_new_24"
+                        app:iconPadding="16dp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="-8dp"
-                android:layout_marginTop="4dp"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_help_outline_24dp"
-                android:tint="?colorOnSecondaryContainer"
-                android:tintMode="src_in" />
+                </LinearLayout>
 
-            <LinearLayout
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/network"
+                style="@style/DialogCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_help_outline_24dp"
+                    android:tint="?colorOnSecondaryContainer"
+                    android:tintMode="src_in" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="36dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="@string/adb_pairing_tutorial_content_network"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnSecondaryContainer" />
+
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:duplicateParentState="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/adb_pairing_tutorial_content_network_limation_not_foreground"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnSecondaryContainer" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/miui"
+                style="@style/DialogCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="36dp"
-                android:orientation="vertical">
+                android:visibility="gone"
+                app:cardBackgroundColor="?colorErrorContainer"
+                tools:visibility="visible">
 
-                <TextView
-                    style="@style/TerminalTutorialText"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_warning_24"
+                    android:tint="?colorOnErrorContainer"
+                    android:tintMode="src_in" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:duplicateParentState="true"
-                    android:text="@string/adb_pairing_tutorial_content_network"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnSecondaryContainer" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="36dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:duplicateParentState="true"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/adb_pairing_tutorial_content_network_limation_not_foreground"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnSecondaryContainer" />
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="@string/adb_pairing_tutorial_content_miui"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnErrorContainer" />
 
-            </LinearLayout>
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:duplicateParentState="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/adb_pairing_tutorial_content_miui_2"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnErrorContainer" />
 
-        </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/miui"
-            style="@style/FilledCard"
-            android:layout_marginTop="8dp"
-            android:visibility="gone"
-            app:cardBackgroundColor="?colorErrorContainer"
-            tools:visibility="visible">
+            </com.google.android.material.card.MaterialCardView>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="-8dp"
-                android:layout_marginTop="4dp"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_warning_24"
-                android:tint="?colorOnErrorContainer"
-                android:tintMode="src_in" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="36dp"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:duplicateParentState="true"
-                    android:text="@string/adb_pairing_tutorial_content_miui"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnErrorContainer" />
-
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:duplicateParentState="true"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/adb_pairing_tutorial_content_miui_2"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnErrorContainer" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/step1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:clipChildren="false"
-            android:clipToPadding="false"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -240,8 +233,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:clipChildren="false"
-                android:clipToPadding="false"
                 android:orientation="vertical">
 
                 <TextView
@@ -255,7 +246,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="-8dp"
                     android:text="@string/development_settings"
                     app:icon="@drawable/ic_outline_open_in_new_24"
                     app:iconPadding="16dp" />
@@ -268,7 +258,6 @@
             android:id="@+id/step2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -302,7 +291,6 @@
             android:id="@+id/step3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -334,4 +322,4 @@
 
     </LinearLayout>
 
-</rikka.widget.borderview.BorderNestedScrollView>
+</androidx.core.widget.NestedScrollView>

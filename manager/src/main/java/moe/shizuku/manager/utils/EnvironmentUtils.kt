@@ -8,7 +8,7 @@ import android.os.Build
 import android.os.SystemProperties
 import moe.shizuku.manager.ShizukuApplication
 import moe.shizuku.manager.ShizukuSettings
-import java.io.File
+import com.topjohnwu.superuser.Shell
 
 val appContext: Context
     get() = ShizukuApplication.appContext
@@ -39,7 +39,7 @@ object EnvironmentUtils {
     }
 
     fun isRooted(): Boolean {
-        return System.getenv("PATH")?.split(File.pathSeparatorChar)?.find { File("$it/su").exists() } != null
+        return Shell.getShell().isRoot
     }
 
     fun getAdbTcpPort(): Int {

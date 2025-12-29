@@ -150,15 +150,15 @@
 
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">First, please do the following:</string>
-    <string name="bug_report_dialog_update">Check that you are using the latest version of Shizuku.</string>
-    <string name="bug_report_dialog_button_update">View latest release</string>
-    <string name="bug_report_dialog_wiki">Read the wiki and follow all relevant troubleshooting steps.</string>
-    <string name="bug_report_dialog_button_wiki">View wiki</string>
-    <string name="bug_report_dialog_issues">Search through all existing issues to see if your bug/feature has already been reported.</string>
-    <string name="bug_report_dialog_button_issues">View issues</string>
-    <string name="bug_report_dialog_method">Please submit an issue on GitHub if you have an account.\n\nOtherwise, you can send an email.</string>
-    <string name="bug_report_dialog_button_email">Send Email</string>
-    <string name="bug_report_dialog_button_github">Go to %1$s</string>
+    <string name="bug_report_dialog_update">Check that you are using the ^1.</string>
+    <string name="bug_report_dialog_link_update">latest version</string>
+    <string name="bug_report_dialog_wiki">Read the ^1 and follow all relevant troubleshooting steps.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Search through all ^1 to see if your bug has already been reported.</string>
+    <string name="bug_report_dialog_link_issues">existing issues</string>
+    <string name="bug_report_dialog_method">Please submit an issue on ^1 if you have an account.</string>
+    <string name="bug_report_dialog_method_2">Otherwise, you can send an email.</string>
+    <string name="bug_report_dialog_button_email">Email</string>
 
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port must be between 1 and 65535</string>
@@ -239,8 +239,7 @@
 
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Can\'t start browser</string>
-    <string name="toast_copied_to_clipboard">%s\nhas been copied to clipboard.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> has been copied to clipboard.]]></string>
+    <string name="toast_copied_to_clipboard">Copied to clipboard</string>
     <string name="accessibility_service_description">Provides pairing support for devices (e.g., TVs running Android 14+) where notifications or split screen cannot be used.\n\nEnables Shizuku to extract the pairing code from the wireless debugging pairing screen. It will disable itself once the pairing code is found.</string>
 
     <!-- Messages for legacy -->

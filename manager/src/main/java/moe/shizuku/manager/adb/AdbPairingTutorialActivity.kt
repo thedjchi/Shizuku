@@ -31,8 +31,8 @@ class AdbPairingTutorialActivity : AppBarActivity() {
         super.onCreate(savedInstanceState)
         val context = this
 
-        binding = AdbPairingTutorialActivityBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = AdbPairingTutorialActivityBinding.inflate(layoutInflater, rootView, true)
+        
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         notificationEnabled = isNotificationEnabled()

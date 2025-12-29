@@ -4,24 +4,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginHorizontal="@dimen/list_header_padding"
-    android:background="?colorSecondaryContainer"
+    android:layout_marginHorizontal="@dimen/margin_horizontal"
+    android:layout_marginVertical="@dimen/margin_vertical"
     android:foreground="?selectableItemBackground"
+    android:minHeight="56dp"
     android:clickable="true"
     android:focusable="true"
-    app:strokeWidth="0dp"
-    app:cardElevation="4dp"
-    app:cardCornerRadius="28dp" >
+    app:layout_fitsSystemWindowsInsets="start|end"
+    app:cardBackgroundColor="?colorSurfaceContainerLow"
+    app:cardCornerRadius="28dp"
+    app:contentPaddingLeft="16dp"
+    app:contentPaddingRight="16dp"
+    app:contentPaddingTop="8dp"
+    app:contentPaddingBottom="8dp"
+    app:strokeWidth="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingVertical="8dp"
-        android:paddingHorizontal="@dimen/list_header_padding"
         android:clickable="false"
-        android:focusable="false" >
+        android:focusable="false">
 
         <TextView
             android:layout_width="0dp"
