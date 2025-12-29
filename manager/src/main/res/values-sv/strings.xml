@@ -34,7 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Trådlös felsökning är inte aktiverad.\nObservera att före Android 11 krävs en datoranslutning för att aktivera trådlös felsökning.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-felsökning är inte aktiverad.\nAktivera det i \"Utvecklaralternativ\".</string>
     <string name="dialog_adb_pairing_message">Börja parkopplingen genom att utföra följande steg:\n- Navigera till \"Utvecklaralternativ\"\n- Aktivera \"USB-felsökning\" och \"Trådlös felsökning\"\n- Tryck på vänster sida av \"Trådlös felsökning\"\n- Tryck på \"Para enhet med parkopplingskod\"\n- Ange parkopplingskoden i aviseringen</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku kanske saknar behörigheten %1$s . För att bevilja den, kör följande ADB-kommando:%2$sOm du redan har kört kommandot fortsätter du med parkopplingsprocessen.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">På Android 14 återkallas ^1-behörigheten om du installerar/uppdaterar Shizuku med paketinstallationsprogrammet, vilken krävs för att aktivera tillgänglighetstjänsten för parkoppling.\n\nKör följande ADB-kommando för att bevilja den:\n\n^2\n\nEfter att du kört kommandot kan du fortsätta med parkopplingsprocessen.\n\nObs: du kan kringgå detta genom att installera/uppdatera Shizuku med ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Aktivera tillgänglighetstjänsten för att starta parkopplingsprocessen. Detta gör att Shizuku kan upptäcka parkopplingskoden.\n\nTillgänglighetstjänsten stängs av när koden hittas eller efter 1 minut för att spara energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Börja parkopplingen genom att utföra följande steg:\n- Navigera till \"Utvecklaralternativ\"\n- Aktivera \"USB-felsökning\" och \"Trådlös felsökning\"\n- Tryck på vänster sida av \"Trådlös felsökning\"\n- Tryck på \"Para enhet med parkopplingskod\". Shizuku kommer automatiskt att upptäcka parkopplingskoden.</string>
     <string name="adb_pairing_requires_multi_window">Vänligen aktivera delad skärm (flera fönster) först.</string>
@@ -135,15 +135,15 @@
     <string name="settings_legacy_pairing_summary">Ange parkopplingskoden i en dialogruta istället för en avisering</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Gör först följande:</string>
-    <string name="bug_report_dialog_update">Kontrollera att du använder den senaste versionen av Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Visa senaste utgåvan</string>
-    <string name="bug_report_dialog_wiki">Läs wikin och följ alla relevanta felsökningssteg.</string>
-    <string name="bug_report_dialog_button_wiki">Visa wiki</string>
-    <string name="bug_report_dialog_issues">Sök igenom alla befintliga problem för att se om din bugg/funktion redan har rapporterats.</string>
-    <string name="bug_report_dialog_button_issues">Visa problem</string>
-    <string name="bug_report_dialog_method">Vänligen skicka in ett ärende på GitHub om du har ett konto.\n\nAnnars kan du skicka ett e-postmeddelande.</string>
-    <string name="bug_report_dialog_button_email">Skicka e-post</string>
-    <string name="bug_report_dialog_button_github">Gå till %1$s</string>
+    <string name="bug_report_dialog_update">Kontrollera att du använder ^1.</string>
+    <string name="bug_report_dialog_link_update">senaste versionen</string>
+    <string name="bug_report_dialog_wiki">Läs ^1 och följ alla relevanta felsökningssteg.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Sök igenom alla ^1 för att se om ditt fel redan har rapporterats.</string>
+    <string name="bug_report_dialog_link_issues">befintliga problem</string>
+    <string name="bug_report_dialog_method">Vänligen skicka in ett ärende på ^1 om du har ett konto.</string>
+    <string name="bug_report_dialog_method_2">Annars kan du skicka ett e-postmeddelande.</string>
+    <string name="bug_report_dialog_button_email">E-post</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Porten måste vara mellan 1 och 65535</string>
     <string name="snackbar_battery_optimization_home">Batterioptimering måste vara inaktiverad för att start vid uppstart/watchdog ska fungera korrekt.</string>
@@ -209,8 +209,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Stäng av varningar</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Kan inte starta webbläsaren</string>
-    <string name="toast_copied_to_clipboard">%s\nhar kopierats till urklipp.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> har kopierats till urklipp.]]></string>
+    <string name="toast_copied_to_clipboard">Kopierad till urklipp</string>
     <string name="accessibility_service_description">Ger parkopplingsstöd för enheter (t.ex. TV-apparater med Android 14+) där aviseringar eller delad skärm inte kan användas.\n\nGör det möjligt för Shizuku att extrahera parkopplingskoden från den trådlösa felsökningsskärmen för parkoppling. Den inaktiverar sig själv när parkopplingskoden hittas.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s stöder inte moderna Shizuku</string>

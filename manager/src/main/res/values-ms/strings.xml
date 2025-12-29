@@ -34,7 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer adalah satu kemestian.</string>
     <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila dayakannya dalam \"Pilihan Pembangun\".</string>
     <string name="dialog_adb_pairing_message">Sila mulakan berpasangan dengan melakukan langkah-langkah berikut:\n- Navigasi ke \"Pilihan Pemaju\"\n- Dayakan \"Penyahpepijatan USB\" dan \"Penyahpepijatan tanpa wayar\"\n- Ketik sebelah kiri \"Penyahpepijatan tanpa wayar\"\n- Ketik \"Pasangkan peranti dengan kod berpasangan\"\n- Masukkan kod gandingan dalam pemberitahuan</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku mungkin tiada kebenaran %1$s . Untuk memberikannya, jalankan arahan ADB berikut:%2$sJika anda telah menjalankan arahan tersebut, teruskan dengan proses pemasangan.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Pada Android 14, memasang/mengemas kini Shizuku dengan Package Installer akan membatalkan kebenaran ^1, yang diperlukan untuk mendayakan perkhidmatan kebolehcapaian bagi pemasangan.\n\nUntuk memberikannya, jalankan arahan ADB berikut:\n\n^2\n\nSelepas menjalankan arahan, anda boleh meneruskan proses pemasangan.\n\nNota: anda boleh memintas ini dengan memasang/mengemas kini Shizuku dengan ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Sila dayakan perkhidmatan kebolehaksesan untuk memulakan proses berpasangan. Ini membolehkan Shizuku mengesan kod berpasangan.\n\nPerkhidmatan kebolehaksesan akan dimatikan apabila kod ditemui atau selepas 1 minit untuk menjimatkan tenaga.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Sila mulakan berpasangan dengan melakukan langkah berikut:\n- Navigasi ke \"Pilihan Pembangun\"\n- Dayakan \"penyahpepijatan USB\" dan \"Penyahpepijatan wayarles\"\n- Ketik sebelah kiri \"Penyahpepijatan wayarles\"\n- Ketik \"Gandingkan peranti dengan peranti.\" Shizuku akan mengesan kod pasangan secara automatik.</string>
     <string name="adb_pairing_requires_multi_window">Sila masukkan mod skrin belah (berbilang tetingkap) dahulu.</string>
@@ -134,15 +134,15 @@
     <string name="settings_legacy_pairing_summary">Masukkan kod gandingan dalam dialog dan bukannya pemberitahuan</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Pertama, sila lakukan perkara berikut:</string>
-    <string name="bug_report_dialog_update">Semak sama ada anda menggunakan versi terkini Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Lihat keluaran terkini</string>
-    <string name="bug_report_dialog_wiki">Baca wiki dan ikuti semua langkah penyelesaian masalah yang berkaitan.</string>
-    <string name="bug_report_dialog_button_wiki">Lihat wiki</string>
-    <string name="bug_report_dialog_issues">Cari semua isu sedia ada untuk melihat sama ada pepijat/ciri anda telah dilaporkan.</string>
-    <string name="bug_report_dialog_button_issues">Lihat isu</string>
-    <string name="bug_report_dialog_method">Sila serahkan isu di GitHub jika anda mempunyai akaun.\n\nJika tidak, anda boleh menghantar e-mel.</string>
-    <string name="bug_report_dialog_button_email">Hantar E-mel</string>
-    <string name="bug_report_dialog_button_github">Pergi ke %1$s</string>
+    <string name="bug_report_dialog_update">Pastikan anda menggunakan ^1.</string>
+    <string name="bug_report_dialog_link_update">versi terkini</string>
+    <string name="bug_report_dialog_wiki">Baca ^1 dan ikuti semua langkah penyelesaian masalah yang berkaitan.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Cari semua ^1 untuk melihat sama ada pepijat anda telah dilaporkan.</string>
+    <string name="bug_report_dialog_link_issues">isu-isu sedia ada</string>
+    <string name="bug_report_dialog_method">Sila kemukakan isu pada ^1 jika anda mempunyai akaun.</string>
+    <string name="bug_report_dialog_method_2">Jika tidak, anda boleh menghantar e-mel.</string>
+    <string name="bug_report_dialog_button_email">E-mel</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pelabuhan mestilah antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Pengoptimuman bateri mesti dilumpuhkan untuk permulaan pada but/pemantau untuk berfungsi dengan baik.</string>
@@ -208,8 +208,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Matikan Makluman</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Tidak boleh memulakan penyemak imbas</string>
-    <string name="toast_copied_to_clipboard">%s\ntelah disalin ke papan keratan.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> telah disalin ke papan keratan.]]></string>
+    <string name="toast_copied_to_clipboard">Disalin ke papan keratan</string>
     <string name="accessibility_service_description">Menyediakan sokongan berpasangan untuk peranti (cth, TV yang menjalankan Android 14+) yang pemberitahuan atau skrin pisah tidak boleh digunakan.\n\nMendayakan Shizuku untuk mengekstrak kod gandingan daripada skrin pasangan nyahpepijat wayarles. Ia akan melumpuhkan dirinya apabila kod berpasangan ditemui.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s tidak menyokong Shizuku moden</string>

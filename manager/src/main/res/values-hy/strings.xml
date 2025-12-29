@@ -37,7 +37,7 @@
 \nAndroid 11-ից առաջ անլար կարգաբերման համար անհրաժեշտ է համակարգչային կապ։</string>
     <string name="dialog_usb_debugging_not_enabled">USB կարգաբերումը թույլատրված չէ:\nԽնդրում ենք միացնել այն «Մշակողի ընտրանքներ» բաժնում:</string>
     <string name="dialog_adb_pairing_message">Սկսեք զուգակցումը կատարելով հետևյալ քայլերը՝\n- Անցեք «Մշակողի ընտրանքներ»\n- Միացրեք «USB վրիպազերծում» և «Անլար վրիպազերծում»\n- Հպեք «Անլար վրիպազերծում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը զուգակցման կոդով»\n- Մուտքագրեք զուգակցման կոդը ծանուցման մեջ</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Շիզուկուին հնարավոր է պակասում է %1$s թույլտվությունը։ Այն տրամադրելու համար գործարկեք հետևյալ ADB հրամանը՝%2$sԵթե արդեն գործարկել եք հրամանը, շարունակեք զուգավորման գործընթացը։</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14-ում Shizuku-ի տեղադրումը/թարմացումը Package Installer-ի միջոցով չեղարկում է ^1 թույլտվությունը, որը անհրաժեշտ է զուգավորման համար հասանելիության ծառայությունը միացնելու համար:\n\nԱյն տրամադրելու համար գործարկեք հետևյալ ADB հրամանը՝\n\n^2\n\nՀրամանը գործարկելուց հետո կարող եք շարունակել զուգավորման գործընթացը:\n\nՆշում. կարող եք շրջանցել սա՝ տեղադրելով/թարմացնելով Shizuku-ն ADB-ի միջոցով:</string>
     <string name="dialog_adb_pairing_accessibility_enable">Խնդրում ենք միացնել մատչելիության ծառայությունը՝ զուգավորման գործընթացը սկսելու համար: Սա թույլ է տալիս Շիզուկուին հայտնաբերել զույգավորման կոդը։\n\nՄատչելիության ծառայությունն անջատվելու է, երբ կոդը գտնվի կամ 1 րոպե անց՝ էներգիան խնայելու համար:</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Խնդրում ենք սկսել զուգակցումը կատարելով հետևյալ քայլերը՝\n- Անցեք «Մշակողի ընտրանքներ»\n- Միացրեք «USB կարգաբերում» և «Անլար կարգաբերում»\n- Հպեք «Անլար կարգաբերում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը զուգակցման կոդով»։ Շիզուկուն ավտոմատ կերպով կհայտնաբերի զուգակցման կոդը։</string>
     <string name="adb_pairing_requires_multi_window">Սկզբում միացրեք էկրանի կիսման ռեժիմը։</string>
@@ -138,15 +138,15 @@
     <string name="settings_legacy_pairing_summary">Մուտքագրեք զուգավորման կոդը երկխոսության մեջ ծանուցման փոխարեն</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Նախ, խնդրում ենք անել հետևյալը.</string>
-    <string name="bug_report_dialog_update">Ստուգեք, որ օգտագործում եք Shizuku-ի վերջին տարբերակը։</string>
-    <string name="bug_report_dialog_button_update">Դիտել վերջին թողարկումը</string>
-    <string name="bug_report_dialog_wiki">Կարդացե՛ք վիքի-ն և հետևե՛ք խնդիրների լուծման բոլոր համապատասխան քայլերին։</string>
-    <string name="bug_report_dialog_button_wiki">Դիտել վիքի</string>
-    <string name="bug_report_dialog_issues">Որոնեք բոլոր առկա խնդիրները՝ տեսնելու համար, թե արդյոք ձեր սխալի/գործառույթի մասին արդեն հաղորդվել է։</string>
-    <string name="bug_report_dialog_button_issues">Դիտել խնդիրները</string>
-    <string name="bug_report_dialog_method">Եթե ունեք հաշիվ, խնդրում ենք ներկայացնել ձեր խնդիրը GitHub-ում։\n\nՀակառակ դեպքում կարող եք ուղարկել էլ. նամակ։</string>
-    <string name="bug_report_dialog_button_email">Ուղարկել էլ. փոստ</string>
-    <string name="bug_report_dialog_button_github">Անցնել %1$s</string>
+    <string name="bug_report_dialog_update">Ստուգեք, որ օգտագործում եք ^1-ը։</string>
+    <string name="bug_report_dialog_link_update">վերջին տարբերակը</string>
+    <string name="bug_report_dialog_wiki">Կարդացե՛ք ^1-ը և հետևե՛ք բոլոր համապատասխան խնդիրների լուծման քայլերին։</string>
+    <string name="bug_report_dialog_link_wiki">վիքի</string>
+    <string name="bug_report_dialog_issues">Որոնեք բոլոր ^1-երը՝ տեսնելու համար, թե արդյոք ձեր սխալի մասին արդեն հաղորդվել է։</string>
+    <string name="bug_report_dialog_link_issues">առկա խնդիրներ</string>
+    <string name="bug_report_dialog_method">Եթե հաշիվ ունեք, խնդրում ենք ներկայացնել խնդիրը ^1-ում։</string>
+    <string name="bug_report_dialog_method_2">Հակառակ դեպքում, կարող եք էլ.փոստ ուղարկել։</string>
+    <string name="bug_report_dialog_button_email">Էլ․ փոստ</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Նավահանգիստը պետք է լինի միջեւ 1 եւ 65535</string>
     <string name="snackbar_battery_optimization_home">Մարտկոցի օպտիմալացումը պետք է անջատված լինի, որպեսզի boot/watchdog-ը ճիշտ աշխատի:</string>
@@ -212,9 +212,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Անջատել ծանուցումները</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Չհաջողվեց միացնել ինտերնետի ծրագիրը</string>
-    <string name="toast_copied_to_clipboard">%s-ն
-\nպատճենվել է կցատարում։</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b>-ն պատճենվել է կցատարում։]]></string>
+    <string name="toast_copied_to_clipboard">Պատճենվել է սեղմատախտակին</string>
     <string name="accessibility_service_description">Ապահովում է զուգավորման աջակցություն սարքերի համար (օրինակ՝ Android 14+ աշխատող հեռուստացույցներ), որտեղ հնարավոր չէ օգտագործել ծանուցումները կամ բաժանված էկրանը:\n\nՀնարավորություն է տալիս Shizuku-ին հանել զուգավորման կոդը անլար կարգաբերման զուգավորման էկրանից: Այն կանջատի ինքն իրեն, երբ զույգ կոդը գտնվի:</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s-ը չի ընդունում այժմյան Shizuku-ն</string>

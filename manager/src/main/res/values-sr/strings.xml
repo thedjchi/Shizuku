@@ -37,7 +37,7 @@
 \nPrimedba: Pre Android-a 11, omogućavanje bežičnog otklanjanja grešaka bilo je uslovljeno postojanjem konekcije sa računarom.</string>
     <string name="dialog_usb_debugging_not_enabled">Отклањање грешака преко USB-а није омогућено.\nОмогућите га у „Опцијама за програмере“.</string>
     <string name="dialog_adb_pairing_message">Почните упаривање пратећи следеће кораке:\n- Идите на „Опције за програмере“\n- Омогућите „USB отклањање грешака“ и „Бежично отклањање грешака“\n- Додирните леву страну „Бежично отклањање грешака“\n- Додирните „Упари уређај са кодом за упаривање“\n- Унесите код за упаривање у обавештење</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Шизуку можда нема дозволу %1$s . Да бисте је доделили, покрените следећу ADB команду:%2$sАко сте већ покренули команду, наставите са процесом упаривања.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">На Андроиду 14, инсталирање/ажурирање Шизукуа помоћу инсталера пакета опозива дозволу ^1, која је потребна за омогућавање услуге приступачности за упаривање.\n\nДа бисте је доделили, покрените следећу ADB команду:\n\n^2\n\nНакон покретања команде, можете наставити са процесом упаривања.\n\nНапомена: ово можете заобићи инсталирањем/ажурирањем Шизукуа помоћу ADB-а.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Омогућите услугу приступачности да бисте започели процес упаривања. Ово омогућава Шизукуу да детектује код за упаривање.\n\nУслуга приступачности ће бити искључена када се пронађе код или након 1 минута ради уштеде енергије.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Почните упаривање пратећи следеће кораке:\n- Идите на „Опције за програмере“\n- Омогућите „USB отклањање грешака“ и „Бежично отклањање грешака“\n- Додирните леву страну „Бежично отклањање грешака“\n- Додирните „Упари уређај са кодом за упаривање“. Шизуку ће аутоматски детектовати код за упаривање.</string>
     <string name="adb_pairing_requires_multi_window">Molim Vas, najpre izaberite režim podeljenog ekrana, odnosno režim više prozora.</string>
@@ -139,15 +139,15 @@
     <string name="settings_legacy_pairing_summary">Унесите код за упаривање у дијалогу уместо у обавештењу</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Прво, урадите следеће:</string>
-    <string name="bug_report_dialog_update">Проверите да ли користите најновију верзију програма Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Погледајте најновије издање</string>
-    <string name="bug_report_dialog_wiki">Прочитајте вики и пратите све релевантне кораке за решавање проблема.</string>
-    <string name="bug_report_dialog_button_wiki">Погледајте вики</string>
-    <string name="bug_report_dialog_issues">Претражите све постојеће проблеме да бисте видели да ли је ваша грешка/функција већ пријављена.</string>
-    <string name="bug_report_dialog_button_issues">Прикажи проблеме</string>
-    <string name="bug_report_dialog_method">Молимо вас да пријавите проблем на GitHub-у ако имате налог.\n\nУ супротном, можете послати имејл.</string>
-    <string name="bug_report_dialog_button_email">Пошаљи имејл</string>
-    <string name="bug_report_dialog_button_github">Иди на %1$s</string>
+    <string name="bug_report_dialog_update">Проверите да ли користите ^1.</string>
+    <string name="bug_report_dialog_link_update">најновија верзија</string>
+    <string name="bug_report_dialog_wiki">Прочитајте ^1 и пратите све релевантне кораке за решавање проблема.</string>
+    <string name="bug_report_dialog_link_wiki">вики</string>
+    <string name="bug_report_dialog_issues">Претражите све ^1 да бисте видели да ли је ваша грешка већ пријављена.</string>
+    <string name="bug_report_dialog_link_issues">постојећи проблеми</string>
+    <string name="bug_report_dialog_method">Молимо вас да пријавите проблем на ^1 ако имате налог.</string>
+    <string name="bug_report_dialog_method_2">У супротном, можете послати е-пошту.</string>
+    <string name="bug_report_dialog_button_email">Е-пошта</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт мора бити између 1 и 65535</string>
     <string name="snackbar_battery_optimization_home">Оптимизација батерије мора бити онемогућена да би покретање при покретању/чување система исправно функционисало.</string>
@@ -213,8 +213,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Искључи упозорења</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не могу да покренем прегледач</string>
-    <string name="toast_copied_to_clipboard">%s\nје копирано у међуспремник.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> је копирано у међуспремник.]]></string>
+    <string name="toast_copied_to_clipboard">Копирано у међуспремник</string>
     <string name="accessibility_service_description">Пружа подршку за упаривање уређаја (нпр. телевизора са Андроидом 14+) где обавештења или подељени екран не могу да се користе.\n\nОмогућава Шизуку-у да издвоји код за упаривање са екрана за упаривање за бежично отклањање грешака. Сам ће се деактивирати када се пронађе код за упаривање.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s не подржава модерни Шизуку</string>

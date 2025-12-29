@@ -37,7 +37,7 @@
 \nObserve que, antes do Android 11, para habilitar a Depuração via Wireless a conexão com um computador é obrigatória.</string>
     <string name="dialog_usb_debugging_not_enabled">A depuração USB não está ativada.\nAtive-a nas \"Opções do desenvolvedor\".</string>
     <string name="dialog_adb_pairing_message">Para iniciar o emparelhamento, siga estes passos:\n- Acesse \"Opções do desenvolvedor\"\n- Ative \"Depuração USB\" e \"Depuração sem fio\"\n- Toque no lado esquerdo de \"Depuração sem fio\"\n- Toque em \"Emparelhar dispositivo com código de emparelhamento\"\n- Insira o código de emparelhamento na notificação</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku pode não ter a permissão %1$s . Para concedê-la, execute o seguinte comando ADB:%2$sSe você já executou o comando, continue com o processo de emparelhamento.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">No Android 14, instalar/atualizar o Shizuku com o Instalador de Pacotes revoga a permissão ^1, necessária para habilitar o serviço de acessibilidade para o emparelhamento.\n\nPara concedê-la, execute o seguinte comando ADB:\n\n^2\n\nApós executar o comando, você pode continuar com o processo de emparelhamento.\n\nObservação: você pode contornar isso instalando/atualizando o Shizuku com o ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Por favor, habilite o serviço de acessibilidade para iniciar o processo de emparelhamento. Isso permite que Shizuku detecte o código de emparelhamento.\n\nO serviço de acessibilidade será desativado quando o código for encontrado ou após 1 minuto para economizar energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Para iniciar o emparelhamento, siga estes passos:\n- Acesse \"Opções do desenvolvedor\"\n- Ative \"Depuração USB\" e \"Depuração sem fio\"\n- Toque no lado esquerdo de \"Depuração sem fio\"\n- Toque em \"Emparelhar dispositivo com código de emparelhamento\". O Shizuku detectará o código de emparelhamento automaticamente.</string>
     <string name="adb_pairing_requires_multi_window">Primeiramente, ative o modo de janela dividida, por favor.</string>
@@ -142,15 +142,15 @@
     <string name="settings_legacy_pairing_summary">Insira o código de emparelhamento em uma caixa de diálogo em vez de uma notificação.</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Primeiramente, faça o seguinte:</string>
-    <string name="bug_report_dialog_update">Verifique se você está usando a versão mais recente do Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Veja a versão mais recente.</string>
-    <string name="bug_report_dialog_wiki">Leia o wiki e siga todos os passos relevantes para a resolução de problemas.</string>
-    <string name="bug_report_dialog_button_wiki">Ver wiki</string>
-    <string name="bug_report_dialog_issues">Procure em todos os problemas existentes para ver se o seu bug/recurso já foi relatado.</string>
-    <string name="bug_report_dialog_button_issues">Ver problemas</string>
-    <string name="bug_report_dialog_method">Por favor, abra uma issue no GitHub se você tiver uma conta.\n\nCaso contrário, você pode enviar um e-mail.</string>
-    <string name="bug_report_dialog_button_email">Enviar e-mail</string>
-    <string name="bug_report_dialog_button_github">Acesse %1$s</string>
+    <string name="bug_report_dialog_update">Verifique se você está usando o ^1.</string>
+    <string name="bug_report_dialog_link_update">versão mais recente</string>
+    <string name="bug_report_dialog_wiki">Leia o ^1 e siga todos os passos de resolução de problemas relevantes.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Pesquise em todos os relatórios ^1 para ver se o seu bug já foi relatado.</string>
+    <string name="bug_report_dialog_link_issues">problemas existentes</string>
+    <string name="bug_report_dialog_method">Por favor, abra uma solicitação em ^1 se você tiver uma conta.</string>
+    <string name="bug_report_dialog_method_2">Caso contrário, você pode enviar um e-mail.</string>
+    <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A porta deve estar entre 1 e 65535.</string>
     <string name="snackbar_battery_optimization_home">A otimização de bateria deve estar desativada para que a inicialização na inicialização/vigilância funcione corretamente.</string>
@@ -216,9 +216,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Desativar alertas</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Não consigo iniciar o navegador</string>
-    <string name="toast_copied_to_clipboard">%s
-\nfoi copiado com sucesso.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> copiado com sucesso.]]></string>
+    <string name="toast_copied_to_clipboard">Copiado para a área de transferência</string>
     <string name="accessibility_service_description">Fornece suporte para emparelhamento com dispositivos (por exemplo, TVs com Android 14 ou superior) onde as notificações ou a tela dividida não podem ser usadas.\n\nPermite que o Shizuku extraia o código de emparelhamento da tela de depuração sem fio. Ele será desativado assim que o código de emparelhamento for encontrado.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s não suporta as versões novas do Shizuku</string>

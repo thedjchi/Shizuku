@@ -37,7 +37,7 @@
 \nSebagai catatan, Anda harus terhubung ke komputer untuk mengaktifkan debug nirkabel pada perangkat sebelum Android 11.</string>
     <string name="dialog_usb_debugging_not_enabled">USB debugging tidak diaktifkan.\nHarap aktifkan di \"Opsi Pengembang\".</string>
     <string name="dialog_adb_pairing_message">Silakan mulai memasangkan dengan melakukan langkah-langkah berikut:\n- Arahkan ke \"Opsi Pengembang\"\n- Aktifkan \"Debugging USB\" dan \"Debugging Nirkabel\"\n- Ketuk sisi kiri \"Debugging Nirkabel\"\n- Ketuk \"Pasangkan perangkat dengan kode pemasangan\"\n- Masukkan kode pemasangan di notifikasi</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku mungkin tidak memiliki izin %1$s . Untuk memberikannya, jalankan perintah ADB berikut:%2$sJika Anda sudah menjalankan perintah tersebut, lanjutkan dengan proses pemasangan.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Pada Android 14, menginstal/memperbarui Shizuku dengan Package Installer akan mencabut izin ^1, yang diperlukan untuk mengaktifkan layanan aksesibilitas untuk pemasangan.\n\nUntuk memberikannya, jalankan perintah ADB berikut:\n\n^2\n\nSetelah menjalankan perintah, Anda dapat melanjutkan proses pemasangan.\n\nCatatan: Anda dapat melewati ini dengan menginstal/memperbarui Shizuku dengan ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Harap aktifkan layanan aksesibilitas untuk memulai proses pemasangan. Ini memungkinkan Shizuku mendeteksi kode pemasangan.\n\nLayanan aksesibilitas akan dinonaktifkan ketika kode ditemukan atau setelah 1 menit untuk menghemat energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Silakan mulai pemasangan dengan melakukan langkah-langkah berikut:\n- Buka \"Opsi Pengembang\"\n- Aktifkan \"Debugging USB\" dan \"Debugging Nirkabel\"\n- Ketuk sisi kiri \"Debugging Nirkabel\"\n- Ketuk \"Pasangkan perangkat dengan kode pemasangan.\" Shizuku akan secara otomatis mendeteksi kode pemasangan.</string>
     <string name="adb_pairing_requires_multi_window">Harap pindah ke mode layar pisah (split-screen) terlebih dahulu.</string>
@@ -141,15 +141,15 @@
     <string name="settings_legacy_pairing_summary">Masukkan kode pemasangan dalam dialog, bukan notifikasi</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Pertama, mohon lakukan hal berikut:</string>
-    <string name="bug_report_dialog_update">Pastikan Anda menggunakan versi Shizuku terbaru.</string>
-    <string name="bug_report_dialog_button_update">Lihat rilis terbaru</string>
-    <string name="bug_report_dialog_wiki">Bacalah wiki dan ikuti semua langkah pemecahan masalah yang relevan.</string>
-    <string name="bug_report_dialog_button_wiki">Lihat wiki</string>
-    <string name="bug_report_dialog_issues">Telusuri semua masalah yang ada untuk melihat apakah bug/fitur Anda sudah pernah dilaporkan.</string>
-    <string name="bug_report_dialog_button_issues">Lihat masalah</string>
-    <string name="bug_report_dialog_method">Silakan kirimkan masalah di GitHub jika Anda memiliki akun.\n\nJika tidak, Anda dapat mengirim email.</string>
-    <string name="bug_report_dialog_button_email">Kirim Email</string>
-    <string name="bug_report_dialog_button_github">Pergi ke %1$s</string>
+    <string name="bug_report_dialog_update">Pastikan Anda menggunakan ^1.</string>
+    <string name="bug_report_dialog_link_update">versi terbaru</string>
+    <string name="bug_report_dialog_wiki">Bacalah poin ^1 dan ikuti semua langkah pemecahan masalah yang relevan.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Telusuri semua ^1 untuk melihat apakah bug Anda sudah dilaporkan.</string>
+    <string name="bug_report_dialog_link_issues">masalah yang ada</string>
+    <string name="bug_report_dialog_method">Silakan laporkan masalah di ^1 jika Anda memiliki akun.</string>
+    <string name="bug_report_dialog_method_2">Atau, Anda bisa mengirim email.</string>
+    <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port harus antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalisasi baterai harus dinonaktifkan agar dapat memulai saat boot/watchdog agar berfungsi dengan baik.</string>
@@ -215,9 +215,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Matikan Peringatan</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Tidak bisa membuka browser</string>
-    <string name="toast_copied_to_clipboard">%s
-\ntelah disalin ke papan klip.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> telah disalin ke papan klip.]]></string>
+    <string name="toast_copied_to_clipboard">Disalin ke papan klip</string>
     <string name="accessibility_service_description">Menyediakan dukungan pemasangan untuk perangkat (misalnya, TV yang menjalankan Android 14+) yang tidak dapat menggunakan notifikasi atau layar terpisah.\n\nMemungkinkan Shizuku untuk mengekstrak kode pemasangan dari layar pemasangan debugging nirkabel. Perangkat akan menonaktifkan dirinya sendiri setelah kode pemasangan ditemukan.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s tidak mendukung Shizuku modern</string>

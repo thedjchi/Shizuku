@@ -34,7 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">უსადენო გამართვა არ არის ჩართული.\nგაითვალისწინეთ, Android 11-მდე, უკაბელო გამართვის გასააქტიურებლად, კომპიუტერის კავშირი აუცილებელია.</string>
     <string name="dialog_usb_debugging_not_enabled">USB გამართვა არ არის ჩართული.\nგთხოვთ, ჩართოთ იგი \"დეველოპერის ოფციებში\".</string>
     <string name="dialog_adb_pairing_message">გთხოვთ, დაიწყოთ დაწყვილება შემდეგი ნაბიჯების შესრულებით:\n- გადადით „დეველოპერის პარამეტრებზე“\n- ჩართეთ „USB გამართვა“ და „უკაბელო გამართვა“\n- შეეხეთ „უკაბელო გამართვის“ მარცხენა მხარეს\n- შეეხეთ „მოწყობილობის დაწყვილება დაწყვილების კოდით“\n- შეიყვანეთ დაწყვილების კოდი შეტყობინებაში</string>
-    <string name="dialog_adb_pairing_accessibility_permission">შესაძლოა, Shizuku-ს არ ჰქონდეს %1$s ნებართვა. მის მისანიჭებლად, შეასრულეთ შემდეგი ADB ბრძანება:%2$sთუ ბრძანება უკვე შეასრულეთ, გააგრძელეთ დაწყვილების პროცესი.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14-ზე, Shizuku-ს ინსტალაცია/განახლება პაკეტის ინსტალატორით აუქმებს ^1 ნებართვას, რომელიც აუცილებელია დაწყვილებისთვის ხელმისაწვდომობის სერვისის ჩასართავად.\n\nმის მისანიჭებლად, შეასრულეთ შემდეგი ADB ბრძანება:\n\n^2\n\nბრძანების შესრულების შემდეგ, შეგიძლიათ გააგრძელოთ დაწყვილების პროცესი.\n\nშენიშვნა: ამის გვერდის ავლა შეგიძლიათ Shizuku-ს ADB-ით ინსტალაციით/განახლებით.</string>
     <string name="dialog_adb_pairing_accessibility_enable">გთხოვთ, ჩართოთ ხელმისაწვდომობის სერვისი დაწყვილების პროცესის დასაწყებად. ეს საშუალებას აძლევს Shizuku-ს აღმოაჩინოს დაწყვილების კოდი.\n\nხელმისაწვდომობის სერვისი გამორთულია კოდის პოვნისას ან 1 წუთის შემდეგ ენერგიის დაზოგვის მიზნით.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">დაწყვილება დაიწყეთ შემდეგი ნაბიჯების შესრულებით:\n- გადადით „დეველოპერის პარამეტრებზე“\n- ჩართეთ „USB გამართვა“ და „უკაბელო გამართვა“\n- შეეხეთ „უკაბელო გამართვის“ მარცხენა მხარეს\n- შეეხეთ „მოწყობილობის დაწყვილების კოდით დაწყვილების“ ღილაკს. Shizuku ავტომატურად ამოიცნობს დაწყვილების კოდს.</string>
     <string name="adb_pairing_requires_multi_window">გთხოვთ, ჯერ შეხვიდეთ გაყოფილი ეკრანის (მრავალფანჯრის) რეჟიმში.</string>
@@ -135,15 +135,15 @@
     <string name="settings_legacy_pairing_summary">შეიყვანეთ დაწყვილების კოდი დიალოგში შეტყობინების ნაცვლად</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">პირველ რიგში, გთხოვთ, გააკეთოთ შემდეგი:</string>
-    <string name="bug_report_dialog_update">შეამოწმეთ, რომ იყენებთ Shizuku-ს უახლეს ვერსიას.</string>
-    <string name="bug_report_dialog_button_update">უახლესი გამოშვების ნახვა</string>
-    <string name="bug_report_dialog_wiki">წაიკითხეთ ვიკი და მიჰყევით პრობლემების მოგვარების ყველა შესაბამის ნაბიჯს.</string>
-    <string name="bug_report_dialog_button_wiki">ვიკის ნახვა</string>
-    <string name="bug_report_dialog_issues">გადახედეთ ყველა არსებულ პრობლემას, რათა ნახოთ, უკვე შეტყობინებულია თუ არა თქვენი შეცდომა/ფუნქცია.</string>
-    <string name="bug_report_dialog_button_issues">პრობლემების ნახვა</string>
-    <string name="bug_report_dialog_method">თუ ანგარიში გაქვთ, გთხოვთ, პრობლემა GitHub-ზე წარმოადგინოთ.\n\nწინააღმდეგ შემთხვევაში, შეგიძლიათ ელ. ფოსტის გაგზავნა.</string>
-    <string name="bug_report_dialog_button_email">ელფოსტის გაგზავნა</string>
-    <string name="bug_report_dialog_button_github">გადადით %1$s-ზე</string>
+    <string name="bug_report_dialog_update">შეამოწმეთ, რომ იყენებთ ^1-ს.</string>
+    <string name="bug_report_dialog_link_update">უახლესი ვერსია</string>
+    <string name="bug_report_dialog_wiki">წაიკითხეთ ^1 და მიჰყევით ყველა შესაბამის პრობლემის გადაჭრის ნაბიჯს.</string>
+    <string name="bug_report_dialog_link_wiki">ვიკი</string>
+    <string name="bug_report_dialog_issues">მოძებნეთ ყველა ^1, რომ ნახოთ, უკვე შეტყობინებულია თუ არა თქვენი შეცდომა.</string>
+    <string name="bug_report_dialog_link_issues">არსებული პრობლემები</string>
+    <string name="bug_report_dialog_method">თუ ანგარიში გაქვთ, გთხოვთ, წარმოადგინოთ პრობლემა ^1-ზე.</string>
+    <string name="bug_report_dialog_method_2">წინააღმდეგ შემთხვევაში, შეგიძლიათ ელ.ფოსტის გაგზავნა.</string>
+    <string name="bug_report_dialog_button_email">ელ. ფოსტა</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">პორტი უნდა იყოს 1-დან 65535-მდე</string>
     <string name="snackbar_battery_optimization_home">ბატარეის ოპტიმიზაცია უნდა გამორთული იყოს ჩატვირთვის / მაკონტროლებლის დასაწყებად გამართულად მუშაობისთვის.</string>
@@ -209,8 +209,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">გამორთეთ შეტყობინებები</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ბრაუზერის გაშვება შეუძლებელია</string>
-    <string name="toast_copied_to_clipboard">%s\nგადაწერილია ბუფერში.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> გადაწერილია ბუფერში.]]></string>
+    <string name="toast_copied_to_clipboard">კოპირებულია ბუფერში</string>
     <string name="accessibility_service_description">უზრუნველყოფს დაწყვილების მხარდაჭერას მოწყობილობებისთვის (მაგ., ტელევიზორები, რომლებიც მუშაობს Android 14+), სადაც შეტყობინებების ან გაყოფილი ეკრანის გამოყენება შეუძლებელია.\n\nსაშუალებას აძლევს Shizuku-ს ამოიღოს დაწყვილების კოდი უკაბელო გამართვის დაწყვილების ეკრანიდან. ის გამორთავს დაწყვილების კოდის პოვნის შემდეგ.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s არ უჭერს მხარს თანამედროვე შიზუკუს</string>

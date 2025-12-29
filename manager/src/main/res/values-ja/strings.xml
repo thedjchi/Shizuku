@@ -37,7 +37,7 @@
 \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
     <string name="dialog_usb_debugging_not_enabled">USBデバッグが有効になっていません。\n「開発者向けオプション」で有効にしてください。</string>
     <string name="dialog_adb_pairing_message">以下の手順でペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。\n- 通知にペアリングコードを入力します。</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku に %1$s 権限が不足している可能性があります。権限を付与するには、次の ADB コマンドを実行してください:%2$s既にコマンドを実行している場合は、ペアリングプロセスを続行してください。</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14 では、パッケージ インストーラーを使用して Shizuku をインストール/更新すると、ペアリング用のアクセシビリティ サービスを有効にするために必要な ^1 権限が取り消されます。\n\nこれを許可するには、次の ADB コマンドを実行します。\n\n^2\n\nコマンドを実行したら、ペアリング プロセスを続行できます。\n\n注: ADB を使用して Shizuku をインストール/更新すると、これを回避できます。</string>
     <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
     <string name="dialog_adb_pairing_accessibility_navigate">以下の手順に従ってペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。Shizukuはペアリングコードを自動的に検出します。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
@@ -141,15 +141,15 @@
     <string name="settings_legacy_pairing_summary">通知ではなくダイアログでペアリングコードを入力します</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">まず、次のことを行ってください。</string>
-    <string name="bug_report_dialog_update">Shizuku の最新バージョンを使用していることを確認してください。</string>
-    <string name="bug_report_dialog_button_update">最新リリースを見る</string>
-    <string name="bug_report_dialog_wiki">Wiki を読んで、関連するトラブルシューティング手順をすべて実行してください。</string>
-    <string name="bug_report_dialog_button_wiki">ウィキを見る</string>
-    <string name="bug_report_dialog_issues">既存のすべての問題を検索して、バグ/機能がすでに報告されているかどうかを確認します。</string>
-    <string name="bug_report_dialog_button_issues">問題を表示</string>
-    <string name="bug_report_dialog_method">アカウントをお持ちの場合は、GitHub で問題を送信してください。\n\nアカウントをお持ちでない場合は、メールを送信できます。</string>
-    <string name="bug_report_dialog_button_email">メールを送信</string>
-    <string name="bug_report_dialog_button_github">%1$sへ移動</string>
+    <string name="bug_report_dialog_update">^1 を使用していることを確認してください。</string>
+    <string name="bug_report_dialog_link_update">最新バージョン</string>
+    <string name="bug_report_dialog_wiki">^1 を読んで、関連するトラブルシューティング手順をすべて実行してください。</string>
+    <string name="bug_report_dialog_link_wiki">ウィキ</string>
+    <string name="bug_report_dialog_issues">バグがすでに報告されているかどうかを確認するには、^1 全体を検索してください。</string>
+    <string name="bug_report_dialog_link_issues">既存の問題</string>
+    <string name="bug_report_dialog_method">アカウントをお持ちの場合は、^1 に問題を送信してください。</string>
+    <string name="bug_report_dialog_method_2">それ以外の場合は、電子メールを送信できます。</string>
+    <string name="bug_report_dialog_button_email">メール</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">ポートは1～65535の範囲で指定する必要があります</string>
     <string name="snackbar_battery_optimization_home">起動/ウォッチドッグが正常に機能するには、バッテリー最適化を無効にする必要があります。</string>
@@ -215,9 +215,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">アラートをオフにする</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ブラウザが起動することができません</string>
-    <string name="toast_copied_to_clipboard">%s
-\nはクリップボードにコピーされました。</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> はクリップボードにコピーされました。]]></string>
+    <string name="toast_copied_to_clipboard">クリップボードにコピーされました</string>
     <string name="accessibility_service_description">通知や分割画面が使用できないデバイス（例：Android 14以降を搭載したテレビ）のペアリングサポートを提供します。\n\nShizukuがワイヤレスデバッグペアリング画面からペアリングコードを抽出できるようにします。ペアリングコードが見つかると、Shizukuは自動的に無効になります。</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s は最新の Shizuku をサポートしていません</string>

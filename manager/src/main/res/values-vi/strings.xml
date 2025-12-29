@@ -37,7 +37,7 @@
 \nLưu ý, trước Android 11, để kích hoạt tính năng gỡ lỗi không dây, kết nối máy tính là điều bắt buộc.</string>
     <string name="dialog_usb_debugging_not_enabled">Chưa bật tính năng gỡ lỗi USB.\nVui lòng bật tính năng này trong \"Tùy chọn nhà phát triển\".</string>
     <string name="dialog_adb_pairing_message">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối thiết bị bằng mã ghép nối\"\n- Nhập mã ghép nối vào thông báo</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku có thể thiếu quyền %1$s . Để cấp quyền này, hãy chạy lệnh ADB sau:%2$sNếu bạn đã chạy lệnh này rồi, hãy tiếp tục quá trình ghép nối.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Trên Android 14, việc cài đặt/cập nhật Shizuku bằng Trình cài đặt gói sẽ thu hồi quyền ^1, quyền này cần thiết để kích hoạt dịch vụ trợ năng cho việc ghép nối.\n\nĐể cấp lại quyền này, hãy chạy lệnh ADB sau:\n\n^2\n\nSau khi chạy lệnh, bạn có thể tiếp tục quá trình ghép nối.\n\nLưu ý: bạn có thể bỏ qua bước này bằng cách cài đặt/cập nhật Shizuku bằng ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vui lòng bật dịch vụ trợ năng để bắt đầu quá trình ghép nối. Thao tác này cho phép Shizuku phát hiện mã ghép nối.\n\nDịch vụ trợ năng sẽ bị tắt khi tìm thấy mã hoặc sau 1 phút để tiết kiệm pin.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối thiết bị bằng mã ghép nối\". Shizuku sẽ tự động phát hiện mã ghép nối.</string>
     <string name="adb_pairing_requires_multi_window">Vui lòng vào chế độ chia đôi màn hình (đa cửa sổ) trước.</string>
@@ -137,15 +137,15 @@
     <string name="settings_legacy_pairing_summary">Nhập mã ghép nối vào hộp thoại thay vì thông báo</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Trước tiên, vui lòng thực hiện các bước sau:</string>
-    <string name="bug_report_dialog_update">Hãy kiểm tra xem bạn có đang sử dụng phiên bản Shizuku mới nhất hay không.</string>
-    <string name="bug_report_dialog_button_update">Xem bản phát hành mới nhất</string>
-    <string name="bug_report_dialog_wiki">Hãy đọc hướng dẫn trên wiki và làm theo tất cả các bước khắc phục sự cố có liên quan.</string>
-    <string name="bug_report_dialog_button_wiki">Xem wiki</string>
-    <string name="bug_report_dialog_issues">Hãy tìm kiếm trong tất cả các vấn đề hiện có để xem lỗi/tính năng của bạn đã được báo cáo chưa.</string>
-    <string name="bug_report_dialog_button_issues">Xem các vấn đề</string>
-    <string name="bug_report_dialog_method">Vui lòng báo cáo sự cố trên GitHub nếu bạn có tài khoản.\n\nNếu không, bạn có thể gửi email.</string>
-    <string name="bug_report_dialog_button_email">Gửi email</string>
-    <string name="bug_report_dialog_button_github">Đi đến %1$s</string>
+    <string name="bug_report_dialog_update">Hãy kiểm tra xem bạn có đang sử dụng ^1 hay không.</string>
+    <string name="bug_report_dialog_link_update">phiên bản mới nhất</string>
+    <string name="bug_report_dialog_wiki">Hãy đọc phần ^1 và làm theo tất cả các bước khắc phục sự cố có liên quan.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Tìm kiếm trong tất cả các bài viết ^1 để xem lỗi của bạn đã được báo cáo chưa.</string>
+    <string name="bug_report_dialog_link_issues">các vấn đề hiện có</string>
+    <string name="bug_report_dialog_method">Vui lòng báo cáo sự cố trên ^1 nếu bạn có tài khoản.</string>
+    <string name="bug_report_dialog_method_2">Nếu không, bạn có thể gửi email.</string>
+    <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Cổng phải nằm trong khoảng từ 1 đến 65535</string>
     <string name="snackbar_battery_optimization_home">Phải tắt tính năng tối ưu hóa pin để khởi động khi khởi động/theo dõi hoạt động bình thường.</string>
@@ -211,9 +211,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Tắt cảnh báo</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Không thể khởi động trình duyệt</string>
-    <string name="toast_copied_to_clipboard">%s
-\nđã được sao chép vào khay nhớ tạm.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> đã được sao chép vào khay nhớ tạm.]]></string>
+    <string name="toast_copied_to_clipboard">Đã sao chép vào clipboard</string>
     <string name="accessibility_service_description">Cung cấp hỗ trợ ghép nối cho các thiết bị (ví dụ: TV chạy Android 14 trở lên) không thể sử dụng thông báo hoặc chia đôi màn hình.\n\nCho phép Shizuku trích xuất mã ghép nối từ màn hình ghép nối gỡ lỗi không dây. Tính năng này sẽ tự tắt sau khi tìm thấy mã ghép nối.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s không hỗ trợ Shizuku hiện đại</string>

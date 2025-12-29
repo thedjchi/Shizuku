@@ -34,7 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Η ασύρματη λειτουργία εντοπισμού σφαλμάτων δεν είναι ενεργοποιημένη.\nΣημειώστε ότι πριν από το Android 11, για να ενεργοποιήσετε την ασύρματη λειτουργία εντοπισμού σφαλμάτων, ήταν απαραίτητη η σύνδεση με τον υπολογιστή.</string>
     <string name="dialog_usb_debugging_not_enabled">Η λειτουργία εντοπισμού σφαλμάτων USB δεν είναι ενεργοποιημένη.\nΕνεργοποιήστε την στις \"Επιλογές προγραμματιστή\".</string>
     <string name="dialog_adb_pairing_message">Ξεκινήστε τη σύζευξη ακολουθώντας τα παρακάτω βήματα:\n- Μεταβείτε στις \"Επιλογές προγραμματιστή\"\n- Ενεργοποιήστε τις λειτουργίες \"USB debugging\" και \"Wireless debugging\"\n- Πατήστε την αριστερή πλευρά του \"Wireless debugging\"\n- Πατήστε \"Σύζευξη συσκευής με κωδικό σύζευξης\"\n- Εισαγάγετε τον κωδικό σύζευξης στην ειδοποίηση</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Ενδέχεται να λείπει το δικαίωμα %1$s από το Shizuku. Για να το εκχωρήσετε, εκτελέστε την ακόλουθη εντολή ADB:%2$sΕάν έχετε ήδη εκτελέσει την εντολή, συνεχίστε με τη διαδικασία σύζευξης.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Στο Android 14, η εγκατάσταση/ενημέρωση του Shizuku με το Package Installer ανακαλεί την άδεια ^1, η οποία απαιτείται για την ενεργοποίηση της υπηρεσίας προσβασιμότητας για τη σύζευξη.\n\nΓια να την εκχωρήσετε, εκτελέστε την ακόλουθη εντολή ADB:\n\n^2\n\nΑφού εκτελέσετε την εντολή, μπορείτε να συνεχίσετε με τη διαδικασία σύζευξης.\n\nΣημείωση: μπορείτε να παρακάμψετε αυτήν την επιλογή εγκαθιστώντας/ενημερώνοντας το Shizuku με το ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Ενεργοποιήστε την υπηρεσία προσβασιμότητας για να ξεκινήσει η διαδικασία σύζευξης. Αυτό επιτρέπει στο Shizuku να εντοπίσει τον κωδικό σύζευξης.\n\nΗ υπηρεσία προσβασιμότητας θα απενεργοποιηθεί όταν βρεθεί ο κωδικός ή μετά από 1 λεπτό για εξοικονόμηση ενέργειας.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Ξεκινήστε τη σύζευξη ακολουθώντας τα παρακάτω βήματα:\n- Μεταβείτε στις \"Επιλογές προγραμματιστή\"\n- Ενεργοποιήστε τις \"Εντοπισμός σφαλμάτων USB\" και \"Ασύρματος εντοπισμός σφαλμάτων\"\n- Πατήστε την αριστερή πλευρά της επιλογής \"Ασύρματος εντοπισμός σφαλμάτων\"\n- Πατήστε \"Σύζευξη συσκευής με κωδικό σύζευξης\". Το Shizuku θα εντοπίσει αυτόματα τον κωδικό σύζευξης.</string>
     <string name="adb_pairing_requires_multi_window">Παρακαλώ, μεταβείτε πρώτα σε λειτουργία διαιρεμένης οθόνης (πολλαπλών παραθύρων).</string>
@@ -135,15 +135,15 @@
     <string name="settings_legacy_pairing_summary">Εισαγάγετε τον κωδικό σύζευξης σε ένα παράθυρο διαλόγου αντί για μια ειδοποίηση</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Αρχικά, κάντε τα εξής:</string>
-    <string name="bug_report_dialog_update">Ελέγξτε ότι χρησιμοποιείτε την πιο πρόσφατη έκδοση του Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Δείτε την τελευταία έκδοση</string>
-    <string name="bug_report_dialog_wiki">Διαβάστε το wiki και ακολουθήστε όλα τα σχετικά βήματα αντιμετώπισης προβλημάτων.</string>
-    <string name="bug_report_dialog_button_wiki">Προβολή wiki</string>
-    <string name="bug_report_dialog_issues">Αναζητήστε όλα τα υπάρχοντα προβλήματα για να δείτε αν το σφάλμα/λειτουργία σας έχει ήδη αναφερθεί.</string>
-    <string name="bug_report_dialog_button_issues">Προβολή ζητημάτων</string>
-    <string name="bug_report_dialog_method">Παρακαλούμε υποβάλετε ένα πρόβλημα στο GitHub εάν έχετε λογαριασμό.\n\nΔιαφορετικά, μπορείτε να στείλετε ένα email.</string>
-    <string name="bug_report_dialog_button_email">Αποστολή ηλεκτρονικού ταχυδρομείου</string>
-    <string name="bug_report_dialog_button_github">Μεταβείτε στο %1$s</string>
+    <string name="bug_report_dialog_update">Ελέγξτε ότι χρησιμοποιείτε το ^1.</string>
+    <string name="bug_report_dialog_link_update">τελευταία έκδοση</string>
+    <string name="bug_report_dialog_wiki">Διαβάστε το ^1 και ακολουθήστε όλα τα σχετικά βήματα αντιμετώπισης προβλημάτων.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Αναζητήστε σε όλα τα ^1 για να δείτε αν το σφάλμα σας έχει ήδη αναφερθεί.</string>
+    <string name="bug_report_dialog_link_issues">υπάρχοντα ζητήματα</string>
+    <string name="bug_report_dialog_method">Υποβάλετε ένα πρόβλημα στο ^1 εάν έχετε λογαριασμό.</string>
+    <string name="bug_report_dialog_method_2">Διαφορετικά, μπορείτε να στείλετε ένα email.</string>
+    <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Η θύρα πρέπει να είναι μεταξύ 1 και 65535</string>
     <string name="snackbar_battery_optimization_home">Η βελτιστοποίηση μπαταρίας πρέπει να είναι απενεργοποιημένη για να λειτουργήσει σωστά η εκκίνηση κατά την εκκίνηση/επιτήρηση.</string>
@@ -209,8 +209,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Απενεργοποίηση ειδοποιήσεων</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Δεν είναι δυνατή η εκκίνηση του προγράμματος περιήγησης</string>
-    <string name="toast_copied_to_clipboard">Το %s\nέχει αντιγραφεί στο πρόχειρο.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[Το <b>%s</b> έχει αντιγραφεί στο πρόχειρο.]]></string>
+    <string name="toast_copied_to_clipboard">Αντιγράφηκε στο πρόχειρο</string>
     <string name="accessibility_service_description">Παρέχει υποστήριξη σύζευξης για συσκευές (π.χ., τηλεοράσεις με Android 14+) όπου δεν μπορούν να χρησιμοποιηθούν ειδοποιήσεις ή διαιρεμένη οθόνη.\n\nΕπιτρέπει στο Shizuku να εξαγάγει τον κωδικό σύζευξης από την οθόνη σύζευξης ασύρματου εντοπισμού σφαλμάτων. Θα απενεργοποιηθεί μόνο του μόλις βρεθεί ο κωδικός σύζευξης.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">Το %1$s δεν υποστηρίζει το σύγχρονο Shizuku</string>

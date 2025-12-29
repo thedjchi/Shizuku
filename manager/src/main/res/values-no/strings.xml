@@ -34,7 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Trådløs feilsøking er ikke aktivert.\nMerk at før Android 11 er det nødvendig med en datamaskintilkobling for å aktivere trådløs feilsøking.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-feilsøking er ikke aktivert.\nAktiver det i «Utvikleralternativer».</string>
     <string name="dialog_adb_pairing_message">Start paringen ved å utføre følgende trinn:\n- Naviger til \"Utvikleralternativer\"\n- Aktiver \"USB-feilsøking\" og \"Trådløs feilsøking\"\n- Trykk på venstre side av \"Trådløs feilsøking\"\n- Trykk på \"Par enhet med paringskode\"\n- Skriv inn paringskoden i varselet</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Shizuku mangler kanskje tillatelsen %1$s . For å gi den, kjør følgende ADB-kommando:%2$sHvis du allerede har kjørt kommandoen, fortsett med paringsprosessen.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">På Android 14 vil installasjon/oppdatering av Shizuku med pakkeinstallasjonsprogrammet oppheve ^1-tillatelsen, som er nødvendig for å aktivere tilgjengelighetstjenesten for paring.\n\nFor å gi den, kjør følgende ADB-kommando:\n\n^2\n\nEtter at du har kjørt kommandoen, kan du fortsette med paringsprosessen.\n\nMerk: Du kan omgå dette ved å installere/oppdatere Shizuku med ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vennligst aktiver tilgjengelighetstjenesten for å starte paringsprosessen. Dette lar Shizuku oppdage paringskoden.\n\nTilgjengelighetstjenesten slås av når koden blir funnet, eller etter 1 minutt for å spare energi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Start paringen ved å utføre følgende trinn:\n– Naviger til «Utvikleralternativer»\n– Aktiver «USB-feilsøking» og «Trådløs feilsøking»\n– Trykk på venstre side av «Trådløs feilsøking»\n– Trykk på «Par enhet med paringskode». Shizuku vil automatisk oppdage paringskoden.</string>
     <string name="adb_pairing_requires_multi_window">Vennligst aktiver delt skjermmodus (flere vinduer) først.</string>
@@ -135,15 +135,15 @@
     <string name="settings_legacy_pairing_summary">Skriv inn paringskoden i en dialogboks i stedet for i en varsling</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Først, vennligst gjør følgende:</string>
-    <string name="bug_report_dialog_update">Sjekk at du bruker den nyeste versjonen av Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Se siste utgivelse</string>
-    <string name="bug_report_dialog_wiki">Les wikien og følg alle relevante feilsøkingstrinn.</string>
-    <string name="bug_report_dialog_button_wiki">Vis wikien</string>
-    <string name="bug_report_dialog_issues">Søk gjennom alle eksisterende problemer for å se om feilen/funksjonen din allerede er rapportert.</string>
-    <string name="bug_report_dialog_button_issues">Vis problemer</string>
-    <string name="bug_report_dialog_method">Send inn et problem på GitHub hvis du har en konto.\n\nEllers kan du sende en e-post.</string>
-    <string name="bug_report_dialog_button_email">Send e-post</string>
-    <string name="bug_report_dialog_button_github">Gå til %1$s</string>
+    <string name="bug_report_dialog_update">Sjekk at du bruker ^1.</string>
+    <string name="bug_report_dialog_link_update">nyeste versjon</string>
+    <string name="bug_report_dialog_wiki">Les ^1 og følg alle relevante feilsøkingstrinn.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Søk gjennom alle ^1 for å se om feilen din allerede er rapportert.</string>
+    <string name="bug_report_dialog_link_issues">eksisterende problemer</string>
+    <string name="bug_report_dialog_method">Send inn et problem på ^1 hvis du har en konto.</string>
+    <string name="bug_report_dialog_method_2">Ellers kan du sende en e-post.</string>
+    <string name="bug_report_dialog_button_email">E-post</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Porten må være mellom 1 og 65535</string>
     <string name="snackbar_battery_optimization_home">Batterioptimalisering må deaktiveres for at oppstart på oppstart/watchdog skal fungere riktig.</string>
@@ -209,8 +209,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Slå av varsler</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Kan ikke starte nettleseren</string>
-    <string name="toast_copied_to_clipboard">%s\nhar blitt kopiert til utklippstavlen.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> har blitt kopiert til utklippstavlen.]]></string>
+    <string name="toast_copied_to_clipboard">Kopiert til utklippstavlen</string>
     <string name="accessibility_service_description">Gir støtte for paring for enheter (f.eks. TV-er som kjører Android 14+) der varsler eller delt skjerm ikke kan brukes.\n\nGjør det mulig for Shizuku å trekke ut paringskoden fra feilsøkingsskjermen for trådløs paring. Den vil deaktivere seg selv når paringskoden er funnet.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s støtter ikke moderne Shizuku</string>
