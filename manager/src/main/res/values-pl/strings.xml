@@ -136,15 +136,6 @@
     <string name="settings_legacy_pairing_summary">Wpisz kod parowania w oknie dialogowym zamiast w powiadomieniu</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Najpierw wykonaj następujące czynności:</string>
-    <string name="bug_report_dialog_update">Sprawdź, czy używasz najnowszej wersji Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Zobacz najnowszą wersję</string>
-    <string name="bug_report_dialog_wiki">Przeczytaj informacje wiki i wykonaj wszystkie odpowiednie kroki rozwiązywania problemów.</string>
-    <string name="bug_report_dialog_button_wiki">Zobacz wiki</string>
-    <string name="bug_report_dialog_issues">Przeszukaj wszystkie istniejące problemy, aby sprawdzić, czy Twój błąd lub funkcja nie zostały już zgłoszone.</string>
-    <string name="bug_report_dialog_button_issues">Wyświetl problemy</string>
-    <string name="bug_report_dialog_method">Jeśli masz konto, zgłoś problem na GitHubie.\n\nW przeciwnym razie możesz wysłać wiadomość e-mail.</string>
-    <string name="bug_report_dialog_button_email">Wyślij e-mail</string>
-    <string name="bug_report_dialog_button_github">Przejdź do %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port musi mieścić się w zakresie od 1 do 65535</string>
     <string name="snackbar_battery_optimization_home">Aby start przy uruchomieniu systemu i nadzorowanie działały poprawnie, musisz wyłączyć optymalizację baterii.</string>
@@ -210,8 +201,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Wyłącz alerty</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Nie można uruchomić przeglądarki</string>
-    <string name="toast_copied_to_clipboard">%s\nzostał skopiowany do schowka.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[Skopiowano <b>%s</b> do schowka.]]></string>
     <string name="accessibility_service_description">Zapewnia wsparcie parowania na urządzeniach (np. telewizorach z Androidem 14+), na których nie można użyć powiadomień ani podzielonego ekranu.\n\nUmożliwia Shizuku odczytanie kodu parowania z ekranu debugowania bezprzewodowego. Usługa wyłączy się automatycznie po znalezieniu kodu.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s nie obsługuje nowego Shizuku</string>
