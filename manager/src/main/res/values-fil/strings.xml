@@ -37,6 +37,7 @@
 \nTandaan, kailangang kumonekta sa kompyuter para mabuksan ang wireless na pag-debug sa Android 10 pababa.</string>
     <string name="dialog_usb_debugging_not_enabled">Hindi pinagana ang pag-debug ng USB.\nMangyaring paganahin ito sa \"Mga Pagpipilian sa Developer\".</string>
     <string name="dialog_adb_pairing_message">Mangyaring simulan ang pagpapares sa pamamagitan ng pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian sa Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang aparato na may code ng pagpapares\"\n- Ipasok ang code ng pagpapares sa abiso</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Sa Android 14, ang pag-install/pag-update ng Shizuku gamit ang Package Installer ay nagpapawalang-bisa sa pahintulot na ^1, na kinakailangan upang paganahin ang serbisyo ng accessibility para sa pagpapares.\n\nPara ibigay ito, patakbuhin ang sumusunod na utos ng ADB:\n\n^2\n\nPagkatapos patakbuhin ang utos, maaari ka nang magpatuloy sa proseso ng pagpapares.\n\nPaalala: maaari mo itong iwasan sa pamamagitan ng pag-install/pag-update ng Shizuku gamit ang ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Mangyaring paganahin ang serbisyo ng pag-access upang simulan ang proseso ng pagpapares. Pinapayagan nito si Shizuku na makita ang code ng pagpapares.\n\nAng serbisyo sa pag-access ay papatayin kapag natagpuan ang code o pagkatapos ng 1 minuto upang makatipid ng enerhiya.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Mangyaring simulan ang pagpapares sa pamamagitan ng pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian sa Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang device sa pagpapares ng code.\" Awtomatikong makikita ng Shizuku ang code ng pagpapares.</string>
     <string name="adb_pairing_requires_multi_window">Pumunta muna sa split-screen (multi-window) mode.</string>
@@ -141,6 +142,15 @@
     <string name="settings_legacy_pairing_summary">Ipasok ang code ng pagpapares sa isang dialog sa halip na isang abiso</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Una, mangyaring gawin ang sumusunod:</string>
+    <string name="bug_report_dialog_update">Tiyaking ginagamit mo ang ^1.</string>
+    <string name="bug_report_dialog_link_update">pinakabagong bersyon</string>
+    <string name="bug_report_dialog_wiki">Basahin ang ^1 at sundin ang lahat ng kaugnay na hakbang sa pag-troubleshoot.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Hanapin sa lahat ng ^1 para makita kung naiulat na ang iyong bug.</string>
+    <string name="bug_report_dialog_link_issues">mga umiiral na isyu</string>
+    <string name="bug_report_dialog_method">Mangyaring magsumite ng isyu sa ^1 kung mayroon kang account.</string>
+    <string name="bug_report_dialog_method_2">Kung hindi, maaari kang magpadala ng email.</string>
+    <string name="bug_report_dialog_button_email">I-email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Ang port ay dapat na nasa pagitan ng 1 at 65535</string>
     <string name="snackbar_battery_optimization_home">Ang pag-optimize ng baterya ay dapat na hindi pinagana para sa pagsisimula sa boot / watchdog upang gumana nang maayos.</string>
@@ -206,6 +216,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">I-off ang Mga Alerto</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Hindi mabuksan ang browser</string>
+    <string name="toast_copied_to_clipboard">Kinopya sa clipboard</string>
     <string name="accessibility_service_description">Nagbibigay ng suporta sa pagpapares para sa mga aparato (hal., Mga TV na nagpapatakbo ng Android 14+) kung saan hindi magagamit ang mga abiso o split screen.\n\nPinapayagan ang Shizuku na kunin ang code ng pagpapares mula sa wireless debugging pairing screen. Hindi ito paganahin kapag natagpuan na ang code ng pagpapares.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">Hindi sinusuportahan ng %1$s ang makabagong Shizuku (API v11+)</string>
