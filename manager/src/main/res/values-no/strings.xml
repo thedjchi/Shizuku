@@ -134,15 +134,6 @@
     <string name="settings_legacy_pairing_summary">Skriv inn paringskoden i en dialogboks i stedet for i en varsling</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Først, vennligst gjør følgende:</string>
-    <string name="bug_report_dialog_update">Sjekk at du bruker den nyeste versjonen av Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Se siste utgivelse</string>
-    <string name="bug_report_dialog_wiki">Les wikien og følg alle relevante feilsøkingstrinn.</string>
-    <string name="bug_report_dialog_button_wiki">Vis wikien</string>
-    <string name="bug_report_dialog_issues">Søk gjennom alle eksisterende problemer for å se om feilen/funksjonen din allerede er rapportert.</string>
-    <string name="bug_report_dialog_button_issues">Vis problemer</string>
-    <string name="bug_report_dialog_method">Send inn et problem på GitHub hvis du har en konto.\n\nEllers kan du sende en e-post.</string>
-    <string name="bug_report_dialog_button_email">Send e-post</string>
-    <string name="bug_report_dialog_button_github">Gå til %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Porten må være mellom 1 og 65535</string>
     <string name="snackbar_battery_optimization_home">Batterioptimalisering må deaktiveres for at oppstart på oppstart/watchdog skal fungere riktig.</string>
@@ -208,8 +199,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Slå av varsler</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Kan ikke starte nettleseren</string>
-    <string name="toast_copied_to_clipboard">%s\nhar blitt kopiert til utklippstavlen.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> har blitt kopiert til utklippstavlen.]]></string>
     <string name="accessibility_service_description">Gir støtte for paring for enheter (f.eks. TV-er som kjører Android 14+) der varsler eller delt skjerm ikke kan brukes.\n\nGjør det mulig for Shizuku å trekke ut paringskoden fra feilsøkingsskjermen for trådløs paring. Den vil deaktivere seg selv når paringskoden er funnet.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s støtter ikke moderne Shizuku</string>
