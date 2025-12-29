@@ -37,6 +37,7 @@
 \nReține că înainte de Android 11, pentru a activa depanarea wireless, conexiunea la computer este o necesitate.</string>
     <string name="dialog_usb_debugging_not_enabled">Depanarea USB nu este activată.\nVă rugăm să o activați în „Opțiuni pentru dezvoltatori”.</string>
     <string name="dialog_adb_pairing_message">Vă rugăm să începeți asocierea urmând următorii pași:\n- Navigați la „Opțiuni pentru dezvoltatori”\n- Activați „Depanare USB” și „Depanare wireless”\n- Atingeți partea stângă a opțiunii „Depanare wireless”\n- Atingeți „Asocieți dispozitivul cu cod de asociere”\n- Introduceți codul de asociere în notificare</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Pe Android 14, instalarea/actualizarea Shizuku cu ajutorul programului de instalare a pachetelor revocă permisiunea ^1, necesară pentru activarea serviciului de accesibilitate pentru asociere.\n\nPentru a o acorda, execută următoarea comandă ADB:\n\n^2\n\nDupă executarea comenzii, poți continua procesul de asociere.\n\nNotă: poți ocoli acest lucru instalând/actualizând Shizuku cu ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Vă rugăm să activați serviciul de accesibilitate pentru a începe procesul de asociere. Acest lucru permite dispozitivului Shizuku să detecteze codul de asociere.\n\nServiciul de accesibilitate va fi dezactivat când codul este găsit sau după 1 minut pentru a economisi energie.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Vă rugăm să începeți asocierea urmând următorii pași:\n- Navigați la „Opțiuni pentru dezvoltatori”\n- Activați „Depanare USB” și „Depanare wireless”\n- Atingeți partea stângă a opțiunii „Depanare wireless”\n- Atingeți „Asocieți dispozitivul cu cod de asociere”. Shizuku va detecta automat codul de asociere.</string>
     <string name="adb_pairing_requires_multi_window">Intră mai întâi în modul ecran divizat (ferestre multiple).</string>
@@ -142,6 +143,15 @@
     <string name="settings_legacy_pairing_summary">Introduceți codul de asociere într-o casetă de dialog în loc de o notificare</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Mai întâi, vă rugăm să faceți următoarele:</string>
+    <string name="bug_report_dialog_update">Verifică dacă folosești ^1.</string>
+    <string name="bug_report_dialog_link_update">ultima versiune</string>
+    <string name="bug_report_dialog_wiki">Citește ^1 și urmează toți pașii de depanare relevanți.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Caută prin toate ^1 pentru a vedea dacă eroarea ta a fost deja raportată.</string>
+    <string name="bug_report_dialog_link_issues">probleme existente</string>
+    <string name="bug_report_dialog_method">Te rugăm să trimiți o problemă pe ^1 dacă ai deja un cont.</string>
+    <string name="bug_report_dialog_method_2">În caz contrar, poți trimite un e-mail.</string>
+    <string name="bug_report_dialog_button_email">Email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portul trebuie să fie între 1 și 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizarea bateriei trebuie dezactivată pentru ca pornirea la pornire/funcția de supraveghere să funcționeze corect.</string>
@@ -207,6 +217,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Dezactivează alertele</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Nu se poate porni browser-ul</string>
+    <string name="toast_copied_to_clipboard">Copiat în clipboard</string>
     <string name="accessibility_service_description">Oferă asistență pentru asocierea dispozitivelor (de exemplu, televizoare cu Android 14+) unde nu se pot utiliza notificările sau ecranul divizat.\n\nPermite Shizuku să extragă codul de asociere din ecranul de asociere pentru depanarea wireless. Se va dezactiva automat odată ce codul de asociere este găsit.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s nu suportă Shizuku modern</string>
