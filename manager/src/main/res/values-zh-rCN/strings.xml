@@ -136,6 +136,10 @@
     <string name="settings_legacy_pairing_summary">请在对话框中输入配对码，而不是在通知中输入</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">首先，请执行以下操作：</string>
+    <string name="bug_report_dialog_update">请检查您是否正在使用^1。</string>
+    <string name="bug_report_dialog_link_update">最新版本</string>
+    <string name="bug_report_dialog_wiki">阅读^1并遵循所有相关故障排除步骤。</string>
+    <string name="bug_report_dialog_link_wiki">维基</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必须介于 1 和 65535 之间</string>
     <string name="snackbar_battery_optimization_home">要使 开机启动/watchdog 功能正常工作，必须禁用电池优化。</string>
