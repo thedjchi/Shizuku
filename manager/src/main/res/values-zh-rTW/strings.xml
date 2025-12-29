@@ -140,15 +140,6 @@
     <string name="settings_legacy_pairing_summary">請在對話框中輸入配對代碼，而非通知</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">首先，請執行以下操作：</string>
-    <string name="bug_report_dialog_update">請確認您使用的是最新版本的Shizuku。</string>
-    <string name="bug_report_dialog_button_update">查看最新版本</string>
-    <string name="bug_report_dialog_wiki">請閱讀維基百科並按照所有相關的故障排除步驟進行操作。</string>
-    <string name="bug_report_dialog_button_wiki">查看維基百科</string>
-    <string name="bug_report_dialog_issues">搜尋所有現有問題，看看你的錯誤/功能是否已被回報。</string>
-    <string name="bug_report_dialog_button_issues">查看問題</string>
-    <string name="bug_report_dialog_method">如果您有 GitHub 帳戶，請在 GitHub 上提交問題。\n\n否則，您可以發送電子郵件。</string>
-    <string name="bug_report_dialog_button_email">傳送電子郵件</string>
-    <string name="bug_report_dialog_button_github">前往 %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">端口必須介於1到65535之間</string>
     <string name="snackbar_battery_optimization_home">啟動時啟動或看門狗的啟動功能必須關閉電池優化。</string>
@@ -214,9 +205,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">關閉警報</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">無法啟動瀏覽器</string>
-    <string name="toast_copied_to_clipboard">%s
-\n已複製到剪貼簿。</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> 已複製到剪貼簿。]]></string>
     <string name="accessibility_service_description">為無法使用通知或分割畫面的裝置（例如運行 Android 14+ 的電視）提供配對支援。\n\n使雫能從無線除錯配對畫面擷取配對程式碼。一旦找到配對碼，它就會自動停用。</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s 不支援現代 Shizuku</string>
