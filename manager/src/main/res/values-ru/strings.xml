@@ -143,15 +143,6 @@
     <string name="settings_legacy_pairing_summary">Введите код сопряжения в диалоговом окне вместо уведомления.</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Для начала выполните следующие действия:</string>
-    <string name="bug_report_dialog_update">Убедитесь, что вы используете последнюю версию Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Посмотреть последнюю версию</string>
-    <string name="bug_report_dialog_wiki">Ознакомьтесь с информацией в вики и выполните все соответствующие шаги по устранению неполадок.</string>
-    <string name="bug_report_dialog_button_wiki">Посмотреть вики</string>
-    <string name="bug_report_dialog_issues">Просмотрите все существующие сообщения об ошибках, чтобы узнать, не была ли уже зарегистрирована ваша ошибка/функция.</string>
-    <string name="bug_report_dialog_button_issues">Просмотреть вопросы</string>
-    <string name="bug_report_dialog_method">Если у вас есть учетная запись, пожалуйста, создайте заявку на GitHub.\n\nВ противном случае вы можете отправить электронное письмо.</string>
-    <string name="bug_report_dialog_button_email">Отправить электронное письмо</string>
-    <string name="bug_report_dialog_button_github">Перейти к %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт должен быть от 1 до 65535.</string>
     <string name="snackbar_battery_optimization_home">Для корректной работы функции оптимизации батареи необходимо отключить запуск при загрузке/сторожевом таймере.</string>
@@ -217,9 +208,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Отключить оповещения</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не удается запустить браузер</string>
-    <string name="toast_copied_to_clipboard">%s
-\nбыло скопировано в буфер обмена.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> было скопировано в буфер обмена.]]></string>
     <string name="accessibility_service_description">Обеспечивает поддержку сопряжения для устройств (например, телевизоров на Android 14+), на которых невозможно использовать уведомления или разделение экрана.\n\nПозволяет Shizuku извлекать код сопряжения из экрана сопряжения беспроводной отладки. Устройство отключится после обнаружения кода сопряжения.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s не поддерживает актуальную версию Shizuku</string>
