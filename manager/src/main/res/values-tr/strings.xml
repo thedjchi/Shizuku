@@ -37,6 +37,7 @@
 \nNot, Android 11’den önce kablosuz hata ayıklamayı etkinleştirmek için bilgisayar bağlantısının şart olduğunu unutmayın.</string>
     <string name="dialog_usb_debugging_not_enabled">USB hata ayıklama etkin değil.\nLütfen \"Geliştirici Seçenekleri\"nde etkinleştirin.</string>
     <string name="dialog_adb_pairing_message">Lütfen aşağıdaki adımları uygulayarak eşleştirmeyi başlatın:\n- \"Geliştirici Seçenekleri\"ne gidin\n- \"USB hata ayıklama\" ve \"Kablosuz hata ayıklama\"yı etkinleştirin\n- \"Kablosuz hata ayıklama\"nın sol tarafına dokunun\n- \"Cihazı eşleştirme koduyla eşleştir\"e dokunun\n- Bildirimde eşleştirme kodunu girin</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14\'te, Shizuku\'yu Paket Yükleyici ile yüklemek/güncellemek, eşleştirme için erişilebilirlik hizmetini etkinleştirmek için gerekli olan ^1 iznini iptal eder.\n\nBu izni vermek için aşağıdaki ADB komutunu çalıştırın:\n\n^2\n\nKomutu çalıştırdıktan sonra eşleştirme işlemine devam edebilirsiniz.\n\nNot: Bunu ADB ile Shizuku\'yu yükleyerek/güncelleyerek atlayabilirsiniz.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Eşleştirme işlemini başlatmak için lütfen erişilebilirlik hizmetini etkinleştirin. Bu, Shizuku\'nun eşleştirme kodunu algılamasını sağlar.\n\nKod bulunduğunda veya enerji tasarrufu için 1 dakika sonra erişilebilirlik hizmeti kapatılacaktır.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Lütfen aşağıdaki adımları uygulayarak eşleştirmeyi başlatın:\n- \"Geliştirici Seçenekleri\"ne gidin\n- \"USB hata ayıklama\" ve \"Kablosuz hata ayıklama\"yı etkinleştirin\n- \"Kablosuz hata ayıklama\"nın sol tarafına dokunun\n- \"Cihazı eşleştirme koduyla eşleştir\"e dokunun. Shizuku eşleştirme kodunu otomatik olarak algılayacaktır.</string>
     <string name="adb_pairing_requires_multi_window">Lütfen önce bölünmüş ekran (çoklu pencere) moduna girin.</string>
@@ -141,6 +142,15 @@
     <string name="settings_legacy_pairing_summary">Eşleştirme kodunu bildirim yerine bir iletişim kutusuna girin</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Öncelikle lütfen aşağıdakileri yapın:</string>
+    <string name="bug_report_dialog_update">^1 operatörünü kullandığınızdan emin olun.</string>
+    <string name="bug_report_dialog_link_update">en son sürüm</string>
+    <string name="bug_report_dialog_wiki">^1 numaralı metni okuyun ve ilgili tüm sorun giderme adımlarını izleyin.</string>
+    <string name="bug_report_dialog_link_wiki">viki</string>
+    <string name="bug_report_dialog_issues">Hatanızın daha önce bildirilip bildirilmediğini görmek için ^1 numaralı tüm kayıtları inceleyin.</string>
+    <string name="bug_report_dialog_link_issues">mevcut sorunlar</string>
+    <string name="bug_report_dialog_method">Hesabınız varsa lütfen ^1 üzerinden bir sorun bildirin.</string>
+    <string name="bug_report_dialog_method_2">Alternatif olarak, e-posta gönderebilirsiniz.</string>
+    <string name="bug_report_dialog_button_email">E-posta</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Bağlantı noktası 1 ile 65535 arasında olmalıdır</string>
     <string name="snackbar_battery_optimization_home">Önyükleme/bekçi köpeği sırasında başlatmanın düzgün çalışması için pil optimizasyonunun devre dışı bırakılması gerekir.</string>
@@ -206,6 +216,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Uyarıları Kapat</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Tarayıcı başlatılamıyor</string>
+    <string name="toast_copied_to_clipboard">Panoya kopyalandı</string>
     <string name="accessibility_service_description">Bildirimlerin veya bölünmüş ekranın kullanılamadığı cihazlar (örneğin, Android 14+ çalıştıran TV\'ler) için eşleştirme desteği sağlar.\n\nShizuku\'nun eşleştirme kodunu kablosuz hata ayıklama eşleştirme ekranından çıkarmasını sağlar. Eşleştirme kodu bulunduğunda kendini devre dışı bırakır.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s, yeni Shizuku’yu desteklemiyor</string>
