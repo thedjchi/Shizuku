@@ -37,6 +37,7 @@
 \nHinweis: Vor Android 11 ist für die Aktivierung des kabellosen Debugging eine Computerverbindung erforderlich.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-Debugging ist nicht aktiviert.\nBitte aktivieren Sie es in \"Entwickleroptionen\".</string>
     <string name="dialog_adb_pairing_message">Bitte starten Sie die Kopplung mit den folgenden Schritten:\n– Öffnen Sie die „Entwickleroptionen“.\n– Aktivieren Sie „USB-Debugging“ und „Drahtloses Debugging“.\n– Tippen Sie links neben „Drahtloses Debugging“.\n– Tippen Sie auf „Gerät mit Kopplungscode koppeln“.\n– Geben Sie den Kopplungscode aus der Benachrichtigung ein.</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Auf Android 14, Shizuku mit dem Package Installer zu installieren/aktualisieren, widerruft die ^1-Berechtigung, die benötigt wird, um den Accessibility Service für Paare zu aktivieren.\n\nUm es zu gewähren, führen Sie folgenden ADB-Befehl aus:\n\n^2\n\nNach dem Ausführen des Befehls, Sie können mit dem Paarungsprozess fortfahren.\n\nHinweis: Sie können dies umgehen, indem Sie Shizuku mit ADB installieren/aktualisieren.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Bitte aktivieren Sie den Barrierefreiheitsdienst, um den Paarungsprozess zu starten. Dadurch kann Shizuku den Paarungscode erkennen.\n\nDer Barrierefreiheitsdienst wird abgeschaltet, sobald der Code gefunden wird oder nach einer Minute, um Energie zu sparen.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Bitte starten Sie die Kopplung mit den folgenden Schritten:\n– Navigieren Sie zu „Entwickleroptionen“.\n– Aktivieren Sie „USB-Debugging“ und „Drahtloses Debugging“.\n– Tippen Sie links neben „Drahtloses Debugging“.\n– Tippen Sie auf „Gerät mit Kopplungscode koppeln“. Shizuku erkennt den Kopplungscode automatisch.</string>
     <string name="adb_pairing_requires_multi_window">Bitte zuerst in den Modus \"Geteilter Bildschirm\" (Mehrfenster) gehen.</string>
@@ -141,6 +142,15 @@
     <string name="settings_legacy_pairing_summary">Geben Sie den Paarungscode in einem Dialog statt in einer Benachrichtigung ein</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Bitte führen Sie zunächst folgende Schritte durch:</string>
+    <string name="bug_report_dialog_update">Prüfen Sie, ob Sie ^1 verwenden.</string>
+    <string name="bug_report_dialog_link_update">neueste Version</string>
+    <string name="bug_report_dialog_wiki">Lesen Sie den Abschnitt ^1 und befolgen Sie alle relevanten Schritte zur Fehlerbehebung.</string>
+    <string name="bug_report_dialog_link_wiki">Wiki</string>
+    <string name="bug_report_dialog_issues">Durchsuchen Sie alle Einträge ^1, um zu sehen, ob Ihr Fehler bereits gemeldet wurde.</string>
+    <string name="bug_report_dialog_link_issues">bestehende Probleme</string>
+    <string name="bug_report_dialog_method">Bitte melden Sie das Problem auf ^1, falls Sie dort ein Konto haben.</string>
+    <string name="bug_report_dialog_method_2">Alternativ können Sie eine E-Mail senden.</string>
+    <string name="bug_report_dialog_button_email">E-Mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Der Port muss zwischen 1 und 65535 liegen</string>
     <string name="snackbar_battery_optimization_home">Die Batterieoptimierung muss deaktiviert sein, damit der Start beim Boot/Watchdog richtig funktioniert.</string>
@@ -206,6 +216,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Alarme ausschalten</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Browser starten nicht möglich</string>
+    <string name="toast_copied_to_clipboard">In die Zwischenablage kopiert</string>
     <string name="accessibility_service_description">Bietet Koppelungsunterstützung für Geräte (z. B. Fernseher mit Android 14+), bei denen Benachrichtigungen oder Splitscreen nicht verwendet werden können.\n\nErmöglicht es Shizuku, den Pairing-Code aus dem drahtlosen Debugging-Pairing-Bildschirm zu extrahieren. Sobald der Pairing-Code gefunden ist, wird er sich selbst deaktivieren.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s unterstützt das moderne Shizuku nicht</string>
