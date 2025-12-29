@@ -133,15 +133,6 @@
     <string name="settings_legacy_pairing_summary">Masukkan kod gandingan dalam dialog dan bukannya pemberitahuan</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Pertama, sila lakukan perkara berikut:</string>
-    <string name="bug_report_dialog_update">Semak sama ada anda menggunakan versi terkini Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Lihat keluaran terkini</string>
-    <string name="bug_report_dialog_wiki">Baca wiki dan ikuti semua langkah penyelesaian masalah yang berkaitan.</string>
-    <string name="bug_report_dialog_button_wiki">Lihat wiki</string>
-    <string name="bug_report_dialog_issues">Cari semua isu sedia ada untuk melihat sama ada pepijat/ciri anda telah dilaporkan.</string>
-    <string name="bug_report_dialog_button_issues">Lihat isu</string>
-    <string name="bug_report_dialog_method">Sila serahkan isu di GitHub jika anda mempunyai akaun.\n\nJika tidak, anda boleh menghantar e-mel.</string>
-    <string name="bug_report_dialog_button_email">Hantar E-mel</string>
-    <string name="bug_report_dialog_button_github">Pergi ke %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pelabuhan mestilah antara 1 dan 65535</string>
     <string name="snackbar_battery_optimization_home">Pengoptimuman bateri mesti dilumpuhkan untuk permulaan pada but/pemantau untuk berfungsi dengan baik.</string>
@@ -207,8 +198,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Matikan Makluman</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Tidak boleh memulakan penyemak imbas</string>
-    <string name="toast_copied_to_clipboard">%s\ntelah disalin ke papan keratan.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> telah disalin ke papan keratan.]]></string>
     <string name="accessibility_service_description">Menyediakan sokongan berpasangan untuk peranti (cth, TV yang menjalankan Android 14+) yang pemberitahuan atau skrin pisah tidak boleh digunakan.\n\nMendayakan Shizuku untuk mengekstrak kod gandingan daripada skrin pasangan nyahpepijat wayarles. Ia akan melumpuhkan dirinya apabila kod berpasangan ditemui.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s tidak menyokong Shizuku moden</string>
