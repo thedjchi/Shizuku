@@ -141,15 +141,6 @@
     <string name="settings_legacy_pairing_summary">Insira o código de emparelhamento em uma caixa de diálogo em vez de uma notificação.</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Primeiramente, faça o seguinte:</string>
-    <string name="bug_report_dialog_update">Verifique se você está usando a versão mais recente do Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Veja a versão mais recente.</string>
-    <string name="bug_report_dialog_wiki">Leia o wiki e siga todos os passos relevantes para a resolução de problemas.</string>
-    <string name="bug_report_dialog_button_wiki">Ver wiki</string>
-    <string name="bug_report_dialog_issues">Procure em todos os problemas existentes para ver se o seu bug/recurso já foi relatado.</string>
-    <string name="bug_report_dialog_button_issues">Ver problemas</string>
-    <string name="bug_report_dialog_method">Por favor, abra uma issue no GitHub se você tiver uma conta.\n\nCaso contrário, você pode enviar um e-mail.</string>
-    <string name="bug_report_dialog_button_email">Enviar e-mail</string>
-    <string name="bug_report_dialog_button_github">Acesse %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A porta deve estar entre 1 e 65535.</string>
     <string name="snackbar_battery_optimization_home">A otimização de bateria deve estar desativada para que a inicialização na inicialização/vigilância funcione corretamente.</string>
@@ -215,9 +206,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Desativar alertas</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Não consigo iniciar o navegador</string>
-    <string name="toast_copied_to_clipboard">%s
-\nfoi copiado com sucesso.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> copiado com sucesso.]]></string>
     <string name="accessibility_service_description">Fornece suporte para emparelhamento com dispositivos (por exemplo, TVs com Android 14 ou superior) onde as notificações ou a tela dividida não podem ser usadas.\n\nPermite que o Shizuku extraia o código de emparelhamento da tela de depuração sem fio. Ele será desativado assim que o código de emparelhamento for encontrado.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s não suporta as versões novas do Shizuku</string>
