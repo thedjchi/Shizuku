@@ -134,15 +134,6 @@
     <string name="settings_legacy_pairing_summary">کد جفت‌سازی را به جای اعلان، در یک کادر محاوره‌ای وارد کنید</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">ابتدا لطفا موارد زیر را انجام دهید:</string>
-    <string name="bug_report_dialog_update">بررسی کنید که از آخرین نسخه Shizuku استفاده می‌کنید.</string>
-    <string name="bug_report_dialog_button_update">مشاهده آخرین نسخه منتشر شده</string>
-    <string name="bug_report_dialog_wiki">ویکی را بخوانید و تمام مراحل عیب‌یابی مربوطه را دنبال کنید.</string>
-    <string name="bug_report_dialog_button_wiki">مشاهده ویکی</string>
-    <string name="bug_report_dialog_issues">تمام مشکلات موجود را جستجو کنید تا ببینید آیا اشکال/ویژگی شما قبلاً گزارش شده است یا خیر.</string>
-    <string name="bug_report_dialog_button_issues">مشاهده مسائل</string>
-    <string name="bug_report_dialog_method">اگر حساب کاربری دارید، لطفاً مشکل خود را در گیت‌هاب ارسال کنید.\n\nدر غیر این صورت، می‌توانید ایمیل ارسال کنید.</string>
-    <string name="bug_report_dialog_button_email">ارسال ایمیل</string>
-    <string name="bug_report_dialog_button_github">به %1$sبروید</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">پورت باید بین ۱ تا ۶۵۵۳۵ باشد</string>
     <string name="snackbar_battery_optimization_home">برای اینکه شروع به کار در هنگام بوت/واچ‌داگ به درستی انجام شود، باید بهینه‌سازی باتری غیرفعال باشد.</string>
@@ -208,8 +199,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">خاموش کردن هشدارها</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">نمی توان مرورگر را راه اندازی کرد</string>
-    <string name="toast_copied_to_clipboard">%s\nدر بریده‌دان رونوشت شده است.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> در بریده‌دان رونوشت شده است.]]></string>
     <string name="accessibility_service_description">پشتیبانی از جفت‌سازی را برای دستگاه‌هایی (مثلاً تلویزیون‌های دارای اندروید ۱۴+) که در آن‌ها نمی‌توان از اعلان‌ها یا تقسیم صفحه استفاده کرد، فراهم می‌کند.\n\nبه Shizuku این امکان را می‌دهد که کد جفت‌سازی را از صفحه جفت‌سازی اشکال‌زدایی بی‌سیم استخراج کند. پس از یافتن کد جفت‌سازی، خود را غیرفعال می‌کند.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s از شیزوکوی جدید پشتیبانی نمی کند</string>
