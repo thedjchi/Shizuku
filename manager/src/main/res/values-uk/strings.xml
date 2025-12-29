@@ -37,6 +37,7 @@
 \nЗверніть увагу, до Android 11, щоб увімкнути налагодження через Wi-Fi, під\'\'єднання до ПК обов\'\'язкове.</string>
     <string name="dialog_usb_debugging_not_enabled">Налагодження через USB не ввімкнено.\nБудь ласка, увімкніть його в розділі «Параметри розробника».</string>
     <string name="dialog_adb_pairing_message">Будь ласка, розпочніть сполучення, виконавши такі кроки:\n- Перейдіть до розділу \"Параметри розробника\"\n- Увімкніть \"Налагодження USB\" та \"Налагодження бездротового зв\'язку\"\n- Натисніть ліву частину розділу \"Налагодження бездротового зв\'язку\"\n- Натисніть \"Спів\'язати пристрій за допомогою коду сполучення\"\n- Введіть код сполучення зі сповіщення</string>
+    <string name="dialog_adb_pairing_accessibility_permission">На Android 14 встановлення/оновлення Shizuku за допомогою інсталятора пакетів скасовує дозвіл ^1, який потрібен для ввімкнення служби доступності для сполучення.\n\nЩоб надати його, виконайте таку команду ADB:\n\n^2\n\nПісля виконання команди ви можете продовжити процес сполучення.\n\nПримітка: ви можете обійти це, встановивши/оновивши Shizuku за допомогою ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Будь ласка, увімкніть службу доступності, щоб розпочати процес сполучення. Це дозволить Shizuku виявити код сполучення.\n\nСлужба доступності буде вимкнена після знаходження коду або через 1 хвилину для економії енергії.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Будь ласка, розпочніть сполучення, виконавши такі кроки:\n- Перейдіть до розділу \"Параметри розробника\"\n- Увімкніть \"Налагодження USB\" та \"Налагодження бездротового зв\'язку\"\n- Натисніть ліву частину \"Налагодження бездротового зв\'язку\"\n- Натисніть \"Спів\'язати пристрій за допомогою коду сполучення\". Shizuku автоматично визначить код сполучення.</string>
     <string name="adb_pairing_requires_multi_window">Спершу увійдіть в режим розділеного екрана (багатьох вікон).</string>
@@ -143,6 +144,15 @@
     <string name="settings_legacy_pairing_summary">Введіть код сполучення в діалоговому вікні, а не в сповіщенні</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Спочатку, будь ласка, виконайте наступне:</string>
+    <string name="bug_report_dialog_update">Перевірте, чи ви використовуєте ^1.</string>
+    <string name="bug_report_dialog_link_update">остання версія</string>
+    <string name="bug_report_dialog_wiki">Прочитайте ^1 та виконайте всі відповідні кроки з усунення несправностей.</string>
+    <string name="bug_report_dialog_link_wiki">вікі</string>
+    <string name="bug_report_dialog_issues">Перегляньте всі ^1, щоб побачити, чи про вашу помилку вже повідомляли.</string>
+    <string name="bug_report_dialog_link_issues">існуючі проблеми</string>
+    <string name="bug_report_dialog_method">Будь ласка, надішліть запит на ^1, якщо у вас є обліковий запис.</string>
+    <string name="bug_report_dialog_method_2">В іншому випадку ви можете надіслати електронного листа.</string>
+    <string name="bug_report_dialog_button_email">Електронна пошта</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт має бути в діапазоні від 1 до 65535</string>
     <string name="snackbar_battery_optimization_home">Для коректної роботи запуску при завантаженні/сторожового таймера оптимізацію батареї необхідно вимкнути.</string>
@@ -208,6 +218,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Вимкнути сповіщення</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не вдається запустити браузер</string>
+    <string name="toast_copied_to_clipboard">Скопійовано в буфер обміну</string>
     <string name="accessibility_service_description">Забезпечує підтримку сполучення для пристроїв (наприклад, телевізорів з Android 14+), де не можна використовувати сповіщення або розділений екран.\n\nДозволяє Shizuku витягувати код сполучення з екрана сполучення для бездротового налагодження. Він вимкнеться, як тільки код сполучення буде знайдено.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s не підтримує сучасну версію Shizuku</string>
