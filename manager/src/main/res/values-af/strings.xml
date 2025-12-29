@@ -134,15 +134,6 @@
     <string name="settings_legacy_pairing_summary">Voer die paringskode in \'n dialoog in plaas van \'n kennisgewing in</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Doen eers die volgende:</string>
-    <string name="bug_report_dialog_update">Maak seker dat jy die nuutste weergawe van Shizuku gebruik.</string>
-    <string name="bug_report_dialog_button_update">Bekyk die nuutste vrystelling</string>
-    <string name="bug_report_dialog_wiki">Lees die wiki en volg alle relevante probleemoplossingstappe.</string>
-    <string name="bug_report_dialog_button_wiki">Bekyk wiki</string>
-    <string name="bug_report_dialog_issues">Soek deur alle bestaande probleme om te sien of jou fout/funksie reeds aangemeld is.</string>
-    <string name="bug_report_dialog_button_issues">Bekyk probleme</string>
-    <string name="bug_report_dialog_method">Dien asseblief \'n probleem op GitHub in as jy \'n rekening het.\n\nAndersins kan jy \'n e-pos stuur.</string>
-    <string name="bug_report_dialog_button_email">Stuur e-pos</string>
-    <string name="bug_report_dialog_button_github">Gaan na %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Poort moet tussen 1 en 65535 wees</string>
     <string name="snackbar_battery_optimization_home">Batteryoptimalisering moet gedeaktiveer wees vir die aanvang met selflaai/waghond om behoorlik te werk.</string>
@@ -208,8 +199,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Skakel waarskuwings af</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Kan nie blaaier begin nie</string>
-    <string name="toast_copied_to_clipboard">%s\nis na die knipbord gekopieer.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> is na die knipbord gekopieer.]]></string>
     <string name="accessibility_service_description">Verskaf paringsondersteuning vir toestelle (bv. TV\'s met Android 14+) waar kennisgewings of \'n gesplete skerm nie gebruik kan word nie.\n\nStel Shizuku in staat om die paringskode uit die draadlose ontfouting-paringskerm te onttrek. Dit sal homself deaktiveer sodra die paringskode gevind is.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ondersteun nie moderne Shizuku nie</string>
