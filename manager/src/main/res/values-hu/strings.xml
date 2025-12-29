@@ -34,6 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Vezeték nélküli hibakeresés nincs engedélyezve.\nNe feledje, hogy az Android 11 előtt a vezeték nélküli hibakeresés engedélyezéséhez számítógépes csatlakozásra van szükség.</string>
     <string name="dialog_usb_debugging_not_enabled">Az USB hibakeresés nincs engedélyezve.\nKérjük, engedélyezze a „Fejlesztői beállítások” között.</string>
     <string name="dialog_adb_pairing_message">Kérjük, kezdje el a párosítást a következő lépések végrehajtásával:\n- Navigáljon a „Fejlesztői beállítások” menüpontra\n- Engedélyezze az „USB-hibakeresés” és a „Vezeték nélküli hibakeresés” lehetőséget\n- Koppintson a „Vezeték nélküli hibakeresés” bal oldalára\n- Koppintson az „Eszköz párosítása párosító kóddal” lehetőségre\n- Írja be az értesítésben megjelenő párosítási kódot</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14 rendszeren a Shizuku csomagtelepítővel történő telepítése/frissítése visszavonja a ^1 engedélyt, amely a párosítás akadálymentesítési szolgáltatásának engedélyezéséhez szükséges.\n\nA megadásához futtassa a következő ADB parancsot:\n\n^2\n\nA parancs futtatása után folytathatja a párosítási folyamatot.\n\nMegjegyzés: ezt megkerülheti a Shizuku ADB-vel történő telepítésével/frissítésével.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Kérjük, engedélyezze az akadálymentesítési szolgáltatást a párosítási folyamat megkezdéséhez. Ez lehetővé teszi a Shizuku számára a párosítási kód észlelését.\n\nAz akadálymentesítési szolgáltatás kikapcsol, amikor a kód megtalálható, vagy 1 perc elteltével az energiatakarékosság érdekében.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Kérjük, kezdje el a párosítást a következő lépések végrehajtásával:\n- Navigáljon a „Fejlesztői beállítások” menüpontra\n- Engedélyezze az „USB hibakeresést” és a „Vezeték nélküli hibakeresést”\n- Koppintson a „Vezeték nélküli hibakeresés” bal oldalára\n- Koppintson az „Eszköz párosítása párosító kóddal” lehetőségre. A Shizuku automatikusan felismeri a párosító kódot.</string>
     <string name="adb_pairing_requires_multi_window">Kérjük, először lépjen az osztott képernyős (több ablakos) módba.</string>
@@ -134,6 +135,15 @@
     <string name="settings_legacy_pairing_summary">A párosítási kódot egy párbeszédpanelen, ne pedig egy értesítésben add meg</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Először is, kérjük, tegye a következőket:</string>
+    <string name="bug_report_dialog_update">Ellenőrizd, hogy a ^1-et használod-e.</string>
+    <string name="bug_report_dialog_link_update">legújabb verzió</string>
+    <string name="bug_report_dialog_wiki">Olvasd el a ^1-et, és kövesd az összes vonatkozó hibaelhárítási lépést.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Keresd át az összes ^1-et, hogy jelentették-e már a hibádat.</string>
+    <string name="bug_report_dialog_link_issues">meglévő problémák</string>
+    <string name="bug_report_dialog_method">Kérjük, küldjön be egy problémát a ^1 oldalon, ha van fiókja.</string>
+    <string name="bug_report_dialog_method_2">Egyébként küldhetsz egy e-mailt.</string>
+    <string name="bug_report_dialog_button_email">Email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">A portszámnak 1 és 65535 között kell lennie.</string>
     <string name="snackbar_battery_optimization_home">A rendszerindításkor/watchdogkor történő indítás megfelelő működéséhez le kell tiltani az akkumulátoroptimalizálást.</string>
@@ -199,6 +209,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Kapcsolja ki a riasztásokat</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Nem lehet elindítani a böngészőt</string>
+    <string name="toast_copied_to_clipboard">Vágólapra másolva</string>
     <string name="accessibility_service_description">Párosítási támogatást nyújt olyan eszközökhöz (pl. Android 14+ rendszert futtató tévék), amelyeken nem használhatók az értesítések vagy az osztott képernyő.\n\nLehetővé teszi a Shizuku számára a párosítási kód kinyerését a vezeték nélküli hibakeresési párosítási képernyőről. Amint megtalálja a párosítási kódot, a rendszer letiltja magát.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s nem támogatja a modern Shizukut</string>
