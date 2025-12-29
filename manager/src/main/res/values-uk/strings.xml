@@ -143,15 +143,6 @@
     <string name="settings_legacy_pairing_summary">Введіть код сполучення в діалоговому вікні, а не в сповіщенні</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Спочатку, будь ласка, виконайте наступне:</string>
-    <string name="bug_report_dialog_update">Перевірте, чи ви використовуєте останню версію Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Переглянути останній реліз</string>
-    <string name="bug_report_dialog_wiki">Прочитайте вікі-статус і виконайте всі відповідні кроки з усунення несправностей.</string>
-    <string name="bug_report_dialog_button_wiki">Переглянути вікі</string>
-    <string name="bug_report_dialog_issues">Перегляньте всі існуючі проблеми, щоб побачити, чи про вашу помилку/функцію вже повідомляли.</string>
-    <string name="bug_report_dialog_button_issues">Переглянути проблеми</string>
-    <string name="bug_report_dialog_method">Будь ласка, надішліть запит на проблему на GitHub, якщо у вас є обліковий запис.\n\nАбо ж ви можете надіслати електронного листа.</string>
-    <string name="bug_report_dialog_button_email">Надіслати електронного листа</string>
-    <string name="bug_report_dialog_button_github">Перейти до %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт має бути в діапазоні від 1 до 65535</string>
     <string name="snackbar_battery_optimization_home">Для коректної роботи запуску при завантаженні/сторожового таймера оптимізацію батареї необхідно вимкнути.</string>
@@ -217,9 +208,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Вимкнути сповіщення</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не вдається запустити браузер</string>
-    <string name="toast_copied_to_clipboard">%s
-\nскопійовано в буфер обміну.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> скопійовано в буфер обміну.]]></string>
     <string name="accessibility_service_description">Забезпечує підтримку сполучення для пристроїв (наприклад, телевізорів з Android 14+), де не можна використовувати сповіщення або розділений екран.\n\nДозволяє Shizuku витягувати код сполучення з екрана сполучення для бездротового налагодження. Він вимкнеться, як тільки код сполучення буде знайдено.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s не підтримує сучасну версію Shizuku</string>
