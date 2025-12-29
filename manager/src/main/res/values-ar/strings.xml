@@ -37,6 +37,7 @@
 \nملاحظة ، قبل Android 11 ، لتمكين التصحيح اللاسلكي ، يجب أن يكون الاتصال بالكمبيوتر أمرًا ضروريًا.</string>
     <string name="dialog_usb_debugging_not_enabled">لم يتم تمكين تصحيح أخطاء USB.\nيرجى تمكينه في \"خيارات المطور\".</string>
     <string name="dialog_adb_pairing_message">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\"\n- أدخل رمز الاقتران في الإشعار</string>
+    <string name="dialog_adb_pairing_accessibility_permission">في نظام Android 14، يؤدي تثبيت/تحديث تطبيق Shizuku باستخدام مُثبِّت الحزم إلى إلغاء إذن ^1، وهو الإذن المطلوب لتفعيل خدمة إمكانية الوصول للاقتران.\n\nلمنحه، شغِّل أمر ADB التالي:\n\n^2\n\nبعد تشغيل الأمر، يمكنك متابعة عملية الاقتران.\n\nملاحظة: يمكنك تجاوز هذا الإجراء بتثبيت/تحديث Shizuku باستخدام ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">يرجى تفعيل خدمة إمكانية الوصول لبدء عملية الاقتران. هذا يسمح لـ Shizuku باكتشاف رمز الاقتران.\n\nسيتم إيقاف خدمة إمكانية الوصول عند العثور على الرمز أو بعد دقيقة واحدة لتوفير الطاقة.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\". سيكتشف Shizuku رمز الاقتران تلقائيًا.</string>
     <string name="adb_pairing_requires_multi_window">الرجاء إدخال وضع تقسيم الشاشة (متعدد النوافذ) أولاً.</string>
@@ -145,6 +146,15 @@
     <string name="settings_legacy_pairing_summary">أدخل رمز الاقتران في مربع حوار بدلاً من الإشعار</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">أولاً، يرجى القيام بما يلي:</string>
+    <string name="bug_report_dialog_update">تأكد من أنك تستخدم ^1.</string>
+    <string name="bug_report_dialog_link_update">أحدث إصدار</string>
+    <string name="bug_report_dialog_wiki">اقرأ ^1 واتبع جميع خطوات استكشاف الأخطاء وإصلاحها ذات الصلة.</string>
+    <string name="bug_report_dialog_link_wiki">ويكي</string>
+    <string name="bug_report_dialog_issues">ابحث في جميع ^1 لمعرفة ما إذا تم الإبلاغ عن الخطأ الخاص بك بالفعل.</string>
+    <string name="bug_report_dialog_link_issues">المشكلات القائمة</string>
+    <string name="bug_report_dialog_method">يرجى تقديم مشكلة على ^1 إذا كان لديك حساب.</string>
+    <string name="bug_report_dialog_method_2">وإلا، يمكنك إرسال بريد إلكتروني.</string>
+    <string name="bug_report_dialog_button_email">بريد إلكتروني</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">يجب أن يكون المنفذ بين 1 و 65535</string>
     <string name="snackbar_battery_optimization_home">يجب تعطيل تحسين البطارية حتى يعمل التشغيل عند التمهيد/مراقبة التشغيل بشكل صحيح.</string>
@@ -210,6 +220,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">إيقاف التنبيهات</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">لا يمكن بدء المتصفح</string>
+    <string name="toast_copied_to_clipboard">تم نسخها إلى الحافظة</string>
     <string name="accessibility_service_description">يوفر دعمًا للاقتران للأجهزة (مثل أجهزة التلفزيون التي تعمل بنظام أندرويد 14+) التي لا يمكن فيها استخدام الإشعارات أو تقسيم الشاشة.\n\nيُمكّن شيزوكو من استخراج رمز الاقتران من شاشة اقتران تصحيح أخطاء الشبكة اللاسلكية. سيُعطّل تلقائيًا بمجرد العثور على رمز الاقتران.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s لا يدعم النسخة الحديثة من Shizuku</string>
