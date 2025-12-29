@@ -37,6 +37,7 @@
 \nPřed povolením systému Android 11 je pro povolení bezdrátového ladění nutné připojení k počítači.</string>
     <string name="dialog_usb_debugging_not_enabled">Ladění přes USB není povolené.\nProsím, povolte to v \"Možnostech vývojářů\".</string>
     <string name="dialog_adb_pairing_message">Párování zahajte provedením následujících kroků:\n- Přejděte do sekce „Možnosti pro vývojáře“\n- Povolte „Ladění USB“ a „Bezdrátové ladění“\n- Klepněte na levou stranu sekce „Bezdrátové ladění“\n- Klepněte na „Spárovat zařízení s párovacím kódem“\n- Zadejte párovací kód z oznámení</string>
+    <string name="dialog_adb_pairing_accessibility_permission">V systému Android 14 instalace/aktualizace Shizuku pomocí instalačního programu balíčků ruší oprávnění ^1, které je vyžadováno k povolení služby přístupnosti pro párování.\n\nChcete-li jej udělit, spusťte následující příkaz ADB:\n\n^2\n\nPo spuštění příkazu můžete pokračovat v procesu párování.\n\nPoznámka: Tomuto se můžete vyhnout instalací/aktualizací Shizuku pomocí ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Prosím, povolte službu přístupnosti pro zahájení procesu párování. To umožňuje Shizuku detekovat párovací kód.\n\nSlužba přístupnosti bude vypnuta po nalezení kódu nebo po 1 minutě, aby se šetřila energie.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Párování spusťte provedením následujících kroků:\n- Přejděte do sekce „Možnosti pro vývojáře“\n- Povolte „Ladění USB“ a „Bezdrátové ladění“\n- Klepněte na levou stranu sekce „Bezdrátové ladění“\n- Klepněte na „Spárovat zařízení s párovacím kódem“. Shizuku automaticky detekuje párovací kód.</string>
     <string name="adb_pairing_requires_multi_window">Nejprve prosím přejděte do režimu rozdělené obrazovky (více oken).</string>
@@ -143,6 +144,15 @@
     <string name="settings_legacy_pairing_summary">Zadejte párovací kód do dialogu místo oznámení</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Nejprve prosím proveďte následující:</string>
+    <string name="bug_report_dialog_update">Zkontrolujte, zda používáte ^1.</string>
+    <string name="bug_report_dialog_link_update">nejnovější verze</string>
+    <string name="bug_report_dialog_wiki">Přečtěte si ^1 a postupujte podle všech příslušných kroků pro řešení problémů.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Prohledejte všechny ^1 a zjistěte, zda vaše chyba již byla nahlášena.</string>
+    <string name="bug_report_dialog_link_issues">existující problémy</string>
+    <string name="bug_report_dialog_method">Pokud máte účet, odešlete prosím problém na ^1.</string>
+    <string name="bug_report_dialog_method_2">Jinak můžete poslat e-mail.</string>
+    <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port musí být mezi 1 a 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalizace baterie musí být vypnutá, aby start při startu/watchdogu fungoval správně.</string>
@@ -208,6 +218,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Vypnout upozornění</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Prohlížeč nelze spustit</string>
+    <string name="toast_copied_to_clipboard">Zkopírováno do schránky</string>
     <string name="accessibility_service_description">Podporuje párování zařízení (např. televizorů s Androidem 14+), kde nelze používat oznámení nebo rozdělenou obrazovku.\n\nUmožňuje Shizuku extrahovat párovací kód z obrazovky pro ladění bezdrátového ladění. Jakmile najdete párovací kód, deaktivuje se.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s nepodporuje moderní Shizuku</string>
