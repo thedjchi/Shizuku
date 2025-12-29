@@ -37,6 +37,7 @@
 \nВнимание: на системах старше Android 11 для включения этой отладки необходимо соединение с компьютером.</string>
     <string name="dialog_usb_debugging_not_enabled">Отладка по USB не включена.\nВключите её в «Параметрах разработчика».</string>
     <string name="dialog_adb_pairing_message">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Сопарить устройство с кодом сопряжения»\n- Введите код сопряжения в уведомление</string>
+    <string name="dialog_adb_pairing_accessibility_permission">На Android 14 установка/обновление Shizuku с помощью Package Installer отменяет разрешение ^1, необходимое для включения службы специальных возможностей при сопряжении.\n\nЧтобы предоставить его, выполните следующую команду ADB:\n\n^2\n\nПосле выполнения команды вы можете продолжить процесс сопряжения.\n\nПримечание: вы можете обойти это, установив/обновив Shizuku с помощью ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Включите службу специальных возможностей, чтобы начать процесс сопряжения. Это позволит Shizuku обнаружить код сопряжения.\n\nСлужба специальных возможностей будет отключена после обнаружения кода или через 1 минуту для экономии энергии.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Сопарить устройство с кодом сопряжения». Сидзуку автоматически обнаружит код пары.</string>
     <string name="adb_pairing_requires_multi_window">Пожалуйста, сначала активируйте режим разделения экрана (многооконный режим).</string>
@@ -143,6 +144,15 @@
     <string name="settings_legacy_pairing_summary">Введите код сопряжения в диалоговом окне вместо уведомления.</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Для начала выполните следующие действия:</string>
+    <string name="bug_report_dialog_update">Убедитесь, что вы используете символ ^1.</string>
+    <string name="bug_report_dialog_link_update">последняя версия</string>
+    <string name="bug_report_dialog_wiki">Прочитайте инструкцию ^1 и выполните все соответствующие шаги по устранению неполадок.</string>
+    <string name="bug_report_dialog_link_wiki">вики</string>
+    <string name="bug_report_dialog_issues">Просмотрите все сообщения об ошибке (^1), чтобы узнать, не было ли уже сообщено о вашей ошибке.</string>
+    <string name="bug_report_dialog_link_issues">существующие проблемы</string>
+    <string name="bug_report_dialog_method">Пожалуйста, отправьте сообщение об ошибке на странице ^1, если у вас есть учетная запись.</string>
+    <string name="bug_report_dialog_method_2">В противном случае вы можете отправить электронное письмо.</string>
+    <string name="bug_report_dialog_button_email">Электронная почта</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Порт должен быть от 1 до 65535.</string>
     <string name="snackbar_battery_optimization_home">Для корректной работы функции оптимизации батареи необходимо отключить запуск при загрузке/сторожевом таймере.</string>
@@ -208,6 +218,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Отключить оповещения</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не удается запустить браузер</string>
+    <string name="toast_copied_to_clipboard">Скопировано в буфер обмена</string>
     <string name="accessibility_service_description">Обеспечивает поддержку сопряжения для устройств (например, телевизоров на Android 14+), на которых невозможно использовать уведомления или разделение экрана.\n\nПозволяет Shizuku извлекать код сопряжения из экрана сопряжения беспроводной отладки. Устройство отключится после обнаружения кода сопряжения.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s не поддерживает актуальную версию Shizuku</string>
