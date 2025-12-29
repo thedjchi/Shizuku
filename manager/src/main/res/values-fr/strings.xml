@@ -138,15 +138,6 @@
     <string name="settings_legacy_pairing_summary">Saisissez le code d’appairement dans une boîte de dialogue au lieu d’une notification</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Veuillez tout d\'abord procéder comme suit :</string>
-    <string name="bug_report_dialog_update">Vérifiez que vous utilisez bien la dernière version de Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Voir la dernière version</string>
-    <string name="bug_report_dialog_wiki">Consultez le wiki et suivez toutes les étapes de dépannage pertinentes.</string>
-    <string name="bug_report_dialog_button_wiki">Voir le wiki</string>
-    <string name="bug_report_dialog_issues">Parcourez tous les problèmes existants pour voir si votre bug/fonctionnalité a déjà été signalé.</string>
-    <string name="bug_report_dialog_button_issues">Afficher les problèmes</string>
-    <string name="bug_report_dialog_method">Veuillez signaler le problème sur GitHub si vous avez un compte.\n\nSinon, vous pouvez envoyer un e-mail.</string>
-    <string name="bug_report_dialog_button_email">Envoyer un courriel</string>
-    <string name="bug_report_dialog_button_github">Allez à %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Le port doit être compris entre 1 et 65535</string>
     <string name="snackbar_battery_optimization_home">L’optimisation de la batterie doit être désactivée pour que le démarrage au démarrage/watchdog fonctionne correctement.</string>
@@ -212,9 +203,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Désactivez les alertes</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossible de lancer le navigateur</string>
-    <string name="toast_copied_to_clipboard">%s
-\na bien été copié dans le presse papier.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> a bien été copié dans le presse papier.]]></string>
     <string name="accessibility_service_description">Offre un support de l’appairage pour les appareils (par exemple, les téléviseurs sous Android 14+) où les notifications ou l’écran partagé ne peuvent pas être utilisés.\n\nPermet à Shizuku d’extraire le code d’appairage de l’écran de débogage sans fil. Il se désactivera lui-même une fois le code d’appariement trouvé.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ne supporte pas les versions plus récentes de Shizuku</string>
