@@ -142,15 +142,6 @@
     <string name="settings_legacy_pairing_summary">Introduceți codul de asociere într-o casetă de dialog în loc de o notificare</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Mai întâi, vă rugăm să faceți următoarele:</string>
-    <string name="bug_report_dialog_update">Verifică dacă folosești cea mai recentă versiune de Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Vezi cea mai recentă lansare</string>
-    <string name="bug_report_dialog_wiki">Citește wiki-ul și urmează toți pașii relevanți pentru depanare.</string>
-    <string name="bug_report_dialog_button_wiki">Vizualizați wiki-ul</string>
-    <string name="bug_report_dialog_issues">Caută prin toate problemele existente pentru a vedea dacă eroarea/funcționalitatea ta a fost deja raportată.</string>
-    <string name="bug_report_dialog_button_issues">Vizualizați problemele</string>
-    <string name="bug_report_dialog_method">Te rugăm să trimiți o problemă pe GitHub dacă ai un cont.\n\nAltfel, poți trimite un e-mail.</string>
-    <string name="bug_report_dialog_button_email">Trimiteți e-mail</string>
-    <string name="bug_report_dialog_button_github">Accesați %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portul trebuie să fie între 1 și 65535</string>
     <string name="snackbar_battery_optimization_home">Optimizarea bateriei trebuie dezactivată pentru ca pornirea la pornire/funcția de supraveghere să funcționeze corect.</string>
@@ -216,9 +207,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Dezactivează alertele</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Nu se poate porni browser-ul</string>
-    <string name="toast_copied_to_clipboard">%s
-\na fost copiat în clipboard.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> a fost copiat în clipboard.]]></string>
     <string name="accessibility_service_description">Oferă asistență pentru asocierea dispozitivelor (de exemplu, televizoare cu Android 14+) unde nu se pot utiliza notificările sau ecranul divizat.\n\nPermite Shizuku să extragă codul de asociere din ecranul de asociere pentru depanarea wireless. Se va dezactiva automat odată ce codul de asociere este găsit.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s nu suportă Shizuku modern</string>
