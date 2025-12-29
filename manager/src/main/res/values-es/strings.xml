@@ -37,6 +37,7 @@
 \nNota, versiones anteriores a Android 11, para habilitar depuración inalámbrica, la conexión a una computadora es requerida.</string>
     <string name="dialog_usb_debugging_not_enabled">La depuración USB no está habilitada.\nHabilítela en \"Opciones de desarrollador\".</string>
     <string name="dialog_adb_pairing_message">Comience el emparejamiento realizando los siguientes pasos:\n- Vaya a \"Opciones de desarrollador\"\n- Habilite \"Depuración USB\" y \"Depuración inalámbrica\"\n- Toque el lado izquierdo de \"Depuración inalámbrica\"\n- Toque \"Emparejar dispositivo con código de emparejamiento\"\n- Ingrese el código de emparejamiento en la notificación</string>
+    <string name="dialog_adb_pairing_accessibility_permission">En Android 14, instalar o actualizar Shizuku con el instalador de paquetes revoca el permiso ^1, que es necesario para habilitar el servicio de accesibilidad para el emparejamiento.\n\nPara otorgarlo, ejecute el siguiente comando ADB:\n\n^2\n\nDespués de ejecutar el comando, puede continuar con el proceso de emparejamiento.\n\nNota: puede omitir esto instalando o actualizando Shizuku con ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Habilita el servicio de accesibilidad para iniciar el proceso de emparejamiento. Esto permite que Shizuku detecte el código de emparejamiento.\n\nEl servicio de accesibilidad se desactivará cuando se encuentre el código o después de 1 minuto para ahorrar energía.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Para iniciar el emparejamiento, siga estos pasos:\n- Vaya a \"Opciones de desarrollador\"\n- Habilite \"Depuración USB\" y \"Depuración inalámbrica\"\n- Toque el lado izquierdo de \"Depuración inalámbrica\"\n- Toque \"Emparejar dispositivo con código de emparejamiento\". Shizuku detectará automáticamente el código de emparejamiento.</string>
     <string name="adb_pairing_requires_multi_window">Favor entre en modo de pantalla dividida (multiventana) primero.</string>
@@ -141,6 +142,15 @@
     <string name="settings_legacy_pairing_summary">Introduzca el código de emparejamiento en un cuadro de diálogo en lugar de una notificación</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Primero, haga lo siguiente:</string>
+    <string name="bug_report_dialog_update">Comprueba que estás utilizando ^1.</string>
+    <string name="bug_report_dialog_link_update">última versión</string>
+    <string name="bug_report_dialog_wiki">Lea el ^1 y siga todos los pasos de solución de problemas relevantes.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Busque en todos los ^1 para ver si su error ya ha sido informado.</string>
+    <string name="bug_report_dialog_link_issues">problemas existentes</string>
+    <string name="bug_report_dialog_method">Envíe un problema en ^1 si tiene una cuenta.</string>
+    <string name="bug_report_dialog_method_2">De lo contrario, puede enviar un correo electrónico.</string>
+    <string name="bug_report_dialog_button_email">Correo electrónico</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">El puerto debe estar entre 1 y 65535</string>
     <string name="snackbar_battery_optimization_home">La optimización de la batería debe estar deshabilitada para que el inicio en el arranque/vigilancia funcione correctamente.</string>
@@ -206,6 +216,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Desactivar alertas</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">No se puede iniciar el explorador</string>
+    <string name="toast_copied_to_clipboard">Copiado al portapapeles</string>
     <string name="accessibility_service_description">Proporciona compatibilidad con dispositivos (p. ej., televisores con Android 14 o superior) donde no se pueden usar las notificaciones ni la pantalla dividida.\n\nPermite que Shizuku extraiga el código de emparejamiento de la pantalla de depuración inalámbrica. Se desactivará automáticamente una vez encontrado el código de emparejamiento.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s no soporta Shizuku moderno</string>
