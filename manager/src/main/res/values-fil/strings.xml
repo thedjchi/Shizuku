@@ -141,15 +141,6 @@
     <string name="settings_legacy_pairing_summary">Ipasok ang code ng pagpapares sa isang dialog sa halip na isang abiso</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Una, mangyaring gawin ang sumusunod:</string>
-    <string name="bug_report_dialog_update">Tingnan kung ginagamit mo ang pinakabagong bersyon ng Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Tingnan ang pinakabagong release</string>
-    <string name="bug_report_dialog_wiki">Basahin ang wiki at sundin ang lahat ng nauugnay na hakbang sa pag-troubleshoot.</string>
-    <string name="bug_report_dialog_button_wiki">Tingnan ang wiki</string>
-    <string name="bug_report_dialog_issues">Maghanap sa lahat ng umiiral na isyu upang makita kung naiulat na ang iyong bug/feature.</string>
-    <string name="bug_report_dialog_button_issues">Tingnan ang mga isyu</string>
-    <string name="bug_report_dialog_method">Mangyaring magsumite ng isyu sa GitHub kung mayroon kang account.\n\nKung hindi, maaari kang magpadala ng email.</string>
-    <string name="bug_report_dialog_button_email">Magpadala ng Email</string>
-    <string name="bug_report_dialog_button_github">Pumunta sa %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Ang port ay dapat na nasa pagitan ng 1 at 65535</string>
     <string name="snackbar_battery_optimization_home">Ang pag-optimize ng baterya ay dapat na hindi pinagana para sa pagsisimula sa boot / watchdog upang gumana nang maayos.</string>
@@ -215,9 +206,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">I-off ang Mga Alerto</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Hindi mabuksan ang browser</string>
-    <string name="toast_copied_to_clipboard">Nakopya sa clipboard ang
-\n%s</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[Nakopya ang <b>%s</b> sa clipboard.]]></string>
     <string name="accessibility_service_description">Nagbibigay ng suporta sa pagpapares para sa mga aparato (hal., Mga TV na nagpapatakbo ng Android 14+) kung saan hindi magagamit ang mga abiso o split screen.\n\nPinapayagan ang Shizuku na kunin ang code ng pagpapares mula sa wireless debugging pairing screen. Hindi ito paganahin kapag natagpuan na ang code ng pagpapares.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">Hindi sinusuportahan ng %1$s ang makabagong Shizuku (API v11+)</string>
