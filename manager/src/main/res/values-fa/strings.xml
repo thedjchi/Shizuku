@@ -34,6 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">اشکال‌زدایی بی‌سیم فعال نیست.\nتوجه داشته باشید، قبل از اندروید ۱۱، برای فعال کردن اشکال‌زدایی بی‌سیم، اتصال به رایانه ضروری است.</string>
     <string name="dialog_usb_debugging_not_enabled">اشکال‌زدایی USB فعال نیست.\nلطفاً آن را در «گزینه‌های توسعه‌دهنده» فعال کنید.</string>
     <string name="dialog_adb_pairing_message">لطفاً با انجام مراحل زیر، جفت‌سازی را شروع کنید:\n- به «گزینه‌های توسعه‌دهنده» بروید\n- «اشکال‌زدایی USB» و «اشکال‌زدایی بی‌سیم» را فعال کنید\n- روی سمت چپ «اشکال‌زدایی بی‌سیم» ضربه بزنید\n- روی «جفت کردن دستگاه با کد جفت‌سازی» ضربه بزنید\n- کد جفت‌سازی را در اعلان وارد کنید</string>
+    <string name="dialog_adb_pairing_accessibility_permission">در اندروید ۱۴، نصب/به‌روزرسانی Shizuku با استفاده از Package Installer، مجوز ^1 را که برای فعال کردن سرویس دسترسی برای جفت‌سازی لازم است، لغو می‌کند.\n\nبرای اعطای آن، دستور ADB زیر را اجرا کنید:\n\n^2\n\nپس از اجرای دستور، می‌توانید فرآیند جفت‌سازی را ادامه دهید.\n\nتوجه: می‌توانید با نصب/به‌روزرسانی Shizuku با ADB، از این مرحله عبور کنید.</string>
     <string name="dialog_adb_pairing_accessibility_enable">لطفاً برای شروع فرآیند جفت‌سازی، سرویس دسترسی را فعال کنید. این به شیزوکو اجازه می‌دهد تا کد جفت‌سازی را تشخیص دهد.\n\nسرویس دسترسی هنگام یافتن کد یا پس از ۱ دقیقه برای صرفه‌جویی در مصرف انرژی خاموش می‌شود.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">لطفاً با انجام مراحل زیر، جفت‌سازی را شروع کنید:\n- به «گزینه‌های توسعه‌دهنده» بروید\n- «اشکال‌زدایی USB» و «اشکال‌زدایی بی‌سیم» را فعال کنید\n- روی سمت چپ «اشکال‌زدایی بی‌سیم» ضربه بزنید\n- روی «جفت‌سازی دستگاه با کد جفت‌سازی» ضربه بزنید. شیزوکو به‌طور خودکار کد جفت‌سازی را تشخیص می‌دهد.</string>
     <string name="adb_pairing_requires_multi_window">لطفاً ابتدا وارد حالت تقسیم صفحه (چند پنجره) شوید.</string>
@@ -134,6 +135,15 @@
     <string name="settings_legacy_pairing_summary">کد جفت‌سازی را به جای اعلان، در یک کادر محاوره‌ای وارد کنید</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">ابتدا لطفا موارد زیر را انجام دهید:</string>
+    <string name="bug_report_dialog_update">بررسی کنید که از ^1 استفاده می‌کنید.</string>
+    <string name="bug_report_dialog_link_update">آخرین نسخه</string>
+    <string name="bug_report_dialog_wiki">^1 را بخوانید و تمام مراحل عیب‌یابی مربوطه را دنبال کنید.</string>
+    <string name="bug_report_dialog_link_wiki">ویکی</string>
+    <string name="bug_report_dialog_issues">برای اینکه ببینید آیا باگ شما قبلاً گزارش شده است یا خیر، تمام ^1 را جستجو کنید.</string>
+    <string name="bug_report_dialog_link_issues">مسائل موجود</string>
+    <string name="bug_report_dialog_method">اگر حساب کاربری دارید، لطفاً مشکل خود را در ^1 مطرح کنید.</string>
+    <string name="bug_report_dialog_method_2">در غیر این صورت، می‌توانید ایمیل ارسال کنید.</string>
+    <string name="bug_report_dialog_button_email">ایمیل</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">پورت باید بین ۱ تا ۶۵۵۳۵ باشد</string>
     <string name="snackbar_battery_optimization_home">برای اینکه شروع به کار در هنگام بوت/واچ‌داگ به درستی انجام شود، باید بهینه‌سازی باتری غیرفعال باشد.</string>
@@ -199,6 +209,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">خاموش کردن هشدارها</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">نمی توان مرورگر را راه اندازی کرد</string>
+    <string name="toast_copied_to_clipboard">در کلیپ بورد کپی شد</string>
     <string name="accessibility_service_description">پشتیبانی از جفت‌سازی را برای دستگاه‌هایی (مثلاً تلویزیون‌های دارای اندروید ۱۴+) که در آن‌ها نمی‌توان از اعلان‌ها یا تقسیم صفحه استفاده کرد، فراهم می‌کند.\n\nبه Shizuku این امکان را می‌دهد که کد جفت‌سازی را از صفحه جفت‌سازی اشکال‌زدایی بی‌سیم استخراج کند. پس از یافتن کد جفت‌سازی، خود را غیرفعال می‌کند.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s از شیزوکوی جدید پشتیبانی نمی کند</string>
