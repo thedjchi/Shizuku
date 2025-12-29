@@ -143,15 +143,6 @@
     <string name="settings_legacy_pairing_summary">Zadejte párovací kód do dialogu místo oznámení</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Nejprve prosím proveďte následující:</string>
-    <string name="bug_report_dialog_update">Zkontrolujte, zda používáte nejnovější verzi Shizuku.</string>
-    <string name="bug_report_dialog_button_update">Zobrazit nejnovější vydání</string>
-    <string name="bug_report_dialog_wiki">Přečtěte si wiki a postupujte podle všech příslušných kroků pro řešení problémů.</string>
-    <string name="bug_report_dialog_button_wiki">Zobrazit wiki</string>
-    <string name="bug_report_dialog_issues">Prohledejte všechny existující problémy a zjistěte, zda vaše chyba/funkce již byla nahlášena.</string>
-    <string name="bug_report_dialog_button_issues">Zobrazit problémy</string>
-    <string name="bug_report_dialog_method">Pokud máte účet, odešlete prosím problém na GitHub.\n\nPřípadně můžete poslat e-mail.</string>
-    <string name="bug_report_dialog_button_email">Odeslat e-mail</string>
-    <string name="bug_report_dialog_button_github">Přejít na %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Port musí být mezi 1 a 65535</string>
     <string name="snackbar_battery_optimization_home">Optimalizace baterie musí být vypnutá, aby start při startu/watchdogu fungoval správně.</string>
@@ -217,9 +208,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Vypnout upozornění</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Prohlížeč nelze spustit</string>
-    <string name="toast_copied_to_clipboard">%s
-\nbyl zkopírován do schránky.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> byl zkopírován do schránky.]]></string>
     <string name="accessibility_service_description">Podporuje párování zařízení (např. televizorů s Androidem 14+), kde nelze používat oznámení nebo rozdělenou obrazovku.\n\nUmožňuje Shizuku extrahovat párovací kód z obrazovky pro ladění bezdrátového ladění. Jakmile najdete párovací kód, deaktivuje se.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s nepodporuje moderní Shizuku</string>
