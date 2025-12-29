@@ -34,6 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, pour activer le débogage sans fil, la connexion à un ordinateur est requise.</string>
     <string name="dialog_usb_debugging_not_enabled">Le débogage USB n’est pas activé.\nVeuillez l’activer dans « Options développeur ».</string>
     <string name="dialog_adb_pairing_message">Veuillez commencer le jumelage en suivant les étapes suivantes :\n- Accédez aux « Options pour les développeurs »\n- Activez le « Débogage USB » et le « Débogage sans fil »\n- Appuyez sur le côté gauche de « Débogage sans fil »\n- Appuyez sur « Jumeler l\'appareil avec le code de jumelage »\n- Saisissez le code de jumelage affiché dans la notification</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Sur Android 14, l\'installation ou la mise à jour de Shizuku via le gestionnaire de paquets révoque l\'autorisation ^1, nécessaire à l\'activation du service d\'accessibilité pour le jumelage.\n\nPour l\'accorder, exécutez la commande ADB suivante :\n\n^2\n\nUne fois la commande exécutée, vous pouvez poursuivre le processus de jumelage.\n\nRemarque : vous pouvez contourner cette restriction en installant ou en mettant à jour Shizuku via ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Veuillez activer le service d’accessibilité pour lancer le processus d’appairage. Cela permet à Shizuku de détecter le code d’appairage.\n\nLe service d’accessibilité sera désactivé dès que le code sera trouvé ou après 1 minute pour économiser de l’énergie.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Veuillez commencer le jumelage en suivant les étapes suivantes :\n- Accédez à « Options pour les développeurs »\n- Activez « Débogage USB » et « Débogage sans fil »\n- Appuyez sur le côté gauche de « Débogage sans fil »\n- Appuyez sur « Jumeler l’appareil avec le code de jumelage ». Shizuku détectera automatiquement le code de jumelage.</string>
     <string name="adb_pairing_requires_multi_window">Merci d\'activer le mode écran partagé (mode multi-fenêtres) d\'abord.</string>
@@ -138,6 +139,15 @@
     <string name="settings_legacy_pairing_summary">Saisissez le code d’appairement dans une boîte de dialogue au lieu d’une notification</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Veuillez tout d\'abord procéder comme suit :</string>
+    <string name="bug_report_dialog_update">Vérifiez que vous utilisez bien ^1.</string>
+    <string name="bug_report_dialog_link_update">dernière version</string>
+    <string name="bug_report_dialog_wiki">Lisez le ^1 et suivez toutes les étapes de dépannage pertinentes.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Parcourez tous les ^1 pour voir si votre bogue a déjà été signalé.</string>
+    <string name="bug_report_dialog_link_issues">problèmes existants</string>
+    <string name="bug_report_dialog_method">Veuillez signaler le problème sur ^1 si vous avez un compte.</string>
+    <string name="bug_report_dialog_method_2">Sinon, vous pouvez envoyer un courriel.</string>
+    <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Le port doit être compris entre 1 et 65535</string>
     <string name="snackbar_battery_optimization_home">L’optimisation de la batterie doit être désactivée pour que le démarrage au démarrage/watchdog fonctionne correctement.</string>
@@ -203,6 +213,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Désactivez les alertes</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossible de lancer le navigateur</string>
+    <string name="toast_copied_to_clipboard">Copié dans le presse-papiers</string>
     <string name="accessibility_service_description">Offre un support de l’appairage pour les appareils (par exemple, les téléviseurs sous Android 14+) où les notifications ou l’écran partagé ne peuvent pas être utilisés.\n\nPermet à Shizuku d’extraire le code d’appairage de l’écran de débogage sans fil. Il se désactivera lui-même une fois le code d’appariement trouvé.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ne supporte pas les versions plus récentes de Shizuku</string>
