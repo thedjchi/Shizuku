@@ -37,6 +37,7 @@
 \nหมายเหตุ หาก Android เป็นรุ่นที่เก่ากว่า 11 การจะเปิดการแก้ไขข้อบกพร่องผ่าน Wi-Fi จำเป็นต้องมีการเชื่อมต่อกับคอมพิวเตอร์</string>
     <string name="dialog_usb_debugging_not_enabled">การดีบัก USB ไม่ได้เปิดใช้งาน\nโปรดเปิดใช้งานใน \"ตัวเลือกสำหรับนักพัฒนา\"</string>
     <string name="dialog_adb_pairing_message">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้:\n- ไปที่ \"ตัวเลือกสำหรับนักพัฒนา\"\n- เปิดใช้งาน \"การแก้จุดบกพร่อง USB\" และ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะด้านซ้ายของ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะ \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\"\n- ป้อนรหัสจับคู่ในข้อความแจ้งเตือน</string>
+    <string name="dialog_adb_pairing_accessibility_permission">ใน Android 14 การติดตั้ง/อัปเดต Shizuku ด้วย Package Installer จะเพิกถอนสิทธิ์ ^1 ซึ่งจำเป็นสำหรับการเปิดใช้งานบริการการเข้าถึงสำหรับการจับคู่\n\nหากต้องการให้สิทธิ์นั้น ให้เรียกใช้คำสั่ง ADB ต่อไปนี้:\n\n^2\n\nหลังจากเรียกใช้คำสั่งแล้ว คุณสามารถดำเนินการจับคู่ต่อได้\n\nหมายเหตุ: คุณสามารถข้ามขั้นตอนนี้ได้โดยการติดตั้ง/อัปเดต Shizuku ด้วย ADB</string>
     <string name="dialog_adb_pairing_accessibility_enable">กรุณาเปิดใช้งานบริการการเข้าถึงเพื่อเริ่มขั้นตอนการจับคู่ ซึ่งจะทำให้ Shizuku สามารถตรวจจับรหัสการจับคู่ได้\n\nบริการการเข้าถึงจะถูกปิดเมื่อพบรหัส หรือหลังจาก 1 นาที เพื่อประหยัดพลังงาน</string>
     <string name="dialog_adb_pairing_accessibility_navigate">กรุณาเริ่มจับคู่โดยดำเนินการตามขั้นตอนต่อไปนี้:\n- ไปที่ \"ตัวเลือกสำหรับนักพัฒนา\"\n- เปิดใช้งาน \"การแก้จุดบกพร่อง USB\" และ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะด้านซ้ายของ \"การแก้จุดบกพร่องแบบไร้สาย\"\n- แตะ \"จับคู่อุปกรณ์ด้วยรหัสจับคู่\" Shizuku จะตรวจจับรหัสจับคู่โดยอัตโนมัติ</string>
     <string name="adb_pairing_requires_multi_window">โปรดเข้าสู่โหมดแยกหน้าจอ (หลายหน้าต่าง) ก่อน</string>
@@ -140,6 +141,15 @@
     <string name="settings_legacy_pairing_summary">ป้อนรหัสการจับคู่ในกล่องโต้ตอบแทนการแจ้งเตือน</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">ขั้นแรก โปรดทำตามขั้นตอนต่อไปนี้:</string>
+    <string name="bug_report_dialog_update">ตรวจสอบให้แน่ใจว่าคุณใช้ ^1</string>
+    <string name="bug_report_dialog_link_update">เวอร์ชั่นล่าสุด</string>
+    <string name="bug_report_dialog_wiki">อ่าน ^1 และทำตามขั้นตอนการแก้ไขปัญหาที่เกี่ยวข้องทั้งหมด</string>
+    <string name="bug_report_dialog_link_wiki">วิกิ</string>
+    <string name="bug_report_dialog_issues">ค้นหาผ่าน ^1 ทั้งหมดเพื่อดูว่ามีรายงานข้อผิดพลาดของคุณแล้วหรือไม่</string>
+    <string name="bug_report_dialog_link_issues">ปัญหาที่มีอยู่</string>
+    <string name="bug_report_dialog_method">หากคุณมีบัญชี โปรดแจ้งปัญหาผ่านทาง ^1</string>
+    <string name="bug_report_dialog_method_2">หรืออีกวิธีหนึ่ง คุณสามารถส่งอีเมลได้</string>
+    <string name="bug_report_dialog_button_email">อีเมล</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">พอร์ตต้องอยู่ระหว่าง 1 ถึง 65535</string>
     <string name="snackbar_battery_optimization_home">จะต้องปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อให้เริ่มทำงานเมื่อบูตเครื่อง/เฝ้าระวังเพื่อให้ทำงานได้อย่างถูกต้อง</string>
@@ -205,6 +215,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">ปิดการแจ้งเตือน</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ไม่สามารถเปิดบราวเซอร์</string>
+    <string name="toast_copied_to_clipboard">คัดลอกไปยังคลิปบอร์ดแล้ว</string>
     <string name="accessibility_service_description">รองรับการจับคู่อุปกรณ์ (เช่น ทีวีที่ใช้ Android 14 ขึ้นไป) ที่ไม่สามารถแสดงการแจ้งเตือนหรือแบ่งหน้าจอได้\n\nช่วยให้ Shizuku สามารถดึงรหัสการจับคู่จากหน้าจอการจับคู่เพื่อแก้ไขข้อบกพร่องแบบไร้สายได้ ระบบจะปิดตัวเองเมื่อพบรหัสการจับคู่</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ไม่รองรับ Shizuku รุ่นใหม่</string>
