@@ -140,15 +140,6 @@
     <string name="settings_legacy_pairing_summary">알림 대신 대화 상자에 페어링 코드를 입력하세요.</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">먼저 다음 사항을 수행해 주십시오.</string>
-    <string name="bug_report_dialog_update">Shizuku의 최신 버전을 사용하고 있는지 확인하십시오.</string>
-    <string name="bug_report_dialog_button_update">최신 릴리스 보기</string>
-    <string name="bug_report_dialog_wiki">위키를 읽고 관련된 모든 문제 해결 단계를 따르십시오.</string>
-    <string name="bug_report_dialog_button_wiki">위키 보기</string>
-    <string name="bug_report_dialog_issues">기존 이슈들을 모두 검색하여 버그/기능이 이미 보고되었는지 확인하세요.</string>
-    <string name="bug_report_dialog_button_issues">문제 보기</string>
-    <string name="bug_report_dialog_method">GitHub 계정이 있으시면 GitHub에 이슈를 제출해 주세요.\n\n그렇지 않으면 이메일을 보내주세요.</string>
-    <string name="bug_report_dialog_button_email">이메일 보내기</string>
-    <string name="bug_report_dialog_button_github">%1$s로 이동하세요</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">포트는 1~65535 사이여야 합니다.</string>
     <string name="snackbar_battery_optimization_home">부팅/워치독 시작 시 배터리 최적화를 비활성화해야 제대로 작동합니다.</string>
@@ -214,9 +205,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">알림 끄기</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">브라우저를 실행할 수 없음</string>
-    <string name="toast_copied_to_clipboard">%s
-\n클립보드로 복사됨.</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b>가 클립보드로 복사되었습니다.]]></string>
     <string name="accessibility_service_description">알림이나 분할 화면을 사용할 수 없는 기기(예: Android 14 이상을 실행하는 TV)에 대한 페어링 지원을 제공합니다.\n\nShizuku가 무선 디버깅 페어링 화면에서 페어링 코드를 추출할 수 있도록 합니다. 페어링 코드를 찾으면 Shizuku가 자동으로 비활성화됩니다.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s는 최신 Shizuku를 지원하지 않음</string>
