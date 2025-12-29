@@ -34,6 +34,7 @@
     <string name="dialog_wireless_adb_not_enabled">Langaton virheenkorjaus ei ole käytössä.\nHuomaa, että ennen Android 11:tä, langattoman virheenkorjauksen mahdollistamiseksi tietokoneyhteys oli välttämätön.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-virheenkorjaus ei ole käytössä.\nOta se käyttöön kohdassa \"Kehittäjäasetukset\".</string>
     <string name="dialog_adb_pairing_message">Aloita pariliitos suorittamalla seuraavat vaiheet:\n- Siirry kohtaan \"Kehittäjäasetukset\"\n- Ota käyttöön \"USB-virheenkorjaus\" ja \"Langaton virheenkorjaus\"\n- Napauta \"Langaton virheenkorjaus\" -kohdan vasenta puolta\n- Napauta \"Yhdistä laite pariliitoskoodilla\"\n- Syötä pariliitoskoodi ilmoitukseen</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14:ssä Shizukun asentaminen/päivittäminen pakettiasentajalla peruuttaa ^1-käyttöoikeuden, jota tarvitaan pariliitoksen esteettömyyspalvelun käyttöönottoon.\n\nMyöntääksesi käyttöoikeuden, suorita seuraava ADB-komento:\n\n^2\n\nKomennon suorittamisen jälkeen voit jatkaa pariliitoksen muodostamista.\n\nHuomautus: voit ohittaa tämän asentamalla/päivittämällä Shizukun ADB:llä.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Ole hyvä ja ota saavutettavuuspalvelu käyttöön aloittaaksesi paritusprosessin. Tämä mahdollistaa Shizukun tunnistaa parituskoodin.\n\nEsteettömyyspalvelu kytketään pois päältä, kun koodi löytyy, tai minuutin kuluttua energian säästämiseksi.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Aloita pariliitos suorittamalla seuraavat vaiheet:\n- Siirry kohtaan \"Kehittäjäasetukset\"\n- Ota käyttöön \"USB-virheenkorjaus\" ja \"Langaton virheenkorjaus\"\n- Napauta \"Langaton virheenkorjaus\" -kohdan vasenta puolta\n- Napauta \"Yhdistä laite pariliitoskoodilla\". Shizuku tunnistaa pariliitoskoodin automaattisesti.</string>
     <string name="adb_pairing_requires_multi_window">Siirry ensin jaetun ruudun (moniikkuna) tilaan.</string>
@@ -134,6 +135,15 @@
     <string name="settings_legacy_pairing_summary">Syötä parituskoodi dialogiin ilmoituksen sijaan</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Tee ensin seuraavat toimenpiteet:</string>
+    <string name="bug_report_dialog_update">Tarkista, että käytät ^1-merkkiä.</string>
+    <string name="bug_report_dialog_link_update">uusin versio</string>
+    <string name="bug_report_dialog_wiki">Lue ^1 ja noudata kaikkia asiaankuuluvia vianetsintävaiheita.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Hae kaikista ^1 nähdäksesi, onko virheestäsi jo ilmoitettu.</string>
+    <string name="bug_report_dialog_link_issues">olemassa olevat ongelmat</string>
+    <string name="bug_report_dialog_method">Lähetä ongelma osoitteeseen ^1, jos sinulla on tili.</string>
+    <string name="bug_report_dialog_method_2">Muussa tapauksessa voit lähettää sähköpostia.</string>
+    <string name="bug_report_dialog_button_email">Sähköposti</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Portin tulee olla välillä 1–65535</string>
     <string name="snackbar_battery_optimization_home">Akun optimointi täytyy olla pois päältä, jotta käynnistys käynnistyksellä/watchdogilla toimisi kunnolla.</string>
@@ -199,6 +209,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Sammuta hälytykset</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Selainta ei voi käynnistää</string>
+    <string name="toast_copied_to_clipboard">Kopioitu leikepöydälle</string>
     <string name="accessibility_service_description">Tarjoaa paritustuen laitteille (esim. Android 14+ -televisioille), joissa ilmoituksia tai jaettua näyttöä ei voi käyttää.\n\nMahdollistaa Shizukun poimia parituskoodin langattoman debuggauksen paritusnäytöltä. Se poistuu käytöstä, kun parituskoodi löytyy.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ei tue nykyaikaista Shizukua</string>
