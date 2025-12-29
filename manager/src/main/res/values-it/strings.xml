@@ -37,6 +37,7 @@
 \nNota, per versioni precedenti ad Android 11, per abilitare il debug wireless, è necessaria la connessione al computer.</string>
     <string name="dialog_usb_debugging_not_enabled">Il debug USB non è abilitato.\nAbilitalo in \"Opzioni sviluppatore\".</string>
     <string name="dialog_adb_pairing_message">Per iniziare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\"\n- Inserisci il codice di associazione nella notifica</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Su Android 14, l\'installazione/aggiornamento di Shizuku con Package Installer revoca l\'autorizzazione ^1, necessaria per abilitare il servizio di accessibilità per l\'associazione.\n\nPer concederla, esegui il seguente comando ADB:\n\n^2\n\nDopo aver eseguito il comando, puoi continuare con il processo di associazione.\n\nNota: puoi aggirare questo problema installando/aggiornando Shizuku con ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Abilita il servizio di accessibilità per avviare il processo di associazione. Questo permetterà a Shizuku di rilevare il codice di associazione.\n\nIl servizio di accessibilità verrà disattivato quando il codice verrà trovato o dopo 1 minuto per risparmiare energia.</string>
     <string name="dialog_adb_pairing_accessibility_navigate">Per avviare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\". Shizuku rileverà automaticamente il codice di associazione.</string>
     <string name="adb_pairing_requires_multi_window">Entra prima nella modalità schermo diviso (multi-finestra).</string>
@@ -141,6 +142,15 @@
     <string name="settings_legacy_pairing_summary">Inserisci il codice di associazione in una finestra di dialogo anziché in una notifica</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Per prima cosa, procedi come segue:</string>
+    <string name="bug_report_dialog_update">Verificare di utilizzare ^1.</string>
+    <string name="bug_report_dialog_link_update">ultima versione</string>
+    <string name="bug_report_dialog_wiki">Leggere ^1 e seguire tutti i passaggi pertinenti per la risoluzione dei problemi.</string>
+    <string name="bug_report_dialog_link_wiki">wiki</string>
+    <string name="bug_report_dialog_issues">Cerca in tutti i ^1 per vedere se il tuo bug è già stato segnalato.</string>
+    <string name="bug_report_dialog_link_issues">problemi esistenti</string>
+    <string name="bug_report_dialog_method">Se hai un account, segnala un problema su ^1.</string>
+    <string name="bug_report_dialog_method_2">Altrimenti puoi inviare un\'e-mail.</string>
+    <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">La porta deve essere compresa tra 1 e 65535</string>
     <string name="snackbar_battery_optimization_home">Per far sì che l\'avvio all\'avvio/watchdog funzioni correttamente, è necessario disattivare l\'ottimizzazione della batteria.</string>
@@ -206,6 +216,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Disattiva gli avvisi</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossibile avviare il browser</string>
+    <string name="toast_copied_to_clipboard">Copiato negli appunti</string>
     <string name="accessibility_service_description">Fornisce supporto per l\'associazione per dispositivi (ad esempio, TV con Android 14+) in cui non è possibile utilizzare le notifiche o lo schermo diviso.\n\nConsente a Shizuku di estrarre il codice di associazione dalla schermata di debug wireless. Si disabiliterà automaticamente una volta trovato il codice di associazione.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s non supporta il moderno Shizuku</string>
