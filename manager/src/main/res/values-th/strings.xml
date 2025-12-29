@@ -140,15 +140,6 @@
     <string name="settings_legacy_pairing_summary">ป้อนรหัสการจับคู่ในกล่องโต้ตอบแทนการแจ้งเตือน</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">ขั้นแรก โปรดทำตามขั้นตอนต่อไปนี้:</string>
-    <string name="bug_report_dialog_update">โปรดตรวจสอบให้แน่ใจว่าคุณกำลังใช้ Shizuku เวอร์ชันล่าสุด</string>
-    <string name="bug_report_dialog_button_update">ดูเวอร์ชันล่าสุด</string>
-    <string name="bug_report_dialog_wiki">อ่านวิกิและทำตามขั้นตอนการแก้ไขปัญหาที่เกี่ยวข้องทั้งหมด</string>
-    <string name="bug_report_dialog_button_wiki">ดูวิกิ</string>
-    <string name="bug_report_dialog_issues">ตรวจสอบปัญหาที่มีอยู่ทั้งหมดเพื่อดูว่ามีรายงานข้อผิดพลาด/ฟีเจอร์ของคุณแล้วหรือไม่</string>
-    <string name="bug_report_dialog_button_issues">ดูปัญหา</string>
-    <string name="bug_report_dialog_method">หากคุณมีบัญชี GitHub โปรดแจ้งปัญหาผ่าน GitHub\n\nหรือส่งอีเมลมาก็ได้</string>
-    <string name="bug_report_dialog_button_email">ส่งอีเมล</string>
-    <string name="bug_report_dialog_button_github">ไปที่ %1$s</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">พอร์ตต้องอยู่ระหว่าง 1 ถึง 65535</string>
     <string name="snackbar_battery_optimization_home">จะต้องปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่เพื่อให้เริ่มทำงานเมื่อบูตเครื่อง/เฝ้าระวังเพื่อให้ทำงานได้อย่างถูกต้อง</string>
@@ -214,9 +205,6 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">ปิดการแจ้งเตือน</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ไม่สามารถเปิดบราวเซอร์</string>
-    <string name="toast_copied_to_clipboard">%s
-\nได้ถูกคัดลอกไปยังคลิปบอร์ด</string>
-    <string name="toast_copied_to_clipboard_with_text"><![CDATA[<b>%s</b> ได้ถูกคัดลอกไปยังคลิปบอร์ด]]></string>
     <string name="accessibility_service_description">รองรับการจับคู่อุปกรณ์ (เช่น ทีวีที่ใช้ Android 14 ขึ้นไป) ที่ไม่สามารถแสดงการแจ้งเตือนหรือแบ่งหน้าจอได้\n\nช่วยให้ Shizuku สามารถดึงรหัสการจับคู่จากหน้าจอการจับคู่เพื่อแก้ไขข้อบกพร่องแบบไร้สายได้ ระบบจะปิดตัวเองเมื่อพบรหัสการจับคู่</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ไม่รองรับ Shizuku รุ่นใหม่</string>
