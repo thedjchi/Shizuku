@@ -36,10 +36,10 @@ class StealthTutorialViewModel(application: Application) : AndroidViewModel(appl
     private val app: Application = getApplication()
     private val appContext = app.applicationContext
 
-    private fun isShizukuHidden() = false
-        // runCatching {
-        //     appContext.packageManager.getPackageInfo(ORIGINAL_PACKAGE_NAME, 0)
-        // }.isFailure
+    private fun isShizukuHidden() =
+        runCatching {
+            appContext.packageManager.getPackageInfo(ORIGINAL_PACKAGE_NAME, 0)
+        }.isFailure
 
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
