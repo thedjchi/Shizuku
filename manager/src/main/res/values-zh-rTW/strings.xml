@@ -107,8 +107,8 @@
     <string name="rish_description"><![CDATA[使用 %1$s，您可以在任何終端應用程式中執行 shell 命令。<p>點選了解更多使用方法。]]></string>
     <!-- Settings -->
     <string name="settings_title">設定</string>
-    <string name="settings_behavior">態度</string>
-    <string name="settings_start_on_boot">開機時開始</string>
+    <string name="settings_behavior">行為</string>
+    <string name="settings_start_on_boot">開機時啟動</string>
     <string name="settings_start_on_boot_summary">需要 Android 11+ 或 root 權限</string>
     <string name="settings_start_on_boot_bug">由於 Android 11-12 的一個錯誤，無線除錯無法記住任何授權網路。\n\n每次重啟時，當授權對話框跳出時，點擊「允許」重新授權網路。</string>
     <string name="settings_use_system_color">使用系統主題色彩</string>
@@ -132,11 +132,11 @@
     <string name="settings_user_interface">外觀</string>
     <string name="settings_black_night_theme">黑色夜間主題</string>
     <string name="settings_black_night_theme_summary">夜間模式啟用時使用純黑色主題</string>
-    <string name="settings_support">撐</string>
-    <string name="settings_help">助</string>
+    <string name="settings_support">支援</string>
+    <string name="settings_help">幫助</string>
     <string name="settings_report_bug">回報錯誤</string>
     <string name="settings_advanced">進階</string>
-    <string name="settings_legacy_pairing">傳承配對</string>
+    <string name="settings_legacy_pairing">傳統配對</string>
     <string name="settings_legacy_pairing_summary">請在對話框中輸入配對代碼，而非通知</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">首先，請執行以下操作：</string>
@@ -153,22 +153,22 @@
     <string name="snackbar_invalid_port">端口必須介於1到65535之間</string>
     <string name="snackbar_battery_optimization_home">啟動時啟動或看門狗的啟動功能必須關閉電池優化。</string>
     <string name="snackbar_battery_optimization_settings">請關閉電池優化以使用此功能。</string>
-    <string name="snackbar_action_fix">定</string>
+    <string name="snackbar_action_fix">修正</string>
     <!-- Toast -->
     <string name="toast_no_email_app">找不到電子郵件應用程式</string>
-    <string name="toast_shizuku_already_starting">雫已經在後面開始了</string>
+    <string name="toast_shizuku_already_starting">雫已在背景啟動了</string>
     <string name="toast_accessibility_tv_only">此服務僅支援電視設備。</string>
     <string name="toast_accessibility_timed_out">雫配對服務逾時。</string>
     <!-- Dark Mode Setting Override -->
-    <string name="dark_theme">題</string>
-    <string name="dark_theme_off">永遠輕盈</string>
-    <string name="dark_theme_on">永遠黑暗</string>
+    <string name="dark_theme">主題</string>
+    <string name="dark_theme_off">始終使用淺色主題</string>
+    <string name="dark_theme_on">始終使用深色主題</string>
     <!-- About -->
     <string name="action_about">關於</string>
-    <string name="about_dialog_button_close">近</string>
+    <string name="about_dialog_button_close">關閉</string>
     <string name="about_view_source_code"><![CDATA[在 %s 檢視原始碼]]></string>
     <!-- Start -->
-    <string name="action_start">開始雫</string>
+    <string name="action_start">開始 Shizuku</string>
     <!-- Stop -->
     <string name="action_stop">停止 Shizuku</string>
     <string name="dialog_stop_message">Shizuku 服務將被停止。</string>
