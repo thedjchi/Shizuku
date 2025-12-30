@@ -105,6 +105,9 @@
             android:label="@string/home_stealth_title"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".stealth.StealthPatcherActivity"
+            android:label="@string/home_stealth_title" />
+        <activity
             android:name=".settings.SettingsActivity"
             android:exported="false"
             android:label="@string/settings_title">

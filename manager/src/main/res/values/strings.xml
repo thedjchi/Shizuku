@@ -130,7 +130,7 @@
     <string name="stealth_warning_compatibility_2">As a workaround, you can temporarily unhide Shizuku, which re-installs the original version without uninstalling the clone. Then, make the required changes and re-hide Shizuku.</string>
     <string name="stealth_warning_compatibility_3">Tap this card to copy a code snippet you can send to the developer so their \"Shizuku installed\" check will work when Shizuku is hidden.</string>
     <string name="stealth_warning_detection">Some apps may still be able to detect Shizuku even when hidden.</string>
-    <string name="stealth_info_title">Important information</string>
+    <string name="stealth_info_reconfigure">You will need to re-pair and re-configure Shizuku after hiding/unhiding.</string>
     <string name="stealth_info_rish">Rish users: re-export the files before hiding Shizuku for the first time.</string>
     <string name="stealth_info_intents">Intent users: update your intents with the new package name after hiding/unhiding Shizuku.</string>
     <string name="stealth_package_name">Package name (optional)</string>
