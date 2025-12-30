@@ -54,7 +54,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/stealth_warning_compatibility"
                         android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnErrorContainer" />
+                        android:textColor="?colorOnErrorContainer"
+                        android:textStyle="bold" />
 
                     <TextView
                         style="@style/TerminalTutorialText"
@@ -100,7 +101,8 @@
                     android:duplicateParentState="true"
                     android:text="@string/stealth_warning_detection"
                     android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnErrorContainer" />
+                    android:textColor="?colorOnErrorContainer"
+                    android:textStyle="bold" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -127,15 +129,16 @@
                         style="@style/TerminalTutorialText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/stealth_info_title"
-                        android:textAppearance="?textAppearanceTitleMedium"
-                        android:textColor="?colorOnSecondaryContainer" />
+                        android:text="@string/stealth_info_reconfigure"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnSecondaryContainer"
+                        android:textStyle="bold" />
 
                     <TextView
                         style="@style/TerminalTutorialText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="16dp"
                         android:text="@string/stealth_info_rish"
                         android:textAppearance="?textAppearanceBodyMedium"
                         android:textColor="?colorOnSecondaryContainer" />

@@ -1,6 +1,7 @@
 package moe.shizuku.manager.stealth
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -23,10 +24,12 @@ import rikka.core.util.ClipboardUtils
 class StealthTutorialActivity : AppBarActivity() {
     private val viewModel: StealthTutorialViewModel by viewModels()
 
+    private lateinit var binding: StealthTutorialActivityBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = StealthTutorialActivityBinding.inflate(layoutInflater, rootView, true)
+        binding = StealthTutorialActivityBinding.inflate(layoutInflater, rootView, true)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
             window.navigationBarColor = Color.TRANSPARENT
@@ -43,7 +46,7 @@ class StealthTutorialActivity : AppBarActivity() {
 
                 when (state) {
                     UiState.Hide -> {
-                        fab.setOnClickListener { viewModel.onHide() }
+                        fab.setOnClickListener { startPatcherActivity() }
                         packageNameLayout.helperText = getString(R.string.stealth_package_name_helper_text)
                     }
 
@@ -55,7 +58,7 @@ class StealthTutorialActivity : AppBarActivity() {
 
             packageNameEditText.apply {
                 addTextChangedListener { text ->
-                    val input = text?.toString().orEmpty()
+                    val input = text.toString()
 
                     packageNameLayout.error =
                         input.validatePackageName()?.let { getString(it) }
@@ -75,11 +78,11 @@ class StealthTutorialActivity : AppBarActivity() {
 
             unhideTemp.setOnClickListener {
                 fab.isChecked = false
-                viewModel.onUnhide(temporary = true)
+                startPatcherActivity(uninstallAfter = false)
             }
             unhidePerm.setOnClickListener {
                 fab.isChecked = false
-                viewModel.onUnhide(temporary = false)
+                startPatcherActivity()
             }
 
             compatibilityCard.setOnClickListener { v: View ->
@@ -95,19 +98,22 @@ class StealthTutorialActivity : AppBarActivity() {
         }
     }
 
+    private fun startPatcherActivity(uninstallAfter: Boolean = true) {
+        val packageName = binding.packageNameEditText.text.toString()                                
+        val intent = Intent(this, StealthPatcherActivity::class.java).apply {
+            if (!packageName.isEmpty()) putExtra("package_name", packageName)
+            putExtra("uninstall_after", uninstallAfter)
+        }
+        startActivity(intent)
+    }
+
     private fun MaterialButton.updateIcon(state: UiState) {
         val iconRes =
             when (state) {
-                UiState.Hide -> {
-                    R.drawable.ic_visibility_off_filled_24
-                }
-
+                UiState.Hide -> R.drawable.ic_visibility_off_filled_24
                 UiState.Unhide -> {
-                    if (isChecked) {
-                        R.drawable.ic_close_24
-                    } else {
-                        R.drawable.ic_visibility_on_filled_24
-                    }
+                    if (isChecked) R.drawable.ic_close_24
+                    else R.drawable.ic_visibility_on_filled_24
                 }
             }
         setIconResource(iconRes)

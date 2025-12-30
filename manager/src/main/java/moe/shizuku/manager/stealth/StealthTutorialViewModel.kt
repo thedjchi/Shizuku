@@ -48,12 +48,4 @@ class StealthTutorialViewModel(application: Application) : AndroidViewModel(appl
         _uiState.value =
             if (isShizukuHidden()) UiState.Unhide else UiState.Hide
     }
-
-    fun onHide() {
-        // TO-DO: START PATCHER ACTIVITY
-    }
-
-    fun onUnhide(temporary: Boolean) {
-        // TO-DO: START PATCHER ACTIVITY
-    }
 }
