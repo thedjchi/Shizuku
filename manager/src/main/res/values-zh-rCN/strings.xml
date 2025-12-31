@@ -110,7 +110,7 @@
     <string name="settings_start_on_boot_bug">由于Android 11-12中的一个漏洞，无线调试不会记住任何授权网络。\n\n每次重启时，当授权对话框弹出时，点击“允许”重新授权网络。</string>
     <string name="settings_use_system_color">使用系统主题颜色</string>
     <string name="settings_watchdog">Watchdog</string>
-    <string name="settings_watchdog_summary">如果 Shizuku 崩溃，则自动重启。</string>
+    <string name="settings_watchdog_summary">如果 Shizuku 崩溃，则自动重启</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"允许 Shizuku 在没有 Wi-Fi 的情况下重启。（Shizuku 必须在重启后启动过一次）"</string>
     <string name="settings_tcp_mode_dialog_close_port">"TCP端口将立即关闭。您需要连接Wi-Fi才能重新启用TCP模式。是否继续？"</string>
@@ -195,8 +195,8 @@
     <string name="starter">启动程序</string>
     <string name="start_with_root_failed">未授予 root 权限或是该设备没有 root，因此无法启动服务。</string>
     <!-- WADB Starter -->
-    <string name="wadb_notification_title">正在启动 Shizuku...</string>
-    <string name="wadb_notification_wifi_required">正在等待 Wi-Fi 连接，连接成功后才能继续。</string>
+    <string name="wadb_notification_title">正在启动 Shizuku…</string>
+    <string name="wadb_notification_wifi_required">正在等待 Wi-Fi 连接，连接成功后才能继续</string>
     <string name="wadb_notification_wifi_found">已找到Wi-Fi，正在继续</string>
     <string name="wadb_error_title">在系统启动时启动出现错误</string>
     <string name="wadb_error_notify_dev">点击通知开发者。</string>
