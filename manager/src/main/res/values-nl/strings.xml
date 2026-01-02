@@ -5,7 +5,7 @@
     <string name="home_status_service_is_running">%1$s is actief</string>
     <string name="home_status_service_not_running">%1$s is niet actief</string>
     <string name="home_status_service_version">Versie %2$s, %1$s</string>
-    <string name="home_status_service_version_update"><![CDATA[Versie %2$s, %1$s<br>Opnieuw beginnen om de versie bij te werken %3$s]]></string>
+    <string name="home_status_service_version_update"><![CDATA[Versie %2$s, %1$s<br>Start opnieuw om te updaten naar versie %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Begin door verbinden met een computer]]></string>
     <string name="home_adb_description"><![CDATA[Voor apparaten zonder root moet je adb gebruiken om Shizuku te starten (vereist computerverbinding). Dit proces moet elke keer worden herhaald wanneer het apparaat wordt herstart. <b><a href=\"%1$s\">Lees alstublieft de hulp</a></b>.]]></string>
