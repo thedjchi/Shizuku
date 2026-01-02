@@ -47,18 +47,18 @@
     <string name="development_settings">Ontwikkelaarsopties</string>
     <string name="notification_settings">Meldingsopties</string>
     <string name="adb_pairing_tutorial_title">Koppel Shizuku met je apparaat</string>
-    <string name="adb_pairing_tutorial_content_notification">Een melding van Shizuku helpt je om de koppeling te voltooien.</string>
+    <string name="adb_pairing_tutorial_content_notification">Een melding van Shizuku zal je helpen om de koppeling te voltooien.</string>
     <string name="adb_pairing_tutorial_content_steps">Ga naar \'Ontwikkelaarsopties\' en schakel \'USB-foutopsporing\' en \'Draadloze foutopsporing\' in.</string>
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Klik op de linkerkant van \'Draadloos debuggen\' en klik vervolgens op \'Apparaat koppelen met koppelingscode\'. Voer de code in de melding in om het koppelen te voltooien.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Het koppelproces vereist dat je reageert op een melding van Shizuku. Laat Shizuku alsjeblieft meldingen plaatsen.</string>
-    <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moeten mogelijk de notificatiestijl wijzigen naar \"Android\" van \"Notification\" - \"Notification shade\" in de systeeminstellingen.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Anders is het mogelijk dat u de koppelingscode uit de melding niet kunt invoeren.</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moeten mogelijk de notificatiestijl wijzigen naar \"Android\" van \"Melding\" - \"Meldingenscherm\" in de systeeminstellingen.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Anders is het mogelijk dat je de koppelingscode uit de melding niet kunt invoeren.</string>
     <string name="adb_pairing_tutorial_content_finish">Ga terug naar Shizuku en start Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku heeft toegang tot het lokale netwerk nodig. Dit wordt beheerd door de netwerkmachtiging.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige systemen (zoals MIUI) staan apps geen toegang tot het netwerk toe wanneer ze niet zichtbaar zijn, zelfs niet als de app een service op de voorgrond gebruikt. Schakel de batterijoptimalisatie voor Shizuku op dergelijke systemen uit.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige systemen (zoals MIUI) staan apps geen toegang tot het netwerk toe wanneer ze niet zichtbaar zijn, zelfs niet als de app een voorgrondservice gebruikt. Schakel de batterijoptimalisatie voor Shizuku op zulke systemen uit.</string>
     <!-- Home - Root -->
-    <string name="home_root_title"><![CDATA[Start (voor geroote apparaten)]]></string>
-    <string name="home_root_description"><![CDATA[Als u Magisk gebruikt, kunt u %1$sproberen. Voor rootgebruikers zal dit uiteindelijk Shizuku vervangen. Let op: bestaande applicaties moeten enigszins worden aangepast om %2$ste kunnen gebruiken.]]></string>
+    <string name="home_root_title"><![CDATA[Starten (voor geroote apparaten)]]></string>
+    <string name="home_root_description"><![CDATA[Als je Magisk gebruikt, kun je %1$s proberen. Voor rootgebruikers zal dit uiteindelijk Shizuku vervangen. Let op: bestaande applicaties moeten enigszins worden aangepast om %2$s te kunnen gebruiken.]]></string>
     <string name="home_root_button_start">Starten</string>
     <string name="home_root_button_restart">Herstarten</string>
     <!-- Home - Application management -->
@@ -68,25 +68,25 @@
         <item quantity="other"><![CDATA[%d applicaties geautoriseerd]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Klik om geautoriseerde apps te beheren]]></string>
-    <string name="home_app_management_empty">Apps die de Shizuku-toestemming hebben aangevraagd of verklaard, worden hier weergegeven.</string>
+    <string name="home_app_management_empty">Apps die de Shizuku-toestemming hebben aangevraagd of verklaard, zullen hier weergegeven worden.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Bestuur Shizuku met automatiseringsapps</string>
     <string name="home_automation_description"><![CDATA[Apps zoals Tasker en MacroDroid kunnen intenties verzenden om Shizuku automatisch te starten/stoppen.<p>Niet-geroote apparaten met Android 10 of lager moeten een TCP-poort openen vanaf een pc met behulp van<font face="monospace"> %1$s </font>om de startintentie te laten werken.]]></string>
     <string name="home_automation_button_view_intents">Bekijk intenties</string>
     <string name="home_automation_dialog_label_action">Actie</string>
     <string name="home_automation_dialog_label_package">Pakket</string>
-    <string name="home_automation_dialog_label_class">Klas</string>
+    <string name="home_automation_dialog_label_class">Klasse</string>
     <string name="home_automation_dialog_label_target">Doel</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Ontwikkelaarsgids</string>
     <string name="home_learn_more_description">Leer hoe je ontwikkelt met Shizuku</string>
     <!-- Home - Adb permissions limited -->
-    <string name="home_adb_is_limited_title">Je moet een extra stap zetten</string>
-    <string name="home_adb_is_limited_description">De fabrikant van je apparaat heeft ADB-rechten beperkt en apps die Shizuku gebruiken werken niet goed.\n\nMeestal kan deze beperking worden opgeheven door enkele opties in \"Ontwikkelaarsopties\" aan te passen. Lees de hulp voor details over hoe je dit kunt doen.\n\nJe moet Shizuku mogelijk opnieuw starten voordat de operatie effect kan hebben.</string>
+    <string name="home_adb_is_limited_title">Je moet een extra stap nemen</string>
+    <string name="home_adb_is_limited_description">De fabrikant van je apparaat heeft ADB-rechten beperkt en apps die Shizuku gebruiken zullen niet goed werken.\n\nMeestal kan deze beperking worden opgeheven door enkele opties in \"Ontwikkelaarsopties\" aan te passen. Lees de hulp voor details over hoe je dit kunt doen.\n\nJe moet Shizuku mogelijk opnieuw starten voordat de wijziging effect neemt.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">De toestemming voor adb is beperkt</string>
-    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Het is zeer goed mogelijk dat de fabrikant van je apparaat de toestemming van adb beperkt.<p>Er kan een oplossing zijn voor jouw systeem in <b><a href=\"%1$s\">Dit document</a></b>.]]></string>
-    <string name="app_management_item_summary_requires_root">* vereist dat Shizuku met root loopt</string>
+    <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Het is zeer goed mogelijk dat de fabrikant van je apparaat de toestemming van adb beperkt.<p>Er kan een oplossing voor jouw systeem zijn in <b><a href=\"%1$s\">dit document</a></b>.]]></string>
+    <string name="app_management_item_summary_requires_root">* vereist dat Shizuku met root wordt uitgevoerd</string>
     <string name="app_management_toggle_all">Alles (de)selecteren</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gebruik Shizuku in terminalapps</string>
@@ -96,8 +96,8 @@
     <string name="terminal_tutorial_1">Exporteer de bestanden naar een nieuwe map.</string>
     <string name="terminal_tutorial_1_description">Er worden twee bestanden geëxporteerd: %1$s en %2$s. Als de bestanden al in de geselecteerde map staan, worden ze verwijderd.</string>
     <string name="terminal_export_files">Bestanden exporteren</string>
-    <string name="terminal_tutorial_2">Gebruik uw terminal-app om de bestanden naar de persoonlijke bestandsmap te kopiëren.</string>
-    <string name="terminal_tutorial_2_description">Tip: Als de thuismap (~) van uw terminal-app zich in de map met persoonlijke bestanden bevindt, kunt u door de bestanden daarin te plaatsen %1$s uitvoeren zonder het pad te hoeven schrijven.\n\nAnders kunt u een alias voor %2$s maken in het configuratiebestand %3$s van uw terminal-app.</string>
+    <string name="terminal_tutorial_2">Gebruik je terminal-app om de bestanden naar de bijbehorende privébestandenmap te kopiëren.</string>
+    <string name="terminal_tutorial_2_description">Tip: Als de thuismap (~) van je terminal-app zich in de map met privébestanden bevindt, kun je de bestanden daar plaatsen zodat je %1$s kunt uitvoeren zonder het pad te hoeven schrijven.\n\nAnders kun je een alias voor %2$s aanmaken in het configuratiebestand van je terminal-app %3$s.</string>
     <string name="terminal_tutorial_3">Open een shell met de volgende opdracht:</string>
     <string name="rish_description"><![CDATA[Met %1$s kun je shell-opdrachten uitvoeren in elke terminal-app.<p>Klik om meer te weten te komen over het gebruik ervan.]]></string>
     <!-- Settings -->
@@ -107,7 +107,7 @@
     <string name="settings_start_on_boot_summary">Vereist Android 11+ of root</string>
     <string name="settings_start_on_boot_bug">Dankzij een bug in Android 11-12 onthoudt draadloos foutopsporing geen geautoriseerde netwerken.\n\nU moet het netwerk bij elke herstart opnieuw autoriseren door op \"Toestaan\" te klikken wanneer het autorisatiedialoogvenster verschijnt.</string>
     <string name="settings_use_system_color">Gebruik systeemthemakleur</string>
-    <string name="settings_watchdog">Waakhond</string>
+    <string name="settings_watchdog">Bewaker</string>
     <string name="settings_watchdog_summary">Shizuku automatisch opnieuw opstarten als het vastloopt</string>
     <string name="settings_tcp_mode">TCP-modus</string>
     <string name="settings_tcp_mode_summary">"Staat Shizuku toe om te herstarten zonder Wi-Fi. (Shizuku moet sinds het herstarten al begonnen zijn)"</string>
