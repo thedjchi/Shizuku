@@ -9,27 +9,27 @@
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[Begin door verbinden met een computer]]></string>
     <string name="home_adb_description"><![CDATA[Voor apparaten zonder root moet je adb gebruiken om Shizuku te starten (vereist computerverbinding). Dit proces moet elke keer worden herhaald wanneer het apparaat wordt herstart. <b><a href=\"%1$s\">Lees alstublieft de hulp</a></b>.]]></string>
-    <string name="home_adb_button_view_help">Lees hulp</string>
-    <string name="home_adb_button_view_command">View-commando</string>
+    <string name="home_adb_button_view_help">Help-informatie lezen</string>
+    <string name="home_adb_button_view_command">Opdracht bekijken</string>
     <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Er zijn nog enkele andere overwegingen, bevestig alstublieft dat u de hulp eerst heeft gelezen.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Kopiëren</string>
     <string name="home_adb_dialog_view_command_button_send">Verzenden</string>
     <!-- Home - Wireless Adb -->
-    <string name="home_wireless_adb_title"><![CDATA[Begin via draadloos debuggen]]></string>
+    <string name="home_wireless_adb_title"><![CDATA[Starten via draadloze foutopsporing]]></string>
     <string name="home_wireless_adb_description"><![CDATA[Op Android 11 of hoger kun je draadloos debuggen inschakelen en Shizuku direct vanaf je apparaat starten, zonder verbinding te maken met een computer.<p>Bekijk eerst de stapsgewijze handleiding.]]></string>
     <string name="home_wireless_adb_description_pre_11"><![CDATA[Voor Android 11 of lager is verbinding maken met een computer vereist om draadloze debugging in te schakelen.]]></string>
     <string name="home_wireless_adb_view_guide_button">Stapsgewijze handleiding</string>
     <!-- Adb -->
-    <string name="dialog_adb_discovery">Zoeken naar draadloze debugdienst</string>
+    <string name="dialog_adb_discovery">Zoeken naar draadloze foutopsporingsservice</string>
     <string name="dialog_adb_discovery_message">Schakel alstublieft \"Draadloos debuggen\" in, in \"Ontwikkelaarsopties\". \"Draadloos debuggen\" wordt automatisch uitgeschakeld wanneer het netwerk verandert.\n\nLet op, schakel \"Ontwikkelaarsopties\" of \"USB-debugging\" niet uit, anders wordt Shizuku gestopt.</string>
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Probeer alsjeblieft \"Draadloos debuggen\" uit te schakelen en in te schakelen als het blijft zoeken.</string>
     <string name="dialog_adb_port">Poort</string>
     <string name="dialog_adb_invalid_port">Poort is een geheel getal dat varieert van 1 tot 65535.</string>
     <string name="adb_pairing">Koppelen</string>
-    <string name="dialog_adb_pairing_title">Koppel met apparaat</string>
+    <string name="dialog_adb_pairing_title">Koppelen met apparaat</string>
     <string name="dialog_adb_pairing_discovery">Zoeken naar koppelingsdienst</string>
     <string name="dialog_adb_pairing_paring_code">Koppelingscode</string>
-    <string name="paring_code_is_wrong">Code koppelen is incorrect.</string>
+    <string name="paring_code_is_wrong">Koppelingscode is verkeerd.</string>
     <string name="cannot_connect_port">Kan geen verbinding maken met de draadloze foutopsporingsservice.\n\nZorg ervoor dat Shizuku op de witte lijst staat in alle firewalls, adblockers, VPN\'s of vergelijkbare apps die de netwerktoegang kunnen beperken.</string>
     <string name="dialog_wireless_adb_not_enabled">Draadloos debuggen is niet ingeschakeld.\nLet op: Vóór Android 11 is een computerverbinding noodzakelijk om draadloos debuggen mogelijk te maken.</string>
     <string name="dialog_usb_debugging_not_enabled">USB-debugging is niet ingeschakeld.\nSchakel het alstublieft in in \"Ontwikkelaarsopties\".</string>
