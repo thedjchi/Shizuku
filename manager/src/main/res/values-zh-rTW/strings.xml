@@ -8,7 +8,7 @@
     <string name="home_status_service_version_update"><![CDATA[版本 %2$s，%1$s<br>再次啟動來升級到版本 %3$s]]></string>
     <!-- Home - Adb -->
     <string name="home_adb_title"><![CDATA[透過與電腦連線來啟動 (使用 ADB)]]></string>
-    <string name="home_adb_description"><![CDATA[沒有 Root 的裝置需藉助 ADB 來啟動 Shizuku (須與電腦連線)。在裝置每次重新啟動後，這項作業皆須重新進行。請<b><a href="%1$s">閱讀說明</a></b>。]]></string>
+    <string name="home_adb_description"><![CDATA[沒有 Root 的裝置需藉助 ADB 來啟動 Shizuku (須與電腦連線)。在裝置每次重新啟動後，這項作業皆須重新進行。請<b><a href=\"%1$s\">閱讀說明</a></b>。]]></string>
     <string name="home_adb_button_view_help">閱讀說明</string>
     <string name="home_adb_button_view_command">檢視命令</string>
     <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* 還有一些其他注意事項，請確認你已閱讀說明。]]></string>
@@ -55,8 +55,8 @@
     <string name="adb_pairing_tutorial_content_notification_blocked">配對過程需要您與 Shizuku 的通知互動。請允許 Shizuku 發布通知。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 使用者可能需要在系統設定中從「通知管理」-「通知顯示設定」將通知樣式切換為「原生樣式」。</string>
     <string name="adb_pairing_tutorial_content_miui_2">否則，您可能無法輸入通知中的配對碼。</string>
-    <string name="adb_pairing_tutorial_content_finish">回到雫並開始雫。</string>
-    <string name="adb_pairing_tutorial_content_network">雫需要存取本地網路。這受網路權限控制。</string>
+    <string name="adb_pairing_tutorial_content_finish">回到 Shizuku 並開始 Shizuku。</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku 需要存取本地網路。這受網路權限控制。</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系統（例如 MIUI）會禁止應用在不可見時存取網絡，即使該應用程式使用了前台服務。請在這些系統上為 Shizuku 關閉電池優化功能。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[啟動 (針對已 Root 裝置)]]></string>
