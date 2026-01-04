@@ -203,7 +203,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Pornirea lui Shizuku…</string>
     <string name="wadb_notification_wifi_required">Se așteaptă conexiunea Wi-Fi înainte de a continua</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi găsit. Se continuă</string>
     <string name="wadb_error_title">Eroare la pornire la bootare</string>
     <string name="wadb_error_notify_dev">Atingeți pentru a notifica dezvoltatorul.</string>
     <string name="wadb_permission_error_notification_title">Eroare de permisiune</string>
