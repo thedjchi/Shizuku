@@ -202,7 +202,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Começar Shizuku…</string>
     <string name="wadb_notification_wifi_required">Aguarda ligação Wi-Fi antes de prosseguir.</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi encontrado. Prosseguindo.</string>
+    <string name="wadb_notification_retry">Aguarda para tentar novamente.</string>
     <string name="wadb_error_title">Erro ao iniciar o sistema.</string>
     <string name="wadb_error_notify_dev">Toque para notificar o programador.</string>
     <string name="wadb_permission_error_notification_title">Erro de permissão</string>

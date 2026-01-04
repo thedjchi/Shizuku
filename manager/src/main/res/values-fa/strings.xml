@@ -195,7 +195,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">شروع شیزوکو…</string>
     <string name="wadb_notification_wifi_required">قبل از ادامه، منتظر اتصال Wi-Fi هستم</string>
-    <string name="wadb_notification_wifi_found">وای‌فای پیدا شد. ادامه دارد</string>
+    <string name="wadb_notification_retry">منتظر تلاش مجدد هستم</string>
     <string name="wadb_error_title">خطا هنگام شروع بوت</string>
     <string name="wadb_error_notify_dev">برای اطلاع به توسعه‌دهنده، ضربه بزنید.</string>
     <string name="wadb_permission_error_notification_title">خطای مجوز</string>

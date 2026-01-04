@@ -199,7 +199,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Почетак игре Шизуку…</string>
     <string name="wadb_notification_wifi_required">Чека се Wi-Fi веза пре него што се настави</string>
-    <string name="wadb_notification_wifi_found">Пронађен је Wi-Fi. Наставља се.</string>
+    <string name="wadb_notification_retry">Чекање на поновни покушај</string>
     <string name="wadb_error_title">Грешка при покретању система</string>
     <string name="wadb_error_notify_dev">Додирните да бисте обавестили програмера.</string>
     <string name="wadb_permission_error_notification_title">Грешка дозволе</string>

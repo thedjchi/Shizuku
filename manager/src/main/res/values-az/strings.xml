@@ -198,7 +198,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Shizuku-nun başlanğıcı…</string>
     <string name="wadb_notification_wifi_required">Davam etməzdən əvvəl Wi-Fi bağlantısını gözləyirəm</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi tapıldı. Davam</string>
+    <string name="wadb_notification_retry">Yenidən cəhd gözlənilir</string>
     <string name="wadb_error_title">Yükləmə zamanı xəta</string>
     <string name="wadb_error_notify_dev">İnkişafıçıya xəbər vermək üçün toxunun.</string>
     <string name="wadb_permission_error_notification_title">İcazə xətası</string>

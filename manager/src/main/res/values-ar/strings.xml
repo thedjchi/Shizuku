@@ -206,7 +206,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">بداية شيزوكو…</string>
     <string name="wadb_notification_wifi_required">في انتظار اتصال Wi-Fi قبل المتابعة</string>
-    <string name="wadb_notification_wifi_found">تم العثور على شبكة واي فاي. جاري المتابعة</string>
+    <string name="wadb_notification_retry">في انتظار إعادة المحاولة</string>
     <string name="wadb_error_title">حدث خطأ أثناء بدء التشغيل</string>
     <string name="wadb_error_notify_dev">انقر هنا لإعلام المطور.</string>
     <string name="wadb_permission_error_notification_title">خطأ في الإذن</string>

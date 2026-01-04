@@ -198,7 +198,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Սկիզբ Շիզուկու…</string>
     <string name="wadb_notification_wifi_required">Սպասում ենք Wi-Fi կապին նախքան շարունակելը</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi գտնվել է։ Ընթացք</string>
+    <string name="wadb_notification_retry">Սպասում եմ կրկնության</string>
     <string name="wadb_error_title">Սխալ boot-ից սկսելիս</string>
     <string name="wadb_error_notify_dev">Սեղմեք մշակողին ծանուցելու համար:</string>
     <string name="wadb_permission_error_notification_title">Թույլտվության սխալ</string>

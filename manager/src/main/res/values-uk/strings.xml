@@ -204,7 +204,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Початок гри «Шідзуку»…</string>
     <string name="wadb_notification_wifi_required">Очікування підключення до Wi-Fi перед продовженням</string>
-    <string name="wadb_notification_wifi_found">Знайдено Wi-Fi. Триває.</string>
+    <string name="wadb_notification_retry">Очікування повторної спроби</string>
     <string name="wadb_error_title">Помилка під час запуску при завантаженні</string>
     <string name="wadb_error_notify_dev">Натисніть, щоб повідомити розробника.</string>
     <string name="wadb_permission_error_notification_title">Помилка дозволу</string>
