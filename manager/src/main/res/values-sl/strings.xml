@@ -200,6 +200,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Začetek Šizukuja…</string>
     <string name="wadb_notification_wifi_required">Čakanje na Wi-Fi povezavo, preden nadaljujem</string>
+    <string name="wadb_notification_retry">Čakanje na ponovni poskus</string>
     <string name="wadb_error_title">Napaka ob zagonu zagona</string>
     <string name="wadb_error_notify_dev">Tapnite, da obvestite razvijalca.</string>
     <string name="wadb_permission_error_notification_title">Napaka pri dovoljenju</string>
