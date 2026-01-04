@@ -197,7 +197,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Uruchamianie Shizuku…</string>
     <string name="wadb_notification_wifi_required">Oczekiwanie na połączenie Wi-Fi przed kontynuowaniem</string>
-    <string name="wadb_notification_wifi_found">Wykryto Wi-Fi. Kontynuowanie</string>
     <string name="wadb_error_title">Błąd podczas uruchamiania przy starcie systemu</string>
     <string name="wadb_error_notify_dev">Dotknij, aby powiadomić programistę.</string>
     <string name="wadb_permission_error_notification_title">Błąd uprawnień</string>
