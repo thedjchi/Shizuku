@@ -195,6 +195,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">შიზუკუს დაწყება…</string>
     <string name="wadb_notification_wifi_required">გაგრძელებამდე Wi-Fi კავშირის მოლოდინი</string>
+    <string name="wadb_notification_retry">ველოდები ხელახლა ცდას</string>
     <string name="wadb_error_title">შეცდომა ჩატვირთვისას</string>
     <string name="wadb_error_notify_dev">შეეხეთ დეველოპერის შესატყობინებლად.</string>
     <string name="wadb_permission_error_notification_title">ნებართვის შეცდომა</string>
