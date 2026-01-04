@@ -11,6 +11,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.database.ContentObserver
 import android.net.Uri
+import android.os.Build
 import android.provider.Settings
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.asFlow
@@ -32,6 +33,8 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbMdns
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
+import moe.shizuku.manager.receiver.ShizukuReceiverStarter.WorkerState
+import moe.shizuku.manager.receiver.ShizukuReceiverStarter.updateNotification
 import moe.shizuku.manager.settings.BugReportDialogActivity
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
@@ -40,12 +43,10 @@ import moe.shizuku.manager.utils.ShizukuStateMachine
 class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
     override suspend fun doWork(): Result {
         try {
-            if (EnvironmentUtils.isWifiRequired()) {
-                ShizukuReceiverStarter.showNotification(
-                    applicationContext,
-                    applicationContext.getString(R.string.wadb_notification_wifi_found)
-                )
-            }
+            updateNotification(
+                applicationContext,
+                WorkerState.RUNNING
+            )
 
             val cr = applicationContext.contentResolver
 
@@ -80,7 +81,7 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     if (km.isKeyguardLocked) {
                         val notification = ShizukuReceiverStarter.buildNotification(
                             applicationContext,
-                            applicationContext.getString(R.string.wadb_notification_wifi_found)
+                            null
                         )
                         val foregroundInfo = ForegroundInfo(
                             ShizukuReceiverStarter.NOTIFICATION_ID,
@@ -134,14 +135,33 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
 
             return Result.success()
         } catch (e: CancellationException) {
-            return Result.failure()
+            val state = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
+                WorkerState.AWAITING_RETRY
+            } else {
+                when (stopReason) {
+                    WorkInfo.STOP_REASON_CONSTRAINT_CONNECTIVITY -> WorkerState.AWAITING_WIFI
+                    WorkInfo.STOP_REASON_CANCELLED_BY_APP -> WorkerState.STOPPED
+                    else -> WorkerState.AWAITING_RETRY
+                }
+            }
+            updateNotification(applicationContext, state)
+
+            throw e
         } catch (e: Exception) {
-            if (e !is EOFException && e !is SecurityException) showErrorNotification(applicationContext, e)
+            val ignored = listOf(
+                EOFException::class,
+                SecurityException::class,
+                TimeoutException::class
+            )
+            if (ignored.none { it.isInstance(e) }) showErrorNotification(applicationContext, e)
 
             if (ShizukuStateMachine.update() == ShizukuStateMachine.State.RUNNING) {
                 return Result.success()
             } else {
-                ShizukuReceiverStarter.showNotification(applicationContext)
+                updateNotification(
+                    applicationContext,
+                    WorkerState.AWAITING_RETRY
+                )
                 return Result.retry()
             }
         }

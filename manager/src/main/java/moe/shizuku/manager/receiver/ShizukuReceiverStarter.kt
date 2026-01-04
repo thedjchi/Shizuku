@@ -30,6 +30,13 @@ object ShizukuReceiverStarter {
     const val NOTIFICATION_ID = 1447
     private const val CHANNEL_ID = "AdbStartWorker"
 
+    enum class WorkerState {
+        AWAITING_WIFI,
+        AWAITING_RETRY,
+        RUNNING,
+        STOPPED
+    }
+
     fun start(context: Context, forceStart: Boolean = false) {
         if ((UserHandleCompat.myUserId() > 0 || ShizukuStateMachine.isRunning()) && !forceStart) return
 
@@ -39,7 +46,7 @@ object ShizukuReceiverStarter {
             && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
                 if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
                     AdbStartWorker.enqueue(context)
-                    showNotification(context)
+                    updateNotification(context, WorkerState.AWAITING_WIFI)
                 } else {
                     showPermissionErrorNotification(context)
                 }
@@ -79,11 +86,7 @@ object ShizukuReceiverStarter {
 
         val nb = NotificationCompat.Builder(context, CHANNEL_ID)
         
-        if (msg != null) {
-            nb.setContentText(msg)
-        } else if (EnvironmentUtils.isWifiRequired()) {
-            nb.setContentText(context.getString(R.string.wadb_notification_wifi_required))
-        }
+        if (msg != null) nb.setContentText(msg)
 
         return nb
             .setSmallIcon(R.drawable.ic_system_icon)
@@ -97,7 +100,14 @@ object ShizukuReceiverStarter {
             .build()
     }
 
-    fun showNotification(context: Context, msg: String? = null) {
+    fun updateNotification(context: Context, state: WorkerState) {
+        if (state == WorkerState.STOPPED) return
+        val msgId = when (state) {
+            WorkerState.AWAITING_WIFI -> R.string.wadb_notification_wifi_required
+            WorkerState.AWAITING_RETRY -> R.string.wadb_notification_retry
+            else -> null
+        }
+        val msg = if (msgId != null) context.getString(msgId) else null
         val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         nm.notify(NOTIFICATION_ID, buildNotification(context, msg))
     }

@@ -6,6 +6,9 @@ import android.content.Intent
 
 class NotifRestoreReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        ShizukuReceiverStarter.showNotification(context)
+        ShizukuReceiverStarter.updateNotification(
+            context,
+            ShizukuReceiverStarter.WorkerState.RUNNING
+        )
     }
 }
