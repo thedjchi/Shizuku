@@ -195,6 +195,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">ஷிசுகுவைத் தொடங்குதல்…</string>
     <string name="wadb_notification_wifi_required">தொடர்வதற்கு முன் Wi-Fi இணைப்புக்காகக் காத்திருக்கிறது</string>
+    <string name="wadb_notification_retry">மீண்டும் முயற்சிக்கக் காத்திருக்கிறது</string>
     <string name="wadb_error_title">துவக்கத்தில் தொடங்கும் போது பிழை</string>
     <string name="wadb_error_notify_dev">டெவலப்பருக்குத் தெரிவிக்க தட்டவும்.</string>
     <string name="wadb_permission_error_notification_title">அனுமதி பிழை</string>
