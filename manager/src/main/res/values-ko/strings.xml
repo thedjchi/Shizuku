@@ -201,7 +201,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">시즈쿠 시작…</string>
     <string name="wadb_notification_wifi_required">진행하기 전에 Wi-Fi 연결을 기다리는 중</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi를 찾았습니다. 계속 진행 중</string>
     <string name="wadb_error_title">부팅 시 시작 중 오류 발생</string>
     <string name="wadb_error_notify_dev">개발자에게 알리려면 탭하세요.</string>
     <string name="wadb_permission_error_notification_title">권한 오류</string>
