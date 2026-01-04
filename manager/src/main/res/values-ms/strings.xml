@@ -194,6 +194,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Memulakan Shizuku…</string>
     <string name="wadb_notification_wifi_required">Menunggu sambungan Wi-Fi sebelum meneruskan</string>
+    <string name="wadb_notification_retry">Menunggu untuk mencuba semula</string>
     <string name="wadb_error_title">Ralat semasa memulakan but</string>
     <string name="wadb_error_notify_dev">Ketik untuk memberitahu pembangun.</string>
     <string name="wadb_permission_error_notification_title">Ralat Kebenaran</string>
