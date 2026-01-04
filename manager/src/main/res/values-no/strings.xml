@@ -195,6 +195,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Starter Shizuku…</string>
     <string name="wadb_notification_wifi_required">Venter på Wi-Fi-tilkobling før jeg fortsetter</string>
+    <string name="wadb_notification_retry">Venter på å prøve på nytt</string>
     <string name="wadb_error_title">Feil ved oppstart ved oppstart</string>
     <string name="wadb_error_notify_dev">Trykk for å varsle utvikleren.</string>
     <string name="wadb_permission_error_notification_title">Tillatelsesfeil</string>
