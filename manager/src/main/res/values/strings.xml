@@ -89,7 +89,7 @@
 
     <!-- Home - Stealth mode -->
     <string name="home_stealth_title">Hide Shizuku from other apps</string>
-    <string name="home_stealth_description">Note: Enabling this feature may cause apps that rely on Shizuku to stop functioning correctly.\n\nAlso, some apps may still be able to detect Shizuku even when hidden.</string>
+    <string name="home_stealth_description">Note: Enabling this feature may cause apps that rely on Shizuku to stop functioning correctly.</string>
 
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Developer guide</string>
@@ -127,12 +127,13 @@
 
     <!-- Stealth -->
     <string name="stealth_warning_compatibility">Some apps that use Shizuku may not work when Shizuku is hidden because they try to detect if Shizuku is installed.</string>
-    <string name="stealth_warning_compatibility_2">As a workaround, you can temporarily unhide Shizuku, which re-installs the original version without uninstalling the clone. Then, make the required changes and re-hide Shizuku.</string>
+    <string name="stealth_warning_compatibility_2">As a workaround, you can temporarily unhide Shizuku, which installs a stub with the original package name. Then, make the required changes and re-hide Shizuku.</string>
     <string name="stealth_warning_compatibility_3">Tap this card to copy a code snippet you can send to the developer so their \"Shizuku installed\" check will work when Shizuku is hidden.</string>
     <string name="stealth_warning_detection">Some apps may still be able to detect Shizuku even when hidden.</string>
-    <string name="stealth_info_reconfigure">You will need to re-pair and re-configure Shizuku after hiding/unhiding.</string>
+    <string name="stealth_info_reconfigure">You will need to re-pair and re-configure Shizuku after hiding.</string>
     <string name="stealth_info_rish">Rish users: re-export the files before hiding Shizuku for the first time.</string>
-    <string name="stealth_info_intents">Intent users: update your intents with the new package name after hiding/unhiding Shizuku.</string>
+    <string name="stealth_info_intents">Intent users: update your intents with the new package name.</string>
+    <string name="stealth_info_update">You must update Shizuku through the app when using the hidden version because it has a different signature.</string>
     <string name="stealth_package_name">Package name (optional)</string>
     <string name="stealth_package_name_helper_text">If left empty, a random suffix will be added to the package name.</string>
     <string name="stealth_error_ends_with_period">Package name cannot end with a period.</string>
