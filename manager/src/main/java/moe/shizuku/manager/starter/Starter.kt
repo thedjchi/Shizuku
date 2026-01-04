@@ -23,14 +23,14 @@ object Starter {
 
     suspend fun waitForBinder(log: ((String) -> Unit)? = null) {
         try {
-            log?.invoke("\nWaiting for service...")
-            withTimeout(10_000) {
+            log?.invoke("\nWaiting for service. This may take up to 1 minute...")
+            withTimeout(60_000) {
                 ShizukuStateMachine.asFlow()
                     .first { it == ShizukuStateMachine.State.RUNNING }
             }
             log?.invoke(serviceStartedMessage)
         } catch (e: TimeoutCancellationException) {
-            throw TimeoutException("Failed to receive binder within 10 seconds")
+            throw TimeoutException("Failed to receive binder within 1 minute")
         }
     }
 
