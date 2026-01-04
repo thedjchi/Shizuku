@@ -202,6 +202,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Pagsisimula ng Shizuku…</string>
     <string name="wadb_notification_wifi_required">Maghintay ng koneksyon sa Wi-Fi bago magpatuloy</string>
+    <string name="wadb_notification_retry">Naghihintay na subukan muli</string>
     <string name="wadb_error_title">Error habang nagsisimula sa boot</string>
     <string name="wadb_error_notify_dev">I-tap upang ipaalam sa developer.</string>
     <string name="wadb_permission_error_notification_title">Error sa Pahintulot</string>
