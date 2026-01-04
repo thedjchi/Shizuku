@@ -201,7 +201,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">เริ่มต้นชิซึกุ…</string>
     <string name="wadb_notification_wifi_required">รอการเชื่อมต่อ Wi-Fi ก่อนดำเนินการต่อ</string>
-    <string name="wadb_notification_wifi_found">พบ Wi-Fi แล้ว กำลังดำเนินการต่อไป</string>
     <string name="wadb_error_title">เกิดข้อผิดพลาดขณะเริ่มต้นระบบ</string>
     <string name="wadb_error_notify_dev">แตะเพื่อแจ้งให้ผู้พัฒนาทราบ</string>
     <string name="wadb_permission_error_notification_title">ข้อผิดพลาดในการอนุญาต</string>
