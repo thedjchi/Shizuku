@@ -204,7 +204,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Начиная с Сидзуку…</string>
     <string name="wadb_notification_wifi_required">Ожидание подключения Wi-Fi перед продолжением</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi найден. Продолжаем.</string>
     <string name="wadb_error_title">Ошибка при запуске загрузки</string>
     <string name="wadb_error_notify_dev">Нажмите, чтобы уведомить разработчика.</string>
     <string name="wadb_permission_error_notification_title">Ошибка разрешения</string>
