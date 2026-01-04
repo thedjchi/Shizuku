@@ -195,7 +195,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Startar Shizuku…</string>
     <string name="wadb_notification_wifi_required">Väntar på Wi-Fi-anslutning innan jag fortsätter</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi hittades. Fortsätter</string>
     <string name="wadb_error_title">Fel vid uppstart</string>
     <string name="wadb_error_notify_dev">Tryck för att meddela utvecklaren.</string>
     <string name="wadb_permission_error_notification_title">Behörighetsfel</string>
