@@ -195,6 +195,7 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Begin Shizuku…</string>
     <string name="wadb_notification_wifi_required">Wag tans vir Wi-Fi-verbinding voordat voortgegaan word</string>
+    <string name="wadb_notification_retry">Wag om weer te probeer</string>
     <string name="wadb_error_title">Fout tydens opstart</string>
     <string name="wadb_error_notify_dev">Tik om die ontwikkelaar in kennis te stel.</string>
     <string name="wadb_permission_error_notification_title">Toestemmingsfout</string>
