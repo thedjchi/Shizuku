@@ -195,7 +195,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Shizuku starten…</string>
     <string name="wadb_notification_wifi_required">Wacht op Wi-Fi-verbinding voordat ik verder ga</string>
-    <string name="wadb_notification_wifi_found">Wi-Fi gevonden. Procedure</string>
     <string name="wadb_error_title">Fout bij het opstarten bij het opstarten</string>
     <string name="wadb_error_notify_dev">Klik om de ontwikkelaar te informeren.</string>
     <string name="wadb_permission_error_notification_title">Toestemmingsfout</string>
