@@ -195,7 +195,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Έναρξη Σιζούκου…</string>
     <string name="wadb_notification_wifi_required">Αναμονή σύνδεσης Wi-Fi πριν προχωρήσετε</string>
-    <string name="wadb_notification_wifi_found">Βρέθηκε Wi-Fi. Ενέργεια</string>
     <string name="wadb_error_title">Σφάλμα κατά την εκκίνηση κατά την εκκίνηση</string>
     <string name="wadb_error_notify_dev">Πατήστε για να ειδοποιήσετε τον προγραμματιστή.</string>
     <string name="wadb_permission_error_notification_title">Σφάλμα άδειας</string>
