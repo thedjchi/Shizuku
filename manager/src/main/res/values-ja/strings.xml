@@ -201,7 +201,6 @@
     <!-- WADB Starter -->
     <string name="wadb_notification_title">雫を起動します…</string>
     <string name="wadb_notification_wifi_required">続行する前にWi-Fi接続を待機しています</string>
-    <string name="wadb_notification_wifi_found">Wi-Fiが見つかりました。続行します</string>
     <string name="wadb_error_title">起動時にエラーが発生しました</string>
     <string name="wadb_error_notify_dev">タップして開発者に通知します。</string>
     <string name="wadb_permission_error_notification_title">権限エラー</string>
