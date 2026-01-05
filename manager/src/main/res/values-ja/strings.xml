@@ -132,7 +132,7 @@
     <string name="settings_translation_summary">%sをあなたの言語に翻訳するのを手伝ってください</string>
     <string name="settings_user_interface">外観</string>
     <string name="settings_black_night_theme">AMOLEDダークモード</string>
-    <string name="settings_black_night_theme_summary">ナイトモードが有効な場合、黒色のテーマを使用します</string>
+    <string name="settings_black_night_theme_summary">ダークテーマが有効な場合、黒色のテーマを使用します</string>
     <string name="settings_support">サポート</string>
     <string name="settings_help">ヘルプ</string>
     <string name="settings_report_bug">バグを報告する</string>
