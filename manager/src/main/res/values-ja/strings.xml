@@ -112,7 +112,7 @@
     <string name="settings_start_on_boot">起動時にスタート</string>
     <string name="settings_start_on_boot_summary">Android 11以降またはルート権限が必要です</string>
     <string name="settings_start_on_boot_bug">Android 11-12のバグにより、無線デバッグは認可されたネットワークを記憶しません。\n\n再開のたびに、認証ダイアログが表示されたら「許可」をタップしてネットワークを再認証する必要があります。</string>
-    <string name="settings_use_system_color">Material You</string>
+    <string name="settings_use_system_color">ダイナミック カラー</string>
     <string name="settings_watchdog">ウォッチドッグ</string>
     <string name="settings_watchdog_summary">Shizukuがクラッシュした場合に自動的に再起動する</string>
     <string name="settings_tcp_mode">TCPモード</string>
