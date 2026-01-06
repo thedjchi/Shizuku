@@ -159,7 +159,7 @@ public class BinderSender {
                     granted = ActivityManagerApis.checkPermission(PERMISSION_MANAGER, pid, uid) == PackageManager.PERMISSION_GRANTED;
 
                 if (granted) {
-                    ShizukuService.sendBinderToManger(sShizukuService, userId);
+                    ShizukuService.sendBinderToManager(sShizukuService, userId);
                     return;
                 }
             } else if (ArraysKt.contains(pi.requestedPermissions, PERMISSION)) {
