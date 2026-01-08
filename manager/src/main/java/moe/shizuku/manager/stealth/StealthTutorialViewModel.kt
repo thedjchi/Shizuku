@@ -9,26 +9,37 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import moe.shizuku.manager.R
-import moe.shizuku.manager.utils.ApkUtils.changePackageName
-import moe.shizuku.manager.utils.ApkUtils.workDir
+import moe.shizuku.manager.utils.ApkUtils.*
 import java.io.File
 
 const val ORIGINAL_PACKAGE_NAME = "moe.shizuku.privileged.api"
 
 sealed class UiState {
     data class Idle(
-        val isShizukuHidden: Boolean,
+        val action: Action,
     ) : UiState()
 
     object Loading : UiState()
 
     data class Success(
-        val apk: File
+        val apk: File,
+        val apkType: ApkType
     ) : UiState()
 
     data class Error(
         val error: Exception,
     ) : UiState()
+}
+
+enum class Action {
+    HIDE,
+    UNHIDE,
+    REHIDE
+}
+
+enum class ApkType {
+    CLONE,
+    STUB
 }
 
 class StealthTutorialViewModel(
@@ -37,7 +48,7 @@ class StealthTutorialViewModel(
     private val app: Application = getApplication()
     private val appContext = app.applicationContext
 
-    private val _uiState = MutableLiveData<UiState>(UiState.Idle(false))
+    private val _uiState = MutableLiveData<UiState>(UiState.Idle(Action.HIDE))
     val uiState: LiveData<UiState> = _uiState
 
     private var _packageName: String? = null
@@ -48,30 +59,38 @@ class StealthTutorialViewModel(
         }.isFailure
 
     init {
-        _uiState.value = UiState.Idle(isShizukuHidden())
+        val action =
+            if (isShizukuHidden()) Action.UNHIDE
+            else if (app.packageName == ORIGINAL_PACKAGE_NAME) Action.HIDE
+            else Action.REHIDE
+        _uiState.value = UiState.Idle(action)
     }
 
     fun setPackageName(packageName: String? = null) {
         _packageName = packageName ?: app.packageName.appendRandomSuffix()
     }
 
-    fun createClone() {
+    fun createApk(apkType: ApkType) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 _uiState.postValue(UiState.Loading)
 
-                val apk = File(app.applicationInfo.sourceDir)
-                val newApk = apk.changePackageName(_packageName!!)
+                val apk =
+                    when (apkType) {
+                        ApkType.CLONE -> {
+                            val base = File(app.applicationInfo.sourceDir)
+                            base.changePackageName(_packageName!!)
+                        }
+                        ApkType.STUB -> createStubApk(ORIGINAL_PACKAGE_NAME)
+                    }
 
-                _uiState.postValue(UiState.Success(newApk))
+                _uiState.postValue(UiState.Success(apk, apkType))
             } catch (e: Exception) {
                 _uiState.postValue(UiState.Error(e))
                 Log.e("StealthTutorialViewModel", "Error changing package name", e)
             }
         }
     }
-
-    // TO-DO: NEW FUNCTION TO CREATE "SHELL" PACKAGE WITH NO LAUNCHER ICON ON UNHIDE
 
     override fun onCleared() {
         super.onCleared()
