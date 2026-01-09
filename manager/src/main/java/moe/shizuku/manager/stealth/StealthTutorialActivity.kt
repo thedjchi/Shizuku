@@ -1,7 +1,6 @@
 package moe.shizuku.manager.stealth
 
 import android.content.Context
-import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
 import android.net.Uri
@@ -14,19 +13,21 @@ import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
-import androidx.core.content.FileProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat.Type
+import androidx.core.view.doOnNextLayout
+import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 import androidx.core.widget.addTextChangedListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import java.io.File
 import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.databinding.StealthTutorialActivityBinding
-import moe.shizuku.manager.utils.ApkUtils.buildApkFilename
+import moe.shizuku.manager.utils.ApkUtils.*
 import rikka.core.util.ClipboardUtils
 
 class StealthTutorialActivity : AppBarActivity() {
@@ -45,8 +46,9 @@ class StealthTutorialActivity : AppBarActivity() {
 
         with(binding) {
             viewModel.uiState.observe(this@StealthTutorialActivity) { state ->
-                fab.isVisible = state !is UiState.Loading
-                loadingFab.isVisible = state is UiState.Loading
+                val isLoadingOrPending = (state is UiState.Loading || state is UiState.Pending)
+                fab.isInvisible = isLoadingOrPending
+                loadingFab.isVisible = isLoadingOrPending
 
                 when (state) {
                     is UiState.Idle -> {
@@ -54,32 +56,31 @@ class StealthTutorialActivity : AppBarActivity() {
 
                         packageNameContainer.isVisible = (action == Action.HIDE)
                         if (packageNameContainer.isVisible) makeNavBarTransparent()
-                        ViewCompat.requestApplyInsets(root)
 
-                        fab.updateIcon(action)
+                        fab.update(action)
                         fab.setOnClickListener { onClick(action) }
                     }
 
                     is UiState.Loading -> null
 
-                    is UiState.Success -> {
+                    is UiState.Pending -> {
                         try {
                             val apk = state.apk
                             when (state.apkType) {
                                 ApkType.CLONE -> {
                                     export(apk)
+                                    viewModel.refresh()
                                     showUninstallDialog()
                                 }
 
                                 ApkType.STUB -> {
-                                    install(apk)
+                                    installPackage(apk) { status, msg -> handleInstallerResult(status, msg) }
                                 }
                             }
                         } catch (e: Exception) {
                             showErrorDialog(e)
                         }
                     }
-
                     is UiState.Error -> showErrorDialog(state.error)
                 }
             }
@@ -130,7 +131,18 @@ class StealthTutorialActivity : AppBarActivity() {
                 
                 insets
             }
+
+            root.viewTreeObserver.addOnGlobalLayoutListener {
+                scrollView.updatePadding(bottom = root.height - fab.top)
+            }
         }
+    }
+
+    override fun onDestroy() {
+        runCatching {
+            unregisterReceiver(installerReceiver)
+        }
+        super.onDestroy()
     }
 
     private fun onClick(action: Action) {
@@ -145,7 +157,7 @@ class StealthTutorialActivity : AppBarActivity() {
                 showChooseFolderDialog()
             }
             Action.UNHIDE -> viewModel.createApk(ApkType.STUB)
-            Action.REHIDE -> uninstall()
+            Action.REHIDE -> uninstallPackage(ORIGINAL_PACKAGE_NAME)  { status, msg -> handleInstallerResult(status, msg) }
         }
     }
 
@@ -179,7 +191,7 @@ class StealthTutorialActivity : AppBarActivity() {
                 contentResolver,
                 docUri,
                 "application/vnd.android.package-archive",
-                buildApkFilename(),
+                buildApkFilename()
             )
 
         if (doc == null) throw Exception("Could not create file in selected folder")
@@ -191,37 +203,32 @@ class StealthTutorialActivity : AppBarActivity() {
         }
     }
 
-    private fun install(apk: File) {
-        val apkUri = FileProvider.getUriForFile(
-            this,
-            "$packageName.fileprovider",
-            apk
-        )
-
-        val intent = Intent(Intent.ACTION_VIEW).apply {
-            setDataAndType(apkUri, "application/vnd.android.package-archive")
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        }
-
-        startActivity(intent)
-    }
-
-    private fun uninstall() {
-        val intent =
-            Intent(Intent.ACTION_DELETE).apply {
-                data = Uri.parse("package:$ORIGINAL_PACKAGE_NAME")
-            }
-        startActivity(intent)
-    }
-
     private fun showUninstallDialog() {
         MaterialAlertDialogBuilder(this)
             .setTitle("Uninstall required")
             .setMessage("The system will now prompt you to uninstall Shizuku. Then, install the clone.")
             .setPositiveButton("Uninstall") { _, _ ->
-                uninstall()
+                uninstallPackage(packageName)
             }.setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    private fun handleInstallerResult(isSuccess: Boolean, msg: String?) {
+        viewModel.refresh()
+        if (isSuccess) {
+            Toast.makeText(
+                this,
+                getString(R.string.success),
+                Toast.LENGTH_SHORT,
+            ).show()
+        } else showErrorDialog(Exception(msg ?: "Unknown error"))
+    }
+
+    private fun showSuccessDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Success")
+            .setMessage("")
+            .setPositiveButton(android.R.string.ok, null)
             .show()
     }
 
@@ -233,17 +240,21 @@ class StealthTutorialActivity : AppBarActivity() {
             .show()
     }
 
-    private fun FloatingActionButton.updateIcon(action: Action) {
-        val iconRes =
-            if (action == Action.UNHIDE) R.drawable.ic_visibility_on_filled_24
-            else R.drawable.ic_visibility_off_filled_24
-        setImageResource(iconRes)
+    private fun ExtendedFloatingActionButton.update(action: Action) {
+        if (action == Action.UNHIDE) {
+            setIconResource(R.drawable.ic_visibility_on_filled_24)
+            text = getString(R.string.stealth_unhide)
+        } else{
+            setIconResource(R.drawable.ic_visibility_off_filled_24)
+            text = getString(R.string.stealth_hide)
+        }
     }
 
     private val backCallback =
         object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (viewModel.uiState.value !is UiState.Loading) {
+                val uiState = viewModel.uiState.value
+                if (uiState is UiState.Idle || uiState is UiState.Error) {
                     finish()
                     return
                 }

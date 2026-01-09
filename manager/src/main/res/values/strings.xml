@@ -127,11 +127,11 @@
 
     <!-- Stealth -->
     <string name="stealth_warning_compatibility">Some apps that use Shizuku may not work when Shizuku is hidden because they try to detect if Shizuku is installed.</string>
-    <string name="stealth_warning_compatibility_2">As a workaround, you can temporarily unhide Shizuku, which installs a stub with the original package name. Then, make the required changes and re-hide Shizuku.</string>
+    <string name="stealth_warning_compatibility_2">As a workaround, you can temporarily unhide Shizuku, which installs a stub with the original package name. When you are finished, you can re-hide Shizuku.</string>
     <string name="stealth_warning_compatibility_3">Tap this card to copy a code snippet you can send to the developer so their \"Shizuku installed\" check will work when Shizuku is hidden.</string>
     <string name="stealth_warning_detection">Some apps may still be able to detect Shizuku even when hidden.</string>
-    <string name="stealth_info_reconfigure">You will need to re-pair and re-configure Shizuku after hiding.</string>
-    <string name="stealth_info_rish">Rish users: re-export the files before hiding Shizuku for the first time.</string>
+    <string name="stealth_info_reconfigure">You will need to re-pair and re-configure Shizuku after installing the hidden version.</string>
+    <string name="stealth_info_rish">Rish users: re-export the files after installing the hidden version.</string>
     <string name="stealth_info_intents">Intent users: update your intents with the new package name.</string>
     <string name="stealth_info_update">You must update Shizuku through the app when using the hidden version because it has a different signature.</string>
     <string name="stealth_package_name">Package name (optional)</string>
@@ -140,8 +140,8 @@
     <string name="stealth_error_invalid_characters">Only letters, numbers, and periods are allowed.</string>
     <string name="stealth_error_needs_two_segments">Package name must have at least two segments.</string>
     <string name="stealth_error_segment_starts_with_number">Segments cannot start with a number.</string>
-    <string name="stealth_menu_unhide_temporary">Temporary</string>
-    <string name="stealth_menu_unhide_permanent">Permanent</string>
+    <string name="stealth_hide">Hide</string>
+    <string name="stealth_unhide">Unhide</string>
 
     <!-- Settings -->
     <string name="settings_title">Settings</string>
@@ -268,6 +268,7 @@
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Turn Off Alerts</string>
 
     <!-- Misc -->
+    <string name="success">Success</string>
     <string name="dialog_cannot_open_browser_title">Can\'t start browser</string>
     <string name="toast_copied_to_clipboard">Copied to clipboard</string>
     <string name="accessibility_service_description">Provides pairing support for devices (e.g., TVs running Android 14+) where notifications or split screen cannot be used.\n\nEnables Shizuku to extract the pairing code from the wireless debugging pairing screen. It will disable itself once the pairing code is found.</string>
