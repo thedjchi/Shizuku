@@ -72,7 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[点按以管理授权的应用]]></string>
     <string name="home_app_management_empty">已请求或声明 Shizuku 权限的应用将显示在此处。</string>
     <!-- Home - Automation -->
-    <string name="home_automation_title">使用自动化应用程序控制Shizuku</string>
+    <string name="home_automation_title">使用自动化应用程序控制 Shizuku</string>
     <string name="home_automation_description"><![CDATA[Tasker 和 MacroDroid 等应用可以发送 Intent 来自动启动/停止 Shizuku。<p>运行 Android 10 或更低版本的未 root 设备必须使用<font face="monospace"> %1$s </font>从 PC 打开 TCP 端口，启动 Intent 才能正常工作。]]></string>
     <string name="home_automation_button_view_intents">查看意图</string>
     <string name="home_automation_dialog_label_action">动作</string>
@@ -113,14 +113,14 @@
     <string name="settings_watchdog_summary">如果 Shizuku 崩溃，则自动重启</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"允许 Shizuku 在没有 Wi-Fi 的情况下重启。（Shizuku 必须在重启后启动过一次）"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"TCP端口将立即关闭。您需要连接Wi-Fi才能重新启用TCP模式。是否继续？"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP 端口将立即关闭。您需要连接 Wi-Fi 才能重新启用 TCP 模式。是否继续？"</string>
     <string name="settings_tcp_mode_closing_port">正在关闭 TCP 端口...</string>
     <string name="settings_restart_dialog_title">需要重启</string>
     <string name="settings_restart_dialog_message">Shizuku 需要重启才能应用此设置。</string>
-    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>需要 Wi-Fi。Shizuku会在后台继续运行并等待 Wi-Fi 连接，连接成功后才会重启。</b>]]></string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>需要 Wi-Fi。Shizuku 会在后台继续运行并等待 Wi-Fi 连接，连接成功后才会重启。</b>]]></string>
     <string name="settings_tcp_port">TCP 端口</string>
     <string name="settings_tcp_port_default">默认值 (5555)</string>
-    <string name="settings_tcp_port_hint">留空则使用默认值（5555）</string>
+    <string name="settings_tcp_port_hint">留空则使用默认值(5555)</string>
     <string name="settings_tcp_learn_more">了解更多关于如何使用自动化应用程序控制 Shizuku 的信息</string>
     <string name="settings_language">语言</string>
     <string name="settings_translation_contributors">翻译贡献者</string>
