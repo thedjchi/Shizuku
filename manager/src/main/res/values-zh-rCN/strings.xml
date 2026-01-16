@@ -134,7 +134,7 @@
     <string name="settings_report_bug">报告错误</string>
     <string name="settings_advanced">高级</string>
     <string name="settings_legacy_pairing">传统配对</string>
-    <string name="settings_legacy_pairing_summary">请在对话框中输入配对码，而不是在通知中输入</string>
+    <string name="settings_legacy_pairing_summary">在对话框中输入配对码，而不是在通知中输入</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">首先，请执行以下操作：</string>
     <string name="bug_report_dialog_update">请检查您是否正在使用^1。</string>
