@@ -13,7 +13,7 @@
     <string name="home_adb_button_view_command">Lihat perintah</string>
     <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Terdapat beberapa pertimbangan tambahan, harap pastikan bahwa Anda telah membaca dokumentasi.]]></string>
     <string name="home_adb_dialog_view_command_copy_button">Salin</string>
-    <string name="home_adb_dialog_view_command_button_send">Kirim ke...</string>
+    <string name="home_adb_dialog_view_command_button_send">Kirim</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Mulai melalui Debug Nirkabel]]></string>
     <string name="home_wireless_adb_description"><![CDATA[Pada Android 11 atau yang lebih baru, Anda dapat mengaktifkan debug Nirkabel dan memulai Shizuku langsung dari perangkat Anda, tanpa menyambungkan ke komputer.<p>Silakan lihat panduan langkah demi langkah terlebih dahulu.]]></string>
