@@ -163,8 +163,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">لم يتم العثور على تطبيق البريد الإلكتروني</string>
     <string name="toast_shizuku_already_starting">شيزوكو بدأت بالفعل في الخلفية</string>
-    <string name="toast_accessibility_tv_only">هذه الخدمة مدعومة فقط على أجهزة التلفزيون.</string>
-    <string name="toast_accessibility_timed_out">انتهت مهلة خدمة إقران شيزوكو.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">سمة</string>
     <string name="dark_theme_off">دائما خفيف</string>
