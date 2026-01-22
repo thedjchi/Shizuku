@@ -151,8 +151,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Tiada apl e-mel ditemui</string>
     <string name="toast_shizuku_already_starting">Shizuku sudah bermula di latar belakang</string>
-    <string name="toast_accessibility_tv_only">Perkhidmatan ini hanya disokong pada peranti TV.</string>
-    <string name="toast_accessibility_timed_out">Perkhidmatan gandingan Shizuku tamat masa.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Sentiasa ringan</string>
