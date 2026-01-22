@@ -161,8 +161,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Поштового додатка не знайдено</string>
     <string name="toast_shizuku_already_starting">Шизуку вже починається на задньому плані</string>
-    <string name="toast_accessibility_tv_only">Ця послуга підтримується лише на телевізійних пристроях.</string>
-    <string name="toast_accessibility_timed_out">Сервіс парування Шідзуку закінчився.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Завжди легкий</string>
