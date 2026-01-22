@@ -45,10 +45,12 @@ sealed class SettingsPage(
             }
 
             override fun launch(context: Context) {
-                try {
+                runCatching {
                     context.startActivity(buildIntent(context))
-                } catch (e: ActivityNotFoundException) {
+                }.recoverCatching {
                     HighlightWirelessDebugging.launch(context)
+                }.onFailure { e ->
+                    Log.e("SettingsUtils", "Failed to start Settings activity", e)
                 }
             }
         }
@@ -93,9 +95,9 @@ sealed class SettingsPage(
     }
 
     open fun launch(context: Context) {
-        try {
+        runCatching {
             context.startActivity(buildIntent(context))
-        } catch (e: ActivityNotFoundException) {
+        }.onFailure { e ->
             Log.e("SettingsUtils", "Failed to start Settings activity", e)
         }
     }
