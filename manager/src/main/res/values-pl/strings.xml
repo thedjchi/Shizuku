@@ -154,8 +154,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nie znaleziono aplikacji pocztowej</string>
     <string name="toast_shizuku_already_starting">Shizuku już uruchamia się w tle</string>
-    <string name="toast_accessibility_tv_only">Ta usługa jest obsługiwana tylko na urządzeniach TV.</string>
-    <string name="toast_accessibility_timed_out">Upłynął limit czasu usługi parowania Shizuku.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Motyw</string>
     <string name="dark_theme_off">Zawsze jasny</string>
