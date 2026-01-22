@@ -159,8 +159,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">No se encontró ninguna aplicación de correo electrónico</string>
     <string name="toast_shizuku_already_starting">Shizuku ya está empezando en segundo plano.</string>
-    <string name="toast_accessibility_tv_only">Este servicio solo es compatible con dispositivos de televisión.</string>
-    <string name="toast_accessibility_timed_out">El servicio de emparejamiento de Shizuku se agotó.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Siempre ligero</string>
