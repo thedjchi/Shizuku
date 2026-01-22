@@ -169,8 +169,8 @@
     <!-- Toast -->
     <string name="toast_no_email_app">No email app found</string>
     <string name="toast_shizuku_already_starting">Shizuku is already starting in the background</string>
-    <string name="toast_accessibility_tv_only">This service is only supported on TV devices.</string>
-    <string name="toast_accessibility_timed_out">Shizuku pairing service timed out.</string>
+    <string name="toast_accessibility_tv_only">This service is only supported on TV devices</string>
+    <string name="toast_pairing_timeout">Shizuku pairing service timed out</string>
 
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Theme</string>

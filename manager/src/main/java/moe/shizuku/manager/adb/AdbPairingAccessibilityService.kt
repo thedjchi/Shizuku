@@ -49,7 +49,7 @@ class AdbPairingAccessibilityService : AccessibilityService() {
         startActivity(intent)
 
         handler.postDelayed({
-            Toast.makeText(this, getString(R.string.toast_accessibility_timed_out), Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.toast_pairing_timeout), Toast.LENGTH_LONG).show()
             disableSelf()
         }, 60_000)
     }

@@ -8,6 +8,7 @@ import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -120,6 +121,12 @@ class AdbPairingService : Service() {
             }
         }
         return START_REDELIVER_INTENT
+    }
+
+    override fun onTimeout(startId: Int) {
+        Toast.makeText(this, R.string.toast_pairing_timeout, Toast.LENGTH_SHORT).show()
+        stopForeground(STOP_FOREGROUND_REMOVE)
+        stopSelf()
     }
 
     private fun startSearch() {
