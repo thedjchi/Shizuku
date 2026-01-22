@@ -154,8 +154,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Không tìm thấy ứng dụng email</string>
     <string name="toast_shizuku_already_starting">Shizuku đã bắt đầu ở phía sau</string>
-    <string name="toast_accessibility_tv_only">Dịch vụ này chỉ được hỗ trợ trên các thiết bị TV.</string>
-    <string name="toast_accessibility_timed_out">Dịch vụ ghép nối Shizuku đã hết thời gian chờ.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Đề tài</string>
     <string name="dark_theme_off">Luôn nhẹ nhàng</string>
