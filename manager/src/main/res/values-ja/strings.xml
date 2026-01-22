@@ -112,7 +112,7 @@
     <string name="settings_start_on_boot">起動時にスタート</string>
     <string name="settings_start_on_boot_summary">Android 11以降またはルート権限が必要です</string>
     <string name="settings_start_on_boot_bug">Android 11-12のバグにより、無線デバッグは認可されたネットワークを記憶しません。\n\n再開のたびに、認証ダイアログが表示されたら「許可」をタップしてネットワークを再認証する必要があります。</string>
-    <string name="settings_use_system_color">システムテーマカラー</string>
+    <string name="settings_use_system_color">ダイナミック カラー</string>
     <string name="settings_watchdog">ウォッチドッグ</string>
     <string name="settings_watchdog_summary">Shizukuがクラッシュした場合に自動的に再起動する</string>
     <string name="settings_tcp_mode">TCPモード</string>
@@ -131,8 +131,8 @@
     <string name="settings_translation">翻訳作業に参加</string>
     <string name="settings_translation_summary">%sをあなたの言語に翻訳するのを手伝ってください</string>
     <string name="settings_user_interface">外観</string>
-    <string name="settings_black_night_theme">Black night テーマ</string>
-    <string name="settings_black_night_theme_summary">ナイトモードが有効な場合、黒色のテーマを使用します</string>
+    <string name="settings_black_night_theme">AMOLEDダークモード</string>
+    <string name="settings_black_night_theme_summary">ダークテーマが有効な場合、黒色のテーマを使用します</string>
     <string name="settings_support">サポート</string>
     <string name="settings_help">ヘルプ</string>
     <string name="settings_report_bug">バグを報告する</string>
@@ -162,8 +162,8 @@
     <string name="toast_accessibility_timed_out">雫のペアリングサービスがタイムアウトした。</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">テーマ</string>
-    <string name="dark_theme_off">常に軽い</string>
-    <string name="dark_theme_on">いつも暗い</string>
+    <string name="dark_theme_off">ホワイトテーマ</string>
+    <string name="dark_theme_on">ダークテーマ</string>
     <!-- About -->
     <string name="action_about">このアプリについて</string>
     <string name="about_dialog_button_close">近い</string>

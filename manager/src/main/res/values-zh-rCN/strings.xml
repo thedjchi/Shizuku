@@ -3,7 +3,7 @@
     <!-- To translators: you can leave your here -->
     <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s 正在运行</string>
-    <string name="home_status_service_not_running">%1$s未运行</string>
+    <string name="home_status_service_not_running">%1$s 未运行</string>
     <string name="home_status_service_version">版本 %2$s，%1$s</string>
     <string name="home_status_service_version_update"><![CDATA[版本 %2$s，%1$s<br>再次启动来升级到版本 %3$s]]></string>
     <!-- Home - Adb -->
@@ -56,7 +56,7 @@
     <string name="adb_pairing_tutorial_content_notification_blocked">配对过程需要您与 Shizuku 的通知交互。请允许 Shizuku 发布通知。</string>
     <string name="adb_pairing_tutorial_content_miui">MIUI 用户可能需要在系统设置中从“通知管理”-“通知显示设置”将通知样式切换为“原生样式”。</string>
     <string name="adb_pairing_tutorial_content_miui_2">否则，您可能无法输入通知中的配对码。</string>
-    <string name="adb_pairing_tutorial_content_finish">回到雫并开始雫。</string>
+    <string name="adb_pairing_tutorial_content_finish">回到 Shizuku 并启动 Shizuku。</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku 需要访问本地网络。这受网络权限控制。</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">某些系统（例如 MIUI）会禁止应用在不可见时访问网络，即使该应用使用了前台服务。请在这些系统上为 Shizuku 关闭电池优化功能。</string>
     <!-- Home - Root -->
@@ -72,7 +72,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[点按以管理授权的应用]]></string>
     <string name="home_app_management_empty">已请求或声明 Shizuku 权限的应用将显示在此处。</string>
     <!-- Home - Automation -->
-    <string name="home_automation_title">使用自动化应用程序控制Shizuku</string>
+    <string name="home_automation_title">使用自动化应用程序控制 Shizuku</string>
     <string name="home_automation_description"><![CDATA[Tasker 和 MacroDroid 等应用可以发送 Intent 来自动启动/停止 Shizuku。<p>运行 Android 10 或更低版本的未 root 设备必须使用<font face="monospace"> %1$s </font>从 PC 打开 TCP 端口，启动 Intent 才能正常工作。]]></string>
     <string name="home_automation_button_view_intents">查看意图</string>
     <string name="home_automation_dialog_label_action">动作</string>
@@ -107,20 +107,20 @@
     <string name="settings_behavior">行为</string>
     <string name="settings_start_on_boot">自启动</string>
     <string name="settings_start_on_boot_summary">需要 Android 11 或更高版本或 root 权限</string>
-    <string name="settings_start_on_boot_bug">由于Android 11-12中的一个漏洞，无线调试不会记住任何授权网络。\n\n每次重启时，当授权对话框弹出时，点击“允许”重新授权网络。</string>
+    <string name="settings_start_on_boot_bug">由于 Android 11-12 中的一个漏洞，无线调试不会记住任何授权网络。\n\n每次重启时，当授权对话框弹出时，点击“允许”重新授权网络。</string>
     <string name="settings_use_system_color">使用系统主题颜色</string>
     <string name="settings_watchdog">Watchdog</string>
     <string name="settings_watchdog_summary">如果 Shizuku 崩溃，则自动重启</string>
     <string name="settings_tcp_mode">TCP 模式</string>
     <string name="settings_tcp_mode_summary">"允许 Shizuku 在没有 Wi-Fi 的情况下重启。（Shizuku 必须在重启后启动过一次）"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"TCP端口将立即关闭。您需要连接Wi-Fi才能重新启用TCP模式。是否继续？"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP 端口将立即关闭。您需要连接 Wi-Fi 才能重新启用 TCP 模式。是否继续？"</string>
     <string name="settings_tcp_mode_closing_port">正在关闭 TCP 端口...</string>
     <string name="settings_restart_dialog_title">需要重启</string>
     <string name="settings_restart_dialog_message">Shizuku 需要重启才能应用此设置。</string>
-    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>需要 Wi-Fi。Shizuku会在后台继续运行并等待 Wi-Fi 连接，连接成功后才会重启。</b>]]></string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>需要 Wi-Fi。Shizuku 会在后台继续运行并等待 Wi-Fi 连接，连接成功后才会重启。</b>]]></string>
     <string name="settings_tcp_port">TCP 端口</string>
     <string name="settings_tcp_port_default">默认值 (5555)</string>
-    <string name="settings_tcp_port_hint">留空则使用默认值（5555）</string>
+    <string name="settings_tcp_port_hint">留空则使用默认值(5555)</string>
     <string name="settings_tcp_learn_more">了解更多关于如何使用自动化应用程序控制 Shizuku 的信息</string>
     <string name="settings_language">语言</string>
     <string name="settings_translation_contributors">翻译贡献者</string>
@@ -134,7 +134,7 @@
     <string name="settings_report_bug">报告错误</string>
     <string name="settings_advanced">高级</string>
     <string name="settings_legacy_pairing">传统配对</string>
-    <string name="settings_legacy_pairing_summary">请在对话框中输入配对码，而不是在通知中输入</string>
+    <string name="settings_legacy_pairing_summary">在对话框中输入配对码，而不是在通知中输入</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">首先，请执行以下操作：</string>
     <string name="bug_report_dialog_update">请检查您是否正在使用^1。</string>
