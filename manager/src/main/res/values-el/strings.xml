@@ -152,8 +152,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Δεν βρέθηκε εφαρμογή email</string>
     <string name="toast_shizuku_already_starting">Το Shizuku ξεκινά ήδη στο παρασκήνιο</string>
-    <string name="toast_accessibility_tv_only">Αυτή η υπηρεσία υποστηρίζεται μόνο σε συσκευές τηλεόρασης.</string>
-    <string name="toast_accessibility_timed_out">Το χρονικό όριο της υπηρεσίας σύζευξης Shizuku έληξε.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Θέμα</string>
     <string name="dark_theme_off">Πάντα ελαφρύ</string>
