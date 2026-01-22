@@ -12,8 +12,10 @@ import androidx.lifecycle.Observer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import moe.shizuku.manager.MainActivity
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
+import moe.shizuku.manager.home.HomeActivity
 import rikka.core.ktx.unsafeLazy
 import java.net.ConnectException
 
@@ -22,14 +24,16 @@ class AdbPairingService : Service() {
 
     companion object {
 
-        const val notificationChannel = "adb_pairing"
+        const val NOTIFICATION_CHANNEL = "adb_pairing"
+        const val NOTIFICATION_ID = 1
 
         private const val tag = "AdbPairingService"
 
-        private const val notificationId = 1
         private const val replyRequestId = 1
         private const val stopRequestId = 2
         private const val retryRequestId = 3
+        private const val launchRequestId = 4
+        private const val startRequestId = 5
         private const val startAction = "start"
         private const val stopAction = "stop"
         private const val replyAction = "reply"
@@ -59,7 +63,7 @@ class AdbPairingService : Service() {
         // we need to put the port into Intent
         val notification = createInputNotification(port)
 
-        getSystemService(NotificationManager::class.java).notify(notificationId, notification)
+        getSystemService(NotificationManager::class.java).notify(NOTIFICATION_ID, notification)
     }
 
     private var started = false
@@ -69,7 +73,7 @@ class AdbPairingService : Service() {
 
         getSystemService(NotificationManager::class.java).createNotificationChannel(
             NotificationChannel(
-                notificationChannel,
+                NOTIFICATION_CHANNEL,
                 getString(R.string.notification_channel_adb_pairing),
                 NotificationManager.IMPORTANCE_HIGH
             ).apply {
@@ -104,14 +108,14 @@ class AdbPairingService : Service() {
         }
         if (notification != null) {
             try {
-                startForeground(notificationId, notification,
+                startForeground(NOTIFICATION_ID, notification,
                     ServiceInfo.FOREGROUND_SERVICE_TYPE_MANIFEST)
             } catch (e: Throwable) {
                 Log.e(tag, "startForeground failed", e)
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
                     && e is ForegroundServiceStartNotAllowedException) {
-                    getSystemService(NotificationManager::class.java).notify(notificationId, notification)
+                    getSystemService(NotificationManager::class.java).notify(NOTIFICATION_ID, notification)
                 }
             }
         }
@@ -202,20 +206,56 @@ class AdbPairingService : Service() {
         }
 
         getSystemService(NotificationManager::class.java).notify(
-            notificationId,
-            Notification.Builder(this, notificationChannel)
+            NOTIFICATION_ID,
+            Notification.Builder(this, NOTIFICATION_CHANNEL)
                 .setColor(getColor(R.color.notification))
                 .setSmallIcon(R.drawable.ic_system_icon)
                 .setContentTitle(title)
                 .setContentText(text)
-                /*.apply {
+                .apply {
                     if (!success) {
                         addAction(retryNotificationAction)
+                    } else {
+                        setContentIntent(launchPendingIntent)
+                        addAction(startNotificationAction)
+                        setAutoCancel(true)
                     }
-                }*/
+                }
                 .build()
         )
         stopSelf()
+    }
+
+    private val launchIntent by unsafeLazy {
+        Intent(this, MainActivity::class.java).apply {
+            addFlags(
+                Intent.FLAG_ACTIVITY_NEW_TASK or 
+                Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                Intent.FLAG_ACTIVITY_SINGLE_TOP
+            )
+        }
+    }
+
+    private val launchPendingIntent by unsafeLazy {
+        PendingIntent.getActivity(
+            this, launchRequestId, launchIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+    }
+
+    private val startNotificationAction by unsafeLazy {
+        val startIntent = Intent(launchIntent)
+            .putExtra(HomeActivity.EXTRA_START_SERVICE_VIA_WADB, true)
+
+        val pendingIntent = PendingIntent.getActivity(
+            this, startRequestId, startIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        Notification.Action.Builder(
+            null,
+            getString(R.string.home_root_button_start),
+            pendingIntent
+        )
+            .build()
     }
 
     private val stopNotificationAction by unsafeLazy {
@@ -299,7 +339,7 @@ class AdbPairingService : Service() {
     }
 
     private val searchingNotification by unsafeLazy {
-        Notification.Builder(this, notificationChannel)
+        Notification.Builder(this, NOTIFICATION_CHANNEL)
             .setColor(getColor(R.color.notification))
             .setSmallIcon(R.drawable.ic_system_icon)
             .setContentTitle(getString(R.string.notification_adb_pairing_searching_for_service_title))
@@ -308,7 +348,7 @@ class AdbPairingService : Service() {
     }
 
     private fun createInputNotification(port: Int): Notification {
-        return Notification.Builder(this, notificationChannel)
+        return Notification.Builder(this, NOTIFICATION_CHANNEL)
             .setColor(getColor(R.color.notification))
             .setContentTitle(getString(R.string.notification_adb_pairing_service_found_title))
             .setSmallIcon(R.drawable.ic_system_icon)
@@ -317,7 +357,7 @@ class AdbPairingService : Service() {
     }
 
     private val workingNotification by unsafeLazy {
-        Notification.Builder(this, notificationChannel)
+        Notification.Builder(this, NOTIFICATION_CHANNEL)
             .setColor(getColor(R.color.notification))
             .setContentTitle(getString(R.string.notification_adb_pairing_working_title))
             .setSmallIcon(R.drawable.ic_system_icon)

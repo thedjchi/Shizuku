@@ -73,7 +73,7 @@ class AdbPairingTutorialActivity : AppBarActivity() {
         val context = this
 
         val nm = context.getSystemService(NotificationManager::class.java)
-        val channel = nm.getNotificationChannel(AdbPairingService.notificationChannel)
+        val channel = nm.getNotificationChannel(AdbPairingService.NOTIFICATION_CHANNEL)
         return nm.areNotificationsEnabled() &&
                 (channel == null || channel.importance != NotificationManager.IMPORTANCE_NONE)
     }

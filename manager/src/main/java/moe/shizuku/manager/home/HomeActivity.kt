@@ -1,5 +1,7 @@
 package moe.shizuku.manager.home
 
+import android.app.NotificationManager
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -16,6 +18,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
+import moe.shizuku.manager.adb.AdbPairingService
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.databinding.AboutDialogBinding
@@ -107,6 +110,13 @@ abstract class HomeActivity : AppBarActivity() {
         intent?.let {
             val showDialog = it.getBooleanExtra(HomeActivity.EXTRA_SHOW_PAIRING_DIALOG, false)
             if (showDialog) showAccessibilityDialog()
+
+            val startWadb = it.getBooleanExtra(HomeActivity.EXTRA_START_SERVICE_VIA_WADB, false)
+            if (startWadb) {
+                val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+                nm.cancel(AdbPairingService.NOTIFICATION_ID)
+                StartWirelessAdbViewHolder.start(this, lifecycleScope)
+            }
         }
     }
 
@@ -188,6 +198,7 @@ abstract class HomeActivity : AppBarActivity() {
 
     companion object {
         const val EXTRA_SHOW_PAIRING_DIALOG = "show_pairing_dialog"
+        const val EXTRA_START_SERVICE_VIA_WADB = "start_service_via_wadb"
     }
 
 }
