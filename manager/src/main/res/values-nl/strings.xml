@@ -153,7 +153,7 @@
     <string name="toast_no_email_app">Geen e-mailapp gevonden</string>
     <string name="toast_shizuku_already_starting">Shizuku begint al op de achtergrond</string>
     <string name="toast_accessibility_tv_only">Deze service wordt alleen ondersteund op tv-apparaten.</string>
-    <string name="toast_accessibility_timed_out">Er is een time-out opgetreden bij de Shizuku-koppelingsservice.</string>
+    <string name="toast_pairing_timeout">Er is een time-out opgetreden bij de Shizuku-koppelingsservice.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Thema</string>
     <string name="dark_theme_off">Altijd licht</string>

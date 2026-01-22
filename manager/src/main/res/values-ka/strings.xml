@@ -153,7 +153,7 @@
     <string name="toast_no_email_app">ელ.ფოსტის აპი ვერ მოიძებნა</string>
     <string name="toast_shizuku_already_starting">Shizuku უკვე იწყება ფონზე</string>
     <string name="toast_accessibility_tv_only">ეს სერვისი მხოლოდ ტელევიზორის მოწყობილობებზეა მხარდაჭერილი.</string>
-    <string name="toast_accessibility_timed_out">შიზუკუს დაწყვილების სერვისს ვადა ამოეწურა.</string>
+    <string name="toast_pairing_timeout">შიზუკუს დაწყვილების სერვისს ვადა ამოეწურა.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">თემა</string>
     <string name="dark_theme_off">ყოველთვის მსუბუქი</string>

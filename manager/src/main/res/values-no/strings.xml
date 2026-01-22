@@ -153,7 +153,7 @@
     <string name="toast_no_email_app">Ingen e-postapp funnet</string>
     <string name="toast_shizuku_already_starting">Shizuku begynner allerede i bakgrunnen</string>
     <string name="toast_accessibility_tv_only">Denne tjenesten støttes kun på TV-enheter.</string>
-    <string name="toast_accessibility_timed_out">Shizuku-paringstjenesten gikk ut.</string>
+    <string name="toast_pairing_timeout">Shizuku-paringstjenesten gikk ut.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Alltid lett</string>

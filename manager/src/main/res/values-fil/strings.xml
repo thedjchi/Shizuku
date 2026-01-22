@@ -160,7 +160,7 @@
     <string name="toast_no_email_app">Walang natagpuang email app</string>
     <string name="toast_shizuku_already_starting">Nagsisimula na si Shizuku sa background</string>
     <string name="toast_accessibility_tv_only">Ang serbisyong ito ay sinusuportahan lamang sa mga TV device.</string>
-    <string name="toast_accessibility_timed_out">Nag-time out ang serbisyo ng pagpapares ng Shizuku.</string>
+    <string name="toast_pairing_timeout">Nag-time out ang serbisyo ng pagpapares ng Shizuku.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Laging magaan</string>

@@ -153,7 +153,7 @@
     <string name="toast_no_email_app">Geen e-posprogram gevind nie</string>
     <string name="toast_shizuku_already_starting">Shizuku begin reeds in die agtergrond</string>
     <string name="toast_accessibility_tv_only">Hierdie diens word slegs op TV-toestelle ondersteun.</string>
-    <string name="toast_accessibility_timed_out">Shizuku-paringsdiens het \'n tydsverloop gehad.</string>
+    <string name="toast_pairing_timeout">Shizuku-paringsdiens het \'n tydsverloop gehad.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Altyd lig</string>

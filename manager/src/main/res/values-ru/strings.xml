@@ -162,7 +162,7 @@
     <string name="toast_no_email_app">Приложение электронной почты не найдено</string>
     <string name="toast_shizuku_already_starting">Сидзуку уже запускается в фоновом режиме.</string>
     <string name="toast_accessibility_tv_only">Эта услуга поддерживается только на телевизионных устройствах.</string>
-    <string name="toast_accessibility_timed_out">Сервис пары Сидзуку истёк.</string>
+    <string name="toast_pairing_timeout">Сервис пары Сидзуку истёк.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Всегда светло</string>

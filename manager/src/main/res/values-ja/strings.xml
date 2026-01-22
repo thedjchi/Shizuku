@@ -159,7 +159,7 @@
     <string name="toast_no_email_app">メールアプリが見つかりません</string>
     <string name="toast_shizuku_already_starting">バックグラウンドではすでに雫が起動しています</string>
     <string name="toast_accessibility_tv_only">このサービスはテレビ機器のみでサポートされています。</string>
-    <string name="toast_accessibility_timed_out">雫のペアリングサービスがタイムアウトした。</string>
+    <string name="toast_pairing_timeout">雫のペアリングサービスがタイムアウトした。</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">テーマ</string>
     <string name="dark_theme_off">ホワイトテーマ</string>

@@ -153,7 +153,7 @@
     <string name="toast_no_email_app">هیچ برنامه ایمیلی یافت نشد</string>
     <string name="toast_shizuku_already_starting">شیزوکو از قبل در پس‌زمینه شروع به کار کرده است</string>
     <string name="toast_accessibility_tv_only">این سرویس فقط روی دستگاه های تلویزیونی پشتیبانی می شود.</string>
-    <string name="toast_accessibility_timed_out">سرویس جفت سازی شیزوکو تمام شد.</string>
+    <string name="toast_pairing_timeout">سرویس جفت سازی شیزوکو تمام شد.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">تم</string>
     <string name="dark_theme_off">همیشه روشن</string>

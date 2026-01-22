@@ -156,7 +156,7 @@
     <string name="toast_no_email_app">Էլփոստի հավելված չի գտնվել</string>
     <string name="toast_shizuku_already_starting">Շիզուկուն արդեն սկսում է հետեւում</string>
     <string name="toast_accessibility_tv_only">Այս ծառայությունը աջակցվում է միայն հեռուստացույցների վրա։</string>
-    <string name="toast_accessibility_timed_out">Շիզուկուի զուգավորման ծառայության ժամանակը սպառվեց։</string>
+    <string name="toast_pairing_timeout">Շիզուկուի զուգավորման ծառայության ժամանակը սպառվեց։</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Թեմա</string>
     <string name="dark_theme_off">Միշտ թեթեւ</string>

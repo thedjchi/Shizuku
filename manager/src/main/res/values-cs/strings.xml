@@ -162,7 +162,7 @@
     <string name="toast_no_email_app">Žádná e-mailová aplikace nenalezena</string>
     <string name="toast_shizuku_already_starting">Shizuku už začíná v pozadí</string>
     <string name="toast_accessibility_tv_only">Tato služba je podporována pouze na televizních zařízeních.</string>
-    <string name="toast_accessibility_timed_out">Časový limit párovací služby Shizuku vypršel.</string>
+    <string name="toast_pairing_timeout">Časový limit párovací služby Shizuku vypršel.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Téma</string>
     <string name="dark_theme_off">Vždy světlé</string>

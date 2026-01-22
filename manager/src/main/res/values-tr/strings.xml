@@ -160,7 +160,7 @@
     <string name="toast_no_email_app">E-posta uygulaması bulunamadı</string>
     <string name="toast_shizuku_already_starting">Shizuku arka planda zaten başlıyor</string>
     <string name="toast_accessibility_tv_only">Bu hizmet yalnızca TV cihazlarında desteklenmektedir.</string>
-    <string name="toast_accessibility_timed_out">Shizuku eşleştirme servisi zaman doldu.</string>
+    <string name="toast_pairing_timeout">Shizuku eşleştirme servisi zaman doldu.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Her zaman hafif</string>
