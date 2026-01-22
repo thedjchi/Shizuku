@@ -155,8 +155,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Heç bir e-poçt tətbiqi tapılmadı</string>
     <string name="toast_shizuku_already_starting">Shizuku artıq arxa planda başlayır</string>
-    <string name="toast_accessibility_tv_only">Bu xidmət yalnız TV cihazlarında dəstəklənir.</string>
-    <string name="toast_accessibility_timed_out">Shizuku cütləşdirmə xidmətinin vaxtı bitdi.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Mövzu</string>
     <string name="dark_theme_off">Həmişə yüngül</string>
