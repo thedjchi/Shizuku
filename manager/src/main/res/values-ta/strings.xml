@@ -152,8 +152,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">மின்னஞ்சல் பயன்பாடு எதுவும் கிடைக்கவில்லை.</string>
     <string name="toast_shizuku_already_starting">ஷிசுகு ஏற்கனவே பின்னணியில் தொடங்குகிறது.</string>
-    <string name="toast_accessibility_tv_only">இந்த சேவை டிவி சாதனங்களில் மட்டுமே ஆதரிக்கப்படுகிறது.</string>
-    <string name="toast_accessibility_timed_out">Shizuku இணைத்தல் சேவை நேரம் முடிந்துவிட்டது.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">தீம்</string>
     <string name="dark_theme_off">எப்போதும் வெளிச்சம்</string>
