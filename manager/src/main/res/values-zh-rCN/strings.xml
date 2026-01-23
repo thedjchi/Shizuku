@@ -155,6 +155,7 @@
     <string name="toast_no_email_app">未找到电子邮件应用</string>
     <string name="toast_shizuku_already_starting">Shizuku 已在后台启动</string>
     <string name="toast_accessibility_tv_only">该服务仅支持电视设备</string>
+    <string name="toast_pairing_timeout">Shizuku配对服务超时</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">主题</string>
     <string name="dark_theme_off">浅色主题</string>
