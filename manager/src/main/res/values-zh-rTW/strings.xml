@@ -153,7 +153,7 @@
     <string name="toast_no_email_app">找不到電子郵件應用程式</string>
     <string name="toast_shizuku_already_starting">Shizuku 已在背景啟動了</string>
     <string name="toast_accessibility_tv_only">此服務僅支援電視裝置</string>
-    <string name="toast_pairing_timeout">Shizuku配對服務超時</string>
+    <string name="toast_pairing_timeout">Shizuku pairing service timed out</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">主題</string>
     <string name="dark_theme_off">始終使用淺色主題</string>
