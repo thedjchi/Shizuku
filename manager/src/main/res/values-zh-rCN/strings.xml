@@ -3,7 +3,7 @@
     <!-- To translators: you can leave your here -->
     <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s 正在运行</string>
-    <string name="home_status_service_not_running">%1$s 未运行</string>
+    <string name="home_status_service_not_running">%1$s未运行</string>
     <string name="home_status_service_version">版本 %2$s，%1$s</string>
     <string name="home_status_service_version_update"><![CDATA[版本 %2$s，%1$s<br>再次启动来升级到版本 %3$s]]></string>
     <!-- Home - Adb -->
@@ -154,10 +154,12 @@
     <!-- Toast -->
     <string name="toast_no_email_app">未找到电子邮件应用</string>
     <string name="toast_shizuku_already_starting">Shizuku 已在后台启动</string>
+    <string name="toast_accessibility_tv_only">该服务仅支持电视设备</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">主题</string>
     <string name="dark_theme_off">浅色主题</string>
     <string name="dark_theme_on">深色主题</string>
+    <string name="follow_system">跟随系统</string>
     <!-- About -->
     <string name="action_about">关于</string>
     <string name="about_dialog_button_close">关闭</string>
