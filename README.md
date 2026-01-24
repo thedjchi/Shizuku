@@ -62,7 +62,9 @@ Shizuku uses a completely different way. See detailed description below.
 
 ## User guide & Download
 
-<https://shizuku.rikka.app/>
+**User Guide**: <https://shizuku.rikka.app/>
+**Download latest**: <https://github.com/thedjchi/Shizuku/releases/latest>
+**Understanding how Shizuku work behind the scene**: [HOW_IT_WORKS.md](./HOW_IT_WORKS.md)
 
 ## How does Shizuku work?
 
