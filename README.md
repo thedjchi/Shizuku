@@ -79,13 +79,13 @@ So, we reached our goal, to use system APIs with higher permission. And to the a
 
 ### API & sample
 
-https://github.com/RikkaApps/Shizuku-API
+https://github.com/thedjchi/Shizuku-API/
 
 ### Migrating from pre-v11
 
 > Existing applications still works, of course.
 
-https://github.com/RikkaApps/Shizuku-API#migration-guide-for-existing-applications-use-shizuku-pre-v11
+https://github.com/thedjchi/Shizuku-API/#migration-guide-for-existing-applications-use-shizuku-pre-v11
 
 ### Attention
 
