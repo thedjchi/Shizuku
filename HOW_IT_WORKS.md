@@ -1,3 +1,4 @@
+[Back to README](./README.md)
 # How does Shizuku work behind the scenes?
 *This parts focus on the ADB mode, rooted devices do not need to use ADB and are more straight forward, Shizuku directly open a shell.*
 
