@@ -21,13 +21,13 @@ Shizuku is a "handler" that gives out access to ADB for external apps. ADB ([And
 
 **During every subsequent use:**
 
->[!CAUTION]
->USB Debugging ***MUST*** stay enabled to keep any type of ***ongoing*** ADB connection alive, even **Wireless Debugging** ones. However, having **USB Debugging** enabled exposes your device to more security risks. Therefore, an option was added to disable **USB Debugging** as soon as it is no longer needed to improve the security and integrity of your device. Read below.
-
 1. Shizuku already has the **WRITE_SECURE_SETTINGS** permission.
 2. It verifies that **USB Debugging** is enabled. If not, it enables it to keep its future ADB connection alive.
 3. It enables **Wireless Debugging**, connects using ADB, and finally disables **Wireless Debugging** again.
 4. NOT-YET-IMPLEMENTED https://github.com/thedjchi/Shizuku/issues/110: **Assuming you enabled the toggle to disable USB Debugging *when not needed***: Shizuku closes its ADB connection, and the **WRITE_SECURE_SETTINGS** permission will be used to disable **USB Debugging** until the next start.
+
+>[!CAUTION]
+>USB Debugging ***MUST*** stay enabled to keep any type of ***ongoing*** ADB connection alive, even **Wireless Debugging** ones. However, having **USB Debugging** enabled exposes your device to more security risks. Therefore, an option was added to disable **USB Debugging** as soon as it is no longer needed to improve the security and integrity of your device. Read below.
 
 # How do Shizuku's features behave behind the scenes?
 
