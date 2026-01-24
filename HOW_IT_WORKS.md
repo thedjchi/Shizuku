@@ -57,3 +57,8 @@ Upon receiving a event, the application will trigger the start/stop actions.
 ## Biometrics
 WIP:https://github.com/thedjchi/Shizuku/issues/112
 
+## In-App Update
+WIP:https://github.com/thedjchi/Shizuku/issues/101
+
+## Stealth / Self Patching
+WIP:https://github.com/thedjchi/Shizuku/tree/stealth
