@@ -20,9 +20,7 @@ An Android app that allows other apps to use system-level APIs that require ADB/
 
 This is a **FORK** of Shizuku. If you are looking for the original version, please visit the [RikkaApps/Shizuku](https://github.com/RikkaApps/Shizuku) repository.
 
-### Download
 
-Get the latest version from the [releases page](https://github.com/thedjchi/Shizuku/releases).
 
 ### Added Features
 
@@ -35,9 +33,12 @@ This version of Shizuku includes some extra features over the original version, 
 * **MediaTek support:** fixes a critical bug in the original v13.6.0 which prevented Shizuku from working on MediaTek devices
 * And more!
 
-### Wiki
+## User guide & Download
+Please read the [wiki](https://github.com/thedjchi/Shizuku/wiki) for setup and troubleshooting instructions from this fork.
 
-Please read the [wiki](https://github.com/thedjchi/Shizuku/wiki) for setup and troubleshooting instructions.
+- **User Guide**: <https://shizuku.rikka.app/>
+- **Download latest**: <https://github.com/thedjchi/Shizuku/releases/latest>
+- **Understanding how Shizuku work behind the scene** *(rundown/simplified version for new Shizuku users)*: [HOW_IT_WORKS.md](./HOW_IT_WORKS.md)
 
 ### Translations
 
@@ -59,12 +60,6 @@ This method has very big disadvantages:
 4. Even if ADB has sufficient permissions, the app requires root privileges to run
 
 Shizuku uses a completely different way. See detailed description below.
-
-## User guide & Download
-
-- **User Guide**: <https://shizuku.rikka.app/>
-- **Download latest**: <https://github.com/thedjchi/Shizuku/releases/latest>
-- **Understanding how Shizuku work behind the scene** *(simplified version for new Shizuku users)*: [HOW_IT_WORKS.md](./HOW_IT_WORKS.md)
 
 ## How does Shizuku work?
 
