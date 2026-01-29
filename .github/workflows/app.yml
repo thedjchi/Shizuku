@@ -42,12 +42,13 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-      - name: Fail if signing secrets missing for release builds
-        if: ${{ !env.DEBUG && !env.KEYSTORE_EXISTS }}
+      - name: Check Keystore
         run: |
-          echo "::error::Signing secrets not configured. Release signing is required."
-          exit 1
-      - name: Write key
+          if [ "${DEBUG}" != "true" ] && [ "${KEYSTORE_EXISTS}" != "true" ]; then
+            echo "::error::Signing secrets not configured. Release signing is required."
+            exit 1
+          fi
+      - name: Create Signing Config (Release builds only)
         if: ${{ !env.DEBUG && env.KEYSTORE_EXISTS }}
         run: |
           echo KEYSTORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }} > signing.properties
@@ -83,14 +84,13 @@ jobs:
           echo "versionName=$VERSION" >> $GITHUB_OUTPUT
           echo "artifactName=$ARTIFACT_NAME" >> $GITHUB_OUTPUT
           echo "filePath=$FILE" >> $GITHUB_OUTPUT
-      - name: Upload release
-        if: success()
+      - name: Upload Artifact
         uses: actions/upload-artifact@v6
         with:
           name: ${{ steps.buildWithGradle.outputs.artifactName }}
           path: ${{ steps.buildWithGradle.outputs.filePath }}
-      - name: Attest build provenance
-        if: ${{ !env.DEBUG }}
+      - name: Attest Build Provenance
+        if: ${{ success() && !env.DEBUG }}
         uses: actions/attest-build-provenance@v3
         with:
           subject-path: manager/build/outputs/apk/release/*.apk
@@ -106,12 +106,12 @@ jobs:
       PRERELEASE: ${{ github.event.inputs.prerelease == 'true' }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - name: Create and push version tag
+      - name: Create Release Tag
         run: |
           VERSION="${{ needs.build.outputs.versionName }}"
           git config user.name "github-actions[bot]"
@@ -119,13 +119,13 @@ jobs:
           git tag "v$VERSION" -m "Release version $VERSION"
           git push origin "v$VERSION"
 
-      - name: Download APK artifact
+      - name: Download Artifact
         uses: actions/download-artifact@v7
         with:
           name: ${{ needs.build.outputs.artifactName }}
           path: files
 
-      - name: Create draft release
+      - name: Create Draft Release
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_VERSION: ${{ needs.build.outputs.versionName }}
