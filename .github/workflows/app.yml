@@ -1,27 +1,54 @@
-name: App
+name: Build App
 
 on:
-  push:
-    paths-ignore:
-      - '.github/ISSUE_TEMPLATE'
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Debug'
+        required: false
+        default: 'false'
+      prerelease:
+        description: 'Prerelease'
+        required: false
+        default: 'false'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+      artifact-metadata: write
+
+    env:
+      KEYSTORE_EXISTS: ${{ secrets.KEYSTORE != '' }}
+      DEBUG: ${{ github.event.inputs.debug == 'true' }}
+      PRERELEASE: ${{ github.event.inputs.prerelease == 'true' }}
+
+    outputs:
+      versionName: ${{ steps.buildWithGradle.outputs.versionName }}
+      artifactName: ${{ steps.buildWithGradle.outputs.artifactName }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
+          ref: ${{ env.PRERELEASE && 'beta' || 'master' }}
           submodules: 'recursive'
           fetch-depth: 0
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '21'
+      - name: Fail if signing secrets missing for release builds
+        if: ${{ !env.DEBUG && !env.KEYSTORE_EXISTS }}
+        run: |
+          echo "::error::Signing secrets not configured. Release signing is required."
+          exit 1
       - name: Write key
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+        if: ${{ !env.DEBUG && env.KEYSTORE_EXISTS }}
         run: |
           echo KEYSTORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }} > signing.properties
           echo KEYSTORE_ALIAS=${{ secrets.KEYSTORE_ALIAS }} >> signing.properties
@@ -29,26 +56,82 @@ jobs:
           echo KEYSTORE_FILE=../key.jks >> signing.properties
           echo ${{ secrets.KEYSTORE }} | base64 --decode > key.jks
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          dependency-graph: generate-and-submit
-          build-scan-publish: true
-          build-scan-terms-of-use-url: "https://gradle.com/terms-of-service"
-          build-scan-terms-of-use-agree: "yes"
+        uses: gradle/actions/setup-gradle@v5
       - name: Build with Gradle
         id: buildWithGradle
         run: |
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
-          echo 'android.sdk.channel=3' >> gradle.properties
-          echo 'android.native.buildOutput=verbose' >> gradle.properties
           echo 'org.gradle.caching=true' >> gradle.properties
           echo 'org.gradle.parallel=true' >> gradle.properties
-          ./gradlew :manager:assemble
-          releaseName=`ls manager/build/outputs/apk/release/shizuku*-v*-release.apk | awk -F '(/|-release.apk)' '{print $6}'` && echo "releaseName=$releaseName" >> $GITHUB_OUTPUT
+          if [ "${DEBUG}" = "true" ]; then
+            ./gradlew :manager:assembleDebug
+            FILE=$(ls manager/build/outputs/apk/debug/*.apk)
+          else
+            ./gradlew :manager:assembleRelease
+            FILE=$(ls manager/build/outputs/apk/release/*.apk)
+          fi
+
+          BASENAME=$(basename "$FILE")
+
+          VERSION=$(echo "$BASENAME" | sed -E 's/^shizuku-(.*)-(debug|release)\.apk/\1/')
+          if [ "${DEBUG}" = "true" ]; then
+            ARTIFACT_NAME="$BASENAME"
+          else
+            ARTIFACT_NAME=$(echo "$BASENAME" | sed 's/-release//')
+          fi
+
+          echo "versionName=$VERSION" >> $GITHUB_OUTPUT
+          echo "artifactName=$ARTIFACT_NAME" >> $GITHUB_OUTPUT
+          echo "filePath=$FILE" >> $GITHUB_OUTPUT
       - name: Upload release
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
-          name: ${{ steps.buildWithGradle.outputs.releaseName }}
-          path: "manager/build/outputs"
-          compression-level: 9
+          name: ${{ steps.buildWithGradle.outputs.artifactName }}
+          path: ${{ steps.buildWithGradle.outputs.filePath }}
+      - name: Attest build provenance
+        if: ${{ !env.DEBUG }}
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: manager/build/outputs/apk/release/*.apk
+
+  release:
+    if: ${{ github.event.inputs.debug != 'true' }}
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    env:
+      PRERELEASE: ${{ github.event.inputs.prerelease == 'true' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Create and push version tag
+        run: |
+          VERSION="${{ needs.build.outputs.versionName }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "v$VERSION" -m "Release version $VERSION"
+          git push origin "v$VERSION"
+
+      - name: Download APK artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: ${{ needs.build.outputs.artifactName }}
+          path: files
+
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ needs.build.outputs.versionName }}
+        run: |
+          if [ "${PRERELEASE}" = "true" ]; then
+            gh release create "v$RELEASE_VERSION" files/*.apk --draft --prerelease --generate-notes
+          else
+            gh release create "v$RELEASE_VERSION" files/*.apk --draft --generate-notes
+          fi
