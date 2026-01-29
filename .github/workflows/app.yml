@@ -64,7 +64,6 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
         with:
-          dependency-graph: generate-and-submit
           build-scan-publish: true
           build-scan-terms-of-use-url: "https://gradle.com/terms-of-service"
           build-scan-terms-of-use-agree: "yes"
@@ -98,9 +97,13 @@ jobs:
 
           ARTIFACT_NAME="${ARTIFACT_NAME}.apk"
 
+          DIR=
+          RENAMED="$(dirname "$FILE")/$ARTIFACT_NAME"
+          mv "$FILE" "$RENAMED"
+
           echo "versionName=$VERSION" >> $GITHUB_OUTPUT
           echo "artifactName=$ARTIFACT_NAME" >> $GITHUB_OUTPUT
-          echo "filePath=$FILE" >> $GITHUB_OUTPUT
+          echo "filePath=$RENAMED" >> $GITHUB_OUTPUT
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v6
@@ -121,9 +124,6 @@ jobs:
     permissions:
       contents: write
 
-    env:
-      PRERELEASE: ${{ inputs.prerelease }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -135,8 +135,8 @@ jobs:
           VERSION="${{ needs.build.outputs.versionName }}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag "v$VERSION" -m "Release version $VERSION"
-          git push origin "v$VERSION"
+          git tag "$VERSION" -m "Release version $VERSION"
+          git push origin "$VERSION"
 
       - name: Download Artifact
         uses: actions/download-artifact@v7
@@ -150,5 +150,5 @@ jobs:
           RELEASE_VERSION: ${{ needs.build.outputs.versionName }}
         run: |
           FLAGS="--draft --generate-notes"
-          [ "$PRERELEASE" = "true" ] && FLAGS="$FLAGS --prerelease"
-          gh release create "v$RELEASE_VERSION" files/*.apk $FLAGS
+          [ "${{ inputs.prerelease }}" = "true" ] && FLAGS="$FLAGS --prerelease"
+          gh release create "$RELEASE_VERSION" files/*.apk $FLAGS
