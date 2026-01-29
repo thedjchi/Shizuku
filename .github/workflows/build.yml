@@ -1,0 +1,180 @@
+# Build workflow for Shizuku Android app
+# This workflow builds the release APK and creates a draft release.
+#
+# Two modes:
+# 1. Tag push: Triggered automatically when a version tag is pushed (e.g., v1.0.0)
+# 2. Manual (workflow_dispatch): Creates the tag during the release job. Useful when you cannot push tags via CLI.
+#
+# Note: When using manual mode, the tag push will NOT trigger a second workflow run because
+# GitHub Actions does not trigger workflows from pushes made with the default GITHUB_TOKEN.
+
+
+name: Prepare Build For Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger on version tags (e.g., v1.0.0, v2.1.3)
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to tag (e.g., v1.0.0). Must start with "v"'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      # Minimal permissions for build job - only read access needed for checkout
+      contents: read
+      # Required by attest-build-provenance action to sign attestations
+      id-token: write
+      attestations: write
+      artifact-metadata: write
+    env:
+      # GitHub docs state that Secrets cannot be directly referenced in if statments. So we use this ENV variable to check if signing is enabled
+      SIGNING_ENABLED: ${{ secrets.KEYSTORE && 'true' || '' }}
+
+    steps:
+      # Checkout repository with submodules (required for Shizuku-API in api/)
+      # fetch-depth: 0 is required for version calculation based on git commit count
+      # Source: build.gradle lines 29-30 use "git rev-list --count HEAD" for versionCode
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: 'recursive'
+          fetch-depth: 0
+
+      # Set up JDK 21 for Android build compatibility
+      # Source: build.gradle lines 21-23 specify JavaVersion.VERSION_21
+      - name: Set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      # Configure Gradle with caching for faster builds
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      # Decode and setup the signing keystore if secrets are configured
+      # Source: signing.gradle reads from signing.properties to configure signing
+      # Source: signing.gradle is applied in manager/build.gradle line 205
+      # The KEYSTORE_FILE path is ../key.jks because signing.gradle runs in context of manager/ module, so we need to go up one directory to find key.jks in root
+      #
+      # To enable signing, add these secrets to your repository:
+      # - KEYSTORE: Base64 encoded keystore file
+      # - KEYSTORE_PASSWORD: Password for the keystore
+      # - KEYSTORE_ALIAS: Alias of the signing key
+      # - KEYSTORE_ALIAS_PASSWORD: Password for the signing key
+      - name: Setup signing keystore
+        if: ${{ env.SIGNING_ENABLED == 'true' }}
+        run: |
+          # Create signing.properties file with keystore configuration
+          echo "KEYSTORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }}" > signing.properties
+          echo "KEYSTORE_ALIAS=${{ secrets.KEYSTORE_ALIAS }}" >> signing.properties
+          echo "KEYSTORE_ALIAS_PASSWORD=${{ secrets.KEYSTORE_ALIAS_PASSWORD }}" >> signing.properties
+          echo "KEYSTORE_FILE=../key.jks" >> signing.properties
+          # Decode the base64-encoded keystore file
+          echo "${{ secrets.KEYSTORE }}" | base64 --decode > key.jks
+
+      # Warn when signing secrets are not configured (debug signing will be used)
+      # Source: signing.gradle lines 12-17 fall back to debug signing config
+      - name: Warn if using debug signing
+        if: ${{ env.SIGNING_ENABLED != 'true' }}
+        run: |
+          echo "::warning::Signing secrets not configured. APK will be signed with debug key. To enable release signing, add KEYSTORE, KEYSTORE_PASSWORD, KEYSTORE_ALIAS, and KEYSTORE_ALIAS_PASSWORD secrets."
+          
+          # Ensure the /.config/.android directory exists
+          mkdir -p $HOME/.config/.android
+
+          # Ensure Debug Keystore exists (create it if missing)
+          if [ ! -f $HOME/.config/.android/debug.keystore ]; then
+            echo "::warning::Debug keystore not found. Creating default debug keystore..."
+            keytool -genkeypair -v -keystore $HOME/.config/.android/debug.keystore \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -dname "CN=Android Debug,O=Android,C=US" \
+              -storepass android -keypass android -alias androiddebugkey
+          fi
+
+      # Accept Android SDK licenses (required for some SDK components)
+      # Required by : Android NDK
+      - name: Accept Android SDK licenses
+        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
+
+      # Build the release APK using Gradle
+      # Source: manager/build.gradle defines the application module
+      # Output goes to manager/build/outputs/apk/release/ (what original Shizuku release used) and out/apk/ (for minified, obfuscated builds (harder debugging of crash logs?), no clue why they enabled this, they never used it)
+      # Source: manager/build.gradle lines 124-146 configure output paths
+      - name: Build release APK
+        run: ./gradlew :manager:assembleRelease
+
+      # Upload APK as artifact for future download
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: shizuku-builds
+          path: manager/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+
+      # Generate build provenance attestations
+      # This allows users to verify that a given binary was built using GitHub Actions
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: manager/build/outputs/apk/release/*.apk
+
+      # Clean up sensitive files after build for security
+      - name: Cleanup signing files
+        if: ${{ always() && env.SIGNING_ENABLED == 'true' }}
+        run: |
+          rm -f key.jks
+          rm -f signing.properties
+
+  release:
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for gh CLI to create draft releases and upload assets
+      # Also required to create and push the version tag when manually triggered
+      contents: write
+
+    steps:
+      # Checkout required for gh CLI to work with the repository
+      # fetch-depth: 0 is required for tag operations when manually triggered
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # Create and push version tag when manually triggered (if it doesn't already exist)
+      - name: Create and push version tag
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          if git rev-parse "$VERSION" >/dev/null 2>&1; then
+            echo "::error::Tag '$VERSION' already exists"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "$VERSION" -m "Release version $VERSION"
+          git push origin "$VERSION"
+          echo "✅ Tag '$VERSION' created and pushed successfully"
+
+      # Download the builds artifacts (APK built in the build job)
+      - name: Download APK artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: shizuku-builds
+          path: release-apk
+
+      # Create a draft release with the APK
+      # Draft releases allow maintainers to review release notes before publishing
+      # Uses github.event.inputs.version for manual trigger, or github.ref_name for tag push
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ github.event.inputs.version || github.ref_name }}
+        run: |
+          gh release create "$RELEASE_VERSION" release-apk/*.apk --draft --generate-notes
