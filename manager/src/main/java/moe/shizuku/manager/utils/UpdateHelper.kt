@@ -2,9 +2,11 @@ package moe.shizuku.manager.utils
 
 import android.content.Context
 import android.widget.Toast
-import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.decodeFromString
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuApplication
 import moe.shizuku.manager.ShizukuSettings
@@ -19,7 +21,7 @@ object UpdateHelper {
     private val appContext = ShizukuApplication.appContext
 
     private val client = OkHttpClient()
-    private val gson = Gson()
+    private val json = Json { ignoreUnknownKeys = true }
 
     data class Version(
         val major: Int,
@@ -62,12 +64,14 @@ object UpdateHelper {
         val digest: String
     )
 
+    @Serializable
     data class GitHubRelease(
         val tag_name: String,
         val prerelease: Boolean,
         val assets: List<GitHubAsset>
     )
 
+    @Serializable
     data class GitHubAsset(
         val name: String,
         val browser_download_url: String,
@@ -175,7 +179,7 @@ object UpdateHelper {
             val response = client.newCall(request).execute()
             val body = response.body?.string() ?: throw Exception("Couldn't fetch releases")
 
-            val releases = gson.fromJson(body, Array<GitHubRelease>::class.java).toList()
+            val releases = json.decodeFromString<List<GitHubRelease>>(body)
             val filtered =
                 if (ShizukuSettings.getUpdateMode() == ShizukuSettings.UpdateMode.BETA) {
                     releases
