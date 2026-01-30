@@ -3,12 +3,12 @@
     <!-- To translators: you can leave your here -->
     <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s est en cours de fonctionnement</string>
-    <string name="home_status_service_not_running">%1$s est arrêté</string>
+    <string name="home_status_service_not_running">%1$s n\'est pas en cours d\'exécution</string>
     <string name="home_status_service_version">Version %2$s, %1$s</string>
     <string name="home_status_service_version_update"><![CDATA[Version %2$s, %1$s<br>Relancez pour mettre à jour vers la version %3$s]]></string>
     <!-- Home - Adb -->
-    <string name="home_adb_title"><![CDATA[Démarrer par connection à un ordinateur]]></string>
-    <string name="home_adb_description"><![CDATA[Pour les appareils sans root, vous avez besoin d\'utiliser adb pour démarrer Shizuku (requiert la connexion à un ordinateur). Ce processus doit être répété à chaque fois que l\'appareil est redémarré. Merci de <b><a href="%1$s">lire l\'aide</a></b>.]]></string>
+    <string name="home_adb_title"><![CDATA[Démarrer à l'aide d'une connexion sur un ordinateur]]></string>
+    <string name="home_adb_description"><![CDATA[Pour les appareils sans root, vous avez besoin d\'utiliser adb pour démarrer Shizuku (requiert la connexion à un ordinateur). Ce processus doit être répété à chaque fois que l\'appareil est redémarré. Merci de <b><a href=\"%1$s\">lire l\'aide</a></b>.]]></string>
     <string name="home_adb_button_view_help">Lire l\'aide</string>
     <string name="home_adb_button_view_command">Voir la commande</string>
     <string name="home_adb_dialog_view_command_message"><![CDATA[<font face=monospace>%1$s</font><br><br>* Il y a quelques autres considérations, merci de confirmer que vous avez lu l\'aide d\'abord.]]></string>
@@ -16,13 +16,13 @@
     <string name="home_adb_dialog_view_command_button_send">Envoyer</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Démarrer par débogage sans fil]]></string>
-    <string name="home_wireless_adb_description"><![CDATA[Sur Android 11 ou supérieur, vous pouvez activer le débogage sans fil et démarrer Shizuku directement depuis votre appareil, sans le connecter à un ordinateur.<p>Merci de lire le guide étape par étape d\'abord.]]></string>
-    <string name="home_wireless_adb_description_pre_11"><![CDATA[Avant Android 11, la connection à un ordinateur est requise pour activer le débogage sans fil.]]></string>
+    <string name="home_wireless_adb_description"><![CDATA[Sur Android 11 ou supérieur, vous pouvez activer le débogage sans fil et démarrer Shizuku directement depuis votre appareil, sans le connecter à un ordinateur.<p>Pour en savoir plus, commencer par lire le guide étape par étape.]]></string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Avant Android 11, une connexion à un ordinateur est requise pour activer le débogage sans fil.]]></string>
     <string name="home_wireless_adb_view_guide_button">Guide étape par étape</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Recherche du service de débogage sans fil</string>
-    <string name="dialog_adb_discovery_message">Merci d\'activer \"Débogage sans fil\" dans les \"Options pour les développeurs\". Le paramètre \"Débogage sans fil\" est automatiquement désactivé quand la connexion réseau change.\n\nNote, ne pas désactiver les \"Options pour les développeurs\" ou le \"Débogage USB\", ou Shizuku sera arrêté.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Merci d\'essayer de désactiver et de réactiver le \"Débogage sans-fil\" si ça continue à chercher.</string>
+    <string name="dialog_adb_discovery_message">Merci d\'activer \"Débogage sans fil\" dans les \"Options pour les développeurs\". Le paramètre \"Débogage sans fil\" est automatiquement désactivé quand la connexion réseau change.\n\nNote, ne pas désactiver les \"Options pour les développeurs\" ou le \"Débogage USB\" lors de l\'exécution, car cela arrêtera Shizuku.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Essayer de désactiver et de réactiver le \"Débogage sans-fil\" si ça continue à chercher.</string>
     <string name="dialog_adb_port">Port</string>
     <string name="dialog_adb_invalid_port">Le port est un entier compris entre 1 et 65535.</string>
     <string name="adb_pairing">Association</string>
@@ -31,18 +31,18 @@
     <string name="dialog_adb_pairing_paring_code">Code d\'association</string>
     <string name="paring_code_is_wrong">Le code d\'association n\'est pas le bon.</string>
     <string name="cannot_connect_port">Impossible de se connecter au service de débogage sans fil.\n\nVeuillez vous assurer que Shizuku est autorisé dans tous les pare-feu, bloqueurs de publicités, VPN ou applications similaires susceptibles de restreindre l\'accès au réseau.</string>
-    <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, pour activer le débogage sans fil, la connexion à un ordinateur est requise.</string>
+    <string name="dialog_wireless_adb_not_enabled">Le débogage sans fil n\'est pas activé.\nNote, avant Android 11, une connexion à un ordinateur est requise pour activer le débogage sans fil.</string>
     <string name="dialog_usb_debugging_not_enabled">Le débogage USB n’est pas activé.\nVeuillez l’activer dans « Options développeur ».</string>
     <string name="dialog_adb_pairing_message">Veuillez commencer le jumelage en suivant les étapes suivantes :\n- Accédez aux « Options pour les développeurs »\n- Activez le « Débogage USB » et le « Débogage sans fil »\n- Appuyez sur le côté gauche de « Débogage sans fil »\n- Appuyez sur « Jumeler l\'appareil avec le code de jumelage »\n- Saisissez le code de jumelage affiché dans la notification</string>
     <string name="dialog_adb_pairing_accessibility_permission">Sur Android 14, l\'installation ou la mise à jour de Shizuku via le gestionnaire de paquets révoque l\'autorisation ^1, nécessaire à l\'activation du service d\'accessibilité pour le jumelage.\n\nPour l\'accorder, exécutez la commande ADB suivante :\n\n^2\n\nUne fois la commande exécutée, vous pouvez poursuivre le processus de jumelage.\n\nRemarque : vous pouvez contourner cette restriction en installant ou en mettant à jour Shizuku via ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Veuillez activer le service d’accessibilité pour lancer le processus d’appairage. Cela permet à Shizuku de détecter le code d’appairage.\n\nLe service d’accessibilité sera désactivé dès que le code sera trouvé ou après 1 minute pour économiser de l’énergie.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Veuillez commencer le jumelage en suivant les étapes suivantes :\n- Accédez à « Options pour les développeurs »\n- Activez « Débogage USB » et « Débogage sans fil »\n- Appuyez sur le côté gauche de « Débogage sans fil »\n- Appuyez sur « Jumeler l’appareil avec le code de jumelage ». Shizuku détectera automatiquement le code de jumelage.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Veuillez commencer le jumelage en suivant les étapes suivantes :\n- Accédez à « Options pour les développeurs »\n- Activez « Débogage USB » et « Débogage sans fil »\n- Appuyez sur le côté gauche de « Débogage sans fil »\n- Appuyez sur « Jumeler l\'appareil avec le code de jumelage ». Shizuku détectera automatiquement le code de jumelage.</string>
     <string name="adb_pairing_requires_multi_window">Merci d\'activer le mode écran partagé (mode multi-fenêtres) d\'abord.</string>
     <string name="adb_pairing_requires_multi_window_reason">Le système exige que la boîte de dialogue de jumelage soit toujours visible. Seul le mode écran partagé permet d\'afficher simultanément cette application et la boîte de dialogue système.</string>
-    <string name="adb_error_key_store">Impossible de générer une clé pour le débogage sans fil.\nCela peut être dû à une défaillance du mécanisme KeyStore de cet appareil.</string>
+    <string name="adb_error_key_store">Impossible de générer une clé pour le débogage sans fil.\nCela peut être dû à une défaillance du mécanisme KeyStore sur cet appareil.</string>
     <string name="adb_stopping_tcp">Fermeture du port TCP</string>
-    <string name="adb_error_stop_tcp">Échec à arrêter ADB via TCP</string>
-    <string name="adb_pair_required">Merci d\'aller à l\'étape d\'association d\'abord.</string>
+    <string name="adb_error_stop_tcp">Une erreur est survenue lors de l\'arrêt d\'\ADB via TCP</string>
+    <string name="adb_pair_required">Veuillez suivre les étapes d\'association d\'abord.</string>
     <string name="enable">Activer</string>
     <string name="development_settings">Options pour les développeurs</string>
     <string name="notification_settings">Options des notifications</string>
@@ -156,10 +156,13 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Aucune application de messagerie trouvée</string>
     <string name="toast_shizuku_already_starting">Shizuku commence déjà en arrière-plan</string>
+    <string name="toast_accessibility_tv_only">Ce service est uniquement pris en charge sur les appareils TV</string>
+    <string name="toast_pairing_timeout">Le service de jumelage Shizuku a expiré</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Thème</string>
     <string name="dark_theme_off">Toujours léger</string>
     <string name="dark_theme_on">Toujours sombre</string>
+    <string name="follow_system">Suivre le système</string>
     <!-- About -->
     <string name="action_about">À propos</string>
     <string name="about_dialog_button_close">Fermer</string>
