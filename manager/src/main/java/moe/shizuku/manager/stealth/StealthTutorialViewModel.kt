@@ -80,8 +80,8 @@ class StealthTutorialViewModel(
                 val apk =
                     when (apkType) {
                         ApkType.CLONE -> {
-                            val base = File(app.applicationInfo.sourceDir)
-                            base.changePackageName(_packageName!!)
+                            File(app.applicationInfo.sourceDir)
+                                .changePackageName(_packageName!!, maybeCreateSigningKey = true)
                         }
                         ApkType.STUB -> createStubApk(ORIGINAL_PACKAGE_NAME)
                     }
@@ -89,7 +89,7 @@ class StealthTutorialViewModel(
                 _uiState.postValue(UiState.Pending(apk, apkType))
             } catch (e: Exception) {
                 _uiState.postValue(UiState.Error(e))
-                Log.e("StealthTutorialViewModel", "Error changing package name", e)
+                Log.e("StealthTutorialViewModel", "Error creating APK", e)
             }
         }
     }
