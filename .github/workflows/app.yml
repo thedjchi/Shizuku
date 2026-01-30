@@ -96,9 +96,11 @@ jobs:
 
           ARTIFACT_NAME="${ARTIFACT_NAME}.apk"
 
-          DIR=
-          RENAMED="$(dirname "$FILE")/$ARTIFACT_NAME"
-          mv "$FILE" "$RENAMED"
+          RENAMED="$FILE"
+          if [ "$(basename "$FILE")" != "$ARTIFACT_NAME" ]; then
+            RENAMED="$(dirname "$FILE")/$ARTIFACT_NAME"
+            mv "$FILE" "$RENAMED"
+          fi
 
           echo "versionName=$VERSION" >> $GITHUB_OUTPUT
           echo "artifactName=$ARTIFACT_NAME" >> $GITHUB_OUTPUT
