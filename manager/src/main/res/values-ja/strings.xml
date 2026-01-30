@@ -164,6 +164,7 @@
     <string name="dark_theme">テーマ</string>
     <string name="dark_theme_off">ホワイトテーマ</string>
     <string name="dark_theme_on">ダークテーマ</string>
+    <string name="follow_system">システム設定に従う</string>
     <!-- About -->
     <string name="action_about">このアプリについて</string>
     <string name="about_dialog_button_close">近い</string>
