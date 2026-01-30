@@ -84,12 +84,11 @@ jobs:
           fi
 
           VERSION=$(echo "$(basename "$FILE")" | sed -E 's/^shizuku-(.*)-(debug|release)\.apk/\1/')
+          if [ "${{ inputs.prerelease }}" = "true" ]; then
+            VERSION="${VERSION}-beta"
+          fi
 
           ARTIFACT_NAME="shizuku-$VERSION"
-
-          if [ "${{ inputs.prerelease }}" = "true" ]; then
-            ARTIFACT_NAME="${ARTIFACT_NAME}-beta"
-          fi
 
           if [ "${{ inputs.debug }}" = "true" ]; then
             ARTIFACT_NAME="${ARTIFACT_NAME}-debug"
