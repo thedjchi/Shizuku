@@ -1,0 +1,82 @@
+# Ensure the application still builds itself and warns about known potential bugs or issues.
+name: "CodeQL Advanced"
+
+# Trigger CodeQL scans on:
+# - pull requests targeting any branches
+# - weekly schedule (every Monday at 2:00 UTC)
+on:
+  pull_request:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write # Required for CodeQL to write alerts
+      packages: read
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false # Run all matrix jobs even if one fails
+      matrix:
+        include:
+          - language: actions
+            build-mode: none
+          - language: c-cpp
+            build-mode: none
+          - language: java-kotlin
+            build-mode: manual # Android Gradle project require a manual build process, auto will crash
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Java
+        if: matrix.language == 'java-kotlin'
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Setup Gradle
+        if: matrix.language == 'java-kotlin'
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
+      - name: Manual build steps (Android Java/Kotlin)
+        if: matrix.build-mode == 'manual'
+        run: |
+          echo "=== Starting Android manual build ==="
+          START=$(date +%s)
+
+          # Accept Android SDK licenses
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
+
+          # Gradle optimization
+          echo 'org.gradle.caching=true' >> gradle.properties
+          echo 'org.gradle.parallel=true' >> gradle.properties
+
+          # Compile classes only (faster than assemble)
+          ./gradlew :manager:compileReleaseJavaWithJavac --quiet
+          ./gradlew :manager:compileReleaseKotlin --quiet
+
+          END=$(date +%s)
+          echo "=== Manual build complete in $((END-START)) seconds ==="
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: "/language:${{ matrix.language }}"
