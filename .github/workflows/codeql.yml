@@ -47,9 +47,14 @@ jobs:
           distribution: temurin
           java-version: 21
 
+      # Setup Gradle and Handle Caching for faster builds
       - name: Setup Gradle
         if: matrix.language == 'java-kotlin'
         uses: gradle/actions/setup-gradle@v5
+        with:
+          # This should be the default behavior for pull_request, but we won't task risks. If this is not enabled, a bad actor could write in the cache bad stuff and this could get reused during the build CI when reading cache.
+          # https://github.com/gradle/actions/blob/main/docs/setup-gradle.md#using-the-cache-read-only
+          cache-read-only: true
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
