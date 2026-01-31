@@ -6,6 +6,7 @@ name: "CodeQL Advanced"
 # - weekly schedule (every Monday at 2:00 UTC)
 on:
   pull_request:
+      types: [opened, reopened, synchronize]  # Runs on open, reopen, or update (new commits)
   schedule:
     - cron: '0 2 * * 1'
   workflow_dispatch:
