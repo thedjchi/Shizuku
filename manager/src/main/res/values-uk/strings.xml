@@ -128,7 +128,6 @@
     <string name="settings_tcp_port">TCP-порт</string>
     <string name="settings_tcp_port_default">За замовчуванням (5555)</string>
     <string name="settings_tcp_port_hint">Залиште порожнім, щоб використовувати значення за замовчуванням (5555)</string>
-    <string name="settings_tcp_learn_more">Дізнайтеся більше про використання програм автоматизації для керування Shizuku</string>
     <string name="settings_language">Мова</string>
     <string name="settings_translation_contributors">Співробітники перекладу</string>
     <string name="settings_translation">Беріть участь у перекладі</string>
@@ -161,8 +160,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Поштового додатка не знайдено</string>
     <string name="toast_shizuku_already_starting">Шизуку вже починається на задньому плані</string>
-    <string name="toast_accessibility_tv_only">Ця послуга підтримується лише на телевізійних пристроях.</string>
-    <string name="toast_pairing_timeout">Сервіс парування Шідзуку закінчився.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Завжди легкий</string>
