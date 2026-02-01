@@ -121,7 +121,6 @@
     <string name="settings_tcp_port">TCP 端口</string>
     <string name="settings_tcp_port_default">默认值 (5555)</string>
     <string name="settings_tcp_port_hint">留空则使用默认值(5555)</string>
-    <string name="settings_tcp_learn_more">了解更多关于如何使用自动化应用程序控制 Shizuku 的信息</string>
     <string name="settings_language">语言</string>
     <string name="settings_translation_contributors">翻译贡献者</string>
     <string name="settings_translation">参与翻译</string>
