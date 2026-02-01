@@ -7,7 +7,7 @@
     <string name="home_status_service_version">Version %2$s, %1$s</string>
     <string name="home_status_service_version_update"><![CDATA[Version %2$s, %1$s<br>Relancez pour mettre à jour vers la version %3$s]]></string>
     <!-- Home - Adb -->
-    <string name="home_adb_title"><![CDATA[Démarrer à l\'aide d\'une connexion sur un ordinateur]]></string>
+    <string name="home_adb_title"><![CDATA[Démarrer à l'aide d'une connexion sur un ordinateur]]></string>
     <string name="home_adb_description"><![CDATA[Pour les appareils sans root, vous avez besoin d\'utiliser adb pour démarrer Shizuku (requiert la connexion à un ordinateur). Ce processus doit être répété à chaque fois que l\'appareil est redémarré. Merci de <b><a href=\"%1$s\">lire l\'aide</a></b>.]]></string>
     <string name="home_adb_button_view_help">Lire l\'aide</string>
     <string name="home_adb_button_view_command">Voir la commande</string>
@@ -123,7 +123,6 @@
     <string name="settings_tcp_port">Port TCP</string>
     <string name="settings_tcp_port_default">Par défaut (5555)</string>
     <string name="settings_tcp_port_hint">Laisser vide pour utiliser par défaut (5555)</string>
-    <string name="settings_tcp_learn_more">En savoir plus sur l’utilisation des applications d’automatisation pour contrôler Shizuku</string>
     <string name="settings_language">Langue</string>
     <string name="settings_translation_contributors">Contributeurs à la traduction</string>
     <string name="settings_translation">Participer à la traduction</string>
