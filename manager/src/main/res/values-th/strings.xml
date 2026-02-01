@@ -125,7 +125,6 @@
     <string name="settings_tcp_port">พอร์ต TCP</string>
     <string name="settings_tcp_port_default">ค่าเริ่มต้น (5555)</string>
     <string name="settings_tcp_port_hint">เว้นว่างไว้เพื่อใช้ค่าเริ่มต้น (5555)</string>
-    <string name="settings_tcp_learn_more">เรียนรู้เพิ่มเติมเกี่ยวกับการใช้แอปอัตโนมัติเพื่อควบคุมชิซูกุ</string>
     <string name="settings_language">ภาษา</string>
     <string name="settings_translation_contributors">ผู้มีส่วนร่วมในการแปลภาษา</string>
     <string name="settings_translation">มีส่วนร่วมในการแปล</string>
@@ -158,8 +157,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">ไม่พบแอปอีเมล</string>
     <string name="toast_shizuku_already_starting">ชิซึกุเริ่มอยู่ด้านหลังแล้ว</string>
-    <string name="toast_accessibility_tv_only">บริการนี้รองรับเฉพาะบนอุปกรณ์ทีวีเท่านั้น</string>
-    <string name="toast_pairing_timeout">บริการจับคู่ Shizuku หมดเวลา</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">ธีม</string>
     <string name="dark_theme_off">สว่างเสมอ</string>
