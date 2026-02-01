@@ -127,7 +127,6 @@
     <string name="settings_tcp_port">Port TCP</string>
     <string name="settings_tcp_port_default">Implicit (5555)</string>
     <string name="settings_tcp_port_hint">Lăsați necompletat pentru a utiliza valoarea implicită (5555)</string>
-    <string name="settings_tcp_learn_more">Află mai multe despre utilizarea aplicațiilor de automatizare pentru a controla Shizuku</string>
     <string name="settings_language">Limba</string>
     <string name="settings_translation_contributors">Colaboratori de traduceri</string>
     <string name="settings_translation">Participă la traducere</string>
@@ -160,8 +159,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nu a fost găsită nicio aplicație de e-mail</string>
     <string name="toast_shizuku_already_starting">Shizuku începe deja în fundal</string>
-    <string name="toast_accessibility_tv_only">Acest serviciu este suportat doar pe dispozitive TV.</string>
-    <string name="toast_pairing_timeout">Serviciul de pereche Shizuku expirat.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Temă</string>
     <string name="dark_theme_off">Întotdeauna lumină</string>
