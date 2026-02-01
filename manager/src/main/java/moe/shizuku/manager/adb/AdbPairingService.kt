@@ -175,7 +175,7 @@ class AdbPairingService : Service() {
     }
 
     private fun handleResult(success: Boolean, exception: Throwable?) {
-        stopForeground(STOP_FOREGROUND_REMOVE)
+        stopForeground(STOP_FOREGROUND_DETACH)
 
         val title: String
         val text: String?
