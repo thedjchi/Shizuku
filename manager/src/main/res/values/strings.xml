@@ -133,7 +133,8 @@
     <string name="settings_tcp_port">TCP port</string>
     <string name="settings_tcp_port_default">Default (5555)</string>
     <string name="settings_tcp_port_hint">Leave blank to use default (5555)</string>
-    <string name="settings_tcp_learn_more">Learn more about using automation apps to control Shizuku</string>
+    <string name="settings_auto_disable_usb_debugging">Auto-disable USB debugging</string>
+    <string name="settings_auto_disable_usb_debugging_summary">Disable USB debugging when stopping Shizuku</string>
     <string name="settings_language">Language</string>
     <string name="settings_translation_contributors">Translation contributors</string>
     <string name="settings_translation">Participate in translation</string>

@@ -31,6 +31,11 @@
             android:title="@string/settings_tcp_port"
             android:inputType="number" />
 
+        <SwitchPreferenceCompat
+            android:key="auto_disable_usb_debugging"
+            android:title="@string/settings_auto_disable_usb_debugging"
+            android:summary="@string/settings_auto_disable_usb_debugging_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

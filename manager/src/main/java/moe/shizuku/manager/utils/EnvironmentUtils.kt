@@ -10,8 +10,7 @@ import moe.shizuku.manager.ShizukuApplication
 import moe.shizuku.manager.ShizukuSettings
 import com.topjohnwu.superuser.Shell
 
-val appContext: Context
-    get() = ShizukuApplication.appContext
+private val appContext = ShizukuApplication.appContext
 
 object EnvironmentUtils {
 
