@@ -68,18 +68,19 @@ public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuCl
         try {
             String apk = System.getenv("CLASSPATH");
 
-            Class<?> parserClass = Class.forName("android.content.pm.PackageParser");
-            Object parser = parserClass.getConstructor().newInstance();
+            int lastSlash = apk.lastIndexOf(File.separatorChar);
+            String parentDir = apk.substring(0, lastSlash);
 
-            Method parsePackage = parserClass.getDeclaredMethod("parsePackage", File.class, int.class);
-            parsePackage.setAccessible(true);
+            int secondLastSlash = parentDir.lastIndexOf(File.separatorChar);
+            String dirName = parentDir.substring(secondLastSlash + 1);
 
-            Object pkg = parsePackage.invoke(parser, new File(apk), 0);
+            int dash = dirName.indexOf('-');
+            if (dash > 0) {
+                packageName = dirName.substring(0, dash);
+            } else {
+                packageName = dirName;
+            }
 
-            Field packageNameField = pkg.getClass().getDeclaredField("packageName");
-            packageNameField.setAccessible(true);
-            
-            packageName = (String) packageNameField.get(pkg);
             LOGGER.i("Manager package name is " + packageName);
         } catch (Throwable tr) {
             LOGGER.w("Couldn't get manager package name from CLASSPATH", tr);
