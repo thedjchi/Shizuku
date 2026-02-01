@@ -119,7 +119,6 @@
     <string name="settings_tcp_port">TCP-port</string>
     <string name="settings_tcp_port_default">Alapértelmezett (5555)</string>
     <string name="settings_tcp_port_hint">Hagyja üresen az alapértelmezett érték (5555) használatához</string>
-    <string name="settings_tcp_learn_more">Tudjon meg többet az automatizálási alkalmazások használatáról a Shizuku vezérléséhez</string>
     <string name="settings_language">Nyelv</string>
     <string name="settings_translation_contributors">Fordítási közreműködők</string>
     <string name="settings_translation">Vegyen részt a fordításban</string>
@@ -152,8 +151,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nem található e-mail alkalmazás</string>
     <string name="toast_shizuku_already_starting">A Shizuku már elindul a háttérben</string>
-    <string name="toast_accessibility_tv_only">Ez a szolgáltatás csak TV-eszközökön támogatott.</string>
-    <string name="toast_pairing_timeout">A Shizuku párosítási szolgáltatás időtúllépést okozott.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Téma</string>
     <string name="dark_theme_off">Mindig könnyű</string>
