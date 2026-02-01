@@ -123,7 +123,6 @@
     <string name="settings_tcp_port">ТЦП порт</string>
     <string name="settings_tcp_port_default">Подразумевано (5555)</string>
     <string name="settings_tcp_port_hint">Оставите празно да бисте користили подразумевано (5555)</string>
-    <string name="settings_tcp_learn_more">Сазнајте више о коришћењу апликација за аутоматизацију за контролу Шизукуа</string>
     <string name="settings_language">Језик</string>
     <string name="settings_translation_contributors">Сарадници на преводу</string>
     <string name="settings_translation">Учествујте у преводу</string>
@@ -156,8 +155,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Није пронађена апликација за е-пошту</string>
     <string name="toast_shizuku_already_starting">Шизуку већ почиње у позадини</string>
-    <string name="toast_accessibility_tv_only">Ova usluga je podržana samo na TV uređajima.</string>
-    <string name="toast_pairing_timeout">Shizuku uparivanje servis je isteklo.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Увек светло</string>
