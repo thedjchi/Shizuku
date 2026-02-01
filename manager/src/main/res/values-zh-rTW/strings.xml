@@ -119,7 +119,6 @@
     <string name="settings_tcp_port">TCP 埠</string>
     <string name="settings_tcp_port_default">預設值 (5555)</string>
     <string name="settings_tcp_port_hint">留空使用預設值（5555）</string>
-    <string name="settings_tcp_learn_more">了解更多關於使用自動化應用程式控制 Shizuku 的方法</string>
     <string name="settings_language">語言</string>
     <string name="settings_translation_contributors">翻譯貢獻者</string>
     <string name="settings_translation">參與翻譯</string>
@@ -153,6 +152,7 @@
     <string name="toast_no_email_app">找不到電子郵件應用程式</string>
     <string name="toast_shizuku_already_starting">Shizuku 已在背景啟動了</string>
     <string name="toast_accessibility_tv_only">此服務僅支援電視裝置</string>
+    <string name="toast_pairing_timeout">Shizuku配對服務超時</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">主題</string>
     <string name="dark_theme_off">始終使用淺色主題</string>
