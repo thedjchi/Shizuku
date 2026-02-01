@@ -122,7 +122,6 @@
     <string name="settings_tcp_port">TCP portu</string>
     <string name="settings_tcp_port_default">Defolt (5555)</string>
     <string name="settings_tcp_port_hint">Default (5555) istifadə etmək üçün boş buraxın</string>
-    <string name="settings_tcp_learn_more">Shizuku-nu idarə etmək üçün avtomatlaşdırma tətbiqlərindən istifadə haqqında daha çox məlumat əldə edin</string>
     <string name="settings_language">Dil</string>
     <string name="settings_translation_contributors">Tərcümədə iştirak edənlər</string>
     <string name="settings_translation">Tərcümədə iştirak et</string>
@@ -155,8 +154,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Heç bir e-poçt tətbiqi tapılmadı</string>
     <string name="toast_shizuku_already_starting">Shizuku artıq arxa planda başlayır</string>
-    <string name="toast_accessibility_tv_only">Bu xidmət yalnız TV cihazlarında dəstəklənir.</string>
-    <string name="toast_pairing_timeout">Shizuku cütləşdirmə xidmətinin vaxtı bitdi.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Mövzu</string>
     <string name="dark_theme_off">Həmişə yüngül</string>
