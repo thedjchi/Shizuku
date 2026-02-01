@@ -122,7 +122,6 @@
     <string name="settings_tcp_port">TCP նավահանգիստ</string>
     <string name="settings_tcp_port_default">Լռելյայն (5555)</string>
     <string name="settings_tcp_port_hint">Թողնել դատարկ՝ լռելյայն օգտագործելու համար (5555)</string>
-    <string name="settings_tcp_learn_more">Իմացեք ավելին ավտոմատացման հավելվածների օգտագործման մասին՝ Shizuku-ն վերահսկելու համար</string>
     <string name="settings_language">Լեզու</string>
     <string name="settings_translation_contributors">Թարգմանության աջակցողներ</string>
     <string name="settings_translation">Մասնակցել թարգմանության մեջ</string>
@@ -155,8 +154,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Էլփոստի հավելված չի գտնվել</string>
     <string name="toast_shizuku_already_starting">Շիզուկուն արդեն սկսում է հետեւում</string>
-    <string name="toast_accessibility_tv_only">Այս ծառայությունը աջակցվում է միայն հեռուստացույցների վրա։</string>
-    <string name="toast_pairing_timeout">Շիզուկուի զուգավորման ծառայության ժամանակը սպառվեց։</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Թեմա</string>
     <string name="dark_theme_off">Միշտ թեթեւ</string>
