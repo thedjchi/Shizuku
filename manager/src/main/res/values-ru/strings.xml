@@ -128,7 +128,6 @@
     <string name="settings_tcp_port">TCP-порт</string>
     <string name="settings_tcp_port_default">По умолчанию (5555)</string>
     <string name="settings_tcp_port_hint">Оставьте поле пустым, чтобы использовать значение по умолчанию (5555)</string>
-    <string name="settings_tcp_learn_more">Узнайте больше об использовании приложений автоматизации для управления Сидзуку</string>
     <string name="settings_language">Язык</string>
     <string name="settings_translation_contributors">Авторы перевода</string>
     <string name="settings_translation">Участвуйте в переводе</string>
@@ -161,8 +160,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Приложение электронной почты не найдено</string>
     <string name="toast_shizuku_already_starting">Сидзуку уже запускается в фоновом режиме.</string>
-    <string name="toast_accessibility_tv_only">Эта услуга поддерживается только на телевизионных устройствах.</string>
-    <string name="toast_pairing_timeout">Сервис пары Сидзуку истёк.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Всегда светло</string>
