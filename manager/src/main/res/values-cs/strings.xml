@@ -128,7 +128,6 @@
     <string name="settings_tcp_port">TCP port</string>
     <string name="settings_tcp_port_default">Výchozí (5555)</string>
     <string name="settings_tcp_port_hint">Nechat prázdné pole pro výchozí použití (5555)</string>
-    <string name="settings_tcp_learn_more">Zjistěte více o využití automatizačních aplikací k ovládání Shizuku</string>
     <string name="settings_language">Jazyk</string>
     <string name="settings_translation_contributors">Přispěvatelé překladu</string>
     <string name="settings_translation">Podílet se na překladu</string>
@@ -161,8 +160,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Žádná e-mailová aplikace nenalezena</string>
     <string name="toast_shizuku_already_starting">Shizuku už začíná v pozadí</string>
-    <string name="toast_accessibility_tv_only">Tato služba je podporována pouze na televizních zařízeních.</string>
-    <string name="toast_pairing_timeout">Časový limit párovací služby Shizuku vypršel.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Téma</string>
     <string name="dark_theme_off">Vždy světlé</string>
