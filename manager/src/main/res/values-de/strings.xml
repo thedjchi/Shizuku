@@ -126,7 +126,6 @@
     <string name="settings_tcp_port">TCP-Port</string>
     <string name="settings_tcp_port_default">Standard (5555)</string>
     <string name="settings_tcp_port_hint">Lassen Sie die Standardeinstellung (5555) leer, um sie zu verwenden</string>
-    <string name="settings_tcp_learn_more">Erfahren Sie mehr über die Nutzung von Automatisierungs-Apps zur Steuerung von Shizuku</string>
     <string name="settings_language">Sprache</string>
     <string name="settings_translation_contributors">Zur Übersetzung beigetragen</string>
     <string name="settings_translation">An der Übersetzung mitarbeiten</string>
@@ -159,8 +158,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Keine E-Mail-App gefunden</string>
     <string name="toast_shizuku_already_starting">Shizuku beginnt bereits im Hintergrund</string>
-    <string name="toast_accessibility_tv_only">Dieser Dienst wird nur auf Fernsehgeräten unterstützt.</string>
-    <string name="toast_pairing_timeout">Der Shizuku-Pairing-Service ist abgelaufen.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Thema</string>
     <string name="dark_theme_off">Immer leicht</string>
