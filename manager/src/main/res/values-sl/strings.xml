@@ -124,7 +124,6 @@
     <string name="settings_tcp_port">TCP priključek</string>
     <string name="settings_tcp_port_default">Privzeto (5555)</string>
     <string name="settings_tcp_port_hint">Pustite prazno za privzeto (5555)</string>
-    <string name="settings_tcp_learn_more">Izvedite več o uporabi avtomatizacijskih aplikacij za upravljanje Shizuku</string>
     <string name="settings_language">Jezik</string>
     <string name="settings_translation_contributors">Sodelavci prevodov</string>
     <string name="settings_translation">Sodelujte pri prevajanju</string>
@@ -157,8 +156,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Ni najdene aplikacije za e-pošto</string>
     <string name="toast_shizuku_already_starting">Shizuku že začne v ozadju</string>
-    <string name="toast_accessibility_tv_only">Ta storitev je podprta samo na televizijskih napravah.</string>
-    <string name="toast_pairing_timeout">Storitev za parjenje Shizuku je potekla.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Vedno svetloba</string>
