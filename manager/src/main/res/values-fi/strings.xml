@@ -119,7 +119,6 @@
     <string name="settings_tcp_port">TCP-portti</string>
     <string name="settings_tcp_port_default">Oletusarvo (5555)</string>
     <string name="settings_tcp_port_hint">Jätä tyhjä oletus (5555)</string>
-    <string name="settings_tcp_learn_more">Lue lisää automaatiosovellusten käytöstä Shizukun ohjaamiseen</string>
     <string name="settings_language">Kieli</string>
     <string name="settings_translation_contributors">Käännösavustajat</string>
     <string name="settings_translation">Osallistu käännöksiin</string>
@@ -152,8 +151,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Sähköpostisovellusta ei löytynyt</string>
     <string name="toast_shizuku_already_starting">Shizuku aloittaa jo taustalla</string>
-    <string name="toast_accessibility_tv_only">Tätä palvelua tuetaan vain TV-laitteissa.</string>
-    <string name="toast_pairing_timeout">Shizukun pariliitospalvelu aikakatkaistiin.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Teema</string>
     <string name="dark_theme_off">Aina kevyt</string>
