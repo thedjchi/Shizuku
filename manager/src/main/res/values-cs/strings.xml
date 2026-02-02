@@ -112,7 +112,7 @@
     <!-- Settings -->
     <string name="settings_title">Nastavení</string>
     <string name="settings_behavior">Chování</string>
-    <string name="settings_start_on_boot">Začněte na botě</string>
+    <string name="settings_start_on_boot">Spustit při startu</string>
     <string name="settings_start_on_boot_summary">Vyžaduje Android 11+ nebo root</string>
     <string name="settings_start_on_boot_bug">Kvůli chybě v systému Android 11-12 si bezdrátové ladění nepamatuje žádné autorizované sítě.\n\nPři každém restartu budete muset síť znovu autorizovat klepnutím na „Povolit“, jakmile se zobrazí dialogové okno pro autorizaci.</string>
     <string name="settings_use_system_color">Použít systémovou barvu motivu</string>
@@ -128,6 +128,8 @@
     <string name="settings_tcp_port">TCP port</string>
     <string name="settings_tcp_port_default">Výchozí (5555)</string>
     <string name="settings_tcp_port_hint">Nechat prázdné pole pro výchozí použití (5555)</string>
+    <string name="settings_auto_disable_usb_debugging">Automatické vypnutí ladění USB</string>
+    <string name="settings_auto_disable_usb_debugging_summary">Zakázat ladění USB při zastavení Shizuku</string>
     <string name="settings_language">Jazyk</string>
     <string name="settings_translation_contributors">Přispěvatelé překladu</string>
     <string name="settings_translation">Podílet se na překladu</string>
@@ -160,10 +162,13 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Žádná e-mailová aplikace nenalezena</string>
     <string name="toast_shizuku_already_starting">Shizuku už začíná v pozadí</string>
+    <string name="toast_accessibility_tv_only">Tato služba je podporována pouze na televizních zařízeních</string>
+    <string name="toast_pairing_timeout">Časový limit služby párování Shizuku vypršel</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Téma</string>
     <string name="dark_theme_off">Vždy světlé</string>
     <string name="dark_theme_on">Vždycky tma</string>
+    <string name="follow_system">Podle systému</string>
     <!-- About -->
     <string name="action_about">O Shizuku</string>
     <string name="about_dialog_button_close">Zavřít</string>
