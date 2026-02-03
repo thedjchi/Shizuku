@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">ஷிசுகு அனுமதியைக் கோரிய அல்லது அறிவித்த பயன்பாடுகள் இங்கே காண்பிக்கப்படும்.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">ஆட்டோமேஷன் பயன்பாடுகள் மூலம் ஷிசுகுவைக் கட்டுப்படுத்தவும்</string>
-    <string name="home_automation_description"><![CDATA[Tasker மற்றும் MacroDroid போன்ற பயன்பாடுகள் Shizuku ஐ தானாகத் தொடங்க/நிறுத்த இன்டென்ட்களை அனுப்ப முடியும்.<p>Android 10 அல்லது அதற்குக் கீழே உள்ள ரூட் செய்யப்படாத சாதனங்கள் தொடக்க இன்டென்ட் வேலை செய்ய<font face="monospace"> %1$s </font>ஐப் பயன்படுத்தி PC யிலிருந்து TCP போர்ட்டைத் திறக்க வேண்டும்.]]></string>
     <string name="home_automation_button_view_intents">நோக்கங்களைக் காண்க</string>
-    <string name="home_automation_dialog_label_action">செயல்</string>
-    <string name="home_automation_dialog_label_package">தொகுப்பு</string>
-    <string name="home_automation_dialog_label_class">வர்க்கம்</string>
-    <string name="home_automation_dialog_label_target">இலக்கு</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">டெவலப்பர் வழிகாட்டி</string>
     <string name="home_learn_more_description">ஷிசுகுவுடன் எவ்வாறு உருவாக்குவது என்பதை அறிக</string>
@@ -159,9 +154,7 @@
     <string name="action_about">பற்றி</string>
     <string name="about_dialog_button_close">மூடு</string>
     <string name="about_view_source_code"><![CDATA[%sஇல் மூலக் குறியீட்டைக் காண்க]]></string>
-    <!-- Start -->
-    <string name="action_start">Shizuku ஐத் தொடங்கவும்</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">ஷிசுகுவை நிறுத்து</string>
     <string name="dialog_stop_message">ஷிசுகு சேவை நிறுத்தப்படும்.</string>
     <!-- Notification -->
