@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">برنامه‌هایی که درخواست مجوز Shizuku را داده‌اند یا آن را اعلام کرده‌اند، اینجا نمایش داده می‌شوند.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">کنترل شیزوکو با برنامه‌های اتوماسیون</string>
-    <string name="home_automation_description"><![CDATA[برنامه‌هایی مانند Tasker و MacroDroid می‌توانند برای شروع/توقف خودکار Shizuku، اینتنت ارسال کنند.<p>دستگاه‌های روت نشده با اندروید ۱۰ یا پایین‌تر باید یک پورت TCP را از یک کامپیوتر با استفاده از<font face="monospace"> %1$s </font>باز کنند تا اینتنت شروع کار کند.]]></string>
     <string name="home_automation_button_view_intents">مشاهده اهداف</string>
-    <string name="home_automation_dialog_label_action">اکشن</string>
-    <string name="home_automation_dialog_label_package">بسته</string>
-    <string name="home_automation_dialog_label_class">کلاس</string>
-    <string name="home_automation_dialog_label_target">هدف</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">راهنمای توسعه‌دهنده</string>
     <string name="home_learn_more_description">یاد بگیرید که چگونه با Shizuku توسعه دهید</string>
@@ -159,9 +154,7 @@
     <string name="action_about">درباره</string>
     <string name="about_dialog_button_close">بستن</string>
     <string name="about_view_source_code"><![CDATA[کد منبع را در %s مشاهده کنید]]></string>
-    <!-- Start -->
-    <string name="action_start">Shizuku را شروع کنید</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">توقف Shizuku</string>
     <string name="dialog_stop_message">خدمات Shizuku متوقف خواهد شد.</string>
     <!-- Notification -->
