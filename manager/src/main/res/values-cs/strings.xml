@@ -76,12 +76,7 @@
     <string name="home_app_management_empty">Aplikace, které požádaly nebo deklarovaly povolení Shizuku, se zde zobrazí.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Ovládejte Shizuku pomocí automatizačních aplikací</string>
-    <string name="home_automation_description"><![CDATA[Aplikace jako Tasker a MacroDroid dokáží automaticky odesílat příkazy pro spuštění/zastavení Shizuku.<p>Nerootnutá zařízení s Androidem 10 nebo starším musí otevřít TCP port z počítače pomocí<font face="monospace"> %1$s </font>, aby příkaz pro spuštění fungoval.]]></string>
     <string name="home_automation_button_view_intents">Zobrazit záměry</string>
-    <string name="home_automation_dialog_label_action">Akce</string>
-    <string name="home_automation_dialog_label_package">Balík</string>
-    <string name="home_automation_dialog_label_class">Třída</string>
-    <string name="home_automation_dialog_label_target">Cíl</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Průvodce pro vývojáře</string>
     <string name="home_learn_more_description">Naučte se, jak vyvíjet aplikace s pomocí Shizuku</string>
@@ -173,9 +168,7 @@
     <string name="action_about">O Shizuku</string>
     <string name="about_dialog_button_close">Zavřít</string>
     <string name="about_view_source_code"><![CDATA[Zobrazit zdrojový kód na %su]]></string>
-    <!-- Start -->
-    <string name="action_start">Začněte Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Zastavit Shizuku</string>
     <string name="dialog_stop_message">Služba Shizuku bude zastavena.</string>
     <!-- Notification -->
