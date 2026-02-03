@@ -116,8 +116,9 @@ class AdbStartWorker(context: Context, params: WorkerParameters) : CoroutineWork
                     }
                 }
 
-                cr.registerContentObserver(Settings.Global.getUriFor("adb_wifi_enabled"), false, observer)
                 Settings.Global.putInt(cr, "adb_wifi_enabled", 1)
+                cr.registerContentObserver(Settings.Global.getUriFor("adb_wifi_enabled"), false, observer)
+                startDiscoveryWithTimeout()
 
                 awaitClose {
                     adbMdns.stop()
