@@ -73,12 +73,7 @@
     <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo quyền Shizuku sẽ hiển thị ở đây.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kiểm soát Shizuku bằng ứng dụng tự động hóa</string>
-    <string name="home_automation_description"><![CDATA[Các ứng dụng như Tasker và MacroDroid có thể gửi ý định để tự động khởi động/dừng Shizuku.<p>Các thiết bị chưa root chạy Android 10 trở xuống phải mở cổng TCP từ PC bằng<font face="monospace"> %1$s </font>để ý định khởi động hoạt động.]]></string>
     <string name="home_automation_button_view_intents">Xem ý định</string>
-    <string name="home_automation_dialog_label_action">Hoạt động</string>
-    <string name="home_automation_dialog_label_package">Bưu kiện</string>
-    <string name="home_automation_dialog_label_class">Lớp học</string>
-    <string name="home_automation_dialog_label_target">Mục tiêu</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Hướng dẫn dành cho nhà phát triển</string>
     <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng dụng bằng Shizuku</string>
@@ -161,9 +156,7 @@
     <string name="action_about">Giới thiệu</string>
     <string name="about_dialog_button_close">Đóng</string>
     <string name="about_view_source_code"><![CDATA[Xem mã nguồn tại %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Bắt đầu Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Dừng Shizuku</string>
     <string name="dialog_stop_message">Dịch vụ Shizuku sẽ ngừng hoạt động.</string>
     <!-- Notification -->
