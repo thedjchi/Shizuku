@@ -75,12 +75,7 @@
     <string name="home_app_management_empty">Апликације које су затражиле или пријавиле Шизуку дозволу биће приказане овде.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Контролишите Шизуку помоћу апликација за аутоматизацију</string>
-    <string name="home_automation_description"><![CDATA[Апликације попут Таскера и МакроДроида могу слати намере за аутоматско покретање/заустављање Шизукуа.<p>Уређаји без рутовања на Андроиду 10 или старијим верзијама морају да отворе ТЦП порт са рачунара користећи<font face="monospace"> %1$s </font>да би намера покретања радила.]]></string>
     <string name="home_automation_button_view_intents">Прикажи намере</string>
-    <string name="home_automation_dialog_label_action">Акција</string>
-    <string name="home_automation_dialog_label_package">Пакет</string>
-    <string name="home_automation_dialog_label_class">Класа</string>
-    <string name="home_automation_dialog_label_target">Циљ</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Водич за програмере</string>
     <string name="home_learn_more_description">Научите како да развијате уз Шизуку</string>
@@ -163,9 +158,7 @@
     <string name="action_about">О нама</string>
     <string name="about_dialog_button_close">Затвори</string>
     <string name="about_view_source_code"><![CDATA[Погледајте изворни код на %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Покрени Схизуку</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Заустави Шизуку</string>
     <string name="dialog_stop_message">Шизуку линија ће бити обустављена.</string>
     <!-- Notification -->
