@@ -3,7 +3,7 @@
     <!-- To translators: you can leave your here -->
     <!-- Home - Status -->
     <string name="home_status_service_is_running">%1$s 正在运行</string>
-    <string name="home_status_service_not_running">%1$s未运行</string>
+    <string name="home_status_service_not_running">%1$s 未运行</string>
     <string name="home_status_service_version">版本 %2$s，%1$s</string>
     <string name="home_status_service_version_update"><![CDATA[版本 %2$s，%1$s<br>再次启动来升级到版本 %3$s]]></string>
     <!-- Home - Adb -->
@@ -121,6 +121,8 @@
     <string name="settings_tcp_port">TCP 端口</string>
     <string name="settings_tcp_port_default">默认值 (5555)</string>
     <string name="settings_tcp_port_hint">留空则使用默认值(5555)</string>
+    <string name="settings_auto_disable_usb_debugging">自动禁用 USB 调试</string>
+    <string name="settings_auto_disable_usb_debugging_summary">停止 Shizuku 时禁用 USB 调试</string>
     <string name="settings_language">语言</string>
     <string name="settings_translation_contributors">翻译贡献者</string>
     <string name="settings_translation">参与翻译</string>
