@@ -76,12 +76,7 @@
     <string name="home_app_management_empty">Здесь будут отображаться приложения, которые запросили или заявили разрешение Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Управляйте Сидзуку с помощью приложений автоматизации</string>
-    <string name="home_automation_description"><![CDATA[Приложения, такие как Tasker и MacroDroid, могут отправлять намерения на автоматический запуск/остановку Shizuku.<p>Устройства без root-прав на Android 10 или ниже должны открыть TCP-порт с ПК с помощью<font face="monospace"> %1$s </font>, чтобы намерение запуска сработало.]]></string>
     <string name="home_automation_button_view_intents">Просмотр намерений</string>
-    <string name="home_automation_dialog_label_action">Действие</string>
-    <string name="home_automation_dialog_label_package">Упаковка</string>
-    <string name="home_automation_dialog_label_class">Сорт</string>
-    <string name="home_automation_dialog_label_target">Цель</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Руководство разработчика</string>
     <string name="home_learn_more_description">Узнайте, как начать разрабатывать с Shizuku</string>
@@ -168,9 +163,7 @@
     <string name="action_about">О приложении</string>
     <string name="about_dialog_button_close">Закрывать</string>
     <string name="about_view_source_code"><![CDATA[Исходный код доступен на %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Запустить Шизуку</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Остановить Shizuku</string>
     <string name="dialog_stop_message">Служба Shizuku будет остановлена.</string>
     <!-- Notification -->
