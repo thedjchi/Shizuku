@@ -73,12 +73,7 @@
     <string name="home_app_management_empty">已请求或声明 Shizuku 权限的应用将显示在此处。</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">使用自动化应用程序控制 Shizuku</string>
-    <string name="home_automation_description"><![CDATA[Tasker 和 MacroDroid 等应用可以发送 Intent 来自动启动/停止 Shizuku。<p>运行 Android 10 或更低版本的未 root 设备必须使用<font face="monospace"> %1$s </font>从 PC 打开 TCP 端口，启动 Intent 才能正常工作。]]></string>
     <string name="home_automation_button_view_intents">查看意图</string>
-    <string name="home_automation_dialog_label_action">动作</string>
-    <string name="home_automation_dialog_label_package">包名</string>
-    <string name="home_automation_dialog_label_class">类名</string>
-    <string name="home_automation_dialog_label_target">目标</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">开发者指南</string>
     <string name="home_learn_more_description">了解如何使用 Shizuku 开发</string>
@@ -166,9 +161,7 @@
     <string name="action_about">关于</string>
     <string name="about_dialog_button_close">关闭</string>
     <string name="about_view_source_code"><![CDATA[在 %s 查看源码]]></string>
-    <!-- Start -->
-    <string name="action_start">启动 Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">停止 Shizuku</string>
     <string name="dialog_stop_message">Shizuku 服务将被停止。</string>
     <!-- Notification -->
