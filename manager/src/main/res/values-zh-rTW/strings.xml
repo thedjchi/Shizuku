@@ -119,6 +119,8 @@
     <string name="settings_tcp_port">TCP 埠</string>
     <string name="settings_tcp_port_default">預設值 (5555)</string>
     <string name="settings_tcp_port_hint">留空使用預設值（5555）</string>
+    <string name="settings_auto_disable_usb_debugging">自動停用 USB 偵錯</string>
+    <string name="settings_auto_disable_usb_debugging_summary">停止 Shizuku 時禁用 USB 偵錯</string>
     <string name="settings_language">語言</string>
     <string name="settings_translation_contributors">翻譯貢獻者</string>
     <string name="settings_translation">參與翻譯</string>
