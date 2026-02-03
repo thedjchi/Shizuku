@@ -74,12 +74,7 @@
     <string name="home_app_management_empty">Այստեղ կցուցադրվեն հավելվածները, որոնք խնդրել կամ հայտարարել են Shizuku թույլտվությունը։</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Կառավարեք Շիզուկուն ավտոմատացման հավելվածներով</string>
-    <string name="home_automation_description"><![CDATA[Tasker-ի և MacroDroid-ի նման հավելվածները կարող են ավտոմատ կերպով ուղարկել Shizuku-ն մեկնարկելու/անջատելու մտադրություններ:<p>Android 10 կամ ավելի ցածր օպերացիոն համակարգով աշխատող unrooted սարքերը պետք է բացեն TCP միացք համակարգչից՝ օգտագործելով<font face="monospace"> %1$s </font>մեկնարկի մտադրության աշխատանքի համար:]]></string>
     <string name="home_automation_button_view_intents">Դիտել մտադրությունները</string>
-    <string name="home_automation_dialog_label_action">Գործողություն</string>
-    <string name="home_automation_dialog_label_package">Փաթեթ</string>
-    <string name="home_automation_dialog_label_class">Դաս</string>
-    <string name="home_automation_dialog_label_target">Նպատակակետ</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Մշակողի ուղեցույց</string>
     <string name="home_learn_more_description">Սովորեք ծրագրավորել Shizuku-ով կամ Shizuku-ն ուրիշ ծրագրերի հետ օգտագործել</string>
@@ -162,9 +157,7 @@
     <string name="action_about">Ծրագրի մասին</string>
     <string name="about_dialog_button_close">Փակել</string>
     <string name="about_view_source_code"><![CDATA[Տեսնել կոդի աղբյուրը %s-ում]]></string>
-    <!-- Start -->
-    <string name="action_start">Սկսեք Shizuku-ն</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Անջատել Shizuku-ն</string>
     <string name="dialog_stop_message">Shizuku-ի ծառայությունը կանջատվի։</string>
     <!-- Notification -->
