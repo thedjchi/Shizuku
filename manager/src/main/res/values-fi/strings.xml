@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Sovellukset, jotka ovat pyytäneet tai ilmoittaneet Shizuku-luvan, näkyvät tässä.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Ohjaa Shizukua automaatiosovelluksilla</string>
-    <string name="home_automation_description"><![CDATA[Sovellukset, kuten Tasker ja MacroDroid, voivat lähettää aikomuksia Shizukun automaattiseen käynnistämiseen/pysäyttämiseen.<p>Roottamattomien Android 10- tai vanhemmissa laitteissa on avattava TCP-portti tietokoneelta käyttämällä<font face="monospace"> %1$s </font>, jotta käynnistysaike toimisi.]]></string>
     <string name="home_automation_button_view_intents">Näytä aikomukset</string>
-    <string name="home_automation_dialog_label_action">Toiminta</string>
-    <string name="home_automation_dialog_label_package">Paketti</string>
-    <string name="home_automation_dialog_label_class">Luokka</string>
-    <string name="home_automation_dialog_label_target">Kohde</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Kehittäjän opas</string>
     <string name="home_learn_more_description">Opi kehittymään Shizukun kanssa</string>
@@ -159,9 +154,7 @@
     <string name="action_about">Noin</string>
     <string name="about_dialog_button_close">Sulkea</string>
     <string name="about_view_source_code"><![CDATA[Katso lähdekoodi osoitteesta %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Aloita Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Pysäyttäkää Shizuku</string>
     <string name="dialog_stop_message">Shizukun palvelu lopetetaan.</string>
     <!-- Notification -->
