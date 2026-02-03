@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Οι εφαρμογές που έχουν ζητήσει ή δηλώσει την άδεια Shizuku θα εμφανίζονται εδώ.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Ελέγξτε το Shizuku με εφαρμογές αυτοματισμού</string>
-    <string name="home_automation_description"><![CDATA[Εφαρμογές όπως το Tasker και το MacroDroid μπορούν να στείλουν intents για την αυτόματη εκκίνηση/διακοπή του Shizuku.<p>Οι συσκευές χωρίς root σε Android 10 ή παλαιότερη έκδοση πρέπει να ανοίξουν μια θύρα TCP από έναν υπολογιστή χρησιμοποιώντας<font face="monospace"> %1$s </font>για να λειτουργήσει η intent εκκίνησης.]]></string>
     <string name="home_automation_button_view_intents">Προβολή προθέσεων</string>
-    <string name="home_automation_dialog_label_action">Δράση</string>
-    <string name="home_automation_dialog_label_package">Πακέτο</string>
-    <string name="home_automation_dialog_label_class">Τάξη</string>
-    <string name="home_automation_dialog_label_target">Στόχος</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Οδηγός προγραμματιστή</string>
     <string name="home_learn_more_description">Μάθετε πώς να αναπτύσσεστε με το Shizuku</string>
@@ -159,9 +154,7 @@
     <string name="action_about">Για</string>
     <string name="about_dialog_button_close">Κλείνω</string>
     <string name="about_view_source_code"><![CDATA[Δείτε τον πηγαίο κώδικα στη διεύθυνση %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Ξεκινήστε το Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Σταματήστε το Shizuku</string>
     <string name="dialog_stop_message">Η υπηρεσία Shizuku θα διακοπεί.</string>
     <!-- Notification -->
