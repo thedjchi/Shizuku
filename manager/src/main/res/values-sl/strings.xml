@@ -76,12 +76,7 @@
     <string name="home_app_management_empty">Tukaj bodo prikazane aplikacije, ki so zahtevale ali prijavile dovoljenje Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Upravljajte Shizuku z aplikacijami za avtomatizacijo</string>
-    <string name="home_automation_description"><![CDATA[Aplikacije, kot sta Tasker in MacroDroid, lahko pošiljajo namere za samodejni zagon/ustavitev aplikacije Shizuku.<p>Naprave brez roota v sistemu Android 10 ali starejšem morajo odpreti vrata TCP iz računalnika z uporabo<font face="monospace"> %1$s </font>, da namera za zagon deluje.]]></string>
     <string name="home_automation_button_view_intents">Ogled namenov</string>
-    <string name="home_automation_dialog_label_action">Dejanje</string>
-    <string name="home_automation_dialog_label_package">Paket</string>
-    <string name="home_automation_dialog_label_class">Razred</string>
-    <string name="home_automation_dialog_label_target">Cilj</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Vodnik za razvijalce</string>
     <string name="home_learn_more_description">Naučite se razvijati s Shizukujem</string>
@@ -164,9 +159,7 @@
     <string name="action_about">O</string>
     <string name="about_dialog_button_close">Blizu</string>
     <string name="about_view_source_code"><![CDATA[Poglej izvorno kodo na %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Zaženi Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Ustavi Shizuku</string>
     <string name="dialog_stop_message">Storitev Shizuku bo bila ustavljena.</string>
     <!-- Notification -->
