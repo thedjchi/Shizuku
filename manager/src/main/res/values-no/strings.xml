@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Apper som har bedt om eller erklært Shizuku-tillatelsen vil vises her.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Styr Shizuku med automatiseringsapper</string>
-    <string name="home_automation_description"><![CDATA[Apper som Tasker og MacroDroid kan sende intensjoner om å starte/stoppe Shizuku automatisk.<p>Ikke-rootede enheter på Android 10 eller eldre må åpne en TCP-port fra en PC ved hjelp av<font face="monospace"> %1$s </font>for at startintensjonen skal fungere.]]></string>
     <string name="home_automation_button_view_intents">Vis intensjoner</string>
-    <string name="home_automation_dialog_label_action">Handling</string>
-    <string name="home_automation_dialog_label_package">Pakke</string>
-    <string name="home_automation_dialog_label_class">Klasse</string>
-    <string name="home_automation_dialog_label_target">Mål</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Utviklerveiledning</string>
     <string name="home_learn_more_description">Lær hvordan du utvikler deg med Shizuku</string>
@@ -162,9 +157,7 @@
     <string name="action_about">Om</string>
     <string name="about_dialog_button_close">Lukke</string>
     <string name="about_view_source_code"><![CDATA[Se kildekoden på %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Start Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Stopp Shizuku</string>
     <string name="dialog_stop_message">Shizuku-tjenesten vil bli stanset.</string>
     <!-- Notification -->
