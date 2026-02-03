@@ -70,12 +70,7 @@
     <string name="home_app_management_empty">Apl yang telah meminta atau mengisytiharkan kebenaran Shizuku akan dipaparkan di sini.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kawal Shizuku dengan apl automasi</string>
-    <string name="home_automation_description"><![CDATA[Apl seperti Tasker dan MacroDroid boleh menghantar niat untuk memulakan/menghentikan Shizuku secara automatik.<p>Peranti tidak berakar pada Android 10 atau ke bawah mesti membuka port TCP daripada PC menggunakan<font face="monospace"> %1$s </font>untuk niat mula berfungsi.]]></string>
     <string name="home_automation_button_view_intents">Lihat niat</string>
-    <string name="home_automation_dialog_label_action">Tindakan</string>
-    <string name="home_automation_dialog_label_package">Pakej</string>
-    <string name="home_automation_dialog_label_class">Kelas</string>
-    <string name="home_automation_dialog_label_target">Sasaran</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Panduan pembangun</string>
     <string name="home_learn_more_description">Ketahui cara membangun dengan Shizuku</string>
@@ -158,9 +153,7 @@
     <string name="action_about">Tentang</string>
     <string name="about_dialog_button_close">tutup</string>
     <string name="about_view_source_code"><![CDATA[Lihat kod sumber di %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Mulakan Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Hentikan Shizuku</string>
     <string name="dialog_stop_message">Perkhidmatan Shizuku akan dihentikan.</string>
     <!-- Notification -->
