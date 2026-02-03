@@ -15,6 +15,7 @@ import java.lang.annotation.Retention;
 import java.util.Locale;
 import moe.shizuku.manager.service.WatchdogService;
 import moe.shizuku.manager.receiver.BootCompleteReceiver;
+import moe.shizuku.manager.utils.Token;
 import moe.shizuku.manager.utils.EmptySharedPreferencesImpl;
 import moe.shizuku.manager.utils.EnvironmentUtils;
 import static java.lang.annotation.RetentionPolicy.SOURCE;
@@ -101,6 +102,20 @@ public class ShizukuSettings {
 
     public static boolean getAutoDisableUsbDebugging() {
         return getPreferences().getBoolean(Keys.KEY_AUTO_DISABLE_USB_DEBUGGING, false);
+    }
+
+    public static String getAuthToken() {
+        String authToken = getPreferences().getString("auth_token", null);
+        if (authToken == null || authToken.isEmpty()) {
+            authToken = generateAuthToken();
+        }
+        return authToken;
+    }
+
+    public static String generateAuthToken() {
+        String token = Token.generateToken();
+        getPreferences().edit().putString("auth_token", token).apply();
+        return token;
     }
 
     public static boolean getStartOnBoot(Context context) {

@@ -1,18 +1,20 @@
 package moe.shizuku.manager.home
 
-import android.text.method.LinkMovementMethod
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.textfield.TextInputEditText
 import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.R
+import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 import moe.shizuku.manager.databinding.HomeAutomationBinding
+import moe.shizuku.manager.databinding.HomeAutomationBottomSheetBinding
 import moe.shizuku.manager.ktx.toHtml
-import moe.shizuku.manager.receiver.ManualStartReceiver
-import moe.shizuku.manager.receiver.ManualStopReceiver
+import moe.shizuku.manager.utils.EnvironmentUtils
 import rikka.html.text.HtmlCompat
 import rikka.recyclerview.BaseViewHolder
 import rikka.recyclerview.BaseViewHolder.Creator
@@ -31,37 +33,53 @@ class AutomationViewHolder(binding: HomeAutomationBinding, root: View) : BaseVie
         binding.button1.setOnClickListener { v: View ->
             val context = v.context
 
-            val startLabel = context.getString(R.string.action_start)
-            val stopLabel = context.getString(R.string.action_stop)
-            val actionLabel = context.getString(R.string.home_automation_dialog_label_action)
-            val packageLabel = context.getString(R.string.home_automation_dialog_label_package)
-            val classLabel = context.getString(R.string.home_automation_dialog_label_class)
-            val targetLabel = context.getString(R.string.home_automation_dialog_label_target)
+            val authToken = ShizukuSettings.getAuthToken()
 
-            MaterialAlertDialogBuilder(context)
-                .setTitle(R.string.home_automation_button_view_intents)
-                .setMessage(HtmlCompat.fromHtml("""
-                    <h4>$startLabel</h4>
-                    <b>$actionLabel:</b> ${BuildConfig.APPLICATION_ID}.START<br>
-                    <b>$packageLabel:</b> ${context.packageName}<br>
-                    <b>$classLabel:</b> ${ManualStartReceiver::class.java.name}<br>
-                    <b>$targetLabel:</b> Broadcast Receiver<br><br>
+            val sheetBinding = HomeAutomationBottomSheetBinding.inflate(
+                LayoutInflater.from(context)
+            )
 
-                    <h4>$stopLabel</h4>
-                    <b>$actionLabel:</b> ${BuildConfig.APPLICATION_ID}.STOP<br>
-                    <b>$packageLabel:</b> ${context.packageName}<br>
-                    <b>$classLabel:</b> ${ManualStopReceiver::class.java.name}<br>
-                    <b>$targetLabel:</b> Broadcast Receiver<br>
-                """.trimIndent()))
-                .setPositiveButton(android.R.string.ok, null)
-                .show()
-                .getWindow()!!
-                .getDecorView()
-                .findViewById<TextView>(android.R.id.message)
-                .setTextIsSelectable(true)
+            sheetBinding.apply {
+                action.apply {
+                    updateActionText(buttonGroup.checkedButtonId)
+                    setKeyListener(null)
+                }
+                packageName.apply {
+                    setKeyListener(null)
+                    setText(context.packageName)
+                }
+                target.apply {
+                    setKeyListener(null)
+                    setText("Broadcast Receiver")
+                }
+                extras.apply {
+                    setKeyListener(null)
+                    setText(authToken)
+                }
+                buttonGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+                    if (isChecked) action.updateActionText(checkedId)
+                }
+            }
+            
+            val sheet = BottomSheetDialog(context)
+            sheet.setContentView(sheetBinding.root)
+            sheet.show()
         }
-        binding.text1.movementMethod = LinkMovementMethod.getInstance()
-        binding.text1.text = context.getString(R.string.home_automation_description, "adb tcpip 5555")
+        if (
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.R &&
+            !EnvironmentUtils.isTelevision() &&
+            !EnvironmentUtils.isRooted()
+        ) {
+            binding.text2.visibility = View.VISIBLE
+            binding.text2.text = context.getString(R.string.home_automation_description_2, "adb tcpip 5555")
             .toHtml(HtmlCompat.FROM_HTML_OPTION_TRIM_WHITESPACE)
+        }
+    }
+
+    private fun TextInputEditText.updateActionText(buttonId: Int) {
+        when (buttonId) {
+            R.id.buttonStart -> setText("${BuildConfig.APPLICATION_ID}.START")
+            R.id.buttonStop -> setText("${BuildConfig.APPLICATION_ID}.STOP")
+        }
     }
 }

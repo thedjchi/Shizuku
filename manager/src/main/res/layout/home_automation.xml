@@ -33,7 +33,15 @@
         style="@style/CardSummary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="@string/home_automation_description" />
+        android:text="@string/home_automation_description" />
+
+    <TextView
+        android:id="@android:id/text2"
+        style="@style/CardSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:text="@string/home_automation_description_2" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@android:id/button1"
