@@ -74,12 +74,7 @@
     <string name="home_app_management_empty">Shizuku iznini talep eden veya beyan eden uygulamalar burada gösterilecektir.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Shizuku\'yu otomasyon uygulamalarıyla kontrol edin</string>
-    <string name="home_automation_description"><![CDATA[Tasker ve MacroDroid gibi uygulamalar Shizuku\'yu otomatik olarak başlatmak/durdurmak için niyetler gönderebilir.<p>Android 10 veya daha eski sürümlerde rootlanmamış cihazlar, başlatma niyetinin çalışması için<font face="monospace"> %1$s </font>kullanarak bir bilgisayardan bir TCP portu açmalıdır.]]></string>
     <string name="home_automation_button_view_intents">Görünüm amaçları</string>
-    <string name="home_automation_dialog_label_action">Aksiyon</string>
-    <string name="home_automation_dialog_label_package">Paket</string>
-    <string name="home_automation_dialog_label_class">Sınıf</string>
-    <string name="home_automation_dialog_label_target">Hedef</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Geliştirici kılavuzu</string>
     <string name="home_learn_more_description">Shizuku ile nasıl uygulama geliştireceğinizi öğrenin</string>
@@ -166,9 +161,7 @@
     <string name="action_about">Hakkında</string>
     <string name="about_dialog_button_close">Kapalı</string>
     <string name="about_view_source_code"><![CDATA[%s ’da kaynak kodunu görüntüle]]></string>
-    <!-- Start -->
-    <string name="action_start">Shizuku\'yu başlat</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Shizuku’yu durdur</string>
     <string name="dialog_stop_message">Shizuku hizmeti durdurulacak.</string>
     <!-- Notification -->
