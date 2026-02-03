@@ -74,12 +74,7 @@
     <string name="home_app_management_empty">Qui verranno visualizzate le app che hanno richiesto o dichiarato l\'autorizzazione Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Controlla Shizuku con le app di automazione</string>
-    <string name="home_automation_description"><![CDATA[App come Tasker e MacroDroid possono inviare intent per avviare/arrestare Shizuku automaticamente.<p>I dispositivi non rootati su Android 10 o versioni precedenti devono aprire una porta TCP da un PC utilizzando<font face="monospace"> %1$s </font>affinché l\'intento di avvio funzioni.]]></string>
     <string name="home_automation_button_view_intents">Visualizza intenti</string>
-    <string name="home_automation_dialog_label_action">Azione</string>
-    <string name="home_automation_dialog_label_package">Pacchetto</string>
-    <string name="home_automation_dialog_label_class">Classe</string>
-    <string name="home_automation_dialog_label_target">Bersaglio</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Guida per gli sviluppatori</string>
     <string name="home_learn_more_description">Impara a sviluppare con Shizuku</string>
@@ -166,9 +161,7 @@
     <string name="action_about">Info</string>
     <string name="about_dialog_button_close">Vicino</string>
     <string name="about_view_source_code"><![CDATA[Visualizza il codice sorgente a %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Inizia Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Interrompi Shizuku</string>
     <string name="dialog_stop_message">Il servizio Shizuku verrà interrotto.</string>
     <!-- Notification -->
