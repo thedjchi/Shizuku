@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Apps die de Shizuku-toestemming hebben aangevraagd of verklaard, zullen hier weergegeven worden.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Bestuur Shizuku met automatiseringsapps</string>
-    <string name="home_automation_description"><![CDATA[Apps zoals Tasker en MacroDroid kunnen intenties verzenden om Shizuku automatisch te starten/stoppen.<p>Niet-geroote apparaten met Android 10 of lager moeten een TCP-poort openen vanaf een pc met behulp van<font face="monospace"> %1$s </font>om de startintentie te laten werken.]]></string>
     <string name="home_automation_button_view_intents">Bekijk intenties</string>
-    <string name="home_automation_dialog_label_action">Actie</string>
-    <string name="home_automation_dialog_label_package">Pakket</string>
-    <string name="home_automation_dialog_label_class">Klasse</string>
-    <string name="home_automation_dialog_label_target">Doel</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Ontwikkelaarsgids</string>
     <string name="home_learn_more_description">Leer hoe je ontwikkelt met Shizuku</string>
@@ -159,9 +154,7 @@
     <string name="action_about">Over</string>
     <string name="about_dialog_button_close">Sluiten</string>
     <string name="about_view_source_code"><![CDATA[Bekijk de broncode op %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Begin met Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Stop Shizuku</string>
     <string name="dialog_stop_message">De Shizuku-service zal stopgezet worden.</string>
     <!-- Notification -->
