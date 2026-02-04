@@ -91,6 +91,10 @@
     <string name="home_automation_regenerate_token">Regenerate token?</string>
     <string name="home_automation_regenerate_token_message">You will need to reconfigure your intents with the new token.</string>
 
+    <!-- Home - Stealth mode -->
+    <string name="home_stealth_title">Hide Shizuku from other apps</string>
+    <string name="home_stealth_description">Note: Enabling this feature may cause apps that rely on Shizuku to stop functioning correctly.\n\nAlso, some apps may still be able to detect Shizuku even when hidden.</string>
+
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Developer guide</string>
     <string name="home_learn_more_description">Learn how to develop with Shizuku</string>
