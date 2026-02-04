@@ -14,7 +14,7 @@
         android:clipToPadding="false"
         app:fitsSystemWindowsInsets="start|end"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/packageNameContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -223,8 +223,8 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        style="?floatingActionButtonStyle"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        style="?extendedFloatingActionButtonSmallStyle"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -240,6 +240,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_horizontal"
         android:visibility="gone"
+        app:indicatorSize="46dp"
+        app:containerWidth="56dp"
+        app:containerHeight="56dp"
         app:layout_constraintBottom_toTopOf="@id/packageNameContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_fitsSystemWindowsInsets="start|end" />
