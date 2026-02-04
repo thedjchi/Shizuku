@@ -229,6 +229,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_horizontal"
+        app:backgroundTint="@color/fab_background_color"
+        app:iconTint="@color/fab_icon_color"
         app:layout_constraintBottom_toTopOf="@id/packageNameContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_fitsSystemWindowsInsets="start|end" />
