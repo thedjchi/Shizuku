@@ -12,6 +12,7 @@ import moe.shizuku.manager.utils.ApkUtils.*
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.File
+import java.security.MessageDigest
 
 object UpdateHelper {
     private val app = ShizukuApplication.application
@@ -43,12 +44,12 @@ object UpdateHelper {
             fun parse(tag: String): Version? {
                 val regex = Regex("""(\d+)\.(\d+)\.(\d+)(?:\.r(\d+))?""")
                 val match = regex.find(tag) ?: return null
-                val (major, minor, patch, commitStr) = match.destructured
+                val (major, minor, patch, commit) = match.destructured
                 return Version(
                     major.toInt(),
                     minor.toInt(),
                     patch.toInt(),
-                    commitStr.toIntOrNull() ?: 0,
+                    commit.toIntOrNull() ?: 0
                 )
             }
         }
@@ -58,17 +59,19 @@ object UpdateHelper {
         val version: Version,
         val filename: String,
         val url: String,
+        val digest: String
     )
 
     data class GitHubRelease(
         val tag_name: String,
         val prerelease: Boolean,
-        val assets: List<GitHubAsset>,
+        val assets: List<GitHubAsset>
     )
 
     data class GitHubAsset(
         val name: String,
         val browser_download_url: String,
+        val digest: String
     )
 
     private lateinit var latestRelease: Release
@@ -126,8 +129,23 @@ object UpdateHelper {
 
         val apk =
             latestRelease.download()?.run {
-                if (app.packageName != ORIGINAL_PACKAGE_NAME) {
-                    changePackageName(app.packageName)
+                val pm = appContext.packageManager
+                val apkPackageName = pm.getPackageArchiveInfo(
+                    this.path, 0
+                )?.packageName
+                if (app.packageName != apkPackageName) {
+                    try {
+                        android.util.Log.d("UpdateHelper", "Changing package name from $apkPackageName to ${app.packageName}")
+                        changePackageName(app.packageName)
+                    } catch (e: Exception) {
+                        Toast
+                            .makeText(
+                                appContext,
+                                appContext.getString(R.string.update_failed),
+                                Toast.LENGTH_SHORT,
+                            ).show()
+                        return@update
+                    }
                 } else {
                     this
                 }
@@ -142,10 +160,10 @@ object UpdateHelper {
             return
         }
 
-        appContext.installPackage(apk) { isSuccess, msg ->
+        appContext.installPackage(apk) { isSuccess, _ ->
             val toastMsg =
                 if (isSuccess) appContext.getString(R.string.update_success)
-                else appContext.getString(R.string.update_failed) + ": " + msg
+                else appContext.getString(R.string.update_failed)
             Toast.makeText(appContext, toastMsg, Toast.LENGTH_SHORT).show()
         }
     }
@@ -178,6 +196,7 @@ object UpdateHelper {
                         version = version,
                         filename = asset.name,
                         url = asset.browser_download_url,
+                        digest = asset.digest
                     )
                 }.maxByOrNull { it.version }
                 ?.also { latestRelease = it }
@@ -194,6 +213,17 @@ object UpdateHelper {
                 response.body?.byteStream()?.copyTo(out)
             }
 
+            val downloadedDigest = "sha256:" + apkFile.sha256()
+            if (downloadedDigest != digest)
+                throw SecurityException("Digest of downloaded file does not match the one reported by GitHub")
+
             apkFile
         }
+
+    fun File.sha256(): String {
+        val bytes = readBytes()
+        val digest = MessageDigest.getInstance("SHA-256").digest(bytes)
+        return digest.joinToString("") { "%02x".format(it) }
+    }
+
 }
