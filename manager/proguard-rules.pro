@@ -55,6 +55,12 @@
     public *** d(...);
 }
 
+# com.reandroid.ARSCLIB implements android/xmlpull stubs which R8 tries to strip, causing crashes on release builds
+# https://github.com/REAndroid/ARSCLib/issues/95
+-keep public interface android.util.AttributeSet { *; }
+-keep public interface android.content.res.XmlResourceParser { *; }
+-keep public interface org.xmlpull.v1.** { *; }
+
 -allowaccessmodification
 -repackageclasses rikka.shizuku
 -keepattributes SourceFile,LineNumberTable
