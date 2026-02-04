@@ -62,7 +62,6 @@ import rikka.shizuku.server.util.UserHandleCompat;
 public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuClientManager, ShizukuConfigManager> {
 
     public static final String MANAGER_APPLICATION_ID;
-    public static final String REQUEST_PERMISSION_ACTION;
 
     static {
         String packageName = null;
@@ -86,10 +85,6 @@ public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuCl
             LOGGER.w("Couldn't get manager package name from CLASSPATH", tr);
         }
         MANAGER_APPLICATION_ID = packageName;
-        REQUEST_PERMISSION_ACTION = MANAGER_APPLICATION_ID != null
-            ? MANAGER_APPLICATION_ID + ".intent.action.REQUEST_PERMISSION"
-            : null;
-
     }
 
 
@@ -305,7 +300,7 @@ public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuCl
             return;
         }
 
-        Intent intent = new Intent(REQUEST_PERMISSION_ACTION)
+        Intent intent = new Intent(ServerConstants.REQUEST_PERMISSION_ACTION)
                 .setPackage(MANAGER_APPLICATION_ID)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT)
                 .putExtra("uid", callingUid)
