@@ -29,6 +29,7 @@ import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.management.AppsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
 import moe.shizuku.manager.utils.AppIconCache
+import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
@@ -214,6 +215,10 @@ abstract class HomeActivity : AppBarActivity() {
                     lifecycleScope.launch {
                         UpdateHelper.checkAndInstallUpdates()
                     }
+                }
+
+                binding.btnDonate.setOnClickListener {
+                    CustomTabsHelper.launchUrlOrCopy(this, "https://www.buymeacoffee.com/thedjchi")
                 }
 
                 val dialog = MaterialAlertDialogBuilder(this)
