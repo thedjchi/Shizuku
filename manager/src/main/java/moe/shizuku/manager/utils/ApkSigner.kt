@@ -46,9 +46,9 @@ object ApkSigner {
         )
             .setInputApk(input)
             .setOutputApk(output)
-            .setV1SigningEnabled(true)
+            .setV1SigningEnabled(false)
             .setV2SigningEnabled(true)
-            .setV3SigningEnabled(true)
+            .setV3SigningEnabled(false)
             .build()
             .sign()
     }
