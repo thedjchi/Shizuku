@@ -71,12 +71,16 @@
     <string name="home_app_management_empty">申請或宣告 Shizuku 許可的應用程式會顯示在這裡。</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">使用自動化應用程式控制 Shizuku</string>
-    <string name="home_automation_description"><![CDATA[Tasker 和 MacroDroid 等應用程式可以傳送 Intent 來自動啟動/停止 Shizuku。<p>執行 Android 10 或更低版本的未 root 裝置必須使用<font face="monospace"> %1$s </font>從 PC 開啟 TCP 連接埠，啟動 Intent 才能正常運作。]]></string>
+    <string name="home_automation_description">Tasker 和 MacroDroid 等應用程式可以發送意圖來自動啟動/停止 Shizuku。</string>
+    <string name="home_automation_description_device_restriction">要在您的裝置上使用啟動意圖，您首先需要透過電腦執行 %1$s 來啟用 ADB網络調試。</string>
     <string name="home_automation_button_view_intents">查看意圖</string>
-    <string name="home_automation_dialog_label_action">動作</string>
-    <string name="home_automation_dialog_label_package">套件名</string>
-    <string name="home_automation_dialog_label_class">類別名</string>
-    <string name="home_automation_dialog_label_target">目標</string>
+    <string name="home_automation_bottom_sheet_intents">意圖</string>
+    <string name="home_automation_bottom_sheet_label_action">動作</string>
+    <string name="home_automation_bottom_sheet_label_package">套件</string>
+    <string name="home_automation_bottom_sheet_label_target">目標</string>
+    <string name="home_automation_bottom_sheet_label_extras">额外的</string>
+    <string name="home_automation_regenerate_token">重新產生令牌？</string>
+    <string name="home_automation_regenerate_token_message">您需要使用新令牌重新配置您的意圖。</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">開發者指南</string>
     <string name="home_learn_more_description">瞭解如何使用 Shizuku 開發</string>
@@ -119,7 +123,8 @@
     <string name="settings_tcp_port">TCP 埠</string>
     <string name="settings_tcp_port_default">預設值 (5555)</string>
     <string name="settings_tcp_port_hint">留空使用預設值（5555）</string>
-    <string name="settings_tcp_learn_more">了解更多關於使用自動化應用程式控制 Shizuku 的方法</string>
+    <string name="settings_auto_disable_usb_debugging">自動停用 USB 偵錯</string>
+    <string name="settings_auto_disable_usb_debugging_summary">停止 Shizuku 時禁用 USB 偵錯</string>
     <string name="settings_language">語言</string>
     <string name="settings_translation_contributors">翻譯貢獻者</string>
     <string name="settings_translation">參與翻譯</string>
@@ -153,6 +158,7 @@
     <string name="toast_no_email_app">找不到電子郵件應用程式</string>
     <string name="toast_shizuku_already_starting">Shizuku 已在背景啟動了</string>
     <string name="toast_accessibility_tv_only">此服務僅支援電視裝置</string>
+    <string name="toast_pairing_timeout">Shizuku配對服務超時</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">主題</string>
     <string name="dark_theme_off">始終使用淺色主題</string>
@@ -162,9 +168,9 @@
     <string name="action_about">關於</string>
     <string name="about_dialog_button_close">關閉</string>
     <string name="about_view_source_code"><![CDATA[在 %s 檢視原始碼]]></string>
-    <!-- Start -->
-    <string name="action_start">開始 Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
+    <string name="start">啟動</string>
+    <string name="stop">停止</string>
     <string name="action_stop">停止 Shizuku</string>
     <string name="dialog_stop_message">Shizuku 服務將被停止。</string>
     <!-- Notification -->
@@ -183,6 +189,10 @@
     <string name="notification_adb_pairing_succeed_text">您現在可以啟動 Shizuku 服務了。</string>
     <string name="notification_adb_pairing_failed_title">配對失敗</string>
     <string name="notification_adb_pairing_retry">重試</string>
+    <string name="notification_auth_missing_title">需要授權令牌</string>
+    <string name="notification_auth_missing_message">在你的意圖中加入“auth”參數。你可以在應用程式中點擊「查看意圖」找到你的令牌。</string>
+    <string name="notification_auth_invalid_title">無效的授權令牌</string>
+    <string name="notification_auth_invalid_message">請確保意圖中的令牌與應用程式中「查看意圖」部分中顯示的令牌一致。</string>
     <!-- Permission related, appears in system permission UI -->
     <string name="permission_label">使用 Shizuku</string>
     <string name="permission_description">允許應用程式使用 Shizuku。</string>

@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of verklaar het, sal hier verskyn.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Beheer Shizuku met outomatiseringsprogramme</string>
-    <string name="home_automation_description"><![CDATA[Programme soos Tasker en MacroDroid kan voornemens stuur om Shizuku outomaties te begin/stop.<p>Ongewortelde toestelle op Android 10 of ouer moet \'n TCP-poort vanaf \'n rekenaar oopmaak deur<font face="monospace"> %1$s </font>te gebruik vir die beginvoorneme om te werk.]]></string>
     <string name="home_automation_button_view_intents">Bekyk voornemens</string>
-    <string name="home_automation_dialog_label_action">Aksie</string>
-    <string name="home_automation_dialog_label_package">Pakket</string>
-    <string name="home_automation_dialog_label_class">Klas</string>
-    <string name="home_automation_dialog_label_target">Teiken</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Ontwikkelaarsgids</string>
     <string name="home_learn_more_description">Leer hoe om met Shizuku te ontwikkel</string>
@@ -119,7 +114,6 @@
     <string name="settings_tcp_port">TCP-poort</string>
     <string name="settings_tcp_port_default">Standaard (5555)</string>
     <string name="settings_tcp_port_hint">Los leeg om verstekwaarde (5555) te gebruik</string>
-    <string name="settings_tcp_learn_more">Leer meer oor die gebruik van outomatiseringsprogramme om Shizuku te beheer</string>
     <string name="settings_language">Taal</string>
     <string name="settings_translation_contributors">Vertalingsbydraers</string>
     <string name="settings_translation">Neem deel aan vertaling</string>
@@ -152,8 +146,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Geen e-posprogram gevind nie</string>
     <string name="toast_shizuku_already_starting">Shizuku begin reeds in die agtergrond</string>
-    <string name="toast_accessibility_tv_only">Hierdie diens word slegs op TV-toestelle ondersteun.</string>
-    <string name="toast_pairing_timeout">Shizuku-paringsdiens het \'n tydsverloop gehad.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Altyd lig</string>
@@ -162,9 +154,7 @@
     <string name="action_about">Oor</string>
     <string name="about_dialog_button_close">Maak toe</string>
     <string name="about_view_source_code"><![CDATA[Bekyk bronkode by %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Begin Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Stop Shizuku</string>
     <string name="dialog_stop_message">Shizuku-diens sal gestaak word.</string>
     <!-- Notification -->

@@ -76,12 +76,7 @@
     <string name="home_app_management_empty">Aplikace, které požádaly nebo deklarovaly povolení Shizuku, se zde zobrazí.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Ovládejte Shizuku pomocí automatizačních aplikací</string>
-    <string name="home_automation_description"><![CDATA[Aplikace jako Tasker a MacroDroid dokáží automaticky odesílat příkazy pro spuštění/zastavení Shizuku.<p>Nerootnutá zařízení s Androidem 10 nebo starším musí otevřít TCP port z počítače pomocí<font face="monospace"> %1$s </font>, aby příkaz pro spuštění fungoval.]]></string>
     <string name="home_automation_button_view_intents">Zobrazit záměry</string>
-    <string name="home_automation_dialog_label_action">Akce</string>
-    <string name="home_automation_dialog_label_package">Balík</string>
-    <string name="home_automation_dialog_label_class">Třída</string>
-    <string name="home_automation_dialog_label_target">Cíl</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Průvodce pro vývojáře</string>
     <string name="home_learn_more_description">Naučte se, jak vyvíjet aplikace s pomocí Shizuku</string>
@@ -112,7 +107,7 @@
     <!-- Settings -->
     <string name="settings_title">Nastavení</string>
     <string name="settings_behavior">Chování</string>
-    <string name="settings_start_on_boot">Začněte na botě</string>
+    <string name="settings_start_on_boot">Spustit při startu</string>
     <string name="settings_start_on_boot_summary">Vyžaduje Android 11+ nebo root</string>
     <string name="settings_start_on_boot_bug">Kvůli chybě v systému Android 11-12 si bezdrátové ladění nepamatuje žádné autorizované sítě.\n\nPři každém restartu budete muset síť znovu autorizovat klepnutím na „Povolit“, jakmile se zobrazí dialogové okno pro autorizaci.</string>
     <string name="settings_use_system_color">Použít systémovou barvu motivu</string>
@@ -128,7 +123,8 @@
     <string name="settings_tcp_port">TCP port</string>
     <string name="settings_tcp_port_default">Výchozí (5555)</string>
     <string name="settings_tcp_port_hint">Nechat prázdné pole pro výchozí použití (5555)</string>
-    <string name="settings_tcp_learn_more">Zjistěte více o využití automatizačních aplikací k ovládání Shizuku</string>
+    <string name="settings_auto_disable_usb_debugging">Automatické vypnutí ladění USB</string>
+    <string name="settings_auto_disable_usb_debugging_summary">Zakázat ladění USB při zastavení Shizuku</string>
     <string name="settings_language">Jazyk</string>
     <string name="settings_translation_contributors">Přispěvatelé překladu</string>
     <string name="settings_translation">Podílet se na překladu</string>
@@ -161,19 +157,18 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Žádná e-mailová aplikace nenalezena</string>
     <string name="toast_shizuku_already_starting">Shizuku už začíná v pozadí</string>
-    <string name="toast_accessibility_tv_only">Tato služba je podporována pouze na televizních zařízeních.</string>
-    <string name="toast_pairing_timeout">Časový limit párovací služby Shizuku vypršel.</string>
+    <string name="toast_accessibility_tv_only">Tato služba je podporována pouze na televizních zařízeních</string>
+    <string name="toast_pairing_timeout">Časový limit služby párování Shizuku vypršel</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Téma</string>
     <string name="dark_theme_off">Vždy světlé</string>
     <string name="dark_theme_on">Vždycky tma</string>
+    <string name="follow_system">Podle systému</string>
     <!-- About -->
     <string name="action_about">O Shizuku</string>
     <string name="about_dialog_button_close">Zavřít</string>
     <string name="about_view_source_code"><![CDATA[Zobrazit zdrojový kód na %su]]></string>
-    <!-- Start -->
-    <string name="action_start">Začněte Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Zastavit Shizuku</string>
     <string name="dialog_stop_message">Služba Shizuku bude zastavena.</string>
     <!-- Notification -->

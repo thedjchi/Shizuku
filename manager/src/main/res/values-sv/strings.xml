@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Appar som har begärt eller deklarerat Shizuku-behörighet visas här.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Styr Shizuku med automatiseringsappar</string>
-    <string name="home_automation_description"><![CDATA[Appar som Tasker och MacroDroid kan skicka avsikter för att starta/stoppa Shizuku automatiskt.<p>Enheter utan rot på Android 10 eller tidigare måste öppna en TCP-port från en dator med<font face="monospace"> %1$s </font>för att startavsikten ska fungera.]]></string>
     <string name="home_automation_button_view_intents">Visa avsikter</string>
-    <string name="home_automation_dialog_label_action">Handling</string>
-    <string name="home_automation_dialog_label_package">Paket</string>
-    <string name="home_automation_dialog_label_class">Klass</string>
-    <string name="home_automation_dialog_label_target">Mål</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Utvecklarguide</string>
     <string name="home_learn_more_description">Lär dig hur du utvecklar med Shizuku</string>
@@ -119,7 +114,6 @@
     <string name="settings_tcp_port">TCP-port</string>
     <string name="settings_tcp_port_default">Standard (5555)</string>
     <string name="settings_tcp_port_hint">Lämna tomt för att använda standardfältet (5555)</string>
-    <string name="settings_tcp_learn_more">Läs mer om att använda automatiseringsappar för att styra Shizuku</string>
     <string name="settings_language">Språk</string>
     <string name="settings_translation_contributors">Översättningsbidragsgivare</string>
     <string name="settings_translation">Delta i översättningen</string>
@@ -152,8 +146,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Ingen e-postapp hittades</string>
     <string name="toast_shizuku_already_starting">Shizuku börjar redan i bakgrunden</string>
-    <string name="toast_accessibility_tv_only">Denna tjänst stöds endast på TV-enheter.</string>
-    <string name="toast_pairing_timeout">Shizukus parningstjänst gick ut på tid.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Alltid ljus</string>
@@ -162,9 +154,7 @@
     <string name="action_about">Om</string>
     <string name="about_dialog_button_close">Nära</string>
     <string name="about_view_source_code"><![CDATA[Visa källkoden på %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Starta Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Stoppa Shizuku</string>
     <string name="dialog_stop_message">Shizuku-tjänsten kommer att upphöra.</string>
     <!-- Notification -->

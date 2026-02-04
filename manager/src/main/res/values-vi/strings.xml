@@ -73,12 +73,7 @@
     <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo quyền Shizuku sẽ hiển thị ở đây.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kiểm soát Shizuku bằng ứng dụng tự động hóa</string>
-    <string name="home_automation_description"><![CDATA[Các ứng dụng như Tasker và MacroDroid có thể gửi ý định để tự động khởi động/dừng Shizuku.<p>Các thiết bị chưa root chạy Android 10 trở xuống phải mở cổng TCP từ PC bằng<font face="monospace"> %1$s </font>để ý định khởi động hoạt động.]]></string>
     <string name="home_automation_button_view_intents">Xem ý định</string>
-    <string name="home_automation_dialog_label_action">Hoạt động</string>
-    <string name="home_automation_dialog_label_package">Bưu kiện</string>
-    <string name="home_automation_dialog_label_class">Lớp học</string>
-    <string name="home_automation_dialog_label_target">Mục tiêu</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Hướng dẫn dành cho nhà phát triển</string>
     <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng dụng bằng Shizuku</string>
@@ -121,7 +116,6 @@
     <string name="settings_tcp_port">Cổng TCP</string>
     <string name="settings_tcp_port_default">Mặc định (5555)</string>
     <string name="settings_tcp_port_hint">Để trống để sử dụng mặc định (5555)</string>
-    <string name="settings_tcp_learn_more">Tìm hiểu thêm về cách sử dụng ứng dụng tự động hóa để kiểm soát Shizuku</string>
     <string name="settings_language">Ngôn ngữ</string>
     <string name="settings_translation_contributors">Người đóng góp bản dịch</string>
     <string name="settings_translation">Tham gia phiên dịch</string>
@@ -154,8 +148,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Không tìm thấy ứng dụng email</string>
     <string name="toast_shizuku_already_starting">Shizuku đã bắt đầu ở phía sau</string>
-    <string name="toast_accessibility_tv_only">Dịch vụ này chỉ được hỗ trợ trên các thiết bị TV.</string>
-    <string name="toast_pairing_timeout">Dịch vụ ghép nối Shizuku đã hết thời gian chờ.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Đề tài</string>
     <string name="dark_theme_off">Luôn nhẹ nhàng</string>
@@ -164,9 +156,7 @@
     <string name="action_about">Giới thiệu</string>
     <string name="about_dialog_button_close">Đóng</string>
     <string name="about_view_source_code"><![CDATA[Xem mã nguồn tại %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Bắt đầu Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Dừng Shizuku</string>
     <string name="dialog_stop_message">Dịch vụ Shizuku sẽ ngừng hoạt động.</string>
     <!-- Notification -->

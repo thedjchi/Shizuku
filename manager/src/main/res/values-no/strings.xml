@@ -7,26 +7,26 @@
     <string name="home_status_service_version">Versjon %2$s, %1$s</string>
     <string name="home_status_service_version_update"><![CDATA[Versjon %2$s, %1$s<br>Start på nytt for å oppdatere til versjon %3$s]]></string>
     <!-- Home - Adb -->
-    <string name="home_adb_title"><![CDATA[Start med å koble til en datamaskin]]></string>
+    <string name="home_adb_title"><![CDATA[Start ved tilkobling til en datamaskin]]></string>
     <string name="home_adb_description"><![CDATA[For enheter uten root må du bruke adb for å starte Shizuku (krever datamaskintilkobling). Denne prosessen må gjentas hver gang enheten startes på nytt. Vennligst <b><a href=\"%1$s\">les hjelpen</a></b>.]]></string>
     <string name="home_adb_button_view_help">Les hjelp</string>
     <string name="home_adb_button_view_command">Vis kommando</string>
-    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Det er noen andre hensyn å ta. Vennligst bekreft at du har lest hjelpen først.]]></string>
-    <string name="home_adb_dialog_view_command_copy_button">Kopiere</string>
-    <string name="home_adb_dialog_view_command_button_send">Sende</string>
+    <string name="home_adb_dialog_view_command_message"><![CDATA[<font face="monospace">%1$s</font><br><br>* Det finnes andre hensyn, vennligst bekreft at du har lest hjelpen først.]]></string>
+    <string name="home_adb_dialog_view_command_copy_button">Kopier</string>
+    <string name="home_adb_dialog_view_command_button_send">Send</string>
     <!-- Home - Wireless Adb -->
     <string name="home_wireless_adb_title"><![CDATA[Start via trådløs feilsøking]]></string>
     <string name="home_wireless_adb_description"><![CDATA[På Android 11 eller nyere kan du aktivere trådløs feilsøking og starte Shizuku direkte fra enheten din, uten å koble til en datamaskin.<p>Se først den trinnvise veiledningen.]]></string>
-    <string name="home_wireless_adb_description_pre_11"><![CDATA[Før Android 11 kreves det tilkobling til en datamaskin for å aktivere trådløs feilsøking.]]></string>
-    <string name="home_wireless_adb_view_guide_button">Steg-for-steg-guide</string>
+    <string name="home_wireless_adb_description_pre_11"><![CDATA[Før Android 11 er det nødvendig å koble til en datamaskin for å aktivere trådløs feilsøking.]]></string>
+    <string name="home_wireless_adb_view_guide_button">Trinnvis veiledning</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Søker etter trådløs feilsøkingstjeneste</string>
     <string name="dialog_adb_discovery_message">Aktiver «Trådløs feilsøking» i «Utvikleralternativer». «Trådløs feilsøking» deaktiveres automatisk når nettverket endres.\n\nMerk at du ikke deaktiverer «Utvikleralternativer» eller «USB-feilsøking», ellers stoppes Shizuku.</string>
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Prøv å deaktivere og aktivere «Trådløs feilsøking» hvis den fortsetter å søke.</string>
-    <string name="dialog_adb_port">Havn</string>
+    <string name="dialog_adb_port">Port</string>
     <string name="dialog_adb_invalid_port">Port er et heltall fra 1 til 65535.</string>
-    <string name="adb_pairing">Paring</string>
-    <string name="dialog_adb_pairing_title">Koble til enhet</string>
+    <string name="adb_pairing">Kobler sammen</string>
+    <string name="dialog_adb_pairing_title">Parkoble med enhet</string>
     <string name="dialog_adb_pairing_discovery">Søker etter paringstjeneste</string>
     <string name="dialog_adb_pairing_paring_code">Paringskode</string>
     <string name="paring_code_is_wrong">Paringskoden er feil.</string>
@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Apper som har bedt om eller erklært Shizuku-tillatelsen vil vises her.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Styr Shizuku med automatiseringsapper</string>
-    <string name="home_automation_description"><![CDATA[Apper som Tasker og MacroDroid kan sende intensjoner om å starte/stoppe Shizuku automatisk.<p>Ikke-rootede enheter på Android 10 eller eldre må åpne en TCP-port fra en PC ved hjelp av<font face="monospace"> %1$s </font>for at startintensjonen skal fungere.]]></string>
     <string name="home_automation_button_view_intents">Vis intensjoner</string>
-    <string name="home_automation_dialog_label_action">Handling</string>
-    <string name="home_automation_dialog_label_package">Pakke</string>
-    <string name="home_automation_dialog_label_class">Klasse</string>
-    <string name="home_automation_dialog_label_target">Mål</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Utviklerveiledning</string>
     <string name="home_learn_more_description">Lær hvordan du utvikler deg med Shizuku</string>
@@ -119,7 +114,6 @@
     <string name="settings_tcp_port">TCP-port</string>
     <string name="settings_tcp_port_default">Standard (5555)</string>
     <string name="settings_tcp_port_hint">La det stå tomt for å bruke standard (5555)</string>
-    <string name="settings_tcp_learn_more">Lær mer om bruk av automatiseringsapper for å kontrollere Shizuku</string>
     <string name="settings_language">Språk</string>
     <string name="settings_translation_contributors">Oversettelsesbidragsytere</string>
     <string name="settings_translation">Delta i oversettelse</string>
@@ -152,19 +146,18 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Ingen e-postapp funnet</string>
     <string name="toast_shizuku_already_starting">Shizuku begynner allerede i bakgrunnen</string>
-    <string name="toast_accessibility_tv_only">Denne tjenesten støttes kun på TV-enheter.</string>
-    <string name="toast_pairing_timeout">Shizuku-paringstjenesten gikk ut.</string>
+    <string name="toast_accessibility_tv_only">Denne tjenesten støttes kun på TV-enheter</string>
+    <string name="toast_pairing_timeout">Shizuku paringstjenesten ble tidsavbrutt</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Alltid lett</string>
     <string name="dark_theme_on">Alltid mørkt</string>
+    <string name="follow_system">Følg system</string>
     <!-- About -->
     <string name="action_about">Om</string>
     <string name="about_dialog_button_close">Lukke</string>
     <string name="about_view_source_code"><![CDATA[Se kildekoden på %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Start Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Stopp Shizuku</string>
     <string name="dialog_stop_message">Shizuku-tjenesten vil bli stanset.</string>
     <!-- Notification -->

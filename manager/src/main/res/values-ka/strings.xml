@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">აპლიკაციები, რომლებმაც მოითხოვეს ან გამოაცხადეს Shizuku-ს ნებართვა, გამოჩნდება აქ.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">აკონტროლეთ Shizuku ავტომატიზაციის აპლიკაციებით</string>
-    <string name="home_automation_description"><![CDATA[ისეთ აპლიკაციებს, როგორიცაა Tasker და MacroDroid, შეუძლიათ Shizuku-ს ავტომატურად გაგზავნონ/გამორთონ intent-ები.<p>Android 10-ზე ან უფრო დაბალ ვერსიაზე მომუშავე Unroot-ირებულ მოწყობილობებს უნდა გახსნან TCP პორტი კომპიუტერიდან<font face="monospace"> %1$s </font>-ის გამოყენებით, რათა start intent-მა იმუშაოს.]]></string>
     <string name="home_automation_button_view_intents">ხედვის განზრახვები</string>
-    <string name="home_automation_dialog_label_action">მოქმედება</string>
-    <string name="home_automation_dialog_label_package">პაკეტი</string>
-    <string name="home_automation_dialog_label_class">კლასი</string>
-    <string name="home_automation_dialog_label_target">სამიზნე</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">დეველოპერის სახელმძღვანელო</string>
     <string name="home_learn_more_description">ისწავლეთ როგორ განვითარდეთ Shizuku-სთან ერთად</string>
@@ -119,7 +114,6 @@
     <string name="settings_tcp_port">TCP პორტი</string>
     <string name="settings_tcp_port_default">ნაგულისხმევი (5555)</string>
     <string name="settings_tcp_port_hint">დატოვე ცარიელი ნაგულისხმევი გამოსაყენებლად (5555)</string>
-    <string name="settings_tcp_learn_more">შეიტყვეთ მეტი ავტომატიზაციის აპლიკაციების გამოყენების შესახებ Shizuku-ს გასაკონტროლებლად</string>
     <string name="settings_language">ენა</string>
     <string name="settings_translation_contributors">თარგმანის კონტრიბუტორები</string>
     <string name="settings_translation">მონაწილეობა მიუღეთ თარგმანში</string>
@@ -152,8 +146,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">ელ.ფოსტის აპი ვერ მოიძებნა</string>
     <string name="toast_shizuku_already_starting">Shizuku უკვე იწყება ფონზე</string>
-    <string name="toast_accessibility_tv_only">ეს სერვისი მხოლოდ ტელევიზორის მოწყობილობებზეა მხარდაჭერილი.</string>
-    <string name="toast_pairing_timeout">შიზუკუს დაწყვილების სერვისს ვადა ამოეწურა.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">თემა</string>
     <string name="dark_theme_off">ყოველთვის მსუბუქი</string>
@@ -162,9 +154,7 @@
     <string name="action_about">ჩვენს შესახებ</string>
     <string name="about_dialog_button_close">დაგვიკავშირდით</string>
     <string name="about_view_source_code"><![CDATA[წყაროს კოდის ნახვა %s]]></string>
-    <!-- Start -->
-    <string name="action_start">დაიწყეთ Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">შეაჩერე შიზუკუ</string>
     <string name="dialog_stop_message">Shizuku მომსახურება შეწყდება.</string>
     <!-- Notification -->

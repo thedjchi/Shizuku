@@ -73,12 +73,7 @@
     <string name="home_app_management_empty">Aplikasi yang telah meminta atau mendeklarasikan izin Shizuku akan ditampilkan di sini.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kontrol Shizuku dengan aplikasi otomatisasi</string>
-    <string name="home_automation_description"><![CDATA[Aplikasi seperti Tasker dan MacroDroid dapat mengirim intent untuk memulai/menghentikan Shizuku secara otomatis.<p>Perangkat yang tidak di-root pada Android 10 atau di bawahnya harus membuka port TCP dari PC menggunakan<font face="monospace"> %1$s </font>agar intent awal berfungsi.]]></string>
     <string name="home_automation_button_view_intents">Lihat maksud</string>
-    <string name="home_automation_dialog_label_action">Tindakan</string>
-    <string name="home_automation_dialog_label_package">Kemasan</string>
-    <string name="home_automation_dialog_label_class">Kelas</string>
-    <string name="home_automation_dialog_label_target">Target</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Panduan pengembang</string>
     <string name="home_learn_more_description">Pelajari cara mengembangkan dengan Shizuku</string>
@@ -125,7 +120,6 @@
     <string name="settings_tcp_port">Pelabuhan TCP</string>
     <string name="settings_tcp_port_default">Standar (5555)</string>
     <string name="settings_tcp_port_hint">Biarkan kosong untuk menggunakan default (5555)</string>
-    <string name="settings_tcp_learn_more">Pelajari lebih lanjut tentang penggunaan aplikasi otomatisasi untuk mengontrol Shizuku</string>
     <string name="settings_language">Bahasa</string>
     <string name="settings_translation_contributors">Kontributor penerjemah</string>
     <string name="settings_translation">Ikut menerjemahkan</string>
@@ -158,8 +152,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Tidak ada aplikasi email yang ditemukan</string>
     <string name="toast_shizuku_already_starting">Shizuku sudah mulai di latar belakang</string>
-    <string name="toast_accessibility_tv_only">Layanan ini hanya didukung pada perangkat TV.</string>
-    <string name="toast_pairing_timeout">Layanan pemasangan Shizuku telah habis waktunya.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Selalu terang</string>
@@ -168,9 +160,7 @@
     <string name="action_about">Tentang</string>
     <string name="about_dialog_button_close">Menutup</string>
     <string name="about_view_source_code"><![CDATA[Lihat kode sumbernya di %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Mulai Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Hentikan Shizuku</string>
     <string name="dialog_stop_message">Layanan Shizuku akan berhenti.</string>
     <!-- Notification -->

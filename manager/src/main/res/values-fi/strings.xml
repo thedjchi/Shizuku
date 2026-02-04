@@ -71,12 +71,7 @@
     <string name="home_app_management_empty">Sovellukset, jotka ovat pyytäneet tai ilmoittaneet Shizuku-luvan, näkyvät tässä.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Ohjaa Shizukua automaatiosovelluksilla</string>
-    <string name="home_automation_description"><![CDATA[Sovellukset, kuten Tasker ja MacroDroid, voivat lähettää aikomuksia Shizukun automaattiseen käynnistämiseen/pysäyttämiseen.<p>Roottamattomien Android 10- tai vanhemmissa laitteissa on avattava TCP-portti tietokoneelta käyttämällä<font face="monospace"> %1$s </font>, jotta käynnistysaike toimisi.]]></string>
     <string name="home_automation_button_view_intents">Näytä aikomukset</string>
-    <string name="home_automation_dialog_label_action">Toiminta</string>
-    <string name="home_automation_dialog_label_package">Paketti</string>
-    <string name="home_automation_dialog_label_class">Luokka</string>
-    <string name="home_automation_dialog_label_target">Kohde</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Kehittäjän opas</string>
     <string name="home_learn_more_description">Opi kehittymään Shizukun kanssa</string>
@@ -119,7 +114,6 @@
     <string name="settings_tcp_port">TCP-portti</string>
     <string name="settings_tcp_port_default">Oletusarvo (5555)</string>
     <string name="settings_tcp_port_hint">Jätä tyhjä oletus (5555)</string>
-    <string name="settings_tcp_learn_more">Lue lisää automaatiosovellusten käytöstä Shizukun ohjaamiseen</string>
     <string name="settings_language">Kieli</string>
     <string name="settings_translation_contributors">Käännösavustajat</string>
     <string name="settings_translation">Osallistu käännöksiin</string>
@@ -152,8 +146,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Sähköpostisovellusta ei löytynyt</string>
     <string name="toast_shizuku_already_starting">Shizuku aloittaa jo taustalla</string>
-    <string name="toast_accessibility_tv_only">Tätä palvelua tuetaan vain TV-laitteissa.</string>
-    <string name="toast_pairing_timeout">Shizukun pariliitospalvelu aikakatkaistiin.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Teema</string>
     <string name="dark_theme_off">Aina kevyt</string>
@@ -162,9 +154,7 @@
     <string name="action_about">Noin</string>
     <string name="about_dialog_button_close">Sulkea</string>
     <string name="about_view_source_code"><![CDATA[Katso lähdekoodi osoitteesta %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Aloita Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Pysäyttäkää Shizuku</string>
     <string name="dialog_stop_message">Shizukun palvelu lopetetaan.</string>
     <!-- Notification -->

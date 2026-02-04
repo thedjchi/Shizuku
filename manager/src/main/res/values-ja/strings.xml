@@ -73,12 +73,7 @@
     <string name="home_app_management_empty">Shizuku の権限を要求または宣言したアプリがここに表示されます。</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">自動化アプリでShizukuを制御する</string>
-    <string name="home_automation_description"><![CDATA[Tasker や MacroDroid などのアプリは、Shizuku を自動的に起動/停止するインテントを送信できます。<p>Android 10 以下のルート化されていないデバイスでは、起動インテントが機能するために、<font face="monospace"> %1$s </font>を使用して PC から TCP ポートを開く必要があります。]]></string>
     <string name="home_automation_button_view_intents">インテントを表示</string>
-    <string name="home_automation_dialog_label_action">アクション</string>
-    <string name="home_automation_dialog_label_package">パッケージ</string>
-    <string name="home_automation_dialog_label_class">クラス</string>
-    <string name="home_automation_dialog_label_target">ターゲット</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">開発者ガイド</string>
     <string name="home_learn_more_description">Shizukuを使った開発方法、Shizukuを使ったアプリの入手方法について学ぶことができます</string>
@@ -125,7 +120,6 @@
     <string name="settings_tcp_port">TCPポート</string>
     <string name="settings_tcp_port_default">デフォルト(5555)</string>
     <string name="settings_tcp_port_hint">デフォルト（5555）を使用するには空白のままにしてください</string>
-    <string name="settings_tcp_learn_more">自動化アプリを使用してShizukuを制御する方法について詳しくは、こちらをご覧ください。</string>
     <string name="settings_language">言語</string>
     <string name="settings_translation_contributors">翻訳協力者</string>
     <string name="settings_translation">翻訳作業に参加</string>
@@ -158,8 +152,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">メールアプリが見つかりません</string>
     <string name="toast_shizuku_already_starting">バックグラウンドではすでに雫が起動しています</string>
-    <string name="toast_accessibility_tv_only">このサービスはテレビ機器のみでサポートされています。</string>
-    <string name="toast_pairing_timeout">雫のペアリングサービスがタイムアウトした。</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">テーマ</string>
     <string name="dark_theme_off">ホワイトテーマ</string>
@@ -169,9 +161,7 @@
     <string name="action_about">このアプリについて</string>
     <string name="about_dialog_button_close">近い</string>
     <string name="about_view_source_code"><![CDATA[%sでソースコードを見る]]></string>
-    <!-- Start -->
-    <string name="action_start">しずくスタート</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Shizukuを停止する</string>
     <string name="dialog_stop_message">Shizukuのサービスを停止します。</string>
     <!-- Notification -->

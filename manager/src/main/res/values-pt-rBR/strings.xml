@@ -74,12 +74,7 @@
     <string name="home_app_management_empty">Os aplicativos que solicitaram ou declararam a permissão Shizuku serão exibidos aqui.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Controle Shizuku com aplicativos de automação</string>
-    <string name="home_automation_description"><![CDATA[Aplicativos como Tasker e MacroDroid podem enviar intents para iniciar/parar o Shizuku automaticamente.<p>Dispositivos sem root no Android 10 ou inferior devem abrir uma porta TCP a partir de um PC usando<font face="monospace"> %1$s </font>para que o intent de inicialização funcione.]]></string>
     <string name="home_automation_button_view_intents">Visualizar intenções</string>
-    <string name="home_automation_dialog_label_action">Ação</string>
-    <string name="home_automation_dialog_label_package">Pacote</string>
-    <string name="home_automation_dialog_label_class">Aula</string>
-    <string name="home_automation_dialog_label_target">Alvo</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Guia do desenvolvedor</string>
     <string name="home_learn_more_description">Aprenda a desenvolver com Shizuku</string>
@@ -126,7 +121,6 @@
     <string name="settings_tcp_port">porta TCP</string>
     <string name="settings_tcp_port_default">Padrão (5555)</string>
     <string name="settings_tcp_port_hint">Deixe em branco para usar o padrão (5555)</string>
-    <string name="settings_tcp_learn_more">Saiba mais sobre como usar aplicativos de automação para controlar o Shizuku.</string>
     <string name="settings_language">Idioma</string>
     <string name="settings_translation_contributors">Tradutores deste APP</string>
     <string name="settings_translation">Contribua com a tradução</string>
@@ -159,8 +153,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nenhum aplicativo de e-mail encontrado</string>
     <string name="toast_shizuku_already_starting">Shizuku já está começando em segundo plano.</string>
-    <string name="toast_accessibility_tv_only">Esse serviço é suportado apenas em dispositivos de TV.</string>
-    <string name="toast_pairing_timeout">Serviço de emparelhamento com Shizuku expirou.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Sempre leve</string>
@@ -169,9 +161,7 @@
     <string name="action_about">Sobre</string>
     <string name="about_dialog_button_close">Fechar</string>
     <string name="about_view_source_code"><![CDATA[Ver o código-fonte no %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Iniciar Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Parar o Shizuku</string>
     <string name="dialog_stop_message">O serviço do Shizuku será interrompido.</string>
     <!-- Notification -->

@@ -74,12 +74,7 @@
     <string name="home_app_management_empty">Ipapakita dito ang mga app na humiling o nagdeklara ng pahintulot ng Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kontrolin ang Shizuku gamit ang mga automation app</string>
-    <string name="home_automation_description"><![CDATA[Ang mga app tulad ng Tasker at MacroDroid ay maaaring magpadala ng mga layunin upang awtomatikong simulan/ihinto ang Shizuku.<p>Ang mga hindi naka-root na device sa Android 10 o mas mababa ay dapat magbukas ng TCP port mula sa isang PC gamit ang<font face="monospace"> %1$s </font>para magsimulang gumana.]]></string>
     <string name="home_automation_button_view_intents">Tingnan ang mga layunin</string>
-    <string name="home_automation_dialog_label_action">Aksyon</string>
-    <string name="home_automation_dialog_label_package">Package</string>
-    <string name="home_automation_dialog_label_class">Klase</string>
-    <string name="home_automation_dialog_label_target">Target</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Gabay ng developer</string>
     <string name="home_learn_more_description">Matuto kung paano mag-develop gamit ang Shizuku</string>
@@ -126,7 +121,6 @@
     <string name="settings_tcp_port">TCP port</string>
     <string name="settings_tcp_port_default">Default (5555)</string>
     <string name="settings_tcp_port_hint">Mag-iwan ng blangko upang magamit ang default (5555)</string>
-    <string name="settings_tcp_learn_more">Matuto nang higit pa tungkol sa paggamit ng mga automation app upang makontrol ang Shizuku</string>
     <string name="settings_language">Wika</string>
     <string name="settings_translation_contributors">Mga nag-ambag sa pagsasalin</string>
     <string name="settings_translation">Sumali sa pagsasalin</string>
@@ -159,8 +153,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Walang natagpuang email app</string>
     <string name="toast_shizuku_already_starting">Nagsisimula na si Shizuku sa background</string>
-    <string name="toast_accessibility_tv_only">Ang serbisyong ito ay sinusuportahan lamang sa mga TV device.</string>
-    <string name="toast_pairing_timeout">Nag-time out ang serbisyo ng pagpapares ng Shizuku.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Laging magaan</string>
@@ -169,9 +161,7 @@
     <string name="action_about">Tungkol</string>
     <string name="about_dialog_button_close">Isara</string>
     <string name="about_view_source_code"><![CDATA[Tingnan ang source code sa %s]]></string>
-    <!-- Start -->
-    <string name="action_start">Simulan ang Shizuku</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Ihinto ang Shizuku</string>
     <string name="dialog_stop_message">Ihihinto ang serbisyo ng Shizuku.</string>
     <!-- Notification -->

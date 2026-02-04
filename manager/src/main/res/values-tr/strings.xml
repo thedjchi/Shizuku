@@ -74,12 +74,7 @@
     <string name="home_app_management_empty">Shizuku iznini talep eden veya beyan eden uygulamalar burada gösterilecektir.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Shizuku\'yu otomasyon uygulamalarıyla kontrol edin</string>
-    <string name="home_automation_description"><![CDATA[Tasker ve MacroDroid gibi uygulamalar Shizuku\'yu otomatik olarak başlatmak/durdurmak için niyetler gönderebilir.<p>Android 10 veya daha eski sürümlerde rootlanmamış cihazlar, başlatma niyetinin çalışması için<font face="monospace"> %1$s </font>kullanarak bir bilgisayardan bir TCP portu açmalıdır.]]></string>
     <string name="home_automation_button_view_intents">Görünüm amaçları</string>
-    <string name="home_automation_dialog_label_action">Aksiyon</string>
-    <string name="home_automation_dialog_label_package">Paket</string>
-    <string name="home_automation_dialog_label_class">Sınıf</string>
-    <string name="home_automation_dialog_label_target">Hedef</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Geliştirici kılavuzu</string>
     <string name="home_learn_more_description">Shizuku ile nasıl uygulama geliştireceğinizi öğrenin</string>
@@ -126,7 +121,6 @@
     <string name="settings_tcp_port">TCP bağlantı noktası</string>
     <string name="settings_tcp_port_default">Varsayılan (5555)</string>
     <string name="settings_tcp_port_hint">Varsayılanı (5555) kullanmak için boş bırakın</string>
-    <string name="settings_tcp_learn_more">Shizuku\'yu kontrol etmek için otomasyon uygulamalarının kullanımı hakkında daha fazla bilgi edinin</string>
     <string name="settings_language">Dil</string>
     <string name="settings_translation_contributors">Çeviriye katkıda bulunanlar</string>
     <string name="settings_translation">Çeviriye katılın</string>
@@ -159,8 +153,6 @@
     <!-- Toast -->
     <string name="toast_no_email_app">E-posta uygulaması bulunamadı</string>
     <string name="toast_shizuku_already_starting">Shizuku arka planda zaten başlıyor</string>
-    <string name="toast_accessibility_tv_only">Bu hizmet yalnızca TV cihazlarında desteklenmektedir.</string>
-    <string name="toast_pairing_timeout">Shizuku eşleştirme servisi zaman doldu.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Her zaman hafif</string>
@@ -169,9 +161,7 @@
     <string name="action_about">Hakkında</string>
     <string name="about_dialog_button_close">Kapalı</string>
     <string name="about_view_source_code"><![CDATA[%s ’da kaynak kodunu görüntüle]]></string>
-    <!-- Start -->
-    <string name="action_start">Shizuku\'yu başlat</string>
-    <!-- Stop -->
+    <!-- Start/Stop -->
     <string name="action_stop">Shizuku’yu durdur</string>
     <string name="dialog_stop_message">Shizuku hizmeti durdurulacak.</string>
     <!-- Notification -->
