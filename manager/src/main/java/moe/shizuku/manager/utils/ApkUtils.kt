@@ -15,6 +15,7 @@ import com.reandroid.arsc.chunk.TableBlock
 import com.reandroid.arsc.chunk.xml.AndroidManifestBlock
 import com.reandroid.arsc.chunk.xml.ResXmlDocument
 import com.reandroid.arsc.chunk.xml.ResXmlElement
+import com.reandroid.archive.FileInputSource
 import com.reandroid.common.Namespace
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuApplication
@@ -35,7 +36,7 @@ val workDir by lazy {
     }
 }
 
-fun File.changePackageName(newPkgName: String): File {
+fun File.changePackageName(newPkgName: String, maybeCreateSigningKey: Boolean = false): File {
     Log.i(TAG, "Loading APK")
     val module = ApkModule.loadApkFile(this)
     val manifest = module.androidManifest
@@ -58,6 +59,12 @@ fun File.changePackageName(newPkgName: String): File {
             attr.setValueAsString(newAuth)
         }
     }
+
+    Log.i(TAG, "Inserting signing key")
+    val key = ApkSigner.getSigningKey(maybeCreateSigningKey)
+    val keystore = ApkSigner.keystoreFile
+    val keyInputSource = FileInputSource(keystore, "assets/${keystore.name}")
+    module.add(keyInputSource)
 
     val outFile = File(workDir, "signed.apk")
     return module.buildAndSign(outFile)
@@ -100,16 +107,19 @@ fun createStubApk(pkgName: String): File {
         setMinSdkVersion(app.applicationInfo.minSdkVersion)
     }
 
-    return module.buildAndSign(outFile)
+    return module.buildAndSign(outFile, maybeCreateSigningKey = true)
 }
 
-private fun ApkModule.buildAndSign(outFile: File): File {
+private fun ApkModule.buildAndSign(
+    outFile: File,
+    maybeCreateSigningKey: Boolean = false
+): File {
     Log.i(TAG, "Building new APK")
     val unsignedApk = File(workDir, "unsigned.apk")
     writeApk(unsignedApk)
 
     Log.i(TAG, "Signing APK")
-    val key = ApkSigner.getOrCreateSigningKey(appContext.filesDir)
+    val key = ApkSigner.getSigningKey(maybeCreateSigningKey)
     ApkSigner.sign(unsignedApk, outFile, key)
 
     return outFile
