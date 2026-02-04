@@ -17,17 +17,6 @@ pluginManagement {
     }
 
 }
-
-def propFile = file("local.properties")
-def props = new Properties()
-
-if (propFile.canRead()) {
-    props.load(new FileInputStream(propFile))  
-}
-
-def gprUser = props["gpr.user"] ?: ""
-def gprKey  = props["gpr.key"] ?: ""
-        
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -38,13 +27,6 @@ dependencyResolutionManagement {
             url = "https://jitpack.io"
             content {
                 includeGroup("com.github.topjohnwu.libsu")
-            }
-        }
-        maven {
-            url = uri("https://maven.pkg.github.com/revanced/registry")
-            credentials {
-                username = gprUser
-                password = gprKey
             }
         }
     }
@@ -66,9 +48,16 @@ include ":server", ":starter", ":shell", ":manager", ":common"
 
 def root = "api"
 
-if (props != null) {
-    if (props["api.useLocal"].equals("true")) {
-        root = props["api.dir"]
+def propFile = file("local.properties")
+def props = new Properties()
+
+if (propFile.canRead()) {
+    props.load(new FileInputStream(propFile))
+
+    if (props != null) {
+        if (props["api.useLocal"].equals("true")) {
+            root = props["api.dir"]
+        }
     }
 }
 
