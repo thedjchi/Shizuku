@@ -73,7 +73,16 @@
     <string name="home_app_management_empty">已请求或声明 Shizuku 权限的应用将显示在此处。</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">使用自动化应用程序控制 Shizuku</string>
+    <string name="home_automation_description">Tasker 和 MacroDroid 等应用程序可以发送意图来自动启动/停止 Shizuku。</string>
+    <string name="home_automation_description_device_restriction">要在您的设备上使用启动意图，首先需要通过电脑执行 %1$s 命令来启用ADB网络调试。</string>
     <string name="home_automation_button_view_intents">查看意图</string>
+    <string name="home_automation_bottom_sheet_intents">意图</string>
+    <string name="home_automation_bottom_sheet_label_action">动作</string>
+    <string name="home_automation_bottom_sheet_label_package">包名</string>
+    <string name="home_automation_bottom_sheet_label_target">目标</string>
+    <string name="home_automation_bottom_sheet_label_extras">额外参数</string>
+    <string name="home_automation_regenerate_token">重新生成令牌？</string>
+    <string name="home_automation_regenerate_token_message">您需要使用新令牌重新配置您的意图。</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">开发者指南</string>
     <string name="home_learn_more_description">了解如何使用 Shizuku 开发</string>
@@ -162,6 +171,8 @@
     <string name="about_dialog_button_close">关闭</string>
     <string name="about_view_source_code"><![CDATA[在 %s 查看源码]]></string>
     <!-- Start/Stop -->
+    <string name="start">启动</string>
+    <string name="stop">停止</string>
     <string name="action_stop">停止 Shizuku</string>
     <string name="dialog_stop_message">Shizuku 服务将被停止。</string>
     <!-- Notification -->
@@ -180,6 +191,10 @@
     <string name="notification_adb_pairing_succeed_text">您现在可以启动 Shizuku 服务了。</string>
     <string name="notification_adb_pairing_failed_title">配对失败</string>
     <string name="notification_adb_pairing_retry">重试</string>
+    <string name="notification_auth_missing_title">需要授权令牌</string>
+    <string name="notification_auth_missing_message">在您的意图中添加“auth”参数。您可以在应用中点击“查看意图”找到您的令牌。</string>
+    <string name="notification_auth_invalid_title">授权令牌无效</string>
+    <string name="notification_auth_invalid_message">请确保您意图中填写的令牌，与应用内“查看意图”页面显示的令牌保持一致。</string>
     <!-- Permission related, appears in system permission UI -->
     <string name="permission_label">使用 Shizuku</string>
     <string name="permission_description">允许应用使用 Shizuku。</string>
