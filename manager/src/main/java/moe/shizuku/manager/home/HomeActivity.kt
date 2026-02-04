@@ -67,17 +67,29 @@ abstract class HomeActivity : AppBarActivity() {
             }
         }
 
-        homeModel.shouldShowBatteryOptimizationSnackbar.observe(this) {
-            if (it) {
-                SnackbarHelper.show(
-                    this,
-                    binding.root,
-                    msg = getString(R.string.snackbar_battery_optimization_home),
-                    duration = Snackbar.LENGTH_INDEFINITE,
-                    actionText = getString(R.string.snackbar_action_fix),
-                    action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) }
-                )
-            }
+        homeModel.shouldShowRebootDialog.observe(this) { shouldShow ->
+            if (shouldShow) showExitDialog(
+                getString(R.string.home_dialog_reboot_required_title),
+                getString(R.string.home_dialog_reboot_required_message)
+            )
+        }
+
+        homeModel.shouldShowUninstallDialog.observe(this) { shouldShow ->
+            if (shouldShow) showExitDialog(
+                getString(R.string.home_dialog_duplicate_app_detected_title),
+                getString(R.string.home_dialog_duplicate_app_detected_message)
+            )
+        }
+
+        homeModel.shouldShowBatteryOptimizationSnackbar.observe(this) { shouldShow ->
+            if (shouldShow) SnackbarHelper.show(
+                this,
+                binding.root,
+                msg = getString(R.string.snackbar_battery_optimization_home),
+                duration = Snackbar.LENGTH_INDEFINITE,
+                actionText = getString(R.string.snackbar_action_fix),
+                action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) }
+            )
         }
         homeModel.checkBatteryOptimization()
 
@@ -129,6 +141,20 @@ abstract class HomeActivity : AppBarActivity() {
     override fun onPause() {
         super.onPause()
         SnackbarHelper.dismiss()
+    }
+
+    private fun showExitDialog(title: String, message: String) {
+        val dialog = MaterialAlertDialogBuilder(this)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton(R.string.home_dialog_button_exit, null)
+            .setOnDismissListener {
+                this.finishAffinity()
+            }
+            .create()
+
+        dialog.setCanceledOnTouchOutside(false)
+        dialog.show()
     }
 
     private fun checkServerStatus() {
