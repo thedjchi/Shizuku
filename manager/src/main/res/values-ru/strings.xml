@@ -36,10 +36,10 @@
     <string name="dialog_wireless_adb_not_enabled">Отладка по Wi-Fi не включена.
 \nВнимание: на системах старше Android 11 для включения этой отладки необходимо соединение с компьютером.</string>
     <string name="dialog_usb_debugging_not_enabled">Отладка по USB не включена.\nВключите её в «Параметрах разработчика».</string>
-    <string name="dialog_adb_pairing_message">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Сопарить устройство с кодом сопряжения»\n- Введите код сопряжения в уведомление</string>
+    <string name="dialog_adb_pairing_message">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Связать устройство с кодом сопряжения»\n- Введите код сопряжения в уведомление</string>
     <string name="dialog_adb_pairing_accessibility_permission">На Android 14 установка/обновление Shizuku с помощью Package Installer отменяет разрешение ^1, необходимое для включения службы специальных возможностей при сопряжении.\n\nЧтобы предоставить его, выполните следующую команду ADB:\n\n^2\n\nПосле выполнения команды вы можете продолжить процесс сопряжения.\n\nПримечание: вы можете обойти это, установив/обновив Shizuku с помощью ADB.</string>
     <string name="dialog_adb_pairing_accessibility_enable">Включите службу специальных возможностей, чтобы начать процесс сопряжения. Это позволит Shizuku обнаружить код сопряжения.\n\nСлужба специальных возможностей будет отключена после обнаружения кода или через 1 минуту для экономии энергии.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Сопарить устройство с кодом сопряжения». Сидзуку автоматически обнаружит код пары.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Пожалуйста, начните спаривать с выполнения следующих шагов:\n- Перейти к разделу «Опции разработчика»\n- Включить «USB отладку» и «беспроводную отладку»\n- Нажать на левую сторону раздела «Беспроводная отладка»\n- Нажмите «Связать устройство с кодом сопряжения». Shizuku автоматически обнаружит код пары.</string>
     <string name="adb_pairing_requires_multi_window">Пожалуйста, сначала активируйте режим разделения экрана (многооконный режим).</string>
     <string name="adb_pairing_requires_multi_window_reason">Система требует, чтобы диалог с сопряжением всегда был видим. Использование режима разделённого экрана — единственный способ одновременно видеть это приложение и системный диалог.</string>
     <string name="adb_error_key_store">Не удаётся сгенерировать ключ для беспроводной отладки.\nВозможно, это связано с поломанным механизмом KeyStore этого устройства.</string>
@@ -51,13 +51,13 @@
     <string name="notification_settings">Настройки уведомлений</string>
     <string name="adb_pairing_tutorial_title">Сопряжение Shizuku с вашим устройством</string>
     <string name="adb_pairing_tutorial_content_notification">Уведомление от Shizuku поможет завершить процедуру сопряжения.</string>
-    <string name="adb_pairing_tutorial_content_steps">Перейдите в «Настройки разработчика», затем включите «USB debugging» и «Wireless debugging».</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Нажмите на левую сторону раздела «Беспроводная отладка», затем выберите «Сопряжь устройство с кодом сопряжения». Введите код в уведомлении, чтобы завершить сопряжение.</string>
+    <string name="adb_pairing_tutorial_content_steps">Перейдите в «Настройки разработчика», затем включите «Отладку по USB» и «беспроводную отладку».</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Нажмите на левую сторону раздела «Беспроводная отладка», затем выберите «Свяжи устройство с кодом сопряжения». Введите код в уведомлении, чтобы завершить сопряжение.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процедура сопряжения подразумевает взаимодействие с уведомлением от Shizuku. Для продолжения выдайте Shizuku разрешение на показ уведомлений.</string>
     <string name="adb_pairing_tutorial_content_miui">На оболочке MIUI может потребоваться сменить параметр в пункте системных настроек «Уведомления» – «Стиль уведомлений» на «Android».</string>
     <string name="adb_pairing_tutorial_content_miui_2">В противном случае вы можете не суспензовать ввести код пары из уведомления.</string>
-    <string name="adb_pairing_tutorial_content_finish">Вернись к Сидзуку и начни Сидзуку.</string>
-    <string name="adb_pairing_tutorial_content_network">Сидзуку нужно получить доступ к локальной сети. Он управляется сетевым разрешением.</string>
+    <string name="adb_pairing_tutorial_content_finish">Вернись к Shizuku и начни Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku нужно получить доступ к локальной сети. Он управляется сетевым разрешением.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Некоторые системы (например, MIUI) запрещают приложениям получать доступ к сети, если они невидимы, даже если приложение использует сервис переднего плана. Пожалуйста, отключите функции оптимизации батареи для Shizuku на таких системах.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Запуск (для устройств с root правами)]]></string>
@@ -75,7 +75,7 @@
     <string name="home_app_management_view_authorized_apps"><![CDATA[Нажмите для управления списком допущенных приложений]]></string>
     <string name="home_app_management_empty">Здесь будут отображаться приложения, которые запросили или заявили разрешение Shizuku.</string>
     <!-- Home - Automation -->
-    <string name="home_automation_title">Управляйте Сидзуку с помощью приложений автоматизации</string>
+    <string name="home_automation_title">Управляйте Shizuku с помощью приложений автоматизации</string>
     <string name="home_automation_button_view_intents">Просмотр намерений</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Руководство разработчика</string>
@@ -118,11 +118,13 @@
     <string name="settings_tcp_mode_dialog_close_port">"TCP-порт будет немедленно закрыт. Для повторного включения TCP-режима потребуется Wi-Fi. Продолжить?"</string>
     <string name="settings_tcp_mode_closing_port">Закрытие TCP-порта...</string>
     <string name="settings_restart_dialog_title">Требуется перезагрузка</string>
-    <string name="settings_restart_dialog_message">Сидзуку нужно начать заново, чтобы применить этот сеттинг.</string>
-    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Требуется Wi-Fi. Шизуку продолжит работу и ждёт Wi-Fi подключения, прежде чем перезагрузить в фоновом режиме.</b>]]></string>
+    <string name="settings_restart_dialog_message">Shizuku нужно начать заново, чтобы применить эту настройку.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Требуется Wi-Fi. Shizuku продолжит работу и ждёт Wi-Fi подключения, прежде чем перезагрузить в фоновом режиме.</b>]]></string>
     <string name="settings_tcp_port">TCP-порт</string>
     <string name="settings_tcp_port_default">По умолчанию (5555)</string>
     <string name="settings_tcp_port_hint">Оставьте поле пустым, чтобы использовать значение по умолчанию (5555)</string>
+    <string name="settings_auto_disable_usb_debugging">Автоматическое отключение отладки по USB</string>
+    <string name="settings_auto_disable_usb_debugging_summary">Отключение отладки по USB при остановке Shizuku</string>
     <string name="settings_language">Язык</string>
     <string name="settings_translation_contributors">Авторы перевода</string>
     <string name="settings_translation">Участвуйте в переводе</string>
@@ -135,7 +137,7 @@
     <string name="settings_report_bug">Сообщить об ошибке</string>
     <string name="settings_advanced">Передовой</string>
     <string name="settings_legacy_pairing">Устаревшее сопряжение</string>
-    <string name="settings_legacy_pairing_summary">Введите код сопряжения в диалоговом окне вместо уведомления.</string>
+    <string name="settings_legacy_pairing_summary">Введите код сопряжения в диалоговом окне вместо уведомления</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Для начала выполните следующие действия:</string>
     <string name="bug_report_dialog_update">Убедитесь, что вы используете символ ^1.</string>
@@ -154,7 +156,7 @@
     <string name="snackbar_action_fix">Исправить</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Приложение электронной почты не найдено</string>
-    <string name="toast_shizuku_already_starting">Сидзуку уже запускается в фоновом режиме.</string>
+    <string name="toast_shizuku_already_starting">Shizuku нужно начать заново, чтобы применить эту настройку.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Всегда светло</string>
