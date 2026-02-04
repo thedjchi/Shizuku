@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/start" />
-                
+
             <com.google.android.material.button.MaterialButton
                 style="?attr/materialButtonOutlinedStyle"
                 android:id="@+id/buttonStop"
@@ -47,15 +47,14 @@
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="?textInputOutlinedDenseStyle"
+            style="@style/StaticCopyTextInput"
+            android:id="@+id/actionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_automation_bottom_sheet_label_action"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/ic_copy">
+            android:hint="@string/home_automation_bottom_sheet_label_action">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/action"
+                android:id="@+id/actionEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
@@ -64,15 +63,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="?textInputOutlinedDenseStyle"
+            style="@style/StaticCopyTextInput"
+            android:id="@+id/packageLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_automation_bottom_sheet_label_package"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/ic_copy">
+            android:hint="@string/home_automation_bottom_sheet_label_package">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/packageName"
+                android:id="@+id/packageEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
@@ -81,15 +79,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="?textInputOutlinedDenseStyle"
+            style="@style/StaticCopyTextInput"
+            android:id="@+id/targetLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_automation_bottom_sheet_label_target"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/ic_copy">
+            android:hint="@string/home_automation_bottom_sheet_label_target">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/target"
+                android:id="@+id/targetEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
@@ -98,20 +95,25 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="?textInputOutlinedDenseStyle"
+            style="@style/StaticCopyTextInput"
+            android:id="@+id/extrasLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/home_automation_bottom_sheet_label_extras"
-            app:prefixText="auth: "
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/ic_copy">
+            android:maxLines="1"
+            app:startIconCheckable="true"
+            app:startIconDrawable="@drawable/ic_autorenew"
+            app:prefixTextColor="?colorOnSurfaceVariant"
+            app:prefixText="auth: ">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/extras"
+                android:id="@+id/extrasEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
-                android:textColor="?colorOnSurface" />
+                android:textColor="?colorOnSurface"
+                android:singleLine="true"
+                android:scrollHorizontally="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
