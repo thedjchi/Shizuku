@@ -222,6 +222,9 @@ dependencies {
     implementation "androidx.preference:preference-ktx:1.2.1"
     implementation "androidx.work:work-runtime-ktx:2.10.4"
 
+    implementation "app.revanced:revanced-library:3.1.0"
+    implementation "app.revanced:revanced-patcher:21.0.0"
+
     implementation "com.google.android.material:material:1.14.0-alpha08"
 
     implementation "com.github.topjohnwu.libsu:core:6.0.0"
