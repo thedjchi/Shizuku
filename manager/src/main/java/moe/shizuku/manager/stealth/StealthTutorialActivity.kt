@@ -74,7 +74,7 @@ class StealthTutorialActivity : AppBarActivity() {
                                 }
 
                                 ApkType.STUB -> {
-                                    installPackage(apk) { status, msg -> handleInstallerResult(status, msg) }
+                                    installPackage(apk) { isSuccess, msg -> handleInstallerResult(isSuccess, msg) }
                                 }
                             }
                         } catch (e: Exception) {
@@ -157,16 +157,16 @@ class StealthTutorialActivity : AppBarActivity() {
                 showChooseFolderDialog()
             }
             Action.UNHIDE -> viewModel.createApk(ApkType.STUB)
-            Action.REHIDE -> uninstallPackage(ORIGINAL_PACKAGE_NAME)  { status, msg -> handleInstallerResult(status, msg) }
+            Action.REHIDE -> uninstallPackage(ORIGINAL_PACKAGE_NAME)  { isSuccess, msg -> handleInstallerResult(isSuccess, msg) }
         }
     }
 
     private fun showChooseFolderDialog() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("Choose folder")
-            .setMessage("Shizuku needs to save the new APK to your device. Please choose a folder.")
-            .setNegativeButton("Cancel") { _, _ -> }
-            .setPositiveButton("Choose folder") { _, _ ->
+            .setTitle(R.string.choose_folder)
+            .setMessage(R.string.stealth_choose_folder_message)
+            .setNegativeButton(android.R.string.cancel) { _, _ -> }
+            .setPositiveButton(R.string.choose_folder) { _, _ ->
                 pickFolderLauncher.launch(null)
             }.show()
     }
@@ -205,9 +205,9 @@ class StealthTutorialActivity : AppBarActivity() {
 
     private fun showUninstallDialog() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("Uninstall required")
-            .setMessage("The system will now prompt you to uninstall Shizuku. Then, install the clone.")
-            .setPositiveButton("Uninstall") { _, _ ->
+            .setTitle(R.string.stealth_uninstall_required)
+            .setMessage(R.string.stealth_uninstall_message)
+            .setPositiveButton(R.string.stealth_uninstall) { _, _ ->
                 uninstallPackage(packageName)
             }.setNegativeButton(android.R.string.cancel, null)
             .show()
@@ -224,17 +224,9 @@ class StealthTutorialActivity : AppBarActivity() {
         } else showErrorDialog(Exception(msg ?: "Unknown error"))
     }
 
-    private fun showSuccessDialog() {
-        MaterialAlertDialogBuilder(this)
-            .setTitle("Success")
-            .setMessage("")
-            .setPositiveButton(android.R.string.ok, null)
-            .show()
-    }
-
     private fun showErrorDialog(error: Exception) {
         MaterialAlertDialogBuilder(this)
-            .setTitle("Error")
+            .setTitle(R.string.error)
             .setMessage(error.message)
             .setPositiveButton(android.R.string.ok, null)
             .show()

@@ -47,6 +47,17 @@
         app:layout_constraintStart_toStartOf="@id/version_name"
         tools:text="@string/about_view_source_code" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUpdate"
+        style="@style/CardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/check_for_updates"
+        app:icon="@drawable/ic_update_24"
+        app:layout_constraintTop_toBottomOf="@id/source_code"
+        app:layout_constraintStart_toStartOf="@id/source_code" />
+
     <!-- Close button -->
     <ImageButton
         android:id="@+id/btnClose"

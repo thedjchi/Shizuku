@@ -23,6 +23,8 @@ import java.io.File
 
 private const val TAG = "ApkUtils"
 
+const val ORIGINAL_PACKAGE_NAME = "moe.shizuku.privileged.api"
+
 private val app = ShizukuApplication.application
 private val appContext = ShizukuApplication.appContext
 
@@ -113,25 +115,26 @@ private fun ApkModule.buildAndSign(outFile: File): File {
     return outFile
 }
 
-private fun getAppLabel(): String =
+fun getAppLabel(): String =
     app
         .applicationInfo
         .loadLabel(appContext.packageManager)
         .toString()
 
-fun buildApkFilename(): String {
-    val pm = appContext.packageManager
-    val versionName =
-        pm
-            .getPackageInfo(app.packageName, 0)
-            .versionName
+fun getVersionName(): String =
+    appContext
+        .packageManager
+        .getPackageInfo(app.packageName, 0)
+        .versionName
+        .orEmpty()
 
+fun buildApkFilename(): String {
     val safeLabel =
         getAppLabel()
             .lowercase()
             .replace("[^a-z0-9._-]".toRegex(), "-")
 
-    return "$safeLabel-$versionName"
+    return "$safeLabel-${getVersionName()}"
 }
 
 fun Context.installPackage(
