@@ -233,6 +233,7 @@
     <string name="action_about">About</string>
     <string name="about_dialog_button_close">Close</string>
     <string name="about_view_source_code"><![CDATA[View source code at %s]]></string>
+    <string name="buy_me_a_coffee">Buy me a coffee</string>
 
     <!-- Start/Stop -->
      <string name="start">Start</string>
