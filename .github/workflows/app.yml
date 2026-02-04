@@ -76,24 +76,22 @@ jobs:
           echo 'org.gradle.parallel=true' >> gradle.properties
 
           if [ "${{ inputs.debug }}" = "true" ]; then
-            ./gradlew :manager:assembleDebug
-            FILE=$(ls manager/build/outputs/apk/debug/*.apk)
+            CMD="./gradlew :manager:assembleDebug"
+            APK_DIR="manager/build/outputs/apk/debug"
           else
-            ./gradlew :manager:assembleRelease
-            FILE=$(ls manager/build/outputs/apk/release/*.apk)
+            CMD="./gradlew :manager:assembleRelease"
+            APK_DIR="manager/build/outputs/apk/release"
           fi
+
+          [ "${{ inputs.prerelease }}" = "true" ] && CMD="$CMD -Pbeta"
+
+          eval $CMD
+          FILE=$(ls "$APK_DIR"/*.apk)
 
           VERSION=$(echo "$(basename "$FILE")" | sed -E 's/^shizuku-(.*)-(debug|release)\.apk/\1/')
-          if [ "${{ inputs.prerelease }}" = "true" ]; then
-            VERSION="${VERSION}-beta"
-          fi
 
           ARTIFACT_NAME="shizuku-$VERSION"
-
-          if [ "${{ inputs.debug }}" = "true" ]; then
-            ARTIFACT_NAME="${ARTIFACT_NAME}-debug"
-          fi
-
+          [ "${{ inputs.debug }}" = "true" ] && ARTIFACT_NAME="${ARTIFACT_NAME}-debug"
           ARTIFACT_NAME="${ARTIFACT_NAME}.apk"
 
           RENAMED="$FILE"
@@ -150,6 +148,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RELEASE_VERSION: ${{ needs.build.outputs.versionName }}
         run: |
-          FLAGS="--draft --generate-notes"
+          FLAGS="--draft"
           [ "${{ inputs.prerelease }}" = "true" ] && FLAGS="$FLAGS --prerelease"
           gh release create "$RELEASE_VERSION" files/*.apk $FLAGS
