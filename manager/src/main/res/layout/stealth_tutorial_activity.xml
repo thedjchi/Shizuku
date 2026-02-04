@@ -156,6 +156,30 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <com.google.android.material.card.MaterialCardView
+                style="@style/DialogCard">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_help_outline_24dp"
+                    android:tint="?colorOnSecondaryContainer"
+                    android:tintMode="src_in" />
+
+                <TextView
+                    style="@style/TerminalTutorialText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:text="@string/stealth_info_update"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnSecondaryContainer" />
+
+            </com.google.android.material.card.MaterialCardView>
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
@@ -198,39 +222,27 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/FABMenu.FAB"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        style="?floatingActionButtonStyle"
         android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_horizontal"
         android:layout_marginBottom="-12dp"
         app:layout_constraintBottom_toTopOf="@id/packageNameContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_fitsSystemWindowsInsets="start|end" />
 
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/fabMenu"
+    <com.google.android.material.loadingindicator.LoadingIndicator
+        style="@style/Widget.Material3.LoadingIndicator.Contained"
+        android:id="@+id/loadingFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_horizontal"
+        android:layout_marginBottom="-12dp"
         android:visibility="gone"
-        android:elevation="6dp"
-        app:constraint_referenced_ids="unhideTemp,unhidePerm" />
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/FABMenu.ListItem"
-        android:id="@+id/unhideTemp"
-        android:layout_marginBottom="4dp"
-        android:text="@string/stealth_menu_unhide_temporary"
-        app:layout_constraintBottom_toTopOf="@id/unhidePerm"
-        app:layout_constraintEnd_toEndOf="@id/fab"
-        app:icon="@drawable/ic_visibility_on_outline_24" />
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/FABMenu.ListItem"
-        android:id="@+id/unhidePerm"
-        android:layout_marginBottom="8dp"
-        android:text="@string/stealth_menu_unhide_permanent"
-        app:layout_constraintBottom_toTopOf="@id/fab"
-        app:layout_constraintEnd_toEndOf="@id/fab"
-        app:icon="@drawable/ic_visibility_on_filled_24" />
+        app:layout_constraintBottom_toTopOf="@id/packageNameContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_fitsSystemWindowsInsets="start|end" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

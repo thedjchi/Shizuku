@@ -157,49 +157,6 @@ configurations.configureEach {
     exclude group: "androidx.profileinstaller", module: "profileinstaller"
 }
 
-import java.net.URL
-import groovy.json.JsonSlurper
-
-def updateReVancedPatches = tasks.register("updateReVancedPatches") {
-    def version = "5.47.0"
-
-    doLast {
-        def assetsDir = file("src/main/assets")
-        assetsDir.mkdirs()
-
-        def patchesFile = file("${assetsDir}/patches-${version}.rvp")
-        if (patchesFile.exists()) return
-
-        println("Updating ReVanced patches to v${version}...")
-
-        def apiUrl = "https://api.github.com/repos/ReVanced/revanced-patches/releases/tags/v${version}"
-        def json = new JsonSlurper().parse(new URL(apiUrl))
-
-        def patchesAsset = json.assets.find { it.name.endsWith(".rvp") }
-        if (!patchesAsset) {
-            throw new GradleException("No .rvp asset found for v${version}")
-        }
-
-        new URL(patchesAsset.browser_download_url).openStream().withCloseable { input ->
-            patchesFile.newOutputStream().withCloseable { output ->
-                output << input
-            }
-        }
-
-        assetsDir.listFiles()?.each { file ->
-            if (file.name.endsWith(".rvp") && file.name != patchesFile.name) {
-                file.delete()
-            }
-        }
-
-        println("Updated ReVanced patches to v${version}")
-    }
-}
-
-tasks.named("preBuild") {
-    dependsOn(updateReVancedPatches)
-}
-
 dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2"
@@ -222,8 +179,7 @@ dependencies {
     implementation "androidx.preference:preference-ktx:1.2.1"
     implementation "androidx.work:work-runtime-ktx:2.10.4"
 
-    implementation "app.revanced:revanced-library:3.1.0"
-    implementation "app.revanced:revanced-patcher:21.0.0"
+    implementation "com.android.tools.build:apksig:8.11.1"
 
     implementation "com.google.android.material:material:1.14.0-alpha08"
 
@@ -241,6 +197,8 @@ dependencies {
     implementation "dev.rikka.rikkax.layoutinflater:layoutinflater:1.3.0"
     implementation "dev.rikka.rikkax.preference:simplemenu-preference:1.0.3"
     implementation "dev.rikka.rikkax.lifecycle:lifecycle-resource-livedata:1.0.1"
+
+    implementation "io.github.reandroid:ARSCLib:1.3.8"
 
     implementation "io.github.vvb2060.ndk:boringssl:20250114"
 
