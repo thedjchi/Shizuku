@@ -23,10 +23,10 @@ import moe.shizuku.manager.receiver.PackageUninstallReceiver
 
 private const val TAG = "StealthViewModel"
 
-class StealthViewModel(application: Application) : AndroidViewModel(application) {
-    
+class StealthPatcherViewModel(application: Application) : AndroidViewModel(application) {
+
     private val app: Application = getApplication()
-    private val appContext: Context = app.applicationContext
+    private val appContext = app.applicationContext
 
     suspend fun patchAndInstall() {
         getApk()
@@ -93,7 +93,7 @@ class StealthViewModel(application: Application) : AndroidViewModel(application)
         val sessionId: Int = packageInstaller.createSession(sessionParams)
         val session: PackageInstaller.Session = packageInstaller.openSession(sessionId)
         session.use { activeSession ->
-            val sessionOutputStream = activeSession.openWrite(appContext.packageName, 0, -1)
+            val sessionOutputStream = activeSession.openWrite(app.packageName, 0, -1)
             sessionOutputStream.use { outputStream ->
                 this.inputStream().use { inputStream ->
                     inputStream.copyTo(outputStream)
@@ -156,4 +156,5 @@ class StealthViewModel(application: Application) : AndroidViewModel(application)
     } else {
         PendingIntent.FLAG_UPDATE_CURRENT
     }
+
 }

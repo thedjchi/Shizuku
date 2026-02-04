@@ -129,6 +129,20 @@
     <string name="terminal_tutorial_3">Open a shell with the following command:</string>
     <string name="rish_description"><![CDATA[With %1$s, you can run shell commands in any terminal app.<p>Tap to learn more about how to use it.]]></string>
 
+    <!-- Stealth -->
+    <string name="stealth_warning_compatibility">Some apps that use Shizuku may not work with stealth mode.</string>
+    <string name="stealth_warning_detection">Some apps may still be able to detect Shizuku even when hidden. Nothing can be done about this.</string>
+    <string name="stealth_info_rish">If you use rish, you will need to re-export the files before using stealth mode for the first time.</string>
+    <string name="stealth_info_intents">If you use intents to control Shizuku, you will need to update the intents with the new package name after enabling stealth mode.</string>
+    <string name="stealth_package_name">Package name (optional)</string>
+    <string name="stealth_package_name_helper_text">If left empty, a random suffix will be added to the package name.</string>
+    <string name="stealth_error_ends_with_period">Package name cannot end with a period.</string>
+    <string name="stealth_error_invalid_characters">Only letters, numbers, and periods are allowed.</string>
+    <string name="stealth_error_needs_two_segments">Package name must have at least two segments.</string>
+    <string name="stealth_error_segment_starts_with_number">Segments cannot start with a number.</string>
+    <string name="stealth_menu_unhide_temporary">Temporary</string>
+    <string name="stealth_menu_unhide_permanent">Permanent</string>
+
     <!-- Settings -->
     <string name="settings_title">Settings</string>
     <string name="settings_behavior">Behavior</string>
