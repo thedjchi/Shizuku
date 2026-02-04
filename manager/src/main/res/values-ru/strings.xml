@@ -30,8 +30,8 @@
     <string name="adb_pairing">Сопряжение</string>
     <string name="dialog_adb_pairing_title">Сопряжение с устройством</string>
     <string name="dialog_adb_pairing_discovery">Поиск службы соединения</string>
-    <string name="dialog_adb_pairing_paring_code">Код сопряжения</string>
-    <string name="paring_code_is_wrong">Неверный код сопряжения.</string>
+    <string name="dialog_adb_pairing_paring_code">Код подключения</string>
+    <string name="paring_code_is_wrong">Неверный код подключения.</string>
     <string name="cannot_connect_port">Не могу подключиться к беспроводной отладке.\n\nПожалуйста, убедитесь, что Shizuku внесен в белый список во всех фаерволах, блокировке рекламы, VPN или подобных приложениях, которые могут ограничивать доступ к сети.</string>
     <string name="dialog_wireless_adb_not_enabled">Отладка по Wi-Fi не включена.
 \nВнимание: на системах старше Android 11 для включения этой отладки необходимо соединение с компьютером.</string>
@@ -46,17 +46,17 @@
     <string name="adb_stopping_tcp">Закрытие TCP-порта</string>
     <string name="adb_error_stop_tcp">Не удалось остановить ADB через TCP</string>
     <string name="adb_pair_required">Пожалуйста, сперва пройдите процедуру сопряжения.</string>
-    <string name="enable">Давать возможность</string>
+    <string name="enable">Вкл</string>
     <string name="development_settings">Параметры разработчика</string>
     <string name="notification_settings">Настройки уведомлений</string>
     <string name="adb_pairing_tutorial_title">Сопряжение Shizuku с вашим устройством</string>
     <string name="adb_pairing_tutorial_content_notification">Уведомление от Shizuku поможет завершить процедуру сопряжения.</string>
-    <string name="adb_pairing_tutorial_content_steps">Перейдите в «Параметры разработчика», затем включите «Отладку по USB» и «Отладку по Wi-Fi».</string>
+    <string name="adb_pairing_tutorial_content_steps">Перейдите в «Параметры разработчика», затем включите «Отладка по USB» и «Отладка по Wi-Fi».</string>
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Нажмите на левую сторону раздела «Отладка по Wi-Fi», затем выберите «Подключить устройство с помощью кода подключения». Введите код в уведомлении, чтобы завершить сопряжение.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процедура сопряжения подразумевает взаимодействие с уведомлением от Shizuku. Для продолжения выдайте Shizuku разрешение на показ уведомлений.</string>
     <string name="adb_pairing_tutorial_content_miui">На оболочке MIUI может потребоваться сменить параметр в пункте системных настроек «Уведомления» – «Стиль уведомлений» на «Android».</string>
-    <string name="adb_pairing_tutorial_content_miui_2">В противном случае вы не сможете ввести код сопряжения из уведомления.</string>
-    <string name="adb_pairing_tutorial_content_finish">Вернись к Shizuku и запусти Shizuku.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">В противном случае вы не сможете ввести код подключения из уведомления.</string>
+    <string name="adb_pairing_tutorial_content_finish">Вернитесь в Shizuku и запустите Shizuku.</string>
     <string name="adb_pairing_tutorial_content_network">Shizuku нужно получить доступ к локальной сети. Он управляется сетевым разрешением.</string>
     <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Некоторые системы (например, MIUI) запрещают приложениям получать доступ к сети, если они невидимы, даже если приложение использует сервис переднего плана. Пожалуйста, отключите функции оптимизации батареи для Shizuku на таких системах.</string>
     <!-- Home - Root -->
@@ -124,7 +124,7 @@
     <string name="settings_tcp_port_default">По умолчанию (5555)</string>
     <string name="settings_tcp_port_hint">Оставьте поле пустым, чтобы использовать значение по умолчанию (5555)</string>
     <string name="settings_auto_disable_usb_debugging">Автоматическое отключение отладки по USB</string>
-    <string name="settings_auto_disable_usb_debugging_summary">Отключение отладки по USB при остановке Shizuku</string>
+    <string name="settings_auto_disable_usb_debugging_summary">Отключить отладку по USB при остановке Shizuku</string>
     <string name="settings_language">Язык</string>
     <string name="settings_translation_contributors">Авторы перевода</string>
     <string name="settings_translation">Участвуйте в переводе</string>
@@ -132,12 +132,12 @@
     <string name="settings_user_interface">Внешний вид</string>
     <string name="settings_black_night_theme">Черная тема</string>
     <string name="settings_black_night_theme_summary">Глубокий черный цвет фона при работе темной темы</string>
-    <string name="settings_support">Поддерживать</string>
+    <string name="settings_support">Поддержать</string>
     <string name="settings_help">Помощь</string>
     <string name="settings_report_bug">Сообщить об ошибке</string>
-    <string name="settings_advanced">Передовой</string>
+    <string name="settings_advanced">Расширенные настройки</string>
     <string name="settings_legacy_pairing">Устаревшее сопряжение</string>
-    <string name="settings_legacy_pairing_summary">Введите код сопряжения в диалоговом окне уведомления</string>
+    <string name="settings_legacy_pairing_summary">Введите код подключения в диалоговом окне вместо уведомления</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Для начала выполните следующие действия:</string>
     <string name="bug_report_dialog_update">Убедитесь, что вы используете символ ^1.</string>
@@ -159,8 +159,8 @@
     <string name="toast_shizuku_already_starting">Shizuku уже запускается в фоновом режиме</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
-    <string name="dark_theme_off">Всегда светло</string>
-    <string name="dark_theme_on">Всегда темно</string>
+    <string name="dark_theme_off">Светлая тема</string>
+    <string name="dark_theme_on">Тёмная тема</string>
     <!-- About -->
     <string name="action_about">О приложении</string>
     <string name="about_dialog_button_close">Закрыть</string>
@@ -218,5 +218,5 @@
     <string name="dialog_requesting_legacy_title">%1$s запрашивает устаревшую версию Shizuku</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[<b>%1$s</b> имеет поддержку актуального Shizuku, но запрашивает его устаревшую версию. Возможно это происходит оттого, что Shizuku не запущен, пожалуйста, перепроверьте в приложении Shizuku.<p>Изначальная версия Shizuku признана устаревшей ещё в марте 2019 года.]]></string>
     <string name="dialog_requesting_legacy_button_open_shizuku">Открыть Shizuku</string>
-    <string name="wadb_notification_attempt_now">Попробуй сейчас</string>
+    <string name="wadb_notification_attempt_now">Попробуйте сейчас</string>
 </resources>
