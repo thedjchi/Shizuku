@@ -11,10 +11,7 @@ const val ORIGINAL_PACKAGE_NAME = "moe.shizuku.privileged.api"
 
 sealed class UiState {
     data object Hide : UiState()
-
-    data class Unhide(
-        val menuOpen: Boolean
-    ) : UiState()
+    data object Unhide : UiState()
 }
 
 fun String.validatePackageName(): Int? = when {
@@ -39,18 +36,17 @@ class StealthTutorialViewModel(application: Application) : AndroidViewModel(appl
     private val app: Application = getApplication()
     private val appContext = app.applicationContext
 
-    private fun isShizukuHidden() =
-        runCatching {
-            appContext.packageManager.getPackageInfo(ORIGINAL_PACKAGE_NAME, 0)
-        }.isFailure
+    private fun isShizukuHidden() = false
+        // runCatching {
+        //     appContext.packageManager.getPackageInfo(ORIGINAL_PACKAGE_NAME, 0)
+        // }.isFailure
 
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
 
     init {
         _uiState.value =
-            if (isShizukuHidden()) UiState.Unhide(menuOpen = false)
-            else UiState.Hide
+            if (isShizukuHidden()) UiState.Unhide else UiState.Hide
     }
 
     fun onHide() {
@@ -58,15 +54,6 @@ class StealthTutorialViewModel(application: Application) : AndroidViewModel(appl
     }
 
     fun onUnhide(temporary: Boolean) {
-        onCloseUnhideMenu()
         // TO-DO: START PATCHER ACTIVITY
-    }
-
-    fun onOpenUnhideMenu() {
-        _uiState.value = UiState.Unhide(menuOpen = true)
-    }
-
-    fun onCloseUnhideMenu() {
-        _uiState.value = UiState.Unhide(menuOpen = false)
     }
 }
