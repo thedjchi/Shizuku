@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true" >
+    android:fitsSystemWindows="true">
 
     <rikka.widget.borderview.BorderNestedScrollView
         android:id="@+id/scrollView"
@@ -42,15 +42,39 @@
                     android:tint="?colorOnErrorContainer"
                     android:tintMode="src_in" />
 
-                <TextView
-                    style="@style/TerminalTutorialText"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="36dp"
-                    android:duplicateParentState="true"
-                    android:text="@string/stealth_warning_compatibility"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnErrorContainer" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stealth_warning_compatibility"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnErrorContainer" />
+
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/stealth_warning_compatibility_2"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnErrorContainer" />
+
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/stealth_warning_compatibility_3"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnErrorContainer" />
+
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -95,41 +119,39 @@
                     android:tint="?colorOnSecondaryContainer"
                     android:tintMode="src_in" />
 
-                <TextView
-                    style="@style/TerminalTutorialText"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="36dp"
-                    android:duplicateParentState="true"
-                    android:text="@string/stealth_info_rish"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnSecondaryContainer" />
+                    android:orientation="vertical">
 
-            </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stealth_info_title"
+                        android:textAppearance="?textAppearanceTitleMedium"
+                        android:textColor="?colorOnSecondaryContainer" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_marginTop="8dp"
-                style="@style/FilledCard">
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/stealth_info_rish"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnSecondaryContainer" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="-8dp"
-                    android:layout_marginTop="4dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_help_outline_24dp"
-                    android:tint="?colorOnSecondaryContainer"
-                    android:tintMode="src_in" />
+                    <TextView
+                        style="@style/TerminalTutorialText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/stealth_info_intents"
+                        android:textAppearance="?textAppearanceBodyMedium"
+                        android:textColor="?colorOnSecondaryContainer" />
 
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="36dp"
-                    android:duplicateParentState="true"
-                    android:text="@string/stealth_info_intents"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnSecondaryContainer" />
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
