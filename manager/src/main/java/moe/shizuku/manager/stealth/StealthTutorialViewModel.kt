@@ -21,7 +21,7 @@ sealed class UiState {
 
     object Loading : UiState()
 
-    data class Success(
+    data class Pending(
         val apk: File,
         val apkType: ApkType
     ) : UiState()
@@ -59,6 +59,10 @@ class StealthTutorialViewModel(
         }.isFailure
 
     init {
+        refresh()
+    }
+
+    fun refresh() {
         val action =
             if (isShizukuHidden()) Action.UNHIDE
             else if (app.packageName == ORIGINAL_PACKAGE_NAME) Action.HIDE
@@ -84,7 +88,7 @@ class StealthTutorialViewModel(
                         ApkType.STUB -> createStubApk(ORIGINAL_PACKAGE_NAME)
                     }
 
-                _uiState.postValue(UiState.Success(apk, apkType))
+                _uiState.postValue(UiState.Pending(apk, apkType))
             } catch (e: Exception) {
                 _uiState.postValue(UiState.Error(e))
                 Log.e("StealthTutorialViewModel", "Error changing package name", e)
