@@ -144,6 +144,10 @@
     <string name="stealth_error_invalid_characters">Only letters, numbers, and periods are allowed.</string>
     <string name="stealth_error_needs_two_segments">Package name must have at least two segments.</string>
     <string name="stealth_error_segment_starts_with_number">Segments cannot start with a number.</string>
+    <string name="stealth_choose_folder_message">Choose a folder where the new APK will be saved.</string>
+    <string name="stealth_uninstall_required">Uninstall required</string>
+    <string name="stealth_uninstall_message">The system will now prompt you to uninstall Shizuku. Then, install the clone.</string>
+    <string name="stealth_uninstall">Uninstall</string>
     <string name="stealth_hide">Hide</string>
     <string name="stealth_unhide">Unhide</string>
 
@@ -176,6 +180,8 @@
     <string name="settings_black_night_theme">Black night theme</string>
     <string name="settings_black_night_theme_summary">Use the pure black theme if night mode is enabled</string>
     <string name="settings_support">Support</string>
+    <string name="settings_update_stable">Stable</string>
+    <string name="settings_update_beta">Beta</string>
     <string name="settings_help">Help</string>
     <string name="settings_report_bug">Report a bug</string>
     <string name="settings_advanced">Advanced</string>
@@ -199,6 +205,17 @@
     <string name="snackbar_battery_optimization_home">Battery optimization must be disabled for start on boot/watchdog to work properly.</string>
     <string name="snackbar_battery_optimization_settings">Please disable battery optimization to use this feature.</string>
     <string name="snackbar_action_fix">Fix</string>
+    <string name="snackbar_update_available">A new update is available</string>
+    <string name="snackbar_action_update">Update</string>
+
+    <!-- Updates -->
+    <string name="check_for_updates">Check for updates</string>
+    <string name="update_latest_installed">The latest version is already installed</string>
+    <string name="update_check_failed">Unable to check for updates</string>
+    <string name="update_downloading">Downloading update...</string>
+    <string name="update_download_failed">Failed to download update</string>
+    <string name="update_success">Update successful</string>
+    <string name="update_failed">Update failed</string>
 
     <!-- Toast -->
     <string name="toast_no_email_app">No email app found</string>
@@ -277,6 +294,9 @@
 
     <!-- Misc -->
     <string name="success">Success</string>
+    <string name="error">Error</string>
+    <string name="off">Off</string>
+    <string name="choose_folder">Choose folder</string>
     <string name="dialog_cannot_open_browser_title">Can\'t start browser</string>
     <string name="toast_copied_to_clipboard">Copied to clipboard</string>
     <string name="accessibility_service_description">Provides pairing support for devices (e.g., TVs running Android 14+) where notifications or split screen cannot be used.\n\nEnables Shizuku to extract the pairing code from the wireless debugging pairing screen. It will disable itself once the pairing code is found.</string>

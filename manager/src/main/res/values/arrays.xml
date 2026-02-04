@@ -13,4 +13,16 @@
         <item>-1</item>
     </integer-array>
 
+    <string-array name="update_mode">
+        <item>@string/off</item>
+        <item>@string/settings_update_stable</item>
+        <item>@string/settings_update_beta</item>
+    </string-array>
+
+    <integer-array name="update_mode_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
 </resources>

@@ -85,6 +85,13 @@
         android:key="category_support"
         android:title="@string/settings_support">
 
+        <moe.shizuku.manager.settings.IntegerSimpleMenuPreference
+            android:entries="@array/update_mode"
+            android:entryValues="@array/update_mode_value"
+            android:key="update_mode"
+            android:summary="%s"
+            android:title="@string/check_for_updates" />
+
         <Preference
             android:key="help"
             android:title="@string/settings_help" />

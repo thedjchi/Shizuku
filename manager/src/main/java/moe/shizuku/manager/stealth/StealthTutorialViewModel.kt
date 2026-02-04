@@ -12,8 +12,6 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.utils.ApkUtils.*
 import java.io.File
 
-const val ORIGINAL_PACKAGE_NAME = "moe.shizuku.privileged.api"
-
 sealed class UiState {
     data class Idle(
         val action: Action,

@@ -36,10 +36,17 @@ public class ShizukuSettings {
         public static final String KEY_NIGHT_MODE = "night_mode";
         public static final String KEY_BLACK_NIGHT_THEME = "black_night_theme";
         public static final String KEY_USE_SYSTEM_COLOR = "use_system_color";
+        public static final String KEY_UPDATE_MODE = "update_mode";
         public static final String KEY_HELP = "help";
         public static final String KEY_REPORT_BUG = "report_bug";
         public static final String KEY_LEGACY_PAIRING = "legacy_pairing";
         public static final String KEY_CATEGORY_ADVANCED = "category_advanced";
+    }
+
+    public static class UpdateMode {
+        public static final int OFF = 0;
+        public static final int STABLE = 1;
+        public static final int BETA = 2;
     }
 
     private static SharedPreferences sPreferences;
@@ -102,6 +109,14 @@ public class ShizukuSettings {
 
     public static boolean getAutoDisableUsbDebugging() {
         return getPreferences().getBoolean(Keys.KEY_AUTO_DISABLE_USB_DEBUGGING, false);
+    }
+    
+    public static String getLastPromptedVersion() {
+        return getPreferences().getString("lastPromptedVersion", "");
+    }
+
+    public static void setLastPromptedVersion(String version) {
+        getPreferences().edit().putString("lastPromptedVersion", version).apply();
     }
 
     public static String getAuthToken() {
@@ -196,5 +211,9 @@ public class ShizukuSettings {
             return Locale.getDefault();
         }
         return Locale.forLanguageTag(tag);
+    }
+
+    public static int getUpdateMode() {
+        return getPreferences().getInt(Keys.KEY_UPDATE_MODE, UpdateMode.STABLE);
     }
 }
