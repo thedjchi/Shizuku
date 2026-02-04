@@ -21,8 +21,12 @@
     <string name="home_wireless_adb_view_guide_button">Stap-vir-stap gids</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Soek na draadlose ontfoutingsdiens</string>
-    <string name="dialog_adb_discovery_message">Aktiveer asseblief \"Draadlose ontfouting\" in \"Ontwikkelaaropsies\". \"Draadlose ontfouting\" word outomaties gedeaktiveer wanneer netwerk verander.\n\nLet wel, moenie \"Ontwikkelaaropsies\" of \"USB-ontfouting\" deaktiveer nie, anders sal Shizuku gestop word.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Probeer asseblief om \"Draadlose ontfouting\" te deaktiveer en te aktiveer as dit aanhou soek.</string>
+    <string name="dialog_adb_discovery_message">Aktiveer asseblief \"Draadlose ontfouting\" in
+        \"Ontwikkelaaropsies\". \"Draadlose ontfouting\" word outomaties gedeaktiveer wanneer
+        netwerk verander.\n\nLet wel, moenie \"Ontwikkelaaropsies\" of \"USB-ontfouting\" deaktiveer
+        nie, anders sal Shizuku gestop word.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Probeer asseblief om
+        \"Draadlose ontfouting\" te deaktiveer en te aktiveer as dit aanhou soek.</string>
     <string name="dialog_adb_port">Hawe</string>
     <string name="dialog_adb_invalid_port">Poort is \'n heelgetal wat wissel van 1 tot 65535.</string>
     <string name="adb_pairing">Paring</string>
@@ -30,16 +34,40 @@
     <string name="dialog_adb_pairing_discovery">Soek tans na paringsdiens</string>
     <string name="dialog_adb_pairing_paring_code">Koppelkode</string>
     <string name="paring_code_is_wrong">Paringskode is verkeerd.</string>
-    <string name="cannot_connect_port">Kan nie aan draadlose ontfoutingsdiens koppel nie.\n\nMaak asseblief seker dat Shizuku op die witlys is in alle firewall-, advertensieblokkerings-, VPN- of soortgelyke programme wat netwerktoegang kan beperk.</string>
-    <string name="dialog_wireless_adb_not_enabled">Draadlose ontfouting is nie geaktiveer nie.\nLet wel, voor Android 11, om draadlose ontfouting te aktiveer, is rekenaarverbinding \'n vereiste.</string>
-    <string name="dialog_usb_debugging_not_enabled">USB-ontfouting is nie geaktiveer nie.\nAktiveer dit asseblief in \"Ontwikkelaaropsies\".</string>
-    <string name="dialog_adb_pairing_message">Begin asseblief met paring deur die volgende stappe uit te voer:\n- Navigeer na \"Ontwikkelaaropsies\"\n- Aktiveer \"USB-ontfouting\" en \"Draadlose ontfouting\"\n- Tik die linkerkant van \"Draadlose ontfouting\"\n- Tik \"Koppel toestel met paringskode\"\n- Voer die paringskode in die kennisgewing in</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Op Android 14 herroep die installering/opdatering van Shizuku met die Pakketinstalleerder die ^1-toestemming, wat vereis word om die toeganklikheidsdiens vir paring te aktiveer.\n\nOm dit toe te staan, voer die volgende ADB-opdrag uit:\n\n^2\n\nNadat u die opdrag uitgevoer het, kan u voortgaan met die paringsproses.\n\nLet wel: u kan dit omseil deur Shizuku met ADB te installeer/op te dateer.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Aktiveer asseblief die toeganklikheidsdiens om die paringsproses te begin. Dit laat Shizuku toe om die paringskode op te spoor.\n\nDie toeganklikheidsdiens sal afgeskakel word wanneer die kode gevind word of na 1 minuut om energie te bespaar.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Begin asseblief met paring deur die volgende stappe uit te voer:\n- Navigeer na \"Ontwikkelaaropsies\"\n- Aktiveer \"USB-ontfouting\" en \"Draadlose ontfouting\"\n- Tik die linkerkant van \"Draadlose ontfouting\"\n- Tik \"Koppel toestel met paringskode.\" Shizuku sal outomaties die paringskode opspoor.</string>
-    <string name="adb_pairing_requires_multi_window">Gaan asseblief eers na die verdeelskerm-modus (multivenstermodus).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Die stelsel vereis dat die paringsdialoog altyd sigbaar moet wees. Die gebruik van verdeelskermmodus is die enigste manier om hierdie toepassing en die stelseldialoog gelyktydig sigbaar te laat wees.</string>
-    <string name="adb_error_key_store">Kan nie sleutel vir draadlose ontfouting genereer nie.\nDit mag wees omdat die KeyStore-meganisme van hierdie toestel gebreek is.</string>
+    <string name="cannot_connect_port">Kan nie aan draadlose ontfoutingsdiens koppel nie.\n\nMaak
+        asseblief seker dat Shizuku op die witlys is in alle firewall-, advertensieblokkerings-,
+        VPN- of soortgelyke programme wat netwerktoegang kan beperk.</string>
+    <string name="dialog_wireless_adb_not_enabled">Draadlose ontfouting is nie geaktiveer nie.\nLet
+        wel, voor Android 11, om draadlose ontfouting te aktiveer, is rekenaarverbinding \'n
+        vereiste.</string>
+    <string name="dialog_usb_debugging_not_enabled">USB-ontfouting is nie geaktiveer nie.\nAktiveer
+        dit asseblief in \"Ontwikkelaaropsies\".</string>
+    <string name="dialog_adb_pairing_message">Begin asseblief met paring deur die volgende stappe
+        uit te voer:\n- Navigeer na \"Ontwikkelaaropsies\"\n- Aktiveer \"USB-ontfouting\" en
+        \"Draadlose ontfouting\"\n- Tik die linkerkant van \"Draadlose ontfouting\"\n- Tik \"Koppel
+        toestel met paringskode\"\n- Voer die paringskode in die kennisgewing in</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Op Android 14 herroep die
+        installering/opdatering van Shizuku met die Pakketinstalleerder die ^1-toestemming, wat
+        vereis word om die toeganklikheidsdiens vir paring te aktiveer.\n\nOm dit toe te staan, voer
+        die volgende ADB-opdrag uit:\n\n^2\n\nNadat u die opdrag uitgevoer het, kan u voortgaan met
+        die paringsproses.\n\nLet wel: u kan dit omseil deur Shizuku met ADB te installeer/op te
+        dateer.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Aktiveer asseblief die
+        toeganklikheidsdiens om die paringsproses te begin. Dit laat Shizuku toe om die paringskode
+        op te spoor.\n\nDie toeganklikheidsdiens sal afgeskakel word wanneer die kode gevind word of
+        na 1 minuut om energie te bespaar.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Begin asseblief met paring deur die
+        volgende stappe uit te voer:\n- Navigeer na \"Ontwikkelaaropsies\"\n- Aktiveer
+        \"USB-ontfouting\" en \"Draadlose ontfouting\"\n- Tik die linkerkant van \"Draadlose
+        ontfouting\"\n- Tik \"Koppel toestel met paringskode.\" Shizuku sal outomaties die
+        paringskode opspoor.</string>
+    <string name="adb_pairing_requires_multi_window">Gaan asseblief eers na die verdeelskerm-modus
+        (multivenstermodus).</string>
+    <string name="adb_pairing_requires_multi_window_reason">Die stelsel vereis dat die
+        paringsdialoog altyd sigbaar moet wees. Die gebruik van verdeelskermmodus is die enigste
+        manier om hierdie toepassing en die stelseldialoog gelyktydig sigbaar te laat wees.</string>
+    <string name="adb_error_key_store">Kan nie sleutel vir draadlose ontfouting genereer nie.\nDit
+        mag wees omdat die KeyStore-meganisme van hierdie toestel gebreek is.</string>
     <string name="adb_stopping_tcp">Sluiting van TCP-poort</string>
     <string name="adb_error_stop_tcp">Kon nie ADB oor TCP stop nie</string>
     <string name="adb_pair_required">Gaan asseblief eers deur die paringsstap.</string>
@@ -47,15 +75,28 @@
     <string name="development_settings">Ontwikkelaaropsies</string>
     <string name="notification_settings">Kennisgewingopsies</string>
     <string name="adb_pairing_tutorial_title">Koppel Shizuku met jou toestel</string>
-    <string name="adb_pairing_tutorial_content_notification">\'n Kennisgewing van Shizuku sal jou help om die paring te voltooi.</string>
-    <string name="adb_pairing_tutorial_content_steps">Navigeer na \"Ontwikkelaaropsies\" en aktiveer dan \"USB-ontfouting\" en \"Draadlose ontfouting\".</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tik aan die linkerkant van \"Draadlose ontfouting\" en tik dan op \"Koppel toestel met koppelkode\". Voer die kode in die kennisgewing in om die koppelproses te voltooi.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Die paringsproses vereis dat jy met \'n kennisgewing van Shizuku interaksie het. Laat asseblief Shizuku toe om kennisgewings te plaas.</string>
-    <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moet dalk die kennisgewingstyl na \"Android\" oorskakel vanaf \"Kennisgewing\" - \"Kennisgewingskerm\" in stelselinstellings.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Andersins kan jy dalk nie die paringskode vanaf die kennisgewing invoer nie.</string>
+    <string name="adb_pairing_tutorial_content_notification">\'n Kennisgewing van Shizuku sal jou
+        help om die paring te voltooi.</string>
+    <string name="adb_pairing_tutorial_content_steps">Navigeer na \"Ontwikkelaaropsies\" en aktiveer
+        dan \"USB-ontfouting\" en \"Draadlose ontfouting\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tik aan die linkerkant van
+        \"Draadlose ontfouting\" en tik dan op \"Koppel toestel met koppelkode\". Voer die kode in
+        die kennisgewing in om die koppelproses te voltooi.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Die paringsproses vereis dat jy
+        met \'n kennisgewing van Shizuku interaksie het. Laat asseblief Shizuku toe om kennisgewings
+        te plaas.</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI-gebruikers moet dalk die kennisgewingstyl
+        na \"Android\" oorskakel vanaf \"Kennisgewing\" - \"Kennisgewingskerm\" in
+        stelselinstellings.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Andersins kan jy dalk nie die paringskode
+        vanaf die kennisgewing invoer nie.</string>
     <string name="adb_pairing_tutorial_content_finish">Gaan terug na Shizuku en begin Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku benodig toegang tot die plaaslike netwerk. Dit word beheer deur die netwerktoestemming.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar is nie, selfs al gebruik die program \'n voorgronddiens. Deaktiveer asseblief battery-optimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku benodig toegang tot die plaaslike
+        netwerk. Dit word beheer deur die netwerktoestemming.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sommige stelsels
+        (soos MIUI) verbied programme om toegang tot die netwerk te verkry wanneer hulle nie sigbaar
+        is nie, selfs al gebruik die program \'n voorgronddiens. Deaktiveer asseblief
+        battery-optimaliseringskenmerke vir Shizuku op sulke stelsels.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Begin (vir gewortelde toestelle)]]></string>
     <string name="home_root_description"><![CDATA[As jy Magisk gebruik, kan jy %1$sprobeer. Vir root-gebruikers sal dit uiteindelik Shizuku vervang. Let wel, bestaande toepassings moet \'n bietjie verander om %2$ste gebruik.]]></string>
@@ -68,10 +109,12 @@
         <item quantity="other"><![CDATA[Gemagtigde %d aansoeke]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Tik om gemagtigde programme te bestuur]]></string>
-    <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of verklaar het, sal hier verskyn.</string>
+    <string name="home_app_management_empty">Programme wat die Shizuku-toestemming versoek of
+        verklaar het, sal hier verskyn.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Beheer Shizuku met outomatiseringsprogramme</string>
-    <string name="home_automation_description"><![CDATA[Programme soos Tasker en MacroDroid kan voornemens stuur om Shizuku outomaties te begin/stop.<p>Ongewortelde toestelle op Android 10 of ouer moet \'n TCP-poort vanaf \'n rekenaar oopmaak deur<font face="monospace"> %1$s </font>te gebruik vir die beginvoorneme om te werk.]]></string>
+    <string name="home_automation_description">Programme soos Tasker en MacroDroid kan voornemens
+        stuur om Shizuku outomaties te begin/stop.</string>
     <string name="home_automation_button_view_intents">Bekyk voornemens</string>
     <string name="home_automation_dialog_label_action">Aksie</string>
     <string name="home_automation_dialog_label_package">Pakket</string>
@@ -82,7 +125,11 @@
     <string name="home_learn_more_description">Leer hoe om met Shizuku te ontwikkel</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Jy moet \'n ekstra stap neem</string>
-    <string name="home_adb_is_limited_description">Jou toestelvervaardiger het ADB-toestemmings beperk en programme wat Shizuku gebruik, sal nie behoorlik werk nie.\n\nGewoonlik kan hierdie beperking opgehef word deur sommige opsies in \"Ontwikkelaaropsies\" aan te pas. Lees asseblief die hulp vir besonderhede oor hoe om dit te doen.\n\nJy moet dalk Shizuku herbegin vir die bewerking om in werking te tree.</string>
+    <string name="home_adb_is_limited_description">Jou toestelvervaardiger het ADB-toestemmings
+        beperk en programme wat Shizuku gebruik, sal nie behoorlik werk nie.\n\nGewoonlik kan
+        hierdie beperking opgehef word deur sommige opsies in \"Ontwikkelaaropsies\" aan te pas.
+        Lees asseblief die hulp vir besonderhede oor hoe om dit te doen.\n\nJy moet dalk Shizuku
+        herbegin vir die bewerking om in werking te tree.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Die toestemming van adb is beperk</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Dit is hoogs moontlik dat jou toestelvervaardiger die toestemming van adb beperk.<p>Daar mag dalk \'n oplossing vir jou stelsel wees in <b><a href=\"%1$s\">hierdie dokument</a></b>.]]></string>
@@ -91,13 +138,20 @@
     <!-- Terminal -->
     <string name="home_terminal_title">Gebruik Shizuku in terminaalprogramme</string>
     <string name="home_terminal_description">Voer dopopdragte in terminaalprogramme deur Shizuku uit</string>
-    <string name="terminal_tutorial_miui">Gebruikers het berig dat MIUI die Storage Access Framework, wat deur die uitvoerfunksie gebruik word, oortree.</string>
-    <string name="terminal_tutorial_miui_2">As jy MIUI gebruik, moet jy dalk die lêer uit die bate-lêergids in Shizuku se APK onttrek.</string>
+    <string name="terminal_tutorial_miui">Gebruikers het berig dat MIUI die Storage Access
+        Framework, wat deur die uitvoerfunksie gebruik word, oortree.</string>
+    <string name="terminal_tutorial_miui_2">As jy MIUI gebruik, moet jy dalk die lêer uit die
+        bate-lêergids in Shizuku se APK onttrek.</string>
     <string name="terminal_tutorial_1">Voer die lêers na \'n nuwe vouer uit.</string>
-    <string name="terminal_tutorial_1_description">Twee lêers sal uitgevoer word: %1$s en %2$s. Indien die lêers reeds in die gekose vouer bestaan, sal hulle uitgevee word.</string>
+    <string name="terminal_tutorial_1_description">Twee lêers sal uitgevoer word: %1$s en %2$s.
+        Indien die lêers reeds in die gekose vouer bestaan, sal hulle uitgevee word.</string>
     <string name="terminal_export_files">Voer lêers uit</string>
-    <string name="terminal_tutorial_2">Gebruik jou terminaal-app om die lêers na sy privaat lêergids te kopieer.</string>
-    <string name="terminal_tutorial_2_description">Wenk: As jou terminaal-app se tuisgids (~) in die privaat lêergids is, sal die plasing van die lêers daar jou toelaat om %1$s uit te voer sonder om die pad te skryf.\n\nAndersins kan jy \'n alias vir %2$s in jou terminaal-app se %3$s konfigurasielêer skep.</string>
+    <string name="terminal_tutorial_2">Gebruik jou terminaal-app om die lêers na sy privaat lêergids
+        te kopieer.</string>
+    <string name="terminal_tutorial_2_description">Wenk: As jou terminaal-app se tuisgids (~) in die
+        privaat lêergids is, sal die plasing van die lêers daar jou toelaat om %1$s uit te voer
+        sonder om die pad te skryf.\n\nAndersins kan jy \'n alias vir %2$s in jou terminaal-app se
+        %3$s konfigurasielêer skep.</string>
     <string name="terminal_tutorial_3">Maak \'n dop oop met die volgende opdrag:</string>
     <string name="rish_description"><![CDATA[Met %1$skan jy dopbevele in enige terminaaltoepassing uitvoer.<p>Tik om meer te wete te kom oor hoe om dit te gebruik.]]></string>
     <!-- Settings -->
@@ -105,49 +159,62 @@
     <string name="settings_behavior">Gedrag</string>
     <string name="settings_start_on_boot">Begin met opstart</string>
     <string name="settings_start_on_boot_summary">Vereis Android 11+ of root</string>
-    <string name="settings_start_on_boot_bug">As gevolg van \'n fout in Android 11-12, onthou draadlose ontfouting geen gemagtigde netwerke nie.\n\nJy sal die netwerk met elke herbegin moet hermagtig deur op \"Laat toe\" te tik wanneer die magtigingsdialoog verskyn.</string>
+    <string name="settings_start_on_boot_bug">As gevolg van \'n fout in Android 11-12, onthou
+        draadlose ontfouting geen gemagtigde netwerke nie.\n\nJy sal die netwerk met elke herbegin
+        moet hermagtig deur op \"Laat toe\" te tik wanneer die magtigingsdialoog verskyn.</string>
     <string name="settings_use_system_color">Gebruik stelseltemakleur</string>
     <string name="settings_watchdog">Waghond</string>
     <string name="settings_watchdog_summary">Herbegin Shizuku outomaties as dit vasval</string>
     <string name="settings_tcp_mode">TCP-modus</string>
-    <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku moes een keer sedert herbegin begin het)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"Die TCP-poort sal onmiddellik gesluit word. Jy sal Wi-Fi nodig hê om TCP-modus weer aan te skakel. Gaan voort?"</string>
+    <string name="settings_tcp_mode_summary">"Laat Shizuku toe om te herbegin sonder Wi-Fi. (Shizuku
+        moes een keer sedert herbegin begin het)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Die TCP-poort sal onmiddellik gesluit word.
+        Jy sal Wi-Fi nodig hê om TCP-modus weer aan te skakel. Gaan voort?"</string>
     <string name="settings_tcp_mode_closing_port">Sluiting van TCP-poort...</string>
     <string name="settings_restart_dialog_title">Herbegin Vereis</string>
-    <string name="settings_restart_dialog_message">Shizuku moet herbegin om hierdie instelling toe te pas.</string>
+    <string name="settings_restart_dialog_message">Shizuku moet herbegin om hierdie instelling toe
+        te pas.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi word vereis. Shizuku sal aanhou loop en wag vir \'n Wi-Fi-verbinding voordat dit in die agtergrond herbegin.</b>]]></string>
     <string name="settings_tcp_port">TCP-poort</string>
     <string name="settings_tcp_port_default">Standaard (5555)</string>
     <string name="settings_tcp_port_hint">Los leeg om verstekwaarde (5555) te gebruik</string>
-    <string name="settings_tcp_learn_more">Leer meer oor die gebruik van outomatiseringsprogramme om Shizuku te beheer</string>
+    <string name="settings_tcp_learn_more">Leer meer oor die gebruik van outomatiseringsprogramme om
+        Shizuku te beheer</string>
     <string name="settings_language">Taal</string>
     <string name="settings_translation_contributors">Vertalingsbydraers</string>
     <string name="settings_translation">Neem deel aan vertaling</string>
     <string name="settings_translation_summary">Help ons om %s in jou taal te vertaal</string>
     <string name="settings_user_interface">Voorkoms</string>
     <string name="settings_black_night_theme">Swart nag tema</string>
-    <string name="settings_black_night_theme_summary">Gebruik die suiwer swart tema as nagmodus geaktiveer is</string>
+    <string name="settings_black_night_theme_summary">Gebruik die suiwer swart tema as nagmodus
+        geaktiveer is</string>
     <string name="settings_support">Ondersteuning</string>
     <string name="settings_help">Hulp</string>
     <string name="settings_report_bug">Rapporteer \'n fout</string>
     <string name="settings_advanced">Gevorderd</string>
     <string name="settings_legacy_pairing">Ouerskap-paring</string>
-    <string name="settings_legacy_pairing_summary">Voer die paringskode in \'n dialoog in plaas van \'n kennisgewing in</string>
+    <string name="settings_legacy_pairing_summary">Voer die paringskode in \'n dialoog in plaas van
+        \'n kennisgewing in</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Doen eers die volgende:</string>
     <string name="bug_report_dialog_update">Maak seker dat jy die ^1 gebruik.</string>
     <string name="bug_report_dialog_link_update">nuutste weergawe</string>
-    <string name="bug_report_dialog_wiki">Lees die ^1 en volg alle relevante probleemoplossingstappe.</string>
+    <string name="bug_report_dialog_wiki">Lees die ^1 en volg alle relevante
+        probleemoplossingstappe.</string>
     <string name="bug_report_dialog_link_wiki">wiki</string>
-    <string name="bug_report_dialog_issues">Soek deur al ^1 om te sien of jou fout reeds aangemeld is.</string>
+    <string name="bug_report_dialog_issues">Soek deur al ^1 om te sien of jou fout reeds aangemeld
+        is.</string>
     <string name="bug_report_dialog_link_issues">bestaande probleme</string>
-    <string name="bug_report_dialog_method">Dien asseblief \'n probleem in op ^1 as jy \'n rekening het.</string>
+    <string name="bug_report_dialog_method">Dien asseblief \'n probleem in op ^1 as jy \'n rekening
+        het.</string>
     <string name="bug_report_dialog_method_2">Andersins kan jy \'n e-pos stuur.</string>
     <string name="bug_report_dialog_button_email">E-pos</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Poort moet tussen 1 en 65535 wees</string>
-    <string name="snackbar_battery_optimization_home">Batteryoptimalisering moet gedeaktiveer wees vir die aanvang met selflaai/waghond om behoorlik te werk.</string>
-    <string name="snackbar_battery_optimization_settings">Deaktiveer asseblief batteryoptimalisering om hierdie kenmerk te gebruik.</string>
+    <string name="snackbar_battery_optimization_home">Batteryoptimalisering moet gedeaktiveer wees
+        vir die aanvang met selflaai/waghond om behoorlik te werk.</string>
+    <string name="snackbar_battery_optimization_settings">Deaktiveer asseblief batteryoptimalisering
+        om hierdie kenmerk te gebruik.</string>
     <string name="snackbar_action_fix">Herstel</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Geen e-posprogram gevind nie</string>
@@ -191,26 +258,33 @@
     <string name="grant_dialog_button_deny">"Weier"</string>
     <!-- Starter -->
     <string name="starter">Voorgereg</string>
-    <string name="start_with_root_failed">Kan nie diens begin nie, want worteltoestemming is nie toegestaan nie of hierdie toestel is nie gewortel nie.</string>
+    <string name="start_with_root_failed">Kan nie diens begin nie, want worteltoestemming is nie
+        toegestaan nie of hierdie toestel is nie gewortel nie.</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Begin Shizuku…</string>
-    <string name="wadb_notification_wifi_required">Wag tans vir Wi-Fi-verbinding voordat voortgegaan word</string>
+    <string name="wadb_notification_wifi_required">Wag tans vir Wi-Fi-verbinding voordat voortgegaan
+        word</string>
     <string name="wadb_notification_retry">Wag om weer te probeer</string>
     <string name="wadb_error_title">Fout tydens opstart</string>
     <string name="wadb_error_notify_dev">Tik om die ontwikkelaar in kennis te stel.</string>
     <string name="wadb_permission_error_notification_title">Toestemmingsfout</string>
-    <string name="wadb_permission_error_notification_content">Shizuku benodig WRITE_SECURE_SETTINGS om met selflaai te begin. Tik om te leer hoe om dit toe te staan.</string>
+    <string name="wadb_permission_error_notification_content">Shizuku benodig WRITE_SECURE_SETTINGS
+        om met selflaai te begin. Tik om te leer hoe om dit toe te staan.</string>
     <string name="wadb_notification_channel">ADB outomatiese begindiens</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Waghond loop</string>
     <string name="watchdog_turn_off">Skakel Af</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku het onlangs neergestort</string>
-    <string name="watchdog_shizuku_crashed_text">Waghond het die diens herbegin. Tik om meer te wete te kom oor moontlike oplossings om toekomstige ineenstortings te voorkom.</string>
+    <string name="watchdog_shizuku_crashed_text">Waghond het die diens herbegin. Tik om meer te wete
+        te kom oor moontlike oplossings om toekomstige ineenstortings te voorkom.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Skakel waarskuwings af</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Kan nie blaaier begin nie</string>
     <string name="toast_copied_to_clipboard">Na knipbord gekopieer</string>
-    <string name="accessibility_service_description">Verskaf paringsondersteuning vir toestelle (bv. TV\'s met Android 14+) waar kennisgewings of \'n gesplete skerm nie gebruik kan word nie.\n\nStel Shizuku in staat om die paringskode uit die draadlose ontfouting-paringskerm te onttrek. Dit sal homself deaktiveer sodra die paringskode gevind is.</string>
+    <string name="accessibility_service_description">Verskaf paringsondersteuning vir toestelle (bv.
+        TV\'s met Android 14+) waar kennisgewings of \'n gesplete skerm nie gebruik kan word
+        nie.\n\nStel Shizuku in staat om die paringskode uit die draadlose ontfouting-paringskerm te
+        onttrek. Dit sal homself deaktiveer sodra die paringskode gevind is.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ondersteun nie moderne Shizuku nie</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Legacy Shizuku is sedert Maart 2019 afgekeur. Legacy Shizuku werk ook nie op nuwer Android-stelsels nie.<p>Vra asseblief die ontwikkelaar van <b>%1$s</b> om op te dateer.]]></string>

@@ -21,10 +21,13 @@
     <string name="home_wireless_adb_view_guide_button">Guida passo-passo</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Ricerca del servizio di Debug Wireless</string>
-    <string name="dialog_adb_discovery_message">Abilita \"Debug Wireless\" in \"Opzioni Sviluppatore\". \"Debug Wireless\" viene automaticamente disabilitato quando la rete cambia.
-\n
-\nNota, non disabilitare \"Opzioni Sviluppatore\" o \"Debug USB\", altrimenti Shizuku verrà interrotto.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Prova a disabilitare e abilitare \"Debug Wireless\" se continua a cercare.</string>
+    <string name="dialog_adb_discovery_message">Abilita \"Debug Wireless\" in \"Opzioni
+        Sviluppatore\". \"Debug Wireless\" viene automaticamente disabilitato quando la rete cambia.
+        \n
+        \nNota, non disabilitare \"Opzioni Sviluppatore\" o \"Debug USB\", altrimenti Shizuku verrà
+        interrotto.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Prova a disabilitare e
+        abilitare \"Debug Wireless\" se continua a cercare.</string>
     <string name="dialog_adb_port">Porta</string>
     <string name="dialog_adb_invalid_port">La porta è un numero intero compreso tra 1 e 65535.</string>
     <string name="adb_pairing">Accoppiamento</string>
@@ -32,17 +35,39 @@
     <string name="dialog_adb_pairing_discovery">Ricerca del servizio di accoppiamento</string>
     <string name="dialog_adb_pairing_paring_code">Codice di accoppiamento</string>
     <string name="paring_code_is_wrong">Il codice di accoppiamento è sbagliato.</string>
-    <string name="cannot_connect_port">Non riesco a connettermi al servizio di debug wireless.\n\nAssicurati che Shizuku sia nella whitelist di tutte le app firewall, ad-block, VPN o simili che possono limitare l\'accesso alla rete.</string>
+    <string name="cannot_connect_port">Non riesco a connettermi al servizio di debug
+        wireless.\n\nAssicurati che Shizuku sia nella whitelist di tutte le app firewall, ad-block,
+        VPN o simili che possono limitare l\'accesso alla rete.</string>
     <string name="dialog_wireless_adb_not_enabled">Il debug wireless non è abilitato.
-\nNota, per versioni precedenti ad Android 11, per abilitare il debug wireless, è necessaria la connessione al computer.</string>
-    <string name="dialog_usb_debugging_not_enabled">Il debug USB non è abilitato.\nAbilitalo in \"Opzioni sviluppatore\".</string>
-    <string name="dialog_adb_pairing_message">Per iniziare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\"\n- Inserisci il codice di associazione nella notifica</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Su Android 14, l\'installazione/aggiornamento di Shizuku con Package Installer revoca l\'autorizzazione ^1, necessaria per abilitare il servizio di accessibilità per l\'associazione.\n\nPer concederla, esegui il seguente comando ADB:\n\n^2\n\nDopo aver eseguito il comando, puoi continuare con il processo di associazione.\n\nNota: puoi aggirare questo problema installando/aggiornando Shizuku con ADB.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Abilita il servizio di accessibilità per avviare il processo di associazione. Questo permetterà a Shizuku di rilevare il codice di associazione.\n\nIl servizio di accessibilità verrà disattivato quando il codice verrà trovato o dopo 1 minuto per risparmiare energia.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Per avviare l\'associazione, procedere come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di associazione\". Shizuku rileverà automaticamente il codice di associazione.</string>
-    <string name="adb_pairing_requires_multi_window">Entra prima nella modalità schermo diviso (multi-finestra).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Il sistema richiede che la dialogo di accoppiamento sia sempre visibile. Usare la modalità split-screen è l\'unico modo per rendere visibile sia questa app che la finestra di dialogo di sistema contemporaneamente.</string>
-    <string name="adb_error_key_store">Impossibile generare la chiave per il debug wireless.\nQuesto potrebbe essere dovuto al fatto che il meccanismo KeyStore di questo dispositivo è rotto.</string>
+        \nNota, per versioni precedenti ad Android 11, per abilitare il debug wireless, è necessaria
+        la connessione al computer.</string>
+    <string name="dialog_usb_debugging_not_enabled">Il debug USB non è abilitato.\nAbilitalo in
+        \"Opzioni sviluppatore\".</string>
+    <string name="dialog_adb_pairing_message">Per iniziare l\'associazione, procedere come segue:\n-
+        Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug wireless\"\n- Tocca il
+        lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo con codice di
+        associazione\"\n- Inserisci il codice di associazione nella notifica</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Su Android 14,
+        l\'installazione/aggiornamento di Shizuku con Package Installer revoca l\'autorizzazione ^1,
+        necessaria per abilitare il servizio di accessibilità per l\'associazione.\n\nPer
+        concederla, esegui il seguente comando ADB:\n\n^2\n\nDopo aver eseguito il comando, puoi
+        continuare con il processo di associazione.\n\nNota: puoi aggirare questo problema
+        installando/aggiornando Shizuku con ADB.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Abilita il servizio di accessibilità per
+        avviare il processo di associazione. Questo permetterà a Shizuku di rilevare il codice di
+        associazione.\n\nIl servizio di accessibilità verrà disattivato quando il codice verrà
+        trovato o dopo 1 minuto per risparmiare energia.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Per avviare l\'associazione, procedere
+        come segue:\n- Vai su \"Opzioni sviluppatore\"\n- Abilita \"Debug USB\" e \"Debug
+        wireless\"\n- Tocca il lato sinistro di \"Debug wireless\"\n- Tocca \"Associa dispositivo
+        con codice di associazione\". Shizuku rileverà automaticamente il codice di associazione.</string>
+    <string name="adb_pairing_requires_multi_window">Entra prima nella modalità schermo diviso
+        (multi-finestra).</string>
+    <string name="adb_pairing_requires_multi_window_reason">Il sistema richiede che la dialogo di
+        accoppiamento sia sempre visibile. Usare la modalità split-screen è l\'unico modo per
+        rendere visibile sia questa app che la finestra di dialogo di sistema contemporaneamente.</string>
+    <string name="adb_error_key_store">Impossibile generare la chiave per il debug wireless.\nQuesto
+        potrebbe essere dovuto al fatto che il meccanismo KeyStore di questo dispositivo è rotto.</string>
     <string name="adb_stopping_tcp">Chiusura della porta TCP</string>
     <string name="adb_error_stop_tcp">Impossibile arrestare ADB su TCP</string>
     <string name="adb_pair_required">Esegui prima la fase di accoppiamento.</string>
@@ -50,15 +75,28 @@
     <string name="development_settings">Modalitá sviluppatore</string>
     <string name="notification_settings">Opzioni di notifica</string>
     <string name="adb_pairing_tutorial_title">Accoppia Shizuku col tuo dispositivo</string>
-    <string name="adb_pairing_tutorial_content_notification">Una notifica da Shizuku ti aiuterà a completare l\'accoppiamento.</string>
-    <string name="adb_pairing_tutorial_content_steps">Vai su \"Opzioni sviluppatore\", quindi abilita \"Debug USB\" e \"Debug wireless\".</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tocca il lato sinistro di \"Debug wireless\", quindi tocca \"Associa dispositivo con codice di associazione\". Inserisci il codice nella notifica per completare l\'associazione.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Il processo di accoppiamento richiede che tu interagisca con una notifica di Shizuku. Consenti a Shizuku di mostrare notifiche.</string>
-    <string name="adb_pairing_tutorial_content_miui">Gli utenti MIUI potrebbero dover impostare lo stile di notifica su \"Android\" da \"Notifiche\" - \"Pannello notifiche\" nelle impostazioni di sistema.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Altrimenti, potresti non riuscire a inserire il codice di accoppiamento dalla notifica.</string>
+    <string name="adb_pairing_tutorial_content_notification">Una notifica da Shizuku ti aiuterà a
+        completare l\'accoppiamento.</string>
+    <string name="adb_pairing_tutorial_content_steps">Vai su \"Opzioni sviluppatore\", quindi
+        abilita \"Debug USB\" e \"Debug wireless\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Tocca il lato sinistro di \"Debug
+        wireless\", quindi tocca \"Associa dispositivo con codice di associazione\". Inserisci il
+        codice nella notifica per completare l\'associazione.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Il processo di accoppiamento
+        richiede che tu interagisca con una notifica di Shizuku. Consenti a Shizuku di mostrare
+        notifiche.</string>
+    <string name="adb_pairing_tutorial_content_miui">Gli utenti MIUI potrebbero dover impostare lo
+        stile di notifica su \"Android\" da \"Notifiche\" - \"Pannello notifiche\" nelle
+        impostazioni di sistema.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Altrimenti, potresti non riuscire a inserire
+        il codice di accoppiamento dalla notifica.</string>
     <string name="adb_pairing_tutorial_content_finish">Torna da Shizuku e inizia Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku deve accedere alla rete locale. È controllato dal permesso di rete.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alcuni sistemi (come MIUI) impediscono alle app di accedere alla rete quando non sono visibili, anche se l\'app utilizza un servizio in primo piano. Per favore, disattiva le funzioni di ottimizzazione della batteria per Shizuku su tali sistemi.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku deve accedere alla rete locale. È
+        controllato dal permesso di rete.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Alcuni sistemi (come
+        MIUI) impediscono alle app di accedere alla rete quando non sono visibili, anche se l\'app
+        utilizza un servizio in primo piano. Per favore, disattiva le funzioni di ottimizzazione
+        della batteria per Shizuku su tali sistemi.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Avvia (per dispositivi rootati)]]></string>
     <string name="home_root_description"><![CDATA[Se stai usando Magisk, puoi provare %1$s. Per gli utenti root, sostituirà Shizuku. Nota: le applicazioni esistenti devono essere leggermente modificate per poter utilizzare %2$s.]]></string>
@@ -71,10 +109,12 @@
         <item quantity="other"><![CDATA[%d applicazioni autorizzate]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Premere per gestire le app autorizzate]]></string>
-    <string name="home_app_management_empty">Qui verranno visualizzate le app che hanno richiesto o dichiarato l\'autorizzazione Shizuku.</string>
+    <string name="home_app_management_empty">Qui verranno visualizzate le app che hanno richiesto o
+        dichiarato l\'autorizzazione Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Controlla Shizuku con le app di automazione</string>
-    <string name="home_automation_description"><![CDATA[App come Tasker e MacroDroid possono inviare intent per avviare/arrestare Shizuku automaticamente.<p>I dispositivi non rootati su Android 10 o versioni precedenti devono aprire una porta TCP da un PC utilizzando<font face="monospace"> %1$s </font>affinché l\'intento di avvio funzioni.]]></string>
+    <string name="home_automation_description">App come Tasker e MacroDroid possono inviare intent
+        per avviare/arrestare Shizuku automaticamente.</string>
     <string name="home_automation_button_view_intents">Visualizza intenti</string>
     <string name="home_automation_dialog_label_action">Azione</string>
     <string name="home_automation_dialog_label_package">Pacchetto</string>
@@ -85,11 +125,14 @@
     <string name="home_learn_more_description">Impara a sviluppare con Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Devi fare un passo in più</string>
-    <string name="home_adb_is_limited_description">Il produttore del dispositivo dispone di autorizzazioni adb limitate e le app che utilizzano Shizuku non funzioneranno correttamente.
-\n
-\nDi solito, questa limitazione può essere rimossa regolando alcune opzioni in \"Opzioni sviluppatore\". Si prega di leggere la guida per i dettagli su come eseguire questa operazione.
-\n
-\nPotrebbe essere necessario riavviare Shizuku per rendere effettiva l\'operazione.</string>
+    <string name="home_adb_is_limited_description">Il produttore del dispositivo dispone di
+        autorizzazioni adb limitate e le app che utilizzano Shizuku non funzioneranno correttamente.
+        \n
+        \nDi solito, questa limitazione può essere rimossa regolando alcune opzioni in \"Opzioni
+        sviluppatore\". Si prega di leggere la guida per i dettagli su come eseguire questa
+        operazione.
+        \n
+        \nPotrebbe essere necessario riavviare Shizuku per rendere effettiva l\'operazione.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Il permesso di adb è limitato</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[È molto probabile che il fabbricante del tuo dispositivo limiti i permessi di adb.<p>Ci potrebbe essere una soluzione per il vostro dispositivo in <b><a href="%1$s">questo documento</a></b>.]]></string>
@@ -97,14 +140,22 @@
     <string name="app_management_toggle_all">Attiva/disattiva tutto</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Utilizza Shizuku nell\'app terminale</string>
-    <string name="home_terminal_description">Eseguire comandi shell nelle app terminali tramite Shizuku</string>
-    <string name="terminal_tutorial_miui">Gli utenti hanno segnalato che MIUI interrompe lo Storage Access Framework, utilizzato dalla funzione di esportazione.</string>
-    <string name="terminal_tutorial_miui_2">Se utilizzi MIUI, potresti dover estrarre il file dalla cartella assets nell\'APK di Shizuku.</string>
+    <string name="home_terminal_description">Eseguire comandi shell nelle app terminali tramite
+        Shizuku</string>
+    <string name="terminal_tutorial_miui">Gli utenti hanno segnalato che MIUI interrompe lo Storage
+        Access Framework, utilizzato dalla funzione di esportazione.</string>
+    <string name="terminal_tutorial_miui_2">Se utilizzi MIUI, potresti dover estrarre il file dalla
+        cartella assets nell\'APK di Shizuku.</string>
     <string name="terminal_tutorial_1">Esportare i file in una nuova cartella.</string>
-    <string name="terminal_tutorial_1_description">Verranno esportati due file: %1$s e %2$s. Se i file sono già presenti nella cartella selezionata, verranno eliminati.</string>
+    <string name="terminal_tutorial_1_description">Verranno esportati due file: %1$s e %2$s. Se i
+        file sono già presenti nella cartella selezionata, verranno eliminati.</string>
     <string name="terminal_export_files">Esporta files</string>
-    <string name="terminal_tutorial_2">Utilizza l\'app del terminale per copiare i file nella directory dei file privati.</string>
-    <string name="terminal_tutorial_2_description">Suggerimento: se la directory home dell\'app terminale (~) si trova nella directory dei file privati, posizionando i file lì sarà possibile eseguire %1$s senza scrivere il percorso.\n\nIn caso contrario, è possibile creare un alias per %2$s nel file di configurazione %3$s dell\'app terminale.</string>
+    <string name="terminal_tutorial_2">Utilizza l\'app del terminale per copiare i file nella
+        directory dei file privati.</string>
+    <string name="terminal_tutorial_2_description">Suggerimento: se la directory home dell\'app
+        terminale (~) si trova nella directory dei file privati, posizionando i file lì sarà
+        possibile eseguire %1$s senza scrivere il percorso.\n\nIn caso contrario, è possibile creare
+        un alias per %2$s nel file di configurazione %3$s dell\'app terminale.</string>
     <string name="terminal_tutorial_3">Aprire una shell con il seguente comando:</string>
     <string name="rish_description"><![CDATA[Con %1$spuoi eseguire comandi shell in qualsiasi app terminale.<p>Tocca per saperne di più su come utilizzarlo.]]></string>
     <!-- Settings -->
@@ -112,49 +163,61 @@
     <string name="settings_behavior">Comportamento</string>
     <string name="settings_start_on_boot">Avvia all\'avvio</string>
     <string name="settings_start_on_boot_summary">Richiede Android 11+ o root</string>
-    <string name="settings_start_on_boot_bug">A causa di un bug in Android 11-12, il debug wireless non ricorda nessuna rete autorizzata.\n\nDovrai riautorizzare la rete ad ogni riavvio toccando \"Consenti\" quando appare la finestra di autorizzazione.</string>
+    <string name="settings_start_on_boot_bug">A causa di un bug in Android 11-12, il debug wireless
+        non ricorda nessuna rete autorizzata.\n\nDovrai riautorizzare la rete ad ogni riavvio
+        toccando \"Consenti\" quando appare la finestra di autorizzazione.</string>
     <string name="settings_use_system_color">Usa il colore del tema di sistema</string>
     <string name="settings_watchdog">Cane da guardia</string>
     <string name="settings_watchdog_summary">Riavvia automaticamente Shizuku se si blocca</string>
     <string name="settings_tcp_mode">Modalità TCP</string>
-    <string name="settings_tcp_mode_summary">"Permette a Shizuku di riavviarsi senza Wi-Fi. (Shizuku deve essere stato avviato una volta dopo il riavvio)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"La porta TCP verrà chiusa immediatamente. Sarà necessario il Wi-Fi per riattivare la modalità TCP. Continuare?"</string>
+    <string name="settings_tcp_mode_summary">"Permette a Shizuku di riavviarsi senza Wi-Fi. (Shizuku
+        deve essere stato avviato una volta dopo il riavvio)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"La porta TCP verrà chiusa immediatamente.
+        Sarà necessario il Wi-Fi per riattivare la modalità TCP. Continuare?"</string>
     <string name="settings_tcp_mode_closing_port">Chiusura della porta TCP...</string>
     <string name="settings_restart_dialog_title">Riavvio richiesto</string>
-    <string name="settings_restart_dialog_message">Shizuku deve ricominciare per poter applicare questa impostazione.</string>
+    <string name="settings_restart_dialog_message">Shizuku deve ricominciare per poter applicare
+        questa impostazione.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Il Wi-Fi è necessario. Shizuku continuerà a funzionare e aspetterà una connessione Wi-Fi prima di riavviare in background.</b>]]></string>
     <string name="settings_tcp_port">porta TCP</string>
     <string name="settings_tcp_port_default">Predefinito (5555)</string>
     <string name="settings_tcp_port_hint">Lasciare vuoto per utilizzare il valore predefinito (5555)</string>
-    <string name="settings_tcp_learn_more">Scopri di più sull\'utilizzo delle app di automazione per controllare Shizuku</string>
+    <string name="settings_tcp_learn_more">Scopri di più sull\'utilizzo delle app di automazione per
+        controllare Shizuku</string>
     <string name="settings_language">Lingua</string>
     <string name="settings_translation_contributors">Contributori alla traduzione</string>
     <string name="settings_translation">Partecipa alla traduzione</string>
     <string name="settings_translation_summary">Aiutaci a tradurre %s nella tua lingua</string>
     <string name="settings_user_interface">Aspetto</string>
     <string name="settings_black_night_theme">Tema nero notte</string>
-    <string name="settings_black_night_theme_summary">Usa il tema nero puro se la modalità notte è abilitata</string>
+    <string name="settings_black_night_theme_summary">Usa il tema nero puro se la modalità notte è
+        abilitata</string>
     <string name="settings_support">Supporto</string>
     <string name="settings_help">Aiuto</string>
     <string name="settings_report_bug">Segnala un bug</string>
     <string name="settings_advanced">Avanzato</string>
     <string name="settings_legacy_pairing">Abbinamento legacy</string>
-    <string name="settings_legacy_pairing_summary">Inserisci il codice di associazione in una finestra di dialogo anziché in una notifica</string>
+    <string name="settings_legacy_pairing_summary">Inserisci il codice di associazione in una
+        finestra di dialogo anziché in una notifica</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Per prima cosa, procedi come segue:</string>
     <string name="bug_report_dialog_update">Verificare di utilizzare ^1.</string>
     <string name="bug_report_dialog_link_update">ultima versione</string>
-    <string name="bug_report_dialog_wiki">Leggere ^1 e seguire tutti i passaggi pertinenti per la risoluzione dei problemi.</string>
+    <string name="bug_report_dialog_wiki">Leggere ^1 e seguire tutti i passaggi pertinenti per la
+        risoluzione dei problemi.</string>
     <string name="bug_report_dialog_link_wiki">wiki</string>
-    <string name="bug_report_dialog_issues">Cerca in tutti i ^1 per vedere se il tuo bug è già stato segnalato.</string>
+    <string name="bug_report_dialog_issues">Cerca in tutti i ^1 per vedere se il tuo bug è già stato
+        segnalato.</string>
     <string name="bug_report_dialog_link_issues">problemi esistenti</string>
     <string name="bug_report_dialog_method">Se hai un account, segnala un problema su ^1.</string>
     <string name="bug_report_dialog_method_2">Altrimenti puoi inviare un\'e-mail.</string>
     <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">La porta deve essere compresa tra 1 e 65535</string>
-    <string name="snackbar_battery_optimization_home">Per far sì che l\'avvio all\'avvio/watchdog funzioni correttamente, è necessario disattivare l\'ottimizzazione della batteria.</string>
-    <string name="snackbar_battery_optimization_settings">Per utilizzare questa funzione, disattivare l\'ottimizzazione della batteria.</string>
+    <string name="snackbar_battery_optimization_home">Per far sì che l\'avvio all\'avvio/watchdog
+        funzioni correttamente, è necessario disattivare l\'ottimizzazione della batteria.</string>
+    <string name="snackbar_battery_optimization_settings">Per utilizzare questa funzione,
+        disattivare l\'ottimizzazione della batteria.</string>
     <string name="snackbar_action_fix">Aggiustare</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Nessuna app di posta elettronica trovata</string>
@@ -182,7 +245,8 @@
     <string name="notification_working">Esecuzione…</string>
     <string name="notification_channel_adb_pairing">Accoppiamento debug wireless</string>
     <string name="notification_adb_pairing_input_paring_code">Inserire codice di associazione</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Ricerca del servizio di accoppiamento</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Ricerca del servizio di
+        accoppiamento</string>
     <string name="notification_adb_pairing_service_found_title">Servizio di accoppiamento trovato</string>
     <string name="notification_adb_pairing_stop_searching">Interrompi la ricerca</string>
     <string name="notification_adb_pairing_working_title">Accoppiamento in corso</string>
@@ -198,26 +262,34 @@
     <string name="grant_dialog_button_deny">"Nega"</string>
     <!-- Starter -->
     <string name="starter">Accensione</string>
-    <string name="start_with_root_failed">Impossibile avviare il servizio poiché i permessi di root non sono stati concessi o questo dispositivo non è rootato.</string>
+    <string name="start_with_root_failed">Impossibile avviare il servizio poiché i permessi di root
+        non sono stati concessi o questo dispositivo non è rootato.</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Inizia Shizuku…</string>
-    <string name="wadb_notification_wifi_required">In attesa della connessione Wi-Fi prima di procedere</string>
+    <string name="wadb_notification_wifi_required">In attesa della connessione Wi-Fi prima di
+        procedere</string>
     <string name="wadb_notification_retry">In attesa di riprovare</string>
     <string name="wadb_error_title">Errore durante l\'avvio all\'avvio</string>
     <string name="wadb_error_notify_dev">Tocca per avvisare lo sviluppatore.</string>
     <string name="wadb_permission_error_notification_title">Errore di autorizzazione</string>
-    <string name="wadb_permission_error_notification_content">Shizuku necessita di WRITE_SECURE_SETTINGS per avviarsi all\'avvio. Tocca per scoprire come concederlo.</string>
+    <string name="wadb_permission_error_notification_content">Shizuku necessita di
+        WRITE_SECURE_SETTINGS per avviarsi all\'avvio. Tocca per scoprire come concederlo.</string>
     <string name="wadb_notification_channel">Servizio di avvio automatico ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Il cane da guardia è in esecuzione</string>
     <string name="watchdog_turn_off">Spegni</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku si è schiantato di recente</string>
-    <string name="watchdog_shizuku_crashed_text">Watchdog ha riavviato il servizio. Tocca per scoprire le possibili soluzioni per prevenire futuri arresti anomali.</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog ha riavviato il servizio. Tocca per
+        scoprire le possibili soluzioni per prevenire futuri arresti anomali.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Disattiva gli avvisi</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Impossibile avviare il browser</string>
     <string name="toast_copied_to_clipboard">Copiato negli appunti</string>
-    <string name="accessibility_service_description">Fornisce supporto per l\'associazione per dispositivi (ad esempio, TV con Android 14+) in cui non è possibile utilizzare le notifiche o lo schermo diviso.\n\nConsente a Shizuku di estrarre il codice di associazione dalla schermata di debug wireless. Si disabiliterà automaticamente una volta trovato il codice di associazione.</string>
+    <string name="accessibility_service_description">Fornisce supporto per l\'associazione per
+        dispositivi (ad esempio, TV con Android 14+) in cui non è possibile utilizzare le notifiche
+        o lo schermo diviso.\n\nConsente a Shizuku di estrarre il codice di associazione dalla
+        schermata di debug wireless. Si disabiliterà automaticamente una volta trovato il codice di
+        associazione.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s non supporta il moderno Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Shizuku legacy è stato deprecato a marzo 2019. Inoltre, Shizuku legacy non funziona sui sistemi Android più recenti.<p>Chiedi allo sviluppatore<b>%1$s</b> di aggiornare.]]></string>

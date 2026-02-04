@@ -21,10 +21,14 @@
     <string name="home_wireless_adb_view_guide_button">Vodnik po korakih</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Iskanje storitve za Brezžično razhroščevanje</string>
-    <string name="dialog_adb_discovery_message">Prosimo omogočite \"Brezžično razhroščevanje\" v \"Nastavitvah za razvijalce\". \"Brezžično razhroščevanje\" je avtomatsko onemogočeno, ko se spremeni omrežje.
-\n
-\nPozor! Ne onemogočajte \"Nastavitev za razvijalce\" ali \"USB razhroščevanja\", drugače bo Shizuku ustavljen.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Če iskanje še naprej traja, poskusite onemogočiti in nato omogočiti »Brezžično odpravljanje napak«.</string>
+    <string name="dialog_adb_discovery_message">Prosimo omogočite \"Brezžično razhroščevanje\" v
+        \"Nastavitvah za razvijalce\". \"Brezžično razhroščevanje\" je avtomatsko onemogočeno, ko se
+        spremeni omrežje.
+        \n
+        \nPozor! Ne onemogočajte \"Nastavitev za razvijalce\" ali \"USB razhroščevanja\", drugače bo
+        Shizuku ustavljen.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Če iskanje še naprej
+        traja, poskusite onemogočiti in nato omogočiti »Brezžično odpravljanje napak«.</string>
     <string name="dialog_adb_port">Vrata</string>
     <string name="dialog_adb_invalid_port">Vrata so število v obsegu od 1 do 65535.</string>
     <string name="adb_pairing">Seznanjanje</string>
@@ -32,17 +36,39 @@
     <string name="dialog_adb_pairing_discovery">Iskanje storitve za seznanjanje</string>
     <string name="dialog_adb_pairing_paring_code">Koda za seznanitev</string>
     <string name="paring_code_is_wrong">Koda za seznanitev je napačna.</string>
-    <string name="cannot_connect_port">Ne morem se povezati na brezžično storitev za odpravljanje napak.\n\nProsimo, poskrbite, da je Shizuku na beli listi v vseh požarnih zidovnih zidovih, blokatorjih, VPN-jih ali podobnih aplikacijah, ki lahko omejujejo dostop do omrežja.</string>
+    <string name="cannot_connect_port">Ne morem se povezati na brezžično storitev za odpravljanje
+        napak.\n\nProsimo, poskrbite, da je Shizuku na beli listi v vseh požarnih zidovnih zidovih,
+        blokatorjih, VPN-jih ali podobnih aplikacijah, ki lahko omejujejo dostop do omrežja.</string>
     <string name="dialog_wireless_adb_not_enabled">Brezžično razhroščevanje ni omogočeno.
-\nPozor! Pred Androidom 11, je za omogočanje brezžičnega razhroščevanja potreben računalnik.</string>
-    <string name="dialog_usb_debugging_not_enabled">Odpravljanje napak prek USB-ja ni omogočeno.\nOmogočite ga v »Možnostih za razvijalce«.</string>
-    <string name="dialog_adb_pairing_message">Začnite z združevanjem tako, da izvedete naslednje korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite »Odpravljanje napak USB« in »Brezžično odpravljanje napak«\n- Dotaknite se leve strani »Brezžično odpravljanje napak«\n- Dotaknite se »Seznani napravo s kodo za združevanje«\n- V obvestilo vnesite kodo za združevanje</string>
-    <string name="dialog_adb_pairing_accessibility_permission">V sistemu Android 14 namestitev/posodabljanje programa Shizuku z namestitvenim programom paketov prekliče dovoljenje ^1, ki je potrebno za omogočanje storitve dostopnosti za seznanjanje.\n\nČe ga želite odobriti, zaženite naslednji ukaz ADB:\n\n^2\n\nPo zagonu ukaza lahko nadaljujete s postopkom seznanjanja.\n\nOpomba: temu se lahko izognete tako, da namestite/posodobite program Shizuku z ADB.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Za začetek postopka seznanjanja omogočite storitev dostopnosti. To bo Shizuku omogočilo zaznavanje kode za seznanjanje.\n\nStoritev dostopnosti se bo izklopila, ko bo koda najdena, ali po 1 minuti, da se prihrani energija.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Začnite z združevanjem tako, da izvedete naslednje korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite »Odpravljanje napak USB« in »Odpravljanje napak brezžično«\n- Dotaknite se leve strani »Odpravljanje napak brezžično«\n- Dotaknite se »Združi napravo s kodo za združevanje«. Shizuku bo samodejno zaznal kodo za združevanje.</string>
-    <string name="adb_pairing_requires_multi_window">Najprej vklopite način deljenega zaslona (več oken).</string>
-    <string name="adb_pairing_requires_multi_window_reason">Sistem zahteva, da je dialog za združevanje vedno viden. Uporaba deljenega zaslona je edini način, da sta ta aplikacija in sistemsko okno hkrati vidna.</string>
-    <string name="adb_error_key_store">Ni mogoče generirati ključa za brezžično razhroščevanje.\nTo je morda zato, ker je mehanizem KeyStore na tej napravi pokvarjen.</string>
+        \nPozor! Pred Androidom 11, je za omogočanje brezžičnega razhroščevanja potreben računalnik.</string>
+    <string name="dialog_usb_debugging_not_enabled">Odpravljanje napak prek USB-ja ni
+        omogočeno.\nOmogočite ga v »Možnostih za razvijalce«.</string>
+    <string name="dialog_adb_pairing_message">Začnite z združevanjem tako, da izvedete naslednje
+        korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite »Odpravljanje napak USB« in
+        »Brezžično odpravljanje napak«\n- Dotaknite se leve strani »Brezžično odpravljanje napak«\n-
+        Dotaknite se »Seznani napravo s kodo za združevanje«\n- V obvestilo vnesite kodo za
+        združevanje</string>
+    <string name="dialog_adb_pairing_accessibility_permission">V sistemu Android 14
+        namestitev/posodabljanje programa Shizuku z namestitvenim programom paketov prekliče
+        dovoljenje ^1, ki je potrebno za omogočanje storitve dostopnosti za seznanjanje.\n\nČe ga
+        želite odobriti, zaženite naslednji ukaz ADB:\n\n^2\n\nPo zagonu ukaza lahko nadaljujete s
+        postopkom seznanjanja.\n\nOpomba: temu se lahko izognete tako, da namestite/posodobite
+        program Shizuku z ADB.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Za začetek postopka seznanjanja omogočite
+        storitev dostopnosti. To bo Shizuku omogočilo zaznavanje kode za seznanjanje.\n\nStoritev
+        dostopnosti se bo izklopila, ko bo koda najdena, ali po 1 minuti, da se prihrani energija.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Začnite z združevanjem tako, da
+        izvedete naslednje korake:\n- Pomaknite se do »Možnosti za razvijalce«\n- Omogočite
+        »Odpravljanje napak USB« in »Odpravljanje napak brezžično«\n- Dotaknite se leve strani
+        »Odpravljanje napak brezžično«\n- Dotaknite se »Združi napravo s kodo za združevanje«.
+        Shizuku bo samodejno zaznal kodo za združevanje.</string>
+    <string name="adb_pairing_requires_multi_window">Najprej vklopite način deljenega zaslona (več
+        oken).</string>
+    <string name="adb_pairing_requires_multi_window_reason">Sistem zahteva, da je dialog za
+        združevanje vedno viden. Uporaba deljenega zaslona je edini način, da sta ta aplikacija in
+        sistemsko okno hkrati vidna.</string>
+    <string name="adb_error_key_store">Ni mogoče generirati ključa za brezžično razhroščevanje.\nTo
+        je morda zato, ker je mehanizem KeyStore na tej napravi pokvarjen.</string>
     <string name="adb_stopping_tcp">Zapiranje TCP vrat</string>
     <string name="adb_error_stop_tcp">Ustavitev ADB prek TCP ni uspela</string>
     <string name="adb_pair_required">Najprej sledite koraku seznanjanja.</string>
@@ -50,15 +76,26 @@
     <string name="development_settings">Možnosti za razvijalce</string>
     <string name="notification_settings">Možnosti obveščanja</string>
     <string name="adb_pairing_tutorial_title">Združite Shizuku s svojo napravo</string>
-    <string name="adb_pairing_tutorial_content_notification">Obvestilo Shizukuja vam bo pomagalo dokončati seznanjanje.</string>
-    <string name="adb_pairing_tutorial_content_steps">Pojdite na »Možnosti za razvijalce« in nato omogočite »Odpravljanje napak USB« in »Odpravljanje napak brezžično«.</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Dotaknite se leve strani »Brezžično odpravljanje napak« in nato »Seznani napravo s kodo za seznanjanje«. Vnesite kodo iz obvestila, da dokončate seznanjanje.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Postopek seznanjanja zahteva interakcijo z obvestilom Shizuku. Dovolite Shizuku objavljanje obvestil.</string>
-    <string name="adb_pairing_tutorial_content_miui">Uporabniki MIUI bodo morda morali v sistemskih nastavitvah preklopiti način obveščanja iz »Obvestilo« – »Obvestilna senca« na »Android«.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">V nasprotnem primeru morda ne boste mogli vnesti kode za povezovanje iz obvestila.</string>
+    <string name="adb_pairing_tutorial_content_notification">Obvestilo Shizukuja vam bo pomagalo
+        dokončati seznanjanje.</string>
+    <string name="adb_pairing_tutorial_content_steps">Pojdite na »Možnosti za razvijalce« in nato
+        omogočite »Odpravljanje napak USB« in »Odpravljanje napak brezžično«.</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Dotaknite se leve strani
+        »Brezžično odpravljanje napak« in nato »Seznani napravo s kodo za seznanjanje«. Vnesite kodo
+        iz obvestila, da dokončate seznanjanje.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Postopek seznanjanja zahteva
+        interakcijo z obvestilom Shizuku. Dovolite Shizuku objavljanje obvestil.</string>
+    <string name="adb_pairing_tutorial_content_miui">Uporabniki MIUI bodo morda morali v sistemskih
+        nastavitvah preklopiti način obveščanja iz »Obvestilo« – »Obvestilna senca« na »Android«.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">V nasprotnem primeru morda ne boste mogli
+        vnesti kode za povezovanje iz obvestila.</string>
     <string name="adb_pairing_tutorial_content_finish">Vrni se k Shizuku in začni Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku mora dostopati do lokalnega omrežja. Nadzoruje ga omrežno dovoljenje.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nekateri sistemi (kot je MIUI) ne dovoljujejo aplikacijam dostopa do omrežja, kadar niso vidne, tudi če aplikacija uporablja storitev v ospredju. Prosimo, onemogočite funkcije optimizacije baterije za Shizuku na takšnih sistemih.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku mora dostopati do lokalnega omrežja.
+        Nadzoruje ga omrežno dovoljenje.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Nekateri sistemi
+        (kot je MIUI) ne dovoljujejo aplikacijam dostopa do omrežja, kadar niso vidne, tudi če
+        aplikacija uporablja storitev v ospredju. Prosimo, onemogočite funkcije optimizacije
+        baterije za Shizuku na takšnih sistemih.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Začni (za naprave s korenskim dostopom)]]></string>
     <string name="home_root_description"><![CDATA[Če uporabljate Magisk, lahko poskusite %1$s. Za uporabnike root bo sčasoma nadomestil Shizuku. Upoštevajte, da se morajo obstoječe aplikacije nekoliko spremeniti, da bodo lahko uporabljale %2$s.]]></string>
@@ -73,10 +110,12 @@
         <item quantity="other"><![CDATA[Pooblaščene %d aplikacije]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Dotaknite se za upravljanje pooblaščenih aplikacij]]></string>
-    <string name="home_app_management_empty">Tukaj bodo prikazane aplikacije, ki so zahtevale ali prijavile dovoljenje Shizuku.</string>
+    <string name="home_app_management_empty">Tukaj bodo prikazane aplikacije, ki so zahtevale ali
+        prijavile dovoljenje Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Upravljajte Shizuku z aplikacijami za avtomatizacijo</string>
-    <string name="home_automation_description"><![CDATA[Aplikacije, kot sta Tasker in MacroDroid, lahko pošiljajo namere za samodejni zagon/ustavitev aplikacije Shizuku.<p>Naprave brez roota v sistemu Android 10 ali starejšem morajo odpreti vrata TCP iz računalnika z uporabo<font face="monospace"> %1$s </font>, da namera za zagon deluje.]]></string>
+    <string name="home_automation_description">Aplikacije, kot sta Tasker in MacroDroid, lahko
+        pošiljajo namere za samodejni zagon/ustavitev aplikacije Shizuku.</string>
     <string name="home_automation_button_view_intents">Ogled namenov</string>
     <string name="home_automation_dialog_label_action">Dejanje</string>
     <string name="home_automation_dialog_label_package">Paket</string>
@@ -87,7 +126,11 @@
     <string name="home_learn_more_description">Naučite se razvijati s Shizukujem</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Morate narediti dodaten korak</string>
-    <string name="home_adb_is_limited_description">Proizvajalec vaše naprave je omejil dovoljenja adb in aplikacije, ki uporabljajo Shizuku, ne bodo delovale pravilno.\n\nObičajno je to omejitev mogoče odpraviti s prilagoditvijo nekaterih možnosti v »Možnostih za razvijalce«. Za podrobnosti o tem preberite pomoč.\n\nMorda boste morali znova zagnati Shizuku, da bo operacija začela veljati.</string>
+    <string name="home_adb_is_limited_description">Proizvajalec vaše naprave je omejil dovoljenja
+        adb in aplikacije, ki uporabljajo Shizuku, ne bodo delovale pravilno.\n\nObičajno je to
+        omejitev mogoče odpraviti s prilagoditvijo nekaterih možnosti v »Možnostih za razvijalce«.
+        Za podrobnosti o tem preberite pomoč.\n\nMorda boste morali znova zagnati Shizuku, da bo
+        operacija začela veljati.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Dovoljenje adb je omejeno</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Zelo možno je, da proizvajalec vaše naprave omejuje dovoljenja adb.<p>Rešitev za vaš sistem je morda v <b><a href=\"%1$s\">tem dokumentu</a></b>.]]></string>
@@ -95,14 +138,22 @@
     <string name="app_management_toggle_all">Preklopi vse</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Uporaba Shizukuja v terminalskih aplikacijah</string>
-    <string name="home_terminal_description">Zaženite ukaze lupine v terminalskih aplikacijah prek Shizukuja</string>
-    <string name="terminal_tutorial_miui">Uporabniki so poročali, da MIUI krši ogrodje za dostop do shrambe, ki ga uporablja funkcija izvoza.</string>
-    <string name="terminal_tutorial_miui_2">Če uporabljate MIUI, boste morda morali datoteko izvleči iz mape z sredstvi v Shizukujevem APK-ju.</string>
+    <string name="home_terminal_description">Zaženite ukaze lupine v terminalskih aplikacijah prek
+        Shizukuja</string>
+    <string name="terminal_tutorial_miui">Uporabniki so poročali, da MIUI krši ogrodje za dostop do
+        shrambe, ki ga uporablja funkcija izvoza.</string>
+    <string name="terminal_tutorial_miui_2">Če uporabljate MIUI, boste morda morali datoteko izvleči
+        iz mape z sredstvi v Shizukujevem APK-ju.</string>
     <string name="terminal_tutorial_1">Izvozite datoteke v novo mapo.</string>
-    <string name="terminal_tutorial_1_description">Izvoženi bosta dve datoteki: %1$s in %2$s. Če datoteke že obstajajo v izbrani mapi, bodo izbrisane.</string>
+    <string name="terminal_tutorial_1_description">Izvoženi bosta dve datoteki: %1$s in %2$s. Če
+        datoteke že obstajajo v izbrani mapi, bodo izbrisane.</string>
     <string name="terminal_export_files">Izvoz datotek</string>
-    <string name="terminal_tutorial_2">Z aplikacijo terminala kopirajte datoteke v njen zasebni imenik datotek.</string>
-    <string name="terminal_tutorial_2_description">Nasvet: Če je domači imenik (~) vaše terminalske aplikacije v imeniku zasebnih datotek, boste z namestitvijo datotek tja lahko zagnali %1$s brez pisanja poti.\n\nSicer pa lahko v konfiguracijski datoteki %3$s vaše terminalske aplikacije ustvarite vzdevek za %2$s .</string>
+    <string name="terminal_tutorial_2">Z aplikacijo terminala kopirajte datoteke v njen zasebni
+        imenik datotek.</string>
+    <string name="terminal_tutorial_2_description">Nasvet: Če je domači imenik (~) vaše terminalske
+        aplikacije v imeniku zasebnih datotek, boste z namestitvijo datotek tja lahko zagnali %1$s
+        brez pisanja poti.\n\nSicer pa lahko v konfiguracijski datoteki %3$s vaše terminalske
+        aplikacije ustvarite vzdevek za %2$s .</string>
     <string name="terminal_tutorial_3">Odprite lupino z naslednjim ukazom:</string>
     <string name="rish_description"><![CDATA[Z %1$slahko zaženete ukaze lupine v kateri koli terminalski aplikaciji.<p>Dotaknite se, če želite izvedeti več o uporabi.]]></string>
     <!-- Settings -->
@@ -110,54 +161,67 @@
     <string name="settings_behavior">Vedenje</string>
     <string name="settings_start_on_boot">Zaženi ob zagonu</string>
     <string name="settings_start_on_boot_summary">Zahteva Android 11+ ali root</string>
-    <string name="settings_start_on_boot_bug">Zaradi napake v Androidu 11-12 brezžično odpravljanje napak ne pomni nobenih pooblaščenih omrežij.\n\nOb vsakem ponovnem zagonu boste morali ponovno avtorizirati omrežje tako, da tapnete »Dovoli«, ko se pojavi okno za avtorizacijo.</string>
+    <string name="settings_start_on_boot_bug">Zaradi napake v Androidu 11-12 brezžično odpravljanje
+        napak ne pomni nobenih pooblaščenih omrežij.\n\nOb vsakem ponovnem zagonu boste morali
+        ponovno avtorizirati omrežje tako, da tapnete »Dovoli«, ko se pojavi okno za avtorizacijo.</string>
     <string name="settings_use_system_color">Uporabi sistemsko barvo teme</string>
     <string name="settings_watchdog">Nadzorni pes</string>
     <string name="settings_watchdog_summary">Samodejni ponovni zagon Shizukuja, če se sesuje</string>
     <string name="settings_tcp_mode">Način TCP</string>
-    <string name="settings_tcp_mode_summary">"Omogoča Shizuku, da se ponovno zažene brez Wi-Fi-ja. (Shizuku je morala enkrat začeti od ponovnega zagona)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"Vrata TCP bodo takoj zaprta. Za ponovni vklop načina TCP boste potrebovali Wi-Fi. Želite nadaljevati?"</string>
+    <string name="settings_tcp_mode_summary">"Omogoča Shizuku, da se ponovno zažene brez Wi-Fi-ja.
+        (Shizuku je morala enkrat začeti od ponovnega zagona)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Vrata TCP bodo takoj zaprta. Za ponovni
+        vklop načina TCP boste potrebovali Wi-Fi. Želite nadaljevati?"</string>
     <string name="settings_tcp_mode_closing_port">Zapiranje TCP vrat ...</string>
     <string name="settings_restart_dialog_title">Potreben je ponovni zagon</string>
-    <string name="settings_restart_dialog_message">Shizuku mora začeti znova, da lahko uporabi to nastavitev.</string>
+    <string name="settings_restart_dialog_message">Shizuku mora začeti znova, da lahko uporabi to
+        nastavitev.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi je obvezen. Shizuku bo še naprej delovala in počakala na Wi-Fi povezavo, preden se bo v ozadju ponovno zagnala.</b>]]></string>
     <string name="settings_tcp_port">TCP priključek</string>
     <string name="settings_tcp_port_default">Privzeto (5555)</string>
     <string name="settings_tcp_port_hint">Pustite prazno za privzeto (5555)</string>
-    <string name="settings_tcp_learn_more">Izvedite več o uporabi avtomatizacijskih aplikacij za upravljanje Shizuku</string>
+    <string name="settings_tcp_learn_more">Izvedite več o uporabi avtomatizacijskih aplikacij za
+        upravljanje Shizuku</string>
     <string name="settings_language">Jezik</string>
     <string name="settings_translation_contributors">Sodelavci prevodov</string>
     <string name="settings_translation">Sodelujte pri prevajanju</string>
     <string name="settings_translation_summary">Pomagajte nam prevajati %s v vaš jezik</string>
     <string name="settings_user_interface">Videz</string>
     <string name="settings_black_night_theme">Tema črne noči</string>
-    <string name="settings_black_night_theme_summary">Če je omogočen nočni način, uporabite čisto črno temo</string>
+    <string name="settings_black_night_theme_summary">Če je omogočen nočni način, uporabite čisto
+        črno temo</string>
     <string name="settings_support">Podpora</string>
     <string name="settings_help">Pomoč</string>
     <string name="settings_report_bug">Prijavite napako</string>
     <string name="settings_advanced">Napreden</string>
     <string name="settings_legacy_pairing">Zapuščina parov</string>
-    <string name="settings_legacy_pairing_summary">Namesto obvestila vnesite kodo za povezovanje v pogovorno okno</string>
+    <string name="settings_legacy_pairing_summary">Namesto obvestila vnesite kodo za povezovanje v
+        pogovorno okno</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Najprej storite naslednje:</string>
     <string name="bug_report_dialog_update">Preverite, ali uporabljate ^1.</string>
     <string name="bug_report_dialog_link_update">najnovejša različica</string>
-    <string name="bug_report_dialog_wiki">Preberite ^1 in sledite vsem ustreznim korakom za odpravljanje težav.</string>
+    <string name="bug_report_dialog_wiki">Preberite ^1 in sledite vsem ustreznim korakom za
+        odpravljanje težav.</string>
     <string name="bug_report_dialog_link_wiki">wiki</string>
-    <string name="bug_report_dialog_issues">Prebrskaj vse ^1, da vidiš, ali je bila tvoja napaka že prijavljena.</string>
+    <string name="bug_report_dialog_issues">Prebrskaj vse ^1, da vidiš, ali je bila tvoja napaka že
+        prijavljena.</string>
     <string name="bug_report_dialog_link_issues">obstoječe težave</string>
     <string name="bug_report_dialog_method">Če imate račun, prosim, oddajte težavo na ^1.</string>
     <string name="bug_report_dialog_method_2">Sicer pa lahko pošljete e-pošto.</string>
     <string name="bug_report_dialog_button_email">E-pošta</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pristanišče mora biti med 1 in 65535</string>
-    <string name="snackbar_battery_optimization_home">Optimizacija baterije mora biti onemogočena, da zagon ob zagonu/watchdogu deluje pravilno.</string>
-    <string name="snackbar_battery_optimization_settings">Prosimo, da onemogočite optimizacijo baterije za uporabo te funkcije.</string>
+    <string name="snackbar_battery_optimization_home">Optimizacija baterije mora biti onemogočena,
+        da zagon ob zagonu/watchdogu deluje pravilno.</string>
+    <string name="snackbar_battery_optimization_settings">Prosimo, da onemogočite optimizacijo
+        baterije za uporabo te funkcije.</string>
     <string name="snackbar_action_fix">Popraviti</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Ni najdene aplikacije za e-pošto</string>
     <string name="toast_shizuku_already_starting">Shizuku že začne v ozadju</string>
-    <string name="toast_accessibility_tv_only">Ta storitev je podprta samo na televizijskih napravah.</string>
+    <string name="toast_accessibility_tv_only">Ta storitev je podprta samo na televizijskih
+        napravah.</string>
     <string name="toast_pairing_timeout">Storitev za parjenje Shizuku je potekla.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
@@ -180,7 +244,8 @@
     <string name="notification_working">V teku…</string>
     <string name="notification_channel_adb_pairing">Seznanjanje brezžičnega razhroščevanja</string>
     <string name="notification_adb_pairing_input_paring_code">Vnesite seznantitveno kodo</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Iskanje storitve za seznanjanje</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Iskanje storitve za
+        seznanjanje</string>
     <string name="notification_adb_pairing_service_found_title">Storitev za seznanjanje najdena</string>
     <string name="notification_adb_pairing_stop_searching">Ustavi iskanje</string>
     <string name="notification_adb_pairing_working_title">Seznanitev v teku</string>
@@ -196,7 +261,8 @@
     <string name="grant_dialog_button_deny">"Zavrni"</string>
     <!-- Starter -->
     <string name="starter">Zaganjalnik</string>
-    <string name="start_with_root_failed">Storitve ni mogoče zagnati, ker ni odobreno dovoljenje root ali pa ta naprava nima root dostopa.</string>
+    <string name="start_with_root_failed">Storitve ni mogoče zagnati, ker ni odobreno dovoljenje
+        root ali pa ta naprava nima root dostopa.</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Začetek Šizukuja…</string>
     <string name="wadb_notification_wifi_required">Čakanje na Wi-Fi povezavo, preden nadaljujem</string>
@@ -204,18 +270,23 @@
     <string name="wadb_error_title">Napaka ob zagonu zagona</string>
     <string name="wadb_error_notify_dev">Tapnite, da obvestite razvijalca.</string>
     <string name="wadb_permission_error_notification_title">Napaka pri dovoljenju</string>
-    <string name="wadb_permission_error_notification_content">Shizuku potrebuje WRITE_SECURE_SETTINGS, da začne na začetku. Tapnite, da izveste, kako ga odobriti.</string>
+    <string name="wadb_permission_error_notification_content">Shizuku potrebuje
+        WRITE_SECURE_SETTINGS, da začne na začetku. Tapnite, da izveste, kako ga odobriti.</string>
     <string name="wadb_notification_channel">ADB storitev samodejnega zagona</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Watchdog teče</string>
     <string name="watchdog_turn_off">Izklop</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku je pred kratkim doživela nesrečo</string>
-    <string name="watchdog_shizuku_crashed_text">Watchdog je ponovno zagnal storitev. Tapnite, da izveste o možnih popravkih za preprečevanje prihodnjih zrušitev.</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog je ponovno zagnal storitev. Tapnite, da
+        izveste o možnih popravkih za preprečevanje prihodnjih zrušitev.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Izklopite opozorila</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Brskalnika ni mogoče zagnati</string>
     <string name="toast_copied_to_clipboard">Kopirano v odložišče</string>
-    <string name="accessibility_service_description">Zagotavlja podporo za seznanjanje naprav (npr. televizorjev s sistemom Android 14+), kjer ni mogoče uporabljati obvestil ali deljenega zaslona.\n\nOmogoča Shizuku, da izvleče kodo za seznanjanje z zaslona za brezžično odpravljanje napak. Ko najde kodo za seznanjanje, se samodejno onemogoči.</string>
+    <string name="accessibility_service_description">Zagotavlja podporo za seznanjanje naprav (npr.
+        televizorjev s sistemom Android 14+), kjer ni mogoče uporabljati obvestil ali deljenega
+        zaslona.\n\nOmogoča Shizuku, da izvleče kodo za seznanjanje z zaslona za brezžično
+        odpravljanje napak. Ko najde kodo za seznanjanje, se samodejno onemogoči.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s ne podpira sodobnega jezika Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Podedovana različica Shizukuja je od marca 2019 opuščena. Prav tako podedovana različica Shizukuja ne deluje na novejših sistemih Android.<p>Za posodobitev prosite razvijalca <b>%1$s</b> .]]></string>

@@ -22,9 +22,10 @@
     <!-- Adb -->
     <string name="dialog_adb_discovery">ワイヤレスデバッグサービスの検索</string>
     <string name="dialog_adb_discovery_message">「開発者向けオプション」で「ワイヤレスデバッグ」を有効にしてください。ネットワークが変更されると、「ワイヤレスデバッグ」は自動的に無効になります。
-\n
-\n注意:「開発者向けオプション」や「USBデバッグ」を無効にしないでください。無効にすると、Shizukuが停止してしまいます。</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">検索され続ける場合は、「ワイヤレスデバッグ」の無効化と有効化をしてみてください。</string>
+        \n
+        \n注意:「開発者向けオプション」や「USBデバッグ」を無効にしないでください。無効にすると、Shizukuが停止してしまいます。</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">
+        検索され続ける場合は、「ワイヤレスデバッグ」の無効化と有効化をしてみてください。</string>
     <string name="dialog_adb_port">ポート</string>
     <string name="dialog_adb_invalid_port">ポートは1から65535までの整数です。</string>
     <string name="adb_pairing">ペアリング</string>
@@ -32,16 +33,26 @@
     <string name="dialog_adb_pairing_discovery">ペアリングサービスの検索</string>
     <string name="dialog_adb_pairing_paring_code">ペアリングコード</string>
     <string name="paring_code_is_wrong">ペアリングコードが間違っています。</string>
-    <string name="cannot_connect_port">ワイヤレスデバッグサービスに接続できません。\n\nShizukuがすべてのファイアウォール、広告ブロック、VPNなどネットワークアクセスを制限できるアプリでホワイトリストに登録されていることを必ず確認してください。</string>
+    <string name="cannot_connect_port">
+        ワイヤレスデバッグサービスに接続できません。\n\nShizukuがすべてのファイアウォール、広告ブロック、VPNなどネットワークアクセスを制限できるアプリでホワイトリストに登録されていることを必ず確認してください。</string>
     <string name="dialog_wireless_adb_not_enabled">ワイヤレスデバッグが有効になっていません。
-\nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
+        \nなお、Android 11以前のバージョンでは、ワイヤレスデバッグを有効化するためには、コンピューターの接続が必要です。</string>
     <string name="dialog_usb_debugging_not_enabled">USBデバッグが有効になっていません。\n「開発者向けオプション」で有効にしてください。</string>
-    <string name="dialog_adb_pairing_message">以下の手順でペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。\n- 通知にペアリングコードを入力します。</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Android 14 では、パッケージ インストーラーを使用して Shizuku をインストール/更新すると、ペアリング用のアクセシビリティ サービスを有効にするために必要な ^1 権限が取り消されます。\n\nこれを許可するには、次の ADB コマンドを実行します。\n\n^2\n\nコマンドを実行したら、ペアリング プロセスを続行できます。\n\n注: ADB を使用して Shizuku をインストール/更新すると、これを回避できます。</string>
-    <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">以下の手順に従ってペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。Shizukuはペアリングコードを自動的に検出します。</string>
+    <string name="dialog_adb_pairing_message">以下の手順でペアリングを開始してください。\n- 「開発者向けオプション」に移動します。\n-
+        「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n- 「ペアリングコードでデバイスをペアリング」をタップします。\n-
+        通知にペアリングコードを入力します。</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14 では、パッケージ インストーラーを使用して
+        Shizuku をインストール/更新すると、ペアリング用のアクセシビリティ サービスを有効にするために必要な ^1 権限が取り消されます。\n\nこれを許可するには、次の ADB
+        コマンドを実行します。\n\n^2\n\nコマンドを実行したら、ペアリング プロセスを続行できます。\n\n注: ADB を使用して Shizuku
+        をインストール/更新すると、これを回避できます。</string>
+    <string name="dialog_adb_pairing_accessibility_enable">ペアリングプロセスを開始するには、アクセシビリティサービスを有効にしてください。これにより、Shizuku
+        はペアリングコードを検出できます。\n\nコードが見つかった場合、または1分後に節電のためアクセシビリティサービスはオフになります。</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">以下の手順に従ってペアリングを開始してください。\n-
+        「開発者向けオプション」に移動します。\n- 「USBデバッグ」と「ワイヤレスデバッグ」を有効にします。\n- 「ワイヤレスデバッグ」の左側をタップします。\n-
+        「ペアリングコードでデバイスをペアリング」をタップします。Shizukuはペアリングコードを自動的に検出します。</string>
     <string name="adb_pairing_requires_multi_window">最初に分割画面（マルチウィンドウ）モードに入ってください。</string>
-    <string name="adb_pairing_requires_multi_window_reason">このシステムはペアリングダイアログが常に見えることを求めています。分割画面モードを使うことが、このアプリとシステムのダイアログを同時に表示する唯一の方法です。</string>
+    <string name="adb_pairing_requires_multi_window_reason">
+        このシステムはペアリングダイアログが常に見えることを求めています。分割画面モードを使うことが、このアプリとシステムのダイアログを同時に表示する唯一の方法です。</string>
     <string name="adb_error_key_store">ワイヤレスデバッグ用のキーを生成できません。\nこれはこのデバイスのKeyStore機構が故障しているためかもしれません。</string>
     <string name="adb_stopping_tcp">TCPポートを閉じる</string>
     <string name="adb_error_stop_tcp">TCP経由のADBを停止できませんでした</string>
@@ -51,14 +62,20 @@
     <string name="notification_settings">通知オプション</string>
     <string name="adb_pairing_tutorial_title">お使いのデバイスとShizukuをペアリングする</string>
     <string name="adb_pairing_tutorial_content_notification">Shizukuからの通知でペアリングが完了します。</string>
-    <string name="adb_pairing_tutorial_content_steps">「開発者向けオプション」に移動し、「USB デバッグ」と「ワイヤレス デバッグ」を有効にします。</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">「ワイヤレスデバッグ」の左側をタップし、「ペアリングコードでデバイスをペアリング」をタップします。通知に記載されているコードを入力してペアリングを完了します。</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">ペアリング手順はShizukuからの通知を操作する必要があります。Shizukuからの通知を許可してください。</string>
-    <string name="adb_pairing_tutorial_content_miui">MIUIユーザーはシステムの設定から「通知」→「通知のシェード」から通知スタイルを「Android」に変更する必要がある場合があります。</string>
+    <string name="adb_pairing_tutorial_content_steps">「開発者向けオプション」に移動し、「USB デバッグ」と「ワイヤレス
+        デバッグ」を有効にします。</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">
+        「ワイヤレスデバッグ」の左側をタップし、「ペアリングコードでデバイスをペアリング」をタップします。通知に記載されているコードを入力してペアリングを完了します。</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">
+        ペアリング手順はShizukuからの通知を操作する必要があります。Shizukuからの通知を許可してください。</string>
+    <string name="adb_pairing_tutorial_content_miui">
+        MIUIユーザーはシステムの設定から「通知」→「通知のシェード」から通知スタイルを「Android」に変更する必要がある場合があります。</string>
     <string name="adb_pairing_tutorial_content_miui_2">そうでなければ、通知からペアリングコードを入力できない可能性があります。</string>
     <string name="adb_pairing_tutorial_content_finish">雫に戻って雫を始めろ。</string>
-    <string name="adb_pairing_tutorial_content_network">雫はローカルネットワークにアクセスする必要がある。ネットワークの許可によって制御されます。</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">一部のシステム(MIUIなど)は、アプリがフォアグラウンドサービスを使っていても、見えないアプリがネットワークにアクセスすることを許可しません。そのようなシステムでは、しずくのバッテリー最適化機能を無効にしてください。</string>
+    <string name="adb_pairing_tutorial_content_network">
+        雫はローカルネットワークにアクセスする必要がある。ネットワークの許可によって制御されます。</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">
+        一部のシステム(MIUIなど)は、アプリがフォアグラウンドサービスを使っていても、見えないアプリがネットワークにアクセスすることを許可しません。そのようなシステムでは、しずくのバッテリー最適化機能を無効にしてください。</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[開始(Root化された端末の場合のみ)]]></string>
     <string name="home_root_description"><![CDATA[Magiskをお使いの場合は、 %1$sをお試しください。rootユーザーの場合、最終的にはShizukuに取って代わる予定です。ただし、既存のアプリケーションで %2$sを使用するには、少し変更が必要です。]]></string>
@@ -73,7 +90,8 @@
     <string name="home_app_management_empty">Shizuku の権限を要求または宣言したアプリがここに表示されます。</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">自動化アプリでShizukuを制御する</string>
-    <string name="home_automation_description"><![CDATA[Tasker や MacroDroid などのアプリは、Shizuku を自動的に起動/停止するインテントを送信できます。<p>Android 10 以下のルート化されていないデバイスでは、起動インテントが機能するために、<font face="monospace"> %1$s </font>を使用して PC から TCP ポートを開く必要があります。]]></string>
+    <string name="home_automation_description">Tasker や MacroDroid などのアプリは、Shizuku
+        を自動的に起動/停止するインテントを送信できます。</string>
     <string name="home_automation_button_view_intents">インテントを表示</string>
     <string name="home_automation_dialog_label_action">アクション</string>
     <string name="home_automation_dialog_label_package">パッケージ</string>
@@ -84,11 +102,12 @@
     <string name="home_learn_more_description">Shizukuを使った開発方法、Shizukuを使ったアプリの入手方法について学ぶことができます</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">もう一段階行う必要がある</string>
-    <string name="home_adb_is_limited_description">お使いの端末製造元は adb 権限を制限しており､ Shizuku を使用するアプリは正しく動作しません。
-\n
-\n通常､ この制限は「開発者向けオプション」のいくつかの項目を調整することで解除できます。これを行う方法の詳細については､ ヘルプをお読みください。
-\n
-\n操作を有効にするために､ Shizukuを再起動する必要がある場合があります。</string>
+    <string name="home_adb_is_limited_description">お使いの端末製造元は adb 権限を制限しており､ Shizuku
+        を使用するアプリは正しく動作しません。
+        \n
+        \n通常､ この制限は「開発者向けオプション」のいくつかの項目を調整することで解除できます。これを行う方法の詳細については､ ヘルプをお読みください。
+        \n
+        \n操作を有効にするために､ Shizukuを再起動する必要がある場合があります。</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">adbの権限が制限されています</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[端末の製造元がadbの権限を制限している可能性が高いです。<p> <b><a href="%1$s">このドキュメント</a></b>の中に、あなたのシステムに合った解決策があるかもしれません。]]></string>
@@ -97,13 +116,18 @@
     <!-- Terminal -->
     <string name="home_terminal_title">ターミナルアプリで「Shizuku」を利用する</string>
     <string name="home_terminal_description">Shizuku を介してターミナルアプリでシェルコマンドを実行する</string>
-    <string name="terminal_tutorial_miui">ユーザーからは、MIUI がエクスポート機能で使用されるストレージ アクセス フレームワークを壊すという報告があります。</string>
-    <string name="terminal_tutorial_miui_2">MIUI を使用している場合は、Shizuku の APK のアセット フォルダーからファイルを抽出する必要がある場合があります。</string>
+    <string name="terminal_tutorial_miui">ユーザーからは、MIUI がエクスポート機能で使用されるストレージ アクセス
+        フレームワークを壊すという報告があります。</string>
+    <string name="terminal_tutorial_miui_2">MIUI を使用している場合は、Shizuku の APK のアセット
+        フォルダーからファイルを抽出する必要がある場合があります。</string>
     <string name="terminal_tutorial_1">ファイルを新しいフォルダにエクスポートします。</string>
-    <string name="terminal_tutorial_1_description">2つのファイルがエクスポートされます: %1$s と %2$s。選択したフォルダに既にファイルが存在する場合は削除されます。</string>
+    <string name="terminal_tutorial_1_description">2つのファイルがエクスポートされます: %1$s と
+        %2$s。選択したフォルダに既にファイルが存在する場合は削除されます。</string>
     <string name="terminal_export_files">ファイルのエクスポート</string>
     <string name="terminal_tutorial_2">ターミナル アプリを使用して、ファイルをプライベート ファイル ディレクトリにコピーします。</string>
-    <string name="terminal_tutorial_2_description">ヒント: ターミナル アプリのホーム ディレクトリ (~) がプライベート ファイル ディレクトリにある場合は、そこにファイルを配置すると、パスを書き込まなくても %1$s を実行できます。\n\nそれ以外の場合は、ターミナル アプリの %3$s 構成ファイルで %2$s のエイリアスを作成できます。</string>
+    <string name="terminal_tutorial_2_description">ヒント: ターミナル アプリのホーム ディレクトリ (~) がプライベート ファイル
+        ディレクトリにある場合は、そこにファイルを配置すると、パスを書き込まなくても %1$s を実行できます。\n\nそれ以外の場合は、ターミナル アプリの %3$s 構成ファイルで
+        %2$s のエイリアスを作成できます。</string>
     <string name="terminal_tutorial_3">次のコマンドでシェルを開きます。</string>
     <string name="rish_description"><![CDATA[%1$sを使用すると、任意のターミナル アプリでシェル コマンドを実行できます。<p>タップして、使用方法の詳細を確認してください。]]></string>
     <!-- Settings -->
@@ -111,13 +135,17 @@
     <string name="settings_behavior">行動</string>
     <string name="settings_start_on_boot">起動時にスタート</string>
     <string name="settings_start_on_boot_summary">Android 11以降またはルート権限が必要です</string>
-    <string name="settings_start_on_boot_bug">Android 11-12のバグにより、無線デバッグは認可されたネットワークを記憶しません。\n\n再開のたびに、認証ダイアログが表示されたら「許可」をタップしてネットワークを再認証する必要があります。</string>
+    <string name="settings_start_on_boot_bug">
+        Android
+        11-12のバグにより、無線デバッグは認可されたネットワークを記憶しません。\n\n再開のたびに、認証ダイアログが表示されたら「許可」をタップしてネットワークを再認証する必要があります。</string>
     <string name="settings_use_system_color">ダイナミック カラー</string>
     <string name="settings_watchdog">ウォッチドッグ</string>
     <string name="settings_watchdog_summary">Shizukuがクラッシュした場合に自動的に再起動する</string>
     <string name="settings_tcp_mode">TCPモード</string>
-    <string name="settings_tcp_mode_summary">"Wi-FiなしでShizukuを再起動できるようにします。（再起動後、Shizukuが一度起動している必要があります）"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"TCPポートは直ちに閉じられます。TCPモードを再度オンにするにはWi-Fiが必要です。続行しますか？"</string>
+    <string name="settings_tcp_mode_summary">
+        "Wi-FiなしでShizukuを再起動できるようにします。（再起動後、Shizukuが一度起動している必要があります）"</string>
+    <string name="settings_tcp_mode_dialog_close_port">
+        "TCPポートは直ちに閉じられます。TCPモードを再度オンにするにはWi-Fiが必要です。続行しますか？"</string>
     <string name="settings_tcp_mode_closing_port">TCP ポートを閉じています...</string>
     <string name="settings_restart_dialog_title">再起動が必要です</string>
     <string name="settings_restart_dialog_message">雫はこの設定を適用するために再起動が必要です。</string>
@@ -206,18 +234,22 @@
     <string name="wadb_error_title">起動時にエラーが発生しました</string>
     <string name="wadb_error_notify_dev">タップして開発者に通知します。</string>
     <string name="wadb_permission_error_notification_title">権限エラー</string>
-    <string name="wadb_permission_error_notification_content">Shizukuを起動するにはWRITE_SECURE_SETTINGSが必要です。タップして許可方法をご確認ください。</string>
+    <string name="wadb_permission_error_notification_content">
+        Shizukuを起動するにはWRITE_SECURE_SETTINGSが必要です。タップして許可方法をご確認ください。</string>
     <string name="wadb_notification_channel">ADB自動起動サービス</string>
     <!-- Watchdog -->
     <string name="watchdog_running">ウォッチドッグが稼働中</string>
     <string name="watchdog_turn_off">無効にする</string>
     <string name="watchdog_shizuku_crashed_title">雫は最近墜落した</string>
-    <string name="watchdog_shizuku_crashed_text">Watchdog がサービスを再起動しました。タップすると、今後のクラッシュを防ぐための潜在的な修正内容を確認できます。</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog
+        がサービスを再起動しました。タップすると、今後のクラッシュを防ぐための潜在的な修正内容を確認できます。</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">アラートをオフにする</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">ブラウザが起動することができません</string>
     <string name="toast_copied_to_clipboard">クリップボードにコピーされました</string>
-    <string name="accessibility_service_description">通知や分割画面が使用できないデバイス（例：Android 14以降を搭載したテレビ）のペアリングサポートを提供します。\n\nShizukuがワイヤレスデバッグペアリング画面からペアリングコードを抽出できるようにします。ペアリングコードが見つかると、Shizukuは自動的に無効になります。</string>
+    <string name="accessibility_service_description">
+        通知や分割画面が使用できないデバイス（例：Android
+        14以降を搭載したテレビ）のペアリングサポートを提供します。\n\nShizukuがワイヤレスデバッグペアリング画面からペアリングコードを抽出できるようにします。ペアリングコードが見つかると、Shizukuは自動的に無効になります。</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s は最新の Shizuku をサポートしていません</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[古いバージョンのShizukuは2019年3月より非推奨となりました。また、古いバージョンのShizukuは新しいAndroidシステムでは動作しません。<p><b>%1$s</b>の開発者にアップデートを依頼してください。]]></string>

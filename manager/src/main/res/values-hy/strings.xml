@@ -21,10 +21,14 @@
     <string name="home_wireless_adb_view_guide_button">Քայլ առ քայլ ուղեցույց</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Որոնվում է անլար կարգաբերման ծառայությունը</string>
-    <string name="dialog_adb_discovery_message">Խնդրում ենք միացնել «Անլար կարգաբերում»-ը «Ծրագրավորողի կարգավորումներ»-ի մեջ։ «Անլար կարգաբերում»-ը ավտոմատացված ձևով անջատվում է ցանցի փոփոխման ժամանակ։
-\n
-\nՉանջատեք «Ծրագրավորողի կարգավորումներ»-ը կամ «USB-ով կարգաբերում»-ը, թե չէ Shizuku-ն կանջատվի։</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Խնդրում եմ փորձեք անջատել և միացնել «Անլար վրիպազերծումը», եթե այն շարունակում է որոնումը։</string>
+    <string name="dialog_adb_discovery_message">Խնդրում ենք միացնել «Անլար կարգաբերում»-ը
+        «Ծրագրավորողի կարգավորումներ»-ի մեջ։ «Անլար կարգաբերում»-ը ավտոմատացված ձևով անջատվում է
+        ցանցի փոփոխման ժամանակ։
+        \n
+        \nՉանջատեք «Ծրագրավորողի կարգավորումներ»-ը կամ «USB-ով կարգաբերում»-ը, թե չէ Shizuku-ն
+        կանջատվի։</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Խնդրում եմ փորձեք անջատել
+        և միացնել «Անլար վրիպազերծումը», եթե այն շարունակում է որոնումը։</string>
     <string name="dialog_adb_port">Պոռտ</string>
     <string name="dialog_adb_invalid_port">Պոռտը թիվ է 1-ի և 65535-ի միջև։</string>
     <string name="adb_pairing">Զուգավորում</string>
@@ -32,17 +36,38 @@
     <string name="dialog_adb_pairing_discovery">Որոնվում է զուգելու ծառայությունը</string>
     <string name="dialog_adb_pairing_paring_code">Զուգելու կոդ</string>
     <string name="paring_code_is_wrong">Զուգելու կոդը սխալ է։</string>
-    <string name="cannot_connect_port">Հնարավոր չէ միանալ անլար վրիպազերծման ծառայությանը։\n\nՀամոզվեք, որ Shizuku-ն սպիտակ ցուցակում է բոլոր firewall-ներում, գովազդի արգելափակման ծրագրերում, VPN-ներում կամ նմանատիպ ծրագրերում, որոնք կարող են սահմանափակել ցանցային մուտքը։</string>
+    <string name="cannot_connect_port">Հնարավոր չէ միանալ անլար վրիպազերծման
+        ծառայությանը։\n\nՀամոզվեք, որ Shizuku-ն սպիտակ ցուցակում է բոլոր firewall-ներում, գովազդի
+        արգելափակման ծրագրերում, VPN-ներում կամ նմանատիպ ծրագրերում, որոնք կարող են սահմանափակել
+        ցանցային մուտքը։</string>
     <string name="dialog_wireless_adb_not_enabled">Անլար կարգաբերումը միացված չէ։
-\nAndroid 11-ից առաջ անլար կարգաբերման համար անհրաժեշտ է համակարգչային կապ։</string>
-    <string name="dialog_usb_debugging_not_enabled">USB կարգաբերումը թույլատրված չէ:\nԽնդրում ենք միացնել այն «Մշակողի ընտրանքներ» բաժնում:</string>
-    <string name="dialog_adb_pairing_message">Սկսեք զուգակցումը կատարելով հետևյալ քայլերը՝\n- Անցեք «Մշակողի ընտրանքներ»\n- Միացրեք «USB վրիպազերծում» և «Անլար վրիպազերծում»\n- Հպեք «Անլար վրիպազերծում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը զուգակցման կոդով»\n- Մուտքագրեք զուգակցման կոդը ծանուցման մեջ</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Android 14-ում Shizuku-ի տեղադրումը/թարմացումը Package Installer-ի միջոցով չեղարկում է ^1 թույլտվությունը, որը անհրաժեշտ է զուգավորման համար հասանելիության ծառայությունը միացնելու համար:\n\nԱյն տրամադրելու համար գործարկեք հետևյալ ADB հրամանը՝\n\n^2\n\nՀրամանը գործարկելուց հետո կարող եք շարունակել զուգավորման գործընթացը:\n\nՆշում. կարող եք շրջանցել սա՝ տեղադրելով/թարմացնելով Shizuku-ն ADB-ի միջոցով:</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Խնդրում ենք միացնել մատչելիության ծառայությունը՝ զուգավորման գործընթացը սկսելու համար: Սա թույլ է տալիս Շիզուկուին հայտնաբերել զույգավորման կոդը։\n\nՄատչելիության ծառայությունն անջատվելու է, երբ կոդը գտնվի կամ 1 րոպե անց՝ էներգիան խնայելու համար:</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Խնդրում ենք սկսել զուգակցումը կատարելով հետևյալ քայլերը՝\n- Անցեք «Մշակողի ընտրանքներ»\n- Միացրեք «USB կարգաբերում» և «Անլար կարգաբերում»\n- Հպեք «Անլար կարգաբերում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը զուգակցման կոդով»։ Շիզուկուն ավտոմատ կերպով կհայտնաբերի զուգակցման կոդը։</string>
+        \nAndroid 11-ից առաջ անլար կարգաբերման համար անհրաժեշտ է համակարգչային կապ։</string>
+    <string name="dialog_usb_debugging_not_enabled">USB կարգաբերումը թույլատրված չէ:\nԽնդրում ենք
+        միացնել այն «Մշակողի ընտրանքներ» բաժնում:</string>
+    <string name="dialog_adb_pairing_message">Սկսեք զուգակցումը կատարելով հետևյալ քայլերը՝\n- Անցեք
+        «Մշակողի ընտրանքներ»\n- Միացրեք «USB վրիպազերծում» և «Անլար վրիպազերծում»\n- Հպեք «Անլար
+        վրիպազերծում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը զուգակցման կոդով»\n- Մուտքագրեք
+        զուգակցման կոդը ծանուցման մեջ</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Android 14-ում Shizuku-ի
+        տեղադրումը/թարմացումը Package Installer-ի միջոցով չեղարկում է ^1 թույլտվությունը, որը
+        անհրաժեշտ է զուգավորման համար հասանելիության ծառայությունը միացնելու համար:\n\nԱյն
+        տրամադրելու համար գործարկեք հետևյալ ADB հրամանը՝\n\n^2\n\nՀրամանը գործարկելուց հետո կարող եք
+        շարունակել զուգավորման գործընթացը:\n\nՆշում. կարող եք շրջանցել սա՝ տեղադրելով/թարմացնելով
+        Shizuku-ն ADB-ի միջոցով:</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Խնդրում ենք միացնել մատչելիության
+        ծառայությունը՝ զուգավորման գործընթացը սկսելու համար: Սա թույլ է տալիս Շիզուկուին հայտնաբերել
+        զույգավորման կոդը։\n\nՄատչելիության ծառայությունն անջատվելու է, երբ կոդը գտնվի կամ 1 րոպե
+        անց՝ էներգիան խնայելու համար:</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Խնդրում ենք սկսել զուգակցումը կատարելով
+        հետևյալ քայլերը՝\n- Անցեք «Մշակողի ընտրանքներ»\n- Միացրեք «USB կարգաբերում» և «Անլար
+        կարգաբերում»\n- Հպեք «Անլար կարգաբերում» բաժնի ձախ կողմին\n- Հպեք «Զուգակցել սարքը
+        զուգակցման կոդով»։ Շիզուկուն ավտոմատ կերպով կհայտնաբերի զուգակցման կոդը։</string>
     <string name="adb_pairing_requires_multi_window">Սկզբում միացրեք էկրանի կիսման ռեժիմը։</string>
-    <string name="adb_pairing_requires_multi_window_reason">Համակարգը պահանջում է, որ զուգավորման երկխոսության պատուհանը միշտ տեսանելի լինի: Բաժանված էկրանի ռեժիմի օգտագործումը միակ միջոցն է, որպեսզի այս հավելվածը և համակարգի երկխոսության պատուհանը միաժամանակ տեսանելի լինեն:</string>
-    <string name="adb_error_key_store">Անհնար է ստեղծել բանալի անլար վրիպազերծման համար։\nՍա կարող է պայմանավորված լինել այս սարքի KeyStore մեխանիզմի խափանումով։</string>
+    <string name="adb_pairing_requires_multi_window_reason">Համակարգը պահանջում է, որ զուգավորման
+        երկխոսության պատուհանը միշտ տեսանելի լինի: Բաժանված էկրանի ռեժիմի օգտագործումը միակ միջոցն
+        է, որպեսզի այս հավելվածը և համակարգի երկխոսության պատուհանը միաժամանակ տեսանելի լինեն:</string>
+    <string name="adb_error_key_store">Անհնար է ստեղծել բանալի անլար վրիպազերծման համար։\nՍա կարող է
+        պայմանավորված լինել այս սարքի KeyStore մեխանիզմի խափանումով։</string>
     <string name="adb_stopping_tcp">TCP միացքի փակում</string>
     <string name="adb_error_stop_tcp">Ձախողվեց ADB-ի կանգնեցումը TCP-ի միջոցով</string>
     <string name="adb_pair_required">Խնդրում ենք սկզբում կատարել զուգելու քայլերը։</string>
@@ -50,15 +75,28 @@
     <string name="development_settings">Ծրագրավորողի կարգավորումներ</string>
     <string name="notification_settings">Ծանուցման տարբերակներ</string>
     <string name="adb_pairing_tutorial_title">Զուգակցեք Shizuku-ն ձեր սարքի հետ</string>
-    <string name="adb_pairing_tutorial_content_notification">Շիզուկուից ստացված ծանուցումը կօգնի ձեզ ավարտել զույգավորումը։</string>
-    <string name="adb_pairing_tutorial_content_steps">Անցեք «Մշակողի ընտրանքներ» բաժին, այնուհետև միացրեք «USB կարգաբերում» և «Անլար կարգաբերում»։</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Հպեք «Անլար կարգաբերում» բաժնի ձախ կողմին, այնուհետև հպեք «Սարքի զուգակցում զուգակցման կոդով» կոճակին։ Մուտքագրեք ծանուցման մեջ նշված կոդը՝ զուգակցումն ավարտելու համար։</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Զուգավորման գործընթացը պահանջում է, որ դուք փոխազդեք Shizuku-ի ծանուցման հետ: Խնդրում ենք թույլատրել Shizuku-ին հրապարակել ծանուցումներ:</string>
-    <string name="adb_pairing_tutorial_content_miui">MIUI օգտատերերը կարող են ստիպված լինել համակարգի կարգավորումներում «Ծանուցում»-ից «Ծանուցման ստվեր» բաժնից փոխել ծանուցման ոճը «Android»-ի։</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Հակառակ դեպքում, դուք կարող է չկարողանաք մուտքագրել ծանուցումից ստացված զուգավորման կոդը։</string>
+    <string name="adb_pairing_tutorial_content_notification">Շիզուկուից ստացված ծանուցումը կօգնի ձեզ
+        ավարտել զույգավորումը։</string>
+    <string name="adb_pairing_tutorial_content_steps">Անցեք «Մշակողի ընտրանքներ» բաժին, այնուհետև
+        միացրեք «USB կարգաբերում» և «Անլար կարգաբերում»։</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Հպեք «Անլար կարգաբերում» բաժնի
+        ձախ կողմին, այնուհետև հպեք «Սարքի զուգակցում զուգակցման կոդով» կոճակին։ Մուտքագրեք ծանուցման
+        մեջ նշված կոդը՝ զուգակցումն ավարտելու համար։</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Զուգավորման գործընթացը
+        պահանջում է, որ դուք փոխազդեք Shizuku-ի ծանուցման հետ: Խնդրում ենք թույլատրել Shizuku-ին
+        հրապարակել ծանուցումներ:</string>
+    <string name="adb_pairing_tutorial_content_miui">MIUI օգտատերերը կարող են ստիպված լինել
+        համակարգի կարգավորումներում «Ծանուցում»-ից «Ծանուցման ստվեր» բաժնից փոխել ծանուցման ոճը
+        «Android»-ի։</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Հակառակ դեպքում, դուք կարող է չկարողանաք
+        մուտքագրել ծանուցումից ստացված զուգավորման կոդը։</string>
     <string name="adb_pairing_tutorial_content_finish">Վերադարձեք Շիզուկու և սկսեք Շիզուկուն։</string>
-    <string name="adb_pairing_tutorial_content_network">Շիզուկուն պետք է մուտք ունենա տեղական ցանց: Այն կառավարվում է ցանցի թույլտվությամբ:</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Որոշ համակարգեր (օրինակ՝ MIUI-ը) թույլ չեն տալիս հավելվածներին մուտք գործել ցանց, երբ դրանք տեսանելի չեն, նույնիսկ եթե հավելվածն օգտագործում է առաջնային պլանի ծառայություն: Խնդրում ենք անջատել Shizuku-ի մարտկոցի օպտիմալացման գործառույթները նման համակարգերում:</string>
+    <string name="adb_pairing_tutorial_content_network">Շիզուկուն պետք է մուտք ունենա տեղական ցանց:
+        Այն կառավարվում է ցանցի թույլտվությամբ:</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Որոշ համակարգեր
+        (օրինակ՝ MIUI-ը) թույլ չեն տալիս հավելվածներին մուտք գործել ցանց, երբ դրանք տեսանելի չեն,
+        նույնիսկ եթե հավելվածն օգտագործում է առաջնային պլանի ծառայություն: Խնդրում ենք անջատել
+        Shizuku-ի մարտկոցի օպտիմալացման գործառույթները նման համակարգերում:</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Միացնել (root արած սարքերի համար)]]></string>
     <string name="home_root_description"><![CDATA[Եթե օգտագործում եք Magisk, կարող եք փորձել %1$s-ը։ Root օգտատերերի համար այն ի վերջո կփոխարինի Shizuku-ին։ Նշենք, որ առկա ծրագրերը պետք է մի փոքր փոփոխվեն՝ %2$s-ն օգտագործելու համար։]]></string>
@@ -71,10 +109,12 @@
         <item quantity="other"><![CDATA[Վավերացված է %d ծրագիր]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Սեղմեք, որպեսզի վավերացված ծրագրերը տիրապետելու համար]]></string>
-    <string name="home_app_management_empty">Այստեղ կցուցադրվեն հավելվածները, որոնք խնդրել կամ հայտարարել են Shizuku թույլտվությունը։</string>
+    <string name="home_app_management_empty">Այստեղ կցուցադրվեն հավելվածները, որոնք խնդրել կամ
+        հայտարարել են Shizuku թույլտվությունը։</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Կառավարեք Շիզուկուն ավտոմատացման հավելվածներով</string>
-    <string name="home_automation_description"><![CDATA[Tasker-ի և MacroDroid-ի նման հավելվածները կարող են ավտոմատ կերպով ուղարկել Shizuku-ն մեկնարկելու/անջատելու մտադրություններ:<p>Android 10 կամ ավելի ցածր օպերացիոն համակարգով աշխատող unrooted սարքերը պետք է բացեն TCP միացք համակարգչից՝ օգտագործելով<font face="monospace"> %1$s </font>մեկնարկի մտադրության աշխատանքի համար:]]></string>
+    <string name="home_automation_description">Tasker-ի և MacroDroid-ի նման հավելվածները կարող են
+        ավտոմատ կերպով ուղարկել Shizuku-ն մեկնարկելու/անջատելու մտադրություններ:</string>
     <string name="home_automation_button_view_intents">Դիտել մտադրությունները</string>
     <string name="home_automation_dialog_label_action">Գործողություն</string>
     <string name="home_automation_dialog_label_package">Փաթեթ</string>
@@ -82,25 +122,40 @@
     <string name="home_automation_dialog_label_target">Նպատակակետ</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Մշակողի ուղեցույց</string>
-    <string name="home_learn_more_description">Սովորեք ծրագրավորել Shizuku-ով կամ Shizuku-ն ուրիշ ծրագրերի հետ օգտագործել</string>
+    <string name="home_learn_more_description">Սովորեք ծրագրավորել Shizuku-ով կամ Shizuku-ն ուրիշ
+        ծրագրերի հետ օգտագործել</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Դուք պետք է լրացուցիչ քայլ կատարեք</string>
-    <string name="home_adb_is_limited_description">Ձեր սարքի արտադրողը սահմանափակել է adb թույլտվությունները եւ հավելվածները, որոնք օգտագործում են Shizuku, ճիշտ չեն աշխատի:\n\nՍովորաբար այս սահմանափակումը կարելի է վերացնել՝ որոշ տարբերակներ կարգավորելով «Մշակողի ընտրանքներ» բաժնում։ Խնդրում ենք կարդալ օգնությունը մանրամասների համար, թե ինչպես դա անել:\n\nԳործողության ուժի մեջ մտնելու համար անհրաժեշտ է վերագործարկել Շիզուկուին։</string>
+    <string name="home_adb_is_limited_description">Ձեր սարքի արտադրողը սահմանափակել է adb
+        թույլտվությունները եւ հավելվածները, որոնք օգտագործում են Shizuku, ճիշտ չեն
+        աշխատի:\n\nՍովորաբար այս սահմանափակումը կարելի է վերացնել՝ որոշ տարբերակներ կարգավորելով
+        «Մշակողի ընտրանքներ» բաժնում։ Խնդրում ենք կարդալ օգնությունը մանրամասների համար, թե ինչպես
+        դա անել:\n\nԳործողության ուժի մեջ մտնելու համար անհրաժեշտ է վերագործարկել Շիզուկուին։</string>
     <!-- Application management -->
-    <string name="app_management_dialog_adb_is_limited_title">Adb-ի թույլտվությունները սահմանափակված են</string>
+    <string name="app_management_dialog_adb_is_limited_title">Adb-ի թույլտվությունները սահմանափակված
+        են</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Շատ հնարավոր է, որ Ձեր սարքի արտադրողը սահմանափակել է adb-ի թույլտվությունները։ <p>Հնարավոր լուծումները գտեք <b><a href="%1$s">այստեղ</a></b>։]]></string>
-    <string name="app_management_item_summary_requires_root">* Shizuku-ն root թույլտվություն պետք է ունենա</string>
+    <string name="app_management_item_summary_requires_root">* Shizuku-ն root թույլտվություն պետք է
+        ունենա</string>
     <string name="app_management_toggle_all">Toggle all</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Օգտագործեք Shizuku-ն տերմինալային հավելվածներում</string>
-    <string name="home_terminal_description">Գործարկեք shell հրամանները տերմինալային հավելվածներում Shizuku-ի միջոցով</string>
-    <string name="terminal_tutorial_miui">Օգտատերերը հայտնել են, որ MIUI-ը խախտում է Storage Access Framework-ը, որն օգտագործվում է արտահանման գործառույթի կողմից։</string>
-    <string name="terminal_tutorial_miui_2">Եթե օգտագործում եք MIUI, հնարավոր է, որ ստիպված լինեք ֆայլը հանել Shizuku-ի APK ֆայլի assets պանակից։</string>
+    <string name="home_terminal_description">Գործարկեք shell հրամանները տերմինալային հավելվածներում
+        Shizuku-ի միջոցով</string>
+    <string name="terminal_tutorial_miui">Օգտատերերը հայտնել են, որ MIUI-ը խախտում է Storage Access
+        Framework-ը, որն օգտագործվում է արտահանման գործառույթի կողմից։</string>
+    <string name="terminal_tutorial_miui_2">Եթե օգտագործում եք MIUI, հնարավոր է, որ ստիպված լինեք
+        ֆայլը հանել Shizuku-ի APK ֆայլի assets պանակից։</string>
     <string name="terminal_tutorial_1">Արտահանեք ֆայլերը նոր թղթապանակ։</string>
-    <string name="terminal_tutorial_1_description">Երկու ֆայլ կարտահանվի՝ %1$s և %2$s: Եթե ֆայլերն արդեն իսկ գոյություն ունեն ընտրված թղթապանակում, դրանք կջնջվեն:</string>
+    <string name="terminal_tutorial_1_description">Երկու ֆայլ կարտահանվի՝ %1$s և %2$s: Եթե ֆայլերն
+        արդեն իսկ գոյություն ունեն ընտրված թղթապանակում, դրանք կջնջվեն:</string>
     <string name="terminal_export_files">Արտահանել ֆայլերը</string>
-    <string name="terminal_tutorial_2">Օգտագործեք ձեր տերմինալի ծրագիրը՝ ֆայլերը դրա անձնական ֆայլերի պանակում պատճենելու համար։</string>
-    <string name="terminal_tutorial_2_description">Հուշում. Եթե ձեր տերմինալի հավելվածի գլխավոր գրացուցակը (~) գտնվում է մասնավոր ֆայլերի գրացուցակում, ֆայլերը այնտեղ տեղադրելը թույլ կտա ձեզ գործարկել %1$s -ը՝ առանց ուղին գրելու:\n\nՀակառակ դեպքում, կարող եք ստեղծել կեղծանուն %2$s -ի համար ձեր տերմինալի հավելվածի %3$s կարգավորման ֆայլում:</string>
+    <string name="terminal_tutorial_2">Օգտագործեք ձեր տերմինալի ծրագիրը՝ ֆայլերը դրա անձնական
+        ֆայլերի պանակում պատճենելու համար։</string>
+    <string name="terminal_tutorial_2_description">Հուշում. Եթե ձեր տերմինալի հավելվածի գլխավոր
+        գրացուցակը (~) գտնվում է մասնավոր ֆայլերի գրացուցակում, ֆայլերը այնտեղ տեղադրելը թույլ կտա
+        ձեզ գործարկել %1$s -ը՝ առանց ուղին գրելու:\n\nՀակառակ դեպքում, կարող եք ստեղծել կեղծանուն
+        %2$s -ի համար ձեր տերմինալի հավելվածի %3$s կարգավորման ֆայլում:</string>
     <string name="terminal_tutorial_3">Բացեք shell-ը հետևյալ հրամանով.</string>
     <string name="rish_description"><![CDATA[%1$s-ի միջոցով կարող եք գործարկել shell հրամաններ ցանկացած տերմինալային հավելվածում:<p>Սեղմեք՝ դրա օգտագործման մասին ավելին իմանալու համար:]]></string>
     <!-- Settings -->
@@ -108,54 +163,68 @@
     <string name="settings_behavior">Վարքագիծ</string>
     <string name="settings_start_on_boot">Սկսել boot-ից</string>
     <string name="settings_start_on_boot_summary">Պահանջում է Android 11+ կամ արմատ</string>
-    <string name="settings_start_on_boot_bug">Android 11-12-ում առկա սխալի պատճառով անլար կարգաբերումը չի հիշում որևէ լիազորված ցանց։\n\nԴուք պետք է վերահաստատեք ցանցը յուրաքանչյուր վերագործարկման ժամանակ՝ սեղմելով «Թույլատրել» կոճակը, երբ բացվի լիազորման երկխոսության պատուհանը։</string>
+    <string name="settings_start_on_boot_bug">Android 11-12-ում առկա սխալի պատճառով անլար
+        կարգաբերումը չի հիշում որևէ լիազորված ցանց։\n\nԴուք պետք է վերահաստատեք ցանցը յուրաքանչյուր
+        վերագործարկման ժամանակ՝ սեղմելով «Թույլատրել» կոճակը, երբ բացվի լիազորման երկխոսության
+        պատուհանը։</string>
     <string name="settings_use_system_color">Օգտագործել համակարգի տեսաձեւի գույնը</string>
     <string name="settings_watchdog">Հսկիչ</string>
     <string name="settings_watchdog_summary">Ավտոմատ վերագործարկեք Շիզուկուն, եթե այն խափանվի</string>
     <string name="settings_tcp_mode">TCP ռեժիմ</string>
-    <string name="settings_tcp_mode_summary">"Թույլ է տալիս Shizuku-ին վերագործարկել առանց Wi-Fi-ի: (Shizuku-ն պետք է որ մեկ անգամ սկսել է վերագործարկումից հետո)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"TCP միացքը անմիջապես կփակվի: TCP ռեժիմը կրկին միացնելու համար ձեզ անհրաժեշտ կլինի Wi-Fi: Շարունակե՞լ:"</string>
+    <string name="settings_tcp_mode_summary">"Թույլ է տալիս Shizuku-ին վերագործարկել առանց Wi-Fi-ի:
+        (Shizuku-ն պետք է որ մեկ անգամ սկսել է վերագործարկումից հետո)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"TCP միացքը անմիջապես կփակվի: TCP ռեժիմը
+        կրկին միացնելու համար ձեզ անհրաժեշտ կլինի Wi-Fi: Շարունակե՞լ:"</string>
     <string name="settings_tcp_mode_closing_port">TCP միացքի փակում...</string>
     <string name="settings_restart_dialog_title">Վերագործարկումը պարտադիր է</string>
-    <string name="settings_restart_dialog_message">Այս կարգավորումը կիրառելու համար Շիզուկուն պետք է վերագործարկվի։</string>
+    <string name="settings_restart_dialog_message">Այս կարգավորումը կիրառելու համար Շիզուկուն պետք է
+        վերագործարկվի։</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Պահանջվում է Wi-Fi: Shizuku-ն կշարունակի աշխատել և կսպասի Wi-Fi կապի, նախքան ֆոնային ռեժիմով վերագործարկվելը:</b>]]></string>
     <string name="settings_tcp_port">TCP նավահանգիստ</string>
     <string name="settings_tcp_port_default">Լռելյայն (5555)</string>
     <string name="settings_tcp_port_hint">Թողնել դատարկ՝ լռելյայն օգտագործելու համար (5555)</string>
-    <string name="settings_tcp_learn_more">Իմացեք ավելին ավտոմատացման հավելվածների օգտագործման մասին՝ Shizuku-ն վերահսկելու համար</string>
+    <string name="settings_tcp_learn_more">Իմացեք ավելին ավտոմատացման հավելվածների օգտագործման
+        մասին՝ Shizuku-ն վերահսկելու համար</string>
     <string name="settings_language">Լեզու</string>
     <string name="settings_translation_contributors">Թարգմանության աջակցողներ</string>
     <string name="settings_translation">Մասնակցել թարգմանության մեջ</string>
     <string name="settings_translation_summary">Օգնեք մեզ թարգմանել %s-ը Ձեր լեզվով</string>
     <string name="settings_user_interface">Տեսք</string>
     <string name="settings_black_night_theme">Սև գիշերի տեսք</string>
-    <string name="settings_black_night_theme_summary">Օգտագործել սև տեսքը եթե գիշերային ռեժիմը միացված է</string>
+    <string name="settings_black_night_theme_summary">Օգտագործել սև տեսքը եթե գիշերային ռեժիմը
+        միացված է</string>
     <string name="settings_support">Աջակցություն</string>
     <string name="settings_help">Օգնություն</string>
     <string name="settings_report_bug">Report a bug</string>
     <string name="settings_advanced">Ընդլայնված</string>
     <string name="settings_legacy_pairing">Ժառանգական զուգավորում</string>
-    <string name="settings_legacy_pairing_summary">Մուտքագրեք զուգավորման կոդը երկխոսության մեջ ծանուցման փոխարեն</string>
+    <string name="settings_legacy_pairing_summary">Մուտքագրեք զուգավորման կոդը երկխոսության մեջ
+        ծանուցման փոխարեն</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Նախ, խնդրում ենք անել հետևյալը.</string>
     <string name="bug_report_dialog_update">Ստուգեք, որ օգտագործում եք ^1-ը։</string>
     <string name="bug_report_dialog_link_update">վերջին տարբերակը</string>
-    <string name="bug_report_dialog_wiki">Կարդացե՛ք ^1-ը և հետևե՛ք բոլոր համապատասխան խնդիրների լուծման քայլերին։</string>
+    <string name="bug_report_dialog_wiki">Կարդացե՛ք ^1-ը և հետևե՛ք բոլոր համապատասխան խնդիրների
+        լուծման քայլերին։</string>
     <string name="bug_report_dialog_link_wiki">վիքի</string>
-    <string name="bug_report_dialog_issues">Որոնեք բոլոր ^1-երը՝ տեսնելու համար, թե արդյոք ձեր սխալի մասին արդեն հաղորդվել է։</string>
+    <string name="bug_report_dialog_issues">Որոնեք բոլոր ^1-երը՝ տեսնելու համար, թե արդյոք ձեր սխալի
+        մասին արդեն հաղորդվել է։</string>
     <string name="bug_report_dialog_link_issues">առկա խնդիրներ</string>
     <string name="bug_report_dialog_method">Եթե հաշիվ ունեք, խնդրում ենք ներկայացնել խնդիրը ^1-ում։</string>
     <string name="bug_report_dialog_method_2">Հակառակ դեպքում, կարող եք էլ.փոստ ուղարկել։</string>
     <string name="bug_report_dialog_button_email">Էլ․ փոստ</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Նավահանգիստը պետք է լինի միջեւ 1 եւ 65535</string>
-    <string name="snackbar_battery_optimization_home">Մարտկոցի օպտիմալացումը պետք է անջատված լինի, որպեսզի boot/watchdog-ը ճիշտ աշխատի:</string>
-    <string name="snackbar_battery_optimization_settings">Խնդրում ենք անջատել մարտկոցի օպտիմալացումը՝ այս հատկությունն օգտագործելու համար:</string>
+    <string name="snackbar_battery_optimization_home">Մարտկոցի օպտիմալացումը պետք է անջատված լինի,
+        որպեսզի boot/watchdog-ը ճիշտ աշխատի:</string>
+    <string name="snackbar_battery_optimization_settings">Խնդրում ենք անջատել մարտկոցի
+        օպտիմալացումը՝ այս հատկությունն օգտագործելու համար:</string>
     <string name="snackbar_action_fix">Ֆիքսել</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Էլփոստի հավելված չի գտնվել</string>
     <string name="toast_shizuku_already_starting">Շիզուկուն արդեն սկսում է հետեւում</string>
-    <string name="toast_accessibility_tv_only">Այս ծառայությունը աջակցվում է միայն հեռուստացույցների վրա։</string>
+    <string name="toast_accessibility_tv_only">Այս ծառայությունը աջակցվում է միայն հեռուստացույցների
+        վրա։</string>
     <string name="toast_pairing_timeout">Շիզուկուի զուգավորման ծառայության ժամանակը սպառվեց։</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Թեմա</string>
@@ -178,23 +247,27 @@
     <string name="notification_working">Աշխատում է…</string>
     <string name="notification_channel_adb_pairing">Անլար կարգաբերման զուգավորում</string>
     <string name="notification_adb_pairing_input_paring_code">Մուտքագրեք զուգավորման կոդը</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Զուգավորման ծառայության որոնում</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Զուգավորման ծառայության
+        որոնում</string>
     <string name="notification_adb_pairing_service_found_title">Գտնվել է զուգավորման ծառայություն</string>
     <string name="notification_adb_pairing_stop_searching">Ընդհատել որոնումը</string>
     <string name="notification_adb_pairing_working_title">Զուգավորումը ընթացքի մեջ է</string>
     <string name="notification_adb_pairing_succeed_title">Զուգավորումը հաջող</string>
-    <string name="notification_adb_pairing_succeed_text">Դուք կարող եք սկսել Shizuku ծառայությունը հիմա:</string>
+    <string name="notification_adb_pairing_succeed_text">Դուք կարող եք սկսել Shizuku ծառայությունը
+        հիմա:</string>
     <string name="notification_adb_pairing_failed_title">Զուգավորումը ձախողվեց</string>
     <string name="notification_adb_pairing_retry">Կրկին փորձել</string>
     <!-- Permission related, appears in system permission UI -->
     <string name="permission_label">օգտվել Shizuku-ից</string>
-    <string name="permission_description">Թողնել ծրագրին օգտվել ավելի բարձր արտոնություններով համակարգային API-ներից։</string>
+    <string name="permission_description">Թողնել ծրագրին օգտվել ավելի բարձր արտոնություններով
+        համակարգային API-ներից։</string>
     <string name="permission_warning_template"><![CDATA[Թույլատրե՞լ <b>%1$s</b> հավելվածին %2$s:]]></string>
     <string name="grant_dialog_button_allow_always">Միշտ թույլատրել</string>
     <string name="grant_dialog_button_deny">"Մերժել"</string>
     <!-- Starter -->
     <string name="starter">Սկսնակ</string>
-    <string name="start_with_root_failed">Չհաջողվեց բեռնել ծառայությունը քանի որ root թույլտվությունը մերժված է կամ սարքը root չունի։</string>
+    <string name="start_with_root_failed">Չհաջողվեց բեռնել ծառայությունը քանի որ root
+        թույլտվությունը մերժված է կամ սարքը root չունի։</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Սկիզբ Շիզուկու…</string>
     <string name="wadb_notification_wifi_required">Սպասում ենք Wi-Fi կապին նախքան շարունակելը</string>
@@ -202,18 +275,23 @@
     <string name="wadb_error_title">Սխալ boot-ից սկսելիս</string>
     <string name="wadb_error_notify_dev">Սեղմեք մշակողին ծանուցելու համար:</string>
     <string name="wadb_permission_error_notification_title">Թույլտվության սխալ</string>
-    <string name="wadb_permission_error_notification_content">Shizuku-ն պետք է WRITE_SECURE_SETTINGS սկսել boot-ից։ Սեղմեք ՝ իմանալու համար, թե ինչպես շնորհել այն:</string>
+    <string name="wadb_permission_error_notification_content">Shizuku-ն պետք է WRITE_SECURE_SETTINGS
+        սկսել boot-ից։ Սեղմեք ՝ իմանալու համար, թե ինչպես շնորհել այն:</string>
     <string name="wadb_notification_channel">ADB ավտոմատ մեկնարկի ծառայություն</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Հսկիչը վազում է</string>
     <string name="watchdog_turn_off">Անջատել</string>
     <string name="watchdog_shizuku_crashed_title">Շիզուկուն վերջերս վթարի ենթարկվեց</string>
-    <string name="watchdog_shizuku_crashed_text">Watchdog-ը վերսկսեց ծառայությունը։ Սեղմեք ապագա վթարները կանխելու հնարավոր շտկումների մասին իմանալու համար:</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog-ը վերսկսեց ծառայությունը։ Սեղմեք ապագա
+        վթարները կանխելու հնարավոր շտկումների մասին իմանալու համար:</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Անջատել ծանուցումները</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Չհաջողվեց միացնել ինտերնետի ծրագիրը</string>
     <string name="toast_copied_to_clipboard">Պատճենվել է սեղմատախտակին</string>
-    <string name="accessibility_service_description">Ապահովում է զուգավորման աջակցություն սարքերի համար (օրինակ՝ Android 14+ աշխատող հեռուստացույցներ), որտեղ հնարավոր չէ օգտագործել ծանուցումները կամ բաժանված էկրանը:\n\nՀնարավորություն է տալիս Shizuku-ին հանել զուգավորման կոդը անլար կարգաբերման զուգավորման էկրանից: Այն կանջատի ինքն իրեն, երբ զույգ կոդը գտնվի:</string>
+    <string name="accessibility_service_description">Ապահովում է զուգավորման աջակցություն սարքերի
+        համար (օրինակ՝ Android 14+ աշխատող հեռուստացույցներ), որտեղ հնարավոր չէ օգտագործել
+        ծանուցումները կամ բաժանված էկրանը:\n\nՀնարավորություն է տալիս Shizuku-ին հանել զուգավորման
+        կոդը անլար կարգաբերման զուգավորման էկրանից: Այն կանջատի ինքն իրեն, երբ զույգ կոդը գտնվի:</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s-ը չի ընդունում այժմյան Shizuku-ն</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Հին Shizuku-ն համարվում է հնացած 2019-ի մարտից։ Հին Shizuku-ն չի աշխատում նոր Android-ի փոփոխակներում։<p>Դիմեք <b>%1$s</b>-ի ծրագրավորողին և ասեք, որ ծրագիրը թարմացնի։]]></string>

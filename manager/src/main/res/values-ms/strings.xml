@@ -21,8 +21,12 @@
     <string name="home_wireless_adb_view_guide_button">Panduan langkah demi langkah</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Mencari perkhidmatan penyahpepijatan wayarles</string>
-    <string name="dialog_adb_discovery_message">Sila dayakan \"Penyahpepijatan wayarles\" dalam \"Pilihan pembangun\". \"Penyahpepijatan wayarles\" dilumpuhkan secara automatik apabila rangkaian berubah.\n\nAmbil perhatian, jangan lumpuhkan \"Pilihan pembangun\" atau \"penyahpepijat USB\", atau Shizuku akan dihentikan.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Sila cuba lumpuhkan dan dayakan \"Penyahpepijatan wayarles\" jika ia terus mencari.</string>
+    <string name="dialog_adb_discovery_message">Sila dayakan \"Penyahpepijatan wayarles\" dalam
+        \"Pilihan pembangun\". \"Penyahpepijatan wayarles\" dilumpuhkan secara automatik apabila
+        rangkaian berubah.\n\nAmbil perhatian, jangan lumpuhkan \"Pilihan pembangun\" atau
+        \"penyahpepijat USB\", atau Shizuku akan dihentikan.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Sila cuba lumpuhkan dan
+        dayakan \"Penyahpepijatan wayarles\" jika ia terus mencari.</string>
     <string name="dialog_adb_port">Pelabuhan</string>
     <string name="dialog_adb_invalid_port">Port ialah integer antara 1 hingga 65535.</string>
     <string name="adb_pairing">Berpasangan</string>
@@ -30,16 +34,41 @@
     <string name="dialog_adb_pairing_discovery">Mencari perkhidmatan berpasangan</string>
     <string name="dialog_adb_pairing_paring_code">Kod berpasangan</string>
     <string name="paring_code_is_wrong">Memadankan kod adalah salah.</string>
-    <string name="cannot_connect_port">Tidak boleh menyambung ke perkhidmatan penyahpepijatan wayarles.\n\nSila pastikan Shizuku disenaraikan putih dalam semua firewall, blok iklan, VPN atau apl serupa yang boleh menyekat akses rangkaian.</string>
-    <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer adalah satu kemestian.</string>
-    <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila dayakannya dalam \"Pilihan Pembangun\".</string>
-    <string name="dialog_adb_pairing_message">Sila mulakan berpasangan dengan melakukan langkah-langkah berikut:\n- Navigasi ke \"Pilihan Pemaju\"\n- Dayakan \"Penyahpepijatan USB\" dan \"Penyahpepijatan tanpa wayar\"\n- Ketik sebelah kiri \"Penyahpepijatan tanpa wayar\"\n- Ketik \"Pasangkan peranti dengan kod berpasangan\"\n- Masukkan kod gandingan dalam pemberitahuan</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Pada Android 14, memasang/mengemas kini Shizuku dengan Package Installer akan membatalkan kebenaran ^1, yang diperlukan untuk mendayakan perkhidmatan kebolehcapaian bagi pemasangan.\n\nUntuk memberikannya, jalankan arahan ADB berikut:\n\n^2\n\nSelepas menjalankan arahan, anda boleh meneruskan proses pemasangan.\n\nNota: anda boleh memintas ini dengan memasang/mengemas kini Shizuku dengan ADB.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Sila dayakan perkhidmatan kebolehaksesan untuk memulakan proses berpasangan. Ini membolehkan Shizuku mengesan kod berpasangan.\n\nPerkhidmatan kebolehaksesan akan dimatikan apabila kod ditemui atau selepas 1 minit untuk menjimatkan tenaga.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Sila mulakan berpasangan dengan melakukan langkah berikut:\n- Navigasi ke \"Pilihan Pembangun\"\n- Dayakan \"penyahpepijatan USB\" dan \"Penyahpepijatan wayarles\"\n- Ketik sebelah kiri \"Penyahpepijatan wayarles\"\n- Ketik \"Gandingkan peranti dengan peranti.\" Shizuku akan mengesan kod pasangan secara automatik.</string>
-    <string name="adb_pairing_requires_multi_window">Sila masukkan mod skrin belah (berbilang tetingkap) dahulu.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Sistem memerlukan dialog berpasangan untuk sentiasa kelihatan. Menggunakan mod skrin belah ialah satu-satunya cara untuk membolehkan apl ini dan dialog sistem kelihatan pada masa yang sama.</string>
-    <string name="adb_error_key_store">Tidak dapat menjana kunci untuk penyahpepijatan wayarles.\nIni mungkin kerana mekanisme KeyStore peranti ini rosak.</string>
+    <string name="cannot_connect_port">Tidak boleh menyambung ke perkhidmatan penyahpepijatan
+        wayarles.\n\nSila pastikan Shizuku disenaraikan putih dalam semua firewall, blok iklan, VPN
+        atau apl serupa yang boleh menyekat akses rangkaian.</string>
+    <string name="dialog_wireless_adb_not_enabled">Penyahpepijatan wayarles tidak didayakan.\nAmbil
+        perhatian, sebelum Android 11, untuk mendayakan penyahpepijatan wayarles, sambungan komputer
+        adalah satu kemestian.</string>
+    <string name="dialog_usb_debugging_not_enabled">Penyahpepijatan USB tidak didayakan.\nSila
+        dayakannya dalam \"Pilihan Pembangun\".</string>
+    <string name="dialog_adb_pairing_message">Sila mulakan berpasangan dengan melakukan
+        langkah-langkah berikut:\n- Navigasi ke \"Pilihan Pemaju\"\n- Dayakan \"Penyahpepijatan
+        USB\" dan \"Penyahpepijatan tanpa wayar\"\n- Ketik sebelah kiri \"Penyahpepijatan tanpa
+        wayar\"\n- Ketik \"Pasangkan peranti dengan kod berpasangan\"\n- Masukkan kod gandingan
+        dalam pemberitahuan</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Pada Android 14, memasang/mengemas
+        kini Shizuku dengan Package Installer akan membatalkan kebenaran ^1, yang diperlukan untuk
+        mendayakan perkhidmatan kebolehcapaian bagi pemasangan.\n\nUntuk memberikannya, jalankan
+        arahan ADB berikut:\n\n^2\n\nSelepas menjalankan arahan, anda boleh meneruskan proses
+        pemasangan.\n\nNota: anda boleh memintas ini dengan memasang/mengemas kini Shizuku dengan
+        ADB.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Sila dayakan perkhidmatan kebolehaksesan
+        untuk memulakan proses berpasangan. Ini membolehkan Shizuku mengesan kod
+        berpasangan.\n\nPerkhidmatan kebolehaksesan akan dimatikan apabila kod ditemui atau selepas
+        1 minit untuk menjimatkan tenaga.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Sila mulakan berpasangan dengan
+        melakukan langkah berikut:\n- Navigasi ke \"Pilihan Pembangun\"\n- Dayakan \"penyahpepijatan
+        USB\" dan \"Penyahpepijatan wayarles\"\n- Ketik sebelah kiri \"Penyahpepijatan wayarles\"\n-
+        Ketik \"Gandingkan peranti dengan peranti.\" Shizuku akan mengesan kod pasangan secara
+        automatik.</string>
+    <string name="adb_pairing_requires_multi_window">Sila masukkan mod skrin belah (berbilang
+        tetingkap) dahulu.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Sistem memerlukan dialog berpasangan
+        untuk sentiasa kelihatan. Menggunakan mod skrin belah ialah satu-satunya cara untuk
+        membolehkan apl ini dan dialog sistem kelihatan pada masa yang sama.</string>
+    <string name="adb_error_key_store">Tidak dapat menjana kunci untuk penyahpepijatan
+        wayarles.\nIni mungkin kerana mekanisme KeyStore peranti ini rosak.</string>
     <string name="adb_stopping_tcp">Menutup port TCP</string>
     <string name="adb_error_stop_tcp">Gagal menghentikan ADB melalui TCP</string>
     <string name="adb_pair_required">Sila lalui langkah berpasangan terlebih dahulu.</string>
@@ -47,15 +76,28 @@
     <string name="development_settings">Pilihan pemaju</string>
     <string name="notification_settings">Pilihan pemberitahuan</string>
     <string name="adb_pairing_tutorial_title">Gandingkan Shizuku dengan peranti anda</string>
-    <string name="adb_pairing_tutorial_content_notification">Pemberitahuan daripada Shizuku akan membantu anda melengkapkan gandingan.</string>
-    <string name="adb_pairing_tutorial_content_steps">Navigasi ke \"Pilihan Pembangun\", kemudian dayakan \"penyahpepijatan USB\" dan \"Penyahpepijatan wayarles\".</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Ketik sebelah kiri \"Penyahpepijatan wayarles\", kemudian ketik \"Gandingkan peranti dengan kod berpasangan.\" Masukkan kod dalam pemberitahuan untuk melengkapkan gandingan.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Proses berpasangan memerlukan anda berinteraksi dengan pemberitahuan daripada Shizuku. Sila benarkan Shizuku menyiarkan pemberitahuan.</string>
-    <string name="adb_pairing_tutorial_content_miui">Pengguna MIUI mungkin perlu menukar gaya pemberitahuan kepada \"Android\" daripada \"Pemberitahuan\" - \"Teduhan pemberitahuan\" dalam tetapan sistem.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Jika tidak, anda mungkin tidak dapat memasukkan kod berpasangan daripada pemberitahuan.</string>
+    <string name="adb_pairing_tutorial_content_notification">Pemberitahuan daripada Shizuku akan
+        membantu anda melengkapkan gandingan.</string>
+    <string name="adb_pairing_tutorial_content_steps">Navigasi ke \"Pilihan Pembangun\", kemudian
+        dayakan \"penyahpepijatan USB\" dan \"Penyahpepijatan wayarles\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Ketik sebelah kiri
+        \"Penyahpepijatan wayarles\", kemudian ketik \"Gandingkan peranti dengan kod berpasangan.\"
+        Masukkan kod dalam pemberitahuan untuk melengkapkan gandingan.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Proses berpasangan memerlukan
+        anda berinteraksi dengan pemberitahuan daripada Shizuku. Sila benarkan Shizuku menyiarkan
+        pemberitahuan.</string>
+    <string name="adb_pairing_tutorial_content_miui">Pengguna MIUI mungkin perlu menukar gaya
+        pemberitahuan kepada \"Android\" daripada \"Pemberitahuan\" - \"Teduhan pemberitahuan\"
+        dalam tetapan sistem.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Jika tidak, anda mungkin tidak dapat
+        memasukkan kod berpasangan daripada pemberitahuan.</string>
     <string name="adb_pairing_tutorial_content_finish">Kembali ke Shizuku dan mulakan Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku perlu mengakses rangkaian tempatan. Ia dikawal oleh kebenaran rangkaian.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sesetengah sistem (seperti MIUI) tidak membenarkan apl mengakses rangkaian apabila ia tidak kelihatan, walaupun apl menggunakan perkhidmatan latar depan. Sila lumpuhkan ciri pengoptimuman bateri untuk Shizuku pada sistem sedemikian.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku perlu mengakses rangkaian tempatan.
+        Ia dikawal oleh kebenaran rangkaian.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Sesetengah sistem
+        (seperti MIUI) tidak membenarkan apl mengakses rangkaian apabila ia tidak kelihatan,
+        walaupun apl menggunakan perkhidmatan latar depan. Sila lumpuhkan ciri pengoptimuman bateri
+        untuk Shizuku pada sistem sedemikian.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Mula (untuk peranti berakar)]]></string>
     <string name="home_root_description"><![CDATA[Jika anda menggunakan Magisk, anda boleh mencuba %1$s. Bagi pengguna root, ia akhirnya akan menggantikan Shizuku. Perhatikan, aplikasi sedia ada perlu berubah sedikit untuk menggunakan %2$s.]]></string>
@@ -67,10 +109,12 @@
         <item quantity="other"><![CDATA[Permohonan yang dibenarkan %d]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Ketik untuk mengurus apl yang dibenarkan]]></string>
-    <string name="home_app_management_empty">Apl yang telah meminta atau mengisytiharkan kebenaran Shizuku akan dipaparkan di sini.</string>
+    <string name="home_app_management_empty">Apl yang telah meminta atau mengisytiharkan kebenaran
+        Shizuku akan dipaparkan di sini.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kawal Shizuku dengan apl automasi</string>
-    <string name="home_automation_description"><![CDATA[Apl seperti Tasker dan MacroDroid boleh menghantar niat untuk memulakan/menghentikan Shizuku secara automatik.<p>Peranti tidak berakar pada Android 10 atau ke bawah mesti membuka port TCP daripada PC menggunakan<font face="monospace"> %1$s </font>untuk niat mula berfungsi.]]></string>
+    <string name="home_automation_description">Apl seperti Tasker dan MacroDroid boleh menghantar
+        niat untuk memulakan/menghentikan Shizuku secara automatik.</string>
     <string name="home_automation_button_view_intents">Lihat niat</string>
     <string name="home_automation_dialog_label_action">Tindakan</string>
     <string name="home_automation_dialog_label_package">Pakej</string>
@@ -81,22 +125,35 @@
     <string name="home_learn_more_description">Ketahui cara membangun dengan Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Anda perlu mengambil langkah tambahan</string>
-    <string name="home_adb_is_limited_description">Pengilang peranti anda telah mengehadkan kebenaran adb dan apl yang menggunakan Shizuku tidak akan berfungsi dengan betul.\n\nBiasanya, had ini boleh ditarik balik dengan melaraskan beberapa pilihan dalam \"Pilihan pembangun\". Sila baca bantuan untuk mendapatkan butiran tentang cara melakukan ini.\n\nAnda mungkin perlu memulakan semula Shizuku untuk operasi berkuat kuasa.</string>
+    <string name="home_adb_is_limited_description">Pengilang peranti anda telah mengehadkan
+        kebenaran adb dan apl yang menggunakan Shizuku tidak akan berfungsi dengan
+        betul.\n\nBiasanya, had ini boleh ditarik balik dengan melaraskan beberapa pilihan dalam
+        \"Pilihan pembangun\". Sila baca bantuan untuk mendapatkan butiran tentang cara melakukan
+        ini.\n\nAnda mungkin perlu memulakan semula Shizuku untuk operasi berkuat kuasa.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Kebenaran adb adalah terhad</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Kemungkinan besar pengeluar peranti anda mengehadkan kebenaran adb.<p>Mungkin terdapat penyelesaian untuk sistem anda dalam <b><a href=\"%1$s\">dokumen ini</a></b>.]]></string>
-    <string name="app_management_item_summary_requires_root">* memerlukan Shizuku berjalan dengan akar</string>
+    <string name="app_management_item_summary_requires_root">* memerlukan Shizuku berjalan dengan
+        akar</string>
     <string name="app_management_toggle_all">Togol semua</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gunakan Shizuku dalam apl terminal</string>
-    <string name="home_terminal_description">Jalankan arahan shell dalam apl terminal melalui Shizuku</string>
-    <string name="terminal_tutorial_miui">Pengguna telah melaporkan bahawa MIUI memecahkan Rangka Kerja Akses Storan, yang digunakan oleh fungsi eksport.</string>
-    <string name="terminal_tutorial_miui_2">Jika anda menggunakan MIUI, anda mungkin perlu mengekstrak fail daripada folder aset dalam APK Shizuku.</string>
+    <string name="home_terminal_description">Jalankan arahan shell dalam apl terminal melalui
+        Shizuku</string>
+    <string name="terminal_tutorial_miui">Pengguna telah melaporkan bahawa MIUI memecahkan Rangka
+        Kerja Akses Storan, yang digunakan oleh fungsi eksport.</string>
+    <string name="terminal_tutorial_miui_2">Jika anda menggunakan MIUI, anda mungkin perlu
+        mengekstrak fail daripada folder aset dalam APK Shizuku.</string>
     <string name="terminal_tutorial_1">Eksport fail ke folder baharu.</string>
-    <string name="terminal_tutorial_1_description">Dua fail akan dieksport: %1$s dan %2$s. Jika fail sudah wujud dalam folder yang dipilih, ia akan dipadamkan.</string>
+    <string name="terminal_tutorial_1_description">Dua fail akan dieksport: %1$s dan %2$s. Jika fail
+        sudah wujud dalam folder yang dipilih, ia akan dipadamkan.</string>
     <string name="terminal_export_files">Eksport fail</string>
-    <string name="terminal_tutorial_2">Gunakan apl terminal anda untuk menyalin fail ke direktori fail peribadinya.</string>
-    <string name="terminal_tutorial_2_description">Petua: Jika direktori rumah apl terminal anda (~) berada dalam direktori fail peribadi, meletakkan fail di sana akan membolehkan anda menjalankan %1$s tanpa menulis laluan.\n\nJika tidak, anda boleh mencipta alias untuk %2$s dalam fail konfigurasi %3$s apl terminal anda.</string>
+    <string name="terminal_tutorial_2">Gunakan apl terminal anda untuk menyalin fail ke direktori
+        fail peribadinya.</string>
+    <string name="terminal_tutorial_2_description">Petua: Jika direktori rumah apl terminal anda (~)
+        berada dalam direktori fail peribadi, meletakkan fail di sana akan membolehkan anda
+        menjalankan %1$s tanpa menulis laluan.\n\nJika tidak, anda boleh mencipta alias untuk %2$s
+        dalam fail konfigurasi %3$s apl terminal anda.</string>
     <string name="terminal_tutorial_3">Buka shell dengan arahan berikut:</string>
     <string name="rish_description"><![CDATA[Dengan %1$s, anda boleh menjalankan arahan shell dalam mana-mana apl terminal.<p>Ketik untuk mengetahui lebih lanjut tentang cara menggunakannya.]]></string>
     <!-- Settings -->
@@ -104,49 +161,62 @@
     <string name="settings_behavior">Tingkah laku</string>
     <string name="settings_start_on_boot">Mulakan semasa but</string>
     <string name="settings_start_on_boot_summary">Memerlukan Android 11+ atau root</string>
-    <string name="settings_start_on_boot_bug">Disebabkan oleh pepijat dalam Android 11-12, penyahpepijatan wayarles tidak mengingati mana-mana rangkaian yang dibenarkan.\n\nAnda perlu membenarkan semula rangkaian pada setiap but semula dengan mengetik \"Benarkan\" apabila dialog kebenaran muncul.</string>
+    <string name="settings_start_on_boot_bug">Disebabkan oleh pepijat dalam Android 11-12,
+        penyahpepijatan wayarles tidak mengingati mana-mana rangkaian yang dibenarkan.\n\nAnda perlu
+        membenarkan semula rangkaian pada setiap but semula dengan mengetik \"Benarkan\" apabila
+        dialog kebenaran muncul.</string>
     <string name="settings_use_system_color">Gunakan warna tema sistem</string>
     <string name="settings_watchdog">Pengawas</string>
     <string name="settings_watchdog_summary">Mulakan semula Shizuku secara automatik jika ia ranap</string>
     <string name="settings_tcp_mode">mod TCP</string>
-    <string name="settings_tcp_mode_summary">"Membenarkan Shizuku memulakan semula tanpa Wi-Fi. (Shizuku mesti bermula sekali sejak but semula)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"Port TCP akan ditutup serta-merta. Anda memerlukan Wi-Fi untuk menghidupkan mod TCP sekali lagi. Teruskan?"</string>
+    <string name="settings_tcp_mode_summary">"Membenarkan Shizuku memulakan semula tanpa Wi-Fi.
+        (Shizuku mesti bermula sekali sejak but semula)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Port TCP akan ditutup serta-merta. Anda
+        memerlukan Wi-Fi untuk menghidupkan mod TCP sekali lagi. Teruskan?"</string>
     <string name="settings_tcp_mode_closing_port">Menutup port TCP...</string>
     <string name="settings_restart_dialog_title">Mulakan semula Diperlukan</string>
-    <string name="settings_restart_dialog_message">Shizuku perlu memulakan semula untuk menggunakan tetapan ini.</string>
+    <string name="settings_restart_dialog_message">Shizuku perlu memulakan semula untuk menggunakan
+        tetapan ini.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi diperlukan. Shizuku akan terus berjalan dan menunggu sambungan Wi-Fi sebelum dimulakan semula di latar belakang.</b>]]></string>
     <string name="settings_tcp_port">port TCP</string>
     <string name="settings_tcp_port_default">Lalai (5555)</string>
     <string name="settings_tcp_port_hint">Biarkan kosong untuk menggunakan lalai (5555)</string>
-    <string name="settings_tcp_learn_more">Ketahui lebih lanjut tentang menggunakan apl automasi untuk mengawal Shizuku</string>
+    <string name="settings_tcp_learn_more">Ketahui lebih lanjut tentang menggunakan apl automasi
+        untuk mengawal Shizuku</string>
     <string name="settings_language">Bahasa</string>
     <string name="settings_translation_contributors">Penyumbang terjemahan</string>
     <string name="settings_translation">Mengambil bahagian dalam terjemahan</string>
     <string name="settings_translation_summary">Bantu kami menterjemah %s ke dalam bahasa anda</string>
     <string name="settings_user_interface">Penampilan</string>
     <string name="settings_black_night_theme">Tema malam hitam</string>
-    <string name="settings_black_night_theme_summary">Gunakan tema hitam tulen jika mod malam didayakan</string>
+    <string name="settings_black_night_theme_summary">Gunakan tema hitam tulen jika mod malam
+        didayakan</string>
     <string name="settings_support">Sokongan</string>
     <string name="settings_help">Tolong</string>
     <string name="settings_report_bug">Laporkan pepijat</string>
     <string name="settings_advanced">Maju</string>
     <string name="settings_legacy_pairing">Gandingan warisan</string>
-    <string name="settings_legacy_pairing_summary">Masukkan kod gandingan dalam dialog dan bukannya pemberitahuan</string>
+    <string name="settings_legacy_pairing_summary">Masukkan kod gandingan dalam dialog dan bukannya
+        pemberitahuan</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Pertama, sila lakukan perkara berikut:</string>
     <string name="bug_report_dialog_update">Pastikan anda menggunakan ^1.</string>
     <string name="bug_report_dialog_link_update">versi terkini</string>
-    <string name="bug_report_dialog_wiki">Baca ^1 dan ikuti semua langkah penyelesaian masalah yang berkaitan.</string>
+    <string name="bug_report_dialog_wiki">Baca ^1 dan ikuti semua langkah penyelesaian masalah yang
+        berkaitan.</string>
     <string name="bug_report_dialog_link_wiki">wiki</string>
-    <string name="bug_report_dialog_issues">Cari semua ^1 untuk melihat sama ada pepijat anda telah dilaporkan.</string>
+    <string name="bug_report_dialog_issues">Cari semua ^1 untuk melihat sama ada pepijat anda telah
+        dilaporkan.</string>
     <string name="bug_report_dialog_link_issues">isu-isu sedia ada</string>
     <string name="bug_report_dialog_method">Sila kemukakan isu pada ^1 jika anda mempunyai akaun.</string>
     <string name="bug_report_dialog_method_2">Jika tidak, anda boleh menghantar e-mel.</string>
     <string name="bug_report_dialog_button_email">E-mel</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Pelabuhan mestilah antara 1 dan 65535</string>
-    <string name="snackbar_battery_optimization_home">Pengoptimuman bateri mesti dilumpuhkan untuk permulaan pada but/pemantau untuk berfungsi dengan baik.</string>
-    <string name="snackbar_battery_optimization_settings">Sila lumpuhkan pengoptimuman bateri untuk menggunakan ciri ini.</string>
+    <string name="snackbar_battery_optimization_home">Pengoptimuman bateri mesti dilumpuhkan untuk
+        permulaan pada but/pemantau untuk berfungsi dengan baik.</string>
+    <string name="snackbar_battery_optimization_settings">Sila lumpuhkan pengoptimuman bateri untuk
+        menggunakan ciri ini.</string>
     <string name="snackbar_action_fix">Betulkan</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Tiada apl e-mel ditemui</string>
@@ -174,12 +244,14 @@
     <string name="notification_working">Bekerja…</string>
     <string name="notification_channel_adb_pairing">Penyahpepijatan berpasangan tanpa wayar</string>
     <string name="notification_adb_pairing_input_paring_code">Masukkan kod berpasangan</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Mencari perkhidmatan berpasangan</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Mencari perkhidmatan
+        berpasangan</string>
     <string name="notification_adb_pairing_service_found_title">Perkhidmatan pasangan ditemui</string>
     <string name="notification_adb_pairing_stop_searching">Berhenti mencari</string>
     <string name="notification_adb_pairing_working_title">Berpasangan sedang berjalan</string>
     <string name="notification_adb_pairing_succeed_title">Berganding berjaya</string>
-    <string name="notification_adb_pairing_succeed_text">Anda boleh memulakan perkhidmatan Shizuku sekarang.</string>
+    <string name="notification_adb_pairing_succeed_text">Anda boleh memulakan perkhidmatan Shizuku
+        sekarang.</string>
     <string name="notification_adb_pairing_failed_title">Gagal bergandingan</string>
     <string name="notification_adb_pairing_retry">Cuba semula</string>
     <!-- Permission related, appears in system permission UI -->
@@ -190,7 +262,8 @@
     <string name="grant_dialog_button_deny">"Nafikan"</string>
     <!-- Starter -->
     <string name="starter">Pemula</string>
-    <string name="start_with_root_failed">Tidak dapat memulakan perkhidmatan kerana kebenaran root tidak diberikan atau peranti ini tidak berakar.</string>
+    <string name="start_with_root_failed">Tidak dapat memulakan perkhidmatan kerana kebenaran root
+        tidak diberikan atau peranti ini tidak berakar.</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Memulakan Shizuku…</string>
     <string name="wadb_notification_wifi_required">Menunggu sambungan Wi-Fi sebelum meneruskan</string>
@@ -198,18 +271,23 @@
     <string name="wadb_error_title">Ralat semasa memulakan but</string>
     <string name="wadb_error_notify_dev">Ketik untuk memberitahu pembangun.</string>
     <string name="wadb_permission_error_notification_title">Ralat Kebenaran</string>
-    <string name="wadb_permission_error_notification_content">Shizuku memerlukan WRITE_SECURE_SETTINGS untuk bermula semasa but. Ketik untuk mengetahui cara memberikannya.</string>
+    <string name="wadb_permission_error_notification_content">Shizuku memerlukan
+        WRITE_SECURE_SETTINGS untuk bermula semasa but. Ketik untuk mengetahui cara memberikannya.</string>
     <string name="wadb_notification_channel">Perkhidmatan automula ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Anjing pengawas sedang berjalan</string>
     <string name="watchdog_turn_off">Mati</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku terhempas baru-baru ini</string>
-    <string name="watchdog_shizuku_crashed_text">Pengawas memulakan semula perkhidmatan. Ketik untuk mengetahui tentang kemungkinan pembetulan untuk mengelakkan ranap masa hadapan.</string>
+    <string name="watchdog_shizuku_crashed_text">Pengawas memulakan semula perkhidmatan. Ketik untuk
+        mengetahui tentang kemungkinan pembetulan untuk mengelakkan ranap masa hadapan.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Matikan Makluman</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Tidak boleh memulakan penyemak imbas</string>
     <string name="toast_copied_to_clipboard">Disalin ke papan keratan</string>
-    <string name="accessibility_service_description">Menyediakan sokongan berpasangan untuk peranti (cth, TV yang menjalankan Android 14+) yang pemberitahuan atau skrin pisah tidak boleh digunakan.\n\nMendayakan Shizuku untuk mengekstrak kod gandingan daripada skrin pasangan nyahpepijat wayarles. Ia akan melumpuhkan dirinya apabila kod berpasangan ditemui.</string>
+    <string name="accessibility_service_description">Menyediakan sokongan berpasangan untuk peranti
+        (cth, TV yang menjalankan Android 14+) yang pemberitahuan atau skrin pisah tidak boleh
+        digunakan.\n\nMendayakan Shizuku untuk mengekstrak kod gandingan daripada skrin pasangan
+        nyahpepijat wayarles. Ia akan melumpuhkan dirinya apabila kod berpasangan ditemui.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s tidak menyokong Shizuku moden</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Shizuku warisan telah ditamatkan sejak Mac 2019. Selain itu, Shizuku warisan tidak berfungsi pada sistem Android yang lebih baharu.<p>Sila minta pembangun <b>%1$s</b> untuk mengemas kini.]]></string>

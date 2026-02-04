@@ -76,7 +76,7 @@
     <string name="home_app_management_empty">Aplikace, které požádaly nebo deklarovaly povolení Shizuku, se zde zobrazí.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Ovládejte Shizuku pomocí automatizačních aplikací</string>
-    <string name="home_automation_description"><![CDATA[Aplikace jako Tasker a MacroDroid dokáží automaticky odesílat příkazy pro spuštění/zastavení Shizuku.<p>Nerootnutá zařízení s Androidem 10 nebo starším musí otevřít TCP port z počítače pomocí<font face="monospace"> %1$s </font>, aby příkaz pro spuštění fungoval.]]></string>
+    <string name="home_automation_description">Aplikace jako Tasker a MacroDroid dokáží automaticky odesílat příkazy pro spuštění/zastavení Shizuku.</string>
     <string name="home_automation_button_view_intents">Zobrazit záměry</string>
     <string name="home_automation_dialog_label_action">Akce</string>
     <string name="home_automation_dialog_label_package">Balík</string>

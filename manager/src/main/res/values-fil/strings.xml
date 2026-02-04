@@ -21,10 +21,14 @@
     <string name="home_wireless_adb_view_guide_button">Hakbang-hakbang na gabay</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Hinahanap ang serbisyo ng wireless na pag-debug</string>
-    <string name="dialog_adb_discovery_message">Buksan ang \"Wireless na pag-debug\" sa \"Mga opsyon ng developer\". Awtomatikong namamatay ang \"Wireless na pag-debug\" kapag may nagbago sa network.
-\n
-\nTandaan, huwag patayin ang \"Mga opsyon ng developer\" o \"Pag-debug ng USB\", mahihinto ang Shizuku.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Mangyaring patayin at buksan ulit ang \"Wireless na pag-debug\" kung sige lang ito sa paghahanap.</string>
+    <string name="dialog_adb_discovery_message">Buksan ang \"Wireless na pag-debug\" sa \"Mga opsyon
+        ng developer\". Awtomatikong namamatay ang \"Wireless na pag-debug\" kapag may nagbago sa
+        network.
+        \n
+        \nTandaan, huwag patayin ang \"Mga opsyon ng developer\" o \"Pag-debug ng USB\", mahihinto
+        ang Shizuku.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Mangyaring patayin at
+        buksan ulit ang \"Wireless na pag-debug\" kung sige lang ito sa paghahanap.</string>
     <string name="dialog_adb_port">Port</string>
     <string name="dialog_adb_invalid_port">Ang port ay isang integer mula 1 hanggang 65535.</string>
     <string name="adb_pairing">Pagpapares</string>
@@ -32,17 +36,41 @@
     <string name="dialog_adb_pairing_discovery">Hinahanap ang serbisyo ng pagpapares</string>
     <string name="dialog_adb_pairing_paring_code">Code ng pagpapares</string>
     <string name="paring_code_is_wrong">Mali ang code ng pagpapares.</string>
-    <string name="cannot_connect_port">Hindi makakonekta sa serbisyo ng wireless debugging.\n\nPakitiyak na naka-whitelist ang Shizuku sa lahat ng firewall, ad-block, VPN, o mga katulad na app na maaaring maghigpit sa pag-access sa network.</string>
+    <string name="cannot_connect_port">Hindi makakonekta sa serbisyo ng wireless
+        debugging.\n\nPakitiyak na naka-whitelist ang Shizuku sa lahat ng firewall, ad-block, VPN, o
+        mga katulad na app na maaaring maghigpit sa pag-access sa network.</string>
     <string name="dialog_wireless_adb_not_enabled">Hindi nakabukas ang wireless na pag-debug.
-\nTandaan, kailangang kumonekta sa kompyuter para mabuksan ang wireless na pag-debug sa Android 10 pababa.</string>
-    <string name="dialog_usb_debugging_not_enabled">Hindi pinagana ang pag-debug ng USB.\nMangyaring paganahin ito sa \"Mga Pagpipilian sa Developer\".</string>
-    <string name="dialog_adb_pairing_message">Mangyaring simulan ang pagpapares sa pamamagitan ng pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian sa Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang aparato na may code ng pagpapares\"\n- Ipasok ang code ng pagpapares sa abiso</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Sa Android 14, ang pag-install/pag-update ng Shizuku gamit ang Package Installer ay nagpapawalang-bisa sa pahintulot na ^1, na kinakailangan upang paganahin ang serbisyo ng accessibility para sa pagpapares.\n\nPara ibigay ito, patakbuhin ang sumusunod na utos ng ADB:\n\n^2\n\nPagkatapos patakbuhin ang utos, maaari ka nang magpatuloy sa proseso ng pagpapares.\n\nPaalala: maaari mo itong iwasan sa pamamagitan ng pag-install/pag-update ng Shizuku gamit ang ADB.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Mangyaring paganahin ang serbisyo ng pag-access upang simulan ang proseso ng pagpapares. Pinapayagan nito si Shizuku na makita ang code ng pagpapares.\n\nAng serbisyo sa pag-access ay papatayin kapag natagpuan ang code o pagkatapos ng 1 minuto upang makatipid ng enerhiya.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Mangyaring simulan ang pagpapares sa pamamagitan ng pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian sa Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang device sa pagpapares ng code.\" Awtomatikong makikita ng Shizuku ang code ng pagpapares.</string>
-    <string name="adb_pairing_requires_multi_window">Pumunta muna sa split-screen (multi-window) mode.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Kinakailangan ng system na laging nakikita ang dialog ng pagpapares. Ang paggamit ng split-screen mode ay ang tanging paraan upang hayaan ang app na ito at ang dialog ng system na makita sa parehong oras.</string>
-    <string name="adb_error_key_store">Hindi makabuo ng key para sa wireless debugging.\nIto ay maaaring dahil ang mekanismo ng KeyStore ng device na ito ay sira.</string>
+        \nTandaan, kailangang kumonekta sa kompyuter para mabuksan ang wireless na pag-debug sa
+        Android 10 pababa.</string>
+    <string name="dialog_usb_debugging_not_enabled">Hindi pinagana ang pag-debug ng USB.\nMangyaring
+        paganahin ito sa \"Mga Pagpipilian sa Developer\".</string>
+    <string name="dialog_adb_pairing_message">Mangyaring simulan ang pagpapares sa pamamagitan ng
+        pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian sa
+        Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang
+        kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang aparato na may code ng
+        pagpapares\"\n- Ipasok ang code ng pagpapares sa abiso</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Sa Android 14, ang
+        pag-install/pag-update ng Shizuku gamit ang Package Installer ay nagpapawalang-bisa sa
+        pahintulot na ^1, na kinakailangan upang paganahin ang serbisyo ng accessibility para sa
+        pagpapares.\n\nPara ibigay ito, patakbuhin ang sumusunod na utos ng ADB:\n\n^2\n\nPagkatapos
+        patakbuhin ang utos, maaari ka nang magpatuloy sa proseso ng pagpapares.\n\nPaalala: maaari
+        mo itong iwasan sa pamamagitan ng pag-install/pag-update ng Shizuku gamit ang ADB.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Mangyaring paganahin ang serbisyo ng
+        pag-access upang simulan ang proseso ng pagpapares. Pinapayagan nito si Shizuku na makita
+        ang code ng pagpapares.\n\nAng serbisyo sa pag-access ay papatayin kapag natagpuan ang code
+        o pagkatapos ng 1 minuto upang makatipid ng enerhiya.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Mangyaring simulan ang pagpapares sa
+        pamamagitan ng pagsasagawa ng mga sumusunod na hakbang:\n- Mag-navigate sa \"Mga Pagpipilian
+        sa Developer\"\n- Paganahin ang \"USB debugging\" at \"Wireless debugging\"\n- I-tap ang
+        kaliwang bahagi ng \"Wireless debugging\"\n- I-tap ang \"Ipares ang device sa pagpapares ng
+        code.\" Awtomatikong makikita ng Shizuku ang code ng pagpapares.</string>
+    <string name="adb_pairing_requires_multi_window">Pumunta muna sa split-screen (multi-window)
+        mode.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Kinakailangan ng system na laging
+        nakikita ang dialog ng pagpapares. Ang paggamit ng split-screen mode ay ang tanging paraan
+        upang hayaan ang app na ito at ang dialog ng system na makita sa parehong oras.</string>
+    <string name="adb_error_key_store">Hindi makabuo ng key para sa wireless debugging.\nIto ay
+        maaaring dahil ang mekanismo ng KeyStore ng device na ito ay sira.</string>
     <string name="adb_stopping_tcp">Pagsasara ng TCP port</string>
     <string name="adb_error_stop_tcp">Nabigo na pigilan ang ADB sa TCP</string>
     <string name="adb_pair_required">Sundin muna ang mga hakbang sa pagpapares.</string>
@@ -50,15 +78,28 @@
     <string name="development_settings">Mga opsyon ng developer</string>
     <string name="notification_settings">Mga opsyon sa notipikasyon</string>
     <string name="adb_pairing_tutorial_title">Ipares ang Shizuku sa device mo</string>
-    <string name="adb_pairing_tutorial_content_notification">Tutulungan ka ng isang notipikasyon mula sa Shizuku na tapusin ang pagpapares.</string>
-    <string name="adb_pairing_tutorial_content_steps">Mag-navigate sa \"Developer Options\", pagkatapos ay paganahin ang \"USB debugging\" at \"Wireless debugging\".</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">I-tap ang kaliwang bahagi ng \"Wireless debugging\", pagkatapos ay i-tap ang \"Ipares ang device sa pagpapares ng code.\" Ilagay ang code sa notification para makumpleto ang pagpapares.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Kailangan mong makisalamuha sa isang notipikasyon mula sa Shizuku para makumpleto ang proseso sa pagpapares. Mangyaring payagan ang Shizuku na magpadala ng mga notipikasyon.</string>
-    <string name="adb_pairing_tutorial_content_miui">Maaaring kailangan ng mga gumagamit ng MIUI na gawing \"Android\" ang estilo ng notipikasyon sa \"Notification\" - \"Notification shade\" sa system settings.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Kung hindi, maaaring hindi mo maipasok ang code ng pagpapares mula sa notification.</string>
+    <string name="adb_pairing_tutorial_content_notification">Tutulungan ka ng isang notipikasyon
+        mula sa Shizuku na tapusin ang pagpapares.</string>
+    <string name="adb_pairing_tutorial_content_steps">Mag-navigate sa \"Developer Options\",
+        pagkatapos ay paganahin ang \"USB debugging\" at \"Wireless debugging\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">I-tap ang kaliwang bahagi ng
+        \"Wireless debugging\", pagkatapos ay i-tap ang \"Ipares ang device sa pagpapares ng code.\"
+        Ilagay ang code sa notification para makumpleto ang pagpapares.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Kailangan mong makisalamuha sa
+        isang notipikasyon mula sa Shizuku para makumpleto ang proseso sa pagpapares. Mangyaring
+        payagan ang Shizuku na magpadala ng mga notipikasyon.</string>
+    <string name="adb_pairing_tutorial_content_miui">Maaaring kailangan ng mga gumagamit ng MIUI na
+        gawing \"Android\" ang estilo ng notipikasyon sa \"Notification\" - \"Notification shade\"
+        sa system settings.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Kung hindi, maaaring hindi mo maipasok ang
+        code ng pagpapares mula sa notification.</string>
     <string name="adb_pairing_tutorial_content_finish">Bumalik sa Shizuku at simulan ang Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Kailangang ma-access ng Shizuku ang lokal na network. Ito ay kinokontrol ng pahintulot ng network.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Hindi pinapayagan ng ilang system (gaya ng MIUI) ang mga app na i-access ang network kapag hindi nakikita ang mga ito, kahit na gumagamit ang app ng serbisyo sa harapan. Mangyaring huwag paganahin ang mga feature ng pag-optimize ng baterya para sa Shizuku sa mga naturang system.</string>
+    <string name="adb_pairing_tutorial_content_network">Kailangang ma-access ng Shizuku ang lokal na
+        network. Ito ay kinokontrol ng pahintulot ng network.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Hindi pinapayagan ng
+        ilang system (gaya ng MIUI) ang mga app na i-access ang network kapag hindi nakikita ang mga
+        ito, kahit na gumagamit ang app ng serbisyo sa harapan. Mangyaring huwag paganahin ang mga
+        feature ng pag-optimize ng baterya para sa Shizuku sa mga naturang system.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Simulan (para sa mga device na may root)]]></string>
     <string name="home_root_description"><![CDATA[Kung gumagamit ka ng Magisk, maaari mong subukan %1$s. Para sa mga gumagamit ng ugat, sa kalaunan ay papalitan nito ang Shizuku. Tandaan, kailangang magbago ng kaunti ang mga umiiral na application upang magamit ang %2$s.]]></string>
@@ -71,10 +112,12 @@
         <item quantity="other"><![CDATA[%d na aplikasyon ang awtorisado]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Pindutin para pamahalaan ang mga awtorisadong app]]></string>
-    <string name="home_app_management_empty">Ipapakita dito ang mga app na humiling o nagdeklara ng pahintulot ng Shizuku.</string>
+    <string name="home_app_management_empty">Ipapakita dito ang mga app na humiling o nagdeklara ng
+        pahintulot ng Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kontrolin ang Shizuku gamit ang mga automation app</string>
-    <string name="home_automation_description"><![CDATA[Ang mga app tulad ng Tasker at MacroDroid ay maaaring magpadala ng mga layunin upang awtomatikong simulan/ihinto ang Shizuku.<p>Ang mga hindi naka-root na device sa Android 10 o mas mababa ay dapat magbukas ng TCP port mula sa isang PC gamit ang<font face="monospace"> %1$s </font>para magsimulang gumana.]]></string>
+    <string name="home_automation_description">Ang mga app tulad ng Tasker at MacroDroid ay maaaring
+        magpadala ng mga layunin upang awtomatikong simulan/ihinto ang Shizuku.</string>
     <string name="home_automation_button_view_intents">Tingnan ang mga layunin</string>
     <string name="home_automation_dialog_label_action">Aksyon</string>
     <string name="home_automation_dialog_label_package">Package</string>
@@ -85,26 +128,38 @@
     <string name="home_learn_more_description">Matuto kung paano mag-develop gamit ang Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">May mga karagdagang hakbang kang dapat gawin</string>
-    <string name="home_adb_is_limited_description">Pinaghigpitan ng gumawa ng device mo ang kakayahan ng adb, kaya hindi gagana nang maayos ang mga app na gumagamit ng Shizuku.
-\n
-\nKadalasan, pwedeng matanggal ang mga paghihigpit na ito sa pamamagitan ng ilang mga pagbabago sa \"Mga opsyon ng developer\". Mangyaring sumangguni sa gabay para sa higit pang detalye kung paano ito gagawin.
-\n
-\nMaaaring kailanganin mong isara at buksan ulit ang Shizuku para umepekto ang opersayon.</string>
+    <string name="home_adb_is_limited_description">Pinaghigpitan ng gumawa ng device mo ang
+        kakayahan ng adb, kaya hindi gagana nang maayos ang mga app na gumagamit ng Shizuku.
+        \n
+        \nKadalasan, pwedeng matanggal ang mga paghihigpit na ito sa pamamagitan ng ilang mga
+        pagbabago sa \"Mga opsyon ng developer\". Mangyaring sumangguni sa gabay para sa higit pang
+        detalye kung paano ito gagawin.
+        \n
+        \nMaaaring kailanganin mong isara at buksan ulit ang Shizuku para umepekto ang opersayon.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Limitado ang pahintulot ng adb</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Posibleng nilimitahan ng gumawa ng device mo ang kakayahan ng adb.<p>Maaaring may solusyon para sa sistema mo sa <b><a href="%1$s">dokumentong ito</a></b>.]]></string>
-    <string name="app_management_item_summary_requires_root">* kailangang patakbuhin ang Shizuku gamit ang root</string>
+    <string name="app_management_item_summary_requires_root">* kailangang patakbuhin ang Shizuku
+        gamit ang root</string>
     <string name="app_management_toggle_all">I-toggle ang lahat</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Gamitin ang Shizuku sa mga terminal app</string>
-    <string name="home_terminal_description">Patakbuhin ang mga shell command sa mga terminal app sa pamamagitan ng Shizuku</string>
-    <string name="terminal_tutorial_miui">Iniulat ng mga user na sinira ng MIUI ang Storage Access Framework, na ginagamit ng export function.</string>
-    <string name="terminal_tutorial_miui_2">Kung gumagamit ka ng MIUI, maaaring kailanganin mong i-extract ang file mula sa folder ng mga asset sa APK ng Shizuku.</string>
+    <string name="home_terminal_description">Patakbuhin ang mga shell command sa mga terminal app sa
+        pamamagitan ng Shizuku</string>
+    <string name="terminal_tutorial_miui">Iniulat ng mga user na sinira ng MIUI ang Storage Access
+        Framework, na ginagamit ng export function.</string>
+    <string name="terminal_tutorial_miui_2">Kung gumagamit ka ng MIUI, maaaring kailanganin mong
+        i-extract ang file mula sa folder ng mga asset sa APK ng Shizuku.</string>
     <string name="terminal_tutorial_1">I-export ang mga file sa isang bagong folder.</string>
-    <string name="terminal_tutorial_1_description">Dalawang file ang ie-export: %1$s at %2$s. Kung umiiral na ang mga file sa napiling folder, tatanggalin ang mga ito.</string>
+    <string name="terminal_tutorial_1_description">Dalawang file ang ie-export: %1$s at %2$s. Kung
+        umiiral na ang mga file sa napiling folder, tatanggalin ang mga ito.</string>
     <string name="terminal_export_files">I-export ang mga file</string>
-    <string name="terminal_tutorial_2">Gamitin ang iyong terminal app upang kopyahin ang mga file sa direktoryo ng mga pribadong file nito.</string>
-    <string name="terminal_tutorial_2_description">Tip: Kung ang home directory ng iyong terminal app (~) ay nasa private files directory, ang paglalagay ng mga file doon ay magbibigay-daan sa iyong tumakbo %1$s nang hindi isinusulat ang path.\n\nKung hindi, maaari kang lumikha ng alias para sa %2$s sa iyong terminal app na %3$s configuration file.</string>
+    <string name="terminal_tutorial_2">Gamitin ang iyong terminal app upang kopyahin ang mga file sa
+        direktoryo ng mga pribadong file nito.</string>
+    <string name="terminal_tutorial_2_description">Tip: Kung ang home directory ng iyong terminal
+        app (~) ay nasa private files directory, ang paglalagay ng mga file doon ay magbibigay-daan
+        sa iyong tumakbo %1$s nang hindi isinusulat ang path.\n\nKung hindi, maaari kang lumikha ng
+        alias para sa %2$s sa iyong terminal app na %3$s configuration file.</string>
     <string name="terminal_tutorial_3">Magbukas ng shell gamit ang sumusunod na command:</string>
     <string name="rish_description"><![CDATA[Sa %1$s, maaari kang magpatakbo ng mga shell command sa anumang terminal app.<p>I-tap para matuto pa tungkol sa kung paano ito gamitin.]]></string>
     <!-- Settings -->
@@ -112,54 +167,69 @@
     <string name="settings_behavior">Pag-uugali</string>
     <string name="settings_start_on_boot">Magsimula sa boot</string>
     <string name="settings_start_on_boot_summary">Nangangailangan ng Android 11+ o root</string>
-    <string name="settings_start_on_boot_bug">Dahil sa isang bug sa Android 11-12, hindi naaalala ng wireless na pag-debug ang anumang mga awtorisadong network.\n\nKakailanganin mong muling pahintulutan ang network sa bawat pag-reboot sa pamamagitan ng pag-tap sa \"Payagan\" kapag nag-pop up ang dialog ng awtorisasyon.</string>
+    <string name="settings_start_on_boot_bug">Dahil sa isang bug sa Android 11-12, hindi naaalala ng
+        wireless na pag-debug ang anumang mga awtorisadong network.\n\nKakailanganin mong muling
+        pahintulutan ang network sa bawat pag-reboot sa pamamagitan ng pag-tap sa \"Payagan\" kapag
+        nag-pop up ang dialog ng awtorisasyon.</string>
     <string name="settings_use_system_color">Gamitin ang kulay ng tema ng sistema</string>
     <string name="settings_watchdog">Tagapagbantay</string>
     <string name="settings_watchdog_summary">Awtomatikong i-restart ang Shizuku kung nag-crash ito</string>
     <string name="settings_tcp_mode">TCP mode</string>
-    <string name="settings_tcp_mode_summary">"Pinapayagan ang Shizuku na mag-restart nang walang Wi-Fi. (Siguro minsan nang nagsimula si Shizuku mula nang mag-reboot)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"Agad na isasara ang TCP port. Kakailanganin mo ng Wi-Fi para muling ma-on ang TCP mode. Magpatuloy?"</string>
+    <string name="settings_tcp_mode_summary">"Pinapayagan ang Shizuku na mag-restart nang walang
+        Wi-Fi. (Siguro minsan nang nagsimula si Shizuku mula nang mag-reboot)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Agad na isasara ang TCP port. Kakailanganin
+        mo ng Wi-Fi para muling ma-on ang TCP mode. Magpatuloy?"</string>
     <string name="settings_tcp_mode_closing_port">Isinasara ang TCP port...</string>
     <string name="settings_restart_dialog_title">I-restart ang Kinakailangan</string>
-    <string name="settings_restart_dialog_message">Kailangang mag-restart ng Shizuku para mailapat ang setting na ito.</string>
+    <string name="settings_restart_dialog_message">Kailangang mag-restart ng Shizuku para mailapat
+        ang setting na ito.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Kinakailangan ang Wi-Fi. Magpapatuloy sa pagtakbo ang Shizuku at maghihintay ng koneksyon sa Wi-Fi bago mag-restart sa background.</b>]]></string>
     <string name="settings_tcp_port">TCP port</string>
     <string name="settings_tcp_port_default">Default (5555)</string>
     <string name="settings_tcp_port_hint">Mag-iwan ng blangko upang magamit ang default (5555)</string>
-    <string name="settings_tcp_learn_more">Matuto nang higit pa tungkol sa paggamit ng mga automation app upang makontrol ang Shizuku</string>
+    <string name="settings_tcp_learn_more">Matuto nang higit pa tungkol sa paggamit ng mga
+        automation app upang makontrol ang Shizuku</string>
     <string name="settings_language">Wika</string>
     <string name="settings_translation_contributors">Mga nag-ambag sa pagsasalin</string>
     <string name="settings_translation">Sumali sa pagsasalin</string>
     <string name="settings_translation_summary">Tulungan kaming isalin ang %s sa iyong wika</string>
     <string name="settings_user_interface">Hitsura</string>
     <string name="settings_black_night_theme">Itim na panggabing tema</string>
-    <string name="settings_black_night_theme_summary">Gamitin ang purong itim na tema kung nakabukas ang panggabing mode</string>
+    <string name="settings_black_night_theme_summary">Gamitin ang purong itim na tema kung nakabukas
+        ang panggabing mode</string>
     <string name="settings_support">Suporta</string>
     <string name="settings_help">Tulong</string>
     <string name="settings_report_bug">Mag-ulat ng isang bug</string>
     <string name="settings_advanced">Advanced</string>
     <string name="settings_legacy_pairing">Pagpapares ng pamana</string>
-    <string name="settings_legacy_pairing_summary">Ipasok ang code ng pagpapares sa isang dialog sa halip na isang abiso</string>
+    <string name="settings_legacy_pairing_summary">Ipasok ang code ng pagpapares sa isang dialog sa
+        halip na isang abiso</string>
     <!-- Bug Report Dialog -->
     <string name="bug_report_dialog_before_reporting">Una, mangyaring gawin ang sumusunod:</string>
     <string name="bug_report_dialog_update">Tiyaking ginagamit mo ang ^1.</string>
     <string name="bug_report_dialog_link_update">pinakabagong bersyon</string>
-    <string name="bug_report_dialog_wiki">Basahin ang ^1 at sundin ang lahat ng kaugnay na hakbang sa pag-troubleshoot.</string>
+    <string name="bug_report_dialog_wiki">Basahin ang ^1 at sundin ang lahat ng kaugnay na hakbang
+        sa pag-troubleshoot.</string>
     <string name="bug_report_dialog_link_wiki">wiki</string>
-    <string name="bug_report_dialog_issues">Hanapin sa lahat ng ^1 para makita kung naiulat na ang iyong bug.</string>
+    <string name="bug_report_dialog_issues">Hanapin sa lahat ng ^1 para makita kung naiulat na ang
+        iyong bug.</string>
     <string name="bug_report_dialog_link_issues">mga umiiral na isyu</string>
-    <string name="bug_report_dialog_method">Mangyaring magsumite ng isyu sa ^1 kung mayroon kang account.</string>
+    <string name="bug_report_dialog_method">Mangyaring magsumite ng isyu sa ^1 kung mayroon kang
+        account.</string>
     <string name="bug_report_dialog_method_2">Kung hindi, maaari kang magpadala ng email.</string>
     <string name="bug_report_dialog_button_email">I-email</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Ang port ay dapat na nasa pagitan ng 1 at 65535</string>
-    <string name="snackbar_battery_optimization_home">Ang pag-optimize ng baterya ay dapat na hindi pinagana para sa pagsisimula sa boot / watchdog upang gumana nang maayos.</string>
-    <string name="snackbar_battery_optimization_settings">Mangyaring huwag paganahin ang pag-optimize ng baterya upang magamit ang tampok na ito.</string>
+    <string name="snackbar_battery_optimization_home">Ang pag-optimize ng baterya ay dapat na hindi
+        pinagana para sa pagsisimula sa boot / watchdog upang gumana nang maayos.</string>
+    <string name="snackbar_battery_optimization_settings">Mangyaring huwag paganahin ang
+        pag-optimize ng baterya upang magamit ang tampok na ito.</string>
     <string name="snackbar_action_fix">Ayusin</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Walang natagpuang email app</string>
     <string name="toast_shizuku_already_starting">Nagsisimula na si Shizuku sa background</string>
-    <string name="toast_accessibility_tv_only">Ang serbisyong ito ay sinusuportahan lamang sa mga TV device.</string>
+    <string name="toast_accessibility_tv_only">Ang serbisyong ito ay sinusuportahan lamang sa mga TV
+        device.</string>
     <string name="toast_pairing_timeout">Nag-time out ang serbisyo ng pagpapares ng Shizuku.</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
@@ -177,17 +247,20 @@
     <!-- Notification -->
     <string name="notification_channel_service_status">Estado sa pagbubukas ng serbisyo</string>
     <string name="notification_service_starting">Nagsisimula ang serbisyo ng Shizuku…</string>
-    <string name="notification_service_start_failed">Nagkaproblema sa pagsisimula ng serbisyo ng Shizuku.</string>
+    <string name="notification_service_start_failed">Nagkaproblema sa pagsisimula ng serbisyo ng
+        Shizuku.</string>
     <string name="notification_service_start_no_root">Hindi nakakuha ng pahintulot sa root.</string>
     <string name="notification_working">Inaasikaso…</string>
     <string name="notification_channel_adb_pairing">Pagpapares ng wireless na pag-debug</string>
     <string name="notification_adb_pairing_input_paring_code">Ilagay ang code ng pagpapares</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Naghahanap ng serbisyo sa pagpapares</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Naghahanap ng serbisyo sa
+        pagpapares</string>
     <string name="notification_adb_pairing_service_found_title">Nakahanap ng serbisyo sa pagpapares</string>
     <string name="notification_adb_pairing_stop_searching">Ihinto ang paghahanap</string>
     <string name="notification_adb_pairing_working_title">Kasalukuyang nagpapares</string>
     <string name="notification_adb_pairing_succeed_title">Matagumpay na nakapagpares</string>
-    <string name="notification_adb_pairing_succeed_text">Masisimulan mo na ngayon ang serbisyo ng Shizuku.</string>
+    <string name="notification_adb_pairing_succeed_text">Masisimulan mo na ngayon ang serbisyo ng
+        Shizuku.</string>
     <string name="notification_adb_pairing_failed_title">Nagkaproblema sa pagpapares</string>
     <string name="notification_adb_pairing_retry">Subukan ulit</string>
     <!-- Permission related, appears in system permission UI -->
@@ -198,7 +271,8 @@
     <string name="grant_dialog_button_deny">"Tanggihan"</string>
     <!-- Starter -->
     <string name="starter">Panimula</string>
-    <string name="start_with_root_failed">Hindi masimulan ang serbisyo sapagkat walang pahintulot sa root o hindi na-root ang device na ito.</string>
+    <string name="start_with_root_failed">Hindi masimulan ang serbisyo sapagkat walang pahintulot sa
+        root o hindi na-root ang device na ito.</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Pagsisimula ng Shizuku…</string>
     <string name="wadb_notification_wifi_required">Maghintay ng koneksyon sa Wi-Fi bago magpatuloy</string>
@@ -206,20 +280,29 @@
     <string name="wadb_error_title">Error habang nagsisimula sa boot</string>
     <string name="wadb_error_notify_dev">I-tap upang ipaalam sa developer.</string>
     <string name="wadb_permission_error_notification_title">Error sa Pahintulot</string>
-    <string name="wadb_permission_error_notification_content">Kailangan ni Shizuku ng WRITE_SECURE_SETTINGS para makapagsimula sa boot. Mag-tap upang malaman kung paano ito ibigay.</string>
+    <string name="wadb_permission_error_notification_content">Kailangan ni Shizuku ng
+        WRITE_SECURE_SETTINGS para makapagsimula sa boot. Mag-tap upang malaman kung paano ito
+        ibigay.</string>
     <string name="wadb_notification_channel">Serbisyo ng awtomatikong pagsisimula ng ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Tumatakbo ang Watchdog</string>
     <string name="watchdog_turn_off">I-off</string>
     <string name="watchdog_shizuku_crashed_title">Nag-crash kamakailan si Shizuku</string>
-    <string name="watchdog_shizuku_crashed_text">Muling sinimulan ng Watchdog ang serbisyo. I-tap upang malaman ang tungkol sa mga potensyal na pag-aayos upang maiwasan ang mga pag-crash sa hinaharap.</string>
+    <string name="watchdog_shizuku_crashed_text">Muling sinimulan ng Watchdog ang serbisyo. I-tap
+        upang malaman ang tungkol sa mga potensyal na pag-aayos upang maiwasan ang mga pag-crash sa
+        hinaharap.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">I-off ang Mga Alerto</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Hindi mabuksan ang browser</string>
     <string name="toast_copied_to_clipboard">Kinopya sa clipboard</string>
-    <string name="accessibility_service_description">Nagbibigay ng suporta sa pagpapares para sa mga aparato (hal., Mga TV na nagpapatakbo ng Android 14+) kung saan hindi magagamit ang mga abiso o split screen.\n\nPinapayagan ang Shizuku na kunin ang code ng pagpapares mula sa wireless debugging pairing screen. Hindi ito paganahin kapag natagpuan na ang code ng pagpapares.</string>
+    <string name="accessibility_service_description">Nagbibigay ng suporta sa pagpapares para sa mga
+        aparato (hal., Mga TV na nagpapatakbo ng Android 14+) kung saan hindi magagamit ang mga
+        abiso o split screen.\n\nPinapayagan ang Shizuku na kunin ang code ng pagpapares mula sa
+        wireless debugging pairing screen. Hindi ito paganahin kapag natagpuan na ang code ng
+        pagpapares.</string>
     <!-- Messages for legacy -->
-    <string name="dialog_legacy_not_support_title">Hindi sinusuportahan ng %1$s ang makabagong Shizuku (API v11+)</string>
+    <string name="dialog_legacy_not_support_title">Hindi sinusuportahan ng %1$s ang makabagong
+        Shizuku (API v11+)</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Inihinto na ang suporta sa makalumang Shizuku (API v10-). Hindi na rin gagana ang makalumang Shizuku sa mga mas bagong bersyon ng Android.<p>Mangyaring ipaalam sa may-akda ng <b>%1$s</b> na kailangan na nitong mag-update.]]></string>
     <string name="dialog_requesting_legacy_title">Humihiling ng makalumang Shizuku ang %1$s</string>
     <string name="dialog_requesting_legacy_message"><![CDATA[Suportado ng <b>%1$s</b> ang makabagong Shizuku, pero humihiling ito nang makalumang Shizuku. Pakitingnan sa Shizuku app kung tumatakbo ba nang maayos ang Shizuku dahil baka ito ay dahil nagkakaproblema ang Shizuku.<p>Hindi na suportado ang makalumang Shizuku simula Marso 2019.]]></string>

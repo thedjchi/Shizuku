@@ -21,10 +21,12 @@
     <string name="home_wireless_adb_view_guide_button">‌دليل خطوة بخطوة</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">البحث عن خدمة التصحيح اللاسلكي</string>
-    <string name="dialog_adb_discovery_message">يرجى تمكين \"التصحيح اللاسلكي\" في \"خيارات المطور\". \"تصحيح لاسلكي\" يتم تعطيلها عندما تتغير الشبكة تلقائيا.
-\n
-\n ملاحظة، لا تعطل \"خيارات المطور\" أو \"تصحيح USB\"، أو سيتم إيقاف شيزوكو</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">يرجى محاولة تعطيل \"التصحيح اللاسلكي\" وتمكينه إذا استمر في البحث.</string>
+    <string name="dialog_adb_discovery_message">يرجى تمكين \"التصحيح اللاسلكي\" في \"خيارات
+        المطور\". \"تصحيح لاسلكي\" يتم تعطيلها عندما تتغير الشبكة تلقائيا.
+        \n
+        \n ملاحظة، لا تعطل \"خيارات المطور\" أو \"تصحيح USB\"، أو سيتم إيقاف شيزوكو</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">يرجى محاولة تعطيل
+        \"التصحيح اللاسلكي\" وتمكينه إذا استمر في البحث.</string>
     <string name="dialog_adb_port">المنفذ</string>
     <string name="dialog_adb_invalid_port">المنفذ هو عدد صحيح يتراوح من 1 إلى 65535.</string>
     <string name="adb_pairing">الاقتران</string>
@@ -32,17 +34,36 @@
     <string name="dialog_adb_pairing_discovery">جاري البحث على جهاز للإتصال</string>
     <string name="dialog_adb_pairing_paring_code">كود الاقتران</string>
     <string name="paring_code_is_wrong">رمز الاقتران خاطئ.</string>
-    <string name="cannot_connect_port">لا يمكن الاتصال بخدمة تصحيح الأخطاء اللاسلكية.\n\nيرجى التأكد من إدراج Shizuku في القائمة البيضاء لجميع جدران الحماية، أو تطبيقات حظر الإعلانات، أو VPN، أو التطبيقات المماثلة التي يمكنها تقييد الوصول إلى الشبكة.</string>
+    <string name="cannot_connect_port">لا يمكن الاتصال بخدمة تصحيح الأخطاء اللاسلكية.\n\nيرجى التأكد
+        من إدراج Shizuku في القائمة البيضاء لجميع جدران الحماية، أو تطبيقات حظر الإعلانات، أو VPN،
+        أو التطبيقات المماثلة التي يمكنها تقييد الوصول إلى الشبكة.</string>
     <string name="dialog_wireless_adb_not_enabled">التصحيح اللاسلكي غير ممكّن.
-\nملاحظة ، قبل Android 11 ، لتمكين التصحيح اللاسلكي ، يجب أن يكون الاتصال بالكمبيوتر أمرًا ضروريًا.</string>
-    <string name="dialog_usb_debugging_not_enabled">لم يتم تمكين تصحيح أخطاء USB.\nيرجى تمكينه في \"خيارات المطور\".</string>
-    <string name="dialog_adb_pairing_message">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\"\n- أدخل رمز الاقتران في الإشعار</string>
-    <string name="dialog_adb_pairing_accessibility_permission">في نظام Android 14، يؤدي تثبيت/تحديث تطبيق Shizuku باستخدام مُثبِّت الحزم إلى إلغاء إذن ^1، وهو الإذن المطلوب لتفعيل خدمة إمكانية الوصول للاقتران.\n\nلمنحه، شغِّل أمر ADB التالي:\n\n^2\n\nبعد تشغيل الأمر، يمكنك متابعة عملية الاقتران.\n\nملاحظة: يمكنك تجاوز هذا الإجراء بتثبيت/تحديث Shizuku باستخدام ADB.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">يرجى تفعيل خدمة إمكانية الوصول لبدء عملية الاقتران. هذا يسمح لـ Shizuku باكتشاف رمز الاقتران.\n\nسيتم إيقاف خدمة إمكانية الوصول عند العثور على الرمز أو بعد دقيقة واحدة لتوفير الطاقة.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران الجهاز برمز الاقتران\". سيكتشف Shizuku رمز الاقتران تلقائيًا.</string>
-    <string name="adb_pairing_requires_multi_window">الرجاء إدخال وضع تقسيم الشاشة (متعدد النوافذ) أولاً.</string>
-    <string name="adb_pairing_requires_multi_window_reason">يتطلب النظام أن يكون مربع حوار الاقتران مرئيًا دائمًا. استخدام وضع تقسيم الشاشة هو الطريقة الوحيدة لإظهار هذا التطبيق ومربع حوار النظام في آنٍ واحد.</string>
-    <string name="adb_error_key_store">غير قادر على إنشاء مفتاح لتصحيح الأخطاء اللاسلكية.\nقد يكون هذا بسبب تعطل آلية KeyStore لهذا الجهاز.</string>
+        \nملاحظة ، قبل Android 11 ، لتمكين التصحيح اللاسلكي ، يجب أن يكون الاتصال بالكمبيوتر أمرًا
+        ضروريًا.</string>
+    <string name="dialog_usb_debugging_not_enabled">لم يتم تمكين تصحيح أخطاء USB.\nيرجى تمكينه في
+        \"خيارات المطور\".</string>
+    <string name="dialog_adb_pairing_message">يرجى بدء عملية الاقتران من خلال تنفيذ الخطوات
+        التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح الأخطاء
+        اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على \"إقران
+        الجهاز برمز الاقتران\"\n- أدخل رمز الاقتران في الإشعار</string>
+    <string name="dialog_adb_pairing_accessibility_permission">في نظام Android 14، يؤدي تثبيت/تحديث
+        تطبيق Shizuku باستخدام مُثبِّت الحزم إلى إلغاء إذن ^1، وهو الإذن المطلوب لتفعيل خدمة إمكانية
+        الوصول للاقتران.\n\nلمنحه، شغِّل أمر ADB التالي:\n\n^2\n\nبعد تشغيل الأمر، يمكنك متابعة
+        عملية الاقتران.\n\nملاحظة: يمكنك تجاوز هذا الإجراء بتثبيت/تحديث Shizuku باستخدام ADB.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">يرجى تفعيل خدمة إمكانية الوصول لبدء عملية
+        الاقتران. هذا يسمح لـ Shizuku باكتشاف رمز الاقتران.\n\nسيتم إيقاف خدمة إمكانية الوصول عند
+        العثور على الرمز أو بعد دقيقة واحدة لتوفير الطاقة.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">يرجى بدء عملية الاقتران من خلال تنفيذ
+        الخطوات التالية:\n- انتقل إلى \"خيارات المطور\"\n- قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح
+        الأخطاء اللاسلكية\"\n- انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"\n- انقر على
+        \"إقران الجهاز برمز الاقتران\". سيكتشف Shizuku رمز الاقتران تلقائيًا.</string>
+    <string name="adb_pairing_requires_multi_window">الرجاء إدخال وضع تقسيم الشاشة (متعدد النوافذ)
+        أولاً.</string>
+    <string name="adb_pairing_requires_multi_window_reason">يتطلب النظام أن يكون مربع حوار الاقتران
+        مرئيًا دائمًا. استخدام وضع تقسيم الشاشة هو الطريقة الوحيدة لإظهار هذا التطبيق ومربع حوار
+        النظام في آنٍ واحد.</string>
+    <string name="adb_error_key_store">غير قادر على إنشاء مفتاح لتصحيح الأخطاء اللاسلكية.\nقد يكون
+        هذا بسبب تعطل آلية KeyStore لهذا الجهاز.</string>
     <string name="adb_stopping_tcp">إغلاق منفذ TCP</string>
     <string name="adb_error_stop_tcp">فشل في إيقاف ADB عبر TCP</string>
     <string name="adb_pair_required">يرجى المرور بخطوة الاقتران أولاً.</string>
@@ -50,15 +71,25 @@
     <string name="development_settings">خيارات للمطور</string>
     <string name="notification_settings">إعداد الإشعارات</string>
     <string name="adb_pairing_tutorial_title">قم بإقران Shizuku بجهازك</string>
-    <string name="adb_pairing_tutorial_content_notification">سيساعدك إشعار من Shizuku على إكمال الاقتران.</string>
-    <string name="adb_pairing_tutorial_content_steps">انتقل إلى \"خيارات المطور\"، ثم قم بتمكين \"تصحيح أخطاء USB\" و\"تصحيح أخطاء اللاسلكي\".</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">انقر على الجانب الأيسر من \"تصحيح الأخطاء اللاسلكية\"، ثم انقر على \"إقران الجهاز برمز الاقتران\". أدخل الرمز في الإشعار لإكمال عملية الاقتران.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">تحتاج عملية الاقتران إلى التفاعل مع إشعار من Shizuku. يرجى السماح لشيزوكو بنشر الإخطارات.</string>
-    <string name="adb_pairing_tutorial_content_miui">قد يحتاج مستخدمو MIUI إلى تبديل نمط الإعلام إلى \"Android\" من \"Notification\" - \"Notification Shade\" في إعدادات النظام.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">وإلا، فقد لا تتمكن من إدخال رمز الاقتران من الإشعار.</string>
+    <string name="adb_pairing_tutorial_content_notification">سيساعدك إشعار من Shizuku على إكمال
+        الاقتران.</string>
+    <string name="adb_pairing_tutorial_content_steps">انتقل إلى \"خيارات المطور\"، ثم قم بتمكين
+        \"تصحيح أخطاء USB\" و\"تصحيح أخطاء اللاسلكي\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">انقر على الجانب الأيسر من \"تصحيح
+        الأخطاء اللاسلكية\"، ثم انقر على \"إقران الجهاز برمز الاقتران\". أدخل الرمز في الإشعار
+        لإكمال عملية الاقتران.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">تحتاج عملية الاقتران إلى
+        التفاعل مع إشعار من Shizuku. يرجى السماح لشيزوكو بنشر الإخطارات.</string>
+    <string name="adb_pairing_tutorial_content_miui">قد يحتاج مستخدمو MIUI إلى تبديل نمط الإعلام إلى
+        \"Android\" من \"Notification\" - \"Notification Shade\" في إعدادات النظام.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">وإلا، فقد لا تتمكن من إدخال رمز الاقتران من
+        الإشعار.</string>
     <string name="adb_pairing_tutorial_content_finish">ارجع إلى شيزوكو وابدأ في شيزوكو.</string>
-    <string name="adb_pairing_tutorial_content_network">يحتاج شيزوكو إلى الوصول إلى الشبكة المحلية. يتم التحكم به من خلال أذونات الشبكة.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">بعض الأنظمة (مثل MIUI) تمنع التطبيقات من الوصول إلى الشبكة عند عدم ظهورها، حتى لو كانت تستخدم خدمة الواجهة الأمامية. يُرجى تعطيل ميزات تحسين أداء البطارية لتطبيق Shizuku على هذه الأنظمة.</string>
+    <string name="adb_pairing_tutorial_content_network">يحتاج شيزوكو إلى الوصول إلى الشبكة المحلية.
+        يتم التحكم به من خلال أذونات الشبكة.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">بعض الأنظمة (مثل
+        MIUI) تمنع التطبيقات من الوصول إلى الشبكة عند عدم ظهورها، حتى لو كانت تستخدم خدمة الواجهة
+        الأمامية. يُرجى تعطيل ميزات تحسين أداء البطارية لتطبيق Shizuku على هذه الأنظمة.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[ابدأ (للأجهزة المجذرة)]]></string>
     <string name="home_root_description"><![CDATA[إذا كنت تستخدم Magisk، يمكنك تجربة %1$s. بالنسبة لمستخدمي الجذر، سيحل هذا الخيار محل Shizuku في نهاية المطاف. ملاحظة: تحتاج التطبيقات الحالية إلى تغيير بسيط لاستخدام %2$s.]]></string>
@@ -78,7 +109,8 @@
     <string name="home_app_management_empty">ستظهر هنا التطبيقات التي طلبت أو أعلنت عن إذن Shizuku.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">التحكم في شيزوكو باستخدام تطبيقات الأتمتة</string>
-    <string name="home_automation_description"><![CDATA[يمكن للتطبيقات مثل Tasker وMacroDroid إرسال نوايا لبدء/إيقاف Shizuku تلقائيًا.<p>يجب على الأجهزة غير المتجذرة على نظام Android 10 أو الإصدارات الأقدم فتح منفذ TCP من جهاز كمبيوتر يستخدم<font face="monospace"> %1$s </font>لكي تعمل نية البدء.]]></string>
+    <string name="home_automation_description">يمكن للتطبيقات مثل Tasker وMacroDroid إرسال نوايا
+        لبدء/إيقاف Shizuku تلقائيًا.</string>
     <string name="home_automation_button_view_intents">عرض النوايا</string>
     <string name="home_automation_dialog_label_action">فعل</string>
     <string name="home_automation_dialog_label_package">طَرد</string>
@@ -89,11 +121,13 @@
     <string name="home_learn_more_description">تعلم كيف تطور مع Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">أنت بحاجة إلى اتخاذ خطوة إضافية</string>
-    <string name="home_adb_is_limited_description">قامت الشركة المصنعة لجهازك بتقييد أذونات adb ولن تعمل التطبيقات التي تستخدم Shizuku بشكل صحيح.
-\n
-\nعادة ، يمكن رفع هذا القيد عن طريق تعديل بعض الخيارات في \"خيارات المطور\". يرجى قراءة التعليمات للحصول على تفاصيل حول كيفية القيام بذلك.
-\n
-\nقد تحتاج إلى إعادة تشغيل Shizuku حتى تدخل العملية حيز التنفيذ.</string>
+    <string name="home_adb_is_limited_description">قامت الشركة المصنعة لجهازك بتقييد أذونات adb ولن
+        تعمل التطبيقات التي تستخدم Shizuku بشكل صحيح.
+        \n
+        \nعادة ، يمكن رفع هذا القيد عن طريق تعديل بعض الخيارات في \"خيارات المطور\". يرجى قراءة
+        التعليمات للحصول على تفاصيل حول كيفية القيام بذلك.
+        \n
+        \nقد تحتاج إلى إعادة تشغيل Shizuku حتى تدخل العملية حيز التنفيذ.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">إذن الADB محدود</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[من المحتمل جدًا أن تحدد الشركة المصنعة للجهاز إذن adb. <p> قد يكون هناك حل لنظامك في <b><a href="%1$s">هذا المستند</a></b>.]]></string>
@@ -101,14 +135,21 @@
     <string name="app_management_toggle_all">تبديل الكل</string>
     <!-- Terminal -->
     <string name="home_terminal_title">استخدم Shizuku في تطبيقات المحطة</string>
-    <string name="home_terminal_description">تشغيل أوامر shell في تطبيقات المحطة الطرفية من خلال Shizuku</string>
-    <string name="terminal_tutorial_miui">أبلغ المستخدمون أن MIUI يكسر إطار عمل الوصول إلى التخزين، والذي تستخدمه وظيفة التصدير.</string>
-    <string name="terminal_tutorial_miui_2">إذا كنت تستخدم MIUI، فقد تحتاج إلى استخراج الملف من مجلد الأصول في ملف APK الخاص بـ Shizuku.</string>
+    <string name="home_terminal_description">تشغيل أوامر shell في تطبيقات المحطة الطرفية من خلال
+        Shizuku</string>
+    <string name="terminal_tutorial_miui">أبلغ المستخدمون أن MIUI يكسر إطار عمل الوصول إلى التخزين،
+        والذي تستخدمه وظيفة التصدير.</string>
+    <string name="terminal_tutorial_miui_2">إذا كنت تستخدم MIUI، فقد تحتاج إلى استخراج الملف من مجلد
+        الأصول في ملف APK الخاص بـ Shizuku.</string>
     <string name="terminal_tutorial_1">تصدير الملفات إلى مجلد جديد.</string>
-    <string name="terminal_tutorial_1_description">سيتم تصدير ملفين: %1$s و %2$s. إذا كانت الملفات موجودة بالفعل في المجلد المحدد، فسيتم حذفها.</string>
+    <string name="terminal_tutorial_1_description">سيتم تصدير ملفين: %1$s و %2$s. إذا كانت الملفات
+        موجودة بالفعل في المجلد المحدد، فسيتم حذفها.</string>
     <string name="terminal_export_files">تصدير الملفات</string>
-    <string name="terminal_tutorial_2">استخدم تطبيق المحطة الطرفية الخاص بك لنسخ الملفات إلى دليل الملفات الخاص به.</string>
-    <string name="terminal_tutorial_2_description">نصيحة: إذا كان دليل الصفحة الرئيسية لتطبيقك الطرفي (~) موجودًا في دليل الملفات الخاصة، فإن وضع الملفات هناك سيسمح لك بتشغيل %1$s دون كتابة المسار.\n\nوإلا، يمكنك إنشاء اسم مستعار لـ %2$s في ملف تكوين تطبيقك الطرفي %3$s .</string>
+    <string name="terminal_tutorial_2">استخدم تطبيق المحطة الطرفية الخاص بك لنسخ الملفات إلى دليل
+        الملفات الخاص به.</string>
+    <string name="terminal_tutorial_2_description">نصيحة: إذا كان دليل الصفحة الرئيسية لتطبيقك
+        الطرفي (~) موجودًا في دليل الملفات الخاصة، فإن وضع الملفات هناك سيسمح لك بتشغيل %1$s دون
+        كتابة المسار.\n\nوإلا، يمكنك إنشاء اسم مستعار لـ %2$s في ملف تكوين تطبيقك الطرفي %3$s .</string>
     <string name="terminal_tutorial_3">افتح shell باستخدام الأمر التالي:</string>
     <string name="rish_description"><![CDATA[باستخدام %1$s، يمكنك تشغيل أوامر shell في أي تطبيق طرفي. انقر فوق<p>لمعرفة المزيد حول كيفية استخدامه.]]></string>
     <!-- Settings -->
@@ -116,13 +157,17 @@
     <string name="settings_behavior">سلوك</string>
     <string name="settings_start_on_boot">البدء عند التمهيد</string>
     <string name="settings_start_on_boot_summary">يتطلب Android 11+ أو الجذر</string>
-    <string name="settings_start_on_boot_bug">بسبب وجود خلل في نظامي التشغيل Android 11-12، لا يتذكر التصحيح اللاسلكي أي شبكات معتمدة.\n\nستحتاج إلى إعادة تفويض الشبكة عند كل إعادة تشغيل من خلال النقر على \"السماح\" عند ظهور مربع حوار التفويض.</string>
+    <string name="settings_start_on_boot_bug">بسبب وجود خلل في نظامي التشغيل Android 11-12، لا يتذكر
+        التصحيح اللاسلكي أي شبكات معتمدة.\n\nستحتاج إلى إعادة تفويض الشبكة عند كل إعادة تشغيل من
+        خلال النقر على \"السماح\" عند ظهور مربع حوار التفويض.</string>
     <string name="settings_use_system_color">استخدم لون سمة النظام</string>
     <string name="settings_watchdog">مراقب</string>
     <string name="settings_watchdog_summary">إعادة تشغيل Shizuku تلقائيًا في حالة تعطله</string>
     <string name="settings_tcp_mode">وضع TCP</string>
-    <string name="settings_tcp_mode_summary">"يسمح لـ Shizuku بإعادة التشغيل دون اتصال Wi-Fi. (يجب أن يكون Shizuku قد بدأ مرة واحدة بعد إعادة التشغيل)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"سيتم إغلاق منفذ TCP فورًا. ستحتاج إلى اتصال Wi-Fi لإعادة تشغيل وضع TCP. هل تريد المتابعة؟"</string>
+    <string name="settings_tcp_mode_summary">"يسمح لـ Shizuku بإعادة التشغيل دون اتصال Wi-Fi. (يجب
+        أن يكون Shizuku قد بدأ مرة واحدة بعد إعادة التشغيل)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"سيتم إغلاق منفذ TCP فورًا. ستحتاج إلى اتصال
+        Wi-Fi لإعادة تشغيل وضع TCP. هل تريد المتابعة؟"</string>
     <string name="settings_tcp_mode_closing_port">إغلاق منفذ TCP...</string>
     <string name="settings_restart_dialog_title">مطلوب إعادة التشغيل</string>
     <string name="settings_restart_dialog_message">يجب على Shizuku إعادة التشغيل لتطبيق هذا الإعداد.</string>
@@ -130,14 +175,16 @@
     <string name="settings_tcp_port">منفذ TCP</string>
     <string name="settings_tcp_port_default">افتراضي (5555)</string>
     <string name="settings_tcp_port_hint">اتركه فارغًا لاستخدام الإعداد الافتراضي (5555)</string>
-    <string name="settings_tcp_learn_more">تعرف على المزيد حول استخدام تطبيقات الأتمتة للتحكم في Shizuku</string>
+    <string name="settings_tcp_learn_more">تعرف على المزيد حول استخدام تطبيقات الأتمتة للتحكم في
+        Shizuku</string>
     <string name="settings_language">اللغة</string>
     <string name="settings_translation_contributors">المساهمون في الترجمة</string>
     <string name="settings_translation">شارك في الترجمة</string>
     <string name="settings_translation_summary">ساعدنا في ترجمة %s إلى لغتك</string>
     <string name="settings_user_interface">المظهر</string>
     <string name="settings_black_night_theme">وضع السواد النقيّ</string>
-    <string name="settings_black_night_theme_summary">استخدم سمة السواد النقيّ إذ الوضع الليلي الذي بالجهاز مفعل</string>
+    <string name="settings_black_night_theme_summary">استخدم سمة السواد النقيّ إذ الوضع الليلي الذي
+        بالجهاز مفعل</string>
     <string name="settings_support">يدعم</string>
     <string name="settings_help">يساعد</string>
     <string name="settings_report_bug">الإبلاغ عن خطأ</string>
@@ -148,17 +195,21 @@
     <string name="bug_report_dialog_before_reporting">أولاً، يرجى القيام بما يلي:</string>
     <string name="bug_report_dialog_update">تأكد من أنك تستخدم ^1.</string>
     <string name="bug_report_dialog_link_update">أحدث إصدار</string>
-    <string name="bug_report_dialog_wiki">اقرأ ^1 واتبع جميع خطوات استكشاف الأخطاء وإصلاحها ذات الصلة.</string>
+    <string name="bug_report_dialog_wiki">اقرأ ^1 واتبع جميع خطوات استكشاف الأخطاء وإصلاحها ذات
+        الصلة.</string>
     <string name="bug_report_dialog_link_wiki">ويكي</string>
-    <string name="bug_report_dialog_issues">ابحث في جميع ^1 لمعرفة ما إذا تم الإبلاغ عن الخطأ الخاص بك بالفعل.</string>
+    <string name="bug_report_dialog_issues">ابحث في جميع ^1 لمعرفة ما إذا تم الإبلاغ عن الخطأ الخاص
+        بك بالفعل.</string>
     <string name="bug_report_dialog_link_issues">المشكلات القائمة</string>
     <string name="bug_report_dialog_method">يرجى تقديم مشكلة على ^1 إذا كان لديك حساب.</string>
     <string name="bug_report_dialog_method_2">وإلا، يمكنك إرسال بريد إلكتروني.</string>
     <string name="bug_report_dialog_button_email">بريد إلكتروني</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">يجب أن يكون المنفذ بين 1 و 65535</string>
-    <string name="snackbar_battery_optimization_home">يجب تعطيل تحسين البطارية حتى يعمل التشغيل عند التمهيد/مراقبة التشغيل بشكل صحيح.</string>
-    <string name="snackbar_battery_optimization_settings">يرجى تعطيل تحسين البطارية لاستخدام هذه الميزة.</string>
+    <string name="snackbar_battery_optimization_home">يجب تعطيل تحسين البطارية حتى يعمل التشغيل عند
+        التمهيد/مراقبة التشغيل بشكل صحيح.</string>
+    <string name="snackbar_battery_optimization_settings">يرجى تعطيل تحسين البطارية لاستخدام هذه
+        الميزة.</string>
     <string name="snackbar_action_fix">يصلح</string>
     <!-- Toast -->
     <string name="toast_no_email_app">لم يتم العثور على تطبيق البريد الإلكتروني</string>
@@ -202,7 +253,8 @@
     <string name="grant_dialog_button_deny">"منع"</string>
     <!-- Starter -->
     <string name="starter">مفتاح التشغيل</string>
-    <string name="start_with_root_failed">لا يمكن بدء الخدمة لأنه لم يتم منح إذن الجذر (الروت) أو قد يكون هذا الجهاز ليس مزوّدًا بحق الوصول إلى الجذر (الروت).</string>
+    <string name="start_with_root_failed">لا يمكن بدء الخدمة لأنه لم يتم منح إذن الجذر (الروت) أو قد
+        يكون هذا الجهاز ليس مزوّدًا بحق الوصول إلى الجذر (الروت).</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">بداية شيزوكو…</string>
     <string name="wadb_notification_wifi_required">في انتظار اتصال Wi-Fi قبل المتابعة</string>
@@ -210,18 +262,23 @@
     <string name="wadb_error_title">حدث خطأ أثناء بدء التشغيل</string>
     <string name="wadb_error_notify_dev">انقر هنا لإعلام المطور.</string>
     <string name="wadb_permission_error_notification_title">خطأ في الإذن</string>
-    <string name="wadb_permission_error_notification_content">يحتاج شيزوكو إلى WRITE_SECURE_SETTINGS للبدء عند بدء التشغيل. انقر لمعرفة كيفية تفعيله.</string>
+    <string name="wadb_permission_error_notification_content">يحتاج شيزوكو إلى WRITE_SECURE_SETTINGS
+        للبدء عند بدء التشغيل. انقر لمعرفة كيفية تفعيله.</string>
     <string name="wadb_notification_channel">خدمة بدء التشغيل التلقائي لـ ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">مراقب يعمل</string>
     <string name="watchdog_turn_off">إيقاف التشغيل</string>
     <string name="watchdog_shizuku_crashed_title">تحطمت شيزوكو مؤخرًا</string>
-    <string name="watchdog_shizuku_crashed_text">أعاد برنامج المراقبة تشغيل الخدمة. انقر لمعرفة المزيد عن الحلول الممكنة لمنع الأعطال المستقبلية.</string>
+    <string name="watchdog_shizuku_crashed_text">أعاد برنامج المراقبة تشغيل الخدمة. انقر لمعرفة
+        المزيد عن الحلول الممكنة لمنع الأعطال المستقبلية.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">إيقاف التنبيهات</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">لا يمكن بدء المتصفح</string>
     <string name="toast_copied_to_clipboard">تم نسخها إلى الحافظة</string>
-    <string name="accessibility_service_description">يوفر دعمًا للاقتران للأجهزة (مثل أجهزة التلفزيون التي تعمل بنظام أندرويد 14+) التي لا يمكن فيها استخدام الإشعارات أو تقسيم الشاشة.\n\nيُمكّن شيزوكو من استخراج رمز الاقتران من شاشة اقتران تصحيح أخطاء الشبكة اللاسلكية. سيُعطّل تلقائيًا بمجرد العثور على رمز الاقتران.</string>
+    <string name="accessibility_service_description">يوفر دعمًا للاقتران للأجهزة (مثل أجهزة
+        التلفزيون التي تعمل بنظام أندرويد 14+) التي لا يمكن فيها استخدام الإشعارات أو تقسيم
+        الشاشة.\n\nيُمكّن شيزوكو من استخراج رمز الاقتران من شاشة اقتران تصحيح أخطاء الشبكة
+        اللاسلكية. سيُعطّل تلقائيًا بمجرد العثور على رمز الاقتران.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s لا يدعم النسخة الحديثة من Shizuku</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[تم إهمال Legacy Shizuku منذ آذار (مارس) 2019. أيضًا ، لا يعمل Shizuku القديم على أنظمة Android الأحدث. <p> يُرجى مطالبة مطور <b> %1$s </b> بالتحديث.]]></string>

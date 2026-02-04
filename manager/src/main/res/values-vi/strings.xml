@@ -21,10 +21,13 @@
     <string name="home_wireless_adb_view_guide_button">Hướng dẫn từng bước</string>
     <!-- Adb -->
     <string name="dialog_adb_discovery">Tìm kiếm dịch vụ gỡ lỗi không dây</string>
-    <string name="dialog_adb_discovery_message">Vui lòng bật \"Gỡ lỗi không dây\" trong \"Tùy chọn nhà phát triển\". \"Gỡ lỗi không dây\" tự động bị tắt khi mạng thay đổi.
-\n
-\nLưu ý, không vô hiệu hóa \"Tùy chọn nhà phát triển\" hoặc \"Gỡ lỗi USB\", nếu không Shizuku sẽ bị dừng.</string>
-    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Vui lòng thử tắt và bật \"Gỡ lỗi không dây\" nếu nó tiếp tục tìm kiếm.</string>
+    <string name="dialog_adb_discovery_message">Vui lòng bật \"Gỡ lỗi không dây\" trong \"Tùy chọn
+        nhà phát triển\". \"Gỡ lỗi không dây\" tự động bị tắt khi mạng thay đổi.
+        \n
+        \nLưu ý, không vô hiệu hóa \"Tùy chọn nhà phát triển\" hoặc \"Gỡ lỗi USB\", nếu không
+        Shizuku sẽ bị dừng.</string>
+    <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Vui lòng thử tắt và bật
+        \"Gỡ lỗi không dây\" nếu nó tiếp tục tìm kiếm.</string>
     <string name="dialog_adb_port">Cổng</string>
     <string name="dialog_adb_invalid_port">Cổng là một số nguyên nằm trong khoảng từ 1 đến 65535.</string>
     <string name="adb_pairing">Ghép nối</string>
@@ -32,17 +35,37 @@
     <string name="dialog_adb_pairing_discovery">Đang tìm kiếm dịch vụ ghép nối</string>
     <string name="dialog_adb_pairing_paring_code">Mã ghép nối</string>
     <string name="paring_code_is_wrong">Mã ghép nối sai.</string>
-    <string name="cannot_connect_port">Không thể kết nối với dịch vụ gỡ lỗi không dây.\n\nHãy đảm bảo rằng Shizuku được đưa vào danh sách trắng trong tất cả tường lửa, chặn quảng cáo, VPN hoặc các ứng dụng tương tự có thể hạn chế quyền truy cập mạng.</string>
+    <string name="cannot_connect_port">Không thể kết nối với dịch vụ gỡ lỗi không dây.\n\nHãy đảm
+        bảo rằng Shizuku được đưa vào danh sách trắng trong tất cả tường lửa, chặn quảng cáo, VPN
+        hoặc các ứng dụng tương tự có thể hạn chế quyền truy cập mạng.</string>
     <string name="dialog_wireless_adb_not_enabled">Gỡ lỗi không dây không được kích hoạt.
-\nLưu ý, trước Android 11, để kích hoạt tính năng gỡ lỗi không dây, kết nối máy tính là điều bắt buộc.</string>
-    <string name="dialog_usb_debugging_not_enabled">Chưa bật tính năng gỡ lỗi USB.\nVui lòng bật tính năng này trong \"Tùy chọn nhà phát triển\".</string>
-    <string name="dialog_adb_pairing_message">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối thiết bị bằng mã ghép nối\"\n- Nhập mã ghép nối vào thông báo</string>
-    <string name="dialog_adb_pairing_accessibility_permission">Trên Android 14, việc cài đặt/cập nhật Shizuku bằng Trình cài đặt gói sẽ thu hồi quyền ^1, quyền này cần thiết để kích hoạt dịch vụ trợ năng cho việc ghép nối.\n\nĐể cấp lại quyền này, hãy chạy lệnh ADB sau:\n\n^2\n\nSau khi chạy lệnh, bạn có thể tiếp tục quá trình ghép nối.\n\nLưu ý: bạn có thể bỏ qua bước này bằng cách cài đặt/cập nhật Shizuku bằng ADB.</string>
-    <string name="dialog_adb_pairing_accessibility_enable">Vui lòng bật dịch vụ trợ năng để bắt đầu quá trình ghép nối. Thao tác này cho phép Shizuku phát hiện mã ghép nối.\n\nDịch vụ trợ năng sẽ bị tắt khi tìm thấy mã hoặc sau 1 phút để tiết kiệm pin.</string>
-    <string name="dialog_adb_pairing_accessibility_navigate">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối thiết bị bằng mã ghép nối\". Shizuku sẽ tự động phát hiện mã ghép nối.</string>
-    <string name="adb_pairing_requires_multi_window">Vui lòng vào chế độ chia đôi màn hình (đa cửa sổ) trước.</string>
-    <string name="adb_pairing_requires_multi_window_reason">Hệ thống yêu cầu hộp thoại ghép nối luôn hiển thị. Sử dụng chế độ chia đôi màn hình là cách duy nhất để hiển thị ứng dụng này và hộp thoại hệ thống cùng một lúc.</string>
-    <string name="adb_error_key_store">Không thể tạo khóa để gỡ lỗi không dây.\nĐiều này có thể là do cơ chế KeyStore của thiết bị này bị hỏng.</string>
+        \nLưu ý, trước Android 11, để kích hoạt tính năng gỡ lỗi không dây, kết nối máy tính là điều
+        bắt buộc.</string>
+    <string name="dialog_usb_debugging_not_enabled">Chưa bật tính năng gỡ lỗi USB.\nVui lòng bật
+        tính năng này trong \"Tùy chọn nhà phát triển\".</string>
+    <string name="dialog_adb_pairing_message">Vui lòng bắt đầu ghép nối bằng cách thực hiện các bước
+        sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không
+        dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối thiết bị bằng mã
+        ghép nối\"\n- Nhập mã ghép nối vào thông báo</string>
+    <string name="dialog_adb_pairing_accessibility_permission">Trên Android 14, việc cài đặt/cập
+        nhật Shizuku bằng Trình cài đặt gói sẽ thu hồi quyền ^1, quyền này cần thiết để kích hoạt
+        dịch vụ trợ năng cho việc ghép nối.\n\nĐể cấp lại quyền này, hãy chạy lệnh ADB
+        sau:\n\n^2\n\nSau khi chạy lệnh, bạn có thể tiếp tục quá trình ghép nối.\n\nLưu ý: bạn có
+        thể bỏ qua bước này bằng cách cài đặt/cập nhật Shizuku bằng ADB.</string>
+    <string name="dialog_adb_pairing_accessibility_enable">Vui lòng bật dịch vụ trợ năng để bắt đầu
+        quá trình ghép nối. Thao tác này cho phép Shizuku phát hiện mã ghép nối.\n\nDịch vụ trợ năng
+        sẽ bị tắt khi tìm thấy mã hoặc sau 1 phút để tiết kiệm pin.</string>
+    <string name="dialog_adb_pairing_accessibility_navigate">Vui lòng bắt đầu ghép nối bằng cách
+        thực hiện các bước sau:\n- Điều hướng đến \"Tùy chọn nhà phát triển\"\n- Bật \"Gỡ lỗi USB\"
+        và \"Gỡ lỗi không dây\"\n- Chạm vào bên trái của \"Gỡ lỗi không dây\"\n- Chạm vào \"Ghép nối
+        thiết bị bằng mã ghép nối\". Shizuku sẽ tự động phát hiện mã ghép nối.</string>
+    <string name="adb_pairing_requires_multi_window">Vui lòng vào chế độ chia đôi màn hình (đa cửa
+        sổ) trước.</string>
+    <string name="adb_pairing_requires_multi_window_reason">Hệ thống yêu cầu hộp thoại ghép nối luôn
+        hiển thị. Sử dụng chế độ chia đôi màn hình là cách duy nhất để hiển thị ứng dụng này và hộp
+        thoại hệ thống cùng một lúc.</string>
+    <string name="adb_error_key_store">Không thể tạo khóa để gỡ lỗi không dây.\nĐiều này có thể là
+        do cơ chế KeyStore của thiết bị này bị hỏng.</string>
     <string name="adb_stopping_tcp">Đóng cổng TCP</string>
     <string name="adb_error_stop_tcp">Không dừng được ADB qua TCP</string>
     <string name="adb_pair_required">Vui lòng thực hiện bước ghép nối trước.</string>
@@ -50,15 +73,26 @@
     <string name="development_settings">Tùy chọn nhà phát triển</string>
     <string name="notification_settings">Tùy chọn thông báo</string>
     <string name="adb_pairing_tutorial_title">Ghép nối Shizuku với thiết bị của bạn</string>
-    <string name="adb_pairing_tutorial_content_notification">Một thông báo từ Shizuku sẽ giúp bạn hoàn thành việc ghép nối.</string>
-    <string name="adb_pairing_tutorial_content_steps">Điều hướng đến \"Tùy chọn nhà phát triển\", sau đó bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\".</string>
-    <string name="adb_pairing_tutorial_content_enter_pairing_code">Chạm vào bên trái của \"Gỡ lỗi không dây\", sau đó chạm vào \"Ghép nối thiết bị với mã ghép nối\". Nhập mã vào thông báo để hoàn tất ghép nối.</string>
-    <string name="adb_pairing_tutorial_content_notification_blocked">Quá trình ghép nối cần bạn tương tác với thông báo từ Shizuku. Vui lòng cho phép Shizuku đăng thông báo.</string>
-    <string name="adb_pairing_tutorial_content_miui">Người dùng MIUI có thể cần chuyển kiểu thông báo sang \"Android\" từ \"Thông báo\" - \"Bóng thông báo\" trong cài đặt hệ thống.</string>
-    <string name="adb_pairing_tutorial_content_miui_2">Nếu không, bạn có thể không nhập được mã ghép nối từ thông báo.</string>
+    <string name="adb_pairing_tutorial_content_notification">Một thông báo từ Shizuku sẽ giúp bạn
+        hoàn thành việc ghép nối.</string>
+    <string name="adb_pairing_tutorial_content_steps">Điều hướng đến \"Tùy chọn nhà phát triển\",
+        sau đó bật \"Gỡ lỗi USB\" và \"Gỡ lỗi không dây\".</string>
+    <string name="adb_pairing_tutorial_content_enter_pairing_code">Chạm vào bên trái của \"Gỡ lỗi
+        không dây\", sau đó chạm vào \"Ghép nối thiết bị với mã ghép nối\". Nhập mã vào thông báo để
+        hoàn tất ghép nối.</string>
+    <string name="adb_pairing_tutorial_content_notification_blocked">Quá trình ghép nối cần bạn
+        tương tác với thông báo từ Shizuku. Vui lòng cho phép Shizuku đăng thông báo.</string>
+    <string name="adb_pairing_tutorial_content_miui">Người dùng MIUI có thể cần chuyển kiểu thông
+        báo sang \"Android\" từ \"Thông báo\" - \"Bóng thông báo\" trong cài đặt hệ thống.</string>
+    <string name="adb_pairing_tutorial_content_miui_2">Nếu không, bạn có thể không nhập được mã ghép
+        nối từ thông báo.</string>
     <string name="adb_pairing_tutorial_content_finish">Quay trở lại Shizuku và bắt đầu Shizuku.</string>
-    <string name="adb_pairing_tutorial_content_network">Shizuku cần truy cập mạng cục bộ. Nó được kiểm soát bởi quyền mạng.</string>
-    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Một số hệ thống (chẳng hạn như MIUI) không cho phép ứng dụng truy cập mạng khi chúng không hiển thị, ngay cả khi ứng dụng sử dụng dịch vụ nền trước. Vui lòng tắt các tính năng tối ưu hóa pin cho Shizuku trên các hệ thống đó.</string>
+    <string name="adb_pairing_tutorial_content_network">Shizuku cần truy cập mạng cục bộ. Nó được
+        kiểm soát bởi quyền mạng.</string>
+    <string name="adb_pairing_tutorial_content_network_limation_not_foreground">Một số hệ thống
+        (chẳng hạn như MIUI) không cho phép ứng dụng truy cập mạng khi chúng không hiển thị, ngay cả
+        khi ứng dụng sử dụng dịch vụ nền trước. Vui lòng tắt các tính năng tối ưu hóa pin cho
+        Shizuku trên các hệ thống đó.</string>
     <!-- Home - Root -->
     <string name="home_root_title"><![CDATA[Bắt đầu (cho các thiết bị đã root)]]></string>
     <string name="home_root_description"><![CDATA[Nếu bạn đang sử dụng Magisk, bạn có thể thử %1$s. Đối với người dùng root, nó sẽ thay thế Shizuku. Lưu ý, các ứng dụng hiện có cần phải thay đổi một chút để sử dụng %2$s.]]></string>
@@ -70,10 +104,12 @@
         <item quantity="other"><![CDATA[Đã ủy quyền %d ứng dụng]]></item>
     </plurals>
     <string name="home_app_management_view_authorized_apps"><![CDATA[Nhấn để quản lý các ứng dụng được ủy quyền]]></string>
-    <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo quyền Shizuku sẽ hiển thị ở đây.</string>
+    <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo quyền Shizuku sẽ
+        hiển thị ở đây.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kiểm soát Shizuku bằng ứng dụng tự động hóa</string>
-    <string name="home_automation_description"><![CDATA[Các ứng dụng như Tasker và MacroDroid có thể gửi ý định để tự động khởi động/dừng Shizuku.<p>Các thiết bị chưa root chạy Android 10 trở xuống phải mở cổng TCP từ PC bằng<font face="monospace"> %1$s </font>để ý định khởi động hoạt động.]]></string>
+    <string name="home_automation_description">Các ứng dụng như Tasker và MacroDroid có thể gửi ý
+        định để tự động khởi động/dừng Shizuku.</string>
     <string name="home_automation_button_view_intents">Xem ý định</string>
     <string name="home_automation_dialog_label_action">Hoạt động</string>
     <string name="home_automation_dialog_label_package">Bưu kiện</string>
@@ -81,10 +117,15 @@
     <string name="home_automation_dialog_label_target">Mục tiêu</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Hướng dẫn dành cho nhà phát triển</string>
-    <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng dụng bằng Shizuku</string>
+    <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng
+        dụng bằng Shizuku</string>
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">Bạn cần phải thực hiện thêm một bước</string>
-    <string name="home_adb_is_limited_description">Nhà sản xuất thiết bị của bạn đã hạn chế quyền adb và các ứng dụng sử dụng Shizuku sẽ không hoạt động bình thường.\n\nThông thường, hạn chế này có thể được gỡ bỏ bằng cách điều chỉnh một số tùy chọn trong \"Tùy chọn nhà phát triển\". Vui lòng đọc phần trợ giúp để biết chi tiết về cách thực hiện việc này.\n\nBạn có thể cần khởi động lại Shizuku để thao tác có hiệu lực.</string>
+    <string name="home_adb_is_limited_description">Nhà sản xuất thiết bị của bạn đã hạn chế quyền
+        adb và các ứng dụng sử dụng Shizuku sẽ không hoạt động bình thường.\n\nThông thường, hạn chế
+        này có thể được gỡ bỏ bằng cách điều chỉnh một số tùy chọn trong \"Tùy chọn nhà phát
+        triển\". Vui lòng đọc phần trợ giúp để biết chi tiết về cách thực hiện việc này.\n\nBạn có
+        thể cần khởi động lại Shizuku để thao tác có hiệu lực.</string>
     <!-- Application management -->
     <string name="app_management_dialog_adb_is_limited_title">Quyền của adb bị hạn chế</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[Rất có thể nhà sản xuất thiết bị của bạn giới hạn quyền của adb.<p>Có thể có giải pháp cho hệ thống của bạn trong <b><a href="%1$s">tài liệu này</a></b>.]]></string>
@@ -92,14 +133,22 @@
     <string name="app_management_toggle_all">Chuyển đổi tất cả</string>
     <!-- Terminal -->
     <string name="home_terminal_title">Sử dụng Shizuku trong các ứng dụng đầu cuối</string>
-    <string name="home_terminal_description">Chạy lệnh shell trong ứng dụng terminal thông qua Shizuku</string>
-    <string name="terminal_tutorial_miui">Người dùng đã báo cáo rằng MIUI làm hỏng Storage Access Framework, được sử dụng bởi chức năng xuất.</string>
-    <string name="terminal_tutorial_miui_2">Nếu bạn đang sử dụng MIUI, bạn có thể phải giải nén tệp từ thư mục tài sản trong APK của Shizuku.</string>
+    <string name="home_terminal_description">Chạy lệnh shell trong ứng dụng terminal thông qua
+        Shizuku</string>
+    <string name="terminal_tutorial_miui">Người dùng đã báo cáo rằng MIUI làm hỏng Storage Access
+        Framework, được sử dụng bởi chức năng xuất.</string>
+    <string name="terminal_tutorial_miui_2">Nếu bạn đang sử dụng MIUI, bạn có thể phải giải nén tệp
+        từ thư mục tài sản trong APK của Shizuku.</string>
     <string name="terminal_tutorial_1">Xuất các tập tin vào một thư mục mới.</string>
-    <string name="terminal_tutorial_1_description">Hai tệp sẽ được xuất: %1$s và %2$s. Nếu các tệp đã tồn tại trong thư mục đã chọn, chúng sẽ bị xóa.</string>
+    <string name="terminal_tutorial_1_description">Hai tệp sẽ được xuất: %1$s và %2$s. Nếu các tệp
+        đã tồn tại trong thư mục đã chọn, chúng sẽ bị xóa.</string>
     <string name="terminal_export_files">Xuất tệp</string>
-    <string name="terminal_tutorial_2">Sử dụng ứng dụng đầu cuối để sao chép các tệp vào thư mục tệp riêng tư.</string>
-    <string name="terminal_tutorial_2_description">Mẹo: Nếu thư mục gốc của ứng dụng đầu cuối (~) nằm trong thư mục tệp riêng tư, việc đặt các tệp ở đó sẽ cho phép bạn chạy %1$s mà không cần ghi đường dẫn.\n\nNếu không, bạn có thể tạo bí danh cho %2$s trong tệp cấu hình %3$s của ứng dụng đầu cuối.</string>
+    <string name="terminal_tutorial_2">Sử dụng ứng dụng đầu cuối để sao chép các tệp vào thư mục tệp
+        riêng tư.</string>
+    <string name="terminal_tutorial_2_description">Mẹo: Nếu thư mục gốc của ứng dụng đầu cuối (~)
+        nằm trong thư mục tệp riêng tư, việc đặt các tệp ở đó sẽ cho phép bạn chạy %1$s mà không cần
+        ghi đường dẫn.\n\nNếu không, bạn có thể tạo bí danh cho %2$s trong tệp cấu hình %3$s của ứng
+        dụng đầu cuối.</string>
     <string name="terminal_tutorial_3">Mở shell bằng lệnh sau:</string>
     <string name="rish_description"><![CDATA[Với %1$s, bạn có thể chạy lệnh shell trong bất kỳ ứng dụng đầu cuối nào.<p>Nhấn để tìm hiểu thêm về cách sử dụng.]]></string>
     <!-- Settings -->
@@ -107,13 +156,17 @@
     <string name="settings_behavior">Hành vi</string>
     <string name="settings_start_on_boot">Bắt đầu khi khởi động</string>
     <string name="settings_start_on_boot_summary">Yêu cầu Android 11 trở lên hoặc root</string>
-    <string name="settings_start_on_boot_bug">Do lỗi trong Android 11-12, gỡ lỗi không dây không ghi nhớ bất kỳ mạng được ủy quyền nào.\n\nBạn sẽ cần ủy quyền lại mạng trong mỗi lần khởi động lại bằng cách nhấn vào \"Cho phép\" khi hộp thoại ủy quyền bật lên.</string>
+    <string name="settings_start_on_boot_bug">Do lỗi trong Android 11-12, gỡ lỗi không dây không ghi
+        nhớ bất kỳ mạng được ủy quyền nào.\n\nBạn sẽ cần ủy quyền lại mạng trong mỗi lần khởi động
+        lại bằng cách nhấn vào \"Cho phép\" khi hộp thoại ủy quyền bật lên.</string>
     <string name="settings_use_system_color">Sử dụng màu chủ đề hệ thống</string>
     <string name="settings_watchdog">Chó canh gác</string>
     <string name="settings_watchdog_summary">Tự động khởi động lại Shizuku nếu nó bị sập</string>
     <string name="settings_tcp_mode">Chế độ TCP</string>
-    <string name="settings_tcp_mode_summary">"Cho phép Shizuku khởi động lại mà không cần Wi-Fi. (Shizuku phải khởi động lại một lần kể từ khi khởi động lại)"</string>
-    <string name="settings_tcp_mode_dialog_close_port">"Cổng TCP sẽ bị đóng ngay lập tức. Bạn cần kết nối Wi-Fi để bật lại chế độ TCP. Tiếp tục chứ?"</string>
+    <string name="settings_tcp_mode_summary">"Cho phép Shizuku khởi động lại mà không cần Wi-Fi.
+        (Shizuku phải khởi động lại một lần kể từ khi khởi động lại)"</string>
+    <string name="settings_tcp_mode_dialog_close_port">"Cổng TCP sẽ bị đóng ngay lập tức. Bạn cần
+        kết nối Wi-Fi để bật lại chế độ TCP. Tiếp tục chứ?"</string>
     <string name="settings_tcp_mode_closing_port">Đóng cổng TCP...</string>
     <string name="settings_restart_dialog_title">Cần khởi động lại</string>
     <string name="settings_restart_dialog_message">Shizuku cần khởi động lại để áp dụng cài đặt này.</string>
@@ -121,14 +174,16 @@
     <string name="settings_tcp_port">Cổng TCP</string>
     <string name="settings_tcp_port_default">Mặc định (5555)</string>
     <string name="settings_tcp_port_hint">Để trống để sử dụng mặc định (5555)</string>
-    <string name="settings_tcp_learn_more">Tìm hiểu thêm về cách sử dụng ứng dụng tự động hóa để kiểm soát Shizuku</string>
+    <string name="settings_tcp_learn_more">Tìm hiểu thêm về cách sử dụng ứng dụng tự động hóa để
+        kiểm soát Shizuku</string>
     <string name="settings_language">Ngôn ngữ</string>
     <string name="settings_translation_contributors">Người đóng góp bản dịch</string>
     <string name="settings_translation">Tham gia phiên dịch</string>
     <string name="settings_translation_summary">Giúp chúng tôi dịch %s sang ngôn ngữ của bạn</string>
     <string name="settings_user_interface">Hiển thị</string>
     <string name="settings_black_night_theme">Chủ đề đen</string>
-    <string name="settings_black_night_theme_summary">Sử dụng chủ đề đen tuyền nếu chế độ ban đêm được bật</string>
+    <string name="settings_black_night_theme_summary">Sử dụng chủ đề đen tuyền nếu chế độ ban đêm
+        được bật</string>
     <string name="settings_support">Ủng hộ</string>
     <string name="settings_help">Giúp đỡ</string>
     <string name="settings_report_bug">Báo cáo lỗi</string>
@@ -139,17 +194,21 @@
     <string name="bug_report_dialog_before_reporting">Trước tiên, vui lòng thực hiện các bước sau:</string>
     <string name="bug_report_dialog_update">Hãy kiểm tra xem bạn có đang sử dụng ^1 hay không.</string>
     <string name="bug_report_dialog_link_update">phiên bản mới nhất</string>
-    <string name="bug_report_dialog_wiki">Hãy đọc phần ^1 và làm theo tất cả các bước khắc phục sự cố có liên quan.</string>
+    <string name="bug_report_dialog_wiki">Hãy đọc phần ^1 và làm theo tất cả các bước khắc phục sự
+        cố có liên quan.</string>
     <string name="bug_report_dialog_link_wiki">wiki</string>
-    <string name="bug_report_dialog_issues">Tìm kiếm trong tất cả các bài viết ^1 để xem lỗi của bạn đã được báo cáo chưa.</string>
+    <string name="bug_report_dialog_issues">Tìm kiếm trong tất cả các bài viết ^1 để xem lỗi của bạn
+        đã được báo cáo chưa.</string>
     <string name="bug_report_dialog_link_issues">các vấn đề hiện có</string>
     <string name="bug_report_dialog_method">Vui lòng báo cáo sự cố trên ^1 nếu bạn có tài khoản.</string>
     <string name="bug_report_dialog_method_2">Nếu không, bạn có thể gửi email.</string>
     <string name="bug_report_dialog_button_email">E-mail</string>
     <!-- Snackbar -->
     <string name="snackbar_invalid_port">Cổng phải nằm trong khoảng từ 1 đến 65535</string>
-    <string name="snackbar_battery_optimization_home">Phải tắt tính năng tối ưu hóa pin để khởi động khi khởi động/theo dõi hoạt động bình thường.</string>
-    <string name="snackbar_battery_optimization_settings">Vui lòng tắt tính năng tối ưu hóa pin để sử dụng tính năng này.</string>
+    <string name="snackbar_battery_optimization_home">Phải tắt tính năng tối ưu hóa pin để khởi động
+        khi khởi động/theo dõi hoạt động bình thường.</string>
+    <string name="snackbar_battery_optimization_settings">Vui lòng tắt tính năng tối ưu hóa pin để
+        sử dụng tính năng này.</string>
     <string name="snackbar_action_fix">Sửa chữa</string>
     <!-- Toast -->
     <string name="toast_no_email_app">Không tìm thấy ứng dụng email</string>
@@ -177,12 +236,14 @@
     <string name="notification_working">Đang làm việc…</string>
     <string name="notification_channel_adb_pairing">Ghép nối gỡ lỗi qua Wi-Fi</string>
     <string name="notification_adb_pairing_input_paring_code">Nhập mã ghép nối</string>
-    <string name="notification_adb_pairing_searching_for_service_title">Đang tìm kiếm dịch vụ ghép nối</string>
+    <string name="notification_adb_pairing_searching_for_service_title">Đang tìm kiếm dịch vụ ghép
+        nối</string>
     <string name="notification_adb_pairing_service_found_title">Đã tìm thấy dịch vụ ghép nối</string>
     <string name="notification_adb_pairing_stop_searching">Dừng tìm kiếm</string>
     <string name="notification_adb_pairing_working_title">Đang trong quá trình ghép nối</string>
     <string name="notification_adb_pairing_succeed_title">Ghép nối thành công</string>
-    <string name="notification_adb_pairing_succeed_text">Bạn có thể khởi động dịch vụ Shizuku ngay bây giờ.</string>
+    <string name="notification_adb_pairing_succeed_text">Bạn có thể khởi động dịch vụ Shizuku ngay
+        bây giờ.</string>
     <string name="notification_adb_pairing_failed_title">Ghép nối thất bại</string>
     <string name="notification_adb_pairing_retry">Thử lại</string>
     <!-- Permission related, appears in system permission UI -->
@@ -193,7 +254,8 @@
     <string name="grant_dialog_button_deny">"Từ chối"</string>
     <!-- Starter -->
     <string name="starter">Trình khởi động</string>
-    <string name="start_with_root_failed">Không thể bắt đầu dịch vụ vì quyền root chưa được cấp hoặc thiết bị này chưa được root.</string>
+    <string name="start_with_root_failed">Không thể bắt đầu dịch vụ vì quyền root chưa được cấp hoặc
+        thiết bị này chưa được root.</string>
     <!-- WADB Starter -->
     <string name="wadb_notification_title">Bắt đầu Shizuku…</string>
     <string name="wadb_notification_wifi_required">Đang chờ kết nối Wi-Fi trước khi tiếp tục</string>
@@ -201,18 +263,23 @@
     <string name="wadb_error_title">Lỗi khi khởi động</string>
     <string name="wadb_error_notify_dev">Nhấn để thông báo cho nhà phát triển.</string>
     <string name="wadb_permission_error_notification_title">Lỗi quyền</string>
-    <string name="wadb_permission_error_notification_content">Shizuku cần WRITE_SECURE_SETTINGS để bắt đầu khởi động. Nhấn để tìm hiểu cách cấp nó.</string>
+    <string name="wadb_permission_error_notification_content">Shizuku cần WRITE_SECURE_SETTINGS để
+        bắt đầu khởi động. Nhấn để tìm hiểu cách cấp nó.</string>
     <string name="wadb_notification_channel">Dịch vụ tự động khởi động ADB</string>
     <!-- Watchdog -->
     <string name="watchdog_running">Cơ quan giám sát đang hoạt động</string>
     <string name="watchdog_turn_off">Tắt</string>
     <string name="watchdog_shizuku_crashed_title">Shizuku bị rơi gần đây</string>
-    <string name="watchdog_shizuku_crashed_text">Cơ quan giám sát đã khởi động lại dịch vụ. Nhấn để tìm hiểu về các bản sửa lỗi tiềm năng nhằm ngăn chặn sự cố trong tương lai.</string>
+    <string name="watchdog_shizuku_crashed_text">Cơ quan giám sát đã khởi động lại dịch vụ. Nhấn để
+        tìm hiểu về các bản sửa lỗi tiềm năng nhằm ngăn chặn sự cố trong tương lai.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Tắt cảnh báo</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Không thể khởi động trình duyệt</string>
     <string name="toast_copied_to_clipboard">Đã sao chép vào clipboard</string>
-    <string name="accessibility_service_description">Cung cấp hỗ trợ ghép nối cho các thiết bị (ví dụ: TV chạy Android 14 trở lên) không thể sử dụng thông báo hoặc chia đôi màn hình.\n\nCho phép Shizuku trích xuất mã ghép nối từ màn hình ghép nối gỡ lỗi không dây. Tính năng này sẽ tự tắt sau khi tìm thấy mã ghép nối.</string>
+    <string name="accessibility_service_description">Cung cấp hỗ trợ ghép nối cho các thiết bị (ví
+        dụ: TV chạy Android 14 trở lên) không thể sử dụng thông báo hoặc chia đôi màn hình.\n\nCho
+        phép Shizuku trích xuất mã ghép nối từ màn hình ghép nối gỡ lỗi không dây. Tính năng này sẽ
+        tự tắt sau khi tìm thấy mã ghép nối.</string>
     <!-- Messages for legacy -->
     <string name="dialog_legacy_not_support_title">%1$s không hỗ trợ Shizuku hiện đại</string>
     <string name="dialog_legacy_not_support_message"><![CDATA[Shizuku cũ không được dùng nữa kể từ tháng 3 năm 2019. Ngoài ra, Shizuku cũ không hoạt động trên các hệ thống Android mới hơn.<p>Vui lòng yêu cầu nhà phát triển của <b>%1$s</b> cập nhật.]]></string>
