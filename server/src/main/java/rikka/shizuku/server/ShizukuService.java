@@ -11,7 +11,6 @@ import static rikka.shizuku.ShizukuApiConstants.BIND_APPLICATION_SERVER_VERSION;
 import static rikka.shizuku.ShizukuApiConstants.BIND_APPLICATION_SHOULD_SHOW_REQUEST_PERMISSION_RATIONALE;
 import static rikka.shizuku.ShizukuApiConstants.REQUEST_PERMISSION_REPLY_ALLOWED;
 import static rikka.shizuku.ShizukuApiConstants.REQUEST_PERMISSION_REPLY_IS_ONETIME;
-import static rikka.shizuku.server.ServerConstants.MANAGER_APPLICATION_ID;
 import static rikka.shizuku.server.ServerConstants.PERMISSION;
 
 import android.content.Context;
@@ -35,6 +34,9 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.io.File;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -58,6 +60,38 @@ import rikka.shizuku.server.util.HandlerUtil;
 import rikka.shizuku.server.util.UserHandleCompat;
 
 public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuClientManager, ShizukuConfigManager> {
+
+    public static final String MANAGER_APPLICATION_ID;
+    public static final String REQUEST_PERMISSION_ACTION;
+
+    static {
+        String packageName = null;
+        try {
+            String apk = System.getenv("CLASSPATH");
+
+            Class<?> parserClass = Class.forName("android.content.pm.PackageParser");
+            Object parser = parserClass.getConstructor().newInstance();
+
+            Method parsePackage = parserClass.getDeclaredMethod("parsePackage", File.class, int.class);
+            parsePackage.setAccessible(true);
+
+            Object pkg = parsePackage.invoke(parser, new File(apk), 0);
+
+            Field packageNameField = pkg.getClass().getDeclaredField("packageName");
+            packageNameField.setAccessible(true);
+            
+            packageName = (String) packageNameField.get(pkg);
+            LOGGER.i("Manager package name is " + packageName);
+        } catch (Throwable tr) {
+            LOGGER.w("Couldn't get manager package name from CLASSPATH", tr);
+        }
+        MANAGER_APPLICATION_ID = packageName;
+        REQUEST_PERMISSION_ACTION = MANAGER_APPLICATION_ID != null
+            ? MANAGER_APPLICATION_ID + ".intent.action.REQUEST_PERMISSION"
+            : null;
+
+    }
+
 
     public static void main(String[] args) {
         DdmHandleAppName.setAppName("shizuku_server", 0);
@@ -271,7 +305,7 @@ public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuCl
             return;
         }
 
-        Intent intent = new Intent(ServerConstants.REQUEST_PERMISSION_ACTION)
+        Intent intent = new Intent(REQUEST_PERMISSION_ACTION)
                 .setPackage(MANAGER_APPLICATION_ID)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT)
                 .putExtra("uid", callingUid)
