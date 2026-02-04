@@ -14,8 +14,6 @@ import rikka.core.util.BuildUtils.atLeast30
 import rikka.material.app.LocaleDelegate
 import rikka.shizuku.Shizuku
 
-lateinit var application: ShizukuApplication
-
 class ShizukuApplication : Application() {
 
     companion object {
@@ -31,6 +29,9 @@ class ShizukuApplication : Application() {
                 System.loadLibrary("adb")
             }
         }
+
+        lateinit var application: ShizukuApplication
+            private set
 
         lateinit var appContext: Context
             private set

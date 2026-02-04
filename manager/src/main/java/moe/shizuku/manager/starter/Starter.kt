@@ -6,18 +6,18 @@ import java.util.concurrent.TimeoutException
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.TimeoutCancellationException
-import moe.shizuku.manager.application
+import moe.shizuku.manager.ShizukuApplication
 import moe.shizuku.manager.utils.ShizukuStateMachine
+
+private val app = ShizukuApplication.application
 
 object Starter {
 
-    private val starterFile = File(application.applicationInfo.nativeLibraryDir, "libshizuku.so")
+    private val starterFile = File(app.applicationInfo.nativeLibraryDir, "libshizuku.so")
 
     val userCommand: String = starterFile.absolutePath
-
     val adbCommand = "adb shell $userCommand"
-
-    val internalCommand = "$userCommand --apk=${application.applicationInfo.sourceDir}"
+    val internalCommand = "$userCommand --apk=${app.applicationInfo.sourceDir}"
 
     val serviceStartedMessage = "Service started, this window will be automatically closed in 3 seconds"
 
