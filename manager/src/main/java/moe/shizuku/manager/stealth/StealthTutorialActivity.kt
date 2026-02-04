@@ -2,20 +2,27 @@ package moe.shizuku.manager.stealth
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.DocumentsContract
 import android.view.View
+import android.view.ViewGroup.MarginLayoutParams
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.core.content.FileProvider
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat.Type
 import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import androidx.core.widget.addTextChangedListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.io.File
 import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.databinding.StealthTutorialActivityBinding
@@ -23,7 +30,6 @@ import moe.shizuku.manager.utils.ApkUtils.buildApkFilename
 import rikka.core.util.ClipboardUtils
 
 class StealthTutorialActivity : AppBarActivity() {
-
     private val viewModel: StealthTutorialViewModel by viewModels()
     private lateinit var binding: StealthTutorialActivityBinding
 
@@ -34,65 +40,47 @@ class StealthTutorialActivity : AppBarActivity() {
 
         binding = StealthTutorialActivityBinding.inflate(layoutInflater, rootView, true)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-            window.navigationBarColor = Color.TRANSPARENT
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
-            window.isNavigationBarContrastEnforced = false
-
         onBackPressedDispatcher.addCallback(this, backCallback)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         with(binding) {
             viewModel.uiState.observe(this@StealthTutorialActivity) { state ->
-                fab.updateIcon(state)
+                fab.isVisible = state !is UiState.Loading
                 loadingFab.isVisible = state is UiState.Loading
 
                 when (state) {
-
                     is UiState.Idle -> {
-                        val isShizukuHidden = state.isShizukuHidden
+                        val action = state.action
 
-                        packageNameEditText.isEnabled = !isShizukuHidden
-                        if (isShizukuHidden) {
-                            packageNameEditText.setText(ORIGINAL_PACKAGE_NAME)
-                        } else {
-                            fab.setOnClickListener { onHide() }
-                            packageNameLayout.helperText = getString(R.string.stealth_package_name_helper_text)
-                        }
+                        packageNameContainer.isVisible = (action == Action.HIDE)
+                        if (packageNameContainer.isVisible) makeNavBarTransparent()
+                        ViewCompat.requestApplyInsets(root)
+
+                        fab.updateIcon(action)
+                        fab.setOnClickListener { onClick(action) }
                     }
 
                     is UiState.Loading -> null
 
                     is UiState.Success -> {
                         try {
-                            val docUri = DocumentsContract.buildDocumentUriUsingTree(
-                                outDir,
-                                DocumentsContract.getTreeDocumentId(outDir)
-                            )
+                            val apk = state.apk
+                            when (state.apkType) {
+                                ApkType.CLONE -> {
+                                    export(apk)
+                                    showUninstallDialog()
+                                }
 
-                            val doc = DocumentsContract.createDocument(
-                                contentResolver,
-                                docUri,
-                                "application/vnd.android.package-archive",
-                                buildApkFilename()
-                            )
-
-                            if (doc == null) throw Exception("Could not create file in selected folder")
-
-                            contentResolver.openOutputStream(doc)?.use { output ->
-                                state.apk.inputStream().use { input ->
-                                    input.copyTo(output)
+                                ApkType.STUB -> {
+                                    install(apk)
                                 }
                             }
-
-                            showUninstallDialog()
                         } catch (e: Exception) {
                             showErrorDialog(e)
                         }
                     }
 
                     is UiState.Error -> showErrorDialog(state.error)
-                    
                 }
             }
 
@@ -128,23 +116,37 @@ class StealthTutorialActivity : AppBarActivity() {
                         ).show()
                 }
             }
+
+            ViewCompat.setOnApplyWindowInsetsListener(root) { _, insets ->
+                val systemBarsInsets = insets.getInsets(Type.systemBars())
+                val fabBottomMargin =
+                    if (packageNameContainer.isVisible) -12.dp else (systemBarsInsets.bottom + 16.dp)
+                    
+                listOf(fab, loadingFab).forEach {
+                    it.updateLayoutParams<MarginLayoutParams> {
+                        bottomMargin = fabBottomMargin
+                    }
+                }
+                
+                insets
+            }
         }
     }
 
-    private fun onHide() {
-        // TO-DO: IF CLONE IS INSTALLED, THEN UNINSTALL THE STUB INSTEAD
-        val packageName =
-            binding.packageNameEditText.text
-                .toString()
-                .ifEmpty { null }
-        viewModel.setPackageName(packageName)
+    private fun onClick(action: Action) {
+        when (action) {
+            Action.HIDE -> {
+                val packageName =
+                    binding.packageNameEditText.text
+                        .toString()
+                        .ifEmpty { null }
+                viewModel.setPackageName(packageName)
 
-        showChooseFolderDialog()
-    }
-
-    private fun onUnhide() {
-        // TO-DO: IF THE STUB ISN'T INSTALLED, THEN CREATE THE STUB
-        showInstallDialog()
+                showChooseFolderDialog()
+            }
+            Action.UNHIDE -> viewModel.createApk(ApkType.STUB)
+            Action.REHIDE -> uninstall()
+        }
     }
 
     private fun showChooseFolderDialog() {
@@ -159,34 +161,67 @@ class StealthTutorialActivity : AppBarActivity() {
 
     private val pickFolderLauncher =
         registerForActivityResult(ActivityResultContracts.OpenDocumentTree()) { folder ->
-            if (folder == null) return@registerForActivityResult      
+            if (folder == null) return@registerForActivityResult
             outDir = folder
 
-            viewModel.createClone()
+            viewModel.createApk(ApkType.CLONE)
         }
+
+    private fun export(apk: File) {
+        val docUri =
+            DocumentsContract.buildDocumentUriUsingTree(
+                outDir,
+                DocumentsContract.getTreeDocumentId(outDir),
+            )
+
+        val doc =
+            DocumentsContract.createDocument(
+                contentResolver,
+                docUri,
+                "application/vnd.android.package-archive",
+                buildApkFilename(),
+            )
+
+        if (doc == null) throw Exception("Could not create file in selected folder")
+
+        contentResolver.openOutputStream(doc)?.use { output ->
+            apk.inputStream().use { input ->
+                input.copyTo(output)
+            }
+        }
+    }
+
+    private fun install(apk: File) {
+        val apkUri = FileProvider.getUriForFile(
+            this,
+            "$packageName.fileprovider",
+            apk
+        )
+
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            setDataAndType(apkUri, "application/vnd.android.package-archive")
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+
+        startActivity(intent)
+    }
+
+    private fun uninstall() {
+        val intent =
+            Intent(Intent.ACTION_DELETE).apply {
+                data = Uri.parse("package:$ORIGINAL_PACKAGE_NAME")
+            }
+        startActivity(intent)
+    }
 
     private fun showUninstallDialog() {
         MaterialAlertDialogBuilder(this)
             .setTitle("Uninstall required")
-            .setMessage("The system will now prompt you to uninstall the original version of Shizuku.")
+            .setMessage("The system will now prompt you to uninstall Shizuku. Then, install the clone.")
             .setPositiveButton("Uninstall") { _, _ ->
-                val intent = Intent(Intent.ACTION_DELETE).apply {
-                    data = Uri.parse("package:$ORIGINAL_PACKAGE_NAME")
-                }
-                startActivity(intent)
-            }
-            .setNegativeButton(android.R.string.cancel, null)
-            .show()
-    }
-
-    private fun showInstallDialog() {
-        MaterialAlertDialogBuilder(this)
-            .setTitle("Success")
-            .setMessage("The system will now prompt you to install the Shizuku stub.")
-            .setPositiveButton("Install") { _, _ ->
-                null
-            }
-            .setNegativeButton(android.R.string.cancel, null)
+                uninstall()
+            }.setNegativeButton(android.R.string.cancel, null)
             .show()
     }
 
@@ -198,15 +233,11 @@ class StealthTutorialActivity : AppBarActivity() {
             .show()
     }
 
-    private fun FloatingActionButton.updateIcon(state: UiState) {
-        isVisible = state !is UiState.Loading
-
-        if (state is UiState.Idle) {
-            val iconRes =
-                if (state.isShizukuHidden) R.drawable.ic_visibility_on_filled_24
-                else R.drawable.ic_visibility_off_filled_24
-            setImageResource(iconRes)
-        }
+    private fun FloatingActionButton.updateIcon(action: Action) {
+        val iconRes =
+            if (action == Action.UNHIDE) R.drawable.ic_visibility_on_filled_24
+            else R.drawable.ic_visibility_off_filled_24
+        setImageResource(iconRes)
     }
 
     private val backCallback =
@@ -229,6 +260,15 @@ class StealthTutorialActivity : AppBarActivity() {
         return true
     }
 
+    private fun makeNavBarTransparent() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+            window.navigationBarColor = Color.TRANSPARENT
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+            window.isNavigationBarContrastEnforced = false
+    }
+
+    val Int.dp: Int
+        get() = (this * Resources.getSystem().displayMetrics.density).toInt()
 }
 
 private const val codeSnippet = """
