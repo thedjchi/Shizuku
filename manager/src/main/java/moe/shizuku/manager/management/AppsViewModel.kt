@@ -31,7 +31,9 @@ class AppsViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 val list: MutableList<PackageInfo> = ArrayList()
                 var count = 0
-                for (pi in AuthorizationManager.getPackages()) {
+                for (pi in AuthorizationManager.getPackages(
+                    exclude = listOf(appContext.packageName)
+                )) {
                     list.add(pi)
                     if (AuthorizationManager.granted(pi.packageName, pi.applicationInfo!!.uid)) count++
                 }
