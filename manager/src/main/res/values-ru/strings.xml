@@ -159,8 +159,8 @@
     <string name="toast_shizuku_already_starting">Shizuku уже запускается в фоновом режиме</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
-    <string name="dark_theme_off">Светлая тема</string>
-    <string name="dark_theme_on">Тёмная тема</string>
+    <string name="dark_theme_off">Светлая</string>
+    <string name="dark_theme_on">Тёмная</string>
     <!-- About -->
     <string name="action_about">О приложении</string>
     <string name="about_dialog_button_close">Закрыть</string>
