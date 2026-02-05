@@ -47,11 +47,11 @@
     <string name="adb_error_stop_tcp">Не удалось остановить ADB через TCP</string>
     <string name="adb_pair_required">Пожалуйста, сперва пройдите процедуру сопряжения.</string>
     <string name="enable">Вкл</string>
-    <string name="development_settings">Параметры разработчика</string>
+    <string name="development_settings">Для разработчиков</string>
     <string name="notification_settings">Настройки уведомлений</string>
     <string name="adb_pairing_tutorial_title">Сопряжение Shizuku с вашим устройством</string>
     <string name="adb_pairing_tutorial_content_notification">Уведомление от Shizuku поможет завершить процедуру сопряжения.</string>
-    <string name="adb_pairing_tutorial_content_steps">Перейдите в «Параметры разработчика», затем включите «Отладка по USB» и «Отладка по Wi-Fi».</string>
+    <string name="adb_pairing_tutorial_content_steps">Перейдите в раздел «Для разработчиков», затем включите «Отладка по USB» и «Отладка по Wi-Fi».</string>
     <string name="adb_pairing_tutorial_content_enter_pairing_code">Нажмите на левую сторону раздела «Отладка по Wi-Fi», затем выберите «Подключить устройство с помощью кода подключения». Введите код в уведомлении, чтобы завершить сопряжение.</string>
     <string name="adb_pairing_tutorial_content_notification_blocked">Процедура сопряжения подразумевает взаимодействие с уведомлением от Shizuku. Для продолжения выдайте Shizuku разрешение на показ уведомлений.</string>
     <string name="adb_pairing_tutorial_content_miui">На оболочке MIUI может потребоваться сменить параметр в пункте системных настроек «Уведомления» – «Стиль уведомлений» на «Android».</string>
