@@ -93,7 +93,7 @@
     <string name="app_management_dialog_adb_is_limited_title">adb 权限受限</string>
     <string name="app_management_dialog_adb_is_limited_message"><![CDATA[这极有可能是你的设备制造商限制了 adb 的权限。<p><b><a href="%1$s">此文档</a></b>中可能有针对你的系统的解决方案。]]></string>
     <string name="app_management_item_summary_requires_root">* 需要以 root 执行的 Shizuku</string>
-    <string name="app_management_toggle_all">切换全部</string>
+    <string name="app_management_toggle_all">全选</string>
     <!-- Terminal -->
     <string name="home_terminal_title">在终端应用中使用 Shizuku</string>
     <string name="home_terminal_description">通过 Shizuku 在终端应用程序中运行 shell 命令</string>
