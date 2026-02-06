@@ -73,7 +73,10 @@
     <string name="home_app_management_empty">Các ứng dụng đã yêu cầu hoặc khai báo quyền Shizuku sẽ hiển thị ở đây.</string>
     <!-- Home - Automation -->
     <string name="home_automation_title">Kiểm soát Shizuku bằng ứng dụng tự động hóa</string>
+    <string name="home_automation_description">Các ứng dụng như Tasker và MacroDroid có thể tự động gửi ý định để bắt đầu / dừng Shizuku.</string>
+    <string name="home_automation_description_device_restriction">Để sử dụng ý định bắt đầu trên thiết bị của bạn, trước tiên bạn cần bật ADB qua TCP bằng cách chạy %1$s từ PC.</string>
     <string name="home_automation_button_view_intents">Xem ý định</string>
+    <string name="home_automation_bottom_sheet_intents">Ý định</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Hướng dẫn dành cho nhà phát triển</string>
     <string name="home_learn_more_description">Tìm hiểu cách phát triển với Shizuku hoặc tải ứng dụng bằng Shizuku</string>
