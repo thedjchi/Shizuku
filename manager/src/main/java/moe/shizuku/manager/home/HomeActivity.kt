@@ -24,6 +24,7 @@ import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.databinding.AboutDialogBinding
 import moe.shizuku.manager.databinding.HomeActivityBinding
+import moe.shizuku.manager.home.cards.*
 import moe.shizuku.manager.home.showAccessibilityDialog
 import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.management.AppsViewModel
@@ -34,20 +35,14 @@ import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.UpdateHelper
-import rikka.core.content.asActivity
-import rikka.core.ktx.unsafeLazy
 import rikka.lifecycle.Status
-import rikka.recyclerview.addEdgeSpacing
-import rikka.recyclerview.addItemSpacing
-import rikka.recyclerview.fixEdgeEffect
 import rikka.shizuku.Shizuku
 
 abstract class HomeActivity : AppBarActivity() {
 
     private val homeModel: HomeViewModel by viewModels()
     private val appsModel: AppsViewModel by viewModels()
-    private val adapter by unsafeLazy { HomeAdapter(homeModel, appsModel, lifecycleScope) }
-
+    
     private val stateListener: (ShizukuStateMachine.State) -> Unit = {
         if (ShizukuStateMachine.isRunning()) {
             checkServerStatus()
@@ -65,7 +60,7 @@ abstract class HomeActivity : AppBarActivity() {
         homeModel.serviceStatus.observe(this) {
             if (it.status == Status.SUCCESS) {
                 val status = homeModel.serviceStatus.value?.data ?: return@observe
-                adapter.updateData()
+                binding.statusCard.update(status)
                 ShizukuSettings.setLastLaunchMode(if (status.uid == 0) ShizukuSettings.LaunchMethod.ROOT else ShizukuSettings.LaunchMethod.ADB)
             }
         }
@@ -98,7 +93,7 @@ abstract class HomeActivity : AppBarActivity() {
 
         appsModel.grantedCount.observe(this) {
             if (it.status == Status.SUCCESS) {
-                adapter.updateData()
+                binding.authorizedAppsCard.update(it.data ?: 0)
             }
         }
 
@@ -120,21 +115,6 @@ abstract class HomeActivity : AppBarActivity() {
             }
         }
 
-        val recyclerView = binding.list
-        recyclerView.adapter = adapter
-        recyclerView.fixEdgeEffect()
-
-        val cardSpacing = resources.getDimension(R.dimen.card_spacing)
-        val marginHorizontal = resources.getDimension(R.dimen.margin_horizontal)
-        val marginVertical = resources.getDimension(R.dimen.margin_vertical)
-
-        val itemSpacing = cardSpacing / 2f
-        val edgeSpacingH = marginHorizontal
-        val edgeSpacingV = marginVertical - itemSpacing
-
-        recyclerView.addItemSpacing(top = itemSpacing, bottom = itemSpacing)
-        recyclerView.addEdgeSpacing(top = edgeSpacingV, bottom = edgeSpacingV, left = edgeSpacingH, right = edgeSpacingH)
-
         ShizukuStateMachine.addListener(stateListener)
     }
 
@@ -148,7 +128,7 @@ abstract class HomeActivity : AppBarActivity() {
             if (startWadb) {
                 val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
                 nm.cancel(AdbPairingService.NOTIFICATION_ID)
-                StartWirelessAdbViewHolder.start(this, lifecycleScope)
+                // StartWirelessAdbViewHolder.start(this, lifecycleScope)
             }
         }
     }

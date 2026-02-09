@@ -70,12 +70,11 @@
     <string name="home_root_button_restart">Restart</string>
 
     <!-- Home - Application management -->
-    <string name="home_app_management_title">Application management</string>
+    <string name="home_app_management_title">Authorized apps</string>
     <plurals name="home_app_management_authorized_apps_count">
-        <item quantity="one"><![CDATA[Authorized %d application]]></item>
-        <item quantity="other"><![CDATA[Authorized %d applications]]></item>
+        <item quantity="one">%1$d authorized app</item>
+        <item quantity="other">%1$d authorized apps</item>
     </plurals>
-    <string name="home_app_management_view_authorized_apps"><![CDATA[Tap to manage authorized apps]]></string>
     <string name="home_app_management_empty">Apps that have requested or declared the Shizuku permission will show here.</string>
 
     <!-- Home - Automation -->
