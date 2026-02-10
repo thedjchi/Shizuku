@@ -3,45 +3,11 @@
 
     <style name="AppTheme" parent="Theme.Light" />
 
-    <style name="Card">
-        <item name="android:duplicateParentState">true</item>
+    <style name="SectionHeader" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="Card.Small" parent="Card">
-        <item name="android:orientation">horizontal</item>
-        <item name="android:gravity">center_vertical</item>
-    </style>
-
-    <style name="Card.Large" parent="Card">
-        <item name="android:orientation">vertical</item>
-        <item name="android:showDividers">middle</item>
-        <item name="android:divider">@drawable/spacing_list_item_vertical</item>
-    </style>
-
-    <style name="CardButton" parent="Widget.Material3.Button">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/button_background_color</item>
-        <item name="android:textColor">@color/button_text_color</item>
-        <item name="iconTint">@color/button_text_color</item>
-        <item name="iconPadding">12dp</item>
-    </style>
-
-    <style name="CardTitle">
-        <item name="android:textAppearance">?textAppearanceBodyLarge</item>
-        <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <style name="CardSummary">
-        <item name="android:textAppearance">?textAppearanceBodyMedium</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
-    </style>
-
-    <style name="CardSummary.Brief" parent="CardSummary">
-        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
     </style>
 
     <style name="CardIcon">
@@ -52,6 +18,7 @@
         <item name="android:tintMode">src_in</item>
         <item name="android:backgroundTint">?colorPrimaryContainer</item>
         <item name="android:backgroundTintMode">src_in</item>
+        <item name="android:importantForAccessibility">no</item>
     </style>
 
     <style name="GrantPermissions" parent="@style/AppTheme">

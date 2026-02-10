@@ -93,7 +93,7 @@ abstract class HomeActivity : AppBarActivity() {
 
         appsModel.grantedCount.observe(this) {
             if (it.status == Status.SUCCESS) {
-                binding.authorizedAppsCard.update(it.data ?: 0)
+                // binding.authorizedAppsCard.update(it.data ?: 0)
             }
         }
 

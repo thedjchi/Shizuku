@@ -1,11 +1,12 @@
 package moe.shizuku.manager.home.cards
 
 import android.content.Context
+import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import com.google.android.material.card.MaterialCardView
+import android.widget.FrameLayout
 import moe.shizuku.manager.R
-import moe.shizuku.manager.databinding.HomeServerStatusBinding
+import moe.shizuku.manager.databinding.HomeStatusCardBinding
 import moe.shizuku.manager.model.ServiceStatus
 import rikka.html.text.HtmlCompat
 import rikka.html.text.toHtml
@@ -16,9 +17,10 @@ class StatusCard
     @JvmOverloads
     constructor(
         context: Context,
-    ) : MaterialCardView(context) {
+        attrs: AttributeSet? = null
+    ) : FrameLayout(context, attrs) {
         private val binding =
-            HomeServerStatusBinding.inflate(
+            HomeStatusCardBinding.inflate(
                 LayoutInflater.from(context),
                 this,
                 true,

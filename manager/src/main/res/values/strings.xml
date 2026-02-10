@@ -31,7 +31,7 @@
     <string name="dialog_adb_discovery_message_toggle_wireless_debugging">Please try to disable and enable \"Wireless debugging\" if it keeps searching.</string>
     <string name="dialog_adb_port">Port</string>
     <string name="dialog_adb_invalid_port">Port is an integer ranging from 1 to 65535.</string>
-    <string name="adb_pairing">Pairing</string>
+    <string name="adb_pairing">Pair</string>
     <string name="dialog_adb_pairing_title">Pair with device</string>
     <string name="dialog_adb_pairing_discovery">Searching for pairing service</string>
     <string name="dialog_adb_pairing_paring_code">Pairing code</string>
@@ -78,7 +78,7 @@
     <string name="home_app_management_empty">Apps that have requested or declared the Shizuku permission will show here.</string>
 
     <!-- Home - Automation -->
-    <string name="home_automation_title">Control Shizuku with automation apps</string>
+    <string name="home_automation_title">Intents</string>
     <string name="home_automation_description">Apps like Tasker and MacroDroid can send intents to start/stop Shizuku automatically.</string>
     <string name="home_automation_description_device_restriction">To use the start intent on your device, you first need to enable ADB over TCP by running %1$s from a PC.</string>
     <string name="home_automation_button_view_intents">View intents</string>
@@ -91,12 +91,7 @@
     <string name="home_automation_regenerate_token_message">You will need to reconfigure your intents with the new token.</string>
 
     <!-- Home - Stealth mode -->
-    <string name="home_stealth_title">Hide Shizuku from other apps</string>
-    <string name="home_stealth_description">Note: Enabling this feature may cause apps that rely on Shizuku to stop functioning correctly.</string>
-
-    <!-- Home - Learn more -->
-    <string name="home_learn_more_title">Developer guide</string>
-    <string name="home_learn_more_description">Learn how to develop with Shizuku</string>
+    <string name="home_stealth_title">Hidden from other apps</string>
 
     <!-- Home - Adb permissions limited -->
     <string name="home_adb_is_limited_title">You need to take an extra step</string>
@@ -116,7 +111,7 @@
     <string name="app_management_toggle_all">Toggle all</string>
 
     <!-- Terminal -->
-    <string name="home_terminal_title">Use Shizuku in terminal apps</string>
+    <string name="home_terminal_title">Terminal apps</string>
     <string name="home_terminal_description">Run shell commands in terminal apps through Shizuku</string>
     <string name="terminal_tutorial_miui">Users have reported that MIUI breaks the Storage Access Framework, which is used by the export function.</string>
     <string name="terminal_tutorial_miui_2">If you are using MIUI, you may have to extract the file from the assets folder in Shizuku\'s APK.</string>

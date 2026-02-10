@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?materialCardViewFilledStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="true"
+    android:descendantFocusability="afterDescendants"
+    app:cardBackgroundColor="?colorSurfaceContainerLow"
+    app:cardCornerRadius="28dp"
+    app:contentPadding="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/CardIcon"
+            android:id="@android:id/icon"
+            android:src="@drawable/ic_server_error_24dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonBarrier" />
+
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textAppearance="?textAppearanceTitleLarge"
+            android:textColor="?android:textColorPrimary"
+            android:maxLines="2"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@android:id/icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@android:id/summary" />
+
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?textAppearanceBodyMedium"
+            android:textColor="?android:textColorSecondary"
+            app:layout_constraintStart_toStartOf="@android:id/title"
+            app:layout_constraintEnd_toEndOf="@android:id/title"
+            app:layout_constraintTop_toBottomOf="@android:id/title"
+            app:layout_constraintBottom_toTopOf="@id/buttonBarrier" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/buttonBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="icon,summary" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/buttonRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:constraint_referenced_ids="buttonPair,buttonStart,buttonViewCommand"
+            app:flow_wrapMode="chain"
+            app:flow_horizontalGap="8dp"
+            app:flow_verticalGap="4dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_verticalStyle="packed"
+            app:flow_horizontalBias="0"
+            app:layout_constraintTop_toBottomOf="@id/buttonBarrier"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            style="?materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPair"
+            android:text="@string/adb_pairing"
+            app:icon="@drawable/ic_baseline_link_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_root_button_start"
+            app:icon="@drawable/ic_server_start_24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonViewCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_adb_button_view_command"
+            app:icon="@drawable/ic_code_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -2,6 +2,7 @@ package moe.shizuku.manager.home.cards
 
 import android.content.Context
 import android.os.Build
+import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
@@ -22,7 +23,8 @@ class IntentsCard
     @JvmOverloads
     constructor(
         context: Context,
-    ) : BaseCard(context) {
+        attrs: AttributeSet? = null
+    ) : BaseCard(context, attrs) {
         private data class Field(
             val layout: TextInputLayout,
             val input: TextInputEditText,

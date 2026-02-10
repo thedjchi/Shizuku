@@ -12,15 +12,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin_horizontal"
+        android:paddingVertical="@dimen/margin_vertical"
         android:orientation="vertical"
         android:showDividers="middle"
         android:divider="@drawable/spacing_card_vertical">
 
         <TextView
-            style="?textAppearanceTitleMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            style="@style/SectionHeader"
             android:text="Status" />
 
         <moe.shizuku.manager.home.cards.StatusCard
@@ -33,10 +32,8 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            style="?textAppearanceTitleMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            style="@style/SectionHeader"
+            android:layout_marginTop="8dp"
             android:text="Integrations" />
 
         <moe.shizuku.manager.home.cards.AuthorizedAppsCard

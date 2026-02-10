@@ -2,8 +2,9 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="?attr/materialCardViewFilledStyle"
-    android:checkable="true"
+    style="?materialCardViewFilledStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
     android:descendantFocusability="afterDescendants"
@@ -11,41 +12,54 @@
     app:cardCornerRadius="28dp"
     app:contentPadding="24dp">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        style="@style/Card.Small">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ImageView
-            android:id="@android:id/icon"
             style="@style/CardIcon"
-            android:duplicateParentState="true"
-            android:importantForAccessibility="no"
-            android:src="@drawable/ic_settings_outline_24dp" />
+            android:id="@android:id/icon"
+            android:src="@drawable/ic_settings_outline_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/home_icon_padding"
-            android:duplicateParentState="true"
-            android:orientation="vertical">
+            android:layout_marginHorizontal="16dp"
+            android:textAppearance="?textAppearanceTitleMedium"
+            android:textColor="?android:textColorPrimary"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@android:id/icon"
+            app:layout_constraintEnd_toStartOf="@id/chevron"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@android:id/summary" />
 
-            <TextView
-                android:id="@android:id/title"
-                style="@style/CardTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:duplicateParentState="true" />
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceBodyMedium"
+            android:textColor="?android:textColorSecondary"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@android:id/title"
+            app:layout_constraintEnd_toEndOf="@android:id/title"
+            app:layout_constraintTop_toBottomOf="@android:id/title"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-            <TextView
-                android:id="@android:id/summary"
-                style="@style/CardTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:duplicateParentState="true"
-                android:visibility="gone" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chevron"
+            android:src="@drawable/ic_chevron_forward"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

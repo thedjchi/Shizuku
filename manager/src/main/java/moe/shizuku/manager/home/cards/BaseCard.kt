@@ -1,16 +1,18 @@
 package moe.shizuku.manager.home.cards
 
 import android.content.Context
+import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import com.google.android.material.card.MaterialCardView
+import android.widget.FrameLayout
 import moe.shizuku.manager.databinding.HomeItemContainerBinding
 
 abstract class BaseCard
     @JvmOverloads
     constructor(
         context: Context,
-    ) : MaterialCardView(context), View.OnClickListener {
+        attrs: AttributeSet? = null
+    ) : FrameLayout(context, attrs), View.OnClickListener {
         private val binding =
             HomeItemContainerBinding.inflate(
                 LayoutInflater.from(context),
