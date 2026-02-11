@@ -24,7 +24,7 @@ abstract class BaseCard
         protected abstract val cardIcon: Int
 
         init {
-            setOnClickListener(this)
+            binding.root.setOnClickListener(this)
             setTitle(cardTitle)
             setIcon(cardIcon)
         }
