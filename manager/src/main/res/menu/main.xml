@@ -5,16 +5,12 @@
         android:id="@+id/action_settings"
         android:icon="@drawable/ic_action_settings_24dp"
         android:title="@string/settings_title"
-        android:showAsAction="ifRoom"/>
-
-    <item
-        android:id="@+id/action_stop"
-        android:title="@string/action_stop"
-        android:showAsAction="never"/>
+        android:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_about"
-        android:title="@string/action_about"
-        android:showAsAction="never"/>
+        android:icon="@drawable/ic_outline_info_24"
+        android:title="@string/about"
+        android:showAsAction="ifRoom" />
 
 </menu>

@@ -259,7 +259,7 @@ class AdbPairingService : Service() {
 
         Notification.Action.Builder(
             null,
-            getString(R.string.home_root_button_start),
+            getString(R.string.start),
             pendingIntent
         )
             .build()

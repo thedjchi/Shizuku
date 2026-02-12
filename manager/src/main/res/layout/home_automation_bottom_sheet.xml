@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textAppearance="?textAppearanceTitleLarge"
-            android:text="@string/home_automation_bottom_sheet_intents" />
+            android:text="@string/intents" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/buttonGroup"
@@ -51,7 +51,7 @@
             android:id="@+id/actionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_automation_bottom_sheet_label_action">
+            android:hint="@string/intent_action">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/actionEditText"
@@ -67,7 +67,7 @@
             android:id="@+id/packageLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_automation_bottom_sheet_label_package">
+            android:hint="@string/intent_package">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/packageEditText"
@@ -83,7 +83,7 @@
             android:id="@+id/targetLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_automation_bottom_sheet_label_target">
+            android:hint="@string/intent_target">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/targetEditText"
@@ -99,7 +99,7 @@
             android:id="@+id/extrasLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/home_automation_bottom_sheet_label_extras"
+            android:hint="@string/intent_extras"
             android:maxLines="1"
             app:startIconCheckable="true"
             app:startIconDrawable="@drawable/ic_autorenew"

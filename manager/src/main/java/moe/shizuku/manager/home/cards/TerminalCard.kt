@@ -11,15 +11,14 @@ class TerminalCard
     @JvmOverloads
     constructor(
         context: Context,
-        attrs: AttributeSet? = null
+        attrs: AttributeSet? = null,
     ) : BaseCard(context, attrs) {
+        override val cardTitle: String
+            get() = context.getString(R.string.terminal_apps)
+        override val cardIcon: Int
+            get() = R.drawable.ic_terminal_24
 
-    override val cardTitle: String
-        get() = context.getString(R.string.home_terminal_title)
-    override val cardIcon: Int
-        get() = R.drawable.ic_terminal_24
-
-    override fun onClick(v: View) {
-        v.context.startActivity(Intent(v.context, ShellTutorialActivity::class.java))
+        override fun onClick(v: View) {
+            v.context.startActivity(Intent(v.context, ShellTutorialActivity::class.java))
+        }
     }
-}

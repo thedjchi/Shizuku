@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/home_app_management_empty"
+        android:text="@string/authorized_apps_empty"
         android:gravity="center"
         android:textAppearance="?textAppearanceBodyLarge" />
 

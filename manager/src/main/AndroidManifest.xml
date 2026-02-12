@@ -93,16 +93,16 @@
         </activity>
         <activity
             android:name=".management.ApplicationManagementActivity"
-            android:label="@string/home_app_management_title" />
+            android:label="@string/authorized_apps" />
         <activity
             android:name=".adb.AdbPairingTutorialActivity"
-            android:label="@string/adb_pairing" />
+            android:label="@string/pair" />
         <activity
             android:name=".shell.ShellTutorialActivity"
-            android:label="@string/home_terminal_title" />
+            android:label="@string/terminal_apps" />
         <activity
             android:name=".stealth.StealthTutorialActivity"
-            android:label="@string/home_stealth_title"
+            android:label="@string/stealth_mode"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".settings.SettingsActivity"

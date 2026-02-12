@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/app_management_toggle_all"
+            android:text="@string/toggle_all"
             android:textAppearance="?textAppearanceBodyLarge"
             android:textColor="?colorOnSecondaryContainer"
             android:clickable="false"

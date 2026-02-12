@@ -45,7 +45,7 @@
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/version_name"
         app:layout_constraintStart_toStartOf="@id/version_name"
-        tools:text="@string/about_view_source_code" />
+        tools:text="@string/view_source_code" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUpdate"
@@ -76,7 +76,6 @@
         android:layout_marginEnd="-8dp"
         android:src="@drawable/ic_close_24"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/about_dialog_button_close"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

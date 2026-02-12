@@ -23,12 +23,12 @@ import androidx.core.view.updatePadding
 import androidx.core.widget.addTextChangedListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-import java.io.File
 import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.databinding.StealthTutorialActivityBinding
 import moe.shizuku.manager.utils.ApkUtils.*
 import rikka.core.util.ClipboardUtils
+import java.io.File
 
 class StealthTutorialActivity : AppBarActivity() {
     private val viewModel: StealthTutorialViewModel by viewModels()
@@ -61,7 +61,9 @@ class StealthTutorialActivity : AppBarActivity() {
                         fab.setOnClickListener { onClick(action) }
                     }
 
-                    is UiState.Loading -> null
+                    is UiState.Loading -> {
+                        null
+                    }
 
                     is UiState.Pending -> {
                         try {
@@ -81,7 +83,10 @@ class StealthTutorialActivity : AppBarActivity() {
                             showErrorDialog(e)
                         }
                     }
-                    is UiState.Error -> showErrorDialog(state.error)
+
+                    is UiState.Error -> {
+                        showErrorDialog(state.error)
+                    }
                 }
             }
 
@@ -103,32 +108,17 @@ class StealthTutorialActivity : AppBarActivity() {
                 }
             }
 
-            compatibilityCard.setOnClickListener { v: View ->
-                val context = v.context
-                if (
-                    ClipboardUtils.put(context, codeSnippet) &&
-                    Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2
-                ) {
-                    Toast
-                        .makeText(
-                            context,
-                            context.getString(R.string.toast_copied_to_clipboard),
-                            Toast.LENGTH_SHORT,
-                        ).show()
-                }
-            }
-
             ViewCompat.setOnApplyWindowInsetsListener(root) { _, insets ->
                 val systemBarsInsets = insets.getInsets(Type.systemBars())
                 val fabBottomMargin =
                     if (packageNameContainer.isVisible) -12.dp else (systemBarsInsets.bottom + 16.dp)
-                    
+
                 listOf(fab, loadingFab).forEach {
                     it.updateLayoutParams<MarginLayoutParams> {
                         bottomMargin = fabBottomMargin
                     }
                 }
-                
+
                 insets
             }
 
@@ -156,17 +146,23 @@ class StealthTutorialActivity : AppBarActivity() {
 
                 showChooseFolderDialog()
             }
-            Action.UNHIDE -> viewModel.createApk(ApkType.STUB)
-            Action.REHIDE -> uninstallPackage(ORIGINAL_PACKAGE_NAME)  { isSuccess, msg -> handleInstallerResult(isSuccess, msg) }
+
+            Action.UNHIDE -> {
+                viewModel.createApk(ApkType.STUB)
+            }
+
+            Action.REHIDE -> {
+                uninstallPackage(ORIGINAL_PACKAGE_NAME) { isSuccess, msg -> handleInstallerResult(isSuccess, msg) }
+            }
         }
     }
 
     private fun showChooseFolderDialog() {
         MaterialAlertDialogBuilder(this)
-            .setTitle(R.string.choose_folder)
+            .setTitle(R.string.stealth_choose_folder)
             .setMessage(R.string.stealth_choose_folder_message)
             .setNegativeButton(android.R.string.cancel) { _, _ -> }
-            .setPositiveButton(R.string.choose_folder) { _, _ ->
+            .setPositiveButton(R.string.stealth_choose_folder) { _, _ ->
                 pickFolderLauncher.launch(null)
             }.show()
     }
@@ -191,7 +187,7 @@ class StealthTutorialActivity : AppBarActivity() {
                 contentResolver,
                 docUri,
                 "application/vnd.android.package-archive",
-                buildApkFilename()
+                buildApkFilename(),
             )
 
         if (doc == null) throw Exception("Could not create file in selected folder")
@@ -207,21 +203,27 @@ class StealthTutorialActivity : AppBarActivity() {
         MaterialAlertDialogBuilder(this)
             .setTitle(R.string.stealth_uninstall_required)
             .setMessage(R.string.stealth_uninstall_message)
-            .setPositiveButton(R.string.stealth_uninstall) { _, _ ->
+            .setPositiveButton(R.string.uninstall) { _, _ ->
                 uninstallPackage(packageName)
             }.setNegativeButton(android.R.string.cancel, null)
             .show()
     }
 
-    private fun handleInstallerResult(isSuccess: Boolean, msg: String?) {
+    private fun handleInstallerResult(
+        isSuccess: Boolean,
+        msg: String?,
+    ) {
         viewModel.refresh()
         if (isSuccess) {
-            Toast.makeText(
-                this,
-                getString(R.string.success),
-                Toast.LENGTH_SHORT,
-            ).show()
-        } else showErrorDialog(Exception(msg ?: "Unknown error"))
+            Toast
+                .makeText(
+                    this,
+                    getString(R.string.success),
+                    Toast.LENGTH_SHORT,
+                ).show()
+        } else {
+            showErrorDialog(Exception(msg ?: "Unknown error"))
+        }
     }
 
     private fun showErrorDialog(error: Exception) {
@@ -235,10 +237,10 @@ class StealthTutorialActivity : AppBarActivity() {
     private fun ExtendedFloatingActionButton.update(action: Action) {
         if (action == Action.UNHIDE) {
             setIconResource(R.drawable.ic_visibility_on_filled_24)
-            text = getString(R.string.stealth_unhide)
-        } else{
+            text = getString(R.string.unhide)
+        } else {
             setIconResource(R.drawable.ic_visibility_off_filled_24)
-            text = getString(R.string.stealth_hide)
+            text = getString(R.string.hide)
         }
     }
 
@@ -264,28 +266,14 @@ class StealthTutorialActivity : AppBarActivity() {
     }
 
     private fun makeNavBarTransparent() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             window.navigationBarColor = Color.TRANSPARENT
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             window.isNavigationBarContrastEnforced = false
+        }
     }
 
     val Int.dp: Int
         get() = (this * Resources.getSystem().displayMetrics.density).toInt()
 }
-
-private const val codeSnippet = """
-import android.content.Context
-import rikka.shizuku.ShizukuProvider
-
-private fun Context.shizukuPermission() =
-    runCatching {
-        packageManager.getPermissionInfo(ShizukuProvider.PERMISSION, 0)
-    }.getOrNull()
-
-fun Context.isShizukuInstalled() =
-    shizukuPermission() != null
-
-fun Context.getShizukuPackageName() =
-    shizukuPermission()?.packageName
-"""

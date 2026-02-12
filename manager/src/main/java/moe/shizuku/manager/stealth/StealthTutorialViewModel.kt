@@ -21,7 +21,7 @@ sealed class UiState {
 
     data class Pending(
         val apk: File,
-        val apkType: ApkType
+        val apkType: ApkType,
     ) : UiState()
 
     data class Error(
@@ -32,12 +32,12 @@ sealed class UiState {
 enum class Action {
     HIDE,
     UNHIDE,
-    REHIDE
+    REHIDE,
 }
 
 enum class ApkType {
     CLONE,
-    STUB
+    STUB,
 }
 
 class StealthTutorialViewModel(
@@ -62,9 +62,13 @@ class StealthTutorialViewModel(
 
     fun refresh() {
         val action =
-            if (isShizukuHidden()) Action.UNHIDE
-            else if (app.packageName == ORIGINAL_PACKAGE_NAME) Action.HIDE
-            else Action.REHIDE
+            if (isShizukuHidden()) {
+                Action.UNHIDE
+            } else if (app.packageName == ORIGINAL_PACKAGE_NAME) {
+                Action.HIDE
+            } else {
+                Action.REHIDE
+            }
         _uiState.value = UiState.Idle(action)
     }
 
@@ -83,7 +87,10 @@ class StealthTutorialViewModel(
                             File(app.applicationInfo.sourceDir)
                                 .changePackageName(_packageName!!, maybeCreateSigningKey = true)
                         }
-                        ApkType.STUB -> createStubApk(ORIGINAL_PACKAGE_NAME)
+
+                        ApkType.STUB -> {
+                            createStubApk(ORIGINAL_PACKAGE_NAME)
+                        }
                     }
 
                 _uiState.postValue(UiState.Pending(apk, apkType))
@@ -102,21 +109,29 @@ class StealthTutorialViewModel(
 
 fun String.validatePackageName(): Int? =
     when {
-        this.isBlank() -> null
+        this.isBlank() -> {
+            null
+        }
 
-        !this.matches(Regex("^[a-zA-Z0-9.]+$")) ->
-            R.string.stealth_error_invalid_characters
+        !this.matches(Regex("^[a-zA-Z0-9.]+$")) -> {
+            R.string.package_name_error_invalid_characters
+        }
 
-        this.split('.').any { it.firstOrNull()?.isDigit() == true } ->
-            R.string.stealth_error_segment_starts_with_number
+        this.split('.').any { it.firstOrNull()?.isDigit() == true } -> {
+            R.string.package_name_error_segment_starts_with_number
+        }
 
-        this.split('.').size < 2 ->
-            R.string.stealth_error_needs_two_segments
+        this.split('.').size < 2 -> {
+            R.string.package_name_error_needs_two_segments
+        }
 
-        this.endsWith('.') ->
-            R.string.stealth_error_ends_with_period
+        this.endsWith('.') -> {
+            R.string.package_name_error_ends_with_period
+        }
 
-        else -> null
+        else -> {
+            null
+        }
     }
 
 private fun String.appendRandomSuffix(): String {

@@ -139,16 +139,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="@string/stealth_info_rish"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnSecondaryContainer" />
-
-                    <TextView
-                        style="@style/TerminalTutorialText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/stealth_info_intents"
+                        android:text="@string/stealth_info_reconfigure_details"
                         android:textAppearance="?textAppearanceBodyMedium"
                         android:textColor="?colorOnSecondaryContainer" />
 

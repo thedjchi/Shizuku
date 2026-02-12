@@ -20,7 +20,7 @@
 
         <TextView
             style="@style/SectionHeader"
-            android:text="Status" />
+            android:text="@string/home_status" />
 
         <moe.shizuku.manager.home.cards.StatusCard
             android:id="@+id/statusCard"
@@ -34,7 +34,7 @@
         <TextView
             style="@style/SectionHeader"
             android:layout_marginTop="8dp"
-            android:text="Integrations" />
+            android:text="@string/integrations" />
 
         <moe.shizuku.manager.home.cards.AuthorizedAppsCard
             android:id="@+id/authorizedAppsCard"

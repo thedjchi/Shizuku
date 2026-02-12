@@ -12,7 +12,7 @@
 // binding.button1.setOnClickListener { v: View ->
 //     val context = v.context
 //     MaterialAlertDialogBuilder(context)
-//         .setTitle(R.string.home_adb_button_view_command)
+//         .setTitle(R.string.view_command)
 //         .setMessage(
 //             HtmlCompat.fromHtml(
 //                 context.getString(
@@ -21,7 +21,7 @@
 //                 )
 //             )
 //         )
-//         .setPositiveButton(R.string.home_adb_dialog_view_command_copy_button) { _, _ ->
+//         .setPositiveButton(R.string.copy) { _, _ ->
 //             if (ClipboardUtils.put(context, Starter.adbCommand)) {
 //                 Toast.makeText(
 //                     context,
@@ -31,13 +31,13 @@
 //             }
 //         }
 //         .setNegativeButton(android.R.string.cancel, null)
-//         .setNeutralButton(R.string.home_adb_dialog_view_command_button_send) { _, _ ->
+//         .setNeutralButton(R.string.send) { _, _ ->
 //             var intent = Intent(Intent.ACTION_SEND)
 //             intent.type = "text/plain"
 //             intent.putExtra(Intent.EXTRA_TEXT, Starter.adbCommand)
 //             intent = Intent.createChooser(
 //                 intent,
-//                 context.getString(R.string.home_adb_dialog_view_command_button_send)
+//                 context.getString(R.string.send)
 //             )
 //             context.startActivity(intent)
 //         }

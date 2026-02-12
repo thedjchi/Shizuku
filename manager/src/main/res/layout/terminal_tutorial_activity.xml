@@ -19,7 +19,6 @@
         android:paddingVertical="@dimen/margin_vertical">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@android:id/button2"
             style="@style/DialogCard">
 
             <ImageView
@@ -40,7 +39,7 @@
                 android:layout_marginStart="36dp"
                 android:duplicateParentState="true"
                 android:textColor="?colorOnSecondaryContainer"
-                tools:text="@string/rish_description" />
+                android:text="@string/terminal_apps_description" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -126,21 +125,12 @@
                     android:layout_height="wrap_content"
                     tools:text="@string/terminal_tutorial_1" />
 
-                <TextView
-                    android:id="@+id/summary1"
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8sp"
-                    android:text="@string/terminal_tutorial_1_description"
-                    android:textColor="?android:textColorSecondary" />
-
                 <Button
                     android:id="@android:id/button1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/terminal_export_files"
+                    android:text="@string/export"
                     android:textAllCaps="false" />
 
             </LinearLayout>
@@ -195,7 +185,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8sp"
                     android:textColor="?android:textColorSecondary"
-                    tools:text="@string/terminal_tutorial_2_description" />
+                    tools:text="@string/terminal_tutorial_2_tip" />
 
             </LinearLayout>
 

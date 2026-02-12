@@ -39,10 +39,9 @@ import rikka.lifecycle.Status
 import rikka.shizuku.Shizuku
 
 abstract class HomeActivity : AppBarActivity() {
-
     private val homeModel: HomeViewModel by viewModels()
     private val appsModel: AppsViewModel by viewModels()
-    
+
     private val stateListener: (ShizukuStateMachine.State) -> Unit = {
         if (ShizukuStateMachine.isRunning()) {
             checkServerStatus()
@@ -61,33 +60,47 @@ abstract class HomeActivity : AppBarActivity() {
             if (it.status == Status.SUCCESS) {
                 val status = homeModel.serviceStatus.value?.data ?: return@observe
                 binding.statusCard.update(status)
-                ShizukuSettings.setLastLaunchMode(if (status.uid == 0) ShizukuSettings.LaunchMethod.ROOT else ShizukuSettings.LaunchMethod.ADB)
+                ShizukuSettings.setLastLaunchMode(
+                    if (status.uid ==
+                        0
+                    ) {
+                        ShizukuSettings.LaunchMethod.ROOT
+                    } else {
+                        ShizukuSettings.LaunchMethod.ADB
+                    },
+                )
             }
         }
 
         homeModel.shouldShowRebootDialog.observe(this) { shouldShow ->
-            if (shouldShow) showExitDialog(
-                getString(R.string.home_dialog_reboot_required_title),
-                getString(R.string.home_dialog_reboot_required_message)
-            )
+            if (shouldShow) {
+                showExitDialog(
+                    getString(R.string.home_dialog_reboot_required_title),
+                    getString(R.string.home_dialog_reboot_required_message),
+                )
+            }
         }
 
         homeModel.shouldShowUninstallDialog.observe(this) { shouldShow ->
-            if (shouldShow) showExitDialog(
-                getString(R.string.home_dialog_duplicate_app_detected_title),
-                getString(R.string.home_dialog_duplicate_app_detected_message)
-            )
+            if (shouldShow) {
+                showExitDialog(
+                    getString(R.string.home_dialog_duplicate_app_detected_title),
+                    getString(R.string.home_dialog_duplicate_app_detected_message),
+                )
+            }
         }
 
         homeModel.shouldShowBatteryOptimizationSnackbar.observe(this) { shouldShow ->
-            if (shouldShow) SnackbarHelper.show(
-                this,
-                binding.root,
-                msg = getString(R.string.snackbar_battery_optimization_home),
-                duration = Snackbar.LENGTH_INDEFINITE,
-                actionText = getString(R.string.snackbar_action_fix),
-                action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) }
-            )
+            if (shouldShow) {
+                SnackbarHelper.show(
+                    this,
+                    binding.root,
+                    msg = getString(R.string.snackbar_battery_optimization_home),
+                    duration = Snackbar.LENGTH_INDEFINITE,
+                    actionText = getString(R.string.snackbar_action_fix),
+                    action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) },
+                )
+            }
         }
         homeModel.checkBatteryOptimization()
 
@@ -109,7 +122,7 @@ abstract class HomeActivity : AppBarActivity() {
                         lifecycleScope.launch {
                             UpdateHelper.update()
                         }
-                    }
+                    },
                 )
                 UpdateHelper.updateLastPromptedVersion()
             }
@@ -144,15 +157,18 @@ abstract class HomeActivity : AppBarActivity() {
         SnackbarHelper.dismiss()
     }
 
-    private fun showExitDialog(title: String, message: String) {
-        val dialog = MaterialAlertDialogBuilder(this)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveButton(R.string.home_dialog_button_exit, null)
-            .setOnDismissListener {
-                this.finishAffinity()
-            }
-            .create()
+    private fun showExitDialog(
+        title: String,
+        message: String,
+    ) {
+        val dialog =
+            MaterialAlertDialogBuilder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(R.string.exit, null)
+                .setOnDismissListener {
+                    this.finishAffinity()
+                }.create()
 
         dialog.setCanceledOnTouchOutside(false)
         dialog.show()
@@ -172,22 +188,23 @@ abstract class HomeActivity : AppBarActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean =
+        when (item.itemId) {
             R.id.action_about -> {
                 val binding = AboutDialogBinding.inflate(LayoutInflater.from(this), null, false)
                 binding.sourceCode.movementMethod = LinkMovementMethod.getInstance()
-                binding.sourceCode.text = getString(
-                    R.string.about_view_source_code,
-                    "<b><a href=\"https://github.com/thedjchi/Shizuku\">GitHub</a></b>"
-                ).toHtml()
+                binding.sourceCode.text =
+                    getString(
+                        R.string.view_source_code,
+                        "<b><a href=\"https://github.com/thedjchi/Shizuku\">GitHub</a></b>",
+                    ).toHtml()
                 binding.icon.setImageBitmap(
                     AppIconCache.getOrLoadBitmap(
                         this,
                         applicationInfo,
                         Process.myUid() / 100000,
-                        resources.getDimensionPixelOffset(R.dimen.default_app_icon_size)
-                    )
+                        resources.getDimensionPixelOffset(R.dimen.default_app_icon_size),
+                    ),
                 )
                 binding.versionName.text = packageManager.getPackageInfo(packageName, 0).versionName
 
@@ -201,41 +218,44 @@ abstract class HomeActivity : AppBarActivity() {
                     CustomTabsHelper.launchUrlOrCopy(this, "https://www.buymeacoffee.com/thedjchi")
                 }
 
-                val dialog = MaterialAlertDialogBuilder(this)
-                    .setView(binding.root)
-                    .create()
+                val dialog =
+                    MaterialAlertDialogBuilder(this)
+                        .setView(binding.root)
+                        .create()
 
                 binding.btnClose.setOnClickListener {
                     dialog.dismiss()
                 }
-                
+
                 dialog.show()
                 true
             }
+
             R.id.action_stop -> {
                 if (ShizukuStateMachine.isRunning()) {
                     MaterialAlertDialogBuilder(this)
-                        .setMessage(R.string.dialog_stop_message)
+                        .setMessage(R.string.stop_dialog_message)
                         .setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
                             ShizukuStateMachine.set(ShizukuStateMachine.State.STOPPING)
                             runCatching { Shizuku.exit() }
-                        }
-                        .setNegativeButton(android.R.string.cancel, null)
+                        }.setNegativeButton(android.R.string.cancel, null)
                         .show()
                 }
                 true
             }
+
             R.id.action_settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
                 true
             }
-            else -> super.onOptionsItemSelected(item)
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
-    }
 
     companion object {
         const val EXTRA_SHOW_PAIRING_DIALOG = "show_pairing_dialog"
         const val EXTRA_START_SERVICE_VIA_WADB = "start_service_via_wadb"
     }
-
 }

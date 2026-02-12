@@ -17,7 +17,7 @@ class StatusCard
     @JvmOverloads
     constructor(
         context: Context,
-        attrs: AttributeSet? = null
+        attrs: AttributeSet? = null,
     ) : FrameLayout(context, attrs) {
         private val binding =
             HomeStatusCardBinding.inflate(
@@ -27,10 +27,11 @@ class StatusCard
             )
 
         private val cardTitle: String
-            get() = context.getString(
-                R.string.home_status_service_not_running,
-                context.getString(R.string.app_name)
-            )
+            get() =
+                context.getString(
+                    R.string.status_stopped,
+                    context.getString(R.string.app_name),
+                )
         private val cardIcon: Int
             get() = R.drawable.ic_server_error_24dp
 
@@ -52,7 +53,7 @@ class StatusCard
             }
         }
 
-        private  fun setIcon(resId: Int) {
+        private fun setIcon(resId: Int) {
             binding.icon.setImageResource(resId)
         }
 
@@ -69,23 +70,29 @@ class StatusCard
             val user = if (isRoot) "root" else "adb"
             val title =
                 if (ok) {
-                    context.getString(R.string.home_status_service_is_running, context.getString(R.string.app_name))
+                    context.getString(R.string.status_running, context.getString(R.string.app_name))
                 } else {
-                    context.getString(R.string.home_status_service_not_running, context.getString(R.string.app_name))
+                    context.getString(R.string.status_stopped, context.getString(R.string.app_name))
                 }
+            val versionStr =
+                context.getString(
+                    R.string.status_version,
+                    "$apiVersion.$patchVersion",
+                    user,
+                )
+            val updateStr =
+                context.getString(
+                    R.string.status_version_update,
+                    "${Shizuku.getLatestServiceVersion()}.${ShizukuApiConstants.SERVER_PATCH_VERSION}",
+                )
             val summary =
                 if (ok) {
                     if (apiVersion != Shizuku.getLatestServiceVersion() ||
                         status.patchVersion != ShizukuApiConstants.SERVER_PATCH_VERSION
                     ) {
-                        context.getString(
-                            R.string.home_status_service_version_update,
-                            user,
-                            "$apiVersion.$patchVersion",
-                            "${Shizuku.getLatestServiceVersion()}.${ShizukuApiConstants.SERVER_PATCH_VERSION}",
-                        )
+                        "$versionStr. $updateStr"
                     } else {
-                        context.getString(R.string.home_status_service_version, user, "$apiVersion.$patchVersion")
+                        versionStr
                     }
                 } else {
                     ""

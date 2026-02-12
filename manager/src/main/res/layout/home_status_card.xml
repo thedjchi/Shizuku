@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonPair"
-            android:text="@string/adb_pairing"
+            android:text="@string/pair"
             app:icon="@drawable/ic_baseline_link_24" />
 
         <com.google.android.material.button.MaterialButton
@@ -93,7 +93,7 @@
             android:id="@+id/buttonViewCommand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/home_adb_button_view_command"
+            android:text="@string/view_command"
             app:icon="@drawable/ic_code_24dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

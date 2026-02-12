@@ -23,7 +23,7 @@ class IntentsCard
     @JvmOverloads
     constructor(
         context: Context,
-        attrs: AttributeSet? = null
+        attrs: AttributeSet? = null,
     ) : BaseCard(context, attrs) {
         private data class Field(
             val layout: TextInputLayout,
@@ -32,7 +32,7 @@ class IntentsCard
         )
 
         override val cardTitle: String
-            get() = context.getString(R.string.home_automation_title)
+            get() = context.getString(R.string.intents)
         override val cardIcon: Int
             get() = R.drawable.ic_integration_instructions_24
 
@@ -83,8 +83,8 @@ class IntentsCard
                 }
                 extrasLayout.setStartIconOnClickListener {
                     MaterialAlertDialogBuilder(context)
-                        .setTitle(R.string.home_automation_regenerate_token)
-                        .setMessage(R.string.home_automation_regenerate_token_message)
+                        .setTitle(R.string.regenerate_token)
+                        .setMessage(R.string.regenerate_token_message)
                         .setNegativeButton(android.R.string.cancel, null)
                         .setPositiveButton(android.R.string.ok, { _, _ ->
                             val authToken = ShizukuSettings.generateAuthToken()
@@ -107,7 +107,7 @@ class IntentsCard
         // ) {
         //     binding.text2.apply {
         //         visibility = View.VISIBLE
-        //         text = context.getString(R.string.home_automation_description_device_restriction, "adb tcpip 5555")
+        //         text = context.getString(R.string.intents_device_restriction, "adb tcpip 5555")
         //             .toHtml(HtmlCompat.FROM_HTML_OPTION_TRIM_WHITESPACE)
         //     }
         // }
