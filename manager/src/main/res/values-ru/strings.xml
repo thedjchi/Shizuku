@@ -157,6 +157,7 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Приложение электронной почты не найдено</string>
     <string name="toast_shizuku_already_starting">Shizuku уже запускается в фоновом режиме</string>
+    <string name="toast_accessibility_tv_only">Данная служба поддерживается только на ТВ устройствах</string>
     <string name="toast_pairing_timeout">Истекло время ожидания службы сопряжения Shizuku</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
