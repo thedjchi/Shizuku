@@ -45,6 +45,25 @@ This version of Shizuku includes some extra features over the original version, 
 
 Please read the [wiki](https://github.com/thedjchi/Shizuku/wiki) for setup and troubleshooting instructions.
 
+### Privacy
+
+Shizuku takes privacy very seriously.
+
+* User data is never collected!
+* Internet access is only used for wireless debugging connections and to fetch updates from GitHub.
+* Only required permissions are declared.
+
+Here is a summary of the permissions Shizuku declares:
+* **INTERNET:** required for the wireless debugging start mode to work. Also used to fetch updates from GitHub
+* **ACCESS_NETWORK_STATE:** used to determine when Wi-Fi is available for background start via wireless debugging
+* **POST_NOTIFICATIONS:** required for pairing notification and other alerts
+* **RECEIVE_BOOT_COMPLETED:** required for start on boot
+* **FOREGROUND_SERVICE:** prevents watchdog from being killed
+**REQUEST_IGNORE_BATTERY_OPTIMIZATIONS:** prevents start on boot and watchdog services from being killed
+* **WRITE_SECURE_SETTINGS:** used to toggle USB and wireless debugging in the background when starting/stopping Shizuku
+* **REQUEST_DELETE_PACKAGES:** used to request uninstall for Shizuku/stub when using stealth mode
+* **REQUEST_INSTALL_PACKAGES:** used to request install for app updates, as well as Shizuku stub when using stealth mode
+
 ### Translations
 
 Contribute translations through the [Crowdin project](https://crowdin.com/project/shizuku).
