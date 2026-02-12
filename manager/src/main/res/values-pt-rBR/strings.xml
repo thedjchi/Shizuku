@@ -75,8 +75,15 @@
     <!-- Home - Automation -->
     <string name="home_automation_title">Controlar o Shizuku com apps de automação</string>
     <string name="home_automation_description">Aplicativos como Tasker e MacroDroid podem enviar intents para iniciar ou parar o Shizuku automaticamente.</string>
-    <string name="home_automation_button_view_intents">Visualizar intenções</string>
+    <string name="home_automation_description_device_restriction">Para usar a intent de inicialização no seu dispositivo, primeiro você precisa ativar o ADB por TCP executando %1$s a partir de um computador.</string>
+    <string name="home_automation_button_view_intents">Visualizar intents</string>
     <string name="home_automation_bottom_sheet_intents">Intents</string>
+    <string name="home_automation_bottom_sheet_label_action">Ação</string>
+    <string name="home_automation_bottom_sheet_label_package">Pacote</string>
+    <string name="home_automation_bottom_sheet_label_target">Destino</string>
+    <string name="home_automation_bottom_sheet_label_extras">Extras</string>
+    <string name="home_automation_regenerate_token">Regenerar token?</string>
+    <string name="home_automation_regenerate_token_message">Você precisará reconfigurar seus intents com o novo token.</string>
     <!-- Home - Learn more -->
     <string name="home_learn_more_title">Guia do desenvolvedor</string>
     <string name="home_learn_more_description">Aprenda a desenvolver com Shizuku</string>
@@ -112,7 +119,7 @@
     <string name="settings_start_on_boot_bug">Devido a um bug no Android 11-12, a depuração sem fio não lembra nenhuma rede autorizada.\n\nVocê precisará reautorizar a rede a cada reinicialização tocando \"Permitir\" quando aparecer o diálogo de autorização.</string>
     <string name="settings_use_system_color">Usar tema do sistema</string>
     <string name="settings_watchdog">Cão de guarda</string>
-    <string name="settings_watchdog_summary">Reiniciar Shizuku automaticamente se ele travar</string>
+    <string name="settings_watchdog_summary">Reiniciar o Shizuku automaticamente se ele travar</string>
     <string name="settings_tcp_mode">Modo TCP</string>
     <string name="settings_tcp_mode_summary">"Permite reiniciar o Shizuku sem Wi-Fi (o Shizuku deve ter sido iniciado ao menos uma vez após a reinicialização)"</string>
     <string name="settings_tcp_mode_dialog_close_port">"A porta TCP será fechada imediatamente. Você precisará de Wi-Fi para ativar o modo TCP novamente. Continuar?"</string>
@@ -120,13 +127,15 @@
     <string name="settings_restart_dialog_title">É necessário reiniciar.</string>
     <string name="settings_restart_dialog_message">Shizuku precisa reiniciar para aplicar essa configuração.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi é obrigatório. Shizuku continua rodando e espera uma conexão Wi-Fi antes de reiniciar em segundo plano.</b>]]></string>
-    <string name="settings_tcp_port">porta TCP</string>
+    <string name="settings_tcp_port">Porta TCP</string>
     <string name="settings_tcp_port_default">Padrão (5555)</string>
     <string name="settings_tcp_port_hint">Deixe em branco para usar o padrão (5555)</string>
+    <string name="settings_auto_disable_usb_debugging">Desativa a depuração USB ao parar o Shizuku</string>
+    <string name="settings_auto_disable_usb_debugging_summary">Desativa a depuração USB ao parar o Shizuku</string>
     <string name="settings_language">Idioma</string>
     <string name="settings_translation_contributors">Tradutores deste APP</string>
-    <string name="settings_translation">Contribua com a tradução</string>
-    <string name="settings_translation_summary">Ajude-nos à traduzir %s para o seu idioma</string>
+    <string name="settings_translation">Contribuir com a tradução</string>
+    <string name="settings_translation_summary">Ajude-nos a traduzir o %s para o seu idioma</string>
     <string name="settings_user_interface">Aparência</string>
     <string name="settings_black_night_theme">Tema preto AMOLED</string>
     <string name="settings_black_night_theme_summary">Use o tema preto puro se o modo escuro estiver habilitado. Em telas AMOLED, economiza bateria</string>
@@ -155,15 +164,20 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Nenhum aplicativo de e-mail encontrado</string>
     <string name="toast_shizuku_already_starting">Shizuku já está começando em segundo plano.</string>
+    <string name="toast_accessibility_tv_only">Este serviço é compatível apenas com dispositivos de TV</string>
+    <string name="toast_pairing_timeout">​O tempo do serviço de pareamento do Shizuku expirou</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
     <string name="dark_theme_off">Sempre leve</string>
     <string name="dark_theme_on">Sempre escuro</string>
+    <string name="follow_system">Seguir o sistema</string>
     <!-- About -->
     <string name="action_about">Sobre</string>
     <string name="about_dialog_button_close">Fechar</string>
     <string name="about_view_source_code"><![CDATA[Ver o código-fonte no %s]]></string>
     <!-- Start/Stop -->
+    <string name="start">Iniciar</string>
+    <string name="stop">Parar</string>
     <string name="action_stop">Parar o Shizuku</string>
     <string name="dialog_stop_message">O serviço do Shizuku será interrompido.</string>
     <!-- Notification -->
@@ -182,6 +196,10 @@
     <string name="notification_adb_pairing_succeed_text">Agora, você pode iniciar o serviço do Shizuku.</string>
     <string name="notification_adb_pairing_failed_title">Falha no pareamento</string>
     <string name="notification_adb_pairing_retry">Tentar novamente</string>
+    <string name="notification_auth_missing_title">Token de autenticação necessário</string>
+    <string name="notification_auth_missing_message">Adicione o extra \"auth\" à sua intent. Você pode encontrar seu token tocando em \"Visualizar intents\" no aplicativo.</string>
+    <string name="notification_auth_invalid_title">Token de autenticação inválido</string>
+    <string name="notification_auth_invalid_message">Certifique-se de que o token na sua intent corresponda ao mostrado em \"Visualizar intents\" no aplicativo.</string>
     <!-- Permission related, appears in system permission UI -->
     <string name="permission_label">acessar Shizuku</string>
     <string name="permission_description">Permita que o aplicativo use o Shizuku.</string>
