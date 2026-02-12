@@ -118,8 +118,8 @@
     <string name="settings_tcp_mode_dialog_close_port">"TCP-порт будет немедленно закрыт. Для повторного включения TCP-режима потребуется Wi-Fi. Продолжить?"</string>
     <string name="settings_tcp_mode_closing_port">Закрытие TCP-порта...</string>
     <string name="settings_restart_dialog_title">Требуется перезагрузка</string>
-    <string name="settings_restart_dialog_message">Shizuku нужно начать заново, чтобы применить эту настройку.</string>
-    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Требуется Wi-Fi. Shizuku продолжит работу и ждёт Wi-Fi подключения, прежде чем перезагрузить в фоновом режиме.</b>]]></string>
+    <string name="settings_restart_dialog_message">Shizuku необходимо перезапустить, чтобы применить эту настройку.</string>
+    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Требуется Wi-Fi. Shizuku продолжит работу и ждёт подключения к Wi-Fi, прежде чем перезапуститься в фоновом режиме.</b>]]></string>
     <string name="settings_tcp_port">TCP-порт</string>
     <string name="settings_tcp_port_default">По умолчанию (5555)</string>
     <string name="settings_tcp_port_hint">Оставьте поле пустым, чтобы использовать значение по умолчанию (5555)</string>
@@ -194,7 +194,7 @@
     <string name="starter">Запуск</string>
     <string name="start_with_root_failed">Не удалось запустить службу. Root права не выданы или они недоступны на устройстве.</string>
     <!-- WADB Starter -->
-    <string name="wadb_notification_title">Начиная с Shizuku…</string>
+    <string name="wadb_notification_title">Запуск Shizuku…</string>
     <string name="wadb_notification_wifi_required">Ожидание подключения Wi-Fi перед продолжением</string>
     <string name="wadb_notification_retry">Ожидание повторной попытки</string>
     <string name="wadb_error_title">Ошибка при запуске загрузки</string>
@@ -203,7 +203,7 @@
     <string name="wadb_permission_error_notification_content">Для запуска Shizuku при загрузке требуется разрешение WRITE_SECURE_SETTINGS. Нажмите, чтобы узнать, как его предоставить.</string>
     <string name="wadb_notification_channel">Служба автоматического запуска ADB</string>
     <!-- Watchdog -->
-    <string name="watchdog_running">Watchdog работает</string>
+    <string name="watchdog_running">Watchdog запущен</string>
     <string name="watchdog_turn_off">Отключить</string>
     <string name="watchdog_shizuku_crashed_title">В Shizuku недавно произошёл сбой</string>
     <string name="watchdog_shizuku_crashed_text">Watchdog перезапустил сервис. Нажмите на них, чтобы узнать о возможных решениях для предотвращения будущих сбоев.</string>
