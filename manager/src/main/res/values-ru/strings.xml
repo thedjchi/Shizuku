@@ -29,7 +29,7 @@
     <string name="dialog_adb_invalid_port">Порт – это целое число в диапазоне от 1 до 65535.</string>
     <string name="adb_pairing">Сопряжение</string>
     <string name="dialog_adb_pairing_title">Сопряжение с устройством</string>
-    <string name="dialog_adb_pairing_discovery">Поиск службы соединения</string>
+    <string name="dialog_adb_pairing_discovery">Поиск службы сопряжения</string>
     <string name="dialog_adb_pairing_paring_code">Код подключения</string>
     <string name="paring_code_is_wrong">Неверный код подключения.</string>
     <string name="cannot_connect_port">Не могу подключиться к беспроводной отладке.\n\nПожалуйста, убедитесь, что Shizuku внесен в белый список во всех фаерволах, блокировке рекламы, VPN или подобных приложениях, которые могут ограничивать доступ к сети.</string>
@@ -118,7 +118,7 @@
     <string name="settings_tcp_mode_dialog_close_port">"TCP-порт будет немедленно закрыт. Для повторного включения TCP-режима потребуется Wi-Fi. Продолжить?"</string>
     <string name="settings_tcp_mode_closing_port">Закрытие TCP-порта...</string>
     <string name="settings_restart_dialog_title">Требуется перезагрузка</string>
-    <string name="settings_restart_dialog_message">Shizuku необходимо перезапустить, чтобы применить эту настройку.</string>
+    <string name="settings_restart_dialog_message">Для применения этих настроек Shizuku необходимо перезапустить.</string>
     <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Требуется Wi-Fi. Shizuku продолжит работу и ждёт подключения к Wi-Fi, прежде чем перезапуститься в фоновом режиме.</b>]]></string>
     <string name="settings_tcp_port">TCP-порт</string>
     <string name="settings_tcp_port_default">По умолчанию (5555)</string>
@@ -157,6 +157,7 @@
     <!-- Toast -->
     <string name="toast_no_email_app">Приложение электронной почты не найдено</string>
     <string name="toast_shizuku_already_starting">Shizuku уже запускается в фоновом режиме</string>
+    <string name="toast_pairing_timeout">Истекло время ожидания службы сопряжения Shizuku</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Тема</string>
     <string name="dark_theme_off">Светлая</string>
@@ -185,7 +186,7 @@
     <string name="notification_adb_pairing_failed_title">Не удалось выполнить сопряжение</string>
     <string name="notification_adb_pairing_retry">Повторить попытку</string>
     <!-- Permission related, appears in system permission UI -->
-    <string name="permission_label">доступ Shizuku</string>
+    <string name="permission_label">доступ к Shizuku</string>
     <string name="permission_description">Разрешить приложению использовать Shizuku.</string>
     <string name="permission_warning_template"><![CDATA[Разрешить <b>%1$s</b> следующее: %2$s\?]]></string>
     <string name="grant_dialog_button_allow_always">Разрешать всегда</string>
@@ -197,8 +198,8 @@
     <string name="wadb_notification_title">Запуск Shizuku…</string>
     <string name="wadb_notification_wifi_required">Ожидание подключения Wi-Fi перед продолжением</string>
     <string name="wadb_notification_retry">Ожидание повторной попытки</string>
-    <string name="wadb_error_title">Ошибка при запуске загрузки</string>
-    <string name="wadb_error_notify_dev">Нажмите, чтобы уведомить разработчика.</string>
+    <string name="wadb_error_title">Ошибка запуска при загрузке</string>
+    <string name="wadb_error_notify_dev">Нажмите, чтобы сообщить разработчику.</string>
     <string name="wadb_permission_error_notification_title">Ошибка разрешения</string>
     <string name="wadb_permission_error_notification_content">Для запуска Shizuku при загрузке требуется разрешение WRITE_SECURE_SETTINGS. Нажмите, чтобы узнать, как его предоставить.</string>
     <string name="wadb_notification_channel">Служба автоматического запуска ADB</string>
@@ -206,7 +207,7 @@
     <string name="watchdog_running">Watchdog запущен</string>
     <string name="watchdog_turn_off">Отключить</string>
     <string name="watchdog_shizuku_crashed_title">В Shizuku недавно произошёл сбой</string>
-    <string name="watchdog_shizuku_crashed_text">Watchdog перезапустил сервис. Нажмите на них, чтобы узнать о возможных решениях для предотвращения будущих сбоев.</string>
+    <string name="watchdog_shizuku_crashed_text">Watchdog перезапустил службу. Нажмите, чтобы узнать о возможных решениях для предотвращения будущих сбоев.</string>
     <string name="watchdog_shizuku_crashed_action_turn_off_alerts">Отключить оповещения</string>
     <!-- Misc -->
     <string name="dialog_cannot_open_browser_title">Не удается запустить браузер</string>
