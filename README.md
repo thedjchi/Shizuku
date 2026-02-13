@@ -45,6 +45,14 @@ This version of Shizuku includes some extra features over the original version, 
 
 Please read the [wiki](https://github.com/thedjchi/Shizuku/wiki) for setup, info, and troubleshooting steps.
 
+## ☑️ Requirements
+
+**Minimum Version: Android 7+**
+- **Root mode:** Requires a rooted device
+- **Wireless Debugging mode:** Works on Android 11+ and all Android TVs
+- **PC mode:** Works on all devices
+- **Start on boot:** Available only when using Wireless Debugging or Root mode
+
 ## 🔒 Privacy
 
 Shizuku takes user privacy very seriously.
