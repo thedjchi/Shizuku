@@ -117,7 +117,7 @@
     <string name="settings_start_on_boot">Iniciar na inicialização</string>
     <string name="settings_start_on_boot_summary">Requer Android 11 ou superior ou root.</string>
     <string name="settings_start_on_boot_bug">Devido a um bug no Android 11-12, a depuração sem fio não lembra nenhuma rede autorizada.\n\nVocê precisará reautorizar a rede a cada reinicialização tocando \"Permitir\" quando aparecer o diálogo de autorização.</string>
-    <string name="settings_use_system_color">Usar tema do sistema</string>
+    <string name="settings_use_system_color">Usar cores dinâmicas</string>
     <string name="settings_watchdog">Cão de guarda</string>
     <string name="settings_watchdog_summary">Reiniciar o Shizuku automaticamente se ele travar</string>
     <string name="settings_tcp_mode">Modo TCP</string>
