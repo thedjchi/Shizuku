@@ -18,17 +18,17 @@ An Android app that allows other apps to use system-level APIs that require ADB/
 
 </div>
 
-### Disclaimer
+## ⚠️ Disclaimer
 
 This is a **FORK** of Shizuku. If you are looking for the original version, please visit the [RikkaApps/Shizuku](https://github.com/RikkaApps/Shizuku) repository.
 
-### Download
+## ⬇️ Download
 
 Get the latest [stable](https://github.com/thedjchi/Shizuku/releases/latest) or [beta](https://github.com/thedjchi/Shizuku/releases) version.
 
 All versions are distributed via [GitHub Releases](https://github.com/thedjchi/Shizuku/releases).
 
-### Added Features
+## ✨ Added Features
 
 This version of Shizuku includes some extra features over the original version, such as:
 * **More robust "start on boot":** waits for a Wi-Fi connection before starting the Shizuku service
@@ -41,117 +41,73 @@ This version of Shizuku includes some extra features over the original version, 
 * **MediaTek support:** fixes a critical bug in the original v13.6.0 which prevented Shizuku from working on MediaTek devices
 * And more!
 
-### Wiki
+## 📝 User Guide
 
-Please read the [wiki](https://github.com/thedjchi/Shizuku/wiki) for setup and troubleshooting instructions.
+Please read the [wiki](https://github.com/thedjchi/Shizuku/wiki) for setup, info, and troubleshooting steps.
 
-### Privacy
+## 🔒 Privacy
 
-Shizuku takes privacy very seriously.
+Shizuku takes user privacy very seriously.
 
-* User data is never collected!
-* Internet access is only used for wireless debugging connections and to fetch updates from GitHub.
-* Only required permissions are declared.
+* No tracking or analytics
+* No telemetry
+* No proprietary libraries
+* No Google Play Services
+* Open-source codebase
+* Reproducible builds
+* Internet access is only used for wireless debugging connections and to fetch updates from GitHub
+* Only required permissions are declared
 
-Here is a summary of the permissions Shizuku declares:
+### Permissions
+
 * **INTERNET:** required for the wireless debugging start mode to work. Also used to fetch updates from GitHub
 * **ACCESS_NETWORK_STATE:** used to determine when Wi-Fi is available for background start via wireless debugging
 * **POST_NOTIFICATIONS:** required for pairing notification and other alerts
 * **RECEIVE_BOOT_COMPLETED:** required for start on boot
 * **FOREGROUND_SERVICE:** prevents watchdog from being killed
-**REQUEST_IGNORE_BATTERY_OPTIMIZATIONS:** prevents start on boot and watchdog services from being killed
+* **REQUEST_IGNORE_BATTERY_OPTIMIZATIONS:** prevents start on boot and watchdog services from being killed
 * **WRITE_SECURE_SETTINGS:** used to toggle USB and wireless debugging in the background when starting/stopping Shizuku
 * **REQUEST_DELETE_PACKAGES:** used to request uninstall for Shizuku/stub when using stealth mode
 * **REQUEST_INSTALL_PACKAGES:** used to request install for app updates, as well as Shizuku stub when using stealth mode
 
-### Translations
+## 🌎 Translations
 
 Contribute translations through the [Crowdin project](https://crowdin.com/project/shizuku).
 
-### Donations
+## 🎁 Donations
 
 This Shizuku fork and all of its features will always be free, and there will never be ads. If you've found any of the added features to be useful, consider [donating](https://www.buymeacoffee.com/thedjchi) to help me maintain the project!
 
-## Background
+## 📱 Developer Guide
 
-When developing apps that requires root, the most common method is to run some commands in the su shell. For example, there is an app that uses the `pm enable/disable` command to enable/disable components.
+### API & Demo Project
+The API guide and a demo project are available in the [Shizuku-API](https://github.com/thedjchi/Shizuku-API) repository
 
-This method has very big disadvantages:
+### Notes
 
-1. **Extremely slow** (Multiple process creation)
-2. Needs to process texts (**Super unreliable**)
-3. The possibility is limited to available commands
-4. Even if ADB has sufficient permissions, the app requires root privileges to run
+1. Shizuku has different permissions in root and ADB mode. You can see permissions granted to ADB [here](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/Shell/AndroidManifest.xml).
+   If your app requires root permission, use `ShizukuService#getUid` to check if Shizuku is running as root or ADB, or use `ShizukuService#checkPermission` to check if the server has sufficient permissions.
+2. On devices running Android 8 or lower, if you need to use Shizuku in a Service or Broadcast Receiver that might not be started by an Activity, please trigger the send binder by starting a transparent activity.
+3. Please prefer using `ShizukuBinderWrapper` instead of directly using `transactRemote` when possible, as API calls can change across Android versions.
 
-Shizuku uses a completely different way. See detailed description below.
+## 🤝 Contritbuting
 
-## User guide & Download
-
-<https://shizuku.rikka.app/>
-
-## How does Shizuku work?
-
-First, we need to talk about how app use system APIs. For example, if the app wants to get installed apps, we all know we should use `PackageManager#getInstalledPackages()`. This is actually an interprocess communication (IPC) process of the app process and system server process, just the Android framework did the inner works for us.
-
-Android uses `binder` to do this type of IPC. `Binder` allows the server-side to learn the uid and pid of the client-side, so that the system server can check if the app has the permission to do the operation.
-
-Usually, if there is a "manager" (e.g., `PackageManager`) for apps to use, there should be a "service" (e.g., `PackageManagerService`) in the system server process. We can simply think if the app holds the `binder` of the "service", it can communicate with the "service". The app process will receive binders of system services on start.
-
-Shizuku guides users to run a process, Shizuku server, with root or ADB first. When the app starts, the `binder` to Shizuku server will also be sent to the app.
-
-The most important feature Shizuku provides is something like be a middle man to receive requests from the app, sent them to the system server, and send back the results. You can see the `transactRemote` method in `rikka.shizuku.server.ShizukuService` class, and `moe.shizuku.api.ShizukuBinderWrapper` class for the detail.
-
-So, we reached our goal, to use system APIs with higher permission. And to the app, it is almost identical to the use of system APIs directly.
-
-## Developer guide
-
-### API & sample
-
-https://github.com/RikkaApps/Shizuku-API
-
-### Migrating from pre-v11
-
-> Existing applications still works, of course.
-
-https://github.com/RikkaApps/Shizuku-API#migration-guide-for-existing-applications-use-shizuku-pre-v11
-
-### Attention
-
-1. ADB permissions are limited
-
-   ADB has limited permissions and different on various system versions. You can see permissions granted to ADB [here](https://github.com/aosp-mirror/platform_frameworks_base/blob/master/packages/Shell/AndroidManifest.xml).
-
-   Before calling the API, you can use `ShizukuService#getUid` to check if Shizuku is running user ADB, or use `ShizukuService#checkPermission` to check if the server has sufficient permissions.
-
-2. Hidden API limitation from Android 9
-
-   As of Android 9, the usage of the hidden APIs is limited for normal apps. Please use other methods (such as <https://github.com/LSPosed/AndroidHiddenApiBypass>).
-
-3. Android 8.0 & ADB
-
-   At present, the way Shizuku service gets the app process is to combine `IActivityManager#registerProcessObserver` and `IActivityManager#registerUidObserver` (26+) to ensure that the app process will be sent when the app starts. However, on API 26, ADB lacks permissions to use `registerUidObserver`, so if you need to use Shizuku in a process that might not be started by an Activity, it is recommended to trigger the send binder by starting a transparent activity.
-
-4. Direct use of `transactRemote` requires attention
-
-   * The API may be different under different Android versions, please be sure to check it carefully. Also, the `android.app.IActivityManager` has the aidl form in API 26 and later, and `android.app.IActivityManager$Stub` exists only on API 26.
-
-   * `SystemServiceHelper.getTransactionCode` may not get the correct transaction code, such as `android.content.pm.IPackageManager$Stub.TRANSACTION_getInstalledPackages` does not exist on API 25 and there is `android.content.pm.IPackageManager$Stub.TRANSACTION_getInstalledPackages_47` (this situation has been dealt with, but it is not excluded that there may be other circumstances). This problem is not encountered with the `ShizukuBinderWrapper` method.
-
-## Developing Shizuku itself
-
-### Build
+### Building the App
 
 - Clone with `git clone --recurse-submodules`
 - Run gradle task `:manager:assembleDebug` or `:manager:assembleRelease`
 
-The `:manager:assembleDebug` task generates a debuggable server. You can attach a debugger to `shizuku_server` to debug the server. Be aware that, in Android Studio, "Run/Debug configurations" - "Always install with package manager" should be checked, so that the server will use the latest code.
+The `:manager:assembleDebug` task generates a debuggable server. You can attach a debugger to `shizuku_server` to debug the server. In Android Studio, ensure `Run/Debug configurations > Always install with package manager` is checked, so that the server will use the latest code.
 
-## License
+### Submitting Changes
 
-All code files in this project are licensed under Apache 2.0
+1. Fork the repository
+2. Create a feature branch (`git checkout -b branch-name`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Commit message'`)
+5. Push to the branch (`git push origin branch-name`)
+6. Open a Pull Request
 
-Under Apache 2.0 section 6, specifically:
+## 📃 License
 
-* You are **FORBIDDEN** to use `manager/src/main/res/mipmap*/ic_launcher*.png` image files, unless for displaying Shizuku itself.
-
-* You are **FORBIDDEN** to use `Shizuku` as app name or use `moe.shizuku.privileged.api` as application id or declare `moe.shizuku.manager.permission.*` permission.
+All code files in this project are licensed under [Apache 2.0](LICENSE)
