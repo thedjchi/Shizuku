@@ -168,9 +168,9 @@
     <string name="toast_pairing_timeout">​O tempo do serviço de pareamento do Shizuku expirou</string>
     <!-- Dark Mode Setting Override -->
     <string name="dark_theme">Tema</string>
-    <string name="dark_theme_off">Sempre leve</string>
-    <string name="dark_theme_on">Sempre escuro</string>
-    <string name="follow_system">Seguir o sistema</string>
+    <string name="dark_theme_off">Claro</string>
+    <string name="dark_theme_on">Escuro</string>
+    <string name="follow_system">Automático (sistema)</string>
     <!-- About -->
     <string name="action_about">Sobre</string>
     <string name="about_dialog_button_close">Fechar</string>
