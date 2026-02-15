@@ -34,7 +34,7 @@
         <TextView
             style="@style/SectionHeader"
             android:layout_marginTop="8dp"
-            android:text="@string/integrations" />
+            android:text="@string/home_integrations" />
 
         <moe.shizuku.manager.home.cards.AuthorizedAppsCard
             android:id="@+id/authorizedAppsCard"

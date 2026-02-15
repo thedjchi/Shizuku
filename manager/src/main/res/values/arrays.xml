@@ -2,9 +2,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <string-array name="night_mode">
-        <item>@string/dark_theme_off</item>
-        <item>@string/dark_theme_on</item>
-        <item>@string/follow_system</item>
+        <item>@string/settings_theme_light</item>
+        <item>@string/settings_theme_dark</item>
+        <item>@string/settings_follow_system</item>
     </string-array>
 
     <integer-array name="night_mode_value">
@@ -15,8 +15,8 @@
 
     <string-array name="update_mode">
         <item>@string/off</item>
-        <item>@string/settings_update_stable</item>
-        <item>@string/settings_update_beta</item>
+        <item>@string/settings_update_channel_stable</item>
+        <item>@string/settings_update_channel_beta</item>
     </string-array>
 
     <integer-array name="update_mode_value">

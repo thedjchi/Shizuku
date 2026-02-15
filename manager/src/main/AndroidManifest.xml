@@ -107,7 +107,7 @@
         <activity
             android:name=".settings.SettingsActivity"
             android:exported="false"
-            android:label="@string/settings_title">
+            android:label="@string/settings">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
             </intent-filter>

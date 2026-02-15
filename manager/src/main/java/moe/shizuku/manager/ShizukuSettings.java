@@ -30,15 +30,11 @@ public class ShizukuSettings {
         public static final String KEY_TCP_PORT = "tcp_port";
         public static final String KEY_AUTO_DISABLE_USB_DEBUGGING = "auto_disable_usb_debugging";
         public static final String KEY_LANGUAGE = "language";
-        public static final String KEY_TRANSLATION = "translation";
-        public static final String KEY_TRANSLATION_CONTRIBUTORS = "translation_contributors";
         public static final String KEY_LIGHT_THEME = "light_theme";
         public static final String KEY_NIGHT_MODE = "night_mode";
-        public static final String KEY_BLACK_NIGHT_THEME = "black_night_theme";
-        public static final String KEY_USE_SYSTEM_COLOR = "use_system_color";
-        public static final String KEY_UPDATE_MODE = "update_mode";
-        public static final String KEY_HELP = "help";
-        public static final String KEY_REPORT_BUG = "report_bug";
+        public static final String KEY_AMOLED_BLACK = "amoled_black";
+        public static final String KEY_DYNAMIC_COLOR = "dynamic_color";
+        public static final String KEY_UPDATE_MODE = "update_channel";
         public static final String KEY_LEGACY_PAIRING = "legacy_pairing";
         public static final String KEY_CATEGORY_ADVANCED = "category_advanced";
     }
@@ -198,7 +194,7 @@ public class ShizukuSettings {
 
     @AppCompatDelegate.NightMode
     public static int getNightMode() {
-        int defValue = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+        int defValue = AppCompatDelegate.MODE_NIGHT_settings_follow_system;
         if (EnvironmentUtils.isWatch()) {
             defValue = AppCompatDelegate.MODE_NIGHT_YES;
         }

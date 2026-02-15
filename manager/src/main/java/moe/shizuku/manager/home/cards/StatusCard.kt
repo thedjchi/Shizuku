@@ -5,9 +5,11 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.R
 import moe.shizuku.manager.databinding.HomeStatusCardBinding
 import moe.shizuku.manager.model.ServiceStatus
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.html.text.HtmlCompat
 import rikka.html.text.toHtml
 import rikka.shizuku.Shizuku
@@ -100,4 +102,18 @@ class StatusCard
             binding.title.text = title.toHtml(HtmlCompat.FROM_HTML_OPTION_TRIM_WHITESPACE)
             binding.summary.text = summary.toHtml(HtmlCompat.FROM_HTML_OPTION_TRIM_WHITESPACE)
         }
+
+        private fun stopButton() {
+            if (ShizukuStateMachine.isRunning()) {
+                MaterialAlertDialogBuilder(context)
+                    .setMessage(R.string.stop_dialog_message)
+                    .setPositiveButton(android.R.string.ok) { _, _ ->
+                        ShizukuStateMachine.set(ShizukuStateMachine.State.STOPPING)
+                        runCatching { Shizuku.exit() }
+                    }.setNegativeButton(android.R.string.cancel, null)
+                    .show()
+            }
+            true
+        }
+
     }

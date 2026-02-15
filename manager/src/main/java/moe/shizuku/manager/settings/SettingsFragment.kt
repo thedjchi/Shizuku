@@ -1,11 +1,11 @@
 package moe.shizuku.manager.settings
 
-import android.content.pm.PackageManager
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
@@ -19,8 +19,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat.Type
@@ -30,13 +30,12 @@ import androidx.preference.Preference.SummaryProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kotlin.coroutines.resume
 import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlinx.coroutines.CancellableContinuation
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.ShizukuSettings.Keys.*
@@ -61,22 +60,20 @@ import rikka.recyclerview.addItemSpacing
 import rikka.recyclerview.fixEdgeEffect
 import rikka.shizuku.manager.ShizukuLocales
 import java.util.*
+import kotlin.coroutines.resume
 
-class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
-
+class SettingsFragment :
+    PreferenceFragmentCompat(),
+    SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var startOnBootPreference: TwoStatePreference
     private lateinit var watchdogPreference: TwoStatePreference
     private lateinit var tcpModePreference: TwoStatePreference
     private lateinit var tcpPortPreference: EditTextPreference
     private lateinit var languagePreference: ListPreference
-    private lateinit var translationPreference: Preference
-    private lateinit var translationContributorsPreference: Preference
     private lateinit var nightModePreference: IntegerSimpleMenuPreference
-    private lateinit var blackNightThemePreference: TwoStatePreference
-    private lateinit var useSystemColorPreference: TwoStatePreference
+    private lateinit var amoledBlackPreference: TwoStatePreference
+    private lateinit var dynamicColorPreference: TwoStatePreference
     private lateinit var updateModePreference: IntegerSimpleMenuPreference
-    private lateinit var helpPreference: Preference
-    private lateinit var reportBugPreference: Preference
     private lateinit var legacyPairingPreference: TwoStatePreference
     private lateinit var advancedCategory: PreferenceCategory
 
@@ -90,7 +87,10 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         }
     }
 
-    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+    override fun onCreatePreferences(
+        savedInstanceState: Bundle?,
+        rootKey: String?,
+    ) {
         val context = requireContext()
 
         preferenceManager.setStorageDeviceProtected()
@@ -103,21 +103,18 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         tcpModePreference = findPreference(KEY_TCP_MODE)!!
         tcpPortPreference = findPreference(KEY_TCP_PORT)!!
         languagePreference = findPreference(KEY_LANGUAGE)!!
-        translationPreference = findPreference(KEY_TRANSLATION)!!
-        translationContributorsPreference = findPreference(KEY_TRANSLATION_CONTRIBUTORS)!!
         nightModePreference = findPreference(KEY_NIGHT_MODE)!!
-        blackNightThemePreference = findPreference(KEY_BLACK_NIGHT_THEME)!!
-        useSystemColorPreference = findPreference(KEY_USE_SYSTEM_COLOR)!!
+        amoledBlackPreference = findPreference(KEY_AMOLED_BLACK)!!
+        dynamicColorPreference = findPreference(KEY_DYNAMIC_COLOR)!!
         updateModePreference = findPreference(KEY_UPDATE_MODE)!!
-        helpPreference = findPreference(KEY_HELP)!!
-        reportBugPreference = findPreference(KEY_REPORT_BUG)!!
         legacyPairingPreference = findPreference(KEY_LEGACY_PAIRING)!!
         advancedCategory = findPreference(KEY_CATEGORY_ADVANCED)!!
 
-        batteryOptimizationListener = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            val accepted = SettingsHelper.isIgnoringBatteryOptimizations(requireContext())
-            batteryOptimizationContinuation?.resume(accepted)
-        }
+        batteryOptimizationListener =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                val accepted = SettingsHelper.isIgnoringBatteryOptimizations(requireContext())
+                batteryOptimizationContinuation?.resume(accepted)
+            }
 
         startOnBootPreference.apply {
             if (
@@ -150,7 +147,9 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                                 .setPositiveButton(android.R.string.ok) { _, _ -> doToggle() }
                                 .setNegativeButton(android.R.string.cancel) { _, _ -> isChecked = !newValue }
                                 .show()
-                        } else { doToggle() }
+                        } else {
+                            doToggle()
+                        }
                     }
                     false
                 }
@@ -191,10 +190,12 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                             icon = maybeGetRestartIcon(KEY_TCP_MODE)
                             tcpPortPreference.isVisible = newValue
                         }
-                        
+
                         if (!newValue && !ShizukuStateMachine.isRunning() && needsRestart(KEY_TCP_MODE, newValue)) {
                             promptStopTcp { applyChange() }
-                        } else maybePromptRestart (KEY_TCP_MODE, newValue) { applyChange() }
+                        } else {
+                            maybePromptRestart(KEY_TCP_MODE, newValue) { applyChange() }
+                        }
                     }
                     false
                 }
@@ -211,14 +212,9 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
             icon = maybeGetRestartIcon(KEY_TCP_PORT)
 
             setOnBindEditTextListener { editText ->
-                editText.hint = context.getString(R.string.settings_tcp_port_hint)
+                editText.hint = "5555"
                 editText.inputType = InputType.TYPE_CLASS_NUMBER
                 editText.setSelection(editText.text.length)
-            }
-
-            summaryProvider = SummaryProvider<EditTextPreference> { pref ->
-                val text = pref.text
-                if (text.isNullOrEmpty()) context.getString(R.string.settings_tcp_port_default) else text
             }
 
             setOnPreferenceChangeListener { _, newValue ->
@@ -229,7 +225,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
                         text = port?.toString()
                         icon = maybeGetRestartIcon(KEY_TCP_PORT)
                     }
-                    maybePromptRestart (KEY_TCP_PORT, port ?: 5555) { applyChange() }
+                    maybePromptRestart(KEY_TCP_PORT, port ?: 5555) { applyChange() }
                 } else {
                     SnackbarHelper.show(context, requireView(), context.getString(R.string.snackbar_invalid_port))
                 }
@@ -239,11 +235,12 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
         languagePreference.setOnPreferenceChangeListener { _, newValue ->
             if (newValue is String) {
-                val locale: Locale = if ("SYSTEM" == newValue) {
-                    LocaleDelegate.systemLocale
-                } else {
-                    Locale.forLanguageTag(newValue)
-                }
+                val locale: Locale =
+                    if ("SYSTEM" == newValue) {
+                        LocaleDelegate.systemLocale
+                    } else {
+                        Locale.forLanguageTag(newValue)
+                    }
                 LocaleDelegate.defaultLocale = locale
                 activity?.recreate()
             }
@@ -265,56 +262,37 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
             }
         }
 
-        blackNightThemePreference.apply {
+        amoledBlackPreference.apply {
             if (ShizukuSettings.getNightMode() != AppCompatDelegate.MODE_NIGHT_NO) {
                 isChecked = ThemeHelper.isBlackNightTheme(context)
                 setOnPreferenceChangeListener { _, _ ->
-                    if (ResourceUtils.isNightMode(context.resources.configuration))
+                    if (ResourceUtils.isNightMode(context.resources.configuration)) {
                         activity?.recreate()
+                    }
                     true
                 }
-            } else isVisible = false
+            } else {
+                isVisible = false
+            }
         }
 
-        useSystemColorPreference.apply {
+        dynamicColorPreference.apply {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 isChecked = ThemeHelper.isUsingSystemColor()
                 setOnPreferenceChangeListener { _, value ->
                     if (value is Boolean) {
-                        if (ThemeHelper.isUsingSystemColor() != value)
+                        if (ThemeHelper.isUsingSystemColor() != value) {
                             activity?.recreate()
+                        }
                     }
                     true
                 }
-            } else isVisible = false
-        }
-
-        translationPreference.apply {
-            summary = context.getString(R.string.settings_translation_summary, context.getString(R.string.app_name))
-            setOnPreferenceClickListener {
-                CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.translation_url))
-                true
+            } else {
+                isVisible = false
             }
         }
 
-        translationContributorsPreference.apply {
-            val contributors = context.getString(R.string.translation_contributors).toHtml().toString()
-            if (contributors.isNotBlank()) {
-                summary = contributors
-            } else isVisible = false
-        }
-
         updateModePreference.value = ShizukuSettings.getUpdateMode()
-
-        helpPreference.setOnPreferenceClickListener {
-            CustomTabsHelper.launchUrlOrCopy(context, context.getString(R.string.help_url))
-            true
-        }
-
-        reportBugPreference.setOnPreferenceClickListener {
-            BugReportDialog().show(parentFragmentManager, "BugReportDialog")
-            true
-        }
 
         legacyPairingPreference.apply {
             isVisible = !EnvironmentUtils.isTelevision()
@@ -335,7 +313,10 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         super.onPause()
     }
 
-    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String?) {
+    override fun onSharedPreferenceChanged(
+        sharedPreferences: SharedPreferences,
+        key: String?,
+    ) {
         when (key) {
             KEY_WATCHDOG -> watchdogPreference.isChecked = ShizukuSettings.isWatchdogRunning()
         }
@@ -344,7 +325,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
     override fun onCreateRecyclerView(
         inflater: LayoutInflater,
         parent: ViewGroup,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): RecyclerView {
         val recyclerView = super.onCreateRecyclerView(inflater, parent, savedInstanceState)
 
@@ -352,13 +333,13 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
             val systemBarsInsets = insets.getInsets(Type.systemBars() or Type.displayCutout())
             recyclerView.addItemSpacing(
                 left = systemBarsInsets.left.toFloat(),
-                right = systemBarsInsets.right.toFloat()
+                right = systemBarsInsets.right.toFloat(),
             )
             recyclerView.setPadding(
                 recyclerView.paddingLeft,
                 recyclerView.paddingTop,
                 recyclerView.paddingRight,
-                systemBarsInsets.bottom
+                systemBarsInsets.bottom,
             )
             insets
         }
@@ -368,25 +349,32 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         return recyclerView
     }
 
-    private fun needsRestart(setting: String, newValue: Any? = null): Boolean {
+    private fun needsRestart(
+        setting: String,
+        newValue: Any? = null,
+    ): Boolean {
         val currentPort = EnvironmentUtils.getAdbTcpPort()
         return when (setting) {
             KEY_TCP_MODE -> {
                 val newMode = newValue as? Boolean ?: ShizukuSettings.getTcpMode()
                 (currentPort > 0) != newMode
             }
+
             KEY_TCP_PORT -> {
                 val newPort = newValue as? Int ?: ShizukuSettings.getTcpPort()
                 (currentPort > 0) && (currentPort != newPort)
             }
-            else -> false
+
+            else -> {
+                false
+            }
         }
     }
 
     private fun maybeGetRestartIcon(setting: String): Drawable? {
         val context = requireContext()
         if (!needsRestart(setting)) return null
-        
+
         val icon = context.getDrawable(R.drawable.ic_server_restart)
         return tint(icon)
     }
@@ -399,75 +387,81 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         return icon
     }
 
-    private fun promptStopTcp (applyChange: () -> Unit) {
+    private fun promptStopTcp(applyChange: () -> Unit) {
         val context = requireContext()
         MaterialAlertDialogBuilder(context)
             .setTitle(android.R.string.dialog_alert_title)
-            .setMessage(context.getString(R.string.settings_tcp_mode_dialog_close_port))
+            .setMessage(context.getString(R.string.tcp_close_port_message))
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 lifecycleScope.launch {
-                    tcpModePreference.apply {
-                        isEnabled = false
-                        summary = context.getString(R.string.settings_tcp_mode_closing_port)
-                    }
                     AdbStarter.stopTcp(context, EnvironmentUtils.getAdbTcpPort())
-                    if (EnvironmentUtils.getAdbTcpPort() <= 0) applyChange()
+                    if (EnvironmentUtils.getAdbTcpPort() <= 0) {
+                        applyChange()
+                    } else {
+                        Toast.makeText(context, R.string.tcp_error_closing, Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
-            .setNegativeButton(android.R.string.cancel, null)
+            }.setNegativeButton(android.R.string.cancel, null)
             .show()
     }
 
-    private fun maybePromptRestart (setting: String, newValue: Any? = null, applyChange: () -> Unit) {
+    private fun maybePromptRestart(
+        setting: String,
+        newValue: Any? = null,
+        applyChange: () -> Unit,
+    ) {
         val context = requireContext()
         if (!ShizukuStateMachine.isRunning() || !needsRestart(setting, newValue)) {
             applyChange()
             context.sendBroadcast(Intent(context, NotifCancelReceiver::class.java))
         } else {
-            val message = buildString {
-                append(context.getString(R.string.settings_restart_dialog_message))
-                if (setting == KEY_TCP_MODE)
-                    append(context.getString(R.string.settings_restart_dialog_message_wifi_required))
-            }
+            val message =
+                buildString {
+                    append(context.getString(R.string.tcp_restart_required_message))
+                    if (setting == KEY_TCP_MODE) {
+                        append(context.getString(R.string.tcp_restart_required_message_wifi_required))
+                    }
+                }
 
             MaterialAlertDialogBuilder(context)
-            .setTitle(R.string.settings_restart_dialog_title)
-            .setMessage(HtmlCompat.fromHtml(message))
-            .setPositiveButton(android.R.string.ok) { _, _ ->
-                applyChange()
-                ShizukuReceiverStarter.start(context, true)
-            }
-            .setNegativeButton(android.R.string.cancel, null)
-            .show()
+                .setTitle(R.string.tcp_restart_required)
+                .setMessage(HtmlCompat.fromHtml(message))
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    applyChange()
+                    ShizukuReceiverStarter.start(context, true)
+                }.setNegativeButton(android.R.string.cancel, null)
+                .show()
         }
     }
 
-    private fun maybeToggleBatterySensitiveSetting (
+    private fun maybeToggleBatterySensitiveSetting(
         newValue: Boolean,
-        onResult: (Boolean) -> Unit
+        onResult: (Boolean) -> Unit,
     ) {
         val context = requireContext()
         if (!newValue || SettingsHelper.isIgnoringBatteryOptimizations(context) || EnvironmentUtils.isTelevision()) {
             onResult(true)
             return
         }
-            
+
         lifecycleScope.launch {
-            val result = suspendCancellableCoroutine<Boolean> { continuation ->
-                batteryOptimizationContinuation = continuation
-                SnackbarHelper.show(
-                    context,
-                    requireView(),
-                    msg = context.getString(R.string.snackbar_battery_optimization_settings),
-                    duration = 6000,
-                    actionText = context.getString(R.string.snackbar_action_fix),
-                    action = { SettingsHelper.requestIgnoreBatteryOptimizations(context, batteryOptimizationListener) },
-                    onDismiss = { event ->
-                        if (event != Snackbar.Callback.DISMISS_EVENT_ACTION && continuation.isActive)
-                            continuation.resume(false)
-                    }
-                )
-            }
+            val result =
+                suspendCancellableCoroutine<Boolean> { continuation ->
+                    batteryOptimizationContinuation = continuation
+                    SnackbarHelper.show(
+                        context,
+                        requireView(),
+                        msg = context.getString(R.string.snackbar_battery_optimization_settings),
+                        duration = 6000,
+                        actionText = context.getString(R.string.snackbar_action_fix),
+                        action = { SettingsHelper.requestIgnoreBatteryOptimizations(context, batteryOptimizationListener) },
+                        onDismiss = { event ->
+                            if (event != Snackbar.Callback.DISMISS_EVENT_ACTION && continuation.isActive) {
+                                continuation.resume(false)
+                            }
+                        },
+                    )
+                }
             onResult(result)
         }
     }
@@ -486,48 +480,55 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
 
         for ((index, displayLocale) in displayLocaleTags.withIndex()) {
             if (index == 0) {
-                localizedLocales.add(getString(R.string.follow_system))
+                localizedLocales.add(getString(R.string.settings_follow_system))
                 continue
             }
 
             val locale = Locale.forLanguageTag(displayLocale.toString())
-            val localeName = if (!TextUtils.isEmpty(locale.script))
-                locale.getDisplayScript(locale)
-            else
-                locale.getDisplayName(locale)
+            val localeName =
+                if (!TextUtils.isEmpty(locale.script)) {
+                    locale.getDisplayScript(locale)
+                } else {
+                    locale.getDisplayName(locale)
+                }
 
-            val localizedLocaleName = if (!TextUtils.isEmpty(locale.script))
-                locale.getDisplayScript(currentLocale)
-            else
-                locale.getDisplayName(currentLocale)
+            val localizedLocaleName =
+                if (!TextUtils.isEmpty(locale.script)) {
+                    locale.getDisplayScript(currentLocale)
+                } else {
+                    locale.getDisplayName(currentLocale)
+                }
 
             localizedLocales.add(
                 if (index != currentLocaleIndex) {
                     "$localeName<br><small>$localizedLocaleName<small>".toHtml()
                 } else {
                     localizedLocaleName
-                }
+                },
             )
         }
 
         languagePreference.entries = localizedLocales.toTypedArray()
 
-        languagePreference.summary = when {
-            TextUtils.isEmpty(currentLocaleTag) || "SYSTEM" == currentLocaleTag -> {
-                getString(R.string.follow_system)
-            }
-            currentLocaleIndex != -1 -> {
-                val localizedLocale = localizedLocales[currentLocaleIndex]
-                val newLineIndex = localizedLocale.indexOf('\n')
-                if (newLineIndex == -1) {
-                    localizedLocale.toString()
-                } else {
-                    localizedLocale.subSequence(0, newLineIndex).toString()
+        languagePreference.summary =
+            when {
+                TextUtils.isEmpty(currentLocaleTag) || "SYSTEM" == currentLocaleTag -> {
+                    getString(R.string.settings_follow_system)
+                }
+
+                currentLocaleIndex != -1 -> {
+                    val localizedLocale = localizedLocales[currentLocaleIndex]
+                    val newLineIndex = localizedLocale.indexOf('\n')
+                    if (newLineIndex == -1) {
+                        localizedLocale.toString()
+                    } else {
+                        localizedLocale.subSequence(0, newLineIndex).toString()
+                    }
+                }
+
+                else -> {
+                    ""
                 }
             }
-            else -> {
-                ""
-            }
-        }
     }
 }

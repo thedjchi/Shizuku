@@ -66,15 +66,6 @@
                         android:textAppearance="?textAppearanceBodyMedium"
                         android:textColor="?colorOnErrorContainer" />
 
-                    <TextView
-                        style="@style/TerminalTutorialText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/stealth_warning_compatibility_3"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnErrorContainer" />
-
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -130,9 +121,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/stealth_info_reconfigure"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnSecondaryContainer"
-                        android:textStyle="bold" />
+                        android:textAppearance="?textAppearanceBodyMediumEmphasized"
+                        android:textColor="?colorOnSecondaryContainer" />
 
                     <TextView
                         style="@style/TerminalTutorialText"
@@ -166,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="36dp"
                     android:text="@string/stealth_info_update"
-                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textAppearance="?textAppearanceBodyMediumEmphasized"
                     android:textColor="?colorOnSecondaryContainer" />
 
             </com.google.android.material.card.MaterialCardView>

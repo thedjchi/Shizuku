@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Empty preference to fix issue with Android TVs not being able to re-focus on appbar if category is first item -->
+    <!-- Empty preference to fix issue with Android TVs not being able to re-focus on appbar if
+    category is first item -->
     <Preference
         android:key="empty"
         style="@style/Preference.Rikka.Material3.Empty" />
@@ -23,13 +24,15 @@
 
         <SwitchPreferenceCompat
             android:key="tcp_mode"
-            android:title="@string/settings_tcp_mode" 
+            android:title="@string/settings_tcp_mode"
             android:defaultValue="true" />
 
         <EditTextPreference
             android:key="tcp_port"
             android:title="@string/settings_tcp_port"
-            android:inputType="number" />
+            android:inputType="number"
+            android:defaultValue="5555"
+            app:useSimpleSummaryProvider="true" />
 
         <SwitchPreferenceCompat
             android:key="auto_disable_usb_debugging"
@@ -39,8 +42,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="category_language"
-        android:title="@string/settings_language">
+        android:key="category_ui"
+        android:title="@string/settings_user_interface">
 
         <rikka.preference.SimpleMenuPreference
             android:defaultValue="SYSTEM"
@@ -48,57 +51,39 @@
             android:summary="%s"
             android:title="@string/settings_language" />
 
-        <Preference
-            style="?preferenceInformationStyle"
-            android:key="translation_contributors"
-            android:title="@string/settings_translation_contributors" />
-
-        <Preference
-            android:key="translation"
-            android:title="@string/settings_translation" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="category_ui"
-        android:title="@string/settings_user_interface">
-
         <moe.shizuku.manager.settings.IntegerSimpleMenuPreference
             android:entries="@array/night_mode"
             android:entryValues="@array/night_mode_value"
             android:key="night_mode"
             android:summary="%s"
-            android:title="@string/dark_theme" />
+            android:title="@string/settings_theme" />
 
         <SwitchPreferenceCompat
-            android:key="black_night_theme"
-            android:summary="@string/settings_black_night_theme_summary"
-            android:title="@string/settings_black_night_theme" />
+            android:key="amoled_black"
+            android:title="@string/settings_amoled_black" />
 
         <SwitchPreferenceCompat
-            android:key="use_system_color"
-            android:title="@string/settings_use_system_color" />
+            android:key="dynamic_color"
+            android:title="@string/settings_dynamic_color"
+            android:summary="@string/settings_dynamic_color_summary" />
 
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="category_support"
-        android:title="@string/settings_support">
+        android:key="category_updates"
+        android:title="@string/settings_updates">
+
+        <SwitchPreferenceCompat
+            android:key="check_for_updates"
+            android:title="@string/check_for_updates"
+            android:defaultValue="true" />
 
         <moe.shizuku.manager.settings.IntegerSimpleMenuPreference
             android:entries="@array/update_mode"
             android:entryValues="@array/update_mode_value"
-            android:key="update_mode"
+            android:key="update_channel"
             android:summary="%s"
-            android:title="@string/check_for_updates" />
-
-        <Preference
-            android:key="help"
-            android:title="@string/settings_help" />
-
-        <Preference
-            android:key="report_bug"
-            android:title="@string/settings_report_bug" />
+            android:title="@string/settings_update_channel" />
 
     </PreferenceCategory>
 

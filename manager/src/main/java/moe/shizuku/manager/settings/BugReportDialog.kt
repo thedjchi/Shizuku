@@ -45,7 +45,7 @@ class BugReportDialog : DialogFragment() {
         }
 
         return MaterialAlertDialogBuilder(context)
-            .setTitle(R.string.settings_report_bug)
+            .setTitle(R.string.bug_report)
             .setView(binding.root)
             .setPositiveButton("GitHub") { _, _ ->
                 CustomTabsHelper.launchUrlOrCopy(context, "https://github.com/thedjchi/Shizuku/issues/new")

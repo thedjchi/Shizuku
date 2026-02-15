@@ -140,15 +140,15 @@
     <string name="terminal_apps">Terminal apps</string>
     <string name="terminal_apps_description">Terminal apps can run privileged shell commands using
         Shizuku.</string>
-    <string name="terminal_tutorial_miui">Users have reported that MIUI breaks the Storage Access
-        Framework, which is used by the export function.</string>
-    <string name="terminal_tutorial_miui_2">If you are using MIUI, you may have to extract the file
-        from the assets folder in Shizuku\'s APK.</string>
+    <string name="terminal_tutorial_miui">MIUI may break the Storage Access
+        Framework, which the export button uses.</string>
+    <string name="terminal_tutorial_miui_2">You may have to extract the file
+        from the assets folder in Shizuku\'s APK instead.</string>
     <string name="terminal_tutorial_1">Export %1$s and %2$s to a new folder.</string>
     <string name="export">Export</string>
     <string name="terminal_tutorial_2">Use your terminal app to copy the files to its private files
         directory.</string>
-    <string name="terminal_tutorial_2_tip">Tip: If your terminal app\'s home directory (~) is in the
+    <string name="terminal_tutorial_2_tip">Tip: If your terminal app\'s home directory is in the
         private files directory, place the files there to run %1$s without specifying a
         path.\n\nOtherwise, you can add an alias for %2$s in your terminal\'s %3$s configuration
         file.</string>
@@ -191,63 +191,70 @@
     <string name="hide">Hide</string>
     <string name="unhide">Unhide</string>
 
-    <!-- Settings (WIP) -->
-    <string name="settings_title">Settings</string>
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+
+    <!-- Settings - Behavior -->
     <string name="settings_behavior">Behavior</string>
     <string name="settings_start_on_boot">Start on boot</string>
     <string name="settings_start_on_boot_summary">Requires Android 11+ or root</string>
     <string name="settings_start_on_boot_bug">Due to a bug in Android 11-12, wireless debugging does
         not remember any authorized networks.\n\nYou will need to re-authorize the network on each
         reboot by tapping \"Allow\" when the authorization dialog pops up.</string>
-    <string name="settings_use_system_color">Use system theme color</string>
     <string name="settings_watchdog">Watchdog</string>
     <string name="settings_watchdog_summary">Automatically restart Shizuku if it crashes</string>
-    <string name="settings_tcp_mode">TCP mode</string>
-    <string name="settings_tcp_mode_summary">Allows Shizuku to restart without Wi-Fi. (Shizuku must
-        have started once since reboot)</string>
-    <string name="settings_tcp_mode_dialog_close_port">The TCP port will be closed immediately. You
-        will need Wi-Fi to turn on TCP mode again. Continue?</string>
-    <string name="settings_tcp_mode_closing_port">Closing TCP port...</string>
-    <string name="settings_restart_dialog_title">Restart Required</string>
-    <string name="settings_restart_dialog_message">Shizuku needs to restart in order to apply this
-        setting.</string>
-    <string name="settings_restart_dialog_message_wifi_required"><![CDATA[<br><br><b>Wi-Fi is required. Shizuku will continue running and wait for a Wi-Fi connection before restarting in the background.</b>]]></string>
-    <string name="settings_tcp_port">TCP port</string>
-    <string name="settings_tcp_port_default">Default (5555)</string>
-    <string name="settings_tcp_port_hint">Leave blank to use default (5555)</string>
     <string name="settings_auto_disable_usb_debugging">Auto-disable USB debugging</string>
     <string name="settings_auto_disable_usb_debugging_summary">Disable USB debugging when stopping
         Shizuku. It will be re-enabled when Shizuku starts again.</string>
-    <string name="settings_language">Language</string>
-    <string name="settings_translation_contributors">Translation contributors</string>
-    <string name="settings_translation">Participate in translation</string>
-    <string name="settings_translation_summary">Help us translate %s into your language</string>
+
+    <!-- Settings - Behavior - Launch Mode -->
+    <string name="default">Default</string>
+    <string name="root">Root</string>
+    <string name="wireless_debugging">Wireless debugging</string>
+    <string name="wireless_debugging_requirement">Requires a Wi-Fi connection. With TCP mode, Wi-Fi
+        is only needed once per reboot.</string>
+    <string name="wireless_debugging_requirement_pre_11">Requires Android 11+</string>
+    <string name="pc">PC</string>
+    <string name="pc_requirement">Command must be run after each reboot</string>
+
+    <!-- Settings - Behavior - TCP -->
+    <string name="settings_tcp_mode">TCP mode</string>
+    <string name="settings_tcp_mode_summary">When enabled, Wi-Fi is only needed to start Shizuku
+        once per reboot</string>
+    <string name="tcp_close_port">Close TCP port?</string>
+    <string name="tcp_close_port_message">You will need Wi-Fi to turn on TCP mode again.</string>
+    <string name="tcp_error_closing">Couldn\'t close TCP port</string>
+    <string name="tcp_restart_required">Restart required</string>
+    <string name="tcp_restart_required_message">The service must be restarted to apply this setting.</string>
+    <string name="tcp_restart_required_message_wifi_required">Shizuku will keep running and wait for
+        a Wi-Fi connection before restarting in the background.</string>
+    <string name="settings_tcp_port">TCP port</string>
+
+    <!-- Settings - Appearance -->
     <string name="settings_user_interface">Appearance</string>
-    <string name="settings_black_night_theme">Black night theme</string>
-    <string name="settings_black_night_theme_summary">Use the pure black theme if night mode is
-        enabled</string>
-    <string name="settings_support">Support</string>
-    <string name="settings_update_stable">Stable</string>
-    <string name="settings_update_beta">Beta</string>
-    <string name="settings_help">Help</string>
-    <string name="settings_report_bug">Report a bug</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_follow_system">Follow system</string>
+    <string name="settings_amoled_black">AMOLED black</string>
+    <string name="settings_dynamic_color">Dynamic color</string>
+    <string name="settings_dynamic_color_summary">Color will match your device\'s wallpaper</string>
+
+    <!-- Settings - Updates -->
+    <string name="settings_updates">Updates</string>
+    <string name="settings_update_channel">Update channel</string>
+    <string name="settings_update_channel_stable">Stable</string>
+    <string name="settings_update_channel_beta">Beta</string>
+
+    <!-- Settings - Advanced -->
     <string name="settings_advanced">Advanced</string>
     <string name="settings_legacy_pairing">Legacy pairing</string>
     <string name="settings_legacy_pairing_summary">Enter the pairing code in a dialog instead of a
         notification</string>
 
-    <!-- Launch Modes -->
-    <string name="auto">Auto</string>
-    <string name="root">Root</string>
-    <string name="wireless_debugging">Wireless debugging</string>
-    <string name="wireless_debugging_requirement">Requires a Wi-Fi connection (TCP mode only needs
-        Wi-Fi once per reboot)</string>
-    <string name="wireless_debugging_requirement_pre_11">Requires enabling ADB over TCP from a PC
-        after each
-        reboot</string>
-    <string name="pc">PC</string>
-
-    <!-- Bug Report Dialog (WIP) -->
+    <!-- Help & Feedback - Bug Report (WIP) -->
+    <string name="bug_report">Bug report</string>
     <string name="bug_report_dialog_before_reporting">First, please do the following:</string>
     <string name="bug_report_dialog_update">Check that you are using the ^1.</string>
     <string name="bug_report_dialog_link_update">latest version</string>
@@ -260,7 +267,7 @@
     <string name="bug_report_dialog_method_2">Otherwise, you can send an email.</string>
     <string name="bug_report_dialog_button_email">Email</string>
 
-    <!-- Snackbars -->
+    <!-- Snackbars (WIP) -->
     <string name="snackbar_invalid_port">Port must be between 1 and 65535</string>
     <string name="snackbar_battery_optimization_home">Battery optimization must be disabled for
         start on boot and/or watchdog to work properly.</string>
@@ -285,12 +292,6 @@
     <string name="toast_pairing_timeout">Shizuku pairing service timed out</string>
     <string name="toast_copied_to_clipboard">Copied to clipboard</string>
     <string name="toast_no_email_app">No email app found</string>
-
-    <!-- Dark mode -->
-    <string name="dark_theme">Theme</string>
-    <string name="dark_theme_off">Always light</string>
-    <string name="dark_theme_on">Always dark</string>
-    <string name="follow_system">Follow system</string>
 
     <!-- About (WIP) -->
     <string name="about">About</string>

@@ -19,12 +19,12 @@ public class ThemeHelper {
     private static final String THEME_BLACK = "BLACK";
 
     public static boolean isBlackNightTheme(Context context) {
-        return ShizukuSettings.getPreferences().getBoolean(ShizukuSettings.Keys.KEY_BLACK_NIGHT_THEME, EnvironmentUtils.isWatch());
+        return ShizukuSettings.getPreferences().getBoolean(ShizukuSettings.Keys.KEY_AMOLED_BLACK, EnvironmentUtils.isWatch());
     }
 
     public static boolean isUsingSystemColor() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
-                && ShizukuSettings.getPreferences().getBoolean(ShizukuSettings.Keys.KEY_USE_SYSTEM_COLOR, true);
+                && ShizukuSettings.getPreferences().getBoolean(ShizukuSettings.Keys.KEY_DYNAMIC_COLOR, true);
     }
 
     public static String getTheme(Context context) {
