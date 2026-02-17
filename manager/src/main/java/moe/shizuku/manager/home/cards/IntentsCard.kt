@@ -14,8 +14,8 @@ import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.databinding.HomeAutomationBottomSheetBinding
-import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.toHtml
 import rikka.core.util.ClipboardUtils
 import rikka.html.text.HtmlCompat
 
@@ -68,7 +68,7 @@ class IntentsCard
                             Toast
                                 .makeText(
                                     context,
-                                    context.getString(R.string.toast_copied_to_clipboard),
+                                    context.getString(R.string.copied_to_clipboard),
                                     Toast.LENGTH_SHORT,
                                 ).show()
                         }
@@ -83,8 +83,8 @@ class IntentsCard
                 }
                 extrasLayout.setStartIconOnClickListener {
                     MaterialAlertDialogBuilder(context)
-                        .setTitle(R.string.regenerate_token)
-                        .setMessage(R.string.regenerate_token_message)
+                        .setTitle(R.string.intents_token_regenerate)
+                        .setMessage(R.string.intents_token_regenerate_message)
                         .setNegativeButton(android.R.string.cancel, null)
                         .setPositiveButton(android.R.string.ok, { _, _ ->
                             val authToken = ShizukuSettings.generateAuthToken()

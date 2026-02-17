@@ -35,7 +35,6 @@ import java.net.ConnectException
 
 @RequiresApi(VERSION_CODES.R)
 class AdbPairDialogFragment : DialogFragment() {
-
     private lateinit var binding: AdbPairDialogBinding
 
     private val viewModel: ViewModel by activityViewModels()
@@ -44,13 +43,14 @@ class AdbPairDialogFragment : DialogFragment() {
         val context = requireContext()
         binding = AdbPairDialogBinding.inflate(LayoutInflater.from(context))
 
-        val builder = MaterialAlertDialogBuilder(context).apply {
-            setTitle(R.string.dialog_adb_pairing_title)
-            setView(binding.root)
-            setNegativeButton(android.R.string.cancel, null)
-            setPositiveButton(android.R.string.ok, null)
-            setNeutralButton(R.string.development_settings, null)
-        }
+        val builder =
+            MaterialAlertDialogBuilder(context).apply {
+                setTitle(R.string.pairing_searching)
+                setView(binding.root)
+                setNegativeButton(android.R.string.cancel, null)
+                setPositiveButton(android.R.string.ok, null)
+                setNeutralButton(R.string.developer_options, null)
+            }
         val dialog = builder.create()
         dialog.setCanceledOnTouchOutside(false)
         dialog.setOnShowListener { onDialogShow(dialog) }
@@ -58,6 +58,17 @@ class AdbPairDialogFragment : DialogFragment() {
     }
 
     private fun onDialogShow(dialog: AlertDialog) {
+        binding.text1.text =
+            buildString {
+                append(getString(R.string.pairing_steps_intro))
+                append("\n -")
+                append(getString(R.string.pairing_tutorial_1))
+                append("\n -")
+                append(getString(R.string.pairing_tutorial_2))
+                append("\n -")
+                append(getString(R.string.pairing_tutorial_3))
+            }
+
         binding.pairingCode.editText!!.doAfterTextChanged {
             binding.pairingCode.error = null
         }
@@ -72,32 +83,34 @@ class AdbPairDialogFragment : DialogFragment() {
 
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
             val context = it.context
-            val port = try {
-                binding.port.editText!!.text.toString().toInt()
-            } catch (e: Exception) {
-                -1
-            }
-            if (port > 65535 || port < 1) {
-                binding.port.isVisible = true
-                binding.port.error = context.getString(R.string.dialog_adb_invalid_port)
-                return@setOnClickListener
-            }
+            val port =
+                try {
+                    binding.port.editText!!
+                        .text
+                        .toString()
+                        .toInt()
+                } catch (e: Exception) {
+                    -1
+                }
 
-            val password = binding.pairingCode.editText!!.text.toString()
+            val password =
+                binding.pairingCode.editText!!
+                    .text
+                    .toString()
 
             viewModel.run(port, password)
         }
 
         viewModel.port.observe(this) {
             if (it == -1) {
-                dialog.setTitle(R.string.dialog_adb_pairing_discovery)
+                dialog.setTitle(R.string.pairing_searching)
                 binding.text1.isVisible = true
                 binding.pairingCode.isVisible = false
                 binding.port.editText!!.setText(it.toString())
                 dialog.getButton(AlertDialog.BUTTON_POSITIVE).isVisible = false
                 dialog.getButton(AlertDialog.BUTTON_NEUTRAL).isVisible = true
             } else {
-                dialog.setTitle(R.string.dialog_adb_pairing_title)
+                dialog.setTitle(R.string.pairing_service_found)
                 binding.text1.isVisible = false
                 binding.pairingCode.isVisible = true
                 binding.port.editText!!.setText(it.toString())
@@ -111,16 +124,24 @@ class AdbPairDialogFragment : DialogFragment() {
         super.onActivityCreated(savedInstanceState)
 
         val context = requireContext()
-        val inMultiScreenOrDisplay = (requireActivity().isInMultiWindowMode
-                || (requireActivity().window?.decorView?.display?.displayId ?: -1) > 0)
+        val inMultiScreenOrDisplay = (
+            requireActivity().isInMultiWindowMode ||
+                (
+                    requireActivity()
+                        .window
+                        ?.decorView
+                        ?.display
+                        ?.displayId ?: -1
+                ) > 0
+        )
 
         binding.text1.isVisible = inMultiScreenOrDisplay
         binding.text2.isVisible = !inMultiScreenOrDisplay
 
         if (inMultiScreenOrDisplay) {
-            dialog?.setTitle(R.string.dialog_adb_pairing_discovery)
+            dialog?.setTitle(R.string.pairing_searching)
         } else {
-            dialog?.setTitle(R.string.dialog_adb_pairing_title)
+            dialog?.setTitle(R.string.pair)
         }
 
         viewModel.result.observe(this) {
@@ -129,14 +150,18 @@ class AdbPairDialogFragment : DialogFragment() {
             } else {
                 when (it) {
                     is ConnectException -> {
-                        binding.port.error = context.getString(R.string.cannot_connect_port)
+                        binding.port.error = context.getString(R.string.start_error_connection)
                     }
+
                     is AdbInvalidPairingCodeException -> {
-                        binding.pairingCode.error = context.getString(R.string.paring_code_is_wrong)
+                        binding.pairingCode.error = context.getString(R.string.pairing_error_invalid_code)
                     }
+
                     is AdbKeyException -> {
-                        Toast.makeText(context, context.getString(R.string.adb_error_key_store), Toast.LENGTH_LONG)
-                            .apply { setGravity(Gravity.CENTER, 0, 0) }.show()
+                        Toast
+                            .makeText(context, context.getString(R.string.adb_error_key_store), Toast.LENGTH_LONG)
+                            .apply { setGravity(Gravity.CENTER, 0, 0) }
+                            .show()
                     }
                 }
             }
@@ -148,14 +173,13 @@ class AdbPairDialogFragment : DialogFragment() {
         show(fragmentManager, javaClass.simpleName)
     }
 
-    override fun getDialog(): AlertDialog? {
-        return super.getDialog() as AlertDialog?
-    }
+    override fun getDialog(): AlertDialog? = super.getDialog() as AlertDialog?
 }
 
 @SuppressLint("NewApi")
-class ViewModel(application: Application) : AndroidViewModel(application) {
-
+class ViewModel(
+    application: Application,
+) : AndroidViewModel(application) {
     private val appContext = getApplication<Application>().applicationContext
 
     private val _result = MutableLiveData<Throwable?>()
@@ -164,36 +188,42 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     private val _port = MutableLiveData<Int>()
     val port = _port as LiveData<Int>
 
-    private val adbMdns: AdbMdns = AdbMdns(appContext, AdbMdns.TLS_PAIRING) {
-        _port.postValue(it)
-    }
+    private val adbMdns: AdbMdns =
+        AdbMdns(appContext, AdbMdns.TLS_PAIRING) {
+            _port.postValue(it)
+        }
 
     init {
         adbMdns.start()
     }
 
-    fun run(port: Int, password: String) {
+    fun run(
+        port: Int,
+        password: String,
+    ) {
         GlobalScope.launch(Dispatchers.IO) {
             val host = "127.0.0.1"
 
-            val key = try {
-                AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
-            } catch (e: Throwable) {
-                e.printStackTrace()
-                _result.postValue(AdbKeyException(e))
-                return@launch
-            }
-
-            AdbPairingClient(host, port, password, key).runCatching {
-                start()
-            }.onFailure {
-                _result.postValue(it)
-                it.printStackTrace()
-            }.onSuccess {
-                if (it) {
-                    _result.postValue(null)
+            val key =
+                try {
+                    AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku")
+                } catch (e: Throwable) {
+                    e.printStackTrace()
+                    _result.postValue(AdbKeyException(e))
+                    return@launch
                 }
-            }
+
+            AdbPairingClient(host, port, password, key)
+                .runCatching {
+                    start()
+                }.onFailure {
+                    _result.postValue(it)
+                    it.printStackTrace()
+                }.onSuccess {
+                    if (it) {
+                        _result.postValue(null)
+                    }
+                }
         }
     }
 

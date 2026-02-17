@@ -71,33 +71,6 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                style="@style/DialogCard"
-                app:cardBackgroundColor="?colorErrorContainer">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="-8dp"
-                    android:layout_marginTop="4dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_warning_24"
-                    android:tint="?colorOnErrorContainer"
-                    android:tintMode="src_in" />
-
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="36dp"
-                    android:duplicateParentState="true"
-                    android:text="@string/stealth_warning_detection"
-                    android:textAppearance="?textAppearanceBodyMedium"
-                    android:textColor="?colorOnErrorContainer"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
                 style="@style/DialogCard">
 
                 <ImageView

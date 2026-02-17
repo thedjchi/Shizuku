@@ -12,7 +12,6 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import moe.shizuku.manager.BuildConfig
-import moe.shizuku.manager.Manifest
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.model.ServiceStatus
 import moe.shizuku.manager.utils.EnvironmentUtils
@@ -39,19 +38,26 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     private val _shouldShowUninstallDialog = MutableLiveData<Boolean>(false)
     val shouldShowUninstallDialog: LiveData<Boolean> = _shouldShowUninstallDialog
 
+    private val shizukuPermissionGroup  = "moe.shizuku.manager.permission-group.API"
+    private val shizukuPermission = "moe.shizuku.manager.permission.API_V23";
+
     private fun load(): ServiceStatus {
         // In certain cases when user re-installs Shizuku with different package name (e.g., when using stealth mode), the system doesn't recognize the Shizuku permission.
         // As a result, all permission operations (check/grant/revoke) will fail.
         // This is fixed by rebooting the device.
         // Run getPermissionGroupInfo() to trigger the exception. Then catch it and show a dialog prompting the user to reboot their device.
         try {
-            val permissionGroup = appContext.packageManager.getPermissionGroupInfo(Manifest.permission_group.API, 0)
-            val permission = appContext.packageManager.getPermissionInfo(Manifest.permission.API_V23, 0)
+            val permissionGroup = appContext.packageManager.getPermissionGroupInfo(shizukuPermissionGroup, 0)
+            val permission = appContext.packageManager.getPermissionInfo(shizukuPermission, 0)
             if (permission.packageName != appContext.packageName) {
                 _shouldShowUninstallDialog.postValue(true)
             }
         } catch (e: PackageManager.NameNotFoundException) {
             _shouldShowRebootDialog.postValue(true)
+        }
+        
+        if (Shizuku.isPreV11() || (Shizuku.getVersion() == 11 && Shizuku.getServerPatchVersion() < 3)) {
+            // disable authorized apps
         }
 
         if (!ShizukuStateMachine.isRunning()) {
@@ -74,7 +80,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
         // Before a526d6bb, server will not exit on uninstall, manager installed later will get not permission
         // Run a random remote transaction here, report no permission as not running
-        ShizukuSystemApis.checkPermission(Manifest.permission.API_V23, appContext.packageName, 0)
+        ShizukuSystemApis.checkPermission(shizukuPermission, appContext.packageName, 0)
         return ServiceStatus(uid, apiVersion, patchVersion, seContext, permissionTest)
     }
 

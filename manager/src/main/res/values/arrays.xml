@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
-    <string-array name="night_mode">
+    <string-array name="theme">
         <item>@string/settings_theme_light</item>
         <item>@string/settings_theme_dark</item>
         <item>@string/settings_follow_system</item>
     </string-array>
 
-    <integer-array name="night_mode_value">
+    <integer-array name="theme_value">
         <item>1</item>
         <item>2</item>
         <item>-1</item>
     </integer-array>
 
-    <string-array name="update_mode">
-        <item>@string/off</item>
+    <string-array name="update_channel">
         <item>@string/settings_update_channel_stable</item>
         <item>@string/settings_update_channel_beta</item>
     </string-array>
 
-    <integer-array name="update_mode_value">
+    <integer-array name="update_channel_value">
         <item>0</item>
         <item>1</item>
-        <item>2</item>
     </integer-array>
 
 </resources>

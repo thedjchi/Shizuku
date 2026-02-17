@@ -36,17 +36,6 @@
         app:layout_constraintTop_toBottomOf="@id/app_name"
         app:layout_constraintStart_toStartOf="@id/app_name" />
 
-    <TextView
-        android:id="@+id/source_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="?android:textColorSecondary"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/version_name"
-        app:layout_constraintStart_toStartOf="@id/version_name"
-        tools:text="@string/view_source_code" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
@@ -54,18 +43,52 @@
         android:layout_marginTop="16dp"
         android:text="@string/check_for_updates"
         app:icon="@drawable/ic_update_24"
-        app:layout_constraintTop_toBottomOf="@id/source_code"
-        app:layout_constraintStart_toStartOf="@id/source_code" />
+        app:layout_constraintTop_toBottomOf="@id/version_name"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnDonate"
+        style="?materialButtonTonalStyle"
+        android:id="@+id/btnGitHub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="@string/buy_me_a_coffee"
-        app:icon="@drawable/ic_bmc_logo"
+        android:text="@string/about_github"
+        app:icon="@drawable/ic_github"
         app:layout_constraintTop_toBottomOf="@id/btnUpdate"
         app:layout_constraintStart_toStartOf="@id/btnUpdate" />
+
+    <com.google.android.material.button.MaterialButton
+        style="?materialButtonTonalStyle"
+        android:id="@+id/btnDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/about_donate"
+        app:icon="@drawable/ic_bmc_logo"
+        app:layout_constraintTop_toTopOf="@id/btnGitHub"
+        app:layout_constraintStart_toEndOf="@id/btnGitHub" />
+
+    <TextView
+        android:id="@+id/developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="?android:textColorSecondary"
+        android:textAppearance="?textAppearanceBodySmall"
+        app:layout_constraintTop_toBottomOf="@id/btnDonate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+     <TextView
+        android:id="@+id/fork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="?android:textColorSecondary"
+        android:textAppearance="?textAppearanceBodySmall"
+        app:layout_constraintTop_toBottomOf="@id/developer"
+        app:layout_constraintStart_toStartOf="@id/developer"
+        app:layout_constraintEnd_toEndOf="@id/developer" />
 
     <!-- Close button -->
     <ImageButton

@@ -18,7 +18,6 @@
 // import kotlinx.coroutines.launch
 // import kotlinx.coroutines.CoroutineScope
 // import kotlinx.coroutines.Dispatchers
-// import moe.shizuku.manager.Helps
 // import moe.shizuku.manager.ShizukuSettings
 // import moe.shizuku.manager.R
 // import moe.shizuku.manager.adb.AdbPairingTutorialActivity
@@ -26,7 +25,7 @@
 // import moe.shizuku.manager.databinding.HomeItemContainerBinding
 // import moe.shizuku.manager.databinding.HomeStartWirelessAdbBinding
 // import moe.shizuku.manager.home.showAccessibilityDialog
-// import moe.shizuku.manager.ktx.toHtml
+// import moe.shizuku.manager.utils.toHtml
 // import moe.shizuku.manager.receiver.NotifCancelReceiver
 // import moe.shizuku.manager.starter.StarterActivity
 // import moe.shizuku.manager.utils.CustomTabsHelper
@@ -51,7 +50,7 @@
 
 //         fun start (context: Context, scope: CoroutineScope) {
 //             if (ShizukuStateMachine.get() == ShizukuStateMachine.State.STARTING) {
-//                 Toast.makeText(context, context.getString(R.string.toast_shizuku_already_starting), Toast.LENGTH_SHORT).show()
+//                 Toast.makeText(context, context.getString(R.string.start_already_starting), Toast.LENGTH_SHORT).show()
 //                 return
 //             }
 
@@ -62,7 +61,7 @@
 //                 Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
 //                 Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
 //             }
-        
+
 //             val adbEnabled = Settings.Global.getInt(cr, Settings.Global.ADB_ENABLED, 0)
 //             if (adbEnabled == 0) {
 //                 WadbEnableUsbDebuggingDialogFragment().show(context.asActivity<FragmentActivity>().supportFragmentManager)
@@ -100,9 +99,6 @@
 //         }
 
 //         if (EnvironmentUtils.isTlsSupported()) {
-//             binding.button3.setOnClickListener { v: View ->
-//                 CustomTabsHelper.launchUrlOrCopy(v.context, Helps.ADB_ANDROID11.get())
-//             }
 //             binding.button2.setOnClickListener { v: View ->
 //                 onPairClicked(v.context)
 //             }

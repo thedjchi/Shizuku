@@ -114,7 +114,7 @@
         </activity>
         <activity
             android:name=".starter.StarterActivity"
-            android:label="@string/starter" />
+            android:label="@string/start" />
         <activity
             android:name=".settings.BugReportDialogActivity"
             android:theme="@style/Theme.App.DialogHost"

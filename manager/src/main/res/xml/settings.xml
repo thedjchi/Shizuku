@@ -52,9 +52,9 @@
             android:title="@string/settings_language" />
 
         <moe.shizuku.manager.settings.IntegerSimpleMenuPreference
-            android:entries="@array/night_mode"
-            android:entryValues="@array/night_mode_value"
-            android:key="night_mode"
+            android:entries="@array/theme"
+            android:entryValues="@array/theme_value"
+            android:key="theme"
             android:summary="%s"
             android:title="@string/settings_theme" />
 
@@ -79,8 +79,8 @@
             android:defaultValue="true" />
 
         <moe.shizuku.manager.settings.IntegerSimpleMenuPreference
-            android:entries="@array/update_mode"
-            android:entryValues="@array/update_mode_value"
+            android:entries="@array/update_channel"
+            android:entryValues="@array/update_channel_value"
             android:key="update_channel"
             android:summary="%s"
             android:title="@string/settings_update_channel" />

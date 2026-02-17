@@ -17,31 +17,29 @@ import androidx.lifecycle.MutableLiveData
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbMdns
-import moe.shizuku.manager.databinding.AdbDialogBinding
 import moe.shizuku.manager.starter.StarterActivity
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsPage
 
 @RequiresApi(Build.VERSION_CODES.R)
 class AdbDialogFragment : DialogFragment() {
-
-    private lateinit var binding: AdbDialogBinding
     private lateinit var adbMdns: AdbMdns
     private val port = MutableLiveData<Int>()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val context = requireContext()
-        binding = AdbDialogBinding.inflate(layoutInflater)
-        adbMdns = AdbMdns(context, AdbMdns.TLS_CONNECT) {
-            port.postValue(it)
-        }
+        adbMdns =
+            AdbMdns(context, AdbMdns.TLS_CONNECT) {
+                port.postValue(it)
+            }
 
-        val builder = MaterialAlertDialogBuilder(context).apply {
-            setTitle(R.string.dialog_adb_discovery)
-            setView(binding.root)
-            setNegativeButton(android.R.string.cancel, null)
-            setPositiveButton(R.string.development_settings, null)
-        }
+        val builder =
+            MaterialAlertDialogBuilder(context).apply {
+                setTitle(R.string.start_searching)
+                setMessage(R.string.start_searching_message)
+                setNegativeButton(android.R.string.cancel, null)
+                setPositiveButton(R.string.developer_options, null)
+            }
         val dialog = builder.create()
         dialog.setCanceledOnTouchOutside(false)
         dialog.setOnShowListener { onDialogShow(dialog) }
@@ -56,8 +54,9 @@ class AdbDialogFragment : DialogFragment() {
     private fun onDialogShow(dialog: AlertDialog) {
         adbMdns.start()
         val context = dialog.context
-        if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
+        if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
             Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 1)
+        }
 
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
             SettingsPage.Developer.HighlightWirelessDebugging.launch(context)
@@ -71,9 +70,10 @@ class AdbDialogFragment : DialogFragment() {
     }
 
     private fun startAndDismiss(port: Int) {
-        val intent = Intent(context, StarterActivity::class.java).apply {
-            putExtra(StarterActivity.EXTRA_PORT, port)
-        }
+        val intent =
+            Intent(context, StarterActivity::class.java).apply {
+                putExtra(StarterActivity.EXTRA_PORT, port)
+            }
         requireContext().startActivity(intent)
 
         dismissAllowingStateLoss()

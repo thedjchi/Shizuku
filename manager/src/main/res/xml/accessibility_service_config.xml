@@ -1,5 +1,5 @@
 <accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
-    android:description="@string/accessibility_service_description"
+    android:description="@string/pairing_accessibility_description"
     android:packageNames="com.android.tv.settings"
     android:accessibilityFlags="flagDefault|flagRetrieveInteractiveWindows"
     android:accessibilityEventTypes="typeWindowContentChanged"

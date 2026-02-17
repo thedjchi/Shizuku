@@ -21,23 +21,23 @@
 //                 )
 //             )
 //         )
-//         .setPositiveButton(R.string.copy) { _, _ ->
+//         .setPositiveButton(android.R.string.copy) { _, _ ->
 //             if (ClipboardUtils.put(context, Starter.adbCommand)) {
 //                 Toast.makeText(
 //                     context,
-//                     context.getString(R.string.toast_copied_to_clipboard),
+//                     context.getString(R.string.copied_to_clipboard),
 //                     Toast.LENGTH_SHORT
 //                 ).show()
 //             }
 //         }
 //         .setNegativeButton(android.R.string.cancel, null)
-//         .setNeutralButton(R.string.send) { _, _ ->
+//         .setNeutralButton(R.string.share) { _, _ ->
 //             var intent = Intent(Intent.ACTION_SEND)
 //             intent.type = "text/plain"
 //             intent.putExtra(Intent.EXTRA_TEXT, Starter.adbCommand)
 //             intent = Intent.createChooser(
 //                 intent,
-//                 context.getString(R.string.send)
+//                 context.getString(R.string.share)
 //             )
 //             context.startActivity(intent)
 //         }

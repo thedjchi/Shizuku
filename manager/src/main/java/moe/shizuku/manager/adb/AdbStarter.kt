@@ -1,13 +1,10 @@
 package moe.shizuku.manager.adb
 
 import android.Manifest.permission.WRITE_SECURE_SETTINGS
-import android.content.pm.PackageManager
 import android.content.Context
+import android.content.pm.PackageManager
 import android.provider.Settings
 import android.widget.Toast
-import java.io.EOFException
-import java.net.SocketException
-import java.net.SocketTimeoutException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -20,9 +17,16 @@ import moe.shizuku.manager.adb.PreferenceAdbKeyStore
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
+import java.io.EOFException
+import java.net.SocketException
+import java.net.SocketTimeoutException
 
 object AdbStarter {
-    suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
+    suspend fun startAdb(
+        context: Context,
+        port: Int,
+        log: ((String) -> Unit)? = null,
+    ) {
         suspend fun AdbClient.runCommand(cmd: String) {
             command(cmd) { log?.invoke(String(it)) }
         }
@@ -30,13 +34,17 @@ object AdbStarter {
         try {
             ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
             log?.invoke("Starting with wireless adb...\n")
-        
+
             withContext(Dispatchers.IO) {
-                val key = runCatching { AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku") }
-                    .getOrElse {
-                        if (it is CancellationException) throw it
-                        else throw AdbKeyException(it)
-                    }
+                val key =
+                    runCatching { AdbKey(PreferenceAdbKeyStore(ShizukuSettings.getPreferences()), "shizuku") }
+                        .getOrElse {
+                            if (it is CancellationException) {
+                                throw it
+                            } else {
+                                throw AdbKeyException(it)
+                            }
+                        }
 
                 var activePort = port
                 val tcpMode = ShizukuSettings.getTcpMode()
@@ -56,7 +64,7 @@ object AdbStarter {
                         }.onFailure { if (it !is EOFException && it !is SocketException) throw it } // Expected when ADB restarts in TCP mode
                     }
                 }
-        
+
                 log?.invoke("Connecting on port $activePort...")
 
                 AdbClient("127.0.0.1", activePort, key).use { client ->
@@ -66,19 +74,23 @@ object AdbStarter {
                 }
             }
         } finally {
-            if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED)
+            if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
                 Settings.Global.putInt(context.contentResolver, "adb_wifi_enabled", 0)
+            }
         }
     }
 
-    suspend fun stopTcp(context: Context, port: Int) {
+    suspend fun stopTcp(
+        context: Context,
+        port: Int,
+    ) {
         runCatching {
             val cr = context.contentResolver
             if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
                 Settings.Global.putInt(cr, Settings.Global.ADB_ENABLED, 1)
                 Settings.Global.putLong(cr, "adb_allowed_connection_time", 0L)
             }
-        
+
             val adbEnabled = Settings.Global.getInt(cr, Settings.Global.ADB_ENABLED, 0)
             if (adbEnabled == 0) throw IllegalStateException("ADB is not enabled")
 
@@ -94,11 +106,13 @@ object AdbStarter {
             if (EnvironmentUtils.getAdbTcpPort() > 0) {
                 ShizukuStateMachine.update()
                 withContext(Dispatchers.Main) {
-                    val errorMsg = when (it) {
-                        is AdbKeyException -> context.getString(R.string.adb_error_key_store)
-                        else -> it.message
-                    }
-                    Toast.makeText(context, context.getString(R.string.adb_error_stop_tcp) + ". ${errorMsg}", Toast.LENGTH_LONG)
+                    val errorMsg =
+                        when (it) {
+                            is AdbKeyException -> context.getString(R.string.adb_error_key_store)
+                            else -> it.message
+                        }
+                    Toast
+                        .makeText(context, context.getString(R.string.tcp_error_closing) + ". $errorMsg", Toast.LENGTH_LONG)
                         .show()
                 }
             }
@@ -118,7 +132,9 @@ object AdbStarter {
                     attempt == maxAttempts ||
                     e is CancellationException ||
                     e is SocketTimeoutException
-                ) throw e
+                ) {
+                    throw e
+                }
                 delayTime += 1000
             }
         }

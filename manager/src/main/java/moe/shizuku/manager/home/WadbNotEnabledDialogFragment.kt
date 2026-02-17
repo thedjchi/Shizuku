@@ -7,14 +7,13 @@ import androidx.fragment.app.FragmentManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.R
 
-class WadbNotEnabledDialogFragment :DialogFragment() {
-
+class WadbNotEnabledDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val context = requireContext()
         return MaterialAlertDialogBuilder(context)
-                .setMessage(R.string.dialog_wireless_adb_not_enabled)
-                .setPositiveButton(android.R.string.ok, null)
-                .create()
+            .setMessage(R.string.start_error_wireless_debugging_disabled)
+            .setPositiveButton(android.R.string.ok, null)
+            .create()
     }
 
     fun show(fragmentManager: FragmentManager) {

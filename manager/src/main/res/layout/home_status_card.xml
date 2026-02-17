@@ -59,6 +59,29 @@
             app:barrierDirection="bottom"
             app:constraint_referenced_ids="icon,summary" />
 
+        <TextView
+            android:id="@+id/adb_restricted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            android:text="@string/status_adb_restricted"
+            android:textAppearance="?textAppearanceBodyMedium"
+            android:textColor="?colorError"
+            app:layout_constraintTop_toBottomOf="@id/buttonBarrier"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/adb_restricted_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:textAppearance="?textAppearanceBodyMedium"
+            android:textColor="?colorError"
+            app:layout_constraintTop_toBottomOf="@id/adb_restricted"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <androidx.constraintlayout.helper.widget.Flow
             android:id="@+id/buttonRow"
             android:layout_width="0dp"
@@ -71,7 +94,7 @@
             app:flow_horizontalStyle="packed"
             app:flow_verticalStyle="packed"
             app:flow_horizontalBias="0"
-            app:layout_constraintTop_toBottomOf="@id/buttonBarrier"
+            app:layout_constraintTop_toBottomOf="@id/adb_restricted_message"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.button.MaterialButton

@@ -26,7 +26,6 @@ import moe.shizuku.manager.databinding.AboutDialogBinding
 import moe.shizuku.manager.databinding.HomeActivityBinding
 import moe.shizuku.manager.home.cards.*
 import moe.shizuku.manager.home.showAccessibilityDialog
-import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.management.AppsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
 import moe.shizuku.manager.utils.AppIconCache
@@ -35,6 +34,7 @@ import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.UpdateHelper
+import moe.shizuku.manager.utils.toHtml
 import rikka.lifecycle.Status
 import rikka.shizuku.Shizuku
 
@@ -75,8 +75,8 @@ abstract class HomeActivity : AppBarActivity() {
         homeModel.shouldShowRebootDialog.observe(this) { shouldShow ->
             if (shouldShow) {
                 showExitDialog(
-                    getString(R.string.home_dialog_reboot_required_title),
-                    getString(R.string.home_dialog_reboot_required_message),
+                    getString(R.string.home_reboot_required),
+                    getString(R.string.home_reboot_required_message),
                 )
             }
         }
@@ -84,8 +84,8 @@ abstract class HomeActivity : AppBarActivity() {
         homeModel.shouldShowUninstallDialog.observe(this) { shouldShow ->
             if (shouldShow) {
                 showExitDialog(
-                    getString(R.string.home_dialog_duplicate_app_detected_title),
-                    getString(R.string.home_dialog_duplicate_app_detected_message),
+                    getString(R.string.home_duplicate_app_detected),
+                    getString(R.string.home_duplicate_app_detected_message),
                 )
             }
         }
@@ -95,9 +95,9 @@ abstract class HomeActivity : AppBarActivity() {
                 SnackbarHelper.show(
                     this,
                     binding.root,
-                    msg = getString(R.string.snackbar_battery_optimization_home),
+                    msg = getString(R.string.home_battery_optimization),
                     duration = Snackbar.LENGTH_INDEFINITE,
-                    actionText = getString(R.string.snackbar_action_fix),
+                    actionText = getString(R.string.fix),
                     action = { SettingsHelper.requestIgnoreBatteryOptimizations(this, null) },
                 )
             }
@@ -115,9 +115,9 @@ abstract class HomeActivity : AppBarActivity() {
                 SnackbarHelper.show(
                     this@HomeActivity,
                     binding.root,
-                    msg = getString(R.string.snackbar_update_available),
+                    msg = getString(R.string.update_available),
                     duration = Snackbar.LENGTH_INDEFINITE,
-                    actionText = getString(R.string.snackbar_action_update),
+                    actionText = getString(R.string.update),
                     action = {
                         lifecycleScope.launch {
                             UpdateHelper.update()
@@ -192,12 +192,7 @@ abstract class HomeActivity : AppBarActivity() {
         when (item.itemId) {
             R.id.action_about -> {
                 val binding = AboutDialogBinding.inflate(LayoutInflater.from(this), null, false)
-                binding.sourceCode.movementMethod = LinkMovementMethod.getInstance()
-                binding.sourceCode.text =
-                    getString(
-                        R.string.view_source_code,
-                        "<b><a href=\"https://github.com/thedjchi/Shizuku\">GitHub</a></b>",
-                    ).toHtml()
+
                 binding.icon.setImageBitmap(
                     AppIconCache.getOrLoadBitmap(
                         this,
@@ -206,7 +201,8 @@ abstract class HomeActivity : AppBarActivity() {
                         resources.getDimensionPixelOffset(R.dimen.default_app_icon_size),
                     ),
                 )
-                binding.versionName.text = packageManager.getPackageInfo(packageName, 0).versionName
+
+                binding.versionName.text = "v${packageManager.getPackageInfo(packageName, 0).versionName}"
 
                 binding.btnUpdate.setOnClickListener {
                     lifecycleScope.launch {
@@ -214,9 +210,24 @@ abstract class HomeActivity : AppBarActivity() {
                     }
                 }
 
+                binding.btnGitHub.setOnClickListener {
+                    CustomTabsHelper.launchUrlOrCopy(this, "https://www.github.com/thedjchi/Shizuku")
+                }
+
                 binding.btnDonate.setOnClickListener {
                     CustomTabsHelper.launchUrlOrCopy(this, "https://www.buymeacoffee.com/thedjchi")
                 }
+
+                binding.developer.text =
+                    getString(
+                        R.string.about_developer,
+                        getString(R.string.about_developer_name),
+                    )
+                binding.fork.text =
+                    getString(
+                        R.string.about_fork,
+                        getString(R.string.about_fork_developer_name),
+                    )
 
                 val dialog =
                     MaterialAlertDialogBuilder(this)

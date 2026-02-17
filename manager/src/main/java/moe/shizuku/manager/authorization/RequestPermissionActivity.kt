@@ -8,15 +8,14 @@ import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
-import kotlinx.coroutines.TimeoutCancellationException
-import moe.shizuku.manager.Helps
 import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppActivity
 import moe.shizuku.manager.databinding.ConfirmationDialogBinding
-import moe.shizuku.manager.ktx.toHtml
+import moe.shizuku.manager.utils.toHtml
 import moe.shizuku.manager.utils.Logger.LOGGER
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.res.resolveColor
@@ -26,10 +25,15 @@ import rikka.shizuku.ShizukuApiConstants.REQUEST_PERMISSION_REPLY_ALLOWED
 import rikka.shizuku.ShizukuApiConstants.REQUEST_PERMISSION_REPLY_IS_ONETIME
 
 class RequestPermissionActivity : AppActivity() {
-
     private lateinit var dialog: Dialog
 
-    private fun setResult(requestUid: Int, requestPid: Int, requestCode: Int, allowed: Boolean, onetime: Boolean) {
+    private fun setResult(
+        requestUid: Int,
+        requestPid: Int,
+        requestCode: Int,
+        allowed: Boolean,
+        onetime: Boolean,
+    ) {
         val data = Bundle()
         data.putBoolean(REQUEST_PERMISSION_REPLY_ALLOWED, allowed)
         data.putBoolean(REQUEST_PERMISSION_REPLY_IS_ONETIME, onetime)
@@ -47,11 +51,14 @@ class RequestPermissionActivity : AppActivity() {
         val icon = getDrawable(R.drawable.ic_system_icon)
         icon?.setTint(theme.resolveColor(android.R.attr.colorAccent))
 
-        val dialog = MaterialAlertDialogBuilder(this)
+
+        val dialog =
+            MaterialAlertDialogBuilder(this)
                 .setIcon(icon)
-                .setTitle("Shizuku: ${getString(R.string.app_management_dialog_adb_is_limited_title)}")
-                .setMessage(getString(R.string.app_management_dialog_adb_is_limited_message, Helps.ADB.get()).toHtml(HtmlCompat.FROM_HTML_OPTION_TRIM_WHITESPACE))
-                .setPositiveButton(android.R.string.ok, null)
+                .setTitle("Shizuku: ${getString(R.string.status_adb_restricted)}")
+                .setMessage(
+                    getString(R.string.status_adb_restricted_message, "PLACEHOLDER"),
+                ).setPositiveButton(android.R.string.ok, null)
                 .setOnDismissListener { finish() }
                 .create()
         dialog.setOnShowListener {
@@ -64,9 +71,9 @@ class RequestPermissionActivity : AppActivity() {
         return false
     }
 
-    private fun waitForBinder(): Boolean {
-        return runBlocking {
-            try { 
+    private fun waitForBinder(): Boolean =
+        runBlocking {
+            try {
                 withTimeout(5000) {
                     ShizukuStateMachine.asFlow().first { it == ShizukuStateMachine.State.RUNNING }
                 }
@@ -76,7 +83,6 @@ class RequestPermissionActivity : AppActivity() {
                 false
             }
         }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,26 +105,35 @@ class RequestPermissionActivity : AppActivity() {
             return
         }
 
-        val label = try {
-            ai.loadLabel(packageManager)
-        } catch (e: Exception) {
-            ai.packageName
-        }
-
-        val binding = ConfirmationDialogBinding.inflate(layoutInflater).apply {
-            button1.setOnClickListener {
-                setResult(uid, pid, requestCode, allowed = true, onetime = false)
-                dialog.dismiss()
+        val label =
+            try {
+                ai.loadLabel(packageManager)
+            } catch (e: Exception) {
+                ai.packageName
             }
-            button3.setOnClickListener {
-                setResult(uid, pid, requestCode, allowed = false, onetime = true)
-                dialog.dismiss()
-            }
-            title.text = HtmlCompat.fromHtml(getString(R.string.permission_warning_template,
-                    label, getString(R.string.permission_group_description)))
-        }
 
-        dialog = MaterialAlertDialogBuilder(this)
+        val binding =
+            ConfirmationDialogBinding.inflate(layoutInflater).apply {
+                button1.setOnClickListener {
+                    setResult(uid, pid, requestCode, allowed = true, onetime = false)
+                    dialog.dismiss()
+                }
+                button3.setOnClickListener {
+                    setResult(uid, pid, requestCode, allowed = false, onetime = true)
+                    dialog.dismiss()
+                }
+                title.text =
+                    HtmlCompat.fromHtml(
+                        getString(
+                            R.string.permission_warning_template,
+                            label,
+                            getString(R.string.permission_group_description),
+                        ),
+                    )
+            }
+
+        dialog =
+            MaterialAlertDialogBuilder(this)
                 .setView(binding.root)
                 .setCancelable(false)
                 .setOnDismissListener { finish() }

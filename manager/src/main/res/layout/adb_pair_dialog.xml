@@ -18,8 +18,7 @@
         <TextView
             android:id="@android:id/text1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/dialog_adb_pairing_message" />
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@android:id/text2"
@@ -47,7 +46,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/dialog_adb_pairing_paring_code"
+            android:hint="@string/pairing_enter_code"
             android:visibility="gone"
             tools:visibility="visible">
 
@@ -67,7 +66,6 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/dialog_adb_port"
             android:visibility="gone"
             tools:visibility="visible">
 

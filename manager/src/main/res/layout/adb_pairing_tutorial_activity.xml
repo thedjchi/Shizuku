@@ -39,7 +39,7 @@
                     android:layout_marginStart="-8dp"
                     android:layout_marginTop="4dp"
                     android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_notifications_active_24"
+                    android:src="@drawable/ic_outline_info_24"
                     android:tint="?colorOnSecondaryContainer"
                     android:tintMode="src_in" />
 
@@ -54,59 +54,9 @@
                         style="@style/TerminalTutorialText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/adb_pairing_tutorial_content_notification"
+                        android:text="@string/pairing_summary"
                         android:textAppearance="?textAppearanceBodyMedium"
                         android:textColor="?colorOnSecondaryContainer" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/notification_disabled"
-                style="@style/DialogCard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="?colorErrorContainer">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="-8dp"
-                    android:layout_marginTop="4dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_info_24"
-                    android:tint="?colorOnErrorContainer"
-                    android:tintMode="src_in" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="36dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:lineSpacingExtra="2sp"
-                        android:text="@string/adb_pairing_tutorial_content_notification_blocked"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnErrorContainer" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/notification_options"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="-8dp"
-                        android:text="@string/notification_settings"
-                        android:textColor="?colorOnError"
-                        app:backgroundTint="?colorError"
-                        app:iconTint="?colorOnError"
-                        app:iconTintMode="src_in"
-                        app:icon="@drawable/ic_outline_open_in_new_24"
-                        app:iconPadding="16dp" />
 
                 </LinearLayout>
 
@@ -128,34 +78,16 @@
                     android:tint="?colorOnSecondaryContainer"
                     android:tintMode="src_in" />
 
-                <LinearLayout
+                <TextView
+                    style="@style/TerminalTutorialText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="36dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/TerminalTutorialText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="@string/adb_pairing_tutorial_content_network"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnSecondaryContainer" />
-
-                    <TextView
-                        style="@style/TerminalTutorialText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:duplicateParentState="true"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/adb_pairing_tutorial_content_network_limation_not_foreground"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnSecondaryContainer" />
-
-                </LinearLayout>
+                    android:duplicateParentState="true"
+                    android:text="@string/pairing_battery_optimization"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnSecondaryContainer" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -178,34 +110,16 @@
                     android:tint="?colorOnErrorContainer"
                     android:tintMode="src_in" />
 
-                <LinearLayout
+                <TextView
+                    style="@style/TerminalTutorialText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="36dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/TerminalTutorialText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:duplicateParentState="true"
-                        android:text="@string/adb_pairing_tutorial_content_miui"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnErrorContainer" />
-
-                    <TextView
-                        style="@style/TerminalTutorialText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:duplicateParentState="true"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/adb_pairing_tutorial_content_miui_2"
-                        android:textAppearance="?textAppearanceBodyMedium"
-                        android:textColor="?colorOnErrorContainer" />
-
-                </LinearLayout>
+                    android:duplicateParentState="true"
+                    android:text="@string/pairing_miui_notifications"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?colorOnErrorContainer" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -239,14 +153,14 @@
                     style="@style/TerminalTutorialText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/adb_pairing_tutorial_content_steps" />
+                    android:text="@string/pairing_tutorial_1" />
 
                 <Button
                     android:id="@+id/developer_options"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/development_settings"
+                    android:text="@string/developer_options"
                     app:icon="@drawable/ic_outline_open_in_new_24"
                     app:iconPadding="16dp" />
 
@@ -270,20 +184,13 @@
                 android:tint="?android:textColorSecondary"
                 android:tintMode="src_in" />
 
-            <LinearLayout
+            <TextView
+                style="@style/TerminalTutorialText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/adb_pairing_tutorial_content_enter_pairing_code" />
-
-            </LinearLayout>
+                android:text="@string/pairing_tutorial_2" />
 
         </LinearLayout>
 
@@ -303,20 +210,13 @@
                 android:tint="?android:textColorSecondary"
                 android:tintMode="src_in" />
 
-            <LinearLayout
+            <TextView
+                style="@style/TerminalTutorialText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/TerminalTutorialText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/adb_pairing_tutorial_content_finish" />
-
-            </LinearLayout>
+                android:text="@string/pairing_tutorial_3" />
 
         </LinearLayout>
 

@@ -30,19 +30,18 @@ public class ShizukuSettings {
         public static final String KEY_TCP_PORT = "tcp_port";
         public static final String KEY_AUTO_DISABLE_USB_DEBUGGING = "auto_disable_usb_debugging";
         public static final String KEY_LANGUAGE = "language";
-        public static final String KEY_LIGHT_THEME = "light_theme";
-        public static final String KEY_NIGHT_MODE = "night_mode";
+        public static final String KEY_THEME = "theme";
         public static final String KEY_AMOLED_BLACK = "amoled_black";
         public static final String KEY_DYNAMIC_COLOR = "dynamic_color";
-        public static final String KEY_UPDATE_MODE = "update_channel";
+        public static final String KEY_CHECK_FOR_UPDATES = "check_for_updates";
+        public static final String KEY_UPDATE_CHANNEL = "update_channel";
         public static final String KEY_LEGACY_PAIRING = "legacy_pairing";
         public static final String KEY_CATEGORY_ADVANCED = "category_advanced";
     }
 
     public static class UpdateMode {
-        public static final int OFF = 0;
-        public static final int STABLE = 1;
-        public static final int BETA = 2;
+        public static final int STABLE = 0;
+        public static final int BETA = 1;
     }
 
     private static SharedPreferences sPreferences;
@@ -194,11 +193,11 @@ public class ShizukuSettings {
 
     @AppCompatDelegate.NightMode
     public static int getNightMode() {
-        int defValue = AppCompatDelegate.MODE_NIGHT_settings_follow_system;
+        int defValue = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
         if (EnvironmentUtils.isWatch()) {
             defValue = AppCompatDelegate.MODE_NIGHT_YES;
         }
-        return getPreferences().getInt(Keys.KEY_NIGHT_MODE, defValue);
+        return getPreferences().getInt(Keys.KEY_THEME, defValue);
     }
 
     public static Locale getLocale() {
@@ -209,7 +208,11 @@ public class ShizukuSettings {
         return Locale.forLanguageTag(tag);
     }
 
-    public static int getUpdateMode() {
-        return getPreferences().getInt(Keys.KEY_UPDATE_MODE, UpdateMode.STABLE);
+    public static boolean getCheckForUpdates() {
+        return getPreferences().getBoolean(Keys.KEY_CHECK_FOR_UPDATES, true);
+    }
+
+    public static int getUpdateChannel() {
+        return getPreferences().getInt(Keys.KEY_UPDATE_CHANNEL, UpdateMode.STABLE);
     }
 }

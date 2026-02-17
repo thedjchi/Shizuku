@@ -32,7 +32,7 @@ public class ThemeHelper {
                 && ResourceUtils.isNightMode(context.getResources().getConfiguration()))
             return THEME_BLACK;
 
-        return ShizukuSettings.getPreferences().getString(ShizukuSettings.Keys.KEY_LIGHT_THEME, THEME_DEFAULT);
+        return THEME_DEFAULT;
     }
 
     @StyleRes

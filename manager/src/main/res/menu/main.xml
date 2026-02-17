@@ -12,4 +12,9 @@
         android:title="@string/about"
         android:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_help"
+        android:title="@string/help_and_feedback"
+        android:showAsAction="never" />
+
 </menu>

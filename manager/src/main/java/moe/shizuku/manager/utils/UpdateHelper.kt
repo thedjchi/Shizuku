@@ -93,7 +93,7 @@ object UpdateHelper {
         }
     }
 
-    fun isCheckForUpdatesEnabled(): Boolean = ShizukuSettings.getUpdateMode() != ShizukuSettings.UpdateMode.OFF
+    fun isCheckForUpdatesEnabled(): Boolean = ShizukuSettings.getCheckForUpdates()
 
     suspend fun isNewUpdateAvailable(): Boolean {
         val lastPromptedVersion =
@@ -181,7 +181,7 @@ object UpdateHelper {
 
             val releases = json.decodeFromString<List<GitHubRelease>>(body)
             val filtered =
-                if (ShizukuSettings.getUpdateMode() == ShizukuSettings.UpdateMode.BETA) {
+                if (ShizukuSettings.getUpdateChannel() == ShizukuSettings.UpdateMode.BETA) {
                     releases
                 } else {
                     releases.filter { !it.prerelease }

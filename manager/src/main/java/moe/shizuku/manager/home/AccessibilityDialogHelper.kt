@@ -46,7 +46,7 @@ private fun Context.showPermissionDialog() {
         .setTitle(android.R.string.dialog_alert_title)
         .setMessage(
             TextUtils.expandTemplate(
-                getString(R.string.dialog_adb_pairing_accessibility_permission),
+                getString(R.string.pairing_accessibility_permission),
                 permissionName,
                 styledPermissionCommand,
             ),
@@ -57,8 +57,8 @@ private fun Context.showPermissionDialog() {
 
 private fun Context.showEnableDialog() {
     MaterialAlertDialogBuilder(this)
-        .setTitle(R.string.dialog_adb_pairing_title)
-        .setMessage(R.string.dialog_adb_pairing_accessibility_enable)
+        .setTitle(R.string.pairing_accessibility_required)
+        .setMessage(R.string.pairing_accessibility_required_message)
         .setPositiveButton(R.string.enable) { _, _ ->
             SettingsPage.Accessibility.launch(this)
         }.setNegativeButton(android.R.string.cancel, null)
@@ -66,10 +66,20 @@ private fun Context.showEnableDialog() {
 }
 
 private fun Context.showNavigateDialog() {
+    val msg =
+        buildString {
+            append(getString(R.string.pairing_steps_intro))
+            append("\n -")
+            append(getString(R.string.pairing_tutorial_1))
+            append("\n -")
+            append(getString(R.string.pairing_tutorial_2))
+            append("\n\n")
+            append(getString(R.string.pairing_auto_detect))
+        }
     MaterialAlertDialogBuilder(this)
-        .setTitle(R.string.dialog_adb_pairing_title)
-        .setMessage(R.string.dialog_adb_pairing_accessibility_navigate)
-        .setPositiveButton(R.string.development_settings) { _, _ ->
+        .setTitle(R.string.pair)
+        .setMessage(msg)
+        .setPositiveButton(R.string.developer_options) { _, _ ->
             SettingsPage.Developer.HighlightWirelessDebugging.launch(this)
         }.setNegativeButton(android.R.string.cancel, null)
         .show()

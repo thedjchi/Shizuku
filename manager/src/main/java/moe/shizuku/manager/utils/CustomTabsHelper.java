@@ -77,8 +77,8 @@ public class CustomTabsHelper {
                     ClipboardUtils.put(context, url);
 
                     new MaterialAlertDialogBuilder(context)
-                        .setTitle(R.string.dialog_cannot_open_browser_title)
-                        .setMessage(HtmlCompat.fromHtml(context.getString(R.string.toast_copied_to_clipboard)))
+                        .setTitle(R.string.error_no_browser_app)
+                        .setMessage(HtmlCompat.fromHtml(context.getString(R.string.copied_to_clipboard)))
                         .setPositiveButton(android.R.string.ok, null)
                         .show();
                 } catch (Throwable ignored) {

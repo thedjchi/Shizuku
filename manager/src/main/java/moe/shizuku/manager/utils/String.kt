@@ -1,4 +1,4 @@
-package moe.shizuku.manager.ktx
+package moe.shizuku.manager.utils
 
 import android.text.SpannableString
 import android.text.Spanned

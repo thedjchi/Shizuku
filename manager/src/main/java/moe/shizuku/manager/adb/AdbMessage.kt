@@ -1,13 +1,6 @@
 package moe.shizuku.manager.adb
 
-import moe.shizuku.manager.adb.AdbProtocol.A_AUTH
-import moe.shizuku.manager.adb.AdbProtocol.A_CLSE
-import moe.shizuku.manager.adb.AdbProtocol.A_CNXN
-import moe.shizuku.manager.adb.AdbProtocol.A_OKAY
-import moe.shizuku.manager.adb.AdbProtocol.A_OPEN
-import moe.shizuku.manager.adb.AdbProtocol.A_STLS
-import moe.shizuku.manager.adb.AdbProtocol.A_SYNC
-import moe.shizuku.manager.adb.AdbProtocol.A_WRTE
+import moe.shizuku.manager.adb.*
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 

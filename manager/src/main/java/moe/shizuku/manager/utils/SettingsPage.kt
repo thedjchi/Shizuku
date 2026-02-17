@@ -13,15 +13,14 @@ import moe.shizuku.manager.service.WatchdogService
 
 sealed class SettingsPage(
     private val action: String,
-    private val fragmentArg: String? = null
+    private val fragmentArg: String? = null,
 ) {
-
     sealed class Developer(
         action: String = Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS,
-        fragmentArg: String? = null
+        fragmentArg: String? = null,
     ) : SettingsPage(action, fragmentArg) {
-
         object HighlightUsbDebugging : Developer(fragmentArg = "enable_adb")
+
         object HighlightWirelessDebugging : Developer(fragmentArg = "toggle_adb_wireless")
 
         object WirelessDebugging : Developer() {
@@ -37,8 +36,8 @@ sealed class SettingsPage(
                         Intent.EXTRA_COMPONENT_NAME,
                         ComponentName(
                             packageName,
-                            "com.android.settings.development.qstile.DevelopmentTiles\$WirelessDebugging"
-                        )
+                            "com.android.settings.development.qstile.DevelopmentTiles\$WirelessDebugging",
+                        ),
                     )
                     addFlags(defaultFlags)
                 }
@@ -54,45 +53,45 @@ sealed class SettingsPage(
                 }
             }
         }
-        
     }
 
     sealed class Notifications(
         action: String = Settings.ACTION_APP_NOTIFICATION_SETTINGS,
-        fragmentArg: String? = null
+        fragmentArg: String? = null,
     ) : SettingsPage(action, fragmentArg) {
-        override fun buildIntent(context: Context): Intent {
-            return super.buildIntent(context).apply {
+        override fun buildIntent(context: Context): Intent =
+            super.buildIntent(context).apply {
                 putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
             }
-        }
 
         object NotificationSettings : Notifications()
+
         object NotificationChannel : Notifications() {
-            override fun buildIntent(context: Context): Intent {
-                return super.buildIntent(context).apply {
+            override fun buildIntent(context: Context): Intent =
+                super.buildIntent(context).apply {
                     putExtra(Settings.EXTRA_CHANNEL_ID, WatchdogService.CRASH_CHANNEL_ID)
                 }
-            }
         }
     }
 
     object InternetPanel : SettingsPage(Settings.Panel.ACTION_INTERNET_CONNECTIVITY)
+
     object Accessibility : SettingsPage(Settings.ACTION_ACCESSIBILITY_SETTINGS)
 
     protected val defaultFlags =
         Intent.FLAG_ACTIVITY_NEW_TASK or
-        Intent.FLAG_ACTIVITY_NO_HISTORY or
-        Intent.FLAG_ACTIVITY_CLEAR_TASK or
-        Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS
+            Intent.FLAG_ACTIVITY_NO_HISTORY or
+            Intent.FLAG_ACTIVITY_CLEAR_TASK or
+            Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS
 
-    open fun buildIntent(context: Context): Intent = Intent(action).apply {
-        fragmentArg?.let {
-            val fragmentArgKey = ":settings:fragment_args_key"
-            putExtra(fragmentArgKey, it)
+    open fun buildIntent(context: Context): Intent =
+        Intent(action).apply {
+            fragmentArg?.let {
+                val fragmentArgKey = ":settings:fragment_args_key"
+                putExtra(fragmentArgKey, it)
+            }
+            flags = defaultFlags
         }
-        flags = defaultFlags
-    }
 
     open fun launch(context: Context) {
         runCatching {
@@ -101,5 +100,4 @@ sealed class SettingsPage(
             Log.e("SettingsUtils", "Failed to start Settings activity", e)
         }
     }
-
 }

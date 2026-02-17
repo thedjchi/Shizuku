@@ -51,7 +51,7 @@
             android:id="@+id/actionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/intent_action">
+            android:hint="@string/intents_action">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/actionEditText"
@@ -67,7 +67,7 @@
             android:id="@+id/packageLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/intent_package">
+            android:hint="@string/intents_package">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/packageEditText"
@@ -83,7 +83,7 @@
             android:id="@+id/targetLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/intent_target">
+            android:hint="@string/intents_target">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/targetEditText"
@@ -99,7 +99,7 @@
             android:id="@+id/extrasLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/intent_extras"
+            android:hint="@string/intents_extra"
             android:maxLines="1"
             app:startIconCheckable="true"
             app:startIconDrawable="@drawable/ic_autorenew"

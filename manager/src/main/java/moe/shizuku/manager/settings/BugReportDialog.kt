@@ -15,27 +15,29 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.R
 import moe.shizuku.manager.databinding.BugReportDialogBinding
-import moe.shizuku.manager.ktx.asLink
-import moe.shizuku.manager.ktx.applyTemplateArgs
 import moe.shizuku.manager.utils.CustomTabsHelper
+import moe.shizuku.manager.utils.applyTemplateArgs
+import moe.shizuku.manager.utils.asLink
 import moe.shizuku.manager.worker.AdbStartWorker
 
 class BugReportDialog : DialogFragment() {
-
     private lateinit var binding: BugReportDialogBinding
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val context = requireContext()
         binding = BugReportDialogBinding.inflate(layoutInflater)
 
-        val updateLink = getString(R.string.bug_report_dialog_link_update)
-            .asLink("https://github.com/thedjchi/Shizuku/releases/latest")
+        val updateLink =
+            getString(R.string.bug_report_dialog_link_update)
+                .asLink("https://github.com/thedjchi/Shizuku/releases/latest")
 
-        val wikiLink = getString(R.string.bug_report_dialog_link_wiki)
-            .asLink("https://github.com/thedjchi/Shizuku/releases/wiki#troubleshooting")
+        val wikiLink =
+            getString(R.string.bug_report_dialog_link_wiki)
+                .asLink("https://github.com/thedjchi/Shizuku/releases/wiki#troubleshooting")
 
-        val issuesLink = getString(R.string.bug_report_dialog_link_issues)
-            .asLink("https://github.com/thedjchi/Shizuku/releases/issues")
+        val issuesLink =
+            getString(R.string.bug_report_dialog_link_issues)
+                .asLink("https://github.com/thedjchi/Shizuku/releases/issues")
 
         binding.apply {
             updateText.applyTemplateArgs(updateLink)
@@ -49,32 +51,34 @@ class BugReportDialog : DialogFragment() {
             .setView(binding.root)
             .setPositiveButton("GitHub") { _, _ ->
                 CustomTabsHelper.launchUrlOrCopy(context, "https://github.com/thedjchi/Shizuku/issues/new")
-            }
-            .setNegativeButton(R.string.bug_report_dialog_button_email) { _, _ ->
-                val plainBody = """
+            }.setNegativeButton(R.string.bug_report_dialog_button_email) { _, _ ->
+                val plainBody =
+                    """
                     Please describe the bug. Include steps to reproduce if possible, as well as any relevant images/logs.
 
                     Device: ${Build.MANUFACTURER} ${Build.MODEL}
                     Android Version: ${Build.VERSION.RELEASE}
                     Shizuku Version: ${BuildConfig.VERSION_NAME}
-                """.trimIndent()
+                    """.trimIndent()
 
-                val intent = Intent(Intent.ACTION_SENDTO, Uri.parse(
-                    "mailto:" + context.getString(R.string.support_email) + 
-                    "?subject=" + Uri.encode("[ISSUE TITLE]") +
-                    "&body=" + Uri.encode(plainBody)
-                ))
+                val intent =
+                    Intent(
+                        Intent.ACTION_SENDTO,
+                        Uri.parse(
+                            "mailto:" + context.getString(R.string.support_email) +
+                                "?subject=" + Uri.encode("[ISSUE TITLE]") +
+                                "&body=" + Uri.encode(plainBody),
+                        ),
+                    )
                 try {
                     context.startActivity(intent)
                     dismiss()
                 } catch (e: ActivityNotFoundException) {
-                    Toast.makeText(context, context.getString(R.string.toast_no_email_app), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, context.getString(R.string.error_no_email_app), Toast.LENGTH_SHORT).show()
                 }
-            }
-            .setNeutralButton(android.R.string.cancel) { dialog, _ ->
+            }.setNeutralButton(android.R.string.cancel) { dialog, _ ->
                 dialog.cancel()
-            }
-            .create()
+            }.create()
     }
 
     override fun onCancel(dialog: DialogInterface) {
@@ -87,5 +91,4 @@ class BugReportDialog : DialogFragment() {
         super.onDismiss(dialog)
         if (activity is BugReportDialogActivity) activity?.finish()
     }
-
 }

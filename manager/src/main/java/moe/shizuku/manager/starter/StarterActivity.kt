@@ -11,31 +11,29 @@ import androidx.lifecycle.viewModelScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.topjohnwu.superuser.CallbackList
 import com.topjohnwu.superuser.Shell
-import java.net.ConnectException
-import java.net.SocketTimeoutException
-import javax.net.ssl.SSLProtocolException
-import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
-import moe.shizuku.manager.AppConstants.EXTRA
 import moe.shizuku.manager.R
 import moe.shizuku.manager.adb.AdbKeyException
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.app.AppBarActivity
-import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.databinding.StarterActivityBinding
+import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.lifecycle.Resource
 import rikka.lifecycle.Status
+import java.net.ConnectException
+import java.net.SocketTimeoutException
+import javax.net.ssl.SSLProtocolException
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
-private class NotRootedException: Exception()
+private class NotRootedException : Exception()
 
 class StarterActivity : AppBarActivity() {
-
     private val viewModel: ViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,17 +56,21 @@ class StarterActivity : AppBarActivity() {
                     is AdbKeyException -> {
                         message = R.string.adb_error_key_store
                     }
+
                     is NotRootedException -> {
-                        message = R.string.start_with_root_failed
+                        message = R.string.start_error_root
                     }
+
                     is SocketTimeoutException -> {
-                        message = R.string.cannot_connect_port
+                        message = R.string.start_error_connection
                     }
+
                     is ConnectException -> {
-                        message = R.string.cannot_connect_port
+                        message = R.string.start_error_connection
                     }
+
                     is SSLProtocolException -> {
-                        message = R.string.adb_pair_required
+                        message = R.string.start_error_pairing_required
                     }
                 }
 
@@ -91,20 +93,20 @@ class StarterActivity : AppBarActivity() {
             hasStarted = true
             viewModel.start(
                 intent.getBooleanExtra(EXTRA_IS_ROOT, false),
-                intent.getIntExtra(EXTRA_PORT, 0)
+                intent.getIntExtra(EXTRA_PORT, 0),
             )
         }
     }
 
     companion object {
-
-        const val EXTRA_IS_ROOT = "$EXTRA.IS_ROOT"
-        const val EXTRA_PORT = "$EXTRA.PORT"
+        const val EXTRA_IS_ROOT = "moe.shizuku.manager.extra.IS_ROOT"
+        const val EXTRA_PORT = "moe.shizuku.manager.extra.PORT"
     }
 }
 
-class ViewModel(application: Application) : AndroidViewModel(application) {
-
+class ViewModel(
+    application: Application,
+) : AndroidViewModel(application) {
     private val appContext = getApplication<Application>().applicationContext
 
     private val sb = StringBuilder()
@@ -112,30 +114,43 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
     val output = _output as LiveData<Resource<StringBuilder>>
 
-    private val handler = CoroutineExceptionHandler { _, throwable ->
-        ShizukuStateMachine.update()
-        log(error = throwable)
-    }
+    private val handler =
+        CoroutineExceptionHandler { _, throwable ->
+            ShizukuStateMachine.update()
+            log(error = throwable)
+        }
 
     private var started = false
 
-    fun start(root: Boolean, port: Int) {
+    fun start(
+        root: Boolean,
+        port: Int,
+    ) {
         if (started) return
         started = true
 
         viewModelScope.launch(handler) {
-            if (root) startRoot()
-            else AdbStarter.startAdb(appContext, port, { log(it) })
+            if (root) {
+                startRoot()
+            } else {
+                AdbStarter.startAdb(appContext, port, { log(it) })
+            }
             Starter.waitForBinder({ log(it) })
         }
     }
 
-    private fun log(line: String? = null, error: Throwable? = null) {
+    private fun log(
+        line: String? = null,
+        error: Throwable? = null,
+    ) {
         line?.let { sb.appendLine(it) }
         error?.let { sb.appendLine().appendLine(Log.getStackTraceString(it)) }
 
-        if (error == null) _output.postValue(Resource.success(sb))
-        else _output.postValue(Resource.error(error, sb))
+        if (error == null) {
+            _output.postValue(Resource.success(sb))
+        } else {
+            _output.postValue(Resource.error(error, sb))
+        }
     }
 
     private suspend fun startRoot() {
@@ -154,11 +169,15 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
             ShizukuStateMachine.set(ShizukuStateMachine.State.STARTING)
             suspendCancellableCoroutine { cont ->
-                Shell.cmd(Starter.internalCommand)
-                    .to(object : CallbackList<String?>() {
-                        override fun onAddElement(s: String?) { s?.let { log(it) } }
-                    })
-                    .submit {
+                Shell
+                    .cmd(Starter.internalCommand)
+                    .to(
+                        object : CallbackList<String?>() {
+                            override fun onAddElement(s: String?) {
+                                s?.let { log(it) }
+                            }
+                        },
+                    ).submit {
                         if (it.isSuccess) {
                             cont.resume(Unit)
                         } else {
@@ -168,5 +187,4 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
     }
-    
 }

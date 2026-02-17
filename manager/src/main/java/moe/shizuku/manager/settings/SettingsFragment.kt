@@ -42,9 +42,6 @@ import moe.shizuku.manager.ShizukuSettings.Keys.*
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.app.ThemeHelper
-import moe.shizuku.manager.ktx.isComponentEnabled
-import moe.shizuku.manager.ktx.setComponentEnabled
-import moe.shizuku.manager.ktx.toHtml
 import moe.shizuku.manager.receiver.BootCompleteReceiver
 import moe.shizuku.manager.receiver.NotifCancelReceiver
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
@@ -52,6 +49,7 @@ import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
+import moe.shizuku.manager.utils.toHtml
 import rikka.core.util.ResourceUtils
 import rikka.html.text.HtmlCompat
 import rikka.material.app.LocaleDelegate
@@ -70,10 +68,10 @@ class SettingsFragment :
     private lateinit var tcpModePreference: TwoStatePreference
     private lateinit var tcpPortPreference: EditTextPreference
     private lateinit var languagePreference: ListPreference
-    private lateinit var nightModePreference: IntegerSimpleMenuPreference
+    private lateinit var themePreference: IntegerSimpleMenuPreference
     private lateinit var amoledBlackPreference: TwoStatePreference
     private lateinit var dynamicColorPreference: TwoStatePreference
-    private lateinit var updateModePreference: IntegerSimpleMenuPreference
+    private lateinit var updateChannelPreference: IntegerSimpleMenuPreference
     private lateinit var legacyPairingPreference: TwoStatePreference
     private lateinit var advancedCategory: PreferenceCategory
 
@@ -103,10 +101,10 @@ class SettingsFragment :
         tcpModePreference = findPreference(KEY_TCP_MODE)!!
         tcpPortPreference = findPreference(KEY_TCP_PORT)!!
         languagePreference = findPreference(KEY_LANGUAGE)!!
-        nightModePreference = findPreference(KEY_NIGHT_MODE)!!
+        themePreference = findPreference(KEY_THEME)!!
         amoledBlackPreference = findPreference(KEY_AMOLED_BLACK)!!
         dynamicColorPreference = findPreference(KEY_DYNAMIC_COLOR)!!
-        updateModePreference = findPreference(KEY_UPDATE_MODE)!!
+        updateChannelPreference = findPreference(KEY_UPDATE_CHANNEL)!!
         legacyPairingPreference = findPreference(KEY_LEGACY_PAIRING)!!
         advancedCategory = findPreference(KEY_CATEGORY_ADVANCED)!!
 
@@ -227,7 +225,7 @@ class SettingsFragment :
                     }
                     maybePromptRestart(KEY_TCP_PORT, port ?: 5555) { applyChange() }
                 } else {
-                    SnackbarHelper.show(context, requireView(), context.getString(R.string.snackbar_invalid_port))
+                    SnackbarHelper.show(context, requireView(), context.getString(R.string.tcp_error_invalid_port))
                 }
                 false
             }
@@ -249,7 +247,7 @@ class SettingsFragment :
 
         setupLocalePreference(languagePreference)
 
-        nightModePreference.apply {
+        themePreference.apply {
             value = ShizukuSettings.getNightMode()
             setOnPreferenceChangeListener { _, value ->
                 if (value is Int) {
@@ -292,7 +290,7 @@ class SettingsFragment :
             }
         }
 
-        updateModePreference.value = ShizukuSettings.getUpdateMode()
+        updateChannelPreference.value = ShizukuSettings.getUpdateChannel()
 
         legacyPairingPreference.apply {
             isVisible = !EnvironmentUtils.isTelevision()
@@ -451,9 +449,9 @@ class SettingsFragment :
                     SnackbarHelper.show(
                         context,
                         requireView(),
-                        msg = context.getString(R.string.snackbar_battery_optimization_settings),
+                        msg = context.getString(R.string.settings_battery_optimization),
                         duration = 6000,
-                        actionText = context.getString(R.string.snackbar_action_fix),
+                        actionText = context.getString(R.string.fix),
                         action = { SettingsHelper.requestIgnoreBatteryOptimizations(context, batteryOptimizationListener) },
                         onDismiss = { event ->
                             if (event != Snackbar.Callback.DISMISS_EVENT_ACTION && continuation.isActive) {

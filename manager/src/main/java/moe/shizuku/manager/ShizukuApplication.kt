@@ -6,7 +6,6 @@ import android.os.Build
 import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import com.topjohnwu.superuser.Shell
-import moe.shizuku.manager.ktx.logd
 import moe.shizuku.manager.service.WatchdogService
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import org.lsposed.hiddenapibypass.HiddenApiBypass
@@ -19,7 +18,7 @@ class ShizukuApplication : Application() {
     companion object {
 
         init {
-            logd("ShizukuApplication", "init")
+            Log.d("ShizukuApplication", "init")
 
             Shell.setDefaultBuilder(Shell.Builder.create().setFlags(Shell.FLAG_REDIRECT_STDERR))
             if (Build.VERSION.SDK_INT >= 28) {
