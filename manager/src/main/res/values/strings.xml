@@ -343,9 +343,4 @@
     <string name="error_no_browser_app">No browser app found</string>
     <string name="error_no_email_app">No email app found</string>
 
-    <!-- Legacy -->
-    <string name="legacy_unsupported">%1$s does not support modern Shizuku</string>
-    <string name="legacy_unsupported_message">Legacy Shizuku is deprecated and does not work on
-        newer Android versions. Please ask the developer of %1$s to update their app.</string>
-
 </resources>

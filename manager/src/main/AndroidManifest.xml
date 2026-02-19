@@ -118,7 +118,6 @@
             android:exported="false" />
         <activity
             android:name=".authorization.RequestPermissionActivity"
-            android:directBootAware="true"
             android:excludeFromRecents="true"
             android:exported="true"
             android:permission="android.permission.INTERACT_ACROSS_USERS_FULL"
@@ -130,25 +129,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".legacy.ShellRequestHandlerActivity"
-            android:directBootAware="true"
+            android:name=".shell.legacy.ShellBinderRequestActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:theme="@style/GrantPermissions">
             <intent-filter>
                 <action android:name="rikka.shizuku.intent.action.REQUEST_BINDER" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".legacy.LegacyIsNotSupportedActivity"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:permission="moe.shizuku.manager.permission.API"
-            android:theme="@style/GrantPermissions">
-            <intent-filter>
-                <action android:name="${applicationId}.intent.action.REQUEST_AUTHORIZATION" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -187,11 +173,9 @@
         </service>
 
         <receiver
-            android:name=".receiver.BinderRequestReceiver"
-            android:directBootAware="true"
+            android:name=".shell.ShellBinderRequestReceiver"
             android:enabled="true"
-            android:exported="true"
-            tools:ignore="ExportedReceiver">
+            android:exported="true">
             <intent-filter>
                 <action android:name="rikka.shizuku.intent.action.REQUEST_BINDER" />
             </intent-filter>
@@ -241,7 +225,6 @@
         <provider
             android:name=".ShizukuManagerProvider"
             android:authorities="${applicationId}.shizuku"
-            android:directBootAware="true"
             android:enabled="true"
             android:exported="true"
             android:multiprocess="false"

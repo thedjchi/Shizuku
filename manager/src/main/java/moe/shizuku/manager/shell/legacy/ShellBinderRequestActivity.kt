@@ -1,16 +1,18 @@
-package moe.shizuku.manager.legacy
+package moe.shizuku.manager.shell.legacy
 
 import android.os.Bundle
 import android.widget.Toast
 import moe.shizuku.manager.app.AppActivity
 import moe.shizuku.manager.shell.ShellBinderRequestHandler
 
-class ShellRequestHandlerActivity : AppActivity() {
+class ShellBinderRequestActivity : AppActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        if (intent.action != "rikka.shizuku.intent.action.REQUEST_BINDER") return
         ShellBinderRequestHandler.handleRequest(this, intent)
+        
         finish()
     }
 }
