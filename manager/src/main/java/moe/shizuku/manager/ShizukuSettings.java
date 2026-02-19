@@ -16,7 +16,6 @@ import java.util.Locale;
 import moe.shizuku.manager.service.WatchdogService;
 import moe.shizuku.manager.receiver.BootCompleteReceiver;
 import moe.shizuku.manager.utils.Token;
-import moe.shizuku.manager.utils.EmptySharedPreferencesImpl;
 import moe.shizuku.manager.utils.EnvironmentUtils;
 import static java.lang.annotation.RetentionPolicy.SOURCE;
 
@@ -50,34 +49,9 @@ public class ShizukuSettings {
         return sPreferences;
     }
 
-    @NonNull
-    private static Context getSettingsStorageContext(@NonNull Context context) {
-        Context storageContext;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            storageContext = context.createDeviceProtectedStorageContext();
-        } else {
-            storageContext = context;
-        }
-
-        storageContext = new ContextWrapper(storageContext) {
-            @Override
-            public SharedPreferences getSharedPreferences(String name, int mode) {
-                try {
-                    return super.getSharedPreferences(name, mode);
-                } catch (IllegalStateException e) {
-                    // SharedPreferences in credential encrypted storage are not available until after user is unlocked
-                    return new EmptySharedPreferencesImpl();
-                }
-            }
-        };
-
-        return storageContext;
-    }
-
     public static void initialize(Context context) {
         if (sPreferences == null) {
-            sPreferences = getSettingsStorageContext(context)
-                .getSharedPreferences(NAME, Context.MODE_PRIVATE);
+            sPreferences = context.getSharedPreferences(NAME, Context.MODE_PRIVATE);
         }
     }
 

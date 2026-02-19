@@ -22,13 +22,16 @@ import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
 import android.ddm.DdmHandleAppName;
 import android.os.Binder;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Parcel;
 import android.os.RemoteException;
+import android.os.SELinux;
 import android.os.ServiceManager;
+import android.system.Os;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -44,8 +47,6 @@ import java.util.stream.Stream;
 
 import kotlin.collections.ArraysKt;
 import moe.shizuku.api.BinderContainer;
-import moe.shizuku.common.util.BuildUtils;
-import moe.shizuku.common.util.OsUtils;
 import moe.shizuku.server.IShizukuApplication;
 import rikka.hidden.compat.ActivityManagerApis;
 import rikka.hidden.compat.DeviceIdleControllerApis;
@@ -261,9 +262,15 @@ public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuCl
         }
 
         Bundle reply = new Bundle();
-        reply.putInt(BIND_APPLICATION_SERVER_UID, OsUtils.getUid());
+        String seContext;
+        try {
+            seContext = SELinux.getContext();
+        } catch (Throwable tr) {
+            seContext = null;
+        }
+        reply.putInt(BIND_APPLICATION_SERVER_UID, Os.getuid());
         reply.putInt(BIND_APPLICATION_SERVER_VERSION, replyServerVersion);
-        reply.putString(BIND_APPLICATION_SERVER_SECONTEXT, OsUtils.getSELinuxContext());
+        reply.putString(BIND_APPLICATION_SERVER_SECONTEXT, seContext);
         reply.putInt(BIND_APPLICATION_SERVER_PATCH_VERSION, ShizukuApiConstants.SERVER_PATCH_VERSION);
         if (!isManager) {
             reply.putBoolean(BIND_APPLICATION_PERMISSION_GRANTED, Objects.requireNonNull(clientRecord).allowed);
@@ -292,7 +299,7 @@ public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuCl
 
         PackageInfo pi = PackageManagerApis.getPackageInfoNoThrow(MANAGER_APPLICATION_ID, 0, userId);
         UserInfo userInfo = UserManagerApis.getUserInfo(userId);
-        boolean isWorkProfileUser = BuildUtils.atLeast30() ?
+        boolean isWorkProfileUser = (Build.VERSION.SDK_INT >= 30) ?
                 "android.os.usertype.profile.MANAGED".equals(userInfo.userType) :
                 (userInfo.flags & UserInfo.FLAG_MANAGED_PROFILE) != 0;
         if (pi == null && !isWorkProfileUser) {

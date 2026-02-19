@@ -1,8 +1,8 @@
 package moe.shizuku.manager.adb
 
+import android.os.Build
 import android.util.Log
 import moe.shizuku.manager.adb.*
-import rikka.core.util.BuildUtils
 import java.io.Closeable
 import java.io.DataInputStream
 import java.io.DataOutputStream
@@ -42,7 +42,7 @@ class AdbClient(private val host: String, private val port: Int, private val key
 
         var message = read()
         if (message.command == A_STLS) {
-            if (!BuildUtils.atLeast29) {
+            if (Build.VERSION.SDK_INT < 29) {
                 error("Connect to adb with TLS is not supported before Android 9")
             }
             write(A_STLS, A_STLS_VERSION, 0)

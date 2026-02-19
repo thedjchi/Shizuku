@@ -11,7 +11,6 @@ import androidx.collection.LruCache
 import kotlinx.coroutines.*
 import me.zhanghai.android.appiconloader.AppIconLoader
 import moe.shizuku.manager.R
-import rikka.core.util.BuildUtils
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import kotlin.coroutines.CoroutineContext
@@ -76,7 +75,8 @@ object AppIconCache : CoroutineScope {
         }
         var loader = appIconLoaders[size]
         if (loader == null) {
-            val shrinkNonAdaptiveIcons = BuildUtils.atLeast30 && context.applicationInfo.loadIcon(context.packageManager) is AdaptiveIconDrawable
+            val atLeast30 = Build.VERSION.SDK_INT >= 30
+            val shrinkNonAdaptiveIcons = atLeast30 && context.applicationInfo.loadIcon(context.packageManager) is AdaptiveIconDrawable
             loader = AppIconLoader(size, shrinkNonAdaptiveIcons, context)
             appIconLoaders[size] = loader
         }

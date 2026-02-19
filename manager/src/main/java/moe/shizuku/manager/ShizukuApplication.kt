@@ -9,7 +9,6 @@ import com.topjohnwu.superuser.Shell
 import moe.shizuku.manager.service.WatchdogService
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import org.lsposed.hiddenapibypass.HiddenApiBypass
-import rikka.core.util.BuildUtils.atLeast30
 import rikka.material.app.LocaleDelegate
 import rikka.shizuku.Shizuku
 
@@ -24,7 +23,7 @@ class ShizukuApplication : Application() {
             if (Build.VERSION.SDK_INT >= 28) {
                 HiddenApiBypass.setHiddenApiExemptions("")
             }
-            if (atLeast30) {
+            if (Build.VERSION.SDK_INT >= 30) {
                 System.loadLibrary("adb")
             }
         }
