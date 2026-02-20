@@ -2,17 +2,12 @@ package moe.shizuku.manager.home
 
 import android.app.NotificationManager
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.os.Process
-import android.text.method.LinkMovementMethod
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
-import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -22,21 +17,15 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbPairingService
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.app.SnackbarHelper
-import moe.shizuku.manager.databinding.AboutDialogBinding
 import moe.shizuku.manager.databinding.HomeActivityBinding
 import moe.shizuku.manager.home.cards.*
 import moe.shizuku.manager.home.showAccessibilityDialog
 import moe.shizuku.manager.management.AppsViewModel
 import moe.shizuku.manager.settings.SettingsActivity
-import moe.shizuku.manager.utils.AppIconCache
-import moe.shizuku.manager.utils.CustomTabsHelper
-import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.UpdateHelper
-import moe.shizuku.manager.utils.toHtml
 import rikka.lifecycle.Status
-import rikka.shizuku.Shizuku
 
 abstract class HomeActivity : AppBarActivity() {
     private val homeModel: HomeViewModel by viewModels()
@@ -191,54 +180,7 @@ abstract class HomeActivity : AppBarActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean =
         when (item.itemId) {
             R.id.action_about -> {
-                val binding = AboutDialogBinding.inflate(LayoutInflater.from(this), null, false)
-
-                binding.icon.setImageBitmap(
-                    AppIconCache.getOrLoadBitmap(
-                        this,
-                        applicationInfo,
-                        Process.myUid() / 100000,
-                        resources.getDimensionPixelOffset(R.dimen.default_app_icon_size),
-                    ),
-                )
-
-                binding.versionName.text = "v${packageManager.getPackageInfo(packageName, 0).versionName}"
-
-                binding.btnUpdate.setOnClickListener {
-                    lifecycleScope.launch {
-                        UpdateHelper.checkAndInstallUpdates()
-                    }
-                }
-
-                binding.btnGitHub.setOnClickListener {
-                    CustomTabsHelper.launchUrlOrCopy(this, "https://www.github.com/thedjchi/Shizuku")
-                }
-
-                binding.btnDonate.setOnClickListener {
-                    CustomTabsHelper.launchUrlOrCopy(this, "https://www.buymeacoffee.com/thedjchi")
-                }
-
-                binding.developer.text =
-                    getString(
-                        R.string.about_developer,
-                        getString(R.string.about_developer_name),
-                    )
-                binding.fork.text =
-                    getString(
-                        R.string.about_fork,
-                        getString(R.string.about_fork_developer_name),
-                    )
-
-                val dialog =
-                    MaterialAlertDialogBuilder(this)
-                        .setView(binding.root)
-                        .create()
-
-                binding.btnClose.setOnClickListener {
-                    dialog.dismiss()
-                }
-
-                dialog.show()
+                AboutDialog(this).show()
                 true
             }
 
