@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.provider.DocumentsContract
 import android.view.View
 import android.view.ViewGroup.MarginLayoutParams
-import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -25,9 +24,9 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppBarActivity
+import moe.shizuku.manager.core.extensions.*
 import moe.shizuku.manager.databinding.StealthTutorialActivityBinding
 import moe.shizuku.manager.utils.ApkUtils.*
-import rikka.core.util.ClipboardUtils
 import java.io.File
 
 class StealthTutorialActivity : AppBarActivity() {
@@ -215,12 +214,7 @@ class StealthTutorialActivity : AppBarActivity() {
     ) {
         viewModel.refresh()
         if (isSuccess) {
-            Toast
-                .makeText(
-                    this,
-                    getString(R.string.success),
-                    Toast.LENGTH_SHORT,
-                ).show()
+            toast(R.string.success)
         } else {
             showErrorDialog(Exception(msg ?: "Unknown error"))
         }

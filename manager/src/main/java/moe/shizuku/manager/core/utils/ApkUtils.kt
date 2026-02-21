@@ -19,10 +19,9 @@ import com.reandroid.archive.FileInputSource
 import com.reandroid.common.Namespace
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuApplication
+import moe.shizuku.manager.core.extensions.TAG
 import moe.shizuku.manager.utils.ApkSigner
 import java.io.File
-
-private const val TAG = "ApkUtils"
 
 const val ORIGINAL_PACKAGE_NAME = "moe.shizuku.privileged.api"
 
@@ -71,7 +70,7 @@ fun File.changePackageName(newPkgName: String, maybeCreateSigningKey: Boolean = 
 }
 
 fun createStubApk(pkgName: String): File {
-    Log.i(TAG, "Initializing APK framework")
+    // Log.i(TAG, "Initializing APK framework")
     val outFile = File(appContext.filesDir, "stub.apk")
 
     val tableBlock = TableBlock()
@@ -85,7 +84,7 @@ fun createStubApk(pkgName: String): File {
             add(dummyDex)
         }
 
-    Log.i(TAG, "Adding APK resources")
+    // Log.i(TAG, "Adding APK resources")
     val packageBlock = tableBlock.newPackage(0x7f, pkgName)
     val appName =
         packageBlock.getOrCreate("", "string", "app_name").apply {
@@ -96,7 +95,7 @@ fun createStubApk(pkgName: String): File {
             setValueAsReference(R.drawable.ic_launcher)
         }
 
-    Log.i(TAG, "Creating manifest")
+    // Log.i(TAG, "Creating manifest")
     manifest.apply {
         setPackageName(pkgName)
         setVersionCode(1)

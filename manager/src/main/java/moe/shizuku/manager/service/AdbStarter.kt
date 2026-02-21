@@ -4,7 +4,6 @@ import android.Manifest.permission.WRITE_SECURE_SETTINGS
 import android.content.Context
 import android.content.pm.PackageManager
 import android.provider.Settings
-import android.widget.Toast
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -14,6 +13,7 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbClient
 import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
+import moe.shizuku.manager.core.extensions.*
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.ShizukuStateMachine
@@ -111,9 +111,8 @@ object AdbStarter {
                             is AdbKeyException -> context.getString(R.string.adb_error_key_store)
                             else -> it.message
                         }
-                    Toast
-                        .makeText(context, context.getString(R.string.tcp_error_closing) + ". $errorMsg", Toast.LENGTH_LONG)
-                        .show()
+                    val toastMsg = "${context.getString(R.string.tcp_error_closing)}. $errorMsg"
+                    context.toast(toastMsg, long = true)
                 }
             }
         }

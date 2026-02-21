@@ -4,6 +4,7 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import com.android.org.conscrypt.Conscrypt
+import moe.shizuku.manager.core.extensions.TAG
 import java.io.Closeable
 import java.io.DataInputStream
 import java.io.DataOutputStream
@@ -11,8 +12,6 @@ import java.net.Socket
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import javax.net.ssl.SSLSocket
-
-private const val TAG = "AdbPairClient"
 
 private const val kCurrentKeyHeaderVersion = 1.toByte()
 private const val kMinSupportedKeyHeaderVersion = 1.toByte()
@@ -26,16 +25,18 @@ private const val kExportedKeySize = 64
 private const val kPairingPacketHeaderSize = 6
 
 private class PeerInfo(
-        val type: Byte,
-        data: ByteArray) {
-
+    val type: Byte,
+    data: ByteArray,
+) {
     val data = ByteArray(kMaxPeerInfoSize - 1)
 
     init {
         data.copyInto(this.data, 0, 0, data.size.coerceAtMost(kMaxPeerInfoSize - 1))
     }
 
-    enum class Type(val value: Byte) {
+    enum class Type(
+        val value: Byte,
+    ) {
         ADB_RSA_PUB_KEY(0.toByte()),
         ADB_DEVICE_GUID(0.toByte()),
     }
@@ -49,16 +50,11 @@ private class PeerInfo(
         Log.d(TAG, "write PeerInfo ${toStringShort()}")
     }
 
-    override fun toString(): String {
-        return "PeerInfo(${toStringShort()})"
-    }
+    override fun toString(): String = "PeerInfo(${toStringShort()})"
 
-    fun toStringShort(): String {
-        return "type=$type, data=${data.contentToString()}"
-    }
+    fun toStringShort(): String = "type=$type, data=${data.contentToString()}"
 
     companion object {
-
         fun readFrom(buffer: ByteBuffer): PeerInfo {
             val type = buffer.get()
             val data = ByteArray(kMaxPeerInfoSize - 1)
@@ -69,13 +65,15 @@ private class PeerInfo(
 }
 
 private class PairingPacketHeader(
-        val version: Byte,
-        val type: Byte,
-        val payload: Int) {
-
-    enum class Type(val value: Byte) {
+    val version: Byte,
+    val type: Byte,
+    val payload: Int,
+) {
+    enum class Type(
+        val value: Byte,
+    ) {
         SPAKE2_MSG(0.toByte()),
-        PEER_INFO(1.toByte())
+        PEER_INFO(1.toByte()),
     }
 
     fun writeTo(buffer: ByteBuffer) {
@@ -88,31 +86,26 @@ private class PairingPacketHeader(
         Log.d(TAG, "write PairingPacketHeader ${toStringShort()}")
     }
 
-    override fun toString(): String {
-        return "PairingPacketHeader(${toStringShort()})"
-    }
+    override fun toString(): String = "PairingPacketHeader(${toStringShort()})"
 
-    fun toStringShort(): String {
-        return "version=${version.toInt()}, type=${type.toInt()}, payload=$payload"
-    }
+    fun toStringShort(): String = "version=${version.toInt()}, type=${type.toInt()}, payload=$payload"
 
     companion object {
-
         fun readFrom(buffer: ByteBuffer): PairingPacketHeader? {
             val version = buffer.get()
             val type = buffer.get()
             val payload = buffer.int
 
             if (version < kMinSupportedKeyHeaderVersion || version > kMaxSupportedKeyHeaderVersion) {
-                Log.e(TAG, "PairingPacketHeader version mismatch (us=$kCurrentKeyHeaderVersion them=${version})")
+                Log.e(TAG, "PairingPacketHeader version mismatch (us=$kCurrentKeyHeaderVersion them=$version)")
                 return null
             }
             if (type != Type.SPAKE2_MSG.value && type != Type.PEER_INFO.value) {
-                Log.e(TAG, "Unknown PairingPacket type=${type}")
+                Log.e(TAG, "Unknown PairingPacket type=$type")
                 return null
             }
             if (payload <= 0 || payload > kMaxPayloadSize) {
-                Log.e(TAG, "header payload not within a safe payload size (size=${payload})")
+                Log.e(TAG, "header payload not within a safe payload size (size=$payload)")
                 return null
             }
 
@@ -123,8 +116,9 @@ private class PairingPacketHeader(
     }
 }
 
-private class PairingContext private constructor(private val nativePtr: Long) {
-
+private class PairingContext private constructor(
+    private val nativePtr: Long,
+) {
     val msg: ByteArray
 
     init {
@@ -141,34 +135,49 @@ private class PairingContext private constructor(private val nativePtr: Long) {
 
     private external fun nativeMsg(nativePtr: Long): ByteArray
 
-    private external fun nativeInitCipher(nativePtr: Long, theirMsg: ByteArray): Boolean
+    private external fun nativeInitCipher(
+        nativePtr: Long,
+        theirMsg: ByteArray,
+    ): Boolean
 
-    private external fun nativeEncrypt(nativePtr: Long, inbuf: ByteArray): ByteArray?
+    private external fun nativeEncrypt(
+        nativePtr: Long,
+        inbuf: ByteArray,
+    ): ByteArray?
 
-    private external fun nativeDecrypt(nativePtr: Long, inbuf: ByteArray): ByteArray?
+    private external fun nativeDecrypt(
+        nativePtr: Long,
+        inbuf: ByteArray,
+    ): ByteArray?
 
     private external fun nativeDestroy(nativePtr: Long)
 
     companion object {
-
         fun create(password: ByteArray): PairingContext? {
             val nativePtr = nativeConstructor(true, password)
             return if (nativePtr != 0L) PairingContext(nativePtr) else null
         }
 
         @JvmStatic
-        private external fun nativeConstructor(isClient: Boolean, password: ByteArray): Long
+        private external fun nativeConstructor(
+            isClient: Boolean,
+            password: ByteArray,
+        ): Long
     }
 }
 
 @RequiresApi(Build.VERSION_CODES.R)
-class AdbPairingClient(private val host: String, private val port: Int, private val pairCode: String, private val key: AdbKey) : Closeable {
-
+class AdbPairingClient(
+    private val host: String,
+    private val port: Int,
+    private val pairCode: String,
+    private val key: AdbKey,
+) : Closeable {
     private enum class State {
         Ready,
         ExchangingMsgs,
         ExchangingPeerInfo,
-        Stopped
+        Stopped,
     }
 
     private lateinit var socket: Socket
@@ -223,9 +232,10 @@ class AdbPairingClient(private val host: String, private val port: Int, private 
         this.pairingContext = pairingContext
     }
 
-    private fun createHeader(type: PairingPacketHeader.Type, payloadSize: Int): PairingPacketHeader {
-        return PairingPacketHeader(kCurrentKeyHeaderVersion, type.value, payloadSize)
-    }
+    private fun createHeader(
+        type: PairingPacketHeader.Type,
+        payloadSize: Int,
+    ): PairingPacketHeader = PairingPacketHeader(kCurrentKeyHeaderVersion, type.value, payloadSize)
 
     private fun readHeader(): PairingPacketHeader? {
         val bytes = ByteArray(kPairingPacketHeaderSize)
@@ -234,7 +244,10 @@ class AdbPairingClient(private val host: String, private val port: Int, private 
         return PairingPacketHeader.readFrom(buffer)
     }
 
-    private fun writeHeader(header: PairingPacketHeader, payload: ByteArray) {
+    private fun writeHeader(
+        header: PairingPacketHeader,
+        payload: ByteArray,
+    ) {
         val buffer = ByteBuffer.allocate(kPairingPacketHeaderSize).order(ByteOrder.BIG_ENDIAN)
         header.writeTo(buffer)
 
@@ -305,7 +318,6 @@ class AdbPairingClient(private val host: String, private val port: Int, private 
     }
 
     companion object {
-
         init {
             System.loadLibrary("adb")
         }

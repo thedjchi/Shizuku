@@ -7,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
 import android.view.accessibility.AccessibilityEvent
-import android.widget.Toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -18,6 +17,7 @@ import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.AdbPairingClient
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
+import moe.shizuku.manager.core.extensions.*
 import moe.shizuku.manager.home.HomeActivity
 import moe.shizuku.manager.utils.EnvironmentUtils
 import java.net.ConnectException
@@ -32,7 +32,6 @@ class AdbPairingAccessibilityService : AccessibilityService() {
         super.onServiceConnected()
 
         if (!(EnvironmentUtils.isTelevision() && EnvironmentUtils.isTlsSupported())) {
-            Toast.makeText(this, getString(R.string.pairing_accessibility_tv_only), Toast.LENGTH_SHORT).show()
             disableSelf()
             return
         }
@@ -49,9 +48,9 @@ class AdbPairingAccessibilityService : AccessibilityService() {
         startActivity(intent)
 
         handler.postDelayed({
-            Toast.makeText(this, getString(R.string.pairing_timed_out), Toast.LENGTH_LONG).show()
+            toast(R.string.pairing_timed_out)
             disableSelf()
-        }, 60_000)
+        }, 180_000)
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
@@ -81,6 +80,7 @@ class AdbPairingAccessibilityService : AccessibilityService() {
 
             var toastMsg = getString(R.string.pairing_failed)
             GlobalScope.launch(Dispatchers.IO) {
+                val context = this@AdbPairingAccessibilityService
                 val host = "127.0.0.1"
 
                 val key =
@@ -115,7 +115,7 @@ class AdbPairingAccessibilityService : AccessibilityService() {
                         }
                     }
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@AdbPairingAccessibilityService, toastMsg, Toast.LENGTH_LONG).show()
+                    context.toast(toastMsg, long = true)
                 }
                 disableSelf()
             }

@@ -2,11 +2,10 @@
 
 // import android.content.Intent
 // import android.view.View
-// import android.widget.Toast
 // import com.google.android.material.dialog.MaterialAlertDialogBuilder
 // import moe.shizuku.manager.R
+// import moe.shizuku.manager.core.extensions.*
 // import moe.shizuku.manager.starter.Starter
-// import rikka.core.util.ClipboardUtils
 // import rikka.html.text.HtmlCompat
 
 // binding.button1.setOnClickListener { v: View ->
@@ -22,13 +21,7 @@
 //             )
 //         )
 //         .setPositiveButton(android.R.string.copy) { _, _ ->
-//             if (ClipboardUtils.put(context, Starter.adbCommand)) {
-//                 Toast.makeText(
-//                     context,
-//                     context.getString(R.string.copied_to_clipboard),
-//                     Toast.LENGTH_SHORT
-//                 ).show()
-//             }
+//             context.copyToClipboard(Starter.adbCommand)
 //         }
 //         .setNegativeButton(android.R.string.cancel, null)
 //         .setNeutralButton(R.string.share) { _, _ ->

@@ -1,7 +1,6 @@
 package moe.shizuku.manager.utils
 
 import android.content.Context
-import android.widget.Toast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
@@ -10,6 +9,7 @@ import kotlinx.serialization.decodeFromString
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuApplication
 import moe.shizuku.manager.ShizukuSettings
+import moe.shizuku.manager.core.extensions.*
 import moe.shizuku.manager.utils.ApkUtils.*
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -84,12 +84,7 @@ object UpdateHelper {
         if (isUpdateAvailable()) {
             update()
         } else {
-            Toast
-                .makeText(
-                    appContext,
-                    appContext.getString(R.string.update_latest_installed),
-                    Toast.LENGTH_SHORT,
-                ).show()
+            appContext.toast(R.string.update_latest_installed)
         }
     }
 
@@ -109,12 +104,7 @@ object UpdateHelper {
             val current = Version.parse(getVersionName()) ?: return false
             return latest > current
         } catch (e: Exception) {
-            Toast
-                .makeText(
-                    appContext,
-                    appContext.getString(R.string.update_check_failed),
-                    Toast.LENGTH_SHORT,
-                ).show()
+            appContext.toast(R.string.update_check_failed)
             return false
         }
     }
@@ -124,12 +114,7 @@ object UpdateHelper {
     suspend fun update() {
         if (!::latestRelease.isInitialized && !isUpdateAvailable()) return
 
-        Toast
-            .makeText(
-                appContext,
-                appContext.getString(R.string.update_downloading),
-                Toast.LENGTH_SHORT,
-            ).show()
+        appContext.toast(R.string.update_downloading)
 
         val apk =
             latestRelease.download()?.run {
@@ -142,12 +127,7 @@ object UpdateHelper {
                         android.util.Log.d("UpdateHelper", "Changing package name from $apkPackageName to ${app.packageName}")
                         changePackageName(app.packageName)
                     } catch (e: Exception) {
-                        Toast
-                            .makeText(
-                                appContext,
-                                appContext.getString(R.string.update_failed),
-                                Toast.LENGTH_SHORT,
-                            ).show()
+                        appContext.toast(R.string.update_failed)
                         return@update
                     }
                 } else {
@@ -155,12 +135,7 @@ object UpdateHelper {
                 }
             }
         if (apk == null) {
-            Toast
-                .makeText(
-                    appContext,
-                    appContext.getString(R.string.update_download_failed),
-                    Toast.LENGTH_SHORT,
-                ).show()
+            appContext.toast(R.string.update_download_failed)
             return
         }
 
@@ -168,7 +143,7 @@ object UpdateHelper {
             val toastMsg =
                 if (isSuccess) appContext.getString(R.string.update_success)
                 else appContext.getString(R.string.update_failed)
-            Toast.makeText(appContext, toastMsg, Toast.LENGTH_SHORT).show()
+            appContext.toast(toastMsg)
         }
     }
 

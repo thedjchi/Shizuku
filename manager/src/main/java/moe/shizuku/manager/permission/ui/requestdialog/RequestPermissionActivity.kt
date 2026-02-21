@@ -5,6 +5,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -16,7 +17,6 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppActivity
 import moe.shizuku.manager.databinding.ConfirmationDialogBinding
 import moe.shizuku.manager.utils.toHtml
-import moe.shizuku.manager.utils.Logger.LOGGER
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.core.res.resolveColor
 import rikka.html.text.HtmlCompat
@@ -40,7 +40,7 @@ class RequestPermissionActivity : AppActivity() {
         try {
             Shizuku.dispatchPermissionConfirmationResult(requestUid, requestPid, requestCode, data)
         } catch (e: Throwable) {
-            LOGGER.e("dispatchPermissionConfirmationResult")
+            Log.e("RequestPermissionActivity", "dispatchPermissionConfirmationResult", e)
         }
     }
 
@@ -79,7 +79,7 @@ class RequestPermissionActivity : AppActivity() {
                 }
                 true
             } catch (e: TimeoutCancellationException) {
-                LOGGER.e(e, "Binder not received in 5s")
+                Log.e("RequestPermissionActivity", "Binder not received in 5s", e)
                 false
             }
         }

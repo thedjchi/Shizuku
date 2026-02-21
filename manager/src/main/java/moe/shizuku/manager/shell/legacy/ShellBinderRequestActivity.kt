@@ -1,7 +1,6 @@
 package moe.shizuku.manager.shell.legacy
 
 import android.os.Bundle
-import android.widget.Toast
 import moe.shizuku.manager.app.AppActivity
 import moe.shizuku.manager.shell.ShellBinderRequestHandler
 

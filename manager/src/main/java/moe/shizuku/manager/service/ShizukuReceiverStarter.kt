@@ -15,8 +15,9 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.topjohnwu.superuser.Shell
 import moe.shizuku.manager.R
-import moe.shizuku.manager.ShizukuSettings
-import moe.shizuku.manager.ShizukuSettings.LaunchMethod
+import moe.shizuku.manager.core.data.preferences.PreferencesRepository
+import moe.shizuku.manager.core.extensions.TAG
+import moe.shizuku.manager.core.models.preferences.StartMode
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsPage
@@ -24,11 +25,11 @@ import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.UserHandleCompat
 import moe.shizuku.manager.worker.AdbStartWorker
 
-private const val TAG = "ShizukuReceiverStarter"
-
 object ShizukuReceiverStarter {
     const val NOTIFICATION_ID = 1447
     private const val CHANNEL_ID = "AdbStartWorker"
+
+    private val prefs = PreferencesRepository
 
     enum class WorkerState {
         AWAITING_WIFI,
@@ -43,13 +44,13 @@ object ShizukuReceiverStarter {
     ) {
         if ((UserHandleCompat.myUserId() > 0 || ShizukuStateMachine.isRunning()) && !forceStart) return
 
-        if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
+        if (prefs.getStartMode() == StartMode.ROOT) {
             rootStart(context)
         } else if ((
                 Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isTelevision() ||
                     EnvironmentUtils.getAdbTcpPort() > 0
             ) &&
-            ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB
+            prefs.getStartMode() == StartMode.WADB
         ) {
             if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
                 AdbStartWorker.enqueue(context)

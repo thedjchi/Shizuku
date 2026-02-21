@@ -10,7 +10,6 @@
 // import android.view.LayoutInflater
 // import android.view.View
 // import android.view.ViewGroup
-// import android.widget.Toast
 // import androidx.annotation.RequiresApi
 // import androidx.core.view.isVisible
 // import androidx.fragment.app.FragmentActivity
@@ -28,7 +27,6 @@
 // import moe.shizuku.manager.utils.toHtml
 // import moe.shizuku.manager.receiver.NotifCancelReceiver
 // import moe.shizuku.manager.starter.StarterActivity
-// import moe.shizuku.manager.utils.CustomTabsHelper
 // import moe.shizuku.manager.utils.EnvironmentUtils
 // import moe.shizuku.manager.utils.ShizukuStateMachine
 // import rikka.core.content.asActivity
@@ -49,11 +47,6 @@
 //         }
 
 //         fun start (context: Context, scope: CoroutineScope) {
-//             if (ShizukuStateMachine.get() == ShizukuStateMachine.State.STARTING) {
-//                 Toast.makeText(context, context.getString(R.string.start_already_starting), Toast.LENGTH_SHORT).show()
-//                 return
-//             }
-
 //             context.sendBroadcast(Intent(context, NotifCancelReceiver::class.java))
 
 //             val cr = context.contentResolver

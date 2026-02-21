@@ -19,6 +19,7 @@ import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.databinding.HomeActivityBinding
 import moe.shizuku.manager.home.cards.*
+import moe.shizuku.manager.home.components.dialogs.AboutDialog
 import moe.shizuku.manager.home.showAccessibilityDialog
 import moe.shizuku.manager.management.AppsViewModel
 import moe.shizuku.manager.settings.SettingsActivity

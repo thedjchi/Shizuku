@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.pm.PackageManager
 import android.content.pm.PermissionInfo
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,7 +16,6 @@ import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.model.ServiceStatus
 import moe.shizuku.manager.utils.EnvironmentUtils
-import moe.shizuku.manager.utils.Logger.LOGGER
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import moe.shizuku.manager.utils.ShizukuSystemApis
@@ -71,7 +71,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 Shizuku.getSELinuxContext()
             } catch (tr: Throwable) {
-                LOGGER.w(tr, "getSELinuxContext")
+                Log.e("HomeViewModel", "getSELinuxContext", tr)
                 null
             }
         } else null

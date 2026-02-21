@@ -9,11 +9,12 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.widget.Toast
+
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import moe.shizuku.manager.BuildConfig
 import moe.shizuku.manager.R
+import moe.shizuku.manager.core.extensions.*
 import moe.shizuku.manager.databinding.BugReportDialogBinding
 import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.applyTemplateArgs
@@ -74,7 +75,7 @@ class BugReportDialog : DialogFragment() {
                     context.startActivity(intent)
                     dismiss()
                 } catch (e: ActivityNotFoundException) {
-                    Toast.makeText(context, context.getString(R.string.error_no_email_app), Toast.LENGTH_SHORT).show()
+                    context.toast(R.string.error_no_email_app)
                 }
             }.setNeutralButton(android.R.string.cancel) { dialog, _ ->
                 dialog.cancel()

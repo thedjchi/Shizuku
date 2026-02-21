@@ -1,10 +1,14 @@
 package moe.shizuku.manager.core.data.preferences
 
+import android.content.Context
 import android.content.SharedPreferences
 
-class PreferencesDataSource(
-    private val prefs: SharedPreferences,
-) {
+object PreferencesDataSource {
+    private lateinit var prefs: SharedPreferences
+
+    fun init(context: Context) {
+        prefs = context.getSharedPreferences("settings", Context.MODE_PRIVATE)
+    }
 
     // -------------------------
     // GETTERS

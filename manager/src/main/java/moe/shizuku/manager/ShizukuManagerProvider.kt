@@ -1,6 +1,7 @@
 package moe.shizuku.manager
 
 import android.os.Bundle
+import android.util.Log
 import androidx.core.os.bundleOf
 import kotlinx.coroutines.android.asCoroutineDispatcher
 import kotlinx.coroutines.flow.first
@@ -10,7 +11,6 @@ import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.TimeoutCancellationException
 import moe.shizuku.api.BinderContainer
-import moe.shizuku.manager.utils.Logger.LOGGER
 import moe.shizuku.manager.utils.ShizukuStateMachine
 import rikka.shizuku.Shizuku
 import rikka.shizuku.ShizukuApiConstants.USER_SERVICE_ARG_TOKEN
@@ -50,18 +50,18 @@ class ShizukuManagerProvider : ShizukuProvider() {
                                     reply!!.putParcelable(EXTRA_BINDER, BinderContainer(Shizuku.getBinder()))
                                     reply
                                 } catch (e: Throwable) {
-                                    LOGGER.e(e, "attachUserService $token")
+                                    Log.e("ShizukuManagerProvider", "attachUserService $token", e)
                                     null
                                 }
                             }
                         }
                     } catch (e: TimeoutCancellationException) {
-                        LOGGER.e(e, "Binder not received in 5s")
+                        Log.e("ShizukuManagerProvider", "Binder not received in 5s", e)
                         null
                     }
                 }
             } catch (e: Throwable) {
-                LOGGER.e(e, "sendUserService")
+                Log.e("ShizukuManagerProvider", "sendUserService", e)
                 null
             }
         } else {

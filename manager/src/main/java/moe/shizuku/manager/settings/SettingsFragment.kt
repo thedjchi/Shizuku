@@ -18,7 +18,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
@@ -42,10 +41,10 @@ import moe.shizuku.manager.ShizukuSettings.Keys.*
 import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.app.SnackbarHelper
 import moe.shizuku.manager.app.ThemeHelper
+import moe.shizuku.manager.core.extensions.*
 import moe.shizuku.manager.receiver.BootCompleteReceiver
 import moe.shizuku.manager.receiver.NotifCancelReceiver
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
-import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.ShizukuStateMachine
@@ -396,7 +395,7 @@ class SettingsFragment :
                     if (EnvironmentUtils.getAdbTcpPort() <= 0) {
                         applyChange()
                     } else {
-                        Toast.makeText(context, R.string.tcp_error_closing, Toast.LENGTH_SHORT).show()
+                        context.toast(R.string.tcp_error_closing)
                     }
                 }
             }.setNegativeButton(android.R.string.cancel, null)

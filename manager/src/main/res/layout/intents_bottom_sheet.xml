@@ -21,6 +21,21 @@
             android:textAppearance="?textAppearanceTitleLarge"
             android:text="@string/intents" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?textAppearanceBodyMedium"
+            android:text="@string/intents_description" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?textAppearanceBodyMedium"
+            android:text="@string/intents_device_restriction"
+            android:visibility="gone" />
+
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/buttonGroup"
             android:layout_width="wrap_content"
@@ -96,7 +111,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/StaticCopyTextInput"
-            android:id="@+id/extrasLayout"
+            android:id="@+id/extraLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/intents_extra"
@@ -107,7 +122,7 @@
             app:prefixText="auth: ">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/extrasEditText"
+                android:id="@+id/extraEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"

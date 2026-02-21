@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
@@ -28,6 +27,7 @@ import kotlinx.coroutines.launch
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.adb.*
+import moe.shizuku.manager.core.extensions.*
 import moe.shizuku.manager.databinding.AdbPairDialogBinding
 import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.SettingsPage
@@ -158,10 +158,7 @@ class AdbPairDialogFragment : DialogFragment() {
                     }
 
                     is AdbKeyException -> {
-                        Toast
-                            .makeText(context, context.getString(R.string.adb_error_key_store), Toast.LENGTH_LONG)
-                            .apply { setGravity(Gravity.CENTER, 0, 0) }
-                            .show()
+                        context.toast(R.string.adb_error_key_store, long = true)
                     }
                 }
             }

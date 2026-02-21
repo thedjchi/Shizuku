@@ -3,19 +3,21 @@ package moe.shizuku.manager.adb
 import android.os.Build
 import android.util.Log
 import moe.shizuku.manager.adb.*
+import moe.shizuku.manager.core.extensions.TAG
 import java.io.Closeable
 import java.io.DataInputStream
 import java.io.DataOutputStream
+import java.net.InetSocketAddress
 import java.net.Socket
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
-import java.net.InetSocketAddress
 import javax.net.ssl.SSLSocket
 
-private const val TAG = "AdbClient"
-
-class AdbClient(private val host: String, private val port: Int, private val key: AdbKey) : Closeable {
-
+class AdbClient(
+    private val host: String,
+    private val port: Int,
+    private val key: AdbKey,
+) : Closeable {
     private lateinit var socket: Socket
     private lateinit var plainInputStream: DataInputStream
     private lateinit var plainOutputStream: DataOutputStream
@@ -71,7 +73,10 @@ class AdbClient(private val host: String, private val port: Int, private val key
         if (message.command != A_CNXN) error("not A_CNXN")
     }
 
-    fun command(cmd: String, listener: ((ByteArray) -> Unit)? = null) {
+    fun command(
+        cmd: String,
+        listener: ((ByteArray) -> Unit)? = null,
+    ) {
         val localId = 1
         write(A_OPEN, localId, 0, cmd)
 
@@ -94,19 +99,31 @@ class AdbClient(private val host: String, private val port: Int, private val key
                     }
                 }
             }
+
             A_CLSE -> {
                 val remoteId = message.arg0
                 write(A_CLSE, localId, remoteId)
             }
+
             else -> {
                 error("not A_OKAY or A_CLSE")
             }
         }
     }
 
-    private fun write(command: Int, arg0: Int, arg1: Int, data: ByteArray? = null) = write(AdbMessage(command, arg0, arg1, data))
+    private fun write(
+        command: Int,
+        arg0: Int,
+        arg1: Int,
+        data: ByteArray? = null,
+    ) = write(AdbMessage(command, arg0, arg1, data))
 
-    private fun write(command: Int, arg0: Int, arg1: Int, data: String) = write(AdbMessage(command, arg0, arg1, data))
+    private fun write(
+        command: Int,
+        arg0: Int,
+        arg1: Int,
+        data: String,
+    ) = write(AdbMessage(command, arg0, arg1, data))
 
     private fun write(message: AdbMessage) {
         outputStream.write(message.toByteArray())

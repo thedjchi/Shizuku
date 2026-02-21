@@ -17,6 +17,7 @@ import androidx.core.app.NotificationCompat
 import moe.shizuku.manager.MainActivity
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
+import moe.shizuku.manager.core.extensions.TAG
 import moe.shizuku.manager.receiver.ShizukuReceiverStarter
 import moe.shizuku.manager.utils.SettingsPage
 import moe.shizuku.manager.utils.ShizukuStateMachine
@@ -172,7 +173,6 @@ class WatchdogService : Service() {
     }
 
     companion object {
-        private const val TAG = "ShizukuWatchdog"
         private const val NOTIFICATION_ID_WATCHDOG = 1001
         private const val NOTIFICATION_ID_CRASH = 1002
         const val CRASH_CHANNEL_ID = "crash_reports"

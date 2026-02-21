@@ -9,7 +9,6 @@ import androidx.core.view.isVisible
 import moe.shizuku.manager.R
 import moe.shizuku.manager.app.AppBarActivity
 import moe.shizuku.manager.databinding.TerminalTutorialActivityBinding
-import moe.shizuku.manager.utils.CustomTabsHelper
 import moe.shizuku.manager.utils.toHtml
 import rikka.compatibility.DeviceCompatibility
 import rikka.html.text.HtmlCompat

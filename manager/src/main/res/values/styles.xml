@@ -53,7 +53,8 @@
     <style name="StaticCopyTextInput" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="android:textColorHint">?colorOnSurfaceVariant</item>
         <item name="boxStrokeColor">@color/text_input_static_box_stroke_color</item>
-        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
         <item name="endIconMode">custom</item>
         <item name="endIconDrawable">@drawable/ic_copy</item>
         <item name="hintTextColor">?colorOnSurfaceVariant</item>

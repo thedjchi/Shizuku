@@ -1,15 +1,19 @@
 package moe.shizuku.manager.core.data.preferences
 
 import android.content.SharedPreferences
+import moe.shizuku.manager.core.models.preferences.*
 
-class PreferencesRepository(
-    private val prefs: PreferencesDataSource,
-) {
+object PreferencesRepository {
+    private val prefs = PreferencesDataSource
+    
     // -------------------------
     // GETTERS
     // -------------------------
 
-    fun getStartMode(): String? = prefs.get(Preferences.START_MODE)
+    fun getStartMode(): StartMode =
+        fromValueOrDefault<StartMode>(
+            prefs.get(Preferences.START_MODE),
+        )
 
     fun getStartOnBoot(): Boolean = prefs.get(Preferences.START_ON_BOOT)
 
@@ -23,7 +27,10 @@ class PreferencesRepository(
 
     fun getLanguage(): String? = prefs.get(Preferences.LANGUAGE)
 
-    fun getTheme(): String? = prefs.get(Preferences.THEME)
+    fun getTheme(): Theme =
+        fromValueOrDefault<Theme>(
+            prefs.get(Preferences.THEME),
+        )
 
     fun getAmoledBlack(): Boolean = prefs.get(Preferences.AMOLED_BLACK)
 
@@ -31,7 +38,10 @@ class PreferencesRepository(
 
     fun getCheckForUpdates(): Boolean = prefs.get(Preferences.CHECK_FOR_UPDATES)
 
-    fun getUpdateChannel(): String? = prefs.get(Preferences.UPDATE_CHANNEL)
+    fun getUpdateChannel(): UpdateChannel =
+        fromValueOrDefault<UpdateChannel>(
+            prefs.get(Preferences.UPDATE_CHANNEL),
+        )
 
     fun getLastPromptedVersion(): String? = prefs.get(Preferences.LAST_PROMPTED_VERSION)
 
@@ -39,11 +49,19 @@ class PreferencesRepository(
 
     fun getAuthToken(): String? = prefs.get(Preferences.AUTH_TOKEN)
 
+    // Generic reverse lookup function for enums
+    private inline fun <reified T> fromValueOrDefault(value: Int): T
+    where T : Enum<T>, T : IntEnum {
+        val entries = enumValues<T>()
+        return entries.find { it.value == value }
+            ?: entries.first().default as T
+    }
+
     // -------------------------
     // SETTERS
     // -------------------------
 
-    fun setStartMode(value: String?) = prefs.set(Preferences.START_MODE, value)
+    fun setStartMode(mode: StartMode) = prefs.set(Preferences.START_MODE, mode.value)
 
     fun setStartOnBoot(value: Boolean) = prefs.set(Preferences.START_ON_BOOT, value)
 
@@ -57,7 +75,7 @@ class PreferencesRepository(
 
     fun setLanguage(value: String?) = prefs.set(Preferences.LANGUAGE, value)
 
-    fun setTheme(value: String?) = prefs.set(Preferences.THEME, value)
+    fun setTheme(theme: Theme) = prefs.set(Preferences.THEME, theme.value)
 
     fun setAmoledBlack(value: Boolean) = prefs.set(Preferences.AMOLED_BLACK, value)
 
@@ -65,7 +83,7 @@ class PreferencesRepository(
 
     fun setCheckForUpdates(value: Boolean) = prefs.set(Preferences.CHECK_FOR_UPDATES, value)
 
-    fun setUpdateChannel(value: String?) = prefs.set(Preferences.UPDATE_CHANNEL, value)
+    fun setUpdateChannel(channel: UpdateChannel) = prefs.set(Preferences.UPDATE_CHANNEL, channel.value)
 
     fun setLastPromptedVersion(value: String?) = prefs.set(Preferences.LAST_PROMPTED_VERSION, value)
 

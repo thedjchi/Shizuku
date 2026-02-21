@@ -6,11 +6,10 @@ import android.os.Build
 import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import com.topjohnwu.superuser.Shell
+import moe.shizuku.manager.core.data.preferences.PreferencesDataSource
 import moe.shizuku.manager.service.WatchdogService
-import moe.shizuku.manager.utils.ShizukuStateMachine
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import rikka.material.app.LocaleDelegate
-import rikka.shizuku.Shizuku
 
 class ShizukuApplication : Application() {
 
@@ -38,6 +37,7 @@ class ShizukuApplication : Application() {
 
     private fun init(context: Context) {
         ShizukuSettings.initialize(context)
+        PreferencesDataSource.init(context)
         LocaleDelegate.defaultLocale = ShizukuSettings.getLocale()
         AppCompatDelegate.setDefaultNightMode(ShizukuSettings.getNightMode())
 

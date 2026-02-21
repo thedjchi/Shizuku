@@ -8,7 +8,6 @@ import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -16,6 +15,8 @@ import kotlinx.coroutines.launch
 import moe.shizuku.manager.MainActivity
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
+import moe.shizuku.manager.core.extensions.*
+import moe.shizuku.manager.core.extensions.TAG
 import moe.shizuku.manager.home.HomeActivity
 import rikka.core.ktx.unsafeLazy
 import java.net.ConnectException
@@ -25,8 +26,6 @@ class AdbPairingService : Service() {
     companion object {
         const val NOTIFICATION_CHANNEL = "adb_pairing"
         const val NOTIFICATION_ID = 1
-
-        private const val tag = "AdbPairingService"
 
         private const val replyRequestId = 1
         private const val stopRequestId = 2
@@ -53,7 +52,7 @@ class AdbPairingService : Service() {
 
     private val observer =
         Observer<Int> { port ->
-            Log.i(tag, "Pairing service port: $port")
+            Log.i(TAG, "Pairing service port: $port")
             if (port <= 0) return@Observer
 
             // Since the service could be killed before user finishing input,
@@ -120,7 +119,7 @@ class AdbPairingService : Service() {
                     ServiceInfo.FOREGROUND_SERVICE_TYPE_MANIFEST,
                 )
             } catch (e: Throwable) {
-                Log.e(tag, "startForeground failed", e)
+                Log.e(TAG, "startForeground failed", e)
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
                     e is ForegroundServiceStartNotAllowedException
@@ -133,7 +132,7 @@ class AdbPairingService : Service() {
     }
 
     override fun onTimeout(startId: Int) {
-        Toast.makeText(this, R.string.pairing_timed_out, Toast.LENGTH_SHORT).show()
+        toast(R.string.pairing_timed_out)
         stopForeground(STOP_FOREGROUND_REMOVE)
         stopSelf()
     }
@@ -198,7 +197,7 @@ class AdbPairingService : Service() {
         val text: String?
 
         if (success) {
-            Log.i(tag, "Pair succeed")
+            Log.i(TAG, "Pair succeed")
 
             title = getString(R.string.pairing_successful)
             text = getString(R.string.pairing_successful_message)
@@ -227,9 +226,9 @@ class AdbPairingService : Service() {
                 }
 
             if (exception != null) {
-                Log.w(tag, "Pair failed", exception)
+                Log.w(TAG, "Pair failed", exception)
             } else {
-                Log.w(tag, "Pair failed")
+                Log.w(TAG, "Pair failed")
             }
         }
 
