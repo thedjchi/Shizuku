@@ -1,4 +1,12 @@
 <div align="center">
+</br>
+<img src="media/icon.png" width="200" />
+
+</div>
+
+<div align="center">
+
+<div align="center">
    
 # Shizuku
 
