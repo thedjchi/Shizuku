@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Grafika (https://www.grafika.cc/) -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-	<g id="main2">
+	<g id="icon_full2">
 		<g id="Group 12">
 			<rect x="-0" y="-0" width="512" height="512" style="fill:#3F51B5;" />
-			<ellipse cx="256" cy="256" rx="99.56" ry="99.56" style="fill:#6471BC;" />
+			<path d="M207.3,341.21 L158.6,256 L207.3,170.79 L304.7,170.79 L353.4,256 L304.7,341.21 L207.3,341.21 L207.3,341.21 Z" fill-rule="evenodd" opacity="0.5" style="fill:#6471BC;" />
 		</g>
 		<g id="Group 82">
 			<path transform="matrix(0.8961233496665955, 0.4438050091266632, -0.4438050091266632, 0.8961233496665955, 185.27392578125, 321.0574645996094)" d="M-85.81,-27.15 L85.81,-27.15 L85.81,27.15 L-85.81,27.15 L-85.81,-27.15 Z" style="fill:#3F51B5;" />
