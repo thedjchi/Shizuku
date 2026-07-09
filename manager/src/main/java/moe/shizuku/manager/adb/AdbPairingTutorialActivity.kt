@@ -23,12 +23,21 @@ import moe.shizuku.manager.utils.SettingsHelper
 import moe.shizuku.manager.utils.SettingsPage
 import rikka.compatibility.DeviceCompatibility
 
+private const val STATE_PAIRING_INITIATED = "pairing_initiated"
+
 @RequiresApi(Build.VERSION_CODES.R)
 class AdbPairingTutorialActivity : AppBarActivity() {
 
     private lateinit var binding: AdbPairingTutorialActivityBinding
 
     private var notificationEnabled: Boolean = false
+
+    // onCreate (when notifications are already enabled) and onResume (when they
+    // just became enabled) can both reach startPairingService(). Without a guard
+    // the local-network permission dialog and the foreground pairing service could
+    // be launched on top of each other, or the service started twice. Initiate the
+    // pairing flow at most once; persisted across recreation (rotation) below.
+    private var pairingInitiated = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +48,7 @@ class AdbPairingTutorialActivity : AppBarActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         notificationEnabled = isNotificationEnabled()
+        pairingInitiated = savedInstanceState?.getBoolean(STATE_PAIRING_INITIATED) == true
 
         if (notificationEnabled) {
             startPairingService()
@@ -95,6 +105,13 @@ class AdbPairingTutorialActivity : AppBarActivity() {
         }
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Survive recreation (e.g. rotation) so pairing isn't re-initiated and the
+        // permission dialog / service don't fire a second time.
+        outState.putBoolean(STATE_PAIRING_INITIATED, pairingInitiated)
+    }
+
     // Android 17 (SDK 37) gates local-network access behind ACCESS_LOCAL_NETWORK;
     // Android 16 (SDK 36) uses NEARBY_WIFI_DEVICES. Without a runtime grant the OS
     // intercepts the pairing connection with an endless "choose a device" picker.
@@ -112,6 +129,8 @@ class AdbPairingTutorialActivity : AppBarActivity() {
         }
 
     private fun startPairingService() {
+        if (pairingInitiated) return
+        pairingInitiated = true
         val permission = localNetworkPermission()
         if (permission != null && checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
             localNetworkPermissionLauncher.launch(permission)
