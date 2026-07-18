@@ -445,6 +445,11 @@ public class ShizukuService extends Service<ShizukuUserServiceManager, ShizukuCl
         configManager.update(uid, null, mask, value);
     }
 
+    @Override
+    public IBinder getSystemService(String name) throws RemoteException {
+        return ServiceManager.getService(name);
+    }
+
     private void onPermissionRevoked(String packageName) {
         // TODO add runtime permission listener
         getUserServiceManager().removeUserServicesForPackage(packageName);
