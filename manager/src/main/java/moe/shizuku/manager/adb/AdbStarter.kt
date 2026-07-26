@@ -9,8 +9,11 @@ import java.io.EOFException
 import java.net.SocketException
 import java.net.SocketTimeoutException
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import moe.shizuku.manager.R
 import moe.shizuku.manager.ShizukuSettings
@@ -19,9 +22,48 @@ import moe.shizuku.manager.adb.AdbKey
 import moe.shizuku.manager.adb.PreferenceAdbKeyStore
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
+import moe.shizuku.manager.utils.HeadlessLogger
 import moe.shizuku.manager.utils.ShizukuStateMachine
+import android.util.Log
+import moe.shizuku.manager.AppConstants
 
 object AdbStarter {
+    private val directScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+
+    fun startDirect(context: Context, port: Int, maxRetries: Int = 5, baseRetryDelayMs: Long = 10000) {
+        if (ShizukuStateMachine.get() == ShizukuStateMachine.State.STARTING) {
+            Log.w(AppConstants.TAG, "startDirect: already starting, ignoring duplicate request")
+            return
+        }
+        directScope.launch {
+            var retryDelay = 0L
+            var lastError: Exception? = null
+            for (attempt in 1..maxRetries) {
+                try {
+                    if (attempt > 1) delay(retryDelay)
+                    HeadlessLogger.i("AdbStarter", "Attempt $attempt/$maxRetries on port $port")
+                    startAdb(context, port)
+                    HeadlessLogger.i("AdbStarter", "Server started successfully")
+                    return@launch
+                } catch (e: Exception) {
+                    if (e is CancellationException) throw e
+                    lastError = e
+                    if (attempt < maxRetries) {
+                        retryDelay = if (retryDelay == 0L) baseRetryDelayMs else retryDelay * 2
+                        HeadlessLogger.w("AdbStarter", "Attempt $attempt failed, retrying in ${retryDelay}ms: ${e.message}")
+                    }
+                }
+            }
+            HeadlessLogger.e("AdbStarter", "Failed after $maxRetries attempts", lastError)
+            // startAdb() sets STARTING on entry but never resets on total failure,
+            // wedging every future start attempt behind the "already starting"
+            // guard above until something else (e.g. force-stop) clears it.
+            // update() reconciles against the real binder state (STOPPED unless
+            // a retry happened to succeed underneath us).
+            ShizukuStateMachine.update()
+        }
+    }
+
     suspend fun startAdb(context: Context, port: Int, log: ((String) -> Unit)? = null) {
         suspend fun AdbClient.runCommand(cmd: String) {
             command(cmd) { log?.invoke(String(it)) }

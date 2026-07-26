@@ -18,6 +18,7 @@ import moe.shizuku.manager.R
 import moe.shizuku.manager.AppConstants
 import moe.shizuku.manager.ShizukuSettings
 import moe.shizuku.manager.ShizukuSettings.LaunchMethod
+import moe.shizuku.manager.adb.AdbStarter
 import moe.shizuku.manager.starter.Starter
 import moe.shizuku.manager.utils.EnvironmentUtils
 import moe.shizuku.manager.utils.SettingsPage
@@ -40,11 +41,15 @@ object ShizukuReceiverStarter {
     fun start(context: Context, forceStart: Boolean = false) {
         if ((UserHandleCompat.myUserId() > 0 || ShizukuStateMachine.isRunning()) && !forceStart) return
 
-        if (ShizukuSettings.getLastLaunchMode() == LaunchMethod.ROOT) {
+        val launchMode = ShizukuSettings.getLastLaunchMode()
+        if (launchMode == LaunchMethod.ROOT) {
             rootStart(context)
         } else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || EnvironmentUtils.isTelevision() || EnvironmentUtils.getAdbTcpPort() > 0)
-            && ShizukuSettings.getLastLaunchMode() == LaunchMethod.ADB) {
-                if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
+            && (launchMode == LaunchMethod.ADB || launchMode == LaunchMethod.UNKNOWN)) {
+                val tcpPort = EnvironmentUtils.getAdbTcpPort()
+                if (tcpPort > 0) {
+                    AdbStarter.startDirect(context, tcpPort)
+                } else if (context.checkSelfPermission(WRITE_SECURE_SETTINGS) == PackageManager.PERMISSION_GRANTED) {
                     AdbStartWorker.enqueue(context)
                     updateNotification(context, WorkerState.AWAITING_WIFI)
                 } else {
