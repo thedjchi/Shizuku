@@ -61,6 +61,20 @@ jobs:
           echo KEYSTORE_FILE=../key.jks >> signing.properties
           echo ${{ secrets.KEYSTORE }} | base64 --decode > key.jks
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: >-
+            build-tools;36.0.0
+            platforms;android-36
+            cmake;3.31.0
+            ndk;29.0.14206865
+
+      - name: Install Ninja
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
         with:
@@ -71,7 +85,6 @@ jobs:
       - name: Build with Gradle
         id: buildWithGradle
         run: |
-          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
           echo 'org.gradle.caching=true' >> gradle.properties
           echo 'org.gradle.parallel=true' >> gradle.properties
 
@@ -88,21 +101,12 @@ jobs:
           eval $CMD
           FILE=$(ls "$APK_DIR"/*.apk)
 
-          VERSION=$(echo "$(basename "$FILE")" | sed -E 's/^shizuku-(.*)-(debug|release)\.apk/\1/')
-
-          ARTIFACT_NAME="shizuku-$VERSION"
-          [ "${{ inputs.debug }}" = "true" ] && ARTIFACT_NAME="${ARTIFACT_NAME}-debug"
-          ARTIFACT_NAME="${ARTIFACT_NAME}.apk"
-
-          RENAMED="$FILE"
-          if [ "$(basename "$FILE")" != "$ARTIFACT_NAME" ]; then
-            RENAMED="$(dirname "$FILE")/$ARTIFACT_NAME"
-            mv "$FILE" "$RENAMED"
-          fi
+          VERSION=$(echo "$(basename "$FILE")" | sed -E 's/^shizuku-(.*[-.](debug[0-9]+|release[0-9]+))-[^.]+\.apk/\1/')
+          APK_NAME=$(basename "$FILE")
 
           echo "versionName=$VERSION" >> $GITHUB_OUTPUT
-          echo "artifactName=$ARTIFACT_NAME" >> $GITHUB_OUTPUT
-          echo "filePath=$RENAMED" >> $GITHUB_OUTPUT
+          echo "artifactName=$APK_NAME" >> $GITHUB_OUTPUT
+          echo "filePath=$FILE" >> $GITHUB_OUTPUT
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v6

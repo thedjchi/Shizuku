@@ -12,6 +12,9 @@ android {
     defaultConfig {
         buildConfigField "String", "MANAGER_APPLICATION_ID", "\"${project(':manager').android.defaultConfig.applicationId}\""
     }
+    kotlinOptions {
+        jvmTarget = "21"
+    }
 }
 
 dependencies {

@@ -54,6 +54,17 @@ android {
     }
     packagingOptions {
         jniLibs {
+            // Standard extract-on-install packaging (extractNativeLibs=true).
+            // The Shizuku starter (starter.cpp) hands shizuku_server a
+            // -Dshizuku.library.path=<apk_dir>/lib/<abi> pointing at the
+            // *extracted* native-lib dir, so the server can only load
+            // librish.so if the libs are extracted to disk. useLegacyPackaging
+            // = false (extractNativeLibs=false) left that dir empty and crashed
+            // shizuku_server on every fresh start with UnsatisfiedLinkError
+            // (fleet-wide; masked only by daemons surviving from older builds).
+            // The Fire OS 8 in-place-upgrade non-extraction problem this used
+            // to work around is instead handled by clean-reinstalling Shizuku
+            // on Fire OS devices in the bootstrap_apks role.
             useLegacyPackaging = true
         }
         resources {
@@ -124,7 +135,8 @@ afterEvaluate {
 
 android.applicationVariants.configureEach { variant ->
     variant.outputs.configureEach {
-        outputFileName = "shizuku-v${variant.versionName}-${variant.name}.apk"
+        def abi = filters.find { it.filterType == "ABI" }?.identifier ?: "universal"
+        outputFileName = "shizuku-v${variant.versionName}-${abi}.apk"
 
         variant.assembleProvider.get().doLast {
             def outDir = new File(rootDir, "out")
