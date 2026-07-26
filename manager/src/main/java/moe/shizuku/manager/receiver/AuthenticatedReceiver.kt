@@ -6,6 +6,9 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Binder
+import android.os.Process
 import androidx.core.app.NotificationCompat
 import moe.shizuku.manager.MainActivity
 import moe.shizuku.manager.R
@@ -17,13 +20,16 @@ abstract class AuthenticatedReceiver : BroadcastReceiver() {
         private const val CHANNEL_ID = "auth_errors"
         private const val CHANNEL_NAME = "Authentication Errors"
         private const val NOTIFICATION_ID = 1450
+        private const val PERMISSION_START_STOP_SERVER = "moe.shizuku.manager.permission.START_STOP_SERVER"
     }
 
     final override fun onReceive(context: Context, intent: Intent) {
         val authToken = intent.getStringExtra("auth")
         val expectedToken = ShizukuSettings.getAuthToken()
 
-        if (authToken.isNullOrEmpty()) {
+        if (isPrivilegedCaller(context)) {
+            onAuthenticated(context, intent)
+        } else if (authToken.isNullOrEmpty()) {
             context.notify(
                 R.string.notification_auth_missing_title,
                 R.string.notification_auth_missing_message
@@ -36,6 +42,14 @@ abstract class AuthenticatedReceiver : BroadcastReceiver() {
         } else {
             onAuthenticated(context, intent)
         }
+    }
+
+    private fun isPrivilegedCaller(context: Context): Boolean {
+        val callingUid = Binder.getCallingUid()
+        return callingUid == Process.SHELL_UID ||
+                callingUid == Process.ROOT_UID ||
+                context.checkCallingPermission(PERMISSION_START_STOP_SERVER) ==
+                PackageManager.PERMISSION_GRANTED
     }
 
     private fun Context.notify(title: Int, message: Int) {
