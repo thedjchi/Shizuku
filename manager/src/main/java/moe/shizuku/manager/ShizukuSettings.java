@@ -133,6 +133,10 @@ public class ShizukuSettings {
         return token;
     }
 
+    public static void setAuthToken(String token) {
+        getPreferences().edit().putString("auth_token", token).apply();
+    }
+
     public static boolean getStartOnBoot(Context context) {
         ComponentName bootCompleteReceiver = new ComponentName(context.getPackageName(), BootCompleteReceiver.class.getName());
         int state = context.getPackageManager().getComponentEnabledSetting(bootCompleteReceiver);
